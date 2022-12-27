@@ -251,25 +251,25 @@
                                             .cus_inp_wrap .inp_box input[type="radio"]{position: absolute;opacity: 0;height: 0;width: 0;}
 
                                             /* input radio */
-                                            .cus_inp_wrap .inp_box.radio_inp input[type="radio"]:checked ~ .inp_custom {border: 1px solid var(--color1);}
-                                            .cus_inp_wrap .inp_box.radio_inp .inp_custom:after{content: "";position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 10px;height: 10px;border-radius: 50%;background: #cacdd0;}
-                                            .cus_inp_wrap .inp_box.radio_inp input[type="radio"]:checked ~ .inp_custom:after {background-color: var(--color1);}
-                                            .cus_inp_wrap .inp_box.radio_inp .inp_custom{position: absolute;top: 0;left: 0;height: 20px;width: 20px;border-radius: 50%;background-color: #fff;border: 1px solid #cacdd0;}
+                                            .cus_inp_wrap.radio_inp .inp_box input[type="radio"]:checked ~ .inp_custom {border: 1px solid var(--color1);}
+                                            .cus_inp_wrap.radio_inp .inp_box .inp_custom:after{content: "";position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 10px;height: 10px;border-radius: 50%;background: #cacdd0;}
+                                            .cus_inp_wrap.radio_inp .inp_box input[type="radio"]:checked ~ .inp_custom:after {background-color: var(--color1);}
+                                            .cus_inp_wrap.radio_inp .inp_box .inp_custom{position: absolute;top: 0;left: 0;height: 20px;width: 20px;border-radius: 50%;background-color: #fff;border: 1px solid #cacdd0;}
 
                                             /* input checkbox */
-                                            .cus_inp_wrap .inp_box.checkbox_inp input[type="checkbox"]:checked ~ .inp_custom {border: none;background-color:var(--color1);}
-                                            .cus_inp_wrap .inp_box.checkbox_inp .inp_custom:after{content:"";position:absolute;left:6px;top:2px;width:7px;height:14px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
-                                            .cus_inp_wrap .inp_box.checkbox_inp input[type="checkbox"]:checked ~ .inp_custom:after {background-color: var(--color1);}
-                                            .cus_inp_wrap .inp_box.checkbox_inp .inp_custom{position: absolute;top: 0;left: 0;height: 20px;width: 20px;background-color: #fff;border: 1px solid #cacdd0;}
+                                            .cus_inp_wrap.checkbox_inp .inp_box input[type="checkbox"]:checked ~ .inp_custom {border: none;background-color:var(--color1);}
+                                            .cus_inp_wrap.checkbox_inp .inp_box .inp_custom:after{content:"";position:absolute;left:6px;top:2px;width:7px;height:14px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+                                            .cus_inp_wrap.checkbox_inp .inp_box input[type="checkbox"]:checked ~ .inp_custom:after {background-color: var(--color1);}
+                                            .cus_inp_wrap.checkbox_inp .inp_box .inp_custom{position: absolute;top: 0;left: 0;height: 20px;width: 20px;background-color: #fff;border: 1px solid #cacdd0;}
                                         </style>
 
 
-                                        <div class="cus_inp_wrap">
-                                            <label for="2-1" class="inp_box checkbox_inp">주문번호
+                                        <div class="cus_inp_wrap checkbox_inp">
+                                            <label for="2-1" class="inp_box">주문번호
                                                 <input type="checkbox" id="2-1" name="ord_sta" checked="">
                                                 <span class="inp_custom"></span>
                                             </label>
-                                            <label for="2-2" class="inp_box checkbox_inp">상품주문번호
+                                            <label for="2-2" class="inp_box">상품주문번호
                                                 <input type="checkbox" id="2-2" name="ord_sta">
                                                 <span class="inp_custom"></span>
                                             </label>
@@ -285,14 +285,14 @@
                                 <div class="srh_item_inner">
                                     <div class="srh_title">상품유형</div>
                                     <div class="srh_cont">
-                                        <div class="radio_wrap motiv_radio">
-                                            <label for="3-1" class="radio_btn">일반상품
+                                        <div class="cus_inp_wrap radio_inp">
+                                            <label for="3-1" class="inp_box">일반상품
                                                 <input type="radio" id="3-1" name="prd_cate" checked="">
-                                                <span class="radio_custom"></span>
+                                                <span class="inp_custom"></span>
                                             </label>
-                                            <label for="3-2" class="radio_btn">다다딜상품
+                                            <label for="3-2" class="inp_box">다다딜상품
                                                 <input type="radio" id="3-2" name="prd_cate">
-                                                <span class="radio_custom"></span>
+                                                <span class="inp_custom"></span>
                                             </label>
                                         </div>
                                     </div>
