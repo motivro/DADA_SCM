@@ -339,45 +339,48 @@
                     <!-- tableList S -->
                     <div class="contents_box">
                         <div class="tbl_panel">
-                            <div class="panel_head bdr_bot d_flex">
-                                <div class="head_left">
-                                    <div class="panel_count d_flex">
-                                        <div class="all_count">총 상품수<span class="count_sta">50</span></div>
-                                        <div class="slash">/</div>
-                                        <div class="srh_count">검색된 상품 수<span class="count_sta">00</span></div>
+                            <div class="panel_head bdr_bot">
+                                <div class="head_group d_flex">
+                                    <div class="head_left">
+                                        <div class="panel_count d_flex">
+                                            <div class="all_count">총 상품수<span class="count_sta">50</span></div>
+                                            <div class="slash">/</div>
+                                            <div class="srh_count">검색된 상품 수<span class="count_sta">00</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="head_right">
+                                        <div class="select_wrap">
+                                            <select>
+                                                <option value="판매변경1" selected>판매변경1</option>
+                                                <option value="판매변경2">판매변경2</option>
+                                            </select>
+                                        </div>
+                                        <div class="select_wrap">
+                                            <select>
+                                                <option value="진열변경" selected>진열변경</option>
+                                                <option value="진열변경">진열변경</option>
+                                            </select>
+                                        </div>
+                                        <div class="select_wrap">
+                                            <select>
+                                                <option value="50개씩" selected>50개씩</option>
+                                                <option value="50개씩">50개씩</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="head_right">
-                                    <div class="select_wrap">
-                                        <select>
-                                            <option value="111">111</option>
-                                            <option value="222" selected>222</option>
-                                            <option value="333">333</option>
-                                            <option value="444">444</option>
-                                            <option value="555">555</option>
-                                        </select>
-                                    </div>
-                                    <div class="select_wrap">
-                                        <select>
-                                            <option value="111" >111</option>
-                                            <option value="222" >222</option>
-                                            <option value="333" selected>333</option>
-                                            <option value="444">444</option>
-                                            <option value="555">555</option>
-                                        </select>
-                                    </div>
-                                    <div class="select_wrap">
-                                        <select>
-                                            <option value="111" >111</option>
-                                            <option value="222" >222</option>
-                                            <option value="333" >333</option>
-                                            <option value="444">444</option>
-                                            <option value="555">555</option>
-                                        </select>
+                                
+                                
+                            </div>
+                            <div class="panel_body">
+                                <div class="btn_group d_flex">
+                                    <div class="btn_wrap">
+                                        <a href="" class="btn">삭제</a>
+                                        <a href="" class="btn">상품등록</a>
+                                        <a href="" class="btn">엑셀다운로드</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="panel_body motiv_tbl"></div>
                         </div>
                     </div>
                     <!-- tableList E -->
@@ -390,12 +393,6 @@
 
     </div>
     <!-- wrap E -->
-    <style>
-        .select_wrap select{display: none;}
-        .select_wrap{padding: 10px;border: 1px solid #000;}
-        .select_box .opt_list{display: none;}
-        .select_box.active .opt_list{display: block;}
-    </style>
     <script>
         var selectUi = {
             class : 'select_wrap',
