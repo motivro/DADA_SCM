@@ -221,6 +221,7 @@
 #content .contents_box .srh_box .srh_item{padding:20px 0;border-top:var(--cont_border);display: flex;}
 #content .contents_box .srh_box .srh_item:first-child{border-top: 0;}
 #content .contents_box .srh_box .srh_item.row-2 .srh_item_inner{width: 50%;}
+#content .contents_box .srh_box .srh_item.row-2 .srh_item_inner + .srh_item_inner{margin-left:0;}
 #content .contents_box .srh_box .srh_item.row-2 .srh_item_inner:last-child{padding-left: 25px;border-left: var(--cont_border);}
 #content .contents_box .srh_box .srh_item .srh_item_inner{display: flex;align-items:center;padding-left: 25px;}
 #content .contents_box .srh_box .srh_item .srh_item_inner + .srh_item_inner{margin-left:25px;border-left: var(--cont_border);}
@@ -230,7 +231,7 @@
 
 #content .contents_box .srh_btn_box{padding: 20px 0;text-align: center;background: #fff;border: var(--cont_border);border-top: 0;}
 #content .contents_box .srh_btn_box .btn_wrap{display: flex; justify-content: center;align-items: center;gap: 14px;}
-#content .contents_box .srh_btn_box .btn_wrap .btn{width:130px;font-size: 14px;font-weight:500;line-height: 30px;color:#fff;background: #363535;}
+#content .contents_box .srh_btn_box .btn_wrap .btn{width:130px;}
 
 #content .contents_box .srh_box .inp_wrap{max-width: 210px;}
 #content .contents_box .srh_box .inp_wrap input[type="text"]{padding:5px 10px;font-size:14px;font-weight: 500;line-height: 18px;}
@@ -301,6 +302,28 @@
 #content .dash_board .dash_list .dash_item.row-3 .item_cont .data_list .data_item{width: 33.33%;padding: 0 20px;line-height:25px;border-right: var(--cont_border);}
 #content .dash_board .dash_list .dash_item.row-3 .item_cont .data_list .data_item:last-child{border-right: 0;}
 
+
+
+/* 데이터 레이아웃 */
+#content .dash_data{}
+#content .dash_data .top_box{}
+#content .dash_data .top_box .left_box{width: calc(55% - 5px);}
+#content .dash_data .top_box .right_box{width: calc();}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* tblList */
 #content .tbl_panel{background: #fff;}
 #content .tbl_panel .panel_head{padding: 20px;}
@@ -321,4 +344,7 @@
 
 #content .tbl_panel .panel_body{padding: 20px;}
 /* 대시보드 e */
+
+
+
 
