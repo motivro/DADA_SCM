@@ -226,9 +226,9 @@
 #content .motiv_radio .radio_btn {cursor: pointer;position: relative;padding-left: 25px;font-size: 12px;font-weight: 500;line-height: 20px;}
 #content .motiv_radio .radio_btn input[type="radio"] {position: absolute;opacity: 0;height: 0;width: 0;}
 #content .motiv_radio .radio_btn .radio_custom {position: absolute;top: 0;left: 0;height: 20px;width: 20px;border-radius: 50%;background-color: #fff;border: 1px solid #cacdd0;}
-#content .motiv_radio .radio_btn input[type="radio"]:checked ~ .radio_custom {border: 1px solid var(--tomato);}
+#content .motiv_radio .radio_btn input[type="radio"]:checked ~ .radio_custom {border: 1px solid var(--color1);}
 #content .motiv_radio .radio_custom:after {content: "";position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 10px;height: 10px;border-radius: 50%;background: #cacdd0;}
-#content .motiv_radio .radio_btn input[type="radio"]:checked ~ .radio_custom:after {background-color: var(--tomato);}
+#content .motiv_radio .radio_btn input[type="radio"]:checked ~ .radio_custom:after {background-color: var(--color1);}
 
 
 #content .motiv_tbl_box{padding: 30px 20px;background: #fff;}
