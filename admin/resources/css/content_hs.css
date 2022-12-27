@@ -220,7 +220,6 @@
 #content .contents_box .srh_box{padding:0 20px;background: var(--search_box_bg);border: var(--cont_border);}
 #content .contents_box .srh_box .srh_item{padding:20px 0;border-top:var(--cont_border);display: flex;}
 #content .contents_box .srh_box .srh_item:first-child{border-top: 0;}
-#content .contents_box .srh_box .srh_item.row-2{}
 #content .contents_box .srh_box .srh_item.row-2 .srh_item_inner{width: 50%;}
 #content .contents_box .srh_box .srh_item.row-2 .srh_item_inner:last-child{padding-left: 25px;border-left: var(--cont_border);}
 #content .contents_box .srh_box .srh_item .srh_item_inner{display: flex;align-items:center;padding-left: 25px;}
