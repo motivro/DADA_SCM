@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../admin/resources/css/common.css">
+    <link rel="stylesheet" href="../../admin/resources/css/content_hs.css">
+    <script src="../../admin/resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../admin/resources/js/ui.js"></script>
+</head>
+<body>
+    <!-- wrap S -->
+    <div class="wrap">
+        <!-- header S -->
+        <!-- 로그인 전 s-->
+        <!-- <header id="header" class="logout">
+            <div class="hd_inner">
+                <h1>
+                    <a class="logo" title="DADA" href="#none"><span class="blind">DADA SCM</span></a>
+                    <a class="slogo" href="#none"><span>다다 SCM</span></a>
+                </h1>
+            </div>
+        </header> -->
+        <!-- 로그인 전 end-->
+
+        <!-- 로그인 후 s-->
+        <header id="header" class="login">
+            <div class="hd_inner">
+                <h1>
+                    <a class="logo" title="DADA" href="#none"><span class="blind">DADA SCM</span></a>
+                    <div class="slogo"><span>최고관리자</span></div>
+                    <div class="hd_notice">
+                        <span>다다SCM 공지사항 알림</span>
+                    </div>
+                </h1>
+
+                <div class="hd_search">
+                    <div class="hd_search_inner">
+                        <div class="inp_wrap"><input type="text" placeholder="상품명, 태그, 상품코드 검색"></div>
+                        <div class="submit_btn">검색</div>
+                    </div>
+                </div>
+
+                <div class="hd_gnb">
+                    <nav>
+                        <ul class="depth1_menu">
+                            <li class="menu_item lang"><a href="#none">Kor</a></li>
+                            <li class="menu_item">
+                                <a href="#none">고객센터<span class="icon_arrow"></span></a>
+                                <ul class="depth2_menu">
+                                    <li class="menu_item"><a href="#none">문의사항</a></li>
+                                    <li class="menu_item"><a href="#none">공지사항</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#none">메뉴얼<span class="icon_arrow"></span></a>
+                                <ul class="depth2_menu">
+                                    <li class="menu_item"><a href="#none">상품관리</a></li>
+                                    <li class="menu_item"><a href="#none">주문관리</a></li>
+                                    <li class="menu_item"><a href="#none">배송관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu_item"><a href="#none">아이디</a></li>
+                            <li class="menu_item"><a href="#none">로그아웃</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- 로그인 후 end-->
+        <!-- header E -->
+
+        <!-- lnb S -->
+        <aside id="lnb">
+            <div class="lnb_inner">
+                <div class="profile_info">
+                    <div class="member_info">
+                        <div class="thumb"><img class="member_img" src="../../admin/resources/images/common/profile_noimg.jpeg" alt="회원 이미지"></div>
+                        <div class="desc">
+                            <span class="member_name">홍길동</span>
+                            <a href="#none">로그아웃</a>
+                            <span class="biz_info">사업자 미승인</span>
+                        </div>
+                    </div>
+                    <div class="sell_info">
+                        <ul>
+                            <li>
+                                <div class="tit">주문</div>
+                                <div class="txt"><span class="ord_num">100</span>건</div>
+                            </li>
+                            <li>
+                                <div class="tit">매출</div>
+                                <div class="txt"><span class="sales_num">14,000,000</span>원</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn_wrap">
+                        <a class="btn tomato" href="#none">다다마켓</a>
+                        <a class="btn dark" href="#none">대시보드</a>
+                    </div>
+                </div>
+
+                <div class="lnb_menu">
+                    <ul class="nav_list motiv_acc">
+                        <li class="nav_item">
+                            <div class="nav_menu">상품관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">상품목록</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">다다딜관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">상품관리</a></li>
+                                <li class="sub_item"><a href="#none">판매요청</a></li>
+                                <li class="sub_item"><a href="#none">판매현황</a></li>
+                                <li class="sub_item"><a href="#none">판매종료</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">지정판매관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">지정판매자 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">판매상품관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">전체상품목록</a></li>
+                                <li class="sub_item"><a href="#none">소싱 일반상품</a></li>
+                                <li class="sub_item"><a href="#none">다다딜상품</a></li>
+                                <li class="sub_item"><a href="#none">지정판매자 상품</a></li>
+                                <li class="sub_item"><a href="#none">쇼핑몰 연계상품</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">강제종료관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">강제종료 상품관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">주문관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">주문조회</a></li>
+                                <li class="sub_item"><a href="#none">미결제 확인</a></li>
+                                <li class="sub_item"><a href="#none">발주확인/발송</a></li>
+                                <li class="sub_item"><a href="#none">배송현황</a></li>
+                                <li class="sub_item"><a href="#none">구매확정 내역조회</a></li>
+                                <li class="sub_item"><a href="#none">취소관리</a></li>
+                                <li class="sub_item"><a href="#none">반품관리</a></li>
+                                <li class="sub_item"><a href="#none">교환관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">정산관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">정산내역 조회</a></li>
+                                <li class="sub_item"><a href="#none">정산지급 현황</a></li>
+                                <li class="sub_item"><a href="#none">매출증빙 내역</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">통계</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">통계요약</a></li>
+                                <li class="sub_item"><a href="#none">매출통계</a></li>
+                                <li class="sub_item"><a href="#none">결제수단통계</a></li>
+                                <li class="sub_item"><a href="#none">상품매출통계</a></li>
+                                <li class="sub_item"><a href="#none">판매자 판매통계</a></li>
+                                <li class="sub_item"><a href="#none">SCM플랫폼 리포트</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">회원관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">회원현황</a></li>
+                                <li class="sub_item"><a href="#none">패널티관리</a></li>
+                                <li class="sub_item"><a href="#none">휴면회원관리</a></li>
+                                <li class="sub_item"><a href="#none">탈퇴회원관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">고객센터</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">문의사항관리</a></li>
+                                <li class="sub_item"><a href="#none">공지사항관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">기본정보관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">약관/개인/금융관리</a></li>
+                                <li class="sub_item"><a href="#none">운영자관리</a></li>
+                                <li class="sub_item"><a href="#none">수수료관리</a></li>
+                                <li class="sub_item"><a href="#none">다다마켓 진열관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">쇼핑몰관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">카테고리관리</a></li>
+                                <li class="sub_item"><a href="#none">주소지관리</a></li>
+                                <li class="sub_item"><a href="#none">금칙어관리</a></li>
+                                <li class="sub_item"><a href="#none">통합쇼핑몰관리</a></li>
+                                <li class="sub_item"><a href="#none">로컬상가관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!-- lnb E -->
+        
+        <!-- container S -->
+        <div id="container">
+            <!-- content S -->
+            <div id="content">
+                <!-- inner S -->
+                <div class="inner">
+
+                    <!-- dashList S -->
+                    <div class="contents_box">
+                        <div class="dash_board">
+                            <div class="dash_list">
+                                <div class="dash_item n1 row-2">
+                                    <div class="item_tit"><span class="name">주문/배송</span><span class="icon"></span></div>
+                                    <div class="item_cont d_flex">
+                                        <div class="data_list n1_1">
+                                            <div class="data_item">
+                                                <div class="data_name">결제대기</div>
+                                                <div class="data_cont"><span class="data_sta">3</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">신규주문</div>
+                                                <div class="data_cont"><span class="data_sta">200</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">오늘출발</div>
+                                                <div class="data_cont"><span class="data_sta">120</span>건</div>
+                                            </div>
+                                        </div>
+                                        <div class="data_list n1_2">
+                                            <div class="data_item">
+                                                <div class="data_name">배송준비</div>
+                                                <div class="data_cont"><span class="data_sta">12</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">배송중</div>
+                                                <div class="data_cont"><span class="data_sta">30</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">배송완료</div>
+                                                <div class="data_cont"><span class="data_sta">22</span>건</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dash_item n2 row-2">
+                                    <div class="item_tit"><span class="name">클레임/정산</span><span class="icon"></span></div>
+                                    <div class="item_cont d_flex">
+                                        <div class="data_list n2_1">
+                                            <div class="data_item">
+                                                <div class="data_name">결제대기</div>
+                                                <div class="data_cont"><span class="data_sta">3</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">신규주문</div>
+                                                <div class="data_cont"><span class="data_sta">200</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">오늘출발</div>
+                                                <div class="data_cont"><span class="data_sta">120</span>건</div>
+                                            </div>
+                                        </div>
+                                        <div class="data_list n2_2">
+                                            <div class="data_item">
+                                                <div class="data_name">배송준비</div>
+                                                <div class="data_cont"><span class="data_sta">12</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">배송중</div>
+                                                <div class="data_cont"><span class="data_sta">30</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">배송완료</div>
+                                                <div class="data_cont"><span class="data_sta">22</span>건</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dash_item n3 row-3">
+                                    <div class="item_tit"><span class="name">회원현황</span><span class="icon"></span></div>
+                                    <div class="item_cont d_flex">
+                                        <div class="data_list">
+                                            <div class="data_item">
+                                                <div class="data_name">결제대기</div>
+                                                <div class="data_cont"><span class="data_sta">3</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">신규주문</div>
+                                                <div class="data_cont"><span class="data_sta">200</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">오늘출발</div>
+                                                <div class="data_cont"><span class="data_sta">120</span>건</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dash_item n4 row-3">
+                                    <div class="item_tit"><span class="name">상품현황</span><span class="icon"></span></div>
+                                    <div class="item_cont d_flex">
+                                        <div class="data_list">
+                                            <div class="data_item">
+                                                <div class="data_name">결제대기</div>
+                                                <div class="data_cont"><span class="data_sta">3</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">신규주문</div>
+                                                <div class="data_cont"><span class="data_sta">200</span>건</div>
+                                            </div>
+                                            <div class="data_item">
+                                                <div class="data_name">오늘출발</div>
+                                                <div class="data_cont"><span class="data_sta">120</span>건</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- dashList E -->
+
+                    <!-- tableList S -->
+                    <div class="contents_box">
+                        <div class="tbl_panel">
+                            <div class="panel_head bdr_bot d_flex">
+                                <div class="head_left">
+                                    <div class="panel_count d_flex">
+                                        <div class="all_count">총 상품수<span class="count_sta">50</span></div>
+                                        <div class="slash">/</div>
+                                        <div class="srh_count">검색된 상품 수<span class="count_sta">00</span></div>
+                                    </div>
+                                </div>
+                                <div class="head_right">
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="111">111</option>
+                                            <option value="222" selected>222</option>
+                                            <option value="333">333</option>
+                                            <option value="444">444</option>
+                                            <option value="555">555</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="111" >111</option>
+                                            <option value="222" >222</option>
+                                            <option value="333" selected>333</option>
+                                            <option value="444">444</option>
+                                            <option value="555">555</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="111" >111</option>
+                                            <option value="222" >222</option>
+                                            <option value="333" >333</option>
+                                            <option value="444">444</option>
+                                            <option value="555">555</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel_body motiv_tbl"></div>
+                        </div>
+                    </div>
+                    <!-- tableList E -->
+                </div>
+                <!-- inner E -->
+            </div>
+            <!-- content E -->
+        </div>
+        <!-- container E -->
+
+    </div>
+    <!-- wrap E -->
+    <style>
+        .select_wrap select{display: none;}
+        .select_wrap{padding: 10px;border: 1px solid #000;}
+        .select_box .opt_list{display: none;}
+        .select_box.active .opt_list{display: block;}
+    </style>
+    <script>
+        var selectUi = {
+            class : 'select_wrap',
+            seData : [],
+            init :() => {
+                $.each( $('.'+selectUi.class+''), (index, item) => {
+                    var seObjData = new Object();
+                    seObjData.optData = new Array();
+                    seObjData.seNum = index;
+                    seObjData.actNum = '';
+                    seObjData.actVal = '';
+                    seObjData.actSta = false;
+                    var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
+                    $.each( seTarget.children("option"), (seIndex, seItem) => {
+                        if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
+                            seObjData.actSta = true;
+                            seObjData.actNum = seIndex;
+                            seObjData.actVal = seItem.text;
+                        }
+                        seObjData.optData.push(seItem.text);
+                    });
+                    selectUi.seData.push(seObjData);
+                })
+                selectUi.customSelect();
+            },
+            customSelect: () => {
+                $.each( selectUi.seData, (index, item) => {
+                    var selectHtml = '';
+                    var selectTname = item.actVal ? item.actVal : item.optData[0];
+                    selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
+                    selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
+                    selectHtml+= '  <div class="opt_list">';
+                    $.each( item.optData, (seindex, seitem) => {
+                        selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
+                    });
+                    selectHtml+= '  </div>';
+                    selectHtml+= '</div>';
+                    $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
+                });
+            },
+            boxOpen : (obj) =>{
+                if(obj.hasClass('active')){
+                    obj.removeClass('active');
+                }else{
+                    obj.addClass('active');
+                }
+            },
+            optionClick : (obj) =>{
+                obj.parent().parent().children('.select_name').text(obj.text());
+                obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
+            },
+        }
+        selectUi.init();
+
+    </script>
+</body>
+</html>
