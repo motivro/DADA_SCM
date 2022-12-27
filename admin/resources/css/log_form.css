@@ -3,13 +3,24 @@ body.login,
 body.join{background: #fff;}
 .login .wrap #container{padding: 0;}
 .login .wrap #content{max-width: 100%;}
-.login .wrap #content .inner{padding: 90px 0 0;}
+.login .wrap #content .inner{padding: 90px 0;}
 .join .wrap #container{padding: 0;}
 .join .wrap #content{max-width: 100%;}
-.join .wrap #content .inner{padding: 90px 0 0;}
+.join .wrap #content .inner{padding: 90px 0;}
 
 .join #content .inp_wrap input{padding:0 15px;font-size:14px;font-weight:500;border: 1px solid #e3e3e3;border-radius:5px}
 .join #content .inp_wrap input::placeholder:after{content: '*';display:inline-block;color: var(--color1);}
+
+/* select_custom S */
+#content .select_wrap select{display:none}
+#content .select_wrap .select_box{width:100%;padding:9px 10px;border: var(--cont_border);position: relative;}
+#content .select_wrap .select_box .select_name{width:100%;font-size: var(--fts13);font-weight: var(--ftw500);line-height: 20px;position: relative;cursor: pointer;}
+#content .select_wrap .select_box .select_name:after{content:'';display: block;width: 12px;height: 12px;background: url('../images/common/arrow_select_down.svg')no-repeat center center;background-size: cover;position: absolute;right: 10px;top: 50%;transform: translateY(-50%);}
+#content .select_wrap .select_box.active .select_name:after{background: url('../images/common/arrow_select_up.svg')no-repeat center center;background-size: cover;}
+#content .select_wrap .select_box .opt_list{display: none;width:100%;padding:0 10px;position: absolute;left: 0;top: 100%;z-index: 5;background: #fff;border: var(--cont_border);}
+#content .select_wrap .select_box.active .opt_list{display: block;cursor: pointer;}
+#content .select_wrap .select_box .opt_list .opt_item{padding: 5px 0;}
+/* select_custom E */
 
 i.arrow{border:solid var(--color5);border-width:0 2px 2px 0;display:inline-block;padding:3px;margin-left: 10px;}
 i.down{transform:rotate(45deg);-webkit-transform:rotate(45deg)}
@@ -81,13 +92,39 @@ i.icon_infor{display:inline-block;width: 20px;height: 20px;background: url('../i
 #content .join_box .agree_box .agree_noti .tit .icon{position: absolute;left: 0;top: 0;}
 #content .join_box .agree_box .agree_noti .txt{display:block;font-size: 14px;font-weight: 500;color: var(--color13);}
 
-#content .join_box .agree_box .btn_wrap{}
+#content .join_box .agree_noti + .btn_wrap{margin-top:35px;justify-content: center;}
 #content .join_box .agree_box .btn_join{width: 240px;font-size:15px;font-weight:700;text-align: center;background: var(--color1);border-color: var(--color1);color: #fff;border-radius: 5px;}
 
-#content .join_box .agree_noti + .btn_wrap{margin-top:35px;justify-content: center;}
 /* 비사업자 */
 
 /* 사업자 */
+
+#content.join_biz .cont_tit{max-width: 625px;margin: 0 auto;}
+#content.join_biz .cont_tit h2{font-size:30px;font-weight:500;text-align: center;}
+#content.join_biz .biz_certi_box{max-width: 625px;margin: 20px auto 40px;border-radius:10px;border: 2px solid #e3e3e3;background: var(--color10);}
+#content.join_biz .biz_certi_box .box_inner{padding: 30px 60px;}
+#content.join_biz .biz_certi_box .inp_tit{margin-bottom: 12px;font-size:16px; font-weight:700;}
+#content.join_biz .biz_certi_box .btn_wrap{justify-content: center;margin-top: 25px;}
+#content.join_biz .biz_certi_box .btn_biz_srh{width: 240px;font-size:15px;font-weight:700;text-align: center;background: #000;border-color: #000;color: #fff;border-radius: 5px;}
+
+#content .join_box .inp_wrap.row-2{display: flex;flex-wrap:wrap;justify-content: space-between;}
+#content .join_box .inp_wrap.row-2 input{width: calc(50% - 7px);}
+
+#content .join_box .adr_inp_wrap{display: flex;flex-direction: column;gap: 14px;}
+#content .join_box .adr_inp_wrap .flex_row{margin-top: 10px;display: flex;gap: 8px;}
+#content .join_box .adr_inp_wrap .flex_row .inp_wrap{width: calc(100% - 134px);}
+#content .join_box .adr_inp_wrap .flex_row .btn_wrap{width: 127px;}
+#content .join_box .adr_inp_wrap .flex_row .btn{width: 100%;text-align: center;border-radius: 4px;}
+
+#content .join_box .join_inp_box.etc .flex_row.normal{display: flex;gap: 10px;}
+#content .join_box .join_inp_box.etc .flex_row.normal .select_wrap{width: calc(45% - 5px);}
+#content .join_box .join_inp_box.etc .flex_row.normal .inp_wrap{width: calc(55% - 5px);}
+
+#content .join_box .btn_find_adr{background: var(--color5);border-color: var(--color5);color: #fff;}
+
+#content .join_box .join_inp_box .inp_tit{font-size:16px; font-weight:700;}
+#content .join_box .join_inp_box .certi_inp_box{margin-top: 0;}
+
 
 
 
