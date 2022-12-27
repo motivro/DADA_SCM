@@ -294,6 +294,16 @@
 #content .tbl_panel .panel_head.bdr_bot{border-bottom: var(--box_border);}
 #content .tbl_panel .panel_head .head_left{}
 
+#content .tbl_panel .panel_head .head_right{display: flex;gap: 10px;}
+#content .tbl_panel .panel_head .head_right .select_wrap{width: 150px;}
+
+#content .select_wrap select{display:none}
+#content .select_wrap .select_box{width:100%;padding:9px 10px;border: var(--cont_border);position: relative;}
+#content .select_wrap .select_box:after{content:'';display: block;width: 12px;height: 12px;background: url('../images/common/arrow_select_down.svg')no-repeat center center;background-size: cover;position: absolute;right: 10px;top: 50%;transform: translateY(-50%);}
+#content .select_wrap .select_box .select_name{width:100%;font-size: var(--fts13);font-weight: var(--ftw500);line-height: 20px;}
+#content .select_wrap .select_box .opt_list{display: none;}
+#content .select_wrap .select_box.active .opt_list{display: block;}
+
 #content .tbl_panel .panel_body{padding: 20px;}
 /* 대시보드 e */
 
