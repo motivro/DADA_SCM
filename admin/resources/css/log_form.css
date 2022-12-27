@@ -1,0 +1,35 @@
+@charset "utf-8";
+body.login{background: #fff;}
+.login .wrap #container{padding: 0;}
+.login .wrap #content{max-width: 100%;}
+.login .wrap #content .inner{padding: 90px 0 0;}
+
+#content .txtInfo{margin-top: 8px;font-size: 12px;font-weight: 500;}
+#content .txtInfo.error{color: var(--color1);}
+
+
+/* 로그인 S */
+#content .login_box{max-width:500px;margin:0 auto;border-radius:18px;border: 3px solid #e3e3e3;background: #fff;}
+#content .login_box .box_inner{padding:70px 75px 120px;}
+
+#content .login_box h1{text-align: center;}
+#content .login_box .logo{display: block;width:160px;height: 40px;margin:0 auto;background: url('../images/common/logo.svg')no-repeat center;background-size: cover;}
+#content .login_box .slogo{display:block;margin-top:10px;font-size: 22px;font-weight: 500;}
+
+#content .login_box .monster{width: 260px;margin:40px auto 0;line-height: 0;}
+#content .login_box .monster img{width: 100%;}
+
+#content .login_box .login_inp .inp_wrap{width: 100%;margin-bottom: 10px;}
+#content .login_box .login_inp .inp_wrap input{padding:0 15px;font-size:14px;font-weight:500;border: 1px solid #e3e3e3;border-radius:5px}
+#content .login_box .login_inp .inp_wrap input::placeholder{color: #c1c1c1;}
+#content .login_box .login_button{}
+#content .login_box .login_button .btn_login{width: 100%;font-size:15px;font-weight:700;color:#fff;text-align: center;background: var(--color1);border-color: var(--color1);border-radius:5px}
+
+#content .login_box .login_util{margin-top: 15px;font-size: 14px;font-weight: 500;}
+#content .login_box .login_util .find_wrap{}
+#content .login_box .login_util .find_wrap .findId{}
+#content .login_box .login_util .find_wrap .findPw:after{content: '';}
+#content .login_box .login_util .find_wrap .tooltip{display: none;}
+#content .login_box .login_util .join_wrap .goJoin{}
+
+
