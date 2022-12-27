@@ -52,11 +52,13 @@
                                 <div class="find_wrap">
                                     <a href="" class="findId">아이디 찾기</a>
                                     <span class="slash">/</span>
-                                    <a href="" class="findPw">비밀번호 찾기</a>
-                                    <div class="tooltip">
-                                        <div>이메일 인증</div>
-                                        <div>휴대폰 인증</div>
-                                    </div>
+                                    <a href="#none" class="findPw">비밀번호 찾기</a>
+
+                                    <ul class="tooltip">
+                                        <li><a href="" class="toMail">이메일 인증</a></li>
+                                        <li><a href="" class="toMobile">휴대폰 인증</a></li>
+                                    </ul>
+                                    
                                 </div>
                                 <div class="join_wrap"><a href="" class="goJoin">회원가입</a></div>
                             </div>
@@ -72,5 +74,16 @@
 
     </div>
     <!-- wrap E -->
+    <script>
+        $(document).ready(function(){
+            $('.find_wrap .findPw').click(function(){
+                if($(this).parent('.find_wrap').hasClass('on')){
+                    $(this).parent('.find_wrap').removeClass('on');
+                }else{
+                    $(this).parent('.find_wrap').addClass('on');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

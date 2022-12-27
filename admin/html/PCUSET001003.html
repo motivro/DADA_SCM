@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/log_form.css">
+    <script src="../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../resources/js/ui.js"></script>
+</head>
+<body class="join">
+    <!-- wrap S -->
+    <div class="wrap">
+        <!-- header S -->
+        <header id="header" class="logout">
+            <div class="hd_inner">
+                <h1>
+                    <a class="logo" title="DADA" href="#none"><span class="blind">DADA SCM</span></a>
+                    <a class="slogo" href="#none"><span>다다 SCM</span></a>
+                </h1>
+            </div>
+        </header>
+        <!-- header E -->
+        
+        <!-- container S -->
+        <div id="container">
+            <!-- content S -->
+            <div id="content">
+                <!-- inner S -->
+                <div class="inner">
+                    <div class="join_box Biz">
+                        <div class="box_inner">
+                            <h2>다다SCM 사업자 회원가입</h2>
+                            <div class="join_inp_box">
+                                <div class="inp_wrap">
+                                    <input type="text" placeholder="아이디를 입력해 주세요.">
+                                    <p class="txtInfo error">아이디를 입력해 주세요.</p>
+                                </div>
+                                <div class="inp_wrap">
+                                    <input type="password" placeholder="암호를 입력해주세요.">
+                                    <p class="txtInfo error">암호를 입력해 주세요.</p>
+                                </div>
+                                <div class="inp_wrap">
+                                    <input type="text" placeholder="본인의 (실명)이름을 입력해 주세요.">
+                                    <p class="txtInfo error">이름을 입력해 주세요.</p>
+                                </div>
+                                <div class="inp_wrap">
+                                    <input type="text" placeholder="이메일을 입력해 주세요.">
+                                    <p class="txtInfo error">이메일을 입력해 주세요.</p>
+                                </div>
+                            </div>
+                            <div class="certi_inp_box">
+                                <div class="inp_tit">본인 확인</div>
+                                <div class="flex_row">
+                                    <div class="inp_wrap"><input type="text" placeholder="휴대폰번호를 입력해 주세요.('-'제외)"></div>
+                                    <div class="btn_wrap">
+                                        <div class="btn btn_certi">인증요청</div>
+                                    </div>
+                                </div>
+                                <div class="flex_row">
+                                    <div class="inp_wrap"><input type="text" placeholder="인증번호를 입력해 주세요."></div>
+                                    <div class="btn_wrap">
+                                        <div class="btn btn_ok">확인</div>
+                                        <div class="btn btn_resend">재전송</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="agree_box">
+                                <div class="cus_inp_wrap checkbox_inp">
+                                    <label for="all_chk" class="inp_box">
+                                        <span class="txt all">모두 동의합니다.</span>
+                                        <input type="checkbox" id="all_chk" name="all_chk">
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                                <p class="txtInfo">모두 동의에는 필수 및 선택 목적(광고성 정보 수신 포함)에 대 한 동의가 포함되어 있으며, 선택 목적에 동의를 거부하시는 경 우에도 서비스 이용이 가능합니다.</p>
+                                <div class="agree_dtl_box">
+                                    <div class="cus_inp_wrap checkbox_inp">
+                                        <label for="join_1" class="inp_box">
+                                            <span class="txt"><span class="point">[필수]</span>판매 이용약관</span>
+                                            <input type="checkbox" id="join_1" name="join_agree">
+                                            <span class="inp_custom"></span>
+                                        </label>
+                                        <span class="arrow_right"></span>
+                                    </div>
+                                    <div class="cus_inp_wrap checkbox_inp">
+                                        <label for="join_2" class="inp_box">
+                                            <span class="txt"><span class="point">[필수]</span>(주)다다 전자금융거래 이용약관</span>
+                                            <input type="checkbox" id="join_2" name="join_agree">
+                                            <span class="inp_custom"></span>
+                                        </label>
+                                        <span class="arrow_right"></span>
+                                    </div>
+                                    <div class="cus_inp_wrap checkbox_inp">
+                                        <label for="join_3" class="inp_box">
+                                            <span class="txt"><span class="point">[필수]</span>개인정보 수집 및 이용 동의</span>
+                                            <input type="checkbox" id="join_3" name="join_agree">
+                                            <span class="inp_custom"></span>
+                                        </label>
+                                        <span class="arrow_right"></span>
+                                    </div>
+                                    <div class="cus_inp_wrap checkbox_inp">
+                                        <label for="join_4" class="inp_box">
+                                            <span class="txt"><span class="point">[선택]</span>판매자 무료 교육 및 특별 프로모션 혜택 (광고) 수신 동의</span>
+                                            <input type="checkbox" id="join_4" name="join_agree">
+                                            <span class="inp_custom"></span>
+                                        </label>
+                                        <span class="arrow_right"></span>
+                                    </div>
+                                </div>
+                                <div class="agree_noti">
+                                    <p class="tit"><i class="icon icon_infor"></i>확인해 주세요.</p>
+                                    <p class="txt">• 수신거부시판매에도움이되는정보를받아보실수없습니다.</p>
+                                    <p class="txt">• 광고성 정보 수집 및 수신 동의는 기본정보>계정정보에서 변경(동의/ 철회) 할 수 있습니다.</p>
+                                </div>
+                                <div class="btn_wrap"><div class="btn btn_join btn_lg">사업자 정보 저장 및 승인요청</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- inner E -->
+            </div>
+            <!-- content E -->
+        </div>
+        <!-- container E -->
+
+    </div>
+    <!-- wrap E -->
+    <script>
+        $(document).ready(function(){
+            $('.find_wrap .findPw').click(function(){
+                if($(this).parent('.find_wrap').hasClass('on')){
+                    $(this).parent('.find_wrap').removeClass('on');
+                }else{
+                    $(this).parent('.find_wrap').addClass('on');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

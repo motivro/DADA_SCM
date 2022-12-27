@@ -1,15 +1,26 @@
 @charset "utf-8";
-body.login{background: #fff;}
+body.login,
+body.join{background: #fff;}
 .login .wrap #container{padding: 0;}
 .login .wrap #content{max-width: 100%;}
 .login .wrap #content .inner{padding: 90px 0 0;}
+.join .wrap #container{padding: 0;}
+.join .wrap #content{max-width: 100%;}
+.join .wrap #content .inner{padding: 90px 0 0;}
+
+.join #content .inp_wrap input{padding:0 15px;font-size:14px;font-weight:500;border: 1px solid #e3e3e3;border-radius:5px}
+.join #content .inp_wrap input::placeholder:after{content: '*';display:inline-block;color: var(--color1);}
+
+i.arrow{border:solid var(--color5);border-width:0 2px 2px 0;display:inline-block;padding:3px;margin-left: 10px;}
+i.down{transform:rotate(45deg);-webkit-transform:rotate(45deg)}
+i.icon_infor{display:inline-block;width: 20px;height: 20px;background: url('../images/common/icon_infor.svg')no-repeat center center;background-size: contain;}
 
 #content .txtInfo{margin-top: 8px;font-size: 12px;font-weight: 500;}
 #content .txtInfo.error{color: var(--color1);}
 
 
 /* 로그인 S */
-#content .login_box{max-width:500px;margin:0 auto;border-radius:18px;border: 3px solid #e3e3e3;background: #fff;}
+#content .login_box{max-width:500px;margin:0 auto;border-radius:10px;border: 2px solid #e3e3e3;background: #fff;}
 #content .login_box .box_inner{padding:70px 75px 120px;}
 
 #content .login_box h1{text-align: center;}
@@ -25,11 +36,58 @@ body.login{background: #fff;}
 #content .login_box .login_button{}
 #content .login_box .login_button .btn_login{width: 100%;font-size:15px;font-weight:700;color:#fff;text-align: center;background: var(--color1);border-color: var(--color1);border-radius:5px}
 
-#content .login_box .login_util{margin-top: 15px;font-size: 14px;font-weight: 500;}
-#content .login_box .login_util .find_wrap{}
+#content .login_box .login_util{margin-top: 15px;font-size: 14px;font-weight: 500;display: flex;justify-content: space-between;align-items: center;}
+#content .login_box .login_util .find_wrap{position: relative;}
 #content .login_box .login_util .find_wrap .findId{}
-#content .login_box .login_util .find_wrap .findPw:after{content: '';}
-#content .login_box .login_util .find_wrap .tooltip{display: none;}
-#content .login_box .login_util .join_wrap .goJoin{}
+
+#content .login_box .login_util .find_wrap .findPw:after{content: '';border:solid var(--color7);border-width:0 1px 1px 0;display:inline-block;padding:3px;margin-left: 7px;transform:rotate(45deg) translateY(-50%);-webkit-transform:rotate(45deg) translateY(-50%);position: absolute;top: 40%;right: -8px;}
+
+#content .login_box .login_util .find_wrap .tooltip{display: none;padding:10px 20px;position: absolute;top: calc(100% + 8px);right: -15px;z-index: 5;border: 1px solid #efefef;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);box-sizing: content-box;}
+#content .login_box .login_util .find_wrap.on .tooltip{display: block;}
+#content .login_box .login_util .find_wrap .tooltip > li > a{padding:5px 0;font-size: 14px;font-weight: 500;line-height:1;color: #B2B2B2;}
+#content .login_box .login_util .find_wrap .tooltip > li > a:hover{color: #727272;}
+#content .login_box .login_util .join_wrap .goJoin{color: var(--color1);}
+/* 로그인 E */
+
+/* 회원가입 S */
+#content .join_box{max-width: 625px;margin: 0 auto;border-radius:10px;border: 2px solid #e3e3e3;background: #fff;}
+#content .join_box .box_inner{padding: 25px 60px 50px;}
+#content .join_box h2{font-size:30px;font-weight:500;text-align: center;}
+#content .join_box .join_inp_box{margin-top: 35px;display: flex;flex-direction: column;justify-content: center;align-items: stretch;gap: 10px;}
+
+#content .join_box .certi_inp_box{margin-top: 25px;}
+#content .join_box .certi_inp_box .inp_tit{font-size: 16px;font-weight: 500;}
+#content .join_box .certi_inp_box .flex_row{margin-top: 10px;display: flex;gap: 8px;}
+#content .join_box .certi_inp_box .flex_row .inp_wrap{width: calc(100% - 176px);}
+#content .join_box .certi_inp_box .flex_row .btn_wrap{width: 168px;}
+#content .join_box .certi_inp_box .flex_row .btn{width: 100%;text-align: center;border-radius: 4px;}
+#content .join_box .certi_inp_box .btn.btn_certi{background: #000;border-color: #000;color: #fff;}
+#content .join_box .certi_inp_box .btn.btn_ok{background: var(--color1);border-color: var(--color1);color: #fff;}
+#content .join_box .certi_inp_box .btn.btn_resend{background: var(--color15);border-color: var(--color15);color: #fff;}
+
+#content .join_box .agree_box{margin-top: 40px;}
+#content .join_box .agree_box .txtInfo{margin-top:14px;font-size: 14px;}
+#content .join_box .agree_box .agree_dtl_box{margin-top: 14px;width: 100%;padding:10px 20px;border: var(--cont_border);border-radius:5px;}
+#content .join_box .agree_box .agree_dtl_box .cus_inp_wrap{position: relative;padding:8px 0;}
+#content .join_box .agree_box .agree_dtl_box .cus_inp_wrap .arrow_right{display:block;width: 20px;height: 20px;position: absolute;top: 0;right: 0;z-index:5;background: url('../images/common/arrow_right.svg')no-repeat center center;background-size:12px 12px;cursor: pointer;}
+#content .join_box .agree_box .inp_box{width:100%;}
+#content .join_box .agree_box .checkbox_inp .txt{display:block;font-size: 14px;}
+#content .join_box .agree_box .checkbox_inp .txt.all{font-weight: 500;}
+#content .join_box .agree_box .checkbox_inp .txt .point{margin-right:3px;font-weight: 700;}
+#content .join_box .agree_box .checkbox_inp .inp_box .inp_custom{border-radius: 3px;border-color:var(--color15);}
+
+#content .join_box .agree_box .agree_noti{margin-top: 25px;}
+#content .join_box .agree_box .agree_noti .tit{margin-bottom:5px;padding-left:25px;font-size: 14px;font-weight: 700;line-height: 20px;position: relative;}
+#content .join_box .agree_box .agree_noti .tit .icon{position: absolute;left: 0;top: 0;}
+#content .join_box .agree_box .agree_noti .txt{display:block;font-size: 14px;font-weight: 500;color: var(--color13);}
+
+#content .join_box .agree_box .btn_wrap{}
+#content .join_box .agree_box .btn_join{width: 240px;font-size:15px;font-weight:700;text-align: center;background: var(--color1);border-color: var(--color1);color: #fff;border-radius: 5px;}
+
+#content .join_box .agree_noti + .btn_wrap{margin-top:35px;justify-content: center;}
+/* 비사업자 */
+
+/* 사업자 */
+
 
 
