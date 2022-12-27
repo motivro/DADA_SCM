@@ -40,7 +40,7 @@ html{position: relative;}
 body{background: #f0f1f2;}
 body > .wrap{min-width: 1400px;min-height:100%;position: relative;}
 
-input[type="text"]{width: 100%;}
+input[type="text"]{width: 100%;min-height:40px}
 
 /* contents s */
 .wrap #container{padding: 0 0 0 204px;}
