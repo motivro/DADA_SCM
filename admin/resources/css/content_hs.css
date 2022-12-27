@@ -6,6 +6,18 @@
     --cont_border:1px solid #DDDDDD;
     --dash_title_ft:12px;
 }
+
+/* select_custom S */
+#content .select_wrap select{display:none}
+#content .select_wrap .select_box{width:100%;padding:9px 10px;border: var(--cont_border);position: relative;}
+#content .select_wrap .select_box .select_name{width:100%;font-size: var(--fts13);font-weight: var(--ftw500);line-height: 20px;position: relative;cursor: pointer;}
+#content .select_wrap .select_box .select_name:after{content:'';display: block;width: 12px;height: 12px;background: url('../images/common/arrow_select_down.svg')no-repeat center center;background-size: cover;position: absolute;right: 10px;top: 50%;transform: translateY(-50%);}
+#content .select_wrap .select_box.active .select_name:after{background: url('../images/common/arrow_select_up.svg')no-repeat center center;background-size: cover;}
+#content .select_wrap .select_box .opt_list{display: none;width:100%;padding:0 10px;position: absolute;left: 0;top: 100%;z-index: 5;background: #fff;border: var(--cont_border);}
+#content .select_wrap .select_box.active .opt_list{display: block;cursor: pointer;}
+#content .select_wrap .select_box .opt_list .opt_item{padding: 5px 0;}
+/* select_custom E */
+
 /* 대시보드 s */
 #content .info_dash > ul{display: flex;justify-content: space-between;align-items: stretch;flex-direction: row;flex-wrap: nowrap;}
 #content .info_dash .dash_item{background: #fff;}
@@ -292,21 +304,19 @@
 #content .tbl_panel{background: #fff;}
 #content .tbl_panel .panel_head{padding: 20px;}
 #content .tbl_panel .panel_head.bdr_bot{border-bottom: var(--box_border);}
-#content .tbl_panel .panel_head .head_group{justify-content: space-between;align-items: center;}
-#content .tbl_panel .panel_head .head_left{}
+
+#content .tbl_panel .cont_group{justify-content: space-between;align-items: center;}
+#content .tbl_panel .cont_group .panel_count{display: flex;gap:5px;font-size:var(--fts14);font-weight:var(--ftw500);color: #595959;}
+#content .tbl_panel .cont_group .panel_count .slash{color: #000;font-weight: var(--ftw700);}
+#content .tbl_panel .cont_group .panel_count .count_sta{margin-left:3px;font-weight:var(--ftw700);}
+#content .tbl_panel .cont_group .all_count .count_sta{color: #000;}
+#content .tbl_panel .cont_group .srh_count .count_sta{color:var(--color3);}
+
+#content .tbl_panel .cont_group .cont_right{display: flex;align-items:center;gap: 10px;}
+#content .tbl_panel .cont_group .cont_right .select_wrap{width: 150px;}
+#content .tbl_panel .cont_group .cont_right .icon_tbl_cus{display:inline-block;width: 20px;height:20px;background: url('../images/common/icon_tbl_cus.svg')no-repeat center center;background-size: cover;cursor: pointer;}
+
 #content .tbl_panel .btn_group{display: flex;justify-content: flex-end;align-items: center;}
-
-#content .tbl_panel .panel_head .head_right{display: flex;gap: 10px;}
-#content .tbl_panel .panel_head .head_right .select_wrap{width: 150px;}
-
-#content .select_wrap select{display:none}
-#content .select_wrap .select_box{width:100%;padding:9px 10px;border: var(--cont_border);position: relative;}
-#content .select_wrap .select_box .select_name{width:100%;font-size: var(--fts13);font-weight: var(--ftw500);line-height: 20px;position: relative;cursor: pointer;}
-#content .select_wrap .select_box .select_name:after{content:'';display: block;width: 12px;height: 12px;background: url('../images/common/arrow_select_down.svg')no-repeat center center;background-size: cover;position: absolute;right: 10px;top: 50%;transform: translateY(-50%);}
-#content .select_wrap .select_box.active .select_name:after{background: url('../images/common/arrow_select_up.svg')no-repeat center center;background-size: cover;}
-#content .select_wrap .select_box .opt_list{display: none;width:100%;padding:0 10px;position: absolute;left: 0;top: 100%;z-index: 5;background: #fff;border: var(--cont_border);}
-#content .select_wrap .select_box.active .opt_list{display: block;cursor: pointer;}
-#content .select_wrap .select_box .opt_list .opt_item{padding: 5px 0;}
 
 #content .tbl_panel .panel_body{padding: 20px;}
 /* 대시보드 e */
