@@ -165,6 +165,9 @@ input[type="password"]{width: 100%;min-height:40px}
 .motiv_tbl.look_tbl .tbl_inner{overflow-x: visible;}
 .motiv_tbl.look_tbl .tbl_body .look_body_list {overflow-x:scroll}
 
+.motiv_tbl.normal_tbl .tbl_inner .tbl_head,
+.motiv_tbl.normal_tbl .tbl_inner .tbl_body{display:flex}
+
 .look_head_box,
 .look_body_box{overflow:hidden}
 .look_head_head,

@@ -39,10 +39,7 @@ var tableData2 = {
     scrollLook: ['itemCode', 'itselfCode'],
 }
 
-
 var tFlex = {
-    headLookHtml: '<div class="look_head_head"></div><div class="look_head_box"><div class="look_head_list"></div></div>',
-    bodyLookHtml: '<div class="look_body_head"></div><div class="look_body_box"><div class="look_body_list"></div></div>',
     headTgh: '.motiv_tbl .tbl_head .look_head_head .row_item',
     headTgb: '.motiv_tbl .tbl_head .look_head_box .row_item',
     bodyTgh: '.motiv_tbl .tbl_body .look_body_head .row_item',
@@ -51,33 +48,49 @@ var tFlex = {
     motivTblWidth: 0,
     leftWidth: 0,
     rightWidth: 0,
+    totalWidth: 0,
     scrollLook: [],
+    scrollLookSta: false,
     tgId: '',
 
     init: (id, obj) => {
         tFlex.tgId = id;
-        if (tableData.scrollLookSta) {// tableData.scrollLookSta의 값이 true 일때 실행됨니다.
+        if (obj.scrollLookSta) {// tableData.scrollLookSta의 값이 true 일때 실행됨니다.
+            tFlex.scrollLookSta = true;
             $('#'+tFlex.tgId+' .motiv_tbl').addClass('look_tbl');
-            Promise.resolve()
-            // .then(() => {
-            //     tFlex.lookHead(id);
-            // })
-            .then(() => {
-                tFlex.lookSize(obj);
-            })
-            .then(() => {
-                tFlex.dynamicUi(obj);
-            })
-            .then(() => {
-                tFlex.tableRowVal();
-            })
-            .then(() => {
-                tFlex.tableRowFilters();
-            })
-            .then(() => {
-                tFlex.lookWheelUi();
-            })
+        } else {
+            tFlex.scrollLookSta = false;
+            $('#'+tFlex.tgId+' .motiv_tbl').addClass('normal_tbl');
         }
+
+        // console.log(obj.scrollLookSta == false && $('#'+tFlex.tgId+' .motiv_tbl .look_head_head > div').length < 0 ? false : true)
+
+        // if(obj.scrollLookSta == false && ($('#'+tFlex.tgId+' .motiv_tbl .look_head_head > div').length < 0 ? false : true)) {
+        //     tFlex.scrollLookSta = true;
+        // } else {
+        //     tFlex.scrollLookSta = false;
+        // }
+
+        Promise.resolve()
+        // .then(() => {
+        //     tFlex.lookHead(id);
+        // })
+        .then(() => {
+            tFlex.lookSize(obj);
+        })
+        .then(() => {
+            tFlex.dynamicUi(obj);
+        })
+        .then(() => {
+            tFlex.tableRowVal(obj);
+        })
+        .then(() => {
+            tFlex.tableRowFilters();
+        })
+        .then(() => {
+            //scrollLookSta 값이 true 일때만 실행됨니다.
+            if(obj.scrollLookSta) tFlex.lookWheelUi();
+        })
     },
 
     //락이 걸리는 테이블일때 실행됨니다.
@@ -96,14 +109,19 @@ var tFlex = {
         tFlex.motivTblWidth = $('.motiv_tbl').width();
         tFlex.leftWidth = widthHeadVal;
         tFlex.rightWidth = widthBodyVal;
+        tFlex.totalWidth = widthHeadVal + widthBodyVal;
     },
 
     dynamicUi: (obj) => {
         tFlex.hdItemStyle('checkedbox', tFlex.ckbSize);
-        $('#'+tFlex.tgId+' '+tFlex.headTgh).css('width', tFlex.leftWidth +'px');
-        $('#'+tFlex.tgId+' '+tFlex.headTgb).css('width', tFlex.rightWidth +'px');
-        $('#'+tFlex.tgId+' '+tFlex.bodyTgh).css('width', tFlex.leftWidth +'px');
-        $('#'+tFlex.tgId+' '+tFlex.bodyTgb).css('width', tFlex.rightWidth +'px');
+        var tFlexLeft = tFlex.leftWidth;
+        var tFlexRight = tFlex.rightWidth;
+
+        $('#'+tFlex.tgId+' '+ tFlex.headTgh).css('width', tFlexLeft +'px');
+        $('#'+tFlex.tgId+' '+ tFlex.headTgb).css('width', tFlexRight +'px');
+        $('#'+tFlex.tgId+' '+ tFlex.bodyTgh).css('width', tFlexLeft +'px');
+        $('#'+tFlex.tgId+' '+ tFlex.bodyTgb).css('width', tFlexRight +'px');
+
         $.each( obj.tableSize, (index, item) => {
             tFlex.hdItemStyle(index, item);
         });
@@ -113,13 +131,18 @@ var tFlex = {
         $('#'+tFlex.tgId+' .motiv_tbl .hd_item[keyname='+ name +']').css('width', size +'px');
     },
 
-    tableRowVal: () => {
+    tableRowVal: (obj) => {
+        if (!tFlex.scrollLookSta){
+            tFlex.tableRowFn($('#'+tFlex.tgId+' .tbl_inner > div'), 'inner');
+        }
+        
         tFlex.tableRowFn($('#'+tFlex.tgId+' .tbl_head > div'));
         tFlex.tableRowFn($('#'+tFlex.tgId+' .tbl_body > div'));
     },
 
-    tableRowFn: (target) => {
+    tableRowFn: (target, type) => {
         $.each(target, (index, item) => {
+            if(type == 'inner') target.eq(index).css('width', (tFlex.leftWidth + tFlex.rightWidth));
             $.each(target.eq(index).find('.row_item'), (s_index, s_item) => {
                 target.eq(index).find('.row_item').eq(s_index).attr('table_name', 'head_'+s_index);
             });
