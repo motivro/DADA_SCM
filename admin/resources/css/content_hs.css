@@ -254,8 +254,8 @@
 
 
 #content .motiv_tbl_box{padding: 30px 20px;background: #fff;}
-#content .motiv_tbl_box .tbl_item{margin-bottom: 20px;}
-#content .motiv_tbl_box .tbl_item:last-child{margin-bottom: 30px;}
+#content .motiv_tbl_box .tbl_item{margin-top: 20px;}
+#content .motiv_tbl_box .tbl_item:first-child{margin-top: 0;}
 
 #content .motiv_tbl_box .motiv_normal_tbl tr th,
 #content .motiv_tbl_box .motiv_normal_tbl tr td{padding: 6px 10px 7px;font-size: 12px;font-weight: 400; vertical-align: middle;border: var(--cont_border);}

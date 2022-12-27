@@ -7,18 +7,39 @@
 /* tblList */
 #content .panel_head{padding: 20px;}
 #content .panel_head.bdr_bot{border-bottom: var(--box_border);}
-
 #content .cont_group{justify-content: space-between;align-items: center;}
 #content .cont_group .panel_count{display: flex;gap:5px;font-size:var(--fts14);font-weight:var(--ftw500);color: #595959;}
 #content .cont_group .panel_count .slash{color: #000;font-weight: var(--ftw700);}
 #content .cont_group .panel_count .count_sta{margin-left:3px;font-weight:var(--ftw700);}
 #content .cont_group .all_count .count_sta{color: #000;}
 #content .cont_group .srh_count .count_sta{color:var(--color3);}
-
 #content .cont_group .cont_right{display: flex;align-items:center;gap: 10px;}
 #content .cont_group .cont_right .select_wrap{width: 150px;}
 #content .cont_group .cont_right .icon_tbl_cus{display:inline-block;width: 20px;height:20px;background: url('../images/common/icon_tbl_cus.svg')no-repeat center center;background-size: cover;cursor: pointer;}
-
 #content .btn_group{display: flex;justify-content: flex-end;align-items: center;}
-
 #content .panel_body{padding: 20px;}
+
+
+.sub_infor{padding:10px 20px 0 20px;text-align:left;color:var(--color13)}
+.sub_infor p{}
+#content .motiv_tbl_box .sub_infor{padding:0;margin-top:10px;}
+
+/* btn */
+#content .contents_box .srh_btn_box .btn_wrap{position:relative}
+#content .contents_box .srh_btn_box .btn_wrap .btn.btn_search_open{width:auto;position:absolute;bottom:0;right:20px;}
+
+i.arrow{border:solid var(--color5);border-width:0 2px 2px 0;display:inline-block;padding:3px;margin-right: 10px;}
+i.down{transform:rotate(45deg);-webkit-transform:rotate(45deg)}
+
+
+/* 실제 table */
+#content .motiv_tbl_box.name_k .motiv_normal_tbl thead tr th,
+#content .motiv_tbl_box.name_k .motiv_normal_tbl tbody tr th{background: var(--search_box_bg);}
+
+#content .motiv_tbl_box.name_k .motiv_normal_tbl tr th,
+#content .motiv_tbl_box.name_k .motiv_normal_tbl tr td{height:40px;}
+
+.motiv_normal_tbl.ta_c th,
+.motiv_normal_tbl.ta_c td{text-align:center}
+.tbl_title{font-size:var(--fts14);font-weight:var(--ftw700)}
+.tbl_title + .motiv_normal_tbl{margin-top:10px;}

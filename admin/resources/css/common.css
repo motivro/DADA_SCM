@@ -10,6 +10,7 @@
     --fts15:15px;
     --fts16:16px;
     --fts20:20px;
+    --fts24:24px;
 
     --ftw500:500;
     --ftw700:700;
@@ -28,6 +29,7 @@
     --color12:#DDDDDD;
     --color13:#959595;
     --color14:#444444;
+    --color15:#e3e3e3;
 
     --box_border:1px solid #dddddd;
     --cont_border:1px solid #e3e3e3;
@@ -48,6 +50,9 @@ input[type="text"]{width: 100%;min-height:40px}
 .wrap #content .inner{padding: 30px 40px 80px;}
 .wrap #content .contents_box{margin-bottom: 40px;background-color: #fff;border: var(--cont_border);}
 .wrap #content .contents_box .contents_item{background: #fff;border: 1px solid #DDDDDD;}
+
+.wrap #content .inner > h1{font-size:var(--fts24)}
+.wrap #content .inner h1 + .contents_box{margin-top:25px}
 /* contents e*/
 
 .btn_wrap{display:flex;align-items:center;gap: 8px;}
