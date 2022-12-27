@@ -224,6 +224,7 @@
 #content .contents_box .srh_box .srh_item.row-2 .srh_item_inner{width: 50%;}
 #content .contents_box .srh_box .srh_item.row-2 .srh_item_inner:last-child{padding-left: 25px;border-left: var(--cont_border);}
 #content .contents_box .srh_box .srh_item .srh_item_inner{display: flex;align-items:center;padding-left: 25px;}
+#content .contents_box .srh_box .srh_item .srh_item_inner + .srh_item_inner{margin-left:25px;border-left: var(--cont_border);}
 #content .contents_box .srh_box .srh_item .srh_item_inner:first-child{padding-left: 5px;}
 #content .contents_box .srh_box .srh_item .srh_title{min-width: 100px;font-size: 14px;font-weight: 500;line-height: 20px;}
 #content .contents_box .srh_box .srh_item .srh_cont{display: flex;gap: 14px;}
