@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/log_form.css">
+    <script src="../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../resources/js/ui.js"></script>
+</head>
+<body class="memJoin">
+    <!-- wrap S -->
+    <div class="wrap">
+        <!-- header S -->
+        <header id="header" class="logout">
+            <div class="hd_inner">
+                <h1>
+                    <a class="logo" title="DADA" href="#none"><span class="blind">DADA SCM</span></a>
+                    <a class="slogo" href="#none"><span>다다 SCM</span></a>
+                </h1>
+            </div>
+        </header>
+        <!-- header E -->
+        
+        <!-- container S -->
+        <div id="container">
+            <!-- content S -->
+            <div id="content" class="join_biz">
+                <!-- inner S -->
+                <div class="inner">
+                    <div class="cont_tit"><h2>다다SCM 사업자 회원 전환</h2></div>
+
+                    <div class="biz_certi_box">
+                        <div class="box_inner">
+                            <div class="join_inp_box">
+                                <div class="inp_tit">사업자 인증</div>
+                                <div class="inp_wrap">
+                                    <input type="text" placeholder="상호명(사업체명)을 입력해 주세요.">
+                                    <p class="txtInfo error">상호명(사업체명)을 입력해 주세요.</p>
+                                </div>
+                                <div class="inp_wrap">
+                                    <input type="password" placeholder="사업자 등록번호를 입력해 주세요.">
+                                    <p class="txtInfo error">사업자 등록번호를 입력해 주세요.</p>
+                                </div>
+                            </div>
+                            <div class="btn_wrap"><div class="btn btn_biz_srh btn_lg">사업자 검색</div></div>
+                        </div>
+                    </div>
+
+                    <div class="join_box Biz">
+
+                        <div class="box_inner">
+
+                            <div class="join_inp_box">
+                                <div class="inp_tit">사업자 정보</div>
+                                <div class="inp_wrap">
+                                    <input type="text" placeholder="상호명(사업체명)을 입력해 주세요.">
+                                    <p class="txtInfo error">아이디를 입력해 주세요.</p>
+                                </div>
+                                <div class="inp_wrap">
+                                    <input type="password" placeholder="사업자 등록번호를 입력해 주세요.">
+                                    <p class="txtInfo error">사업자 등록번호를 입력해 주세요.</p>
+                                </div>
+                                <div class="select_wrap">
+                                    <select>
+                                        <option value="사업자 구분 선택" selected>사업자 구분 선택</option>
+                                        <option value="판매변경2">법인 사업자</option>
+                                        <option value="판매변경2">개인 사업자</option>
+                                        <option value="판매변경2">간이 사업자</option>
+                                    </select>
+                                </div>
+                                <div class="inp_wrap">
+                                    <input type="text" placeholder="대표자명을 입력해 주세요.">
+                                    <p class="txtInfo error">이름을 입력해 주세요.</p>
+                                </div>
+                                <div class="inp_wrap row-2">
+                                    <input type="text" placeholder="종목을 입력해 주세요.">
+                                    <input type="text" placeholder="업태를 입력해 주세요.">
+                                    <p class="txtInfo error">정보를 정확히 입력해 주세요.</p>
+                                </div>
+                            </div>
+
+                            <div class="join_inp_box">
+                                <div class="cus_inp_wrap checkbox_inp">
+                                    <label for="chk_memInfo" class="inp_box">
+                                        <span class="txt">회원 정보와 동일</span>
+                                        <input type="checkbox" id="chk_memInfo" name="memInfo">
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                                <div class="inp_wrap">
+                                    <input type="password" placeholder="이메일을 입력해 주세요.">
+                                    <p class="txtInfo error">이메일을 입력해 주세요.</p>
+                                </div>
+                                <div class="inp_wrap">
+                                    <input type="text" placeholder="휴대폰번호를 입력해 주세요.('-'제외)">
+                                    <p class="txtInfo error">휴대폰 번호를 입력해 주세요.</p>
+                                </div>
+                                <div class="adr_inp_wrap">
+                                    <div class="flex_row">
+                                        <div class="inp_wrap"><input type="text" placeholder="우편번호"></div>
+                                        <div class="btn_wrap">
+                                            <div class="btn btn_find_adr">우편번호 검색</div>
+                                        </div>
+                                    </div>
+                                    <div class="inp_wrap"><input type="text" placeholder="사업자 주소를 입력해 주세요."></div>
+                                    <div class="inp_wrap"><input type="text" placeholder="상세 주소를 입력해 주세요"></div>
+                                </div>
+                            </div>
+
+                            <div class="join_inp_box">
+                                <div class="inp_tit">송금계좌 정보</div>
+                                <div class="select_wrap">
+                                    <select>
+                                        <option value="사업자 구분 선택" selected>사업자 구분 선택</option>
+                                        <option value="판매변경2">법인 사업자</option>
+                                        <option value="판매변경2">개인 사업자</option>
+                                        <option value="판매변경2">간이 사업자</option>
+                                    </select>
+                                </div>
+                                <div class="inp_wrap">
+                                    <input type="password" placeholder="사업자 계좌번호를 숫자만 입력해 주세요.">
+                                    <p class="txtInfo error">사업자 계좌번호를 숫자만 입력해 주세요.</p>
+                                </div>
+                                <div class="inp_wrap">
+                                    <input type="password" placeholder="사업자 예금주를 입력해 주세요.">
+                                    <p class="txtInfo error">사업자 예금주를 입력해 주세요.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="join_inp_box etc">
+                                <div class="cus_inp_wrap checkbox_inp">
+                                    <label for="chk_shop" class="inp_box">
+                                        <span class="txt">동대문 도매사업자</span>
+                                        <input type="checkbox" id="chk_shop" name="shop_cate">
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                                <div class="select_wrap">
+                                    <select>
+                                        <option value="로컬상가 선택" selected>로컬상가 선택</option>
+                                    </select>
+                                </div>
+                                <div class="flex_row normal">
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="층수선택" selected>층수선택</option>
+                                        </select>
+                                    </div>
+                                    <div class="inp_wrap">
+                                        <input type="password" placeholder="매장번호를 입력해 주세요.">
+                                    </div>
+                                </div>
+                                <div class="inp_wrap">
+                                    <input type="password" placeholder="매장명을 입력해 주세요.">
+                                </div>
+                            </div>
+
+                            <div class="join_inp_box">
+                                <div class="inp_tit">파일첨부</div>
+                                추가예정
+                            </div>
+
+                            <div class="btn_wrap jc_c"><div class="btn btn_join btn_lg">사업자 정보 저장 및 승인요청</div></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- inner E -->
+            </div>
+            <!-- content E -->
+        </div>
+        <!-- container E -->
+
+    </div>
+    <!-- wrap E -->
+    <script>
+        var selectUi = {
+            class : 'select_wrap',
+            seData : [],
+            init :() => {
+                $.each( $('.'+selectUi.class+''), (index, item) => {
+                    var seObjData = new Object();
+                    seObjData.optData = new Array();
+                    seObjData.seNum = index;
+                    seObjData.actNum = '';
+                    seObjData.actVal = '';
+                    seObjData.actSta = false;
+                    var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
+                    $.each( seTarget.children("option"), (seIndex, seItem) => {
+                        if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
+                            seObjData.actSta = true;
+                            seObjData.actNum = seIndex;
+                            seObjData.actVal = seItem.text;
+                        }
+                        seObjData.optData.push(seItem.text);
+                    });
+                    selectUi.seData.push(seObjData);
+                })
+                selectUi.customSelect();
+            },
+            customSelect: () => {
+                $.each( selectUi.seData, (index, item) => {
+                    var selectHtml = '';
+                    var selectTname = item.actVal ? item.actVal : item.optData[0];
+                    selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
+                    selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
+                    selectHtml+= '  <div class="opt_list">';
+                    $.each( item.optData, (seindex, seitem) => {
+                        selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
+                    });
+                    selectHtml+= '  </div>';
+                    selectHtml+= '</div>';
+                    $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
+                });
+            },
+            boxOpen : (obj) =>{
+                if(obj.hasClass('active')){
+                    obj.removeClass('active');
+                }else{
+                    obj.addClass('active');
+                }
+            },
+            optionClick : (obj) =>{
+                obj.parent().parent().children('.select_name').text(obj.text());
+                obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
+            },
+        }
+        selectUi.init();
+    </script>
+</body>
+</html>
