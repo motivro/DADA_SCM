@@ -374,6 +374,11 @@
 #content .tbl_panel .panel_body{padding: 20px;}
 /* 대시보드 e */
 
+#content .txt_info_box{padding: 30px 20px;}
+#content .txt_info_box .txt_info{font-size: var(--fts12);font-weight: var(--ftw500);line-height: 2;}
+#content .txt_info_box .txt_info.point{color: var(--color1);}
+#content .txt_info_box .sub_info_box{margin-top: 30px;}
+
 
 
 
