@@ -225,7 +225,7 @@
             <div id="content">
                 <!-- inner S -->
                 <div class="inner">
-                    <h1>주문조회</h1>
+                    <h1>발주확인/발송</h1>
                     <!-- search_cont S -->
                     <div class="contents_box">
                         <div class="srh_box">
@@ -350,7 +350,6 @@
                             <div class="btn_wrap">
                                 <div class="btn btn_search">검색</div>
                                 <div class="btn">초기화</div>
-                                <div class="btn btn_search_open"><i class="arrow down"></i>펼처보기</div>
                             </div>
                         </div>
            
@@ -372,6 +371,12 @@
                                 <div class="cont_right">
                                     <div class="select_wrap">
                                         <select>
+                                            <option value="등록일순" selected>등록일순</option>
+                                            <option value="등록일순">등록일순</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_wrap">
+                                        <select>
                                             <option value="50" selected>50개씩 </option>
                                             <option value="100">100개씩 </option>
                                         </select>
@@ -384,12 +389,8 @@
                         <div class="panel_body">
                             <div class="btn_group d_flex">
                                 <div class="btn_wrap">
-                                    <div class="btn">발주/발송처리</div>
-                                    <div class="btn">발송지연처리</div>
-                                    <div class="btn">배송지수정</div>
-                                    <div class="btn">판매취소 처리</div>
-                                    <div class="btn">반품/교환처리</div>
-                                    <div class="btn">판매취소 처리</div>
+                                    <div class="btn">양식 다운로드</div>
+                                    <div class="btn">엑셀 송장업로드</div>
                                 </div>
                             </div>
                             <div class="tbl_wrap">
