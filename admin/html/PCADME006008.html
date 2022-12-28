@@ -225,29 +225,33 @@
             <div id="content">
                 <!-- inner S -->
                 <div class="inner">
-                    <h1>발주확인/발송</h1>
+                    <h1>교환관리</h1>
                     <!-- search_cont S -->
                     <div class="contents_box">
                         <div class="srh_box">
                             <div class="srh_item">
                                 <div class="srh_item_inner">
-                                    <div class="srh_title">상품유형</div>
+                                    <div class="srh_title">교환상태</div>
                                     <div class="srh_cont">
                                         <div class="cus_inp_wrap checkbox_inp">
                                             <label for="in_1_1" class="inp_box">전체
                                                 <input type="checkbox" id="in_1_1" name="ord_sta" checked="">
                                                 <span class="inp_custom"></span>
                                             </label>
-                                            <label for="in_1_2" class="inp_box">일반
+                                            <label for="in_1_2" class="inp_box">교환요청
                                                 <input type="checkbox" id="in_1_2" name="ord_sta">
                                                 <span class="inp_custom"></span>
                                             </label>
-                                            <label for="in_1_3" class="inp_box">다다딜
+                                            <label for="in_1_3" class="inp_box">교환거부
                                                 <input type="checkbox" id="in_1_3" name="ord_sta">
                                                 <span class="inp_custom"></span>
                                             </label>
-                                            <label for="in_1_4" class="inp_box">프리오더
+                                            <label for="in_1_4" class="inp_box">교환진행
                                                 <input type="checkbox" id="in_1_4" name="ord_sta">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                            <label for="in_1_5" class="inp_box">교환보류
+                                                <input type="checkbox" id="in_1_5" name="ord_sta">
                                                 <span class="inp_custom"></span>
                                             </label>
                                         </div>
@@ -354,7 +358,6 @@
                             <div class="btn_wrap">
                                 <div class="btn btn_search">검색</div>
                                 <div class="btn">초기화</div>
-                                <div class="btn btn_search_open"><i class="arrow down"></i>펼처보기</div>
                             </div>
                         </div>
            
@@ -376,6 +379,12 @@
                                 <div class="cont_right">
                                     <div class="select_wrap">
                                         <select>
+                                            <option value="등록일순" selected>등록일순</option>
+                                            <option value="등록일순">등록일순</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_wrap">
+                                        <select>
                                             <option value="50" selected>50개씩 </option>
                                             <option value="100">100개씩 </option>
                                         </select>
@@ -388,9 +397,12 @@
                         <div class="panel_body">
                             <div class="btn_group d_flex">
                                 <div class="btn_wrap">
-                                    <div class="btn">양식 다운로드</div>
-                                    <div class="btn">엑셀 송장업로드</div>
-                                    <div class="btn">주문로그</div>
+                                    <div class="btn">수거완료 처리</div>
+                                    <div class="btn">교환보류 설정</div>
+                                    <div class="btn">교환거부 처리</div>
+                                    <div class="btn">교환완료 처리</div>
+                                    <div class="btn">교환정보 수정</div>
+                                    <div class="btn">교환접수 처리</div>
                                 </div>
                             </div>
                             <div class="tbl_wrap">
