@@ -3,7 +3,6 @@ $(document).ready(function(){
     
     //사이드메뉴 추가
     gitHubTgMenu();
-
     if(location.href.indexOf('github') != -1){
         githubUi.ini();
     }
@@ -15,17 +14,14 @@ gitHubTgMenu = () => {
     var pageRoute = location.origin + serverSta;
     var depth2 = location.pathname.replace('/html/', '').split('.')[0];
     var depth1 = depth2.substr(0, 9);
-    
-
     var sideMenuHtml = '';
     sideMenuHtml += '<ul class="nav_list motiv_acc">';
     $.each(PCADME, (index, item) => {
-        
         var numBer = 0;
         $.each( item, (s_index, s_item) => {
             if(numBer == 0){
                 numBer++;
-                sideMenuHtml += '<li class="nav_item" menuname="' + s_index + '" childMenu="'+Object.keys(item).length+'">';
+                sideMenuHtml += '<li class="nav_item" menuname="' + s_index + '" childmenu="'+Object.keys(item).length+'">';
                 sideMenuHtml += '   <div class="nav_menu">' + s_item + '</div>';
                 sideMenuHtml += '   <ul class="submenu">';
             } else {
@@ -45,7 +41,7 @@ gitHubTgMenu = () => {
         var dp2ChilHSta = $(this).attr('childmenu') * dp2ChilH;
         //dp2ChilH
         if($(this).hasClass('open')){
-            $(this).removeClass('open').children('.submenu').attrStyle('css');
+            $(this).removeClass('open').children('.submenu').removeAttr('style');
         } else {
             $(this).addClass('open').children('.submenu').css('max-height', dp2ChilHSta);
         }
