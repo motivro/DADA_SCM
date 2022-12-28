@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-
+    
     //사이드메뉴 추가
     gitHubTgMenu();
 
@@ -13,19 +13,23 @@ gitHubTgMenu = () => {
     var locationOrigin = location.origin;
     var serverSta = location.href.indexOf('github') != -1 ? '/DADA_SCM/admin/html/' : '/html/';
     var pageRoute = location.origin + serverSta;
+    var depth2 = location.pathname.replace('/html/', '').split('.')[0];
+    var depth1 = depth2.substr(0, 9);
+    
 
     var sideMenuHtml = '';
     sideMenuHtml += '<ul class="nav_list motiv_acc">';
     $.each(PCADME, (index, item) => {
-        sideMenuHtml += '<li class="nav_item">';
+        
         var numBer = 0;
         $.each( item, (s_index, s_item) => {
             if(numBer == 0){
                 numBer++;
+                sideMenuHtml += '<li class="nav_item" menuname="' + s_index + '" childMenu="'+Object.keys(item).length+'">';
                 sideMenuHtml += '   <div class="nav_menu">' + s_item + '</div>';
                 sideMenuHtml += '   <ul class="submenu">';
             } else {
-                sideMenuHtml += '<li class="sub_item"><a href="' + pageRoute + s_index + '.html">' + s_item + '</a></li>';
+                sideMenuHtml += '<li class="sub_item" menuname="' + s_index + '"><a href="' + pageRoute + s_index + '.html">' + s_item + '</a></li>';
             }
         })
         sideMenuHtml += '</ul>';
@@ -34,24 +38,28 @@ gitHubTgMenu = () => {
     sideMenuHtml += '</ul>';
     $('.lnb_menu .motiv_acc').remove();
     $('.lnb_menu').append(sideMenuHtml);
-
-    var accBox = $('#lnb .motiv_acc > li.nav_item');
-    for(i = 0; i < accBox.length; i++){
-        var acc = accBox.eq(i).children('.nav_menu');
-        for (j = 0; j < acc.length; j++) {
-            acc[j].addEventListener("click", function () {
-                // this.classList.toggle("active");
-                $(this).parent('li.nav_item').toggleClass('open');
-                // $(this).parent('li.nav_item').parent().parent().toggleClass('active');
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
+    var dp2ChilH = $('li.nav_item[menuname='+depth1+']').children('.submenu').children('li').eq(1).outerHeight(true);
+    console.log(dp2ChilH)
+    openMenu(depth1, depth2, dp2ChilH);
+    $('.nav_item').click(function(){
+        var dp2ChilHSta = $(this).attr('childmenu') * dp2ChilH;
+        //dp2ChilH
+        if($(this).hasClass('open')){
+            $(this).removeClass('open').children('.submenu').attrStyle('css');
+        } else {
+            $(this).addClass('open').children('.submenu').css('max-height', dp2ChilHSta);
         }
-    }
+    })
+
+    console.log( depth1, depth2 );
+}
+
+openMenu = (depth1, depth2, dp2ChilH) => {
+    var openTg = $('li.nav_item[menuname='+depth1+']');
+    
+    var dp2ChilHSta = openTg.attr('childmenu') * dp2ChilH;
+    console.log(dp2ChilHSta)
+    openTg.addClass('open').children('.submenu').css('max-height', dp2ChilHSta).children('.sub_item[menuname='+depth2+']').addClass('active');
 }
 
 var githubUi = {

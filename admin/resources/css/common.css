@@ -134,6 +134,7 @@ input[type="password"]{width: 100%;min-height:40px}
 #lnb .lnb_menu .nav_list .nav_item .submenu .sub_item{margin-top:14px;padding-left:10px;font-size:14px;font-weight:500;color: #959595;transition: color .3s;}
 #lnb .lnb_menu .nav_list .nav_item .submenu .sub_item:hover{color: var(--color1);}
 #lnb .lnb_menu .nav_list .nav_item .submenu .sub_item + .sub_item{}
+#lnb .lnb_menu .nav_list .nav_item .submenu .sub_item.active a{color:var(--color1);text-decoration:underlind}
 /* lnb e */
 
 /* table */
