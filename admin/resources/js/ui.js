@@ -37,4 +37,16 @@ $(document).ready(function(){
     //         });
     //     }
     // }
+
+
+    if(location.href.indexOf('github') != -1){
+        githubUi.ini();
+    }
 });
+
+var githubUi = {
+    ini: () => {
+        console.log('github')
+    },
+
+}
