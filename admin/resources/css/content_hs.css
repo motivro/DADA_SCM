@@ -15,6 +15,8 @@
 .icon_refresh{width: 12px;height: 12px;background: url('../images/common/icon_refresh.svg')no-repeat center center;background-size: cover;}
 .icon_blank{width:19px;height:19px;background: url('../images/common/icon_blank.svg')no-repeat center center;background-size: cover;}
 
+.wrap #content .contents_box.dash{background: none;border: 0;}
+
 /* select_custom S */
 #content .select_wrap select{display:none}
 #content .select_wrap .select_box{width:100%;padding:9px 10px;border: var(--cont_border);position: relative;}
@@ -374,10 +376,16 @@
 #content .tbl_panel .panel_body{padding: 20px;}
 /* 대시보드 e */
 
-#content .txt_info_box{padding: 30px 20px;}
+#content .txt_info_box{padding: 20px 20px;}
+#content .txt_info_box .info_tit{padding: 5px 0;display: flex;justify-content: space-between;align-items: center;}
+#content .txt_info_box .info_tit .tit{font-size: var(--fts12);font-weight: var(--ftw700);color: var(--color1);}
+#content .txt_info_box .info_cont{padding: 5px 0;}
+
 #content .txt_info_box .txt_info{font-size: var(--fts12);font-weight: var(--ftw500);line-height: 2;}
 #content .txt_info_box .txt_info.point{color: var(--color1);}
+#content .txt_info_box .txt_info.subPoint{color: var(--color3);}
 #content .txt_info_box .sub_info_box{margin-top: 30px;}
+#content .txt_info_box .sub_info_box .sub_txt_list{padding-left: 15px;}
 
 
 
