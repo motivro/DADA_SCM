@@ -35,7 +35,6 @@ gitHubTgMenu = () => {
     $('.lnb_menu .motiv_acc').remove();
     $('.lnb_menu').append(sideMenuHtml);
     var dp2ChilH = $('li.nav_item[menuname='+depth1+']').children('.submenu').children('li').eq(1).outerHeight(true);
-    console.log(dp2ChilH)
     openMenu(depth1, depth2, dp2ChilH);
     $('.nav_item').click(function(){
         var dp2ChilHSta = $(this).attr('childmenu') * dp2ChilH;
@@ -46,13 +45,10 @@ gitHubTgMenu = () => {
             $(this).addClass('open').children('.submenu').css('max-height', dp2ChilHSta);
         }
     })
-
-    console.log( depth1, depth2 );
 }
 
 openMenu = (depth1, depth2, dp2ChilH) => {
     var openTg = $('li.nav_item[menuname='+depth1+']');
-    
     var dp2ChilHSta = openTg.attr('childmenu') * dp2ChilH;
     console.log(dp2ChilHSta)
     openTg.addClass('open').children('.submenu').css('max-height', dp2ChilHSta).children('.sub_item[menuname='+depth2+']').addClass('active');
@@ -62,7 +58,6 @@ var githubUi = {
     ini: () => {
         console.log('github');
     },
-
 }
 
 var PCADME = [

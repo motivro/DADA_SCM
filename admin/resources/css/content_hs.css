@@ -256,6 +256,13 @@
 
 
 #content .motiv_tbl_box{padding: 30px 20px;background: #fff;}
+
+#content .motiv_tbl_box .tbl_title{display: flex;justify-content: space-between;color: var(--color13);}
+#content .motiv_tbl_box .tbl_title .tit .date_sta{color: #000;}
+
+#content .panel_head .tbl_title{color: var(--color13);}
+#content .panel_head .tbl_title .tit .date_sta{color: #000;}
+
 #content .motiv_tbl_box .tbl_item{margin-top: 20px;}
 #content .motiv_tbl_box .tbl_item:first-child{margin-top: 0;}
 
@@ -378,10 +385,10 @@
 
 #content .txt_info_box{padding: 20px 20px;}
 #content .txt_info_box .info_tit{padding: 5px 0;display: flex;justify-content: space-between;align-items: center;}
-#content .txt_info_box .info_tit .tit{font-size: var(--fts12);font-weight: var(--ftw700);color: var(--color1);}
+#content .txt_info_box .info_tit .tit{font-size: var(--fts13);font-weight: var(--ftw700);color: var(--color1);}
 #content .txt_info_box .info_cont{padding: 5px 0;}
 
-#content .txt_info_box .txt_info{font-size: var(--fts12);font-weight: var(--ftw500);line-height: 2;}
+#content .txt_info_box .txt_info{font-size: var(--fts13);font-weight: var(--ftw500);line-height: 2;}
 #content .txt_info_box .txt_info.point{color: var(--color1);}
 #content .txt_info_box .txt_info.subPoint{color: var(--color3);}
 #content .txt_info_box .sub_info_box{margin-top: 30px;}
