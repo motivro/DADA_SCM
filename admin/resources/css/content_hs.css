@@ -394,6 +394,11 @@
 #content .txt_info_box .sub_info_box{margin-top: 30px;}
 #content .txt_info_box .sub_info_box .sub_txt_list{padding-left: 15px;}
 
+#content .contents_box.prd_info_box{background: none;border: none;}
+#content .prd_info_box .prd_info_list{padding: 20px 0;display:flex;align-items:center;background: #fff;border: var(--box_border);}
+#content .prd_info_box .prd_info_list .prd_info_item{display:flex;justify-content: center; gap:5px;width: 25%;text-align: center;border-left: var(--cont_border);}
+#content .prd_info_box .prd_info_list .prd_info_item:first-child{border-left: 0;}
+#content .prd_info_box .txtInfo{display:block;margin-top:8px;font-size:var(--fts12);font-weight:var(--ftw500);color: var(--color13);}
 
 
 

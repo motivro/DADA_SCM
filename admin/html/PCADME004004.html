@@ -225,24 +225,34 @@
             <div id="content">
                 <!-- inner S -->
                 <div class="inner">
-                    <h1>주문조회</h1>
-                    <!-- search_cont S -->
+                    <h1>지정판매자 상품</h1>
                     <div class="contents_box">
                         <div class="srh_box">
                             <div class="srh_item">
                                 <div class="srh_item_inner">
-                                    <div class="srh_title">상품유형</div>
+                                    <div class="srh_title">검색어</div>
+                                    <div class="srh_cont">
+                                        <div class="inp_wrap">
+                                            <input type="text" name="" id="" placeholder="코드, 품명, 태그">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="srh_item">
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">판매형식</div>
                                     <div class="srh_cont">
                                         <div class="cus_inp_wrap checkbox_inp">
                                             <label for="in_1_1" class="inp_box">전체
                                                 <input type="checkbox" id="in_1_1" name="ord_sta" checked="">
                                                 <span class="inp_custom"></span>
                                             </label>
-                                            <label for="in_1_2" class="inp_box">일반
+                                            <label for="in_1_2" class="inp_box">직접판매
                                                 <input type="checkbox" id="in_1_2" name="ord_sta">
                                                 <span class="inp_custom"></span>
                                             </label>
-                                            <label for="in_1_3" class="inp_box">다다딜
+                                            <label for="in_1_3" class="inp_box">위탁판매
                                                 <input type="checkbox" id="in_1_3" name="ord_sta">
                                                 <span class="inp_custom"></span>
                                             </label>
@@ -253,88 +263,25 @@
 
                             <div class="srh_item">
                                 <div class="srh_item_inner">
-                                    <div class="srh_title">상품정보</div>
+                                    <div class="srh_title">공급사</div>
                                     <div class="srh_cont">
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="주문 번호"></div>
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품명, 상품코드, 태그"></div>
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="브랜드"></div>
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="제조사"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="srh_item">
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">구매자 정보</div>
-                                    <div class="srh_cont">
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="구매자명"></div>
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="구매자 전화번호"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="srh_item">
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">수취인 정보</div>
-                                    <div class="srh_cont">
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="수취인명"></div>
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="수취인 전화번호"></div>
+                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="상호명, 아이디">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="srh_item_inner">
-                                    <div class="srh_title">배송상품 정보</div>
+                                    <div class="srh_title">판매사</div>
                                     <div class="srh_cont">
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="송장번호"></div>
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="쇼핑몰"></div>
+                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="닉네임, ID, 이름">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="srh_item">
                                 <div class="srh_item_inner">
-                                    <div class="srh_title">판매유형</div>
+                                    <div class="srh_title">지정판매 일자</div>
                                     <div class="srh_cont">
-                                        <div class="cus_inp_wrap checkbox_inp">
-                                            <label for="in_2_1" class="inp_box">전체
-                                                <input type="checkbox" id="in_2_1" name="ord_sta" checked="">
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                            <label for="in_2_2" class="inp_box">직접판매
-                                                <input type="checkbox" id="in_2_2" name="ord_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                            <label for="in_2_3" class="inp_box">위탁판매
-                                                <input type="checkbox" id="in_2_3" name="ord_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">회원 정보</div>
-                                    <div class="srh_cont">
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="이름, 상호, ID, 닉네임"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="srh_item">
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">기간</div>
-                                    <div class="srh_cont">
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="결제일" selected>결제일</option>
-                                                <option value="발주일">발주일</option>
-                                                <option value="발송일">발송일</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="btn_wrap">
-                                            <div class="btn">오늘</div>
-                                            <div class="btn">1주일</div>
-                                            <div class="btn">1개월</div>
-                                            <div class="btn">3개월</div>
-                                            <div class="btn">1년</div>
-                                        </div>
                                         <div class="inp_wrap">
                                             <input type="text" name="" id="" placeholder="2021-00-00">
                                         </div>
@@ -353,13 +300,20 @@
                                 <div class="btn btn_search_open"><i class="arrow down"></i>펼처보기</div>
                             </div>
                         </div>
-           
                     </div>
-                    <!-- search_cont E -->
 
+                    <div class="contents_box prd_info_box">
+                        <div class="prd_info_list">
+                            <div class="prd_info_item"><span class="tit">직접판매자 수</span><span class="count_sta">00</span></div>
+                            <div class="prd_info_item"><span class="tit">위탁지정판매자 수</span><span class="count_sta">00</span></div>
+                            <div class="prd_info_item"><span class="tit">일반상품</span><span class="count_sta">00</span></div>
+                            <div class="prd_info_item"><span class="tit">다다딜 상품</span><span class="count_sta">00</span></div>
+                        </div>
+                        <p class="txtInfo">※ 지정판매 관리에서 상품 상세정보를 확인할 수 있습니다.</p>
+                    </div>
 
                     <!-- tableList S -->
-                    <div id="pcacme006001_1" class="contents_box">
+                    <div id="pcacme004004_1" class="contents_box">
                         <div class="panel_head bdr_bot">
                             <div class="cont_group d_flex">
                                 <div class="cont_left">
@@ -372,7 +326,7 @@
                                 <div class="cont_right">
                                     <div class="select_wrap">
                                         <select>
-                                            <option value="50" selected>50개씩 </option>
+                                            <option value="50" selected>50개씩</option>
                                             <option value="100">100개씩 </option>
                                         </select>
                                     </div>
@@ -382,16 +336,6 @@
                         </div>
 
                         <div class="panel_body">
-                            <div class="btn_group d_flex">
-                                <div class="btn_wrap">
-                                    <div class="btn">발주/발송처리</div>
-                                    <div class="btn">발송지연처리</div>
-                                    <div class="btn">배송지수정</div>
-                                    <div class="btn">판매취소 처리</div>
-                                    <div class="btn">반품/교환처리</div>
-                                    <div class="btn">판매취소 처리</div>
-                                </div>
-                            </div>
                             <div class="tbl_wrap"></div>
 
                         </div>
@@ -409,9 +353,9 @@
     <!-- wrap E -->
     <script>
         $(document).ready(() => {
-            tFlex.init('pcacme006001_1', tableData2, true);
-        });
-        
+            tFlex.init('pcacme004004_1', tableData2, true);
+        })
+
         var selectUi = {
             class: 'select_wrap',
             seData: [],
