@@ -23,6 +23,7 @@
 .sub_infor{padding:10px 20px 0 20px;text-align:left;color:var(--color13)}
 .sub_infor p{}
 #content .motiv_tbl_box .sub_infor{padding:0;margin-top:10px;}
+.panel_count .sub_infor{padding:0;padding-left:15px}
 
 /* btn */
 #content .contents_box .srh_btn_box .btn_wrap{position:relative}
@@ -43,3 +44,12 @@ i.down{transform:rotate(45deg);-webkit-transform:rotate(45deg)}
 .motiv_normal_tbl.ta_c td{text-align:center}
 .tbl_title{font-size:var(--fts14);font-weight:var(--ftw700)}
 .tbl_title + .motiv_normal_tbl{margin-top:10px;}
+
+#content .contents_box .srh_box .srh_item .srh_cont + .srh_cont{margin-left:25px;}
+
+/**/
+#content .contents_box.center_cont .srh_box{background-color:#fff}
+
+#content .contents_box .srh_box .srh_item .srh_title + .srh_value{margin-left:10px;font-size:var(--fts16);font-weight:var(--ftw700)}
+#content .contents_box .srh_box .srh_item .srh_title + .srh_value + .btn{margin-left:20px;}
+.blue_val .srh_value{color:var(--color3)}
