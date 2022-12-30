@@ -11,6 +11,9 @@
 .ta_l{text-align: left !important;}
 .ta_r{text-align: right !important;}
 
+.pd_0{padding:0 !important}
+.bd_0{border:0 !important;}
+
 .icon{display: inline-block;;}
 .icon_refresh{width: 12px;height: 12px;background: url('../images/common/icon_refresh.svg')no-repeat center center;background-size: cover;}
 .icon_blank{width:19px;height:19px;background: url('../images/common/icon_blank.svg')no-repeat center center;background-size: cover;}
