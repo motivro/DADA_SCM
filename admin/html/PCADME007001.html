@@ -571,7 +571,7 @@
                     </div>
 
                     <!-- tableList S -->
-                    <div class="contents_box">
+                    <div id="pcacme007001_1" class="contents_box">
                         <div class="panel_head bdr_bot">
                             <div class="cont_group d_flex">
                                 <div class="cont_left">
@@ -608,34 +608,7 @@
                                     <div class="btn">엑셀다운로드</div>
                                 </div>
                             </div>
-                            <div class="tbl_wrap">
-                                <div class="motiv_tbl">
-                                    <div class="tbl_inner">
-                                        <div class="tbl_head"></div>
-                                        <div class="tbl_body"></div>
-                                    </div>
-                                </div>
-
-                                <div class="motiv_paging">
-                                    <a class="first" href="#none"></a>
-                                    <a class="prev" href="#none"></a>
-                                    <ul>
-                                        <li><a class="this" href="#none">1</a></li>
-                                        <li><a href="#none">2</a></li>
-                                        <li><a href="#none">3</a></li>
-                                        <li><a href="#none">4</a></li>
-                                        <li><a href="#none">5</a></li>
-                                        <li><a href="#none">6</a></li>
-                                        <li><a href="#none">7</a></li>
-                                        <li><a href="#none">8</a></li>
-                                        <li><a href="#none">9</a></li>
-                                        <li><a href="#none">10</a></li>
-                                    </ul>
-                                    <a class="next" href="#none"></a>
-                                    <a class="last" href="#none"></a>
-                                </div>
-                            </div>
-
+                            <div class="tbl_wrap"></div>
                         </div>
 
                     </div>
@@ -651,6 +624,10 @@
     <!-- wrap E -->
 
     <script>
+        $(document).ready(() => {
+            tFlex.init('pcacme007001_1', tableData2, true);
+        });
+
         var selectUi = {
             class : 'select_wrap',
             seData : [],

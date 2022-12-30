@@ -366,7 +366,7 @@
 
 
                     <!-- tableList S -->
-                    <div class="contents_box">
+                    <div id="pcacme006006_1" class="contents_box">
                         <div class="panel_head bdr_bot">
                             <div class="cont_group d_flex">
                                 <div class="cont_left">
@@ -395,34 +395,7 @@
                         </div>
 
                         <div class="panel_body">
-                            <div class="tbl_wrap">
-                                <div class="motiv_tbl">
-                                    <div class="tbl_inner">
-                                        <div class="tbl_head"></div>
-                                        <div class="tbl_body"></div>
-                                    </div>
-                                </div>
-
-                                <div class="motiv_paging">
-                                    <a class="first" href="#none"></a>
-                                    <a class="prev" href="#none"></a>
-                                    <ul>
-                                        <li><a class="this" href="#none">1</a></li>
-                                        <li><a href="#none">2</a></li>
-                                        <li><a href="#none">3</a></li>
-                                        <li><a href="#none">4</a></li>
-                                        <li><a href="#none">5</a></li>
-                                        <li><a href="#none">6</a></li>
-                                        <li><a href="#none">7</a></li>
-                                        <li><a href="#none">8</a></li>
-                                        <li><a href="#none">9</a></li>
-                                        <li><a href="#none">10</a></li>
-                                    </ul>
-                                    <a class="next" href="#none"></a>
-                                    <a class="last" href="#none"></a>
-                                </div>
-                            </div>
-
+                            <div class="tbl_wrap"></div>
                         </div>
 
                     </div>
@@ -437,60 +410,64 @@
     </div>
     <!-- wrap E -->
     <script>
-    var selectUi = {
-        class : 'select_wrap',
-        seData : [],
-        init :() => {
-            $.each( $('.'+selectUi.class+''), (index, item) => {
-                var seObjData = new Object();
-                seObjData.optData = new Array();
-                seObjData.seNum = index;
-                seObjData.actNum = '';
-                seObjData.actVal = '';
-                seObjData.actSta = false;
-                var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
-                $.each( seTarget.children("option"), (seIndex, seItem) => {
-                    if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
-                        seObjData.actSta = true;
-                        seObjData.actNum = seIndex;
-                        seObjData.actVal = seItem.text;
-                    }
-                    seObjData.optData.push(seItem.text);
-                });
-                selectUi.seData.push(seObjData);
-            })
-            selectUi.customSelect();
-        },
-        customSelect: () => {
-            $.each( selectUi.seData, (index, item) => {
-                var selectHtml = '';
-                var selectTname = item.actVal ? item.actVal : item.optData[0];
-                selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
-                selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
-                selectHtml+= '  <div class="opt_list">';
-                $.each( item.optData, (seindex, seitem) => {
-                    selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
-                });
-                selectHtml+= '  </div>';
-                selectHtml+= '</div>';
-                $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
-            });
-        },
-        boxOpen : (obj) =>{
-            if(obj.hasClass('active')){
-                obj.removeClass('active');
-            }else{
-                obj.addClass('active');
-            }
-        },
-        optionClick : (obj) =>{
-            obj.parent().parent().children('.select_name').text(obj.text());
-            obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
-        },
-    }
-    selectUi.init();
+        $(document).ready(() => {
+            tFlex.init('pcacme006006_1', tableData2, true);
+        });
 
-</script>
+        var selectUi = {
+            class : 'select_wrap',
+            seData : [],
+            init :() => {
+                $.each( $('.'+selectUi.class+''), (index, item) => {
+                    var seObjData = new Object();
+                    seObjData.optData = new Array();
+                    seObjData.seNum = index;
+                    seObjData.actNum = '';
+                    seObjData.actVal = '';
+                    seObjData.actSta = false;
+                    var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
+                    $.each( seTarget.children("option"), (seIndex, seItem) => {
+                        if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
+                            seObjData.actSta = true;
+                            seObjData.actNum = seIndex;
+                            seObjData.actVal = seItem.text;
+                        }
+                        seObjData.optData.push(seItem.text);
+                    });
+                    selectUi.seData.push(seObjData);
+                })
+                selectUi.customSelect();
+            },
+            customSelect: () => {
+                $.each( selectUi.seData, (index, item) => {
+                    var selectHtml = '';
+                    var selectTname = item.actVal ? item.actVal : item.optData[0];
+                    selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
+                    selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
+                    selectHtml+= '  <div class="opt_list">';
+                    $.each( item.optData, (seindex, seitem) => {
+                        selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
+                    });
+                    selectHtml+= '  </div>';
+                    selectHtml+= '</div>';
+                    $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
+                });
+            },
+            boxOpen : (obj) =>{
+                if(obj.hasClass('active')){
+                    obj.removeClass('active');
+                }else{
+                    obj.addClass('active');
+                }
+            },
+            optionClick : (obj) =>{
+                obj.parent().parent().children('.select_name').text(obj.text());
+                obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
+            },
+        }
+        selectUi.init();
+
+    </script>
 </body>
 
 </html>
