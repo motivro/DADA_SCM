@@ -509,11 +509,103 @@
 
     </div>
     <!-- wrap E -->
+
+    <div class="script_test_body">
+        <div class="alert_open" ac="open">알럿 열기</div>
+        <div class="alert_close" ac="close">알럿 닫기</div>
+    </div>
+    
+    <div class="dada_toast"></div>
+
+    <div class="dada_alt_wrap">
+        <div class="dada_alt_body">
+            <div class="dada_close_box">
+                <div class="dada_close_btn"></div>
+            </div>
+            <div class="dada_cont">
+                정상인 회원은 중지, <br/>
+                중지된 회원은 정상으로 처리합니다.
+            </div>
+            <div class="dada_btn_wrap">
+                <div class="dada_btn co_1">확인</div>
+                <div class="dada_btn co_9">취소</div>
+            </div>
+        </div>
+        <div class="dada_bg"></div>
+    </div> 
+
+    <style>
+        .script_test_body{position:fixed;top:50%;right:0;z-index:900}
+        .script_test_body > div{padding:10px 20px;border:solid 1px #ccc;background-color:#fff;border-right:none;cursor:pointer;margin-top:10px;}
+        .script_test_body > div:first-child{margin-top:0}
+        .dada_toast{position:fixed;bottom:30px;left:50%;padding:15px 20px;transform:translate(-50%,10px);border-radius:30px;overflow:hidden;font-size:var(--fts14);opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s,transform .5s;background:rgba(0,0,0,.35);color:#fff;z-index:10000}
+        .dada_toast.reveal{opacity:1;visibility:visible;transform:translate(-50%,0)}
+        
+        .dada_alt_wrap{position:fixed;top:0;left:0;width:100%;height:100%;display:none;z-index:500;transition:.3s;opacity:0}
+        .dada_alt_wrap.open{}
+        .dada_alt_wrap.open .dada_alt_body{}
+        
+        .dada_alt_wrap .dada_alt_body{position:absolute;top:50%;left:50%;min-width:500px;max-height:500px;margin-top:-250px;margin-left:-250px;background-color:#fff;z-index:501}
+        .dada_alt_wrap .dada_alt_body .dada_cont{font-size:var(--fts16);font-weight:var(--ftw500);text-align:center;margin:45px 0}
+        .dada_alt_wrap .dada_alt_body .dada_btn_wrap{text-align:center;padding-bottom: 30px;}
+        .dada_alt_wrap .dada_alt_body .dada_btn_wrap .dada_btn{display:inline-block;color:#fff;min-width:120px;height:40px;margin:0 5px;line-height:40px;font-size:var(--fts14);font-weight:var(--ftw500);cursor:pointer}
+        .dada_alt_wrap .dada_alt_body .dada_btn_wrap .dada_btn.co_1{background-color:var(--color1)}
+        .dada_alt_wrap .dada_alt_body .dada_btn_wrap .dada_btn.co_9{background-color:var(--color9)}
+        .dada_close_box{}
+        .dada_close_box:after{content:'';display:block;clear:both;}
+        .dada_close_box .dada_close_btn{position:absolute;top:10px;right:10px;width:25px;height:25px;cursor:pointer}
+        .dada_close_box .dada_close_btn:before, 
+        .dada_close_box .dada_close_btn:after{position:absolute;top:50%;left:50%;content:' ';height:25px;width:2px;background-color:#000;margin-top:-12px}
+        .dada_close_box .dada_close_btn:before {transform: rotate(45deg);}
+        .dada_close_box .dada_close_btn:after {transform: rotate(-45deg);}
+        .dada_alt_wrap .dada_bg{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0, .5)}
+    </style>
+
    <script>
 
     $(document).ready(() => {
         tFlex.init('pcacme002001_1', tableData2, true);
+        
+        $('.script_test_body > div').click(function (){
+            if($(this).attr('ac') == 'open') dadaAlertOpen();
+            if($(this).attr('ac') == 'close') dadaAlertClose();
+        });
     });
+
+    dadaAlertOpen = () => {
+        $('.dada_alt_wrap').show().css({
+            'visibility': 'hidden',
+        });
+        setTimeout( function() {
+            $('.dada_alt_wrap').show().css({
+                'visibility': 'visible',
+                'opacity': '1',
+            });
+            clearTimeout(toast);
+        }, 100);
+    }
+
+    dadaAlertClose = () => {
+        $('.dada_alt_wrap').css({
+            'opacity': '0',
+        });
+        setTimeout( function() {
+            $('.dada_alt_wrap').hide()
+            clearTimeout(toast);
+        }, 100);
+    }
+
+    toast = (string) => {
+        const toast = $('.dada_toast');
+        toast.addClass('reveal');
+        toast.text(string);
+        setTimeout( function() {
+            toast.removeClass('reveal');
+            clearTimeout(toast);
+        }, 1500);
+    }
+    
+    
 
     var selectUi = {
         class : 'select_wrap',

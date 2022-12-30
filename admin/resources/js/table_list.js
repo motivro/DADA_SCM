@@ -53,51 +53,44 @@ var tFlex = {
     totalWidth: 0,
     scrollLook: [],
     scrollLookSta: false,
-    tgId: '',
 
     init: (id, obj, test) => {
+        //테스트용 
+        if(test) $('#'+id+'.contents_box .panel_body .tbl_wrap').append(tableListData);
 
-        if(test){
-            $('#'+id+'.contents_box .panel_body .tbl_wrap').append(tableListData)
-        }
-
-        tFlex.tgId = id;
         if (obj.scrollLookSta) {// tableData.scrollLookSta의 값이 true 일때 실행됨니다.
             tFlex.scrollLookSta = true;
-            $('#'+tFlex.tgId+' .motiv_tbl').addClass('look_tbl');
+            $('#'+id+' .motiv_tbl').addClass('look_tbl');
         } else {
             tFlex.scrollLookSta = false;
-            $('#'+tFlex.tgId+' .motiv_tbl').addClass('normal_tbl');
+            $('#'+id+' .motiv_tbl').addClass('normal_tbl');
         }
-
-        // console.log(obj.scrollLookSta == false && $('#'+tFlex.tgId+' .motiv_tbl .look_head_head > div').length < 0 ? false : true)
-
-        // if(obj.scrollLookSta == false && ($('#'+tFlex.tgId+' .motiv_tbl .look_head_head > div').length < 0 ? false : true)) {
-        //     tFlex.scrollLookSta = true;
-        // } else {
-        //     tFlex.scrollLookSta = false;
-        // }
 
         Promise.resolve()
         // .then(() => {
         //     tFlex.lookHead(id);
         // })
         .then(() => {
-            tFlex.lookSize(obj);
+            tFlex.lookSize(obj, id);
         })
         .then(() => {
-            tFlex.dynamicUi(obj);
+            tFlex.dynamicUi(obj, id);
         })
         .then(() => {
-            tFlex.tableRowVal(obj);
+            tFlex.tableRowVal(obj, id);
         })
         .then(() => {
-            tFlex.tableRowFilters();
+            tFlex.tableRowFilters(obj, id);
         })
         .then(() => {
             //scrollLookSta 값이 true 일때만 실행됨니다.
-            if(obj.scrollLookSta) tFlex.lookWheelUi();
+            if(obj.scrollLookSta) tFlex.lookWheelUi(id);
         })
+
+        $(window).on('resize', function(){
+            tFlex.lookSize(obj, id);
+        });
+
     },
 
     //락이 걸리는 테이블일때 실행됨니다.
@@ -119,32 +112,29 @@ var tFlex = {
         tFlex.totalWidth = widthHeadVal + widthBodyVal;
     },
 
-    dynamicUi: (obj) => {
-        tFlex.hdItemStyle('checkedbox', tFlex.ckbSize);
+    dynamicUi: (obj, id) => {
+        tFlex.hdItemStyle('checkedbox', tFlex.ckbSize, id);
         var tFlexLeft = tFlex.leftWidth;
         var tFlexRight = tFlex.rightWidth;
 
-        $('#'+tFlex.tgId+' '+ tFlex.headTgh).css('width', tFlexLeft +'px');
-        $('#'+tFlex.tgId+' '+ tFlex.headTgb).css('width', tFlexRight +'px');
-        $('#'+tFlex.tgId+' '+ tFlex.bodyTgh).css('width', tFlexLeft +'px');
-        $('#'+tFlex.tgId+' '+ tFlex.bodyTgb).css('width', tFlexRight +'px');
+        $('#'+ id +' '+ tFlex.headTgh).css('width', tFlexLeft +'px');
+        $('#'+ id +' '+ tFlex.headTgb).css('width', tFlexRight +'px');
+        $('#'+ id +' '+ tFlex.bodyTgh).css('width', tFlexLeft +'px');
+        $('#'+ id +' '+ tFlex.bodyTgb).css('width', tFlexRight +'px');
 
         $.each( obj.tableSize, (index, item) => {
-            tFlex.hdItemStyle(index, item);
+            tFlex.hdItemStyle(index, item, id);
         });
     },
 
-    hdItemStyle: (name, size) => {
-        $('#'+tFlex.tgId+' .motiv_tbl .hd_item[keyname='+ name +']').css('width', size +'px');
+    hdItemStyle: (name, size, id) => {
+        $('#'+ id +' .motiv_tbl .hd_item[keyname='+ name +']').css('width', size +'px');
     },
 
-    tableRowVal: (obj) => {
-        if (!tFlex.scrollLookSta){
-            tFlex.tableRowFn($('#'+tFlex.tgId+' .tbl_inner > div'), 'inner');
-        }
-        
-        tFlex.tableRowFn($('#'+tFlex.tgId+' .tbl_head > div'));
-        tFlex.tableRowFn($('#'+tFlex.tgId+' .tbl_body > div'));
+    tableRowVal: (obj, id) => {
+        if (!tFlex.scrollLookSta) tFlex.tableRowFn($('#'+ id +' .tbl_inner > div'), 'inner');
+        tFlex.tableRowFn($('#'+ id +' .tbl_head > div'));
+        tFlex.tableRowFn($('#'+ id +' .tbl_body > div'));
     },
 
     tableRowFn: (target, type) => {
@@ -171,24 +161,24 @@ var tFlex = {
         });
     },
 
-    lookWheelUi: () => {
+    lookWheelUi: (id) => {
         var wheelStart = 0;
-        $('#'+tFlex.tgId+' .motiv_tbl.look_tbl .tbl_inner .tbl_body .look_body_box .look_body_list').on("mousewheel", function (e) {
+        $('#'+ id +' .motiv_tbl.look_tbl .tbl_inner .tbl_body .look_body_box .look_body_list').on("mousewheel", function (e) {
             var wheel = e.originalEvent.deltaX;
             wheelStart = wheelStart - wheel;
             var motivrTbl = tFlex.motivTblWidth - tFlex.leftWidth - tFlex.rightWidth;
             if (wheelStart >= 0) wheelStart = 0;
             if (wheelStart < motivrTbl) wheelStart = motivrTbl;
-            $('#'+tFlex.tgId+' .motiv_tbl .tbl_head .look_head_box .look_head_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
-            $('#'+tFlex.tgId+' .motiv_tbl .tbl_body .look_body_box .look_body_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
+            $('#'+ id +' .motiv_tbl .tbl_head .look_head_box .look_head_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
+            $('#'+ id +' .motiv_tbl .tbl_body .look_body_box .look_body_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
             e.preventDefault();
             e.stopPropagation();
             return false;
         });
     },
     
-    lookHead: () => {// scrollLook값이 없을 경우 대체하기 위해 임시로 만들어놓은 함수
-        $.each($('#'+tFlex.tgId+' .motiv_tbl .tbl_head .look_head_head .hd_item'), (index, item) => {
+    lookHead: (id) => {// scrollLook값이 없을 경우 대체하기 위해 임시로 만들어놓은 함수
+        $.each($('#'+ id +' .motiv_tbl .tbl_head .look_head_head .hd_item'), (index, item) => {
             if(item.getAttributeNode('keyname').value != 'checkedbox'){
                 tFlex.scrollLook.push(item.getAttributeNode('keyname').value);
             }

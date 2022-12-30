@@ -226,6 +226,7 @@
                 <!-- inner S -->
                 <div class="inner">
                     <h1>지정판매자 관리</h1>
+
                     <!-- dashList S -->
                     <div class="contents_box">
                         <div class="srh_box">
@@ -325,40 +326,64 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div class="panel_body">
-                            <div class="tbl_wrap">
-                                <div class="motiv_tbl">
-                                    <div class="tbl_inner">
-                                        <div class="tbl_head"></div>
-                                        <div class="tbl_body"></div>
-                                    </div>
-                                </div>
-
-                                <div class="motiv_paging">
-                                    <a class="first" href="#none"></a>
-                                    <a class="prev" href="#none"></a>
-                                    <ul>
-                                        <li><a class="this" href="#none">1</a></li>
-                                        <li><a href="#none">2</a></li>
-                                        <li><a href="#none">3</a></li>
-                                        <li><a href="#none">4</a></li>
-                                        <li><a href="#none">5</a></li>
-                                        <li><a href="#none">6</a></li>
-                                        <li><a href="#none">7</a></li>
-                                        <li><a href="#none">8</a></li>
-                                        <li><a href="#none">9</a></li>
-                                        <li><a href="#none">10</a></li>
-                                    </ul>
-                                    <a class="next" href="#none"></a>
-                                    <a class="last" href="#none"></a>
+                            <div class="btn_group d_flex">
+                                <div class="btn_wrap">
+                                    <div class="btn">정산지급 처리</div>
+                                    <div class="btn">일괄 정산지급</div>
+                                    <div class="btn">정산지급 보류</div>
+                                    <div class="btn">엑셀다운로드</div>
                                 </div>
                             </div>
 
+                            <div class="tbl_wrap"></div>
                         </div>
-
                     </div>
+<<<<<<< HEAD
+
+                    <div id="pcacme003001_2" class="contents_box">
+                        <div class="panel_head bdr_bot">
+                            <div class="cont_group d_flex">
+                                <div class="cont_left">
+                                    <div class="panel_count">
+                                        <div class="all_count">총 상품수<span class="count_sta">50</span></div>
+                                        <div class="slash">/</div>
+                                        <div class="srh_count">검색된 상품 수<span class="count_sta">00</span></div>
+                                    </div>
+                                </div>
+                                <div class="cont_right">
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="50" selected>50개씩 </option>
+                                            <option value="100">100개씩 </option>
+                                        </select>
+                                    </div>
+                                    <span class="icon icon_tbl_cus"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel_body">
+                            <div class="btn_group d_flex">
+                                <div class="btn_wrap">
+                                    <div class="btn">정산지급 처리</div>
+                                    <div class="btn">일괄 정산지급</div>
+                                    <div class="btn">정산지급 보류</div>
+                                    <div class="btn">엑셀다운로드</div>
+                                </div>
+                            </div>
+
+                            <div class="tbl_wrap"></div>
+                        </div>
+                    </div>
+
                     <!-- tableList E -->
+
+
+=======
+                    <!-- tableList E -->
+>>>>>>> 3eabd6f4c349e1031de61c8c7495c56785d821b9
                 </div>
                 <!-- inner E -->
             </div>
@@ -371,6 +396,10 @@
     <script>
     $(document).ready(() => {
         tFlex.init('pcacme003001_1', tableData2, true);
+<<<<<<< HEAD
+        tFlex.init('pcacme003001_2', tableData2, true);
+=======
+>>>>>>> 3eabd6f4c349e1031de61c8c7495c56785d821b9
     })
 
     var selectUi = {
