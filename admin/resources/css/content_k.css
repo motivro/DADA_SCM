@@ -55,3 +55,22 @@ i.down{transform:rotate(45deg);-webkit-transform:rotate(45deg)}
 #content .contents_box .srh_box .srh_item .srh_title + .srh_value{margin-left:10px;font-size:var(--fts16);font-weight:var(--ftw700)}
 #content .contents_box .srh_box .srh_item .srh_title + .srh_value + .btn{margin-left:20px;}
 .blue_val .srh_value{color:var(--color3)}
+
+
+/* input */
+#content .motiv_tbl_box.name_k .motiv_normal_tbl .inp_wrap input[type="text"]{padding:10px;box-sizing:border-box}
+#content .inp_wrap.adress_from:after{content:'';display:block;clear:both}
+#content .inp_wrap.adress_from > * {float:left;margin-left:10px;}
+#content .inp_wrap.adress_from > input[type="text"]{width:150px;}
+#content .inp_wrap.adress_from > *:first-child{margin-left:0;}
+#content .inp_wrap.adress_from > input[type="text"] + .btn{margin-left:10px;}
+#content .inp_wrap.adress_from + .inp_wrap{margin-top:10px;}
+
+#content .inp_wrap.email_from:after{content:'';display:block;clear:both;box-sizing:border-box}
+#content .inp_wrap.email_from > * {float:left;margin-left:10px;}
+#content .inp_wrap.email_from > input[type="text"]{width:150px;}
+#content .inp_wrap.email_from > *:first-child{margin-left:0;}
+#content .inp_wrap.email_from > input[type="text"]:first-child + span{line-height:40px}
+#content .inp_wrap.email_from > span + input[type="text"]{width:200px}
+
+#content .inp_wrap.email_from > .select_wrap{width:150px}

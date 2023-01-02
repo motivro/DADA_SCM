@@ -54,6 +54,7 @@ input[type="password"]{width: 100%;min-height:40px}
 .wrap #content .contents_box .contents_item{background: #fff;border: 1px solid #DDDDDD;}
 
 .wrap #content .inner > h1{font-size:var(--fts24)}
+.wrap #content .inner > h2{font-size:var(--fts20)}
 .wrap #content .inner h1 + .contents_box{margin-top:25px}
 /* contents e*/
 
