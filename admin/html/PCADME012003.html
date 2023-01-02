@@ -226,6 +226,207 @@
                 <div class="inner">
                     <h1>운영자 계정 관리</h1>
 
+                    <div class="contents_box">
+                        <div class="srh_box">
+                            <div class="srh_item">
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">검색조건</div>
+                                    <div class="srh_cont">
+                                        <div class="cus_inp_wrap radio_inp">
+                                            <label for="in_1_1" class="inp_box">운영자이름
+                                                <input type="radio" id="in_1_1" name="ord_sta" checked="">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                            <label for="in_1_2" class="inp_box">운영자ID
+                                                <input type="checkbox" id="in_1_2" name="ord_sta">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                        <div class="inp_wrap">
+                                            <input type="text" name="" id="" placeholder="운영자 이름 & 아이디">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">사용여부</div>
+                                    <div class="srh_cont">
+                                        <div class="cus_inp_wrap radio_inp">
+                                            <label for="in_2_1" class="inp_box">사용
+                                                <input type="radio" id="in_2_1" name="ord_sta2" checked="">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                            <label for="in_2_2" class="inp_box">사용안함
+                                                <input type="checkbox" id="in_2_2" name="ord_sta2">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">메모</div>
+                                    <div class="srh_cont">
+                                        <div class="inp_wrap">
+                                            <input type="text" name="" id="" placeholder="‘,’로 복수로 검색할 수 있습니다.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="srh_btn_box">
+                            <div class="btn_wrap">
+                                <div class="btn btn_search">검색</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- tableList S -->
+                    <div id="pcacme001001_1" class="contents_box">
+                        <div class="panel_head bdr_bot">
+                            <div class="cont_group d_flex">
+                                <div class="cont_left">
+                                    <div class="panel_count">
+                                        <div class="all_count">총 등록<span class="count_sta">50</span> 명</div>
+                                        <div class="slash">/</div>
+                                        <div class="srh_count">검색결과<span class="count_sta">00</span> 명</div>
+                                    </div>
+                                </div>
+                                <div class="cont_right">
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="50" selected>50개씩 </option>
+                                            <option value="100">100개씩 </option>
+                                        </select>
+                                    </div>
+                                    <span class="icon icon_tbl_cus"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel_body">
+                            <div class="btn_group d_flex">
+                                <div class="btn_wrap">
+                                    <div class="btn">승인처리</div>
+                                    <div class="btn">패널티</div>
+                                    <div class="btn">비밀번호 초기화</div>
+                                    <div class="btn">판매중지/해지</div>
+                                    <div class="btn">휴면/해지</div>
+                                    <div class="btn">탈퇴처리</div>
+                                </div>
+                            </div>
+
+                            <div class="tbl_wrap">
+                                <div class="motiv_tbl normal basic_tbl">
+                                    <div class="tbl_inner">
+                                        <div class="tbl_head">
+                                            <div class="row_item d_flex">
+                                                <div class="hd_item">
+                                                    <div>
+                                                        <div class="cus_inp_wrap checkbox_inp">
+                                                            <label for="in_4_1" class="inp_box">
+                                                                <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                <span class="inp_custom"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>운영자 ID</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>운영자이름</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>역할</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>연락처</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>이메일</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>사용여부</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>메모</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>최근접속일자</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>운영자 등록일</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tbl_body">
+                                            <div class="row_item d_flex">
+                                                <div class="hd_item">
+                                                    <div>
+                                                        <div class="cus_inp_wrap checkbox_inp">
+                                                            <label for="in_4_1" class="inp_box">
+                                                                <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                <span class="inp_custom"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>
+                                                        관리자 ID
+                                                    </div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>관리자</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>최고관리자</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>담당자 연락처</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>담당자 이메일</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>사용</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>메모</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>2022-00-00 00:00:00</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>2022-00-00 00:00:00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="motiv_paging">
+                                    <a class="first" href="#none"></a>
+                                    <a class="prev" href="#none"></a>
+                                    <ul>
+                                        <li><a class="this" href="#none">1</a></li>
+                                        <li><a href="#none">2</a></li>
+                                        <li><a href="#none">3</a></li>
+                                        <li><a href="#none">4</a></li>
+                                        <li><a href="#none">5</a></li>
+                                        <li><a href="#none">6</a></li>
+                                        <li><a href="#none">7</a></li>
+                                        <li><a href="#none">8</a></li>
+                                        <li><a href="#none">9</a></li>
+                                        <li><a href="#none">10</a></li>
+                                    </ul>
+                                    <a class="next" href="#none"></a>
+                                    <a class="last" href="#none"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tableList E -->
 
                     <div class="contents_box pd_0 bd_0">
                         <div class=""></div>
