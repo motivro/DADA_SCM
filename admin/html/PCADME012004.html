@@ -233,9 +233,9 @@
                                     <caption>약관</caption>
                                     <colgroup>
                                         <col style="width:15%;">
-                                        <col style="width:auto">
+                                        <col style="width:35%">
                                         <col style="width:15%;">
-                                        <col style="width:auto">
+                                        <col style="width:35%">
                                     </colgroup>
                                    
                                     <tbody>
@@ -248,7 +248,6 @@
                                                     </div>
                                                     <div class="sub_text">% 상품 공급가격 * 수수료(%)</div>
                                                 </div>
-                                                
                                             </td>
                                             <th><div>직접판매 플랫폼 수수료</div></th>
                                             <td class="ta_l">
@@ -260,49 +259,222 @@
                                                 </div>
                                             </td>
                                         </tr>
+
                                         <tr>
-                                            <th><div>직접판매 플랫폼 수수료</div></th>
-                                            <td colspan="3" class="ta_l">
-                                                <div class="calendar_form">
-                                                    <div class="inp_wrap">
-                                                        <input type="text" name="" id="" placeholder="2021-00-00">
-                                                    </div>
-                                                    <div class="inp_wrap">
-                                                        <input type="text" name="" id="" placeholder="2021-00-00">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th><div>변경여부</div></th>
+                                            <th><div>무상기간</div></th>
                                             <td colspan="3" class="ta_l">
                                                 <div>
-                                                    <h1>체크 시 변경내용 나타남, 체크를 풀면 사라짐</h1>
-                                                    <div class="cus_inp_wrap radio_inp normal">
-                                                        <label for="in_1_2" class="inp_box">약관변경 시 체크, 변경내용 요약입력
+                                                    <div class="cus_inp_wrap checkbox_inp normal">
+                                                        <label for="in_1_2" class="inp_box">적용
                                                             <input type="checkbox" id="in_1_2" name="ord_sta">
                                                             <span class="inp_custom"></span>
                                                         </label>
                                                     </div>
-                                                    <div>파일 업로드</div>
-                                                    
+                                                    <div class="calendar_form">
+                                                        <div class="inp_wrap">
+                                                            <input type="text" name="" id="" placeholder="2021-00-00">
+                                                        </div>
+                                                        <div class="inp_wrap">
+                                                            <input type="text" name="" id="" placeholder="2021-00-00">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-
-                        </div>
-                        <div class="srh_btn_box">
-                            <div class="btn_wrap">
-                                <div class="btn">답변저장</div>
-                                <div class="btn">닫기</div>
-                                <div class="btn">삭제</div>
+                                <div class="sub_infor">
+                                    <p>※ 플랫폼 수수료는 다다 SCM회원 전체 적용됩니다.</p>
+                                    <p>※ 직접판매 시 판매자로 부터 정산 받는다.</p>
+                                    <p>※ PG 포함되며, 세금계산서는 별도로 처리됩니다.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
+                    <h2>차등 수수료 적용 회원 설정</h2>
+                    <div class="contents_box">
+                        <div class="panel_body">
+                            <div class="btn_group d_flex">
+                                <div class="btn_wrap">
+                                    <div class="btn">추가</div>
+                                    <div class="btn">삭제</div>
+                                </div>
+                            </div>
+                            <div class="motiv_tbl_box name_k">
+                                <div class="motiv_tbl normal fees_form">
+                                    <div class="tbl_inner">
+                                        <div class="tbl_head">
+                                            <div class="row_item d_flex">
+                                                <div class="hd_item">
+                                                    <div>
+                                                        <div class="cus_inp_wrap checkbox_inp">
+                                                            <label for="in_4_1" class="inp_box">
+                                                                <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                <span class="inp_custom"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>회원명(ID)</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>회사상호</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>
+                                                        <div class="sub_text">수수료</div>
+                                                        <div class="inp_wrap percent_form">
+                                                            <input type="text" name="" id="" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>메모</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>적용일자</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tbl_body">
+                                            <div class="row_item d_flex">
+                                                <div class="hd_item">
+                                                    <div>
+                                                        <div class="cus_inp_wrap checkbox_inp">
+                                                            <label for="in_4_1" class="inp_box">
+                                                                <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                <span class="inp_custom"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>
+                                                        회원명(ID)
+                                                    </div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>회사상호</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>
+                                                        <div class="sub_text">수수료</div>
+                                                        <div class="inp_wrap percent_form">
+                                                            <input type="text" name="" id="" placeholder="">
+                                                        </div>
+                                                        <div class="sub_text">%</div>
+                                                    </div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>메모내용</div>
+                                                </div>
+                                                <div class="hd_item">
+                                                    <div>2022-00-00 00:00:00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>다다딜 수수료</h2>
+                    <div class="contents_box">
+                        <div class="motiv_tbl_box name_k">
+                            <div class="tbl_item">
+                                <table class="motiv_normal_tbl ta_c">
+                                    <caption>약관</caption>
+                                    <colgroup>
+                                        <col style="width:15%;">
+                                        <col style="width:35%">
+                                        <col style="width:15%;">
+                                        <col style="width:35%">
+                                    </colgroup>
+                                   
+                                    <tbody>
+                                        <tr>
+                                            <th><div>기본 플랫폼 수수료</div></th>
+                                            <td class="ta_l">
+                                                <div>
+                                                    <div class="inp_wrap percent_form">
+                                                        <input type="text" name="" id="" placeholder="">
+                                                    </div>
+                                                    <div class="sub_text">% 판매자판매가 * 위탁판매수수료</div>
+                                                    <div class="sub_infor">
+                                                        <p>※ 판매자(사)에게 지급되는 수수료</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th><div>직접판매 플랫폼 수수료</div></th>
+                                            <td class="ta_l">
+                                                <div>
+                                                    <div class="inp_wrap percent_form">
+                                                        <input type="text" name="" id="" placeholder="">
+                                                    </div>
+                                                    <div class="sub_text">%</div>
+                                                    <div class="sub_infor">
+                                                        <p>※ 공급자(사)가 직접판매 시 수수료</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>상품판매 할인기준율</div></th>
+                                            <td class="ta_l">
+                                                <div>
+                                                    <div class="inp_wrap percent_form">
+                                                        <input type="text" name="" id="" placeholder="">
+                                                    </div>
+                                                    <div class="sub_text">% 이상 판매가 * 할일율 = 다다딜판매가</div>
+                                                </div>
+                                            </td>
+                                            <th><div>직접판매 플랫폼 수수료</div></th>
+                                            <td class="ta_l">
+                                                <div>
+                                                    <div class="inp_wrap percent_form">
+                                                        <input type="text" name="" id="" placeholder="">
+                                                    </div>
+                                                    <div class="sub_text">% 이상 목표수량 금액 외 추가 판매금액 * 리워드 지급율</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th><div>무상기간</div></th>
+                                            <td colspan="3" class="ta_l">
+                                                <div>
+                                                    <div class="cus_inp_wrap checkbox_inp normal">
+                                                        <label for="in_1_2" class="inp_box">적용
+                                                            <input type="checkbox" id="in_1_2" name="ord_sta">
+                                                            <span class="inp_custom"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="calendar_form">
+                                                        <div class="inp_wrap">
+                                                            <input type="text" name="" id="" placeholder="2021-00-00">
+                                                        </div>
+                                                        <div class="inp_wrap">
+                                                            <input type="text" name="" id="" placeholder="2021-00-00">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="sub_infor ref">
+                                    <p>다다딜은 공급사가 설정한 값으로 판매를 하는 형식이며, 카드결제 시 수수료 00%를 수수료에 포함한다.</p>
+                                    <p>상품할인 기준율, 리워드 지급기준율 값을 입력하지 않았을 경우 기본 “0”이며, 공급사가 자율적으로 정할 수 있다. <br/>만약 값이 있다면 최우선으로한 적용 되어 해당 요율 이상 값을 입력해야 한다.</p>
+                                    <p>다다딜 플랫폼 수수료 값을 입력하지 않으면 자동 “0”으로 설정된다. 만약, 값이 있다면 판매가 대비 플랫폼 수수 금액을 지급한다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
                     <div class="contents_box pd_0 bd_0">
                         <div class=""></div>
                     </div>
