@@ -367,7 +367,7 @@
 /* 통계 */
 #content .statis_box .txtInfo{}
 #content .statis_box .statis_list{display: flex;justify-content: space-between;align-items: stretch;flex-wrap: wrap;}
-#content .statis_box .statis_item{width:calc(50% - 5px);margin-top:20px;background: #fff;display: flex;flex-direction: column;}
+#content .statis_box .statis_item{width:calc(50% - 5px);margin-top:20px;background: #fff;display: flex;flex-direction: column;border: var(--box_border);}
 #content .statis_box .statis_item .item_tit{padding:10px 20px;display: flex;justify-content: space-between;align-items: center;border-bottom: var(--box_border);}
 #content .statis_box .statis_item .tit_name{font-size: var(--fts16);font-weight: var(--ftw700);}
 #content .statis_box .statis_item .tit_inp{display: flex;gap: 5px;}
@@ -418,11 +418,15 @@
 
 #content .rank_chart .top_rink_list{display:flex;border-top: var(--cont_border);}
 #content .rank_chart .top_rink_list .top_rink_item{border-left: var(--box_border);}
+#content .rank_chart .top_rink_list .top_rink_item:first-child{border-left: 0;}
 #content .rank_chart .top_rink_list.row-4 .top_rink_item{width: 25%;}
 #content .rank_chart .top_rink_list.row-3 .top_rink_item{width: 33.33%;}
 #content .rank_chart .top_rink_list .top_prd_item:first-child{border-left: 0;}
 
 #content .rank_chart .top_rink_list .item_tit{padding: 20px;font-weight:var(--ftw700);background: var(--color16);}
+#content .rank_chart .top_rink_list .item_tit.consign{background: var(--color5);color: #fff;}
+#content .rank_chart .top_rink_list .item_tit.direct{background: var(--color17);color: #fff;}
+#content .rank_chart .top_rink_list .item_tit.dada{background: var(--color1);color: #fff;}
 
 #content .rank_chart .top_rink_list .item_ranking{padding: 10px 20px 30px;border-top: var(--box_border);}
 #content .rank_chart .top_rink_list .top_prd_wrap{padding: 10px 0;display: flex;justify-content: space-between;align-items: center;}
@@ -451,6 +455,11 @@
 /* normal table */
 #content .motiv_tbl_box .motiv_normal_tbl.statis tr td{padding: 10px 10px 15px;}
 #content .motiv_tbl_box .motiv_normal_tbl tr td > div .row_item{display: flex;justify-content: space-between;align-items: center;}
+#content .motiv_tbl_box .motiv_normal_tbl tr th.prd_dada{background: var(--color1);color:#fff;}
+#content .motiv_tbl_box .motiv_normal_tbl tr th.prd_normal{background: var(--color17);color:#fff;}
+#content .motiv_tbl_box .motiv_normal_tbl tr th.prd_consign{background: var(--color17);color:#fff;}
+#content .motiv_tbl_box .motiv_normal_tbl tr th.prd_direct{background: var(--color5);color:#fff;}
+#content .motiv_tbl_box .motiv_normal_tbl.statis tbody tr th{background: var(--color10);}
 
 #content .chart_box{display: flex;justify-content: space-between; align-items: stretch;}
 #content .chart_box .chart_item{width: calc(50% - 10px);height:100px;background: #fff;border: var(--box_border);}
@@ -491,3 +500,25 @@
 #content .calender_box .calender_wrap .col_line.total .noti_item.consign{color: var(--color5);}
 #content .calender_box .calender_wrap .col_line.total .noti_item.direct{color: var(--color8);}
 #content .calender_box .calender_wrap .col_line.total .noti_item.dada{color: var(--color1);}
+
+#content .statis_dash{display: flex;}
+#content .statis_dash + .statis_dash{margin-top: 20px;}
+#content .statis_dash .dash_item{padding:20px;background: #fff;border: var(--box_border);}
+#content .statis_dash.row-2{justify-content: space-between;align-items: stretch;}
+#content .statis_dash.row-1 .dash_item{width: 100%;}
+#content .statis_dash.row-2 .dash_item{width: calc(50% - 5px);}
+
+#content .statis_dash .dash_tit{display: flex;justify-content: space-between;align-items: center;}
+#content .statis_dash .dash_tit .tit{font-size: var(--fts16);font-weight: var(--ftw500);}
+#content .statis_dash .dash_cont .data_list{margin:15px 0;padding:15px 0;display: flex;border-top: var(--box_border);border-bottom: var(--box_border);}
+#content .statis_dash .dash_cont .data_list .data_item{width: 33.33%;padding:0 15px;display: flex;justify-content: space-between;align-items:center;border-left: var(--box_border);}
+#content .statis_dash .dash_cont .data_list .data_item:first-child{border-left:0;}
+#content .statis_dash .dash_cont .data_list .data_item .data_tit{font-weight: var(--ftw500);}
+#content .statis_dash .dash_cont .data_list .data_item .data_cont{font-size:var(--fts12)}
+#content .statis_dash .dash_cont .data_list .data_item .data_cont .sta{display:inline-block;margin-right:3px;font-size: var(--fts20);font-weight:var(--ftw500);vertical-align: -2px;}
+#content .statis_dash .dash_cont .data_tbl .btn_wrap{justify-content: flex-end;}
+#content .statis_dash .dash_cont .data_tbl table{margin-top: 15px;background: #fff;}
+#content .statis_dash .dash_cont .data_tbl table tr th,
+#content .statis_dash .dash_cont .data_tbl table tr td{padding:6px 10px 7px;border: var(--cont_border);}
+#content .statis_dash .dash_cont .data_tbl table tr th{background: var(--color10);}
+#content .statis_dash .dash_cont .data_tbl table tr td{text-align: center;}
