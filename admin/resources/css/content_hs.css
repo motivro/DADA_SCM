@@ -522,3 +522,21 @@
 #content .statis_dash .dash_cont .data_tbl table tr td{padding:6px 10px 7px;border: var(--cont_border);}
 #content .statis_dash .dash_cont .data_tbl table tr th{background: var(--color10);}
 #content .statis_dash .dash_cont .data_tbl table tr td{text-align: center;}
+
+#content .cate_cont_box{padding:20px;display: flex;justify-content: space-between;}
+#content .cate_cont_box .left_box{width: calc(30% - 10px);}
+#content .cate_cont_box .cate_ctrl .inp_wrap input[type="text"]{padding: 10px;}
+#content .cate_cont_box .cate_ctrl .find_cate{margin-top: 15px;}
+#content .cate_cont_box .cate_set{height:400px;overflow:auto;padding:20px;border: var(--cont_border);border-top: 0;}
+#content .cate_cont_box .cate_set > ul > li{margin: 5px 0;}
+#content .cate_cont_box .cate_set .cateTree_folder{display: flex;align-items: stretch;}
+#content .cate_cont_box .cate_set .cateTree_folder > span{display:inline-block;padding:10px;border: var(--cont_border);border-left: 0;}
+#content .cate_cont_box .cate_set .cateTree_folder > span:first-child{border-left: var(--cont_border);}
+#content .cate_cont_box .cate_set .cateTree_folder .cateTree_del{cursor: pointer;}
+#content .cate_cont_box .cate_set .cateTree_folder .cateTree_cont{padding: 10px 20px;flex-grow: 1;text-align: center;}
+#content .cate_cont_box .cate_set .cateTree_folder .cateTree_add{cursor: pointer;}
+
+
+#content .cate_cont_box .right_box{width: calc(70% - 10px);}
+#content .cate_cont_box .motiv_tbl_box .btn_wrap{justify-content: flex-end;}
+#content .cate_cont_box .motiv_tbl_box .motiv_normal_tbl{margin-top: 15px;}
