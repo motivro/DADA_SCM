@@ -545,3 +545,24 @@
 #content .cate_cont_box .motiv_tbl_box .motiv_normal_tbl .cate_desc .inp_wrap{flex-grow: 1;}
 #content .cate_cont_box .motiv_tbl_box .motiv_normal_tbl .cate_desc .txt_count{margin-left: 10px;}
 #content .cate_cont_box .motiv_tbl_box .motiv_normal_tbl .txtInfo{margin-top: 5px;}
+
+
+/* 쇼핑몰 관리 */
+/* motiv_tbl normal */
+.motiv_tbl.addr1_tbl .tbl_inner .hd_item:first-child{flex-grow: 0;flex-basis: 40px;}
+.motiv_tbl.addr1_tbl .tbl_inner .hd_item:first-child + .hd_item{flex-grow: 0;flex-basis: 120px;}
+.motiv_tbl.addr1_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item{flex-grow: 0;flex-basis: 120px;}
+.motiv_tbl.addr1_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 120px;}
+.motiv_tbl.addr1_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 120px;}
+.motiv_tbl.addr1_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 180px;}
+
+.motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child{flex-grow: 0;flex-basis: 40px;}
+.motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item{flex-grow: 0;flex-basis: 100px;}
+.motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item{flex-grow: 0;flex-basis: 100px;}
+.motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
+.motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
+.motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 150px;}
+.motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 120px;}
+.motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 100px;}
+.motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
+.motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 160px;}
