@@ -47,8 +47,6 @@ gitHubTgMenu = () => {
             $(this).addClass('open').children('.submenu').css('max-height', dp2ChilHSta);
         }
     });
-
-
 }
 
 openMenu = (depth1, depth2, dp2ChilH) => {

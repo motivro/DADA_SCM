@@ -227,10 +227,11 @@
                     <h1>공지사항 관리</h1>
                     
                     <!-- tableList S -->
-                    <div id="pcacme001001_1" class="contents_box">
+                    <div class="contents_box">
                         <div class="panel_head bdr_bot">
                             <div class="cont_group d_flex">
-                                <div class="cont_left">
+                                <div class="cont_left"></div>
+                                <div class="cont_right">
                                     <div class="select_wrap tbl_search">
                                         <select>
                                             <option value="50" selected>제목</option>
@@ -244,21 +245,195 @@
                                     <div class="btn_wrap">
                                         <div class="btn">검색</div>
                                     </div>
-                                </div>
-                                <div class="cont_right">
-                                    <div class="btn_wrap">
-                                        <div class="btn">공지사항 쓰기</div>
+
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="50" selected>10개씩</option>
+                                            <option value="100">100개씩 </option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="panel_body">
-                            <div class="tbl_wrap"></div>
+                            <div class="tbl_wrap">
+                                <div class='motiv_tbl normal notice_tbl'>
+                                    <div class='tbl_inner'>
+                                        <div class='tbl_head'>
+                                            <div class='row_item d_flex'>
+                                                <div class='hd_item'>
+                                                    <div>번호</div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>공지여부</div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>팝업공지</div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>공지사항 제목</div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>첨부자료</div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>등록자</div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>등록날짜</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='tbl_body'>
+                                            <div class='row_item d_flex'>
+                                                <div class='hd_item'>
+                                                    <div>1</div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>
+                                                        <div class="btn btn_sm">노출</div>
+                                                        <div class="btn btn_sm">숨김</div>
+                                                    </div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>공지</div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>[공지] 공지사항 제목</div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>첨부자료</div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>홍길동</div>
+                                                </div>
+                                                <div class='hd_item'>
+                                                    <div>2022-00-00 00:00:00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='motiv_paging'>
+                                    <a class='first' href='#none'></a>
+                                    <a class='prev' href='#none'></a>
+                                    <ul>
+                                        <li><a class='this' href='#none'>1</a></li>
+                                        <li><a href='#none'>2</a></li>
+                                        <li><a href='#none'>3</a></li>
+                                        <li><a href='#none'>4</a></li>
+                                        <li><a href='#none'>5</a></li>
+                                        <li><a href='#none'>6</a></li>
+                                        <li><a href='#none'>7</a></li>
+                                        <li><a href='#none'>8</a></li>
+                                        <li><a href='#none'>9</a></li>
+                                        <li><a href='#none'>10</a></li>
+                                    </ul>
+                                    <a class='next' href='#none'></a>
+                                    <a class='last' href='#none'></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- tableList E -->
 
+                    <div class="contents_box">
+                        <div class="motiv_tbl_box name_k">
+                            <div class="srh_cont">
+                                <div class="radio_wrap motiv_radio">
+                                    <label for="6-1" class="radio_btn">일반
+                                        <input type="radio" id="6-1" name="avaPay_sta" checked="">
+                                        <span class="radio_custom"></span>
+                                    </label>
+                                    <label for="6-2" class="radio_btn">공지
+                                        <input type="radio" id="6-2" name="avaPay_sta">
+                                        <span class="radio_custom"></span>
+                                    </label>
+                                    <label for="6-3" class="radio_btn">팝업 공지
+                                        <input type="radio" id="6-3" name="avaPay_sta">
+                                        <span class="radio_custom"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tbl_item">
+                                <table class="motiv_normal_tbl ta_c">
+                                    <caption>정산내역 조회</caption>
+                                    <colgroup>
+                                        <col style="width:25%;">
+                                        <col style="width:25%;">
+                                        <col style="width:25%;">
+                                        <col style="width:25%;">
+                                    </colgroup>
+                                   
+                                    <tbody>
+                                        <tr>
+                                            <th><div>공지사항 제목[필수]</div></th>
+                                            <td><div>공지사항 제목</div></td>
+                                            <th><div>작성날짜</div></th>
+                                            <td><div>2021-00-00</div></td>
+                                        </tr>
+                        
+                                        <tr>
+                                            <th><div>내용<br/>[필수]</div></th>
+                                            <td colspan="3" class="ta_l">
+                                                <div>
+                                                    에디터 노출 영역</br>
+                                                    에디터 노출 영역</br>
+                                                    에디터 노출 영역</br>
+                                                    에디터 노출 영역</br>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>첨부파일</div></th>
+                                            <td colspan="3" class="ta_l"><div>자료첨부 첨부된파일명 (x) </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="tbl_item">
+                                <table class="motiv_normal_tbl ta_c">
+                                    <caption>정산내역 조회</caption>
+                                    <colgroup>
+                                        <col style="width:25%;">
+                                        <col style="width:25%;">
+                                        <col style="width:25%;">
+                                        <col style="width:25%;">
+                                    </colgroup>
+                                   
+                                    <tbody>
+                                        <tr>
+                                            <th><div>답변내용</div></th>
+                                            <td colspan="3" class="ta_l">
+                                                <div>
+                                                    에디터 노출 영역</br>
+                                                    에디터 노출 영역</br>
+                                                    에디터 노출 영역</br>
+                                                    에디터 노출 영역</br>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>첨부파일</div></th>
+                                            <td colspan="3" class="ta_l"><div>파일 업로드 </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="srh_btn_box">
+                            <div class="btn_wrap">
+                                <div class="btn">공지사항 저장</div>
+                                <div class="btn">취소</div>
+                                <div class="btn">삭제</div>
+                                <div class="btn">닫기</div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="contents_box pd_0 bd_0">
                         <div class=""></div>
                     </div>
@@ -273,7 +448,6 @@
     <!-- wrap E -->
     <script>
         $(document).ready(() => {
-            tFlex.init('pcacme001001_1', tableData2, true);
         });
 
         var selectUi = {
