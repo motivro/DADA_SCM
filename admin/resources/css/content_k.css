@@ -75,23 +75,26 @@ i.down{transform:rotate(45deg);-webkit-transform:rotate(45deg)}
 
 .inp_name{float:left;margin-left:7px;}
 
-#content .inp_wrap.adress_from:after{content:'';display:block;clear:both}
-#content .inp_wrap.adress_from > * {float:left;margin-left:7px;}
-#content .inp_wrap.adress_from > input[type="text"]{width:150px;}
-#content .inp_wrap.adress_from > *:first-child{margin-left:0;}
-#content .inp_wrap.adress_from > input[type="text"] + .btn{margin-left:7px;}
-#content .inp_wrap.adress_from + .inp_wrap{margin-top:10px;}
+#content .inp_wrap.adress_form:after{content:'';display:block;clear:both}
+#content .inp_wrap.adress_form > * {float:left;margin-left:7px;}
+#content .inp_wrap.adress_form > input[type="text"]{width:150px;}
+#content .inp_wrap.adress_form > *:first-child{margin-left:0;}
+#content .inp_wrap.adress_form > input[type="text"] + .btn{margin-left:7px;}
+#content .inp_wrap.adress_form + .inp_wrap{margin-top:10px;}
 
-#content .inp_wrap.email_from:after{content:'';display:block;clear:both;box-sizing:border-box}
-#content .inp_wrap.email_from > * {float:left;margin-left:7px;}
-#content .inp_wrap.email_from > input[type="text"]{width:150px;}
-#content .inp_wrap.email_from > *:first-child{margin-left:0;}
-#content .inp_wrap.email_from > input[type="text"]:first-child + span{line-height:40px}
-#content .inp_wrap.email_from > span + input[type="text"]{width:200px}
+#content .inp_wrap.email_form:after{content:'';display:block;clear:both;box-sizing:border-box}
+#content .inp_wrap.email_form > * {float:left;margin-left:7px;}
+#content .inp_wrap.email_form > input[type="text"]{width:150px;}
+#content .inp_wrap.email_form > *:first-child{margin-left:0;}
+#content .inp_wrap.email_form > input[type="text"]:first-child + span{line-height:40px}
+#content .inp_wrap.email_form > span + input[type="text"]{width:200px}
+#content .inp_wrap.email_form > .select_wrap{text-align:left;min-width:100px;}
+#content .inp_wrap.email_form > .select_wrap .select_name:after{right: 0;}
 
-#content .inp_wrap.email_from > .select_wrap{text-align:left;min-width:100px;}
-#content .inp_wrap.email_from > .select_wrap .select_name:after{right: 0;}
 #content .select_wrap .select_box .opt_list .opt_item{padding:5px 0;display:block;display:-webkit-box;overflow:hidden;max-height:30px;text-overflow:ellipsis;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+
+#content .inp_wrap.percent_form{float:left;width:80px;}
+#content .contents_box .sub_text{float:left;line-height:40px;margin-left:10px;}
 
 
 /* h 시리즈 */
