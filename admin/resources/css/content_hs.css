@@ -540,3 +540,8 @@
 #content .cate_cont_box .right_box{width: calc(70% - 10px);}
 #content .cate_cont_box .motiv_tbl_box .btn_wrap{justify-content: flex-end;}
 #content .cate_cont_box .motiv_tbl_box .motiv_normal_tbl{margin-top: 15px;}
+#content .cate_cont_box .motiv_tbl_box .motiv_normal_tbl .url_cont{display: flex;justify-content: space-between;align-items: center;}
+#content .cate_cont_box .motiv_tbl_box .motiv_normal_tbl .cate_desc{align-items: center;}
+#content .cate_cont_box .motiv_tbl_box .motiv_normal_tbl .cate_desc .inp_wrap{flex-grow: 1;}
+#content .cate_cont_box .motiv_tbl_box .motiv_normal_tbl .cate_desc .txt_count{margin-left: 10px;}
+#content .cate_cont_box .motiv_tbl_box .motiv_normal_tbl .txtInfo{margin-top: 5px;}
