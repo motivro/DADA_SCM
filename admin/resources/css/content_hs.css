@@ -566,3 +566,13 @@
 .motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 100px;}
 .motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
 .motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 160px;}
+
+/* 금칙단어 관리 */
+#content .motiv_tbl_box .tbl_util{display: flex;justify-content:flex-end;align-items: center;gap: 10px;}
+#content .motiv_tbl_box .tbl_util + .motiv_normal_tbl{margin-top: 15px;}
+#content .motiv_tbl_box .tbl_util .srh_cont .inp_wrap{min-width:210px;}
+#content .motiv_tbl_box .tbl_util .srh_cont .inp_wrap input[type="text"]{padding: 10px;}
+#content .motiv_tbl_box .forbid_list{margin-top: 10px;}
+#content .motiv_tbl_box .forbid_list .forbid_item{display: inline-block;margin-left: 10px;}
+#content .motiv_tbl_box .forbid_list .forbid_item:first-child{margin-left: 0;}
+#content .motiv_tbl_box .forbid_list .forbid_item .btn_cancle{display: inline-block;color: var(--color1);margin-left: 3px;cursor: pointer;}
