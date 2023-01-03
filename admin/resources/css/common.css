@@ -44,8 +44,8 @@ html{position: relative;}
 body{background: #f0f1f2;}
 body > .wrap{min-width: 1400px;min-height:100%;position: relative;}
 
-input[type="text"]{width: 100%;min-height:40px}
-input[type="password"]{width: 100%;min-height:40px}
+input[type="text"]{width: 100%;min-height:40px;}
+input[type="password"]{width: 100%;min-height:40px;}
 
 /* contents s */
 .wrap #container{padding: 0 0 0 204px;}
@@ -61,6 +61,13 @@ input[type="password"]{width: 100%;min-height:40px}
 .wrap #content .contents_box + .contents_box{}
 .wrap #content h2 + .contents_box{margin-top:15px}
 
+
+/* radius test */
+#content .select_wrap .select_box,
+.btn,
+input[type="text"],
+input[type="password"]{border-radius:5px;}
+.cus_inp_wrap.checkbox_inp .inp_box .inp_custom{border-radius:3px;}
 /* contents e*/
 
 .btn_wrap{display:flex;align-items:center;gap: 8px;}
