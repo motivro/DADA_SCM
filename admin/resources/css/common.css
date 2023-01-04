@@ -63,11 +63,12 @@ input[type="password"]{width: 100%;min-height:40px;}
 
 
 /* radius test */
-#content .select_wrap .select_box,
+.btn{border-radius:3px;}
+/* #content .select_wrap .select_box,
 .btn,
 input[type="text"],
 input[type="password"]{border-radius:5px;}
-.cus_inp_wrap.checkbox_inp .inp_box .inp_custom{border-radius:3px;}
+.cus_inp_wrap.checkbox_inp .inp_box .inp_custom{border-radius:3px;} */
 /* contents e*/
 
 .btn_wrap{display:flex;align-items:center;gap: 8px;}
