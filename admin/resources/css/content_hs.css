@@ -741,3 +741,6 @@
 #content .regi_sect .set_rt .rt_tbl .t_body .item_row:first-child{border-left: 0;}
 #content .regi_sect .set_rt .rt_tbl .t_body .item_row > div{width:100px;padding: 6px 0;background:#fff;border-top: var(--box_border);}
 #content .regi_sect .set_rt .rt_tbl .t_body .item_row > div:first-child{border-top: 0;}
+
+#content .regi_sect .set_opt .row_item{display: flex;align-items: center;gap:10px}
+#content .regi_sect .set_opt .row_item .cus_inp_wrap{min-width:100px;}
