@@ -4,6 +4,7 @@
 @import url('./font.css');
 
 :root{
+    --fts10:10px;
     --fts12:12px;
     --fts13:13px;
     --fts14:14px;

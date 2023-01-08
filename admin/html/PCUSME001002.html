@@ -455,9 +455,9 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
+
                     <div class="regi_sect normal">
                         <div class="sect_tit"><div class="tit">상품 인증관리</div></div>
                         <div class="sect_cont">
@@ -837,56 +837,467 @@
                                                     <p>※ 세미콜론(;) 또는 Enter, Tab키를 통해 옵션값을 연속으로 입력하세요. 예시) 빨강, 노랑, 파랑</p>
                                                 </div>
 
-                                                <div class="set_rt">
-                                                    <div class="row_item">
-                                                        <div class="item_tit">
-                                                            <div class="tit">상품 리드타임</div>
-                                                            <div class="sub_infor">
-                                                                <p>(Lead Time : 주문부터 납품소요 기간)</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cus_inp_wrap checkbox_inp">
-                                                            <label for="read_2_1" class="inp_box">리드타임 숨기기
-                                                                <input type="checkbox" id="read_2_1" name="">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="btn_wrap">
-                                                            <div class="btn_minus"></div>
-                                                            <div class="btn_plus"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="rt_tbl">
-                                                        <div class="t_head">
-                                                            <div class="item_col">
-                                                                <div>상품수량</div>
-                                                                <div>소요기간</div>
-                                                                <div>금액(원)</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="t_body">
-                                                            <div class="item_row">
-                                                                <div><span class="sta">100</span>개</div>
-                                                                <div><span class="sta">3</span>일</div>
-                                                                <div><span class="sta">20,000</span>원</div>
-                                                            </div>
-                                                            <div class="item_row">
-                                                                <div><span class="sta">100</span>개</div>
-                                                                <div><span class="sta">3</span>일</div>
-                                                                <div><span class="sta">20,000</span>원</div>
-                                                            </div>
-                                                            <div class="item_row">
-                                                                <div><span class="sta">100</span>개</div>
-                                                                <div><span class="sta">3</span>일</div>
-                                                                <div><span class="sta">20,0000000</span>원</div>
-                                                            </div>
-                                                        </div>
+                                                <div class="opt_gen">
+                                                    <span style="font-size: 30px;font-weight:700;margin-top: 20px;display: block;">옵션 생성 표 확인필요.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="regi_sect">
+                        <div class="sect_tit">
+                            <div class="tit">상품이미지</div>
+                            <div class="fold_btn">펼처보기</div>
+                        </div>
+                        
+                        <div class="sect_cont">
+                            <div class="contents_box regi bdT_0">
+                                <div class="srh_box">
+
+                                    <div class="srh_item normal">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">대표 이미지</div>
+                                            <div class="srh_cont">
+                                                <div class="add_box">
+                                                    <div class="btn_plus"></div>
+                                                </div>
+                                                <p class="txtInfo point">권장 크기 : 1000 x 1000 (윈도대상 750 x 1000)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">추가 이미지 <div class="count">(<span class="sta">1</span>/<span>9</span>)</div></div>
+                                            <div class="srh_cont">
+                                                <div class="img_list_wrap">
+                                                    <div class="img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
+                                                    <div class="img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
+                                                    <div class="img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
+                                                    <div class="img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
+                                                    <div class="img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
+                                                </div>
+                                                <div class="add_box">
+                                                    <div class="btn_plus"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">동영상</div>
+                                            <div class="srh_cont">
+                                                <div class="add_box">
+                                                    <div class="btn_plus"></div>
+                                                </div>
+                                                <div class="ab_video">
+                                                    <div class="inp_wrap"><input type="text" name="" id="" placeholder="동영상 타이틀"></div>
+                                                    <div class="info_list">
+                                                        <p class="txtInfo">❖ 최대 1분 / 1024MB 이내로 등록해 주세요.</p>
+                                                        <p class="txtInfo">❖ AVI, WMV, MPG, MPEG, MOV 등 파일 형식만 등록 가능합니다.</p>
+                                                        <p class="txtInfo">❖ GIF 파일은 자동으로 생성된다. (동영상 일부분 자동 생성)</p>
+                                                        <p class="txtInfo">❖ 상품 상세 및 통합 검색 노출 시 활용되는 문구입니다.</p>
+                                                        <p class="txtInfo">❖ 상품과 직접 관련 없는 내용 입력 시 판매 금지될 수 있습니다.</p>
+                                                        <p class="txtInfo">❖ 다다딜 체크하면 다다딜 VOD클립으로 사용할 수 있다.</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="regi_sect">
+                        <div class="sect_tit">
+                            <div class="tit">상세설명</div>
+                            <div class="fold_btn">펼처보기</div>
+                        </div>
+                        
+                        <div class="sect_cont">
+                            <div class="prd_desc">
+                                에디터 조율 필요
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regi_sect">
+                        <div class="sect_tit">
+                            <div class="tit">배송정보</div>
+                            <div class="fold_btn">펼처보기</div>
+                        </div>
+                        
+                        <div class="sect_cont">
+                            <div class="contents_box regi bdT_0">
+                                <div class="regi_type_select">
+                                    <div class="btn_wrap">
+                                        <div class="btn">저장</div>
+                                        <div class="btn active">직접입력</div>
+                                        <div class="btn">템플릿적용</div>
+                                    </div>
+                                </div>
+                                <div class="srh_box">
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">배송방법</div>
+                                            <div class="srh_cont">
+                                                <div class="regi_btn_wrap">
+                                                    <div class="btn active">직접배송</div>
+                                                    <div class="btn">위탁배송</div>
+                                                </div>
+                                                <div class="select_wrap">
+                                                    <select>
+                                                        <option value="배송업체 선택" selected>배송업체 선택</option>
+                                                        <option value="업체명">업체명</option>
+                                                        <option value="업체명">업체명</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">출고지 주소</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_wrap"><input type="text" name="" id="" placeholder="주소관리 선택"  disabled></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">배송속성</div>
+                                            <div class="srh_cont">
+                                                <div class="regi_btn_wrap">
+                                                    <div class="btn active">일반배송</div>
+                                                    <div class="btn">오늘출발</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">배송시간</div>
+                                            <div class="srh_cont">
+                                                <p class="sub_text">평일 15시까지 결제완료</p>
+                                                <div class="select_wrap">
+                                                    <select>
+                                                        <option value="15시 ~ 24시" selected>15시 ~ 24시</option>
+                                                    </select>
+                                                </div>
+                                                <p class="sub_text">:</p>
+                                                <div class="select_wrap type2">
+                                                    <select>
+                                                        <option value="00분 ~ 30분 단위" selected>00분 ~ 30분 단위</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">
+                                                <div class="cus_inp_wrap checkbox_inp">
+                                                    <label for="cusOrder_1_1" class="inp_box">주문제작 여부
+                                                        <input type="checkbox" id="cusOrder_1_1" name="" checked>
+                                                        <span class="inp_custom"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="srh_cont">
+                                                <div class="select_wrap type3">
+                                                    <select>
+                                                        <option value="15시 ~ 24시" selected>발송 예정일 선택→2일 ~ 14일</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">묶음배송 여부</div>
+                                            <div class="srh_cont">
+                                                <div class="regi_btn_wrap">
+                                                    <div class="btn active">불가</div>
+                                                    <div class="btn">가능</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">배송비 구성</div>
+                                            <div class="srh_cont type_txt">
+                                                <div class="select_wrap type2">
+                                                    <select>
+                                                        <option value="기본 배송비" selected>기본 배송비</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">기본배송비</div>
+                                            <div class="srh_cont type_txt">
+                                                <div class="inp_wrap type2"><input type="text" name="" id="" placeholder="2,500"></div>
+                                                <div class="unit">원</div>
+                                            </div>
+                                        </div>
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">조건배송비</div>
+                                            <div class="srh_cont type_txt">
+                                                <div class="inp_wrap type2"><input type="text" name="" id="" placeholder="2,500"></div>
+                                                <div class="unit">원 이상이면 무료배송</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">배송가능 지역</div>
+                                            <div class="srh_cont">
+                                                <div class="select_wrap type2">
+                                                    <span style="color: var(--color1);">체크셀렉트 ui</span>
+                                                    <select>
+                                                        <option value="기본 배송비" selected>기본 배송비</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title"><div class="name">제주 및 도서산간 추가배송비</div><div class="more_info"><div class="btn">제주 및 도서산간 지역안내</div></div></div>
+                                            <div class="srh_cont">
+                                                <div class="select_wrap type2">
+                                                    <select>
+                                                        <option value="없음" selected>없음</option>
+                                                        <option value="있음">있음</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">조건</div>
+                                            <div class="srh_cont">
+                                                <div class="select_wrap type2">
+                                                    <select>
+                                                        <option value="제주/도서산간" selected>제주/도서산간</option>
+                                                        <option value="제주 외 도서산간">제주 외 도서산간</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">추가배송비</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_wrap"><input type="text" name="" id="" placeholder="0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">
+                                                <div class="cus_inp_wrap checkbox_inp">
+                                                    <label for="inst_cost_1_1" class="inp_box">별도 설치 시 비용 여부
+                                                        <input type="checkbox" id="inst_cost_1_1" name="" checked>
+                                                        <span class="inp_custom"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="srh_cont">
+                                                <div class="inp_wrap type2"><input type="text" name="" id="" placeholder="0"></div>
+                                            </div>
+                                        </div>
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">
+                                                <div class="cus_inp_wrap checkbox_inp">
+                                                    <label for="pickup_1_1" class="inp_box">방문수령
+                                                        <input type="checkbox" id="pickup_1_1" name="" checked>
+                                                        <span class="inp_custom"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="srh_cont">
+                                                <div class="inp_wrap type3"><input type="text" name="" id="" placeholder="주소관리 선택"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">반품/교환 택배사</div>
+                                            <div class="srh_cont">
+                                                <div class="select_wrap type2">
+                                                    <select>
+                                                        <option value="배송업체 선택" selected>배송업체 선택</option>
+                                                        <option value="업체">업체</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">반품/교환 주소지</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_wrap type3"><input type="text" name="" id="" placeholder="주소관리 선택"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">반품배송비(편도)</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_wrap type2"><input type="text" name="" id="" placeholder="0"></div>
+                                            </div>
+                                        </div>
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">교환배송비(왕복)</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_wrap type2"><input type="text" name="" id="" placeholder="0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="regi_sect">
+                        <div class="sect_tit">
+                            <div class="tit">A/S정보 및 특이사항</div>
+                            <div class="fold_btn">펼처보기</div>
+                        </div>
+                        
+                        <div class="sect_cont">
+                            <div class="contents_box regi bdT_0">
+                                <div class="regi_type_select">
+                                    <div class="btn_wrap">
+                                        <div class="btn">저장</div>
+                                        <div class="btn active">직접입력</div>
+                                        <div class="btn">템플릿적용</div>
+                                    </div>
+                                </div>
+                                <div class="srh_box txt_area">
+                                    <div class="srh_item row-1">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">A/S 안내</div>
+                                            <div class="srh_cont ">
+                                                <div class="inp_txt_wrap">
+                                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                                    <div class="txt_count"><span class="count">0</span>/<span class="total">500</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item row-1">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">특이사항</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_txt_wrap">
+                                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                                    <div class="txt_count"><span class="count">0</span>/<span class="total">500</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="srh_item row-1">
+                                        <div class="sub_infor"><p>※법률에 근거하지 않은 판매자의 임의적인 A/S 규정 및 청약철회 기준 안내 시, 이용정지 및 관련 법에 의거하여 제재될 수 있습니다.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="regi_sect">
+                        <div class="sect_tit">
+                            <div class="tit">검색설정(SEO)</div>
+                            <div class="fold_btn">펼처보기</div>
+                        </div>
+                        
+                        <div class="sect_cont">
+                            <div class="contents_box regi bdT_0">
+                                <div class="srh_box txt_area">
+                                    <div class="srh_item row-1">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">메타태그1 : Autthor</div>
+                                            <div class="srh_cont ">
+                                                <div class="inp_txt_wrap">
+                                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                                    <div class="txt_count"><span class="count">0</span>/<span class="total">500</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item row-1">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">메타태그2 : Desciption</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_txt_wrap">
+                                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                                    <div class="txt_count"><span class="count">0</span>/<span class="total">500</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item row-1">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">메타태그3 : Keywords</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_txt_wrap">
+                                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                                    <div class="txt_count"><span class="count">0</span>/<span class="total">500</span></div>
+                                                </div>
+                                                <p class="txtInfo point">※ 키워드는 콤마(,)로 구분하여 입력합니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="srh_item row-1">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">상품이미지 Alt 텍스트</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_txt_wrap">
+                                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                                    <div class="txt_count"><span class="count">0</span>/<span class="total">500</span></div>
+                                                </div>
+                                                <p class="txtInfo point">※ Alt 텍스트는 해당 상품을 표현할 수 있는 1개 ~ 2개 정도의 단어로 입력하세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item row-1">
+                                        <div class="sub_infor">
+                                            <p>※ 메타태그1(Author) : 페이지 또는 사이트의 제작자명을 명시할 수 있습니다.</p>
+                                            <p>※ 메타태그2(Description) : 검색엔진의 검색결과에서 페이지의 요약내용을 보여주는 부분으로 1-2개의 문장이나 짧은 단락을 사용하는 것이 좋습니다.</p>
+                                            <p>※ 메타태그3(Keywords) : 사용자가 많이 검색하는 검색어 및 사이트와 연관된 키워드 정보를 기입합니다.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
