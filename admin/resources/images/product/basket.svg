@@ -1,13 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <g data-name="그룹 31099">
-        <path data-name="사각형 6055" style="fill:#363535" d="M0 0h24v24H0z"/>
-        <g data-name="그룹 30815">
-            <g data-name="그룹 27882">
-                <g data-name="그룹 28840">
-                    <path data-name="패스 4638" d="M20.971 24.887h-7.158a2.088 2.088 0 0 1-2.088-2.087v-7.159h11.333V22.8a2.087 2.087 0 0 1-2.087 2.087z" transform="translate(-5.391 -7.339)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.4px;fill:#363535"/>
-                    <path data-name="사각형 4336" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.4px;fill:#363535" d="M0 0h12.172v1.849H0z" transform="translate(5.915 6.453)"/>
-                    <path data-name="선 105" transform="translate(10.874 10.593)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.4px" d="M0 0h2.253"/>
-                </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="13.572" height="12.494" viewBox="0 0 13.572 12.494">
+    <g id="그룹_30815" data-name="그룹 30815" transform="translate(-1.971 -2.329)">
+        <g id="그룹_27882" data-name="그룹 27882" transform="translate(2.671 4.061)">
+            <g id="그룹_28840" data-name="그룹 28840" transform="translate(0 -1.032)">
+                <path id="패스_4638" data-name="패스 4638" d="M20.971,24.887H13.813A2.088,2.088,0,0,1,11.725,22.8V15.641H23.058V22.8A2.087,2.087,0,0,1,20.971,24.887Z" transform="translate(-11.306 -13.792)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                <rect id="사각형_4336" data-name="사각형 4336" width="12.172" height="1.849" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                <line id="선_105" data-name="선 105" x2="2.253" transform="translate(4.959 4.14)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
             </g>
         </g>
     </g>

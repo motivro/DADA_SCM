@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/content_hs.css">
+    <link rel="stylesheet" href="../resources/css/content_k.css">
+    <script src="../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../resources/js/ui.js"></script>
+    <script src="../resources/js/table_list.js"></script>
+</head>
+<body> 
+    <!-- wrap S -->
+    <div class="wrap">
+        <!-- header S -->
+        <!-- 로그인 전 s-->
+        <!-- <header id="header" class="logout">
+            <div class="hd_inner">
+                <h1>
+                    <a class="logo" title="DADA" href="#none"><span class="blind">DADA SCM</span></a>
+                    <a class="slogo" href="#none"><span>다다 SCM</span></a>
+                </h1>
+            </div>
+        </header> -->
+        <!-- 로그인 전 end-->
+
+        <!-- 로그인 후 s-->
+        <header id="header" class="login">
+            <div class="hd_inner">
+                <h1>
+                    <a class="logo" title="DADA" href="#none"><span class="blind">DADA SCM</span></a>
+                    <div class="slogo"><span>최고관리자</span></div>
+                    <div class="hd_notice">
+                        <span>다다SCM 공지사항 알림</span>
+                    </div>
+                </h1>
+
+                <div class="hd_search">
+                    <div class="hd_search_inner">
+                        <div class="inp_wrap"><input type="text" placeholder="상품명, 태그, 상품코드 검색"></div>
+                        <div class="submit_btn">검색</div>
+                    </div>
+                </div>
+
+                <div class="hd_gnb">
+                    <nav>
+                        <ul class="depth1_menu">
+                            <li class="menu_item lang"><a href="#none">Kor</a></li>
+                            <li class="menu_item">
+                                <a href="#none">고객센터<span class="icon_arrow"></span></a>
+                                <ul class="depth2_menu">
+                                    <li class="menu_item"><a href="#none">문의사항</a></li>
+                                    <li class="menu_item"><a href="#none">공지사항</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#none">메뉴얼<span class="icon_arrow"></span></a>
+                                <ul class="depth2_menu">
+                                    <li class="menu_item"><a href="#none">상품관리</a></li>
+                                    <li class="menu_item"><a href="#none">주문관리</a></li>
+                                    <li class="menu_item"><a href="#none">배송관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu_item"><a href="#none">아이디</a></li>
+                            <li class="menu_item"><a href="#none">로그아웃</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- 로그인 후 end-->
+        <!-- header E -->
+
+        <!-- lnb S -->
+        <aside id="lnb">
+            <div class="lnb_inner">
+                <div class="profile_info">
+                    <div class="member_info">
+                        <div class="thumb"><img class="member_img" src="../../admin/resources/images/common/profile_noimg.jpeg" alt="회원 이미지"></div>
+                        <div class="desc">
+                            <span class="member_name">홍길동</span>
+                            <a href="#none">로그아웃</a>
+                            <span class="biz_info">사업자 미승인</span>
+                        </div>
+                    </div>
+                    <div class="sell_info">
+                        <ul>
+                            <li>
+                                <div class="tit">주문</div>
+                                <div class="txt"><span class="ord_num">100</span>건</div>
+                            </li>
+                            <li>
+                                <div class="tit">매출</div>
+                                <div class="txt"><span class="sales_num">14,000,000</span>원</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn_wrap">
+                        <a class="btn tomato" href="#none">다다마켓</a>
+                        <a class="btn dark" href="#none">대시보드</a>
+                    </div>
+                </div>
+
+                <div class="lnb_menu">
+                    <ul class="nav_list motiv_acc">
+                        <li class="nav_item">
+                            <div class="nav_menu">상품관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">상품목록</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">다다딜관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">상품관리</a></li>
+                                <li class="sub_item"><a href="#none">판매요청</a></li>
+                                <li class="sub_item"><a href="#none">판매현황</a></li>
+                                <li class="sub_item"><a href="#none">판매종료</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">지정판매관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">지정판매자 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">판매상품관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">전체상품목록</a></li>
+                                <li class="sub_item"><a href="#none">소싱 일반상품</a></li>
+                                <li class="sub_item"><a href="#none">다다딜상품</a></li>
+                                <li class="sub_item"><a href="#none">지정판매자 상품</a></li>
+                                <li class="sub_item"><a href="#none">쇼핑몰 연계상품</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">강제종료관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">강제종료 상품관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">주문관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">주문조회</a></li>
+                                <li class="sub_item"><a href="#none">미결제 확인</a></li>
+                                <li class="sub_item"><a href="#none">발주확인/발송</a></li>
+                                <li class="sub_item"><a href="#none">배송현황</a></li>
+                                <li class="sub_item"><a href="#none">구매확정 내역조회</a></li>
+                                <li class="sub_item"><a href="#none">취소관리</a></li>
+                                <li class="sub_item"><a href="#none">반품관리</a></li>
+                                <li class="sub_item"><a href="#none">교환관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">정산관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">정산내역 조회</a></li>
+                                <li class="sub_item"><a href="#none">정산지급 현황</a></li>
+                                <li class="sub_item"><a href="#none">매출증빙 내역</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">통계</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">통계요약</a></li>
+                                <li class="sub_item"><a href="#none">매출통계</a></li>
+                                <li class="sub_item"><a href="#none">결제수단통계</a></li>
+                                <li class="sub_item"><a href="#none">상품매출통계</a></li>
+                                <li class="sub_item"><a href="#none">판매자 판매통계</a></li>
+                                <li class="sub_item"><a href="#none">SCM플랫폼 리포트</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">회원관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">회원현황</a></li>
+                                <li class="sub_item"><a href="#none">패널티관리</a></li>
+                                <li class="sub_item"><a href="#none">휴면회원관리</a></li>
+                                <li class="sub_item"><a href="#none">탈퇴회원관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">고객센터</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">문의사항관리</a></li>
+                                <li class="sub_item"><a href="#none">공지사항관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">기본정보관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">약관/개인/금융관리</a></li>
+                                <li class="sub_item"><a href="#none">운영자관리</a></li>
+                                <li class="sub_item"><a href="#none">수수료관리</a></li>
+                                <li class="sub_item"><a href="#none">다다마켓 진열관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">쇼핑몰관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">카테고리관리</a></li>
+                                <li class="sub_item"><a href="#none">주소지관리</a></li>
+                                <li class="sub_item"><a href="#none">금칙어관리</a></li>
+                                <li class="sub_item"><a href="#none">통합쇼핑몰관리</a></li>
+                                <li class="sub_item"><a href="#none">로컬상가관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!-- lnb E -->
+        
+        <!-- container S -->
+        <div id="container">
+            <!-- content S -->
+            <div id="content">
+                <!-- inner S -->
+                <div class="inner">
+                    <h1>DaDa MarketPlace</h1>
+
+                    <div class="contents_box mp_cate_box">
+                        <div class="util_wrap d_flex">
+                            <div class="util_left d_flex">
+                                <div class="inp_wrap">
+                                    <input type="text" name="" id="" placeholder="상품명, 브랜드, 상품태그">
+                                </div>
+                                <div class="select_wrap">
+                                    <select>
+                                        <option value="전체 카테고리">전체 카테고리</option>
+                                        <option value="카테고리 1">카테고리 1</option>
+                                        <option value="카테고리 2">카테고리 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="util_right d_flex">
+                                <div class="btn_wrap">
+                                    <a class="btn" href="#none">상품검색</a>
+                                    <a class="btn" href="#none">지정상품</a>
+                                    <a class="btn" href="#none">즐겨찾기 상품</a>
+                                    <div class="icon_wrap"><a href="#none"></a></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="filter_wrap">
+                            <div class="filter_inner">
+                                <div class="list depth1">
+                                    <ul>
+                                        <li class="list_item selected">의류</li>
+                                        <li class="list_item">대분류2</li>
+                                        <li class="list_item">대분류3</li>
+                                        <li class="list_item">대분류4</li>
+                                        <li class="list_item">대분류5</li>
+                                    </ul>
+                                </div>
+                                <div class="list depth2">
+                                    <ul>
+                                        <li class="list_item">중분류1</li>
+                                        <li class="list_item">중분류2</li>
+                                        <li class="list_item">중분류3</li>
+                                        <li class="list_item">중분류4</li>
+                                        <li class="list_item">중분류5</li>
+                                    </ul>
+                                </div>
+                                <div class="list depth3 ">
+                                    <ul>
+                                        <li class="list_item">소분류1</li>
+                                        <li class="list_item">소분류2</li>
+                                        <li class="list_item">소분류3</li>
+                                        <li class="list_item">소분류4</li>
+                                        <li class="list_item">소분류5</li>
+                                    </ul>
+                                </div>
+                                <div class="list depth4 ">
+                                    <ul>
+                                        <li class="list_item">상세분류1</li>
+                                        <li class="list_item">상세분류2</li>
+                                        <li class="list_item">상세분류3</li>
+                                        <li class="list_item">상세분류4</li>
+                                        <li class="list_item">상세분류5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="type2">
+                        <div class="tit">베스트 상품 <span class="cont_numb">(<span class="count">100</span>)</span></div>
+                        <div class="read_more"><a href="#none">더보기</a></div>
+                    </h2>
+                    <div class="contents_box prd_cont">
+                        <div class="contents_item">
+                            <ul class="prd_list">
+                                <li class="prd_item">
+                                    <div class="thumb">
+                                        <a class="img" href="#none"><img src="../resources/images/product/sample_thumb.jpg" alt=""></a>
+                                        <div class="info_item badge">
+                                            <span class="new">NEW</span>
+                                        </div>
+                                        <div class="info_item btn"><a href="#" class="btn_put">상품 담아 넣기</a></div>
+                                        <div class="info_item basket">
+                                            <a class="btn_basket" href="#none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13.572" height="12.494" viewBox="0 0 13.572 12.494">
+                                                    <g id="그룹_30815" data-name="그룹 30815" transform="translate(-1.971 -2.329)">
+                                                        <g id="그룹_27882" data-name="그룹 27882" transform="translate(2.671 4.061)">
+                                                            <g id="그룹_28840" data-name="그룹 28840" transform="translate(0 -1.032)">
+                                                                <path id="패스_4638" data-name="패스 4638" d="M20.971,24.887H13.813A2.088,2.088,0,0,1,11.725,22.8V15.641H23.058V22.8A2.087,2.087,0,0,1,20.971,24.887Z" transform="translate(-11.306 -13.792)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                                <rect id="사각형_4336" data-name="사각형 4336" width="12.172" height="1.849" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                                <line id="선_105" data-name="선 105" x2="2.253" transform="translate(4.959 4.14)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="info_item favor"></div>
+                                        <div class="info_item sale">
+                                            <div class="normal_price">₩ <span class="price_num">10,000</span></div>
+                                            <div class="per_sale"><span class="percent_num">20</span>% OFF</div>
+                                        </div>
+                                        <!-- <div class="info_item bar">
+                                            <div class="sold_out red"><span class="btn_close"></span>품절제품 입니다.</div>
+                                            <div class="sold_out blue"><span class="btn_close"></span>품절제품 입니다.</div>
+                                            <div class="stock"><span class="btn_close"></span>남은재고 <span class="stock_count">10</span>개 입니다.</div>
+                                            <div class="sold_stop"><span class="btn_close"></span>판매중지 제품 입니다.</div>
+                                        </div> -->
+                                    </div>
+                                    <div class="desc">
+                                        <div class="prd_title">
+                                            <div class="brand"><span class="prd_company">FRONTRO</span><span class="prd_code">3FD_3335</span></div>
+                                            <div class="name"><a href="#none">Oversized Wool Blazer_3color</a></div>
+                                        </div>
+
+                                        <div class="price_info">
+                                            <div class="price"><span class="prd_badge deal">다다딜가</span><span class="price_numb">30,000</span></div>
+                                            <div class="deli_info">
+                                                <div class="tit">배송정보</div>
+                                                <div class="txt">
+                                                    <span class="deli_badge">기본</span><span class="deli_price">3,000</span>원
+                                                </div>
+                                            </div>
+                                            <div class="review">
+                                                <div class="star_sta"><span class=""></span></div>
+                                                <div class="total_review">(<span class="review_count">213</span>)</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="more_info">
+                                            <div>
+                                                <div class="tit">판매목표수량</div>
+                                                <div class="result"><span class="count_num">00000</span></div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">달성리워딩율</div>
+                                                <div class="result"><span class="count_num">00</span>%</div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">담은 누적수량</div>
+                                                <div class="result"><span class="count_num">00000</span></div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">주문 누적수량</div>
+                                                <div class="result"><span class="count_num">00</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="prd_item">
+                                    <div class="thumb">
+                                        <a class="img" href="#none"><img src="../resources/images/product/sample_thumb.jpg" alt=""></a>
+                                        <div class="info_item badge">
+                                            <span class="new">NEW</span>
+                                        </div>
+                                        <div class="info_item btn"><div class="btn_fin">2023.04.13</div></div>
+                                        <div class="info_item basket">
+                                            <a class="btn_basket" href="#none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13.572" height="12.494" viewBox="0 0 13.572 12.494">
+                                                    <g id="그룹_30815" data-name="그룹 30815" transform="translate(-1.971 -2.329)">
+                                                        <g id="그룹_27882" data-name="그룹 27882" transform="translate(2.671 4.061)">
+                                                            <g id="그룹_28840" data-name="그룹 28840" transform="translate(0 -1.032)">
+                                                                <path id="패스_4638" data-name="패스 4638" d="M20.971,24.887H13.813A2.088,2.088,0,0,1,11.725,22.8V15.641H23.058V22.8A2.087,2.087,0,0,1,20.971,24.887Z" transform="translate(-11.306 -13.792)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                                <rect id="사각형_4336" data-name="사각형 4336" width="12.172" height="1.849" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                                <line id="선_105" data-name="선 105" x2="2.253" transform="translate(4.959 4.14)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="info_item favor selected"></div>
+                                        <div class="info_item sale">
+                                            <div class="normal_price">₩ <span class="price_num">10,000</span></div>
+                                            <div class="per_sale"><span class="percent_num">20</span>% OFF</div>
+                                        </div>
+                                        <!-- <div class="info_item bar">
+                                            <div class="sold_out red"><span class="btn_close"></span>품절제품 입니다.</div>
+                                            <div class="sold_out blue"><span class="btn_close"></span>품절제품 입니다.</div>
+                                            <div class="stock"><span class="btn_close"></span>남은재고 <span class="stock_count">10</span>개 입니다.</div>
+                                            <div class="sold_stop"><span class="btn_close"></span>판매중지 제품 입니다.</div>
+                                        </div> -->
+                                    </div>
+                                    <div class="desc">
+                                        <div class="prd_title">
+                                            <div class="brand"><span class="prd_company">FRONTRO</span><span class="prd_code">3FD_3335</span></div>
+                                            <div class="name"><a href="#none">Oversized Wool Blazer_3color</a></div>
+                                        </div>
+
+                                        <div class="price_info">
+                                            <div class="price"><span class="prd_badge deal">다다딜가</span><span class="price_numb">30,000</span></div>
+                                            <div class="deli_info">
+                                                <div class="tit">배송정보</div>
+                                                <div class="txt">
+                                                    <span class="deli_badge">기본</span><span class="deli_price">3,000</span>원
+                                                </div>
+                                            </div>
+                                            <div class="review">
+                                                <div class="star_sta"><span class=""></span></div>
+                                                <div class="total_review">(<span class="review_count">213</span>)</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="more_info">
+                                            <div>
+                                                <div class="tit">판매목표수량</div>
+                                                <div class="result"><span class="count_num">00000</span></div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">달성리워딩율</div>
+                                                <div class="result"><span class="count_num">00</span>%</div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">담은 누적수량</div>
+                                                <div class="result"><span class="count_num">00000</span></div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">주문 누적수량</div>
+                                                <div class="result"><span class="count_num">00</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="prd_item">
+                                    <div class="thumb">
+                                        <a class="img" href="#none"><img src="../resources/images/product/sample_thumb.jpg" alt=""></a>
+                                        <div class="info_item badge">
+                                            <span class="new">NEW</span>
+                                        </div>
+                                        <div class="info_item btn"><a href="#" class="btn_put">상품 담아 넣기</a></div>
+                                        <div class="info_item basket">
+                                            <a class="btn_basket" href="#none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13.572" height="12.494" viewBox="0 0 13.572 12.494">
+                                                    <g id="그룹_30815" data-name="그룹 30815" transform="translate(-1.971 -2.329)">
+                                                        <g id="그룹_27882" data-name="그룹 27882" transform="translate(2.671 4.061)">
+                                                            <g id="그룹_28840" data-name="그룹 28840" transform="translate(0 -1.032)">
+                                                                <path id="패스_4638" data-name="패스 4638" d="M20.971,24.887H13.813A2.088,2.088,0,0,1,11.725,22.8V15.641H23.058V22.8A2.087,2.087,0,0,1,20.971,24.887Z" transform="translate(-11.306 -13.792)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                                <rect id="사각형_4336" data-name="사각형 4336" width="12.172" height="1.849" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                                <line id="선_105" data-name="선 105" x2="2.253" transform="translate(4.959 4.14)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="info_item favor"></div>
+                                        <div class="info_item sale">
+                                            <div class="normal_price">₩ <span class="price_num">10,000</span></div>
+                                            <div class="per_sale"><span class="percent_num">20</span>% OFF</div>
+                                        </div>
+                                        <!-- <div class="info_item bar">
+                                            <div class="sold_out red"><span class="btn_close"></span>품절제품 입니다.</div>
+                                            <div class="sold_out blue"><span class="btn_close"></span>품절제품 입니다.</div>
+                                            <div class="stock"><span class="btn_close"></span>남은재고 <span class="stock_count">10</span>개 입니다.</div>
+                                            <div class="sold_stop"><span class="btn_close"></span>판매중지 제품 입니다.</div>
+                                        </div> -->
+                                    </div>
+                                    <div class="desc">
+                                        <div class="prd_title">
+                                            <div class="brand"><span class="prd_company">FRONTRO</span><span class="prd_code">3FD_3335</span></div>
+                                            <div class="name"><a href="#none">Oversized Wool Blazer_3color</a></div>
+                                        </div>
+
+                                        <div class="price_info">
+                                            <div class="price"><span class="prd_badge deal">다다딜가</span><span class="price_numb">30,000</span></div>
+                                            <div class="deli_info">
+                                                <div class="tit">배송정보</div>
+                                                <div class="txt">
+                                                    <span class="deli_badge">기본</span><span class="deli_price">3,000</span>원
+                                                </div>
+                                            </div>
+                                            <div class="review">
+                                                <div class="star_sta"><span class=""></span></div>
+                                                <div class="total_review">(<span class="review_count">213</span>)</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="more_info">
+                                            <div>
+                                                <div class="tit">판매목표수량</div>
+                                                <div class="result"><span class="count_num">00000</span></div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">달성리워딩율</div>
+                                                <div class="result"><span class="count_num">00</span>%</div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">담은 누적수량</div>
+                                                <div class="result"><span class="count_num">00000</span></div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">주문 누적수량</div>
+                                                <div class="result"><span class="count_num">00</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="prd_item">
+                                    <div class="thumb">
+                                        <a class="img" href="#none"><img src="../resources/images/product/sample_thumb.jpg" alt=""></a>
+                                        <div class="info_item badge">
+                                            <span class="new">NEW</span>
+                                        </div>
+                                        <div class="info_item btn"><div class="btn_fin">2023.04.13</div></div>
+                                        <div class="info_item basket">
+                                            <a class="btn_basket" href="#none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13.572" height="12.494" viewBox="0 0 13.572 12.494">
+                                                    <g id="그룹_30815" data-name="그룹 30815" transform="translate(-1.971 -2.329)">
+                                                        <g id="그룹_27882" data-name="그룹 27882" transform="translate(2.671 4.061)">
+                                                            <g id="그룹_28840" data-name="그룹 28840" transform="translate(0 -1.032)">
+                                                                <path id="패스_4638" data-name="패스 4638" d="M20.971,24.887H13.813A2.088,2.088,0,0,1,11.725,22.8V15.641H23.058V22.8A2.087,2.087,0,0,1,20.971,24.887Z" transform="translate(-11.306 -13.792)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                                <rect id="사각형_4336" data-name="사각형 4336" width="12.172" height="1.849" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                                <line id="선_105" data-name="선 105" x2="2.253" transform="translate(4.959 4.14)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="info_item favor selected"></div>
+                                        <div class="info_item sale">
+                                            <div class="normal_price">₩ <span class="price_num">10,000</span></div>
+                                            <div class="per_sale"><span class="percent_num">20</span>% OFF</div>
+                                        </div>
+                                        <!-- <div class="info_item bar">
+                                            <div class="sold_out red"><span class="btn_close"></span>품절제품 입니다.</div>
+                                            <div class="sold_out blue"><span class="btn_close"></span>품절제품 입니다.</div>
+                                            <div class="stock"><span class="btn_close"></span>남은재고 <span class="stock_count">10</span>개 입니다.</div>
+                                            <div class="sold_stop"><span class="btn_close"></span>판매중지 제품 입니다.</div>
+                                        </div> -->
+                                    </div>
+                                    <div class="desc">
+                                        <div class="prd_title">
+                                            <div class="brand"><span class="prd_company">FRONTRO</span><span class="prd_code">3FD_3335</span></div>
+                                            <div class="name"><a href="#none">Oversized Wool Blazer_3color</a></div>
+                                        </div>
+
+                                        <div class="price_info">
+                                            <div class="price"><span class="prd_badge deal">다다딜가</span><span class="price_numb">30,000</span></div>
+                                            <div class="deli_info">
+                                                <div class="tit">배송정보</div>
+                                                <div class="txt">
+                                                    <span class="deli_badge">기본</span><span class="deli_price">3,000</span>원
+                                                </div>
+                                            </div>
+                                            <div class="review">
+                                                <div class="star_sta"><span class=""></span></div>
+                                                <div class="total_review">(<span class="review_count">213</span>)</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="more_info">
+                                            <div>
+                                                <div class="tit">판매목표수량</div>
+                                                <div class="result"><span class="count_num">00000</span></div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">달성리워딩율</div>
+                                                <div class="result"><span class="count_num">00</span>%</div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">담은 누적수량</div>
+                                                <div class="result"><span class="count_num">00000</span></div>
+                                            </div>
+                                            <div>
+                                                <div class="tit">주문 누적수량</div>
+                                                <div class="result"><span class="count_num">00</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- inner E -->
+            </div>
+            <!-- content E -->
+        </div>
+        <!-- container E -->
+
+    </div>
+    <!-- wrap E -->
+    <script>
+        var selectUi = {
+            class : 'select_wrap',
+            seData : [],
+            init :() => {
+                $.each( $('.'+selectUi.class+''), (index, item) => {
+                    var seObjData = new Object();
+                    seObjData.optData = new Array();
+                    seObjData.seNum = index;
+                    seObjData.actNum = '';
+                    seObjData.actVal = '';
+                    seObjData.actSta = false;
+                    var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
+                    $.each( seTarget.children("option"), (seIndex, seItem) => {
+                        if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
+                            seObjData.actSta = true;
+                            seObjData.actNum = seIndex;
+                            seObjData.actVal = seItem.text;
+                        }
+                        seObjData.optData.push(seItem.text);
+                    });
+                    selectUi.seData.push(seObjData);
+                })
+                selectUi.customSelect();
+            },
+            customSelect: () => {
+                $.each( selectUi.seData, (index, item) => {
+                    var selectHtml = '';
+                    var selectTname = item.actVal ? item.actVal : item.optData[0];
+                    selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
+                    selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
+                    selectHtml+= '  <div class="opt_list">';
+                    $.each( item.optData, (seindex, seitem) => {
+                        selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
+                    });
+                    selectHtml+= '  </div>';
+                    selectHtml+= '</div>';
+                    $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
+                });
+            },
+            boxOpen : (obj) =>{
+                if(obj.hasClass('active')){
+                    obj.removeClass('active');
+                }else{
+                    obj.addClass('active');
+                }
+            },
+            optionClick : (obj) =>{
+                obj.parent().parent().children('.select_name').text(obj.text());
+                obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
+            },
+        }
+        selectUi.init();
+
+        $('.favor').click(function(){
+            $(this).toggleClass('selected');
+        })
+
+    </script>
+</body>
+</html>

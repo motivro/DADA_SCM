@@ -262,6 +262,16 @@
                                     <div class='tbl_inner'>
                                         <div class='tbl_head'>
                                             <div class='row_item d_flex'>
+                                                <div class="hd_item">
+                                                    <div>
+                                                        <div class="cus_inp_wrap checkbox_inp">
+                                                            <label for="in_4_1" class="inp_box">
+                                                                <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                <span class="inp_custom"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class='hd_item'>
                                                     <div>번호</div>
                                                 </div>
@@ -293,6 +303,16 @@
                                         </div>
                                         <div class='tbl_body'>
                                             <div class='row_item d_flex'>
+                                                <div class="hd_item">
+                                                    <div>
+                                                        <div class="cus_inp_wrap checkbox_inp">
+                                                            <label for="in_4_1" class="inp_box">
+                                                                <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                <span class="inp_custom"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class='hd_item'>
                                                     <div>1</div>
                                                 </div>
@@ -353,7 +373,7 @@
                     <div class="contents_box">
                         <div class="motiv_tbl_box name_k">
                             <div class="tbl_item">
-                                <table class="motiv_normal_tbl ta_c">
+                                <table class="motiv_normal_tbl question ta_c">
                                     <caption>정산내역 조회</caption>
                                     <colgroup>
                                         <col style="width:15%;">
@@ -376,25 +396,37 @@
                                             <td><div>상품명</div></td>
                                         </tr>
                                         <tr>
+                                            <th><div>문의유형/제목</div></th>
+                                            <td colspan="3" class="ta_l"><div class="qa_title">다다 쇼핑몰 상품전송 등록 작업 상세 내용문의</div></td>
+                                        </tr>
+                                        <tr>
                                             <th><div>문의내용</div></th>
                                             <td colspan="3" class="ta_l">
                                                 <div>
-                                                    <h1>디자이너와 논의 필요</h1>
-                                                    [작업 상세 내용문의]
-                                                    <div>문의유형: </div>
-                                                    <div class="select_wrap" style="display:inline-block;width:150px;">
-                                                        <select>
-                                                            <option value="50" selected>제목</option>
-                                                            <option value="100">작성자</option>
-                                                        </select>
+                                                    <div class="view_area">
+                                                        <p>작업 상세 내용문의 입니다.</p>
+                                                        <p>문의입니다.</p>
                                                     </div>
-                                                    <p>회원구분 : 판매자 회원</p>
+                                                    <div class="view_info">
+                                                        <div class="item">
+                                                            <div class="tit">• 문의 유형 :</div>
+                                                            <div class="cont">
+                                                                <div class="select_wrap">
+                                                                    <select>
+                                                                        <option value="50" selected>제목</option>
+                                                                        <option value="100">작성자</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item"><div class="tit">• 회원구분 :</div><div class="cont">판매자 회원</div></div>
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th><div>첨부파일</div></th>
-                                            <td colspan="3" class="ta_l"><div>파일 업로드 </td>
+                                            <td colspan="3" class="ta_l"><div>파일명</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -402,7 +434,7 @@
                             
                             <div class="tbl_item">
                                 <table class="motiv_normal_tbl ta_c">
-                                    <caption>정산내역 조회</caption>
+                                    <caption>답변내용</caption>
                                     <colgroup>
                                         <col style="width:15%;">
                                         <col style="width:35%">
@@ -424,7 +456,37 @@
                                         </tr>
                                         <tr>
                                             <th><div>첨부파일</div></th>
-                                            <td colspan="3" class="ta_l"><div>파일 업로드 </td>
+                                            <td colspan="3" class="ta_l"><div>파일명</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tbl_item">
+                                <table class="motiv_normal_tbl ta_c">
+                                    <caption>삭제사유</caption>
+                                    <colgroup>
+                                        <col style="width:15%;">
+                                        <col style="width:35%">
+                                        <col style="width:15%;">
+                                        <col style="width:35%">
+                                    </colgroup>
+                                   
+                                    <tbody>
+                                        <tr>
+                                            <th><div>삭제사유</div></th>
+                                            <td colspan="3" class="ta_l">
+                                                <div>
+                                                    에디터 노출 영역</br>
+                                                    에디터 노출 영역</br>
+                                                    에디터 노출 영역</br>
+                                                    에디터 노출 영역</br>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>첨부파일</div></th>
+                                            <td colspan="3" class="ta_l"><div>파일명</td>
                                         </tr>
                                     </tbody>
                                 </table>
