@@ -1,33 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 27.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 39.2 37.4" style="enable-background:new 0 0 39.2 37.4;" xml:space="preserve">
-<style type="text/css">
-	.st0{filter:url(#m4wymycpga);}
-	.st1{fill:none;stroke:#FD6660;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-	.st2{fill:none;}
-	.st3{fill:#FD6660;}
-</style>
-<filter  filterUnits="userSpaceOnUse" height="37.979" id="m4wymycpga" width="39.155" x="0" y="0">
-	<feOffset  dy="3"></feOffset>
-	<feGaussianBlur  result="blur" stdDeviation="3"></feGaussianBlur>
-	<feFlood  flood-opacity=".161"></feFlood>
-	<feComposite  in2="blur" operator="in"></feComposite>
-	<feComposite  in="SourceGraphic" operator="over"></feComposite>
-</filter>
-<g>
-	<g>
-		<g class="st0">
-			<path class="st1" d="M20.9,2.7l4.3,8.5c0.2,0.4,0.6,0.7,1.1,0.8l9.5,1.4c0.4,0.1,0.7,0.3,1,0.6c0.4,0.6,0.4,1.4-0.2,1.9l-6.9,6.6
-				c-0.3,0.3-0.5,0.8-0.4,1.3L31,33c0.1,0.8-0.4,1.5-1.2,1.6c-0.3,0-0.7,0-1-0.1l-8.5-4.4c-0.4-0.2-0.9-0.2-1.4,0l-8.6,4.4
-				c-0.7,0.4-1.6,0.1-2-0.6c-0.1-0.3-0.2-0.6-0.1-0.9l1.7-9.3c0.1-0.5-0.1-0.9-0.4-1.3l-7-6.6c-0.6-0.6-0.6-1.5,0-2c0,0,0,0,0,0
-				c0.2-0.2,0.5-0.4,0.8-0.4l9.5-1.4c0.5-0.1,0.9-0.4,1.1-0.8l4.3-8.5c0.2-0.3,0.5-0.6,0.8-0.7C19.8,1.8,20.6,2.1,20.9,2.7z"/>
-		</g>
-		<path class="st2" d="M0,0h39.2v37.4H0V0z"/>
-	</g>
-	<path class="st3" d="M21.5,2.5l4.3,8.6c0.2,0.5,0.7,0.8,1.2,0.9l9.5,1.4c0.9,0.1,1.5,1,1.4,1.9c-0.1,0.4-0.2,0.7-0.5,0.9l-0.2,0.2
-		l-6.7,6.6c-0.4,0.4-0.6,0.9-0.5,1.5l1.6,9.5c0.2,0.9-0.5,1.8-1.4,1.9c-0.4,0.1-0.7,0-1-0.2l-8.5-4.5c-0.5-0.3-1.1-0.3-1.5,0
-		l-8.5,4.5c-0.8,0.4-1.8,0.1-2.2-0.7c-0.2-0.3-0.2-0.7-0.2-1l1.6-9.5c0.1-0.5-0.1-1.1-0.5-1.5l-6.9-6.7c-0.7-0.6-0.7-1.7,0-2.3
-		c0.3-0.3,0.6-0.4,0.9-0.5L13,12c0.5-0.1,1-0.4,1.2-0.9l4.3-8.6c0.4-0.8,1.4-1.2,2.2-0.7C21,1.9,21.3,2.1,21.5,2.5z"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
+  <g id="그룹_31585" data-name="그룹 31585" transform="translate(-219 -217)">
+    <g id="그룹_31578" data-name="그룹 31578" transform="translate(219 217)">
+      <path id="패스_46391" data-name="패스 46391" d="M16.271,22.028H16.26a1.889,1.889,0,0,1-.829-.207l-.016-.008-6.37-3.471a.067.067,0,0,0-.059,0L2.659,21.811l-.014.008a1.782,1.782,0,0,1-2.378-.712l-.01-.018a1.861,1.861,0,0,1-.211-.828s0-.008,0-.012V4.868A4.435,4.435,0,0,1,1.7,1.132,6.4,6.4,0,0,1,5.661.028h6.771c3.568,0,5.615,1.693,5.615,4.644V20.248a1.777,1.777,0,0,1-1.775,1.78Zm-7.254-5.16Z" transform="translate(-0.046 -0.028)" fill="#8293a2"/>
+    </g>
+    <path id="패스_46402" data-name="패스 46402" d="M14.02,6.33,15.564,9.5l3.456.491-2.5,2.473.587,3.472L14.02,14.291l-3.087,1.643.587-3.472L9.02,9.989,12.476,9.5Z" transform="translate(213.98 214.851)" fill="#fff"/>
+  </g>
 </svg>

@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     
     //사이드메뉴 추가
@@ -6,6 +5,7 @@ $(document).ready(function(){
     if(location.href.indexOf('github') != -1){
         githubUi.ini();
     }
+    
 });
 
 gitHubTgMenu = () => {
@@ -22,6 +22,9 @@ gitHubTgMenu = () => {
             if(numBer == 0){
                 numBer++;
                 sideMenuHtml += '<li class="nav_item" menuname="' + s_index + '" childmenu="'+Object.keys(item).length+'">';
+                sideMenuHtml += '   <i class="icon_nav_menu"></i>';
+
+                sideMenuHtml += '   <div class="nav_menu_wrap">';
                 sideMenuHtml += '   <div class="nav_menu">' + s_item + '</div>';
                 sideMenuHtml += '   <ul class="submenu">';
             } else {
@@ -29,22 +32,23 @@ gitHubTgMenu = () => {
             }
         })
         sideMenuHtml += '</ul>';
+        sideMenuHtml += '</div>';
         sideMenuHtml += '</li>';
     })
     sideMenuHtml += '</ul>';
     $('.lnb_menu .motiv_acc').remove();
     $('.lnb_menu').append(sideMenuHtml);
 
-    var dp2ChilH = $('li.nav_item[menuname='+depth1+']').children('.submenu').children('li').eq(0).outerHeight(true);
+    var dp2ChilH = $('li.nav_item[menuname='+depth1+']').children('.nav_menu_wrap').children('.submenu').children('li').eq(0).outerHeight(true);
 
     openMenu(depth1, depth2, dp2ChilH);
     $('.nav_item').click(function(){
         var dp2ChilHSta = $(this).attr('childmenu') * dp2ChilH;
         //dp2ChilH
         if($(this).hasClass('open')){
-            $(this).removeClass('open').children('.submenu').removeAttr('style');
+            $(this).removeClass('open').children('.nav_menu_wrap').children('.submenu').removeAttr('style');
         } else {
-            $(this).addClass('open').children('.submenu').css('max-height', dp2ChilHSta);
+            $(this).addClass('open').children('.nav_menu_wrap').children('.submenu').css('max-height', dp2ChilHSta);
         }
     });
 }
@@ -52,7 +56,7 @@ gitHubTgMenu = () => {
 openMenu = (depth1, depth2, dp2ChilH) => {
     var openTg = $('li.nav_item[menuname='+depth1+']');
     var dp2ChilHSta = openTg.attr('childmenu') * dp2ChilH;
-    openTg.addClass('open').children('.submenu').css('max-height', dp2ChilHSta).children('.sub_item[menuname='+depth2+']').addClass('active');
+    openTg.addClass('open').children('.nav_menu_wrap').children('.submenu').css('max-height', dp2ChilHSta).children('.sub_item[menuname='+depth2+']').addClass('active');
 }
 
 var githubUi = {
@@ -107,10 +111,10 @@ var PCADME = [
         PCADME007002: '정산지급현황',
         PCADME007003: '매출증빙내용',
     },
-    {
-        PCADME008: '고객센터',
-        PCADME008001: '고객센터',
-    },
+    // {
+    //     PCADME008: '고객센터',
+    //     PCADME008001: '고객센터',
+    // },
     {
         PCADME009: '통계',
         PCADME009001: '통계요약',
@@ -121,16 +125,16 @@ var PCADME = [
         PCADME009006: 'SCM플랫폼리포트',
     },
     {
+        PCADME011: '고객센터',
+        PCADME011001: '문의사항관리',
+        PCADME011002: '공지사항관리',
+    },
+    {
         PCADME010: '회원관리',
         PCADME010001: '회원현황',
         PCADME010002: '패널티관리',
         PCADME010003: '휴면회원관리',
         PCADME010004: '탈퇴회원관리',
-    },
-    {
-        PCADME011: '고객센터관리',
-        PCADME011001: '문의사항관리',
-        PCADME011002: '공지사항관리',
     },
     {
         PCADME012: '기본정보관리',
@@ -149,3 +153,17 @@ var PCADME = [
         PCADME013005: '로컬상가관리'
     }
 ]
+
+navToggle = () => {
+    var clickTarget = $('#btnNavbar');
+    var wrap = $('body .wrap');
+    $(clickTarget).click(function(){
+        if($(wrap).hasClass('nav_open')){
+            $(wrap).removeClass('nav_open');
+            $(this).removeClass('open');
+        }else{
+            $(wrap).addClass('nav_open');
+            $(this).addClass('open');
+        }
+    });
+}

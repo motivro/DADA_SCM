@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.511" height="27.292" viewBox="0 0 29.511 27.292">
+  <defs>
+    <filter id="패스_46383" x="0" y="0" width="29.511" height="27.292" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.204"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_31522" data-name="그룹 31522" transform="translate(0.01 0.002)">
+    <path id="사각형_7270" data-name="사각형 7270" d="M0,0H22V21H0Z" transform="translate(3.786 1.75)" fill="none"/>
+    <g transform="matrix(1, 0, 0, 1, -0.01, 0)" filter="url(#패스_46383)">
+      <path id="패스_46383-2" data-name="패스 46383" d="M5.626,0A5.612,5.612,0,0,0,1.652,1.5,5.885,5.885,0,0,0,0,5.834c0,1.94,1.315,3.744,3.1,5.513s4.075,3.524,6.168,5.332a.353.353,0,0,0,.44,0c2.1-1.814,4.383-3.566,6.168-5.332S19,7.8,19,5.836a5.855,5.855,0,0,0-1.669-4.329A5.6,5.6,0,0,0,13.375,0,5.618,5.618,0,0,0,9.49,2.076,5.592,5.592,0,0,0,5.626,0" transform="translate(5.26 4.25)" fill="#fd6660" stroke="#fd6660" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

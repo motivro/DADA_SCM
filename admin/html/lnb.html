@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/content_hs.css">
+    <link rel="stylesheet" href="../resources/css/content_k.css">
+    <script src="../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../resources/js/ui.js"></script>
+    <script src="../resources/js/table_list.js"></script>
+</head>
+<body> 
+    <!-- wrap S -->
+    <div class="wrap">
+        <!-- lnb S -->
+        <aside id="lnb">
+            <div id="btnNavbar"><i class="icon_navbar"></i></div>
+            <div class="lnb_inner">
+                <div class="profile_info">
+                    <div class="member_info">
+                        <div class="thumb"><img class="member_img" src="../resources/images/common/profile_noimg.jpeg" alt="회원 이미지"></div>
+                        <div class="desc">
+                            <span class="member_name">홍길동</span>
+                            <a href="#none">로그아웃</a>
+                            <span class="biz_info">사업자 미승인</span>
+                        </div>
+                    </div>
+                    <div class="sell_info">
+                        <ul>
+                            <li>
+                                <div class="tit">주문</div>
+                                <div class="txt"><span class="ord_num">100</span>건</div>
+                            </li>
+                            <li>
+                                <div class="tit">매출</div>
+                                <div class="txt"><span class="sales_num">14,000,000</span>원</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn_wrap">
+                        <a class="btn tomato dada_market" href="#none">다다마켓</a>
+                        <a class="btn dark dash_board" href="#none">대시보드</a>
+                    </div>
+                </div>
+
+                <div class="lnb_menu">
+                    <ul class="nav_list motiv_acc">
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">상품관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">상품목록</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">다다딜관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">상품관리</a></li>
+                                    <li class="sub_item"><a href="#none">판매요청</a></li>
+                                    <li class="sub_item"><a href="#none">판매현황</a></li>
+                                    <li class="sub_item"><a href="#none">판매종료</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">지정판매관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">지정판매자 관리</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">판매상품관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">전체상품목록</a></li>
+                                    <li class="sub_item"><a href="#none">소싱 일반상품</a></li>
+                                    <li class="sub_item"><a href="#none">다다딜상품</a></li>
+                                    <li class="sub_item"><a href="#none">지정판매자 상품</a></li>
+                                    <li class="sub_item"><a href="#none">쇼핑몰 연계상품</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">강제종료관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">강제종료 상품관리</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">주문관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">주문조회</a></li>
+                                    <li class="sub_item"><a href="#none">미결제 확인</a></li>
+                                    <li class="sub_item"><a href="#none">발주확인/발송</a></li>
+                                    <li class="sub_item"><a href="#none">배송현황</a></li>
+                                    <li class="sub_item"><a href="#none">구매확정 내역조회</a></li>
+                                    <li class="sub_item"><a href="#none">취소관리</a></li>
+                                    <li class="sub_item"><a href="#none">반품관리</a></li>
+                                    <li class="sub_item"><a href="#none">교환관리</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">정산관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">정산내역 조회</a></li>
+                                    <li class="sub_item"><a href="#none">정산지급 현황</a></li>
+                                    <li class="sub_item"><a href="#none">매출증빙 내역</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">통계</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">통계요약</a></li>
+                                    <li class="sub_item"><a href="#none">매출통계</a></li>
+                                    <li class="sub_item"><a href="#none">결제수단통계</a></li>
+                                    <li class="sub_item"><a href="#none">상품매출통계</a></li>
+                                    <li class="sub_item"><a href="#none">판매자 판매통계</a></li>
+                                    <li class="sub_item"><a href="#none">SCM플랫폼 리포트</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">회원관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">회원현황</a></li>
+                                    <li class="sub_item"><a href="#none">패널티관리</a></li>
+                                    <li class="sub_item"><a href="#none">휴면회원관리</a></li>
+                                    <li class="sub_item"><a href="#none">탈퇴회원관리</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">고객센터</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">문의사항관리</a></li>
+                                    <li class="sub_item"><a href="#none">공지사항관리</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">기본정보관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">약관/개인/금융관리</a></li>
+                                    <li class="sub_item"><a href="#none">운영자관리</a></li>
+                                    <li class="sub_item"><a href="#none">수수료관리</a></li>
+                                    <li class="sub_item"><a href="#none">다다마켓 진열관리</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <i class="icon_nav_menu"></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">쇼핑몰관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="#none">카테고리관리</a></li>
+                                    <li class="sub_item"><a href="#none">주소지관리</a></li>
+                                    <li class="sub_item"><a href="#none">금칙어관리</a></li>
+                                    <li class="sub_item"><a href="#none">통합쇼핑몰관리</a></li>
+                                    <li class="sub_item"><a href="#none">로컬상가관리</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!-- lnb E -->
+        
+        <!-- container S -->
+        <div id="container">
+            <!-- content S -->
+            <div id="content">
+                <!-- inner S -->
+                <div class="inner">
+
+                </div>
+                <!-- inner E -->
+            </div>
+            <!-- content E -->
+        </div>
+        <!-- container E -->
+
+    </div>
+    <!-- wrap E -->
+</body>
+<script>
+    $(document).ready(function(){
+
+    });
+</script>
+</html>
