@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 gitHubTgMenu = () => {
     var locationOrigin = location.origin;
-    var serverSta = location.href.indexOf('github') != -1 ? '/DADA_SCM/admin/html/' : '/html/';
+    var serverSta = location.href.indexOf('github') != -1 ? '/DADA_SCM/admin/html/' : '/admin/html/';
     var pageRoute = location.origin + serverSta;
     var depth2 = location.pathname.replace(serverSta, '').split('.')[0];
     var depth1 = depth2.substr(0, 9);

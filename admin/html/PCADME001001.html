@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +10,11 @@
     <link rel="stylesheet" href="../resources/css/content_hs.css">
     <link rel="stylesheet" href="../resources/css/content_k.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
-    <script src="../resources/js/ui2.js"></script>
+    <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
 </head>
-<body> 
+
+<body>
     <!-- wrap S -->
     <div class="wrap">
         <!-- header S -->
@@ -76,11 +78,11 @@
 
         <!-- lnb S -->
         <aside id="lnb">
-            <div id="btnNavbar"><i class="icon_navbar"></i></div>
             <div class="lnb_inner">
                 <div class="profile_info">
                     <div class="member_info">
-                        <div class="thumb"><img class="member_img" src="../../admin/resources/images/common/profile_noimg.jpeg" alt="회원 이미지"></div>
+                        <div class="thumb"><img class="member_img"
+                                src="../../admin/resources/images/common/profile_noimg.jpeg" alt="회원 이미지"></div>
                         <div class="desc">
                             <span class="member_name">홍길동</span>
                             <a href="#none">로그아웃</a>
@@ -108,14 +110,12 @@
                 <div class="lnb_menu">
                     <ul class="nav_list motiv_acc">
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">상품관리</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">상품목록</a></li>
                             </ul>
                         </li>
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">다다딜관리</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">상품관리</a></li>
@@ -125,14 +125,12 @@
                             </ul>
                         </li>
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">지정판매관리</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">지정판매자 관리</a></li>
                             </ul>
                         </li>
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">판매상품관리</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">전체상품목록</a></li>
@@ -143,14 +141,12 @@
                             </ul>
                         </li>
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">강제종료관리</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">강제종료 상품관리</a></li>
                             </ul>
                         </li>
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">주문관리</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">주문조회</a></li>
@@ -164,7 +160,6 @@
                             </ul>
                         </li>
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">정산관리</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">정산내역 조회</a></li>
@@ -173,7 +168,6 @@
                             </ul>
                         </li>
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">통계</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">통계요약</a></li>
@@ -185,7 +179,6 @@
                             </ul>
                         </li>
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">회원관리</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">회원현황</a></li>
@@ -195,7 +188,6 @@
                             </ul>
                         </li>
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">고객센터</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">문의사항관리</a></li>
@@ -203,7 +195,6 @@
                             </ul>
                         </li>
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">기본정보관리</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">약관/개인/금융관리</a></li>
@@ -213,7 +204,6 @@
                             </ul>
                         </li>
                         <li class="nav_item">
-                            <i class="icon_nav_menu"></i>
                             <div class="nav_menu">쇼핑몰관리</div>
                             <ul class="submenu">
                                 <li class="sub_item"><a href="#none">카테고리관리</a></li>
@@ -228,690 +218,112 @@
             </div>
         </aside>
         <!-- lnb E -->
-        
+
         <!-- container S -->
         <div id="container">
             <!-- content S -->
             <div id="content">
                 <!-- inner S -->
                 <div class="inner">
-                    <h1>상품목록</h1>
-
-                    <!-- dashList S -->
-                    <div class="contents_box bd_0">
-                        <div class="dash_board">
-                            <div class="dash_list">
-                                <div class="dash_item n1 row-2">
-                                    <div class="item_tit"><span class="name">주문/배송</span><span class="icon"></span></div>
-                                    <div class="item_cont d_flex">
-                                        <div class="data_list n1_1">
-                                            <div class="data_item">
-                                                <div class="data_name">결제대기</div>
-                                                <div class="data_cont"><span class="data_sta">3</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">신규주문</div>
-                                                <div class="data_cont"><span class="data_sta">200</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">오늘출발</div>
-                                                <div class="data_cont"><span class="data_sta">120</span>건</div>
-                                            </div>
-                                        </div>
-                                        <div class="data_list n1_2">
-                                            <div class="data_item">
-                                                <div class="data_name">배송준비</div>
-                                                <div class="data_cont"><span class="data_sta">12</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">배송중</div>
-                                                <div class="data_cont"><span class="data_sta">30</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">배송완료</div>
-                                                <div class="data_cont"><span class="data_sta">22</span>건</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dash_item n2 row-2">
-                                    <div class="item_tit"><span class="name">클레임/정산</span><span class="icon"></span></div>
-                                    <div class="item_cont d_flex">
-                                        <div class="data_list n2_1">
-                                            <div class="data_item">
-                                                <div class="data_name">결제대기</div>
-                                                <div class="data_cont"><span class="data_sta">3</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">신규주문</div>
-                                                <div class="data_cont"><span class="data_sta">200</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">오늘출발</div>
-                                                <div class="data_cont"><span class="data_sta">120</span>건</div>
-                                            </div>
-                                        </div>
-                                        <div class="data_list n2_2">
-                                            <div class="data_item">
-                                                <div class="data_name">배송준비</div>
-                                                <div class="data_cont"><span class="data_sta">12</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">배송중</div>
-                                                <div class="data_cont"><span class="data_sta">30</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">배송완료</div>
-                                                <div class="data_cont"><span class="data_sta">22</span>건</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dash_item n3 row-3">
-                                    <div class="item_tit"><span class="name">회원현황</span><span class="icon"></span></div>
-                                    <div class="item_cont d_flex">
-                                        <div class="data_list">
-                                            <div class="data_item">
-                                                <div class="data_name">결제대기</div>
-                                                <div class="data_cont"><span class="data_sta">3</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">신규주문</div>
-                                                <div class="data_cont"><span class="data_sta">200</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">오늘출발</div>
-                                                <div class="data_cont"><span class="data_sta">120</span>건</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dash_item n4 row-3">
-                                    <div class="item_tit"><span class="name">상품현황</span><span class="icon"></span></div>
-                                    <div class="item_cont d_flex">
-                                        <div class="data_list">
-                                            <div class="data_item">
-                                                <div class="data_name">결제대기</div>
-                                                <div class="data_cont"><span class="data_sta">3</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">신규주문</div>
-                                                <div class="data_cont"><span class="data_sta">200</span>건</div>
-                                            </div>
-                                            <div class="data_item">
-                                                <div class="data_name">오늘출발</div>
-                                                <div class="data_cont"><span class="data_sta">120</span>건</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- dashList E -->
-
-                    <!-- dash_data S -->
+                    <h1>상품관리</h1>
+                    
                     <div class="contents_box">
-                        <div class="dash_data flex_cont">
-                            <div class="top_box d_flex">
-
-                                <div class="left_box">
-                                    <div class="data_box">
-                                        <div class="data_tit">
-                                            <span class="name">매출 현황</span>
-                                            <div class="icon_wrap">
-                                                <span class="icon icon_refresh"></span>
-                                                <span class="icon icon_blank"></span>
-                                            </div>
+                        <div class="srh_box">
+                            <div class="srh_item">
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">검색어</div>
+                                    <div class="srh_cont">
+                                        <div class="inp_wrap">
+                                            <input type="text" name="" id="" placeholder="상품, 태그, 코드">
                                         </div>
-                                        <div class="data_tbl"></div>
                                     </div>
                                 </div>
-
-                                <div class="right_box d_flex">
-
-                                    <div class="d_flex row-2">
-                                        <div class="data_box">
-                                            <div class="data_tit"><span class="name">상품판매 순위</span><span class="icon icon_refresh"></span></div>
-                                            <!-- tab ui로 수정해야됨_221227 -->
-                                            <div class="data_tbl">
-                                                <table>
-                                                    <colgroup>
-                                                        <col style="width:50%;">
-                                                        <col style="width:50%;">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>상품기준</th>
-                                                            <th>카테고리기준</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">1.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">2.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">3.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">4.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">5.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">6.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">7.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">8.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">9.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">10.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="data_box">
-                                            <div class="data_tit"><span class="name">상품판매 순위</span><span class="icon icon_refresh"></span></div>
-                                            <!-- tab ui로 수정해야됨_221227 -->
-                                            <div class="data_tbl">
-                                                <table>
-                                                    <colgroup>
-                                                        <col style="width:50%;">
-                                                        <col style="width:50%;">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>상품기준</th>
-                                                            <th>카테고리기준</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">1.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">2.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">3.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">4.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">5.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">6.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">7.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">8.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">9.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th><div class="sta_name"><span class="count">10.</span><span class="sta">여성 니트 조끼 베스..</span></div></th>
-                                                            <td>
-                                                                <div class="sta_wrap">
-                                                                    <span class="price_sta">100,000</span>
-                                                                    <span class="slash">/</span>
-                                                                    <span class="ea_sta">100</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="data_box">
-                                        <div class="data_tit"><span class="name">상품현황</span><span class="icon icon_refresh"></span></div>
-                                        <div class="data_tbl">
-                                            <table>
-                                                <colgroup>
-                                                    <col style="width:68%;">
-                                                    <col style="width:32%;">
-                                                </colgroup>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>판매상품</th>
-                                                        <td><div class="sta">00</div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>품절상품</th>
-                                                        <td><div class="sta">00</div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>50개 미만상품</th>
-                                                        <td><div class="sta">00</div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>단종상품</th>
-                                                        <td><div class="sta">00</div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>판매종료 상품</th>
-                                                        <td><div class="sta">00</div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>강제종료 상품</th>
-                                                        <td><div class="sta">00</div></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">판매방식</div>
+                                    <div class="srh_cont">
+                                        <div class="cus_inp_wrap checkbox_inp">
+                                            <label for="in_1_1" class="inp_box">전체
+                                                <input type="checkbox" id="in_1_1" name="ord_sta" checked="">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                            <label for="in_1_2" class="inp_box">위탁
+                                                <input type="checkbox" id="in_1_2" name="ord_sta">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                            <label for="in_1_3" class="inp_box">지정
+                                                <input type="checkbox" id="in_1_3" name="ord_sta">
+                                                <span class="inp_custom"></span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="bot_box d_flex">
-                                <div class="data_box n01">
-                                    <div class="data_tit"><span class="name">상품현황</span><span class="icon icon_refresh"></span></div>
-                                    <div class="data_tbl">
-                                        <table>
-                                            <colgroup>
-                                                <col style="width:30%;">
-                                                <col style="width:23.33%;">
-                                                <col style="width:23.33%;">
-                                                <col style="width:23.33%;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th>판매사</th>
-                                                    <th>팔로워</th>
-                                                    <th>좋아요</th>
-                                                    <th>매출</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">1.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">2.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">3.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">4.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">5.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">6.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">7.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">8.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">9.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">10.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                            <div class="srh_item">
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">공급사</div>
+                                    <div class="srh_cont">
+                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="상호명, 아이디">
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="data_box n02">
-                                    <div class="data_tit"><span class="name">공급사 순위</span><span class="icon icon_refresh"></span></div>
-                                    <div class="data_tbl">
-                                        <table>
-                                            <colgroup>
-                                                <col style="width:30%;">
-                                                <col style="width:23.33%;">
-                                                <col style="width:23.33%;">
-                                                <col style="width:23.33%;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th>상품공급사</th>
-                                                    <th>매출</th>
-                                                    <th>소싱</th>
-                                                    <th>판매자</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">1.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">2.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">3.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">4.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">5.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">6.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">7.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">8.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">9.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name"><span class="count">10.</span><span class="sta">판매자 닉네임</span></div></th>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">관리코드</div>
+                                    <div class="srh_cont">
+                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="고유코드, 관리코드">
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="data_box n03">
-                                    <div class="data_tit"><span class="name">상품현황</span><span class="icon icon_refresh"></span></div>
-                                    <div class="data_tbl">
-                                        <table>
-                                            <colgroup>
-                                                <col style="width:50%;">
-                                                <col style="width:50%;">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <th><div class="sta_name">신규문의 건</th>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th><div class="sta_name">미답변 건</th>
-                                                    <td><div class="sta">00</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="2">최신 문의 제목(최근 글)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2" class="ta_l"><div>문의드립니다..문의사항입니다.</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2" class="ta_l"><div>문의드립니다..문의사항입니다.</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2" class="ta_l"><div>문의드립니다..문의사항입니다.</div></td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
                             </div>
-
                         </div>
+                        <div class="srh_btn_box">
+                            <div class="btn_wrap">
+                                <div class="btn btn_search">검색</div>
+                                <div class="btn">초기화</div>
+                                <div class="btn btn_search_open"><i class="arrow down"></i>펼처보기</div>
+                            </div>
+                        </div>
+           
                     </div>
-                    <!-- dash_data E -->
 
                     <!-- tableList S -->
-                    <div class="contents_box">
-                        <div class="tbl_panel">
-                            <div class="panel_head bdr_bot">
-                                <div class="cont_group d_flex">
-                                    <div class="cont_left">
-                                        <div class="panel_count">
-                                            <div class="all_count">총 상품수<span class="count_sta">50</span></div>
-                                            <div class="slash">/</div>
-                                            <div class="srh_count">검색된 상품 수<span class="count_sta">00</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="cont_right">
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="판매변경1" selected>판매변경1</option>
-                                                <option value="판매변경2">판매변경2</option>
-                                            </select>
-                                        </div>
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="진열변경" selected>진열변경</option>
-                                                <option value="진열변경">진열변경</option>
-                                            </select>
-                                        </div>
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="50개씩" selected>50개씩</option>
-                                                <option value="50개씩">50개씩</option>
-                                            </select>
-                                        </div>
-                                        <span class="icon icon_tbl_cus"></span>
+                    <div id="pcacme001001_1" class="contents_box">
+                        <div class="panel_head bdr_bot">
+                            <div class="cont_group d_flex">
+                                <div class="cont_left">
+                                    <div class="panel_count">
+                                        <div class="all_count">총 상품수<span class="count_sta">50</span></div>
+                                        <div class="slash">/</div>
+                                        <div class="srh_count">검색된 상품 수<span class="count_sta">00</span></div>
                                     </div>
                                 </div>
-                                
-                            </div>
-                            <div class="panel_body">
-                                <div class="btn_group d_flex">
-                                    <div class="btn_wrap">
-                                        <div class="btn">삭제</div>
-                                        <div class="btn">상품등록</div>
-                                        <div class="btn">엑셀다운로드</div>
+                                <div class="cont_right">
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="50" selected>50개씩 </option>
+                                            <option value="100">100개씩 </option>
+                                        </select>
                                     </div>
+                                    <span class="icon icon_tbl_cus"></span>
                                 </div>
                             </div>
+                        </div>
+                        
+                        <div class="panel_body">
+                            <div class="btn_group d_flex">
+                                <div class="btn_wrap">
+                                    <div class="btn">강제종료</div>
+                                    <div class="btn">강제해지</div>
+                                    <div class="btn">엑셀다운로드</div>
+                                </div>
+                            </div>
+
+                            <div class="tbl_wrap"></div>
                         </div>
                     </div>
                     <!-- tableList E -->
+
                 </div>
                 <!-- inner E -->
             </div>
@@ -921,60 +333,158 @@
 
     </div>
     <!-- wrap E -->
-    <script>
-        var selectUi = {
-            class : 'select_wrap',
-            seData : [],
-            init :() => {
-                $.each( $('.'+selectUi.class+''), (index, item) => {
-                    var seObjData = new Object();
-                    seObjData.optData = new Array();
-                    seObjData.seNum = index;
-                    seObjData.actNum = '';
-                    seObjData.actVal = '';
-                    seObjData.actSta = false;
-                    var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
-                    $.each( seTarget.children("option"), (seIndex, seItem) => {
-                        if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
-                            seObjData.actSta = true;
-                            seObjData.actNum = seIndex;
-                            seObjData.actVal = seItem.text;
-                        }
-                        seObjData.optData.push(seItem.text);
-                    });
-                    selectUi.seData.push(seObjData);
-                })
-                selectUi.customSelect();
-            },
-            customSelect: () => {
-                $.each( selectUi.seData, (index, item) => {
-                    var selectHtml = '';
-                    var selectTname = item.actVal ? item.actVal : item.optData[0];
-                    selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
-                    selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
-                    selectHtml+= '  <div class="opt_list">';
-                    $.each( item.optData, (seindex, seitem) => {
-                        selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
-                    });
-                    selectHtml+= '  </div>';
-                    selectHtml+= '</div>';
-                    $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
-                });
-            },
-            boxOpen : (obj) =>{
-                if(obj.hasClass('active')){
-                    obj.removeClass('active');
-                }else{
-                    obj.addClass('active');
-                }
-            },
-            optionClick : (obj) =>{
-                obj.parent().parent().children('.select_name').text(obj.text());
-                obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
-            },
-        }
-        selectUi.init();
 
-    </script>
+    <div class="script_test_body">
+        <div class="alert_open" ac="open">알럿 열기</div>
+        <div class="alert_close" ac="close">알럿 닫기</div>
+    </div>
+    
+    <div class="dada_toast"></div>
+
+    <div class="dada_alt_wrap">
+        <div class="dada_alt_body">
+            <div class="dada_close_box">
+                <div class="dada_close_btn"></div>
+            </div>
+            <div class="dada_cont">
+                정상인 회원은 중지, <br/>
+                중지된 회원은 정상으로 처리합니다.
+            </div>
+            <div class="dada_btn_wrap">
+                <div class="dada_btn co_1">확인</div>
+                <div class="dada_btn co_9">취소</div>
+            </div>
+        </div>
+        <div class="dada_bg"></div>
+    </div> 
+
+    <style>
+        .script_test_body{position:fixed;top:50%;right:0;z-index:900}
+        .script_test_body > div{padding:10px 20px;border:solid 1px #ccc;background-color:#fff;border-right:none;cursor:pointer;margin-top:10px;}
+        .script_test_body > div:first-child{margin-top:0}
+        .dada_toast{position:fixed;bottom:30px;left:50%;padding:15px 20px;transform:translate(-50%,10px);border-radius:30px;overflow:hidden;font-size:var(--fts14);opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s,transform .5s;background:rgba(0,0,0,.35);color:#fff;z-index:10000}
+        .dada_toast.reveal{opacity:1;visibility:visible;transform:translate(-50%,0)}
+        
+        .dada_alt_wrap{position:fixed;top:0;left:0;width:100%;height:100%;display:none;z-index:500;transition:.3s;opacity:0}
+        .dada_alt_wrap.open{}
+        .dada_alt_wrap.open .dada_alt_body{}
+        
+        .dada_alt_wrap .dada_alt_body{position:absolute;top:50%;left:50%;min-width:500px;max-height:500px;margin-top:-250px;margin-left:-250px;background-color:#fff;z-index:501}
+        .dada_alt_wrap .dada_alt_body .dada_cont{font-size:var(--fts16);font-weight:var(--ftw500);text-align:center;margin:45px 0}
+        .dada_alt_wrap .dada_alt_body .dada_btn_wrap{text-align:center;padding-bottom: 30px;}
+        .dada_alt_wrap .dada_alt_body .dada_btn_wrap .dada_btn{display:inline-block;color:#fff;min-width:120px;height:40px;margin:0 5px;line-height:40px;font-size:var(--fts14);font-weight:var(--ftw500);cursor:pointer}
+        .dada_alt_wrap .dada_alt_body .dada_btn_wrap .dada_btn.co_1{background-color:var(--color1)}
+        .dada_alt_wrap .dada_alt_body .dada_btn_wrap .dada_btn.co_9{background-color:var(--color9)}
+        .dada_close_box{}
+        .dada_close_box:after{content:'';display:block;clear:both;}
+        .dada_close_box .dada_close_btn{position:absolute;top:10px;right:10px;width:25px;height:25px;cursor:pointer}
+        .dada_close_box .dada_close_btn:before, 
+        .dada_close_box .dada_close_btn:after{position:absolute;top:50%;left:50%;content:' ';height:25px;width:2px;background-color:#000;margin-top:-12px}
+        .dada_close_box .dada_close_btn:before {transform: rotate(45deg);}
+        .dada_close_box .dada_close_btn:after {transform: rotate(-45deg);}
+        .dada_alt_wrap .dada_bg{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0, .5)}
+    </style>
+
+   <script>
+
+    $(document).ready(() => {
+        tFlex.init('pcacme001001_1', tableData2, true);
+        
+        $('.script_test_body > div').click(function (){
+            if($(this).attr('ac') == 'open') dadaAlertOpen();
+            if($(this).attr('ac') == 'close') dadaAlertClose();
+        });
+    });
+
+    dadaAlertOpen = () => {
+        $('.dada_alt_wrap').show().css({
+            'visibility': 'hidden',
+        });
+        setTimeout( function() {
+            $('.dada_alt_wrap').show().css({
+                'visibility': 'visible',
+                'opacity': '1',
+            });
+            clearTimeout(toast);
+        }, 100);
+    }
+
+    dadaAlertClose = () => {
+        $('.dada_alt_wrap').css({
+            'opacity': '0',
+        });
+        setTimeout( function() {
+            $('.dada_alt_wrap').hide()
+            clearTimeout(toast);
+        }, 100);
+    }
+
+    toast = (string) => {
+        const toast = $('.dada_toast');
+        toast.addClass('reveal');
+        toast.text(string);
+        setTimeout( function() {
+            toast.removeClass('reveal');
+            clearTimeout(toast);
+        }, 1500);
+    }
+    
+    
+
+    var selectUi = {
+        class : 'select_wrap',
+        seData : [],
+        init :() => {
+            $.each( $('.'+selectUi.class+''), (index, item) => {
+                var seObjData = new Object();
+                seObjData.optData = new Array();
+                seObjData.seNum = index;
+                seObjData.actNum = '';
+                seObjData.actVal = '';
+                seObjData.actSta = false;
+                var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
+                $.each( seTarget.children("option"), (seIndex, seItem) => {
+                    if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
+                        seObjData.actSta = true;
+                        seObjData.actNum = seIndex;
+                        seObjData.actVal = seItem.text;
+                    }
+                    seObjData.optData.push(seItem.text);
+                });
+                selectUi.seData.push(seObjData);
+            })
+            selectUi.customSelect();
+        },
+        customSelect: () => {
+            $.each( selectUi.seData, (index, item) => {
+                var selectHtml = '';
+                var selectTname = item.actVal ? item.actVal : item.optData[0];
+                selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
+                selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
+                selectHtml+= '  <div class="opt_list">';
+                $.each( item.optData, (seindex, seitem) => {
+                    selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
+                });
+                selectHtml+= '  </div>';
+                selectHtml+= '</div>';
+                $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
+            });
+        },
+        boxOpen : (obj) =>{
+            if(obj.hasClass('active')){
+                obj.removeClass('active');
+            }else{
+                obj.addClass('active');
+            }
+        },
+        optionClick : (obj) =>{
+            obj.parent().parent().children('.select_name').text(obj.text());
+            obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
+        },
+    }
+    selectUi.init();
+
+</script>
 </body>
+
 </html>
