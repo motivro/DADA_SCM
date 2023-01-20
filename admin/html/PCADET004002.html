@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/content_hs.css">
     <link rel="stylesheet" href="../resources/css/content_k.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
@@ -224,8 +225,209 @@
                 <div class="inner">
                     <h1>DaDa MarketPlace(상세)</h1>
 
-                    <div class="contents_box">
-                        
+                    <div class="contents_box bd_0">
+                        <div class="prd_dtl_item">
+                            <div class="prd_dtl_box">
+                                <div class="dtl_area">
+                                    <div class="img_area">
+                                        <div class="prd_img">
+                                            <div class="thumbnail"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div>
+                                        </div>
+                                        <div class="prd_img_more">
+                                            <div class="swiper dtl_img_more">
+                                                <ul class="swiper-wrapper">
+                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <!-- Swiper JS -->
+                                            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+                                            
+                                            <!-- Initialize Swiper -->
+                                            <script>
+                                                var swiper = new Swiper(".dtl_img_more", {
+                                                    loop: true,
+                                                    slidesPerView: 6,
+                                                    spaceBetween: 5,
+                                                });
+                                            </script>
+                                        </div>
+                                        <div class="btn_box">
+                                            <div class="btn_wrap">
+                                                <div class="btn btn_lt sizeM">Lead Time</div>
+                                                <div class="btn btn_goList sizeM">목록보기</div>
+                                            </div>
+                                            
+                                            <div class="btn_wrap">
+                                                <div class="btn btn_putList sizeL">상품 담아 넣기</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_area">
+                                        <div class="info_box">
+                                            <div class="prd_cate">대분류 > 중분류</div>
+                                            <div class="prd_name">리본 Harem Joggers 남성 카고 바지 Streetwear 2022 힙합 캐주얼 포켓 트랙 바지 남성 하라주쿠 패션 바지</div>
+                                            <div class="price_data">
+                                                <div class="data_line">
+                                                    <div class="data_box f_col">
+                                                        <div class="tit"><span>판매 제안가</span></div>
+                                                        <div class="cont big"><span>140,000</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="data_line">
+                                                    <div class="data_box">
+                                                        <div class="tit"><span>판매자 최고가</span></div>
+                                                        <div class="cont"><span>150,000</span></div>
+                                                    </div>
+                                                    <div class="data_box">
+                                                        <div class="tit"><span>판매자 최고가</span></div>
+                                                        <div class="cont"><span>150,000</span></div>
+                                                    </div>
+                                                    <div class="data_box">
+                                                        <div class="tit"><span>판매자 최소가</span></div>
+                                                        <div class="cont"><span>150,000</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="prd_opt">
+                                                <div class="opt_size">
+                                                    <div class="tit">상품규격</div>
+                                                    <div class="cont">
+                                                        <span>S</span>
+                                                        <span>M</span>
+                                                        <span>L</span>
+                                                        <span>XL</span>
+                                                        <span>90~95</span>
+                                                        <span>95~100</span>
+                                                        <span>100~105</span>
+                                                    </div>
+                                                </div>
+                                                <div class="opt_color">
+                                                    <div class="tit">상품색상</div>
+                                                    <div class="cont">
+                                                        <span class="img_type"><img src="../resources/images/product/more_img_sample.png" alt=""></span>
+                                                        <span class="txt_type">BLACK</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dtl_info_box">
+                                                <div class="info_inner">
+                                                    <div class="deli_info">
+                                                        <div class="info_line">
+                                                            <div class="tit">배송비</div>
+                                                            <div class="cont"><span>00</span>개 이상 무료</div>
+                                                        </div>
+                                                        <div class="info_line">
+                                                            <div class="tit">배송예정일</div>
+                                                            <div class="cont">마감 후 <span>00</span>일 출고예정</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dtl_info">
+                                                        <div class="info_line">
+                                                            <div class="tit">제조사/원산지</div>
+                                                            <div class="cont"><span>대한민국</span></div>
+                                                        </div>
+                                                        <div class="info_line">
+                                                            <div class="tit">판매사</div>
+                                                            <div class="cont"><span>판매업체</span></div>
+                                                        </div>
+                                                        <div class="info_line">
+                                                            <div class="tit">기본소재</div>
+                                                            <div class="cont"><span>소재정보</span></div>
+                                                        </div>
+                                                        <div class="info_line">
+                                                            <div class="tit">상품공급사</div>
+                                                            <div class="cont"><span>공급사명</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="util_box">
+                                            <div class="prd_data">
+                                                <div class="data_line"><span class="tit">누적 담아간 수 : </span><span class="cont"><span>00</span>(횟수)</span></div>
+                                                <div class="data_line"><span class="tit">누적 판매량 순 : </span><span class="cont"><span>00</span>건</span></div>
+                                                <div class="data_line"><span class="tit">상품리뷰 건수 : </span><span class="cont"><span>00</span>건</span></div>
+                                            </div>
+                                            <div class="progress_box">
+                                                <div class="progress_item review">
+                                                    <div class="tit"></div>
+                                                    <div class="item_list">
+                                                        <div class="line">
+                                                            <div class="name">최고</div>
+                                                            <div class="progress"><span class="bar" style="width: 50px;"></span></div>
+                                                            <div class="per"><span>50</span>%</div>
+                                                        </div>
+                                                        <div class="line">
+                                                            <div class="name">좋음</div>
+                                                            <div class="progress"><span class="bar" style="width: 100px;"></span></div>
+                                                            <div class="per"><span>100</span>%</div>
+                                                        </div>
+                                                        <div class="line">
+                                                            <div class="name">보통</div>
+                                                            <div class="progress"><span class="bar" style="width: 70px;"></span></div>
+                                                            <div class="per"><span>70</span>%</div>
+                                                        </div>
+                                                        <div class="line">
+                                                            <div class="name">별로</div>
+                                                            <div class="progress"><span class="bar" style="width: 30px;"></span></div>
+                                                            <div class="per"><span>30</span>%</div>
+                                                        </div>
+                                                        <div class="line">
+                                                            <div class="name">나쁨</div>
+                                                            <div class="progress"><span class="bar" style="width: 10px;"></span></div>
+                                                            <div class="per"><span>10</span>%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="progress_item age">
+                                                    <div class="tit"></div>
+                                                    <div class="item_list">
+                                                        <div class="line">
+                                                            <div class="name">최고</div>
+                                                            <div class="progress"><span class="bar" style="width: 100%;"></span></div>
+                                                            <div class="per"><span>100</span>%</div>
+                                                        </div>
+                                                        <div class="line">
+                                                            <div class="name">좋음</div>
+                                                            <div class="progress"><span class="bar" style="width: 80%;"></span></div>
+                                                            <div class="per"><span>80</span>%</div>
+                                                        </div>
+                                                        <div class="line">
+                                                            <div class="name">보통</div>
+                                                            <div class="progress"><span class="bar" style="width: 60%;"></span></div>
+                                                            <div class="per"><span>60</span>%</div>
+                                                        </div>
+                                                        <div class="line">
+                                                            <div class="name">별로</div>
+                                                            <div class="progress"><span class="bar" style="width: 40%;"></span></div>
+                                                            <div class="per"><span>40</span>%</div>
+                                                        </div>
+                                                        <div class="line">
+                                                            <div class="name">나쁨</div>
+                                                            <div class="progress"><span class="bar" style="width: 20%;"></span></div>
+                                                            <div class="per"><span>20</span>%</div>
+                                                        </div>
+                                                        <div class="line">
+                                                            <div class="name">나쁨</div>
+                                                            <div class="progress"><span class="bar" style="width: 10%;"></span></div>
+                                                            <div class="per"><span>10</span>%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prd_dtl_box"></div>
+                        </div>
                     </div>
 
                 </div>
