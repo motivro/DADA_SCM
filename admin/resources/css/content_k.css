@@ -11,7 +11,16 @@
 
 .item_titss{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;border-bottom:var(--cont_border);background-color:#fff}
 .item_titss .name{font-size:var(--fts16);font-weight:var(--ftw700);}
-.item_titss .icon{width:12px;height:12px;background:url(../images/common/icon_refresh.svg)no-repeat center center;background-size:cover;cursor:pointer;}
+.icon_refresh.on{animation: rotate 2s linear infinite}
+@keyframes rotate{
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(180deg);
+    }
+}
 
 
 /* 상품 리스트 추가 */
