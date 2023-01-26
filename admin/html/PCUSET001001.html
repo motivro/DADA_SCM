@@ -47,20 +47,20 @@
                                     <p class="txtInfo error">암호를 입력해 주세요.</p>
                                 </div>
                             </div>
-                            <div class="login_button"><div class="btn btn_login">로그인</div></div>
+                            <div class="login_button"><a href="./PCADET003001.html" class="btn btn_login">로그인</div></a>
                             <div class="login_util">
                                 <div class="find_wrap">
-                                    <a href="" class="findId">아이디 찾기</a>
+                                    <a href="./PCUSET001007.html" class="findId">아이디 찾기</a>
                                     <span class="slash">/</span>
-                                    <a href="#none" class="findPw">비밀번호 찾기</a>
+                                    <div class="findPw">비밀번호 찾기</div>
 
                                     <ul class="tooltip">
-                                        <li><a href="" class="toMail">이메일 인증</a></li>
-                                        <li><a href="" class="toMobile">휴대폰 인증</a></li>
+                                        <li><a href="./PCUSET001009.html" class="toMail">이메일 인증</a></li>
+                                        <li><a href="./PCUSET001009_2.html" class="toMobile">휴대폰 인증</a></li>
                                     </ul>
                                     
                                 </div>
-                                <div class="join_wrap"><a href="" class="goJoin">회원가입</a></div>
+                                <div class="join_wrap"><a href="./PCUSET001002.html" class="goJoin">회원가입</a></div>
                             </div>
                         </div>
                         
@@ -74,8 +74,25 @@
 
     </div>
     <!-- wrap E -->
+
+    <div class="dada_alt_wrap" id="test">
+        <div class="dada_alt_body">
+            <div class="dada_close_box">
+                <div class="dada_close_btn"></div>
+            </div>
+            <div class="dada_cont"></div>
+            <div class="dada_btn_wrap">
+                <div class="dada_btn co_1" t_name="ok">확인</div>
+                <!-- <div class="dada_btn co_9" t_name="close">취소</div> -->
+            </div>
+        </div>
+        <div class="dada_bg"></div>
+    </div> 
+
     <script>
         $(document).ready(function(){
+            // dadaAlert.open('test', '로그인 정보가 잘못되었습니다.');
+
             $('.find_wrap .findPw').click(function(){
                 if($(this).parent('.find_wrap').hasClass('on')){
                     $(this).parent('.find_wrap').removeClass('on');
@@ -83,6 +100,11 @@
                     $(this).parent('.find_wrap').addClass('on');
                 }
             });
+
+            $('#test .dada_btn_wrap .dada_btn').click(function(){
+                return console.log($(this).attr('t_name'));
+            });
+            
         });
     </script>
 </body>

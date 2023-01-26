@@ -34,8 +34,8 @@
                         <div class="cont_tit"><h2>다다SCM 비밀번호 찾기</h2></div>
                         <div class="cont_item">
                             <div class="tab_tit">
-                                <div class="tit_item mailCerti active">이메일 인증</div>
-                                <div class="tit_item mobCerti">휴대폰 인증</div>
+                                <a href="./PCUSET001009.html" class="tit_item mailCerti active">이메일 인증</a>
+                                <a href="./PCUSET001009_2.html" class="tit_item mobCerti">휴대폰 인증</a>
                             </div>
                             <div class="tab_cont">
                                 <div class="cont_inner">
@@ -48,7 +48,7 @@
                                             <div class="flex_row">
                                                 <div class="inp_wrap"><input type="text" placeholder="이메일 주소"></div>
                                                 <div class="btn_wrap">
-                                                    <div class="btn btn_send">이메일 전송</div>
+                                                    <div class="btn btn_send" onclick="dadaAlert.open('test', '다다SCM에 등록하신 이메일로<br/>인증번호를 발급하였습니다.');">이메일 전송</div>
                                                 </div>
                                             </div>
                                             <p class="txtInfo error">정보를 정확히 입력해 주세요.</p>
@@ -64,34 +64,11 @@
                                     </div>
                                 
                                     <div class="btn_wrap jc_c bottom">
-                                        <div class="btn btn_next">다음</div>
+                                        <a href="./PCUSET001010.html" class="btn btn_next active">다음</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab_cont">
-                                <div class="cont_inner">
-                                    <div class="send_item">
-                                        <div class="info_wrap">
-                                            <p class="txt_info">본인 확인을 위해 가입 시 등록한 휴대폰번호로 본인인증을 받아야 합니다. 입력한 정보는 회원의 동의없이 공개 또는 제3자에게 제공되지 않으며 개인정보보호정책에 따라 보호됩니다.아래 휴대폰인증 버튼을 선택해 주세요.</p>
-                                        </div>
-                                        <div class="btn_wrap jc_c">
-                                            <div class="btn btn_codeCerti">휴대폰 인증</div>
-                                        </div>
-                                    </div>
-                                    <div class="cus_inp_wrap txt_inp">
-                                        <div class="left">인증코드 입력</div>
-                                        <input type="text">
-                                        <div class="right">
-                                            <span class="code_confirm">확인</span>
-                                            <span class="timer">02:59</span>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="btn_wrap jc_c bottom">
-                                        <div class="btn btn_next">다음</div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -103,5 +80,37 @@
 
     </div>
     <!-- wrap E -->
+    <div class="dada_alt_wrap" id="test">
+        <div class="dada_alt_body">
+            <div class="dada_close_box">
+                <div class="dada_close_btn"></div>
+            </div>
+            <div class="dada_cont"></div>
+            <div class="dada_btn_wrap">
+                <div class="dada_btn co_1" t_name="ok">확인</div>
+                <!-- <div class="dada_btn co_9" t_name="close">취소</div> -->
+            </div>
+        </div>
+        <div class="dada_bg"></div>
+    </div> 
+    <script>
+        $(document).ready(function(){
+
+            $('.find_wrap .findPw').click(function(){
+                if($(this).parent('.find_wrap').hasClass('on')){
+                    $(this).parent('.find_wrap').removeClass('on');
+                }else{
+                    $(this).parent('.find_wrap').addClass('on');
+                }
+            });
+
+            $('#test .dada_btn_wrap .dada_btn').click(function(){
+                return console.log($(this).attr('t_name'));
+            });
+            
+        });
+        // startTimer(180, 'timer2');
+    </script>
+
 </body>
 </html>
