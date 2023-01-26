@@ -250,7 +250,7 @@
                         <div class="dash_board">
                             <div class="dash_list">
                                 <div class="dash_item n1 row-2">
-                                    <div class="item_tit"><span class="name">주문/배송</span><span class="icon icon_refresh"></span></div>
+                                    <div class="item_tit"><span class="name">주문/배송</span><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span></div>
                                     <div class="item_cont d_flex">
                                         <div class="data_list n1_1">
                                             <div class="data_item">
@@ -283,7 +283,7 @@
                                     </div>
                                 </div>
                                 <div class="dash_item n2 row-2">
-                                    <div class="item_tit"><span class="name">클레임/정산</span><span class="icon icon_refresh"></span></div>
+                                    <div class="item_tit"><span class="name">클레임/정산</span><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span></div>
                                     <div class="item_cont d_flex">
                                         <div class="data_list n2_1">
                                             <div class="data_item">
@@ -316,7 +316,7 @@
                                     </div>
                                 </div>
                                 <div class="dash_item n3 row-3">
-                                    <div class="item_tit"><span class="name">회원현황</span><span class="icon icon_refresh"></span></div>
+                                    <div class="item_tit"><span class="name">회원현황</span><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span></div>
                                     <div class="item_cont d_flex">
                                         <div class="data_list">
                                             <div class="data_item">
@@ -344,7 +344,7 @@
                                     </div>
                                 </div>
                                 <div class="dash_item n4 row-3">
-                                    <div class="item_tit"><span class="name">상품현황</span><span class="icon icon_refresh"></span></div>
+                                    <div class="item_tit"><span class="name">상품현황</span><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span></div>
                                     <div class="item_cont d_flex">
                                         <div class="data_list">
                                             <div class="data_item">
@@ -378,7 +378,7 @@
                             <div class="top_box d_flex">
                                 <div class="chart_box">
                                     <div class="data_box">
-                                        <div class="item_titss"><span class="name">매출현황</span><span class="icon icon_refresh"></span></div>
+                                        <div class="item_titss"><span class="name">매출현황</span><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span></div>
 
                                         <figure class="highcharts-figure">
                                             <div id="highcharts_container"></div>
@@ -392,7 +392,7 @@
                             <div class="top_box d_flex">
                                 <div class="chart_box">
                                     <div class="data_box">
-                                        <div class="item_titss"><span class="name">디자인 추가 필요</span><span class="icon icon_refresh"></span></div>
+                                        <div class="item_titss"><span class="name">디자인 추가 필요</span><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span></div>
 
                                         <figure class="highcharts-figure">
                                             <div id="highcharts_container2"></div>
@@ -407,7 +407,7 @@
                             <div class="bot_box d_flex">
                                 <div class="left_box d_flex">
                                     <div class="data_box">
-                                        <div class="data_tit"><span class="name">상품판매 순위</span><span class="icon icon_refresh"></span></div>
+                                        <div class="data_tit"><span class="name">상품판매 순위</span><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span></div>
                                         <!-- tab ui로 수정해야됨_221227 -->
                                         <div class="data_tbl">
                                             <table>
@@ -511,7 +511,7 @@
                                         </div>
                                     </div>
                                     <div class="data_box">
-                                        <div class="data_tit"><span class="name">상품 소싱 순위</span><span class="icon icon_refresh"></span></div>
+                                        <div class="data_tit"><span class="name">상품 소싱 순위</span><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span></div>
                                         <!-- tab ui로 수정해야됨_221227 -->
                                         <div class="data_tbl">
                                             <table>
@@ -607,7 +607,7 @@
                                 </div>
                                 <div class="right_box">
                                     <div class="data_box">
-                                        <div class="data_tit"><span class="name">상품현황</span><span class="icon icon_refresh"></span></div>
+                                        <div class="data_tit"><span class="name">상품현황</span><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span></div>
                                         <div class="data_tbl">
                                             <table>
                                                 <colgroup>
@@ -649,7 +649,7 @@
                             <div class="bot_box d_flex">
                                 <div class="left_box d_flex">
                                     <div class="data_box type2">
-                                        <div class="data_tit"><span class="name">판매자 순위</span><span class="icon icon_refresh"></span></div>
+                                        <div class="data_tit"><span class="name">판매자 순위</span><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span></div>
                                         <div class="data_tbl">
                                             <table>
                                                 <colgroup>
@@ -816,7 +816,7 @@
                                 </div>
                                 <div class="right_box">
                                     <div class="data_box">
-                                        <div class="data_tit"><span class="name">고객관리</span><span class="icon icon_refresh"></span></div>
+                                        <div class="data_tit"><span class="name">고객관리</span><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span></div>
                                         <div class="data_tbl">
                                             <table>
                                                 <colgroup>
@@ -869,15 +869,12 @@
     <!-- wrap E -->
     <script>
 
-        $('.icon_refresh').click(function(){
-            if($(this).hasClass('on')){
-            } else {
-
-            }
-        })
-
         icon_refresh = (obj) => {
             obj.addClass('on');
+            var refresh = setTimeout( function() {
+                obj.removeClass('on');
+                clearTimeout(refresh);
+            }, 2000);
         }
         
         Highcharts.chart('highcharts_container', {

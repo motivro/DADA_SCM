@@ -240,12 +240,12 @@ var dadaAlert = {
             'visibility': 'hidden',
         });
 
-        setTimeout( function() {
+        var dadaAlertOpen = setTimeout( function() {
             $(target).show().css({
                 'visibility': 'visible',
                 'opacity': '1',
             });
-            clearTimeout(toast);
+            clearTimeout(dadaAlertOpen);
         }, 100);
 
         //닫기 이벤트 활성화
@@ -257,9 +257,9 @@ var dadaAlert = {
         $(target).css({
             'opacity': '0',
         });
-        setTimeout( function() {
-            $(target).hide()
-            clearTimeout(toast);
+        var dadaAlertClose = setTimeout( function() {
+            $(target).hide();
+            clearTimeout(dadaAlertClose);
         }, 100);
     },
 
@@ -299,7 +299,6 @@ startTimer = (time, obj) => {
 
 /* 토스트 메세지 */
 toast = (string, location) => {
-
     /* 토스트메세지 바디를 생성합니다. */
     if($('.dada_toast').length == 0 ) $('body').append('<div class="dada_toast"></div>');
 
@@ -310,11 +309,26 @@ toast = (string, location) => {
         const toast = $('.dada_toast');
         toast.addClass('reveal');
         toast.html(string);
-        setTimeout( function() {
+        var toasts = setTimeout( function() {
             toast.removeClass('reveal');
-            clearTimeout(toast);
+            clearTimeout(toasts);
         }, 1500);
     }, 10);
+}
 
-    
+listToast = (obj) => {
+    /* 토스트메세지 바디를 생성합니다. */
+
+    $(obj).addClass('close');
+    if($(obj).closest('.thumb').children('.dada_toast').length == 0) $(obj).closest('.thumb').append('<div class="dada_toast"><div class="loading_spinner"></div>담는 중 입니다.</div>');
+  
+    setTimeout( function() {
+        const toast = $('.dada_toast');
+        toast.addClass('reveal');
+        var toasts = setTimeout( function() {
+            $(obj).removeClass('close');
+            toast.removeClass('reveal');
+            clearTimeout(toasts);
+        }, 1500);
+    }, 10);
 }
