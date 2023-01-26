@@ -549,23 +549,41 @@
                         </div>
                         
                         <div class="sect bd_top">
-                            수정 예정
-                            <div class="prd_dtl_img">
+                            <div class="flex_wrap prd_dtl_img">
                                 <div class="left">
-                                    <div class="cont_tit"></div>
+                                    <div class="cont_tit">대표이미지</div>
                                     <div class="cont_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div>
                                 </div>
                                 <div class="right">
-                                    <div class="cont_tit"></div>
-                                    <div class="cont_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div>
+                                    <div class="cont_tit">추가이미지</div>
+                                    <div class="swiper sub_img_box">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Swiper JS -->
+                                    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+                                    <!-- Initialize Swiper -->
+                                    <script>
+                                        var swiper = new Swiper(".sub_img_box", {
+                                            slidesPerView: "auto",
+                                            spaceBetween: 10,
+                                        });
+                                    </script>
                                 </div>
                             </div>
                         </div>
                         <div class="sect">
                             <div class="inp_row row-3">
-                                <div class="inp_wrap"><div class="inp_tit">다다딜 판매가(원)</div><input type="text"></div>
-                                <div class="inp_wrap"><div class="inp_tit">목표판매수량</div><input type="text"></div>
-                                <div class="inp_wrap"><div class="inp_tit">리워드 지급율(%)</div><input type="text"></div>
+                                <div class="inp_wrap"><div class="inp_tit">다다딜 판매가(원)</div><input type="text" class="ta_r"></div>
+                                <div class="inp_wrap"><div class="inp_tit">목표판매수량</div><input type="text" class="ta_r"></div>
+                                <div class="inp_wrap"><div class="inp_tit">리워드 지급율(%)</div><input type="text" class="ta_r"></div>
                             </div>
                             <div class="inp_row row-3">
                                 <div class="inp_wrap"><div class="inp_tit">다다딜 판매재고</div><input type="text" class="ta_r"></div>
@@ -577,6 +595,11 @@
                                 <div class="inp_wrap"><div class="inp_tit">판매자 판매종료일(시간)</div><input type="text"></div>
                                 <div class="inp_wrap"></div>
                             </div>
+                        </div>
+
+                        <div class="bot_btn_wrap">
+                            <div class="btn">반려</div>
+                            <div class="btn">승인</div>
                         </div>
                     </div>
 
@@ -616,32 +639,32 @@
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th class="ta_l"><div>목표달성여부</div></td>
+                                                <th class="ta_l"><div>목표달성여부</div></th>
                                                 <td class="ta_c"><div></div></td>
                                                 <td class="ta_r"><div>미달성</div></td>
                                             </tr>
                                             <tr>
-                                                <th class="ta_l"><div>판매금액</div></td>
+                                                <th class="ta_l"><div>판매금액</div></th>
                                                 <td class="ta_c"><div><span>10.000</span>원 (다다딜판매가) * <span>12</span>개 (판매수량)</div></td>
                                                 <td class="ta_r"><div><span>0</span> 원</div></td>
                                             </tr>
                                             <tr>
-                                                <th class="ta_l"><div>리워드지급액</div></td>
-                                                    <td class="ta_c"><div><span>0</span>원 (목표달성초과금액) * <span>0</span>% (리워드지급율)</div></td>
+                                                <th class="ta_l"><div>리워드지급액</div></th>
+                                                <td class="ta_c"><div><span>0</span>원 (목표달성초과금액) * <span>0</span>% (리워드지급율)</div></td>
                                                 <td class="ta_r"><div><span>0</span> 원</div></td>
                                             </tr>
                                             <tr>
-                                                <th class="ta_l"><div>플랫폼수수료</div></td>
+                                                <th class="ta_l"><div>플랫폼수수료</div></th>
                                                 <td class="ta_c"><div><span>0</span>원 (판매금액) * <span>5.8</span>% (수수료)</div></td>
                                                 <td class="ta_r"><div><span>-0</span> 원</div></td>
                                             </tr>
                                             <tr>
-                                                <th class="ta_l"><div>판매자수수료</div></td>
+                                                <th class="ta_l"><div>판매자수수료</div></th>
                                                 <td class="ta_c"><div><span>0</span>원 (판매금액) * <span>5.8</span>% (수수료)</div></td>
                                                 <td class="ta_r"><div><span>-0</span> 원</div></td>
                                             </tr>
                                             <tr>
-                                                <th class="ta_l"><div>공급사수익</div></td>
+                                                <th class="ta_l"><div>공급사수익</div></th>
                                                 <td class="ta_c"><div></div></td>
                                                 <td class="ta_r"><div><span>0</span> 원</div></td>
                                             </tr>
@@ -661,7 +684,7 @@
                         <div class="flex_wrap state_info">
                             <div class="left">
                                 <div class="cont_box">
-                                    <div class="cont_tit">변경이력</div>
+                                    <div class="cont_tit"><div class="tit_box"><div class="tit">변경이력</div></div></div>
                                     <div class="cont_item">
                                         <div class="list_box">
                                             <div class="list_item"><div class="tit">신청</div><div class="date">2023-01-01 00:00:00</div></div>
@@ -672,7 +695,8 @@
                             <div class="right">
                                 <div class="cont_box">
                                     <div class="cont_tit">
-                                        <div class="tit">신청</div><div class="date">2023-01-01 00:00:00</div>
+                                        <div class="tit_box"><div class="tit">신청</div><div class="date">2023-01-01 00:00:00</div></div>
+                                        <div class="sub_tit">회원유형/소속/회원명(ID)관리자@이메일</div>
                                     </div>
                                     <div class="cont_item">
                                         <div class="question_txt">빠른 승인 요청합니다.</div>
@@ -684,11 +708,11 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="bot_btn_wrap">
+                            <div class="btn">저장</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="bot_btn_wrap">
-                <div class="btn">저장</div>
             </div>
         </div>
     </div>

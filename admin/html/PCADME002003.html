@@ -509,65 +509,391 @@
 
     </div>
     <!-- wrap E -->
-   <script>
 
-    $(document).ready(() => {
-        tFlex.init('pcacme002003_1', tableData2, true);
-    })
-    var selectUi = {
-        class : 'select_wrap',
-        seData : [],
-        init :() => {
-            $.each( $('.'+selectUi.class+''), (index, item) => {
-                var seObjData = new Object();
-                seObjData.optData = new Array();
-                seObjData.seNum = index;
-                seObjData.actNum = '';
-                seObjData.actVal = '';
-                seObjData.actSta = false;
-                var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
-                $.each( seTarget.children("option"), (seIndex, seItem) => {
-                    if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
-                        seObjData.actSta = true;
-                        seObjData.actNum = seIndex;
-                        seObjData.actVal = seItem.text;
-                    }
-                    seObjData.optData.push(seItem.text);
-                });
-                selectUi.seData.push(seObjData);
-            })
-            selectUi.customSelect();
-        },
-        customSelect: () => {
-            $.each( selectUi.seData, (index, item) => {
-                var selectHtml = '';
-                var selectTname = item.actVal ? item.actVal : item.optData[0];
-                selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
-                selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
-                selectHtml+= '  <div class="opt_list">';
-                $.each( item.optData, (seindex, seitem) => {
-                    selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
-                });
-                selectHtml+= '  </div>';
-                selectHtml+= '</div>';
-                $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
-            });
-        },
-        boxOpen : (obj) =>{
-            if(obj.hasClass('active')){
-                obj.removeClass('active');
-            }else{
-                obj.addClass('active');
-            }
-        },
-        optionClick : (obj) =>{
-            obj.parent().parent().children('.select_name').text(obj.text());
-            obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
-        },
-    }
-    selectUi.init();
+    <h2>팝업 내용</h2>
+    <div class="motiv_layer type2">
+        <div class="btn_close"></div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="tab_area">
+                    <div class="tab_box">
+                        <div class="tab_item active">기본정보</div>
+                        <div class="tab_item">판매현황 및 예상수익 계산</div>
+                        <div class="tab_item">상태정보 <span class="new_sta">22</span></div>
+                    </div>
+                    <div class="tab_cont">
+                        <div class="flex_wrap seller_info">
+                            <div class="left">
+                                <div class="seller_dtl">
+                                    <div class="dtl_info">
+                                        <div class="info_name">판매자 닉네임 (ID)</div>
+                                        <div class="btn btn_md"><span>위탁판매</span></div>
+                                    </div>
+                                    <div class="info_feed"><div class="btn">판매자 피드</div></div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="sect">
+                                    <div class="inp_row row-3">
+                                        <div class="inp_wrap"><div class="inp_tit">상품코드</div><input type="text"></div>
+                                        <div class="inp_wrap"><div class="inp_tit">상품명</div><input type="text"></div>
+                                        <div class="inp_wrap"><div class="inp_tit">공급사</div><input type="text"></div>
+                                    </div>
+                                    <div class="inp_row row-3">
+                                        <div class="inp_wrap"><div class="inp_tit">공급가액(원)</div><input type="text" class="ta_r"></div>
+                                        <div class="inp_wrap"><div class="inp_tit">쇼핑몰 판매가(원)</div><input type="text" class="ta_r"></div>
+                                        <div class="inp_wrap"><div class="inp_tit">할인율(%)</div><input type="text" class="ta_r"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sect bd_top">
+                            <div class="flex_wrap prd_dtl_img">
+                                <div class="left">
+                                    <div class="cont_tit">대표이미지</div>
+                                    <div class="cont_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div>
+                                </div>
+                                <div class="right">
+                                    <div class="cont_tit">추가이미지</div>
+                                    <div class="swiper sub_img_box">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Swiper JS -->
+                                    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+                                    <!-- Initialize Swiper -->
+                                    <script>
+                                        var swiper = new Swiper(".sub_img_box", {
+                                            slidesPerView: "auto",
+                                            spaceBetween: 10,
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect">
+                            <div class="inp_row row-3">
+                                <div class="inp_wrap"><div class="inp_tit">다다딜 판매가(원)</div><input type="text" class="ta_r"></div>
+                                <div class="inp_wrap"><div class="inp_tit">목표판매수량</div><input type="text" class="ta_r"></div>
+                                <div class="inp_wrap"><div class="inp_tit">리워드 지급율(%)</div><input type="text" class="ta_r"></div>
+                            </div>
+                            <div class="inp_row row-3">
+                                <div class="inp_wrap"><div class="inp_tit">다다딜 판매재고</div><input type="text" class="ta_r"></div>
+                                <div class="inp_wrap"><div class="inp_tit">다다딜 공개시작일</div><input type="text" class="ta_r"></div>
+                                <div class="inp_wrap"><div class="inp_tit">다다딜 공개종료일</div><input type="text" class="ta_r"></div>
+                            </div>
+                            <div class="inp_row row-3 item2">
+                                <div class="inp_wrap"><div class="inp_tit">판매자 판매시작일</div><input type="text"></div>
+                                <div class="inp_wrap"><div class="inp_tit">판매자 판매종료일(시간)</div><input type="text"></div>
+                                <div class="inp_wrap"></div>
+                            </div>
+                        </div>
 
-</script>
+                        <div class="bot_btn_wrap">
+                            <div class="btn">반려</div>
+                            <div class="btn">승인</div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab_box" style="margin-top: 20px;">
+                        <div class="tab_item">기본정보</div>
+                        <div class="tab_item active">판매현황 및 예상수익 계산</div>
+                        <div class="tab_item">상태정보 <span class="new_sta">22</span></div>
+                    </div>
+                    <div class="tab_cont">
+                        <div class="sect">
+                            <div class="motiv_tbl_box name_k pd_0">
+                                <div class="tbl_item">
+                                    <table class="motiv_normal_tbl prd_calc">
+                                        <caption>판매현황 및 예상수익 계산</caption>
+                                        <colgroup>
+                                            <col style="width:25%;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="ta_c"><div>당월 누적매출</div></td>
+                                                <td class="ta_l"><div class="prd_code"><div class="code_item">[<span class="code_sta">상품코드</span>]</div><div class="name_item">상품단위명</div></div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect">
+                            <div class="contents_box pd_0">
+                                <div class="panel_body">
+                                    <div class="tbl_wrap pd_0">
+                                        <div class="motiv_tbl normal layer_type1">
+                                            <div class="tbl_inner">
+                                                <div class="tbl_head">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>SKU코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>관리코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>SKU상품명</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>옵션값</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>딜판매가</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>주문수량</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매금액</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tbl_body">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>자동코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>관리코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>옵션상품명</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>옵션값</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>딜판매가</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>주문수량</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>주문금액</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect">
+                            <div class="motiv_tbl_box name_k pd_0">
+                                <div class="tbl_item">
+                                    <table class="motiv_normal_tbl prd_calc">
+                                        <caption>판매현황 및 예상수익 계산</caption>
+                                        <colgroup>
+                                            <col style="width:20%;">
+                                            <col style="width:30%;">
+                                            <col style="width:20%;">
+                                            <col style="width:30%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="ta_c"><div>목표</div></th>
+                                                <td class="ta_c"><div>00</div></td>
+                                                <th class="ta_c"><div>판매수량</div></th>
+                                                <td class="ta_c"><div>00</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="ta_c"><div>목표 달성률</div></th>
+                                                <td class="ta_c"><div><span>00</span>%</div></td>
+                                                <th class="ta_c"><div>다다딜 결과</div></th>
+                                                <td class="ta_c"><div>달성, 미달성</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="ta_c"><div>판매가</div></th>
+                                                <td class="ta_c" colspan="2"><div>다다딜 판매가 <span>10.000</span>원 X 주문수량 <span>12</span>개</div></td>
+                                                <td class="ta_r"><div><span>0</span> 원</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="ta_c"><div>현재판매금액</div></th>
+                                                <td class="ta_c" colspan="2"><div>판매수량 X 다다딜 판매가</div></td>
+                                                <td class="ta_r"><div><span>0</span> 원</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="ta_c"><div>리워드지급액</div></th>
+                                                <td class="ta_c" colspan="2"><div>목표달성 초과금액 <span>10.000</span>원 X 리워드지급율 <span>12</span>%</div></td>
+                                                <td class="ta_r"><div><span>0</span> 원</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="ta_c" rowspan="3"><div>플랫폼수수료</div></th>
+                                                <td class="ta_c" colspan="2"><div>공급가 X <span>5</span>%</div></td>
+                                                <td class="ta_r"><div><span>0</span> 원</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ta_c" colspan="2"><div>판매가 X <span>8</span>%</div></td>
+                                                <td class="ta_r"><div><span>0</span> 원</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ta_c" colspan="2"><div>직접판매가 X <span>12</span>%</div></td>
+                                                <td class="ta_r"><div><span>0</span> 원</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="ta_c" rowspan="3"><div>예상수익</div></th>
+                                                <td class="ta_c" colspan="2"><div>공급사</div></td>
+                                                <td class="ta_r"><div><span>0</span> 원</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ta_c" colspan="2"><div>판매사</div></td>
+                                                <td class="ta_r"><div><span>0</span> 원</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ta_c" colspan="2"><div>플랫폼</div></td>
+                                                <td class="ta_r"><div><span>0</span> 원</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sect">
+                            <div class="motiv_tbl_box name_k pd_0">
+                                <div class="tbl_item">
+                                    <table class="motiv_normal_tbl sell_period">
+                                        <caption>판매기간</caption>
+                                        <colgroup>
+                                            <col style="width:20%;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th class="ta_c"><div>판매기간</div></td>
+                                                <td class="ta_c">
+                                                    <div class="cus_inp_wrap radio_inp">
+                                                        <label for="period_1_1" class="inp_box">판매자 판매기간
+                                                            <input type="radio" id="period_1_1" name="period_cate">
+                                                            <span class="inp_custom"></span>
+                                                        </label>
+                                                        <label for="period_1_2" class="inp_box">공급사 다다딜 판매기간
+                                                            <input type="radio" id="period_1_2" name="period_cate">
+                                                            <span class="inp_custom"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect">
+                            <div class="chart_box" style="text-align: center;"><span>차트가 들어가는 영역-추후 스타일 변경</span></div>
+                        </div>
+                    </div>
+
+                    <div class="tab_box" style="margin-top: 20px;">
+                        <div class="tab_item">기본정보</div>
+                        <div class="tab_item">판매현황 및 예상수익 계산</div>
+                        <div class="tab_item active">상태정보 <span class="new_sta">22</span></div>
+                    </div>
+                    <div class="tab_cont">
+                        <div class="flex_wrap state_info">
+                            <div class="left">
+                                <div class="cont_box">
+                                    <div class="cont_tit"><div class="tit_box"><div class="tit">변경이력</div></div></div>
+                                    <div class="cont_item">
+                                        <div class="list_box">
+                                            <div class="list_item"><div class="tit">신청</div><div class="date">2023-01-01 00:00:00</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="cont_box">
+                                    <div class="cont_tit">
+                                        <div class="tit_box"><div class="tit">신청</div><div class="date">2023-01-01 00:00:00</div></div>
+                                        <div class="sub_tit">회원유형/소속/회원명(ID)관리자@이메일</div>
+                                    </div>
+                                    <div class="cont_item">
+                                        <div class="question_txt">빠른 승인 요청합니다.</div>
+                                        <div class="sect_tit">댓글</div>
+                                        <div class="sect"><div class="txtarea_box"><textarea placeholder="댓글입니다."></textarea></div></div>
+                                        <div class="sect_tit">첨부파일</div>
+                                        <div class="sect"><div class="file_box"><div class="btn">첨부파일</div></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bot_btn_wrap">
+                            <div class="btn">저장</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(() => {
+            tFlex.init('pcacme002003_1', tableData2, true);
+        })
+        var selectUi = {
+            class : 'select_wrap',
+            seData : [],
+            init :() => {
+                $.each( $('.'+selectUi.class+''), (index, item) => {
+                    var seObjData = new Object();
+                    seObjData.optData = new Array();
+                    seObjData.seNum = index;
+                    seObjData.actNum = '';
+                    seObjData.actVal = '';
+                    seObjData.actSta = false;
+                    var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
+                    $.each( seTarget.children("option"), (seIndex, seItem) => {
+                        if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
+                            seObjData.actSta = true;
+                            seObjData.actNum = seIndex;
+                            seObjData.actVal = seItem.text;
+                        }
+                        seObjData.optData.push(seItem.text);
+                    });
+                    selectUi.seData.push(seObjData);
+                })
+                selectUi.customSelect();
+            },
+            customSelect: () => {
+                $.each( selectUi.seData, (index, item) => {
+                    var selectHtml = '';
+                    var selectTname = item.actVal ? item.actVal : item.optData[0];
+                    selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
+                    selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
+                    selectHtml+= '  <div class="opt_list">';
+                    $.each( item.optData, (seindex, seitem) => {
+                        selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
+                    });
+                    selectHtml+= '  </div>';
+                    selectHtml+= '</div>';
+                    $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
+                });
+            },
+            boxOpen : (obj) =>{
+                if(obj.hasClass('active')){
+                    obj.removeClass('active');
+                }else{
+                    obj.addClass('active');
+                }
+            },
+            optionClick : (obj) =>{
+                obj.parent().parent().children('.select_name').text(obj.text());
+                obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
+            },
+        }
+        selectUi.init();
+    </script>
 </body>
 
 </html>
