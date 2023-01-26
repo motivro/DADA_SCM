@@ -14,6 +14,10 @@
 .item_titss .icon{width:12px;height:12px;background:url(../images/common/icon_refresh.svg)no-repeat center center;background-size:cover;cursor:pointer;}
 
 
+/* 상품 리스트 추가 */
+#content .contents_box.prd_cont .prd_list .prd_item .thumb .info_item.noti{transition:.5s;visibility: hidden;opacity:0;}
+#content .contents_box.prd_cont .prd_list .prd_item:hover .thumb .info_item.noti{visibility: visible;opacity:1}
+
 /* tblList */
 #content .panel_head{padding: 20px;}
 #content .panel_head.bdr_bot{border-bottom: var(--box_border);}

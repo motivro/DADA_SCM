@@ -114,7 +114,7 @@
 #content .contents_box.prd_cont .contents_item{padding: 30px 20px;}
 #content .contents_box.prd_cont .prd_list{width:100%;display: flex;align-items: stretch;flex-direction: row;flex-wrap: nowrap;gap:15px}
 #content .contents_box.prd_cont .prd_list .prd_item{width: calc(25% - 11.25px);border: 1px solid #e3e3e3;transition: border-color .3s ease, border-width .15s ease;}
-#content .contents_box.prd_cont .prd_list .prd_item:hover{border-color: var(--color1);border-width: 2px;}
+/* #content .contents_box.prd_cont .prd_list .prd_item:hover{border-color: var(--color1);border-width: 2px;} */
 #content .contents_box.prd_cont .prd_list .prd_item .thumb{position: relative;width: 100%;height: 0;padding-bottom: 100%;overflow: hidden;}
 #content .contents_box.prd_cont .prd_list .prd_item .thumb .img{width: 100%;position: absolute;left: 0;top: 0;bottom:0;right:0;z-index: 1;}
 #content .contents_box.prd_cont .prd_list .prd_item .thumb .img img{width: 100%;object-fit: cover;object-position: center;}
