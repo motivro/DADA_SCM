@@ -21,6 +21,7 @@
 #content .cont_group .srh_count .count_sta{color:var(--color3);}
 #content .cont_group .cont_left,
 #content .cont_group .cont_right{display: flex;align-items:center;gap: 10px;}
+#content .cont_group .tab_box{margin: 0;}
 #content .cont_group .select_wrap{width: 150px;}
 #content .cont_group .select_wrap.tbl_search{width:100px}
 #content .cont_group .icon_tbl_cus{display:inline-block;width: 20px;height:20px;background: url('../images/common/icon_tbl_cus.svg')no-repeat center center;background-size: cover;cursor: pointer;}

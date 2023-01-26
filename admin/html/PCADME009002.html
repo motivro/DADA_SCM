@@ -262,7 +262,8 @@
                                         <div class="inp_wrap"><input type="text" name="" id="" placeholder="판매방식, 판매유형"></div>
                                     </div>
                                 </div>
-
+                            </div>
+                            <div class="srh_item">
                                 <div class="srh_item_inner">
                                     <div class="srh_title">기간</div>
                                     <div class="srh_cont">
@@ -392,10 +393,36 @@
                     </div>
                     <div class="contents_box bg_none bd_0">
                         <div class="chart_box">
-                            <div class="chart_item">차트</div>
-                            <div class="chart_item">차트</div>
+                            <div class="chart_item" style="width: 100%;">차트</div>
                         </div>
                     </div>
+                    <!-- tableList S -->
+                    <div id="pcacme009002_1" class="contents_box">
+                        <div class="panel_head bdr_bot">
+                            <div class="cont_group d_flex">
+                                <div class="cont_left">
+                                </div>
+                                <div class="cont_right">
+                                    <div class="btn_wrap">
+                                        <div class="btn">엑셀다운로드</div>
+                                    </div>
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="50" selected>50개씩 </option>
+                                            <option value="100">100개씩 </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel_body">
+                            <div class="tbl_wrap">
+                                테이블 리스트 수정 예정
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tableList E -->
 
                     <div class="tab_box">
                         <div class="tab_item">
@@ -425,12 +452,6 @@
                                             </label>
                                         </div>
                                         <div class="inp_wrap"><input type="text" name="" id="" placeholder="상호명, ID, 닉네임, 이름"></div>
-                                    </div>
-                                </div>
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">검색어</div>
-                                    <div class="srh_cont">
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="판매방식, 판매유형"></div>
                                     </div>
                                 </div>
                                 <div class="srh_item_inner">
@@ -465,12 +486,144 @@
                             <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
                         </div>
                     </div>
+                    
+                    <div class="contents_box bg_none bd_0">
+                        <div class="motiv_tbl_box pd_0 bg_none bd_0">
+                            <div class="tbl_item">
+                                <table class="motiv_normal_tbl statis">
+                                    <caption>매출증빙 조회결과</caption>
+                                    <colgroup>
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>총 매출금액</th>
+                                            <th>최대 매출금액</th>
+                                            <th>최소 매출금액</th>
+                                            <th>다다딜</th>
+                                            <th>위탁판매</th>
+                                            <th>직접판매</th>
+                                            <th>동대문판매</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="ta_c">
+                                            <td><span class="sta">100,000</span>원</td>
+                                            <td rowspan="2"><span class="sta">100,000</span>원</td>
+                                            <td rowspan="2"><span class="sta">100,000</span>원</td>
+                                            <td><span class="sta">100,000</span>원</td>
+                                            <td><span class="sta">100,000</span>원</td>
+                                            <td><span class="sta">100,000</span>원</td>
+                                            <td><span class="sta">100,000</span>원</td>
+                                        </tr>
+                                        <tr class="ta_c">
+                                            <td>
+                                                <div>
+                                                    <div class="row_item">
+                                                        <div class="tit">판매금액</div>
+                                                        <div class="cont"><span class="sta">100,000</span>원</div>
+                                                    </div>
+                                                    <div class="row_item">
+                                                        <div class="tit">환불금액</div>
+                                                        <div class="cont"><span class="sta">100,000</span>원</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="row_item">
+                                                        <div class="tit">판매금액</div>
+                                                        <div class="cont"><span class="sta">100,000</span>원</div>
+                                                    </div>
+                                                    <div class="row_item">
+                                                        <div class="tit">환불금액</div>
+                                                        <div class="cont"><span class="sta">100,000</span>원</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="row_item">
+                                                        <div class="tit">판매금액</div>
+                                                        <div class="cont"><span class="sta">100,000</span>원</div>
+                                                    </div>
+                                                    <div class="row_item">
+                                                        <div class="tit">환불금액</div>
+                                                        <div class="cont"><span class="sta">100,000</span>원</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="row_item">
+                                                        <div class="tit">판매금액</div>
+                                                        <div class="cont"><span class="sta">100,000</span>원</div>
+                                                    </div>
+                                                    <div class="row_item">
+                                                        <div class="tit">환불금액</div>
+                                                        <div class="cont"><span class="sta">100,000</span>원</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="row_item">
+                                                        <div class="tit">판매금액</div>
+                                                        <div class="cont"><span class="sta">100,000</span>원</div>
+                                                    </div>
+                                                    <div class="row_item">
+                                                        <div class="tit">환불금액</div>
+                                                        <div class="cont"><span class="sta">100,000</span>원</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                     <div class="contents_box bg_none bd_0">
                         <div class="chart_box">
                             <div class="chart_item">차트</div>
                             <div class="chart_item">차트</div>
                         </div>
                     </div>
+                    <!-- tableList S -->
+                    <div id="pcacme009002_2" class="contents_box">
+                        <div class="panel_head bdr_bot">
+                            <div class="cont_group d_flex">
+                                <div class="cont_left">
+                                </div>
+                                <div class="cont_right">
+                                    <div class="btn_wrap">
+                                        <div class="btn">달력보기</div>
+                                        <div class="btn">엑셀다운로드</div>
+                                    </div>
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="50" selected>50개씩 </option>
+                                            <option value="100">100개씩 </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel_body">
+                            <div class="tbl_wrap">
+                                테이블 리스트 수정 예정
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tableList E -->
+
                     <div class="contents_box">
                         <div>캘린더 데모</div>
                         <div class="calender_box">
@@ -602,12 +755,6 @@
                                     </div>
                                 </div>
                                 <div class="srh_item_inner">
-                                    <div class="srh_title">검색어</div>
-                                    <div class="srh_cont">
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="판매방식, 판매유형"></div>
-                                    </div>
-                                </div>
-                                <div class="srh_item_inner">
                                     <div class="srh_title">기간</div>
                                     <div class="srh_cont">
                                         <div class="select_wrap">
@@ -647,129 +794,22 @@
                     </div>
 
                     <!-- tableList S -->
-                    <div class="contents_box">
+                    <div id="pcacme009002_3" class="contents_box">
                         <div class="panel_head bdr_bot">
                             <div class="cont_group d_flex">
-                                <div class="cont_left"></div>
+                                <div class="cont_left">
+                                </div>
                                 <div class="cont_right">
-                                    <div class="select_wrap">
-                                        <select>
-                                            <option value="50" selected>10개씩</option>
-                                            <option value="100">100개씩 </option>
-                                        </select>
+                                    <div class="btn_wrap">
+                                        <div class="btn">엑셀다운로드</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <style>
-                            .motiv_tbl.normal{}
-                            .motiv_tbl.normal .tbl_head .d_flex, 
-                            .motiv_tbl.normal .tbl_body .d_flex{width:100%;max-width: 1800px;gap: 0;}
-                            .motiv_tbl.normal .tbl_inner{overflow:hidden}
-                            .motiv_tbl.normal .tbl_inner .hd_item{flex-basis: 80px;flex-grow: 1;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child{flex-grow: 0;flex-basis: 40px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item{flex-grow: 0;flex-basis: 150px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item{flex-grow: 0;flex-basis: 80px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 80px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 80px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 80px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 150px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 150px;}
-                        </style>
                         <div class="panel_body">
-                            <div class="btn_group">
-                                <div class="btn">엑셀 다운로드</div>
-                            </div>
                             <div class="tbl_wrap">
-                                테이블리스트 타입 정리 예정
-                                <div class='motiv_tbl normal'>
-                                    <div class='tbl_inner'>
-                                        <div class='tbl_head'>
-                                            <div class='row_item d_flex'>
-                                                <div class='hd_item'>
-                                                    <div>번호</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>관리기능</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>처리상태</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>문의유형</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>문의제목</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>작성자(ID)</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>첨부파일</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>접수일</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>처리일</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='tbl_body'>
-                                            <div class='row_item d_flex'>
-                                                <div class='hd_item'>
-                                                    <div>1</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>
-                                                        <div class="btn btn_sm">답변</div>
-                                                        <div class="btn btn_sm">삭제</div>
-                                                    </div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>처리상태</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>문의유형</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>문의제목</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>작성자(ID)</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>첨부파일</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>2022-00-00 00:00:00</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>2022-00-00 00:00:00</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='motiv_paging'>
-                                    <a class='first' href='#none'></a>
-                                    <a class='prev' href='#none'></a>
-                                    <ul>
-                                        <li><a class='this' href='#none'>1</a></li>
-                                        <li><a href='#none'>2</a></li>
-                                        <li><a href='#none'>3</a></li>
-                                        <li><a href='#none'>4</a></li>
-                                        <li><a href='#none'>5</a></li>
-                                        <li><a href='#none'>6</a></li>
-                                        <li><a href='#none'>7</a></li>
-                                        <li><a href='#none'>8</a></li>
-                                        <li><a href='#none'>9</a></li>
-                                        <li><a href='#none'>10</a></li>
-                                    </ul>
-                                    <a class='next' href='#none'></a>
-                                    <a class='last' href='#none'></a>
-                                </div>
+                                테이블 리스트 수정 예정
                             </div>
                         </div>
                     </div>
@@ -784,6 +824,11 @@
     </div>
     <!-- wrap E -->
     <script>
+        $(document).ready(() => {
+            tFlex.init('pcacme009002_1', tableData2, true);
+            tFlex.init('pcacme009002_2', tableData2, true);
+            tFlex.init('pcacme009002_3', tableData2, true);
+        });
         var selectUi = {
             class: 'select_wrap',
             seData: [],
