@@ -9,7 +9,7 @@
 #content .contents_box .srh_box .srh_item .srh_cont .select_wrap{min-width:130px;background-color:#fff}
 #content .tbl_panel .panel_tbl{}
 
-.item_titss{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;border-bottom:var(--cont_border);background-color:#ff}
+.item_titss{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;border-bottom:var(--cont_border);background-color:#fff}
 .item_titss .name{font-size:var(--fts16);font-weight:var(--ftw700);}
 .item_titss .icon{width:12px;height:12px;background:url(../images/common/icon_refresh.svg)no-repeat center center;background-size:cover;cursor:pointer;}
 
