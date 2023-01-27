@@ -51,7 +51,9 @@
 #content .contents_box.prd_cont .prd_list .prd_item .thumb .info_item.bar > div{height:35px;transition:.5s;transform: translate(-100%, 0px);padding: 0;padding-left: 7px;line-height: 35px;}
 #content .contents_box.prd_cont .prd_list .prd_item .thumb .info_item.bar > div.open{ height: 35px;transform: translate(0%, 0px);}
 
-
+.script_test_body{position:fixed;top:50%;right:0;z-index:900}
+.script_test_body > div{padding:10px 20px;border:solid 1px #ccc;background-color:#fff;border-right:none;cursor:pointer;margin-top:10px;}
+.script_test_body > div:first-child{margin-top:0}
 
 /* 상품관리 */
 .srh_item_wrap{visibility: hidden;height: 0;}

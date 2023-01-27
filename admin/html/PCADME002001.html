@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/content_hs.css">
     <link rel="stylesheet" href="../resources/css/content_k.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
 </head>
 
 <body>
@@ -426,17 +433,15 @@
                                             </div>
 
                                             <div class="btn_wrap">
-                                                <div class="btn">오늘</div>
+                                                <div class="btn active">오늘</div>
                                                 <div class="btn">1주일</div>
                                                 <div class="btn">1개월</div>
                                                 <div class="btn">3개월</div>
                                                 <div class="btn">1년</div>
                                             </div>
-                                            <div class="inp_wrap">
-                                                <input type="text" name="" id="" placeholder="2021-00-00">
-                                            </div>
-                                            <div class="inp_wrap">
-                                                <input type="text" name="" id="" placeholder="2021-00-00">
+                                            <div id="sandbox_container" class="input-daterange input-group" id="datepicker">
+                                                <input type="text" class="input-sm form-control" name="start" />
+                                                <input type="text" class="input-sm form-control" name="end" />
                                             </div>
                                         </div>
                                     </div>
@@ -454,7 +459,6 @@
                                 <p>※ 다다딜 상품은 목표달성 여부에 상관없이 판매자가 설정한 가격에 판매됩니다.</p>
                             </div>
                         </div>
-           
                     </div>
 
                     <!-- tableList S -->
@@ -734,15 +738,12 @@
         <div class="dada_bg"></div>
     </div> 
 
-    <style>
-        .script_test_body{position:fixed;top:50%;right:0;z-index:900}
-        .script_test_body > div{padding:10px 20px;border:solid 1px #ccc;background-color:#fff;border-right:none;cursor:pointer;margin-top:10px;}
-        .script_test_body > div:first-child{margin-top:0}
-    </style>
-
    <script>
 
     $(document).ready(() => {
+        $('#sandbox_container.input-daterange').datepicker({
+            language : "ko"
+        });
         tFlex.init('pcacme002001_1', tableData2, true);
         
         $('.script_test_body > div').click(function (){

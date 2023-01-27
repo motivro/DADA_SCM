@@ -90,6 +90,7 @@ input[type="password"]{border-radius:5px;}
 .btn.btn_md{height: 30px;line-height: 28px;}
 .btn.btn_lg{height:50px;line-height: 48px;}
 
+.btn.active,
 .btn.color1{background: var(--color1);border:1px solid var(--color1);color: #fff;}
 .btn.color6{background: var(--color6);border:1px solid var(--color6);color: #fff;}
 
