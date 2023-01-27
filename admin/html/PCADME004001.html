@@ -447,6 +447,8 @@
     </div>
     <!-- wrap E -->
 
+    <!-- 레이어 팝업 S-->
+    <h2>팝업 내용</h2>
     <div class="motiv_layer type1" style="margin-top:20px">
         <div class="layer_head">
             <div class="title">판매상품 상세정보</div>
@@ -1070,10 +1072,77 @@
             </div>
         </div>
     </div>
+
+    <div class="motiv_layer type1">
+        <div class="layer_head">
+            <div class="title">강제종료</div>
+            <div class="btn_close"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="motiv_tbl_box name_k pd_0">
+                    <div class="tbl_title">
+                        <div class="tit"><strong>[<span class="prd_name">팬매상품</span>]</strong>강제종료 시 바로 종료됩니다.</div>
+                    </div>
+                    <div class="tbl_item">
+                        <table class="motiv_normal_tbl">
+                            <caption>상품 강제종료</caption>
+                            <colgroup>
+                                <col style="width:15%;">
+                                <col style="width:auto;">
+                                <col style="width:15%;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><div>판매쇼핑몰</div></th>
+                                    <td><div>다다 쇼핑몰</div></td>
+                                    <th><div>상품 카테고리</div></th>
+                                    <td><div>[<span class="cate_code">카테고리 코드</span>] <span>대 > 중 > 소</span></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>상품 유형</div></th>
+                                    <td colspan="3"><div>일반상품 또는 다다딜 상품</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>판매상품(<span>옵션수</span>)</div></th>
+                                    <td colspan="3"><div>[<span class="prd_code">상품 코드</span>] <span>상품단위명</span></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="sect">
+                    <div class="radio_wrap motiv_radio">
+                        <label for="end_chk_1-1" class="radio_btn">판매상품
+                            <input type="radio" id="end_chk_1-1" name="end_chk" checked>
+                            <span class="radio_custom"></span>
+                        </label>
+                        <label for="end_chk_1-2" class="radio_btn">공급사
+                            <input type="radio" id="end_chk_1-2" name="end_chk">
+                            <span class="radio_custom"></span>
+                        </label>
+                        <label for="end_chk_1-3" class="radio_btn">판매사 강제종료
+                            <input type="radio" id="end_chk_1-3" name="end_chk">
+                            <span class="radio_custom"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="sect">
+                    <div class="txtarea_box">
+                        <textarea></textarea>
+                        <div class="file_box"><div class="btn btn_md">첨부파일</div></div>
+                    </div>
+                </div>
+                <div class="bot_btn_wrap"><div class="btn">강제종료 처리</div></div>
+            </div>
+        </div>
+    </div>
+    <!-- 레이어팝업 E -->
+
     <script>
         $(document).ready(() => {
             tFlex.init('pcacme004001_1', tableData2, true);
-            tFlex.init('pcacme004001_2', tableData2, true);
         })
 
         var selectUi = {
