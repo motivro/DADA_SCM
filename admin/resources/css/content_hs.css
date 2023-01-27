@@ -678,7 +678,8 @@
 .motiv_tbl.api_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
 
 /* 금칙단어 관리 */
-#content .motiv_tbl_box .tbl_util{display: flex;justify-content:flex-end;align-items: center;gap: 10px;}
+#content .motiv_tbl_box .tbl_util{display: flex;justify-content:flex-start;align-items: center;gap: 10px;}
+#content .motiv_tbl_box .tbl_util .srh_cont:first-child .inp_wrap{min-width:400px;}
 #content .motiv_tbl_box .tbl_util + .motiv_normal_tbl{margin-top: 15px;}
 #content .motiv_tbl_box .tbl_util .srh_cont .inp_wrap{min-width:210px;}
 #content .motiv_tbl_box .tbl_util .srh_cont .inp_wrap input[type="text"]{padding: 10px;}
@@ -738,7 +739,7 @@
 
 #content .store_cont_box .custom_tbl{margin-top: 25px;}
 #content .store_cont_box .custom_tbl .tbl_head{display:table;width:100%;}
-#content .store_cont_box .custom_tbl .tbl_cell.th{font-weight: var(--ftw500);}
+#content .store_cont_box .custom_tbl .tbl_cell.th{font-weight: var(--ftw500);position:relative}
 #content .store_cont_box .custom_tbl .tbl_head .tbl_cell.th{width: 15%;text-align: center;}
 #content .store_cont_box .custom_tbl .tbl_head .tbl_cell.td{width:auto;}
 #content .store_cont_box .custom_tbl .tbl_body{border: var(--cont_border);border-top: 0;}

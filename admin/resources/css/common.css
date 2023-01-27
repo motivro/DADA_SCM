@@ -87,7 +87,7 @@ input[type="password"]{border-radius:5px;}
 .btn_wrap{display:flex;align-items:center;gap: 8px;}
 
 .btn{display:inline-block;height:40px;line-height: 38px;padding:0 15px;font-size: var(--fts13);font-weight: var(--ftw500);color:var(--color14);border: var(--cont_border);background: #fff;box-sizing: border-box;cursor: pointer;white-space: nowrap;}
-.btn.btn_sm{height:20px;line-height:18px;}
+.btn.btn_sm{font-size:var(--fts10);height:20px;line-height:18px;}
 .btn.btn_md{height: 30px;line-height: 28px;}
 .btn.btn_lg{height:50px;line-height: 48px;}
 

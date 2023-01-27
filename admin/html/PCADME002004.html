@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/content_hs.css">
     <link rel="stylesheet" href="../resources/css/content_k.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
 </head>
 
 <body>
@@ -254,7 +261,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="srh_item_inner">
                                     <div class="srh_title">판매현황</div>
                                     <div class="srh_cont">
@@ -271,87 +278,122 @@
                                 </div>
                             </div>
 
-                            <div class="srh_item">
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">카테고리</div>
-                                    <div class="srh_cont">
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="대분류" selected>대분류</option>
-                                                <option value="대분류1">대분류1</option>
-                                            </select>
-                                        </div>
+                            
+                            <div class="hide_srh_box">
+                                <div class="srh_item row-2">
+                                    <div class="srh_item_inner">
+                                        <div class="srh_title">카테고리</div>
+                                        <div class="srh_cont">
+                                            <div class="select_wrap">
+                                                <select>
+                                                    <option value="대분류" selected>대분류</option>
+                                                    <option value="대분류1">대분류1</option>
+                                                </select>
+                                            </div>
 
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="중분류" selected>중분류</option>
-                                                <option value="중분류1">중분류1</option>
-                                            </select>
-                                        </div>
+                                            <div class="select_wrap">
+                                                <select>
+                                                    <option value="중분류" selected>중분류</option>
+                                                    <option value="중분류1">중분류1</option>
+                                                </select>
+                                            </div>
 
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="소분류" selected>소분류</option>
-                                                <option value="소분류1">소분류1</option>
-                                            </select>
+                                            <div class="select_wrap">
+                                                <select>
+                                                    <option value="소분류" selected>소분류</option>
+                                                    <option value="소분류1">소분류1</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">판매기간</div>
-                                    <div class="srh_cont">
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="기준일">
-                                        </div>
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="종료일">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="srh_item">
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">판매형식</div>
-                                    <div class="srh_cont">
-                                        <div class="cus_inp_wrap checkbox_inp">
-                                            <label for="in_4_1" class="inp_box">VOD 판매
-                                                <input type="checkbox" id="in_4_1" name="ord_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                            <label for="in_4_2" class="inp_box">LIVE 판매
-                                                <input type="checkbox" id="in_4_2" name="ord_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                            <label for="in_4_3" class="inp_box">IMAGE 판매
-                                                <input type="checkbox" id="in_4_3" name="ord_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
+                                    <div class="srh_item_inner">
+                                        <div class="srh_title">판매기간</div>
+                                        <div class="srh_cont">
+                                            <div id="sandbox_container" class="input-daterange input-group" id="datepicker">
+                                                <input type="text" class="input-sm form-control" name="start"  placeholder="기준일"/>
+                                                <input type="text" class="input-sm form-control" name="end"  placeholder="종료일"/>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">판매방식</div>
-                                    <div class="srh_cont">
-                                        <div class="cus_inp_wrap checkbox_inp">
-                                            <label for="in_5_1" class="inp_box">전체
-                                                <input type="checkbox" id="in_5_1" name="ord_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                            <label for="in_5_2" class="inp_box">위탁판매
-                                                <input type="checkbox" id="in_5_2" name="ord_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                            <label for="in_5_3" class="inp_box">지정판매
-                                                <input type="checkbox" id="in_5_3" name="ord_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
+                                <div class="srh_item row-2">
+                                    <div class="srh_item_inner">
+                                        <div class="srh_title">리워드율(%)</div>
+                                        <div class="srh_cont">
+                                            <div class="inp_wrap">
+                                                <input type="text" name="" id="" placeholder="0">
+                                            </div>
+
+                                            <div class="select_wrap">
+                                                <select>
+                                                    <option value="이상" selected>이상</option>
+                                                    <option value="이하">이하</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="srh_item_inner">
+                                        <div class="srh_title">목표수량</div>
+                                        <div class="srh_cont">
+                                            <div class="inp_wrap">
+                                                <input type="text" name="" id="" placeholder="0">
+                                            </div>
+
+                                            <div class="select_wrap">
+                                                <select>
+                                                    <option value="이상" selected>이상</option>
+                                                    <option value="이하">이하</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="srh_item">
+                                    <div class="srh_item_inner">
+                                        <div class="srh_title">판매형식</div>
+                                        <div class="srh_cont">
+                                            <div class="cus_inp_wrap checkbox_inp">
+                                                <label for="in_4_1" class="inp_box">VOD 판매
+                                                    <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                                <label for="in_4_2" class="inp_box">LIVE 판매
+                                                    <input type="checkbox" id="in_4_2" name="ord_sta">
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                                <label for="in_4_3" class="inp_box">IMAGE 판매
+                                                    <input type="checkbox" id="in_4_3" name="ord_sta">
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="srh_item_inner">
+                                        <div class="srh_title">판매방식</div>
+                                        <div class="srh_cont">
+                                            <div class="cus_inp_wrap checkbox_inp">
+                                                <label for="in_5_1" class="inp_box">전체
+                                                    <input type="checkbox" id="in_5_1" name="ord_sta">
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                                <label for="in_5_2" class="inp_box">위탁판매
+                                                    <input type="checkbox" id="in_5_2" name="ord_sta">
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                                <label for="in_5_3" class="inp_box">지정판매
+                                                    <input type="checkbox" id="in_5_3" name="ord_sta">
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="srh_btn_box">
                             <div class="btn_wrap">
                                 <div class="btn btn_search">검색</div>
@@ -453,15 +495,7 @@
                         </div>
                         
                         <div class="panel_body">
-                            <div class="btn_group d_flex">
-                                <div class="btn_wrap">
-                                    <div class="btn">정산지급 처리</div>
-                                    <div class="btn">일괄 정산지급</div>
-                                    <div class="btn">정산지급 보류</div>
-                                    <div class="btn">엑셀다운로드</div>
-                                </div>
-                            </div>
-
+                           
                             <div class="tbl_wrap"></div>
                         </div>
                     </div>
@@ -808,59 +842,11 @@
 
     $(document).ready(() => {
         tFlex.init('pcacme002004_1', tableData2, true);
+        $('#sandbox_container.input-daterange').datepicker({
+            language : "ko"
+        });
     });
 
-    var selectUi = {
-        class : 'select_wrap',
-        seData : [],
-        init :() => {
-            $.each( $('.'+selectUi.class+''), (index, item) => {
-                var seObjData = new Object();
-                seObjData.optData = new Array();
-                seObjData.seNum = index;
-                seObjData.actNum = '';
-                seObjData.actVal = '';
-                seObjData.actSta = false;
-                var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
-                $.each( seTarget.children("option"), (seIndex, seItem) => {
-                    if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
-                        seObjData.actSta = true;
-                        seObjData.actNum = seIndex;
-                        seObjData.actVal = seItem.text;
-                    }
-                    seObjData.optData.push(seItem.text);
-                });
-                selectUi.seData.push(seObjData);
-            })
-            selectUi.customSelect();
-        },
-        customSelect: () => {
-            $.each( selectUi.seData, (index, item) => {
-                var selectHtml = '';
-                var selectTname = item.actVal ? item.actVal : item.optData[0];
-                selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
-                selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
-                selectHtml+= '  <div class="opt_list">';
-                $.each( item.optData, (seindex, seitem) => {
-                    selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
-                });
-                selectHtml+= '  </div>';
-                selectHtml+= '</div>';
-                $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
-            });
-        },
-        boxOpen : (obj) =>{
-            if(obj.hasClass('active')){
-                obj.removeClass('active');
-            }else{
-                obj.addClass('active');
-            }
-        },
-        optionClick : (obj) =>{
-            obj.parent().parent().children('.select_name').text(obj.text());
-            obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
-        },
-    }
     selectUi.init();
 
 </script>

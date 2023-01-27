@@ -233,6 +233,7 @@ var selectUi = {
     },
 
     boxOpen : (obj) =>{
+        if(!obj.hasClass('active')) $('.select_box.active').removeClass('active');
         if(obj.hasClass('active')){
             obj.removeClass('active');
         }else{

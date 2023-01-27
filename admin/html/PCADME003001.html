@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/content_hs.css">
     <link rel="stylesheet" href="../resources/css/content_k.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
 </head>
 
 <body>
@@ -283,11 +290,9 @@
                                 <div class="srh_item_inner">
                                     <div class="srh_title">지정판매 일자</div>
                                     <div class="srh_cont">
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="기준일">
-                                        </div>
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="종료일">
+                                        <div id="sandbox_container" class="input-daterange input-group" id="datepicker">
+                                            <input type="text" class="input-sm form-control" name="start"  placeholder="기준일"/>
+                                            <input type="text" class="input-sm form-control" name="end"  placeholder="종료일"/>
                                         </div>
                                     </div>
                                 </div>
@@ -395,59 +400,11 @@
     $(document).ready(() => {
         tFlex.init('pcacme003001_1', tableData2, true);
         tFlex.init('pcacme003001_2', tableData2, true);
+        $('#sandbox_container.input-daterange').datepicker({
+            language : "ko"
+        });
     })
 
-    var selectUi = {
-        class : 'select_wrap',
-        seData : [],
-        init :() => {
-            $.each( $('.'+selectUi.class+''), (index, item) => {
-                var seObjData = new Object();
-                seObjData.optData = new Array();
-                seObjData.seNum = index;
-                seObjData.actNum = '';
-                seObjData.actVal = '';
-                seObjData.actSta = false;
-                var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
-                $.each( seTarget.children("option"), (seIndex, seItem) => {
-                    if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
-                        seObjData.actSta = true;
-                        seObjData.actNum = seIndex;
-                        seObjData.actVal = seItem.text;
-                    }
-                    seObjData.optData.push(seItem.text);
-                });
-                selectUi.seData.push(seObjData);
-            })
-            selectUi.customSelect();
-        },
-        customSelect: () => {
-            $.each( selectUi.seData, (index, item) => {
-                var selectHtml = '';
-                var selectTname = item.actVal ? item.actVal : item.optData[0];
-                selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
-                selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
-                selectHtml+= '  <div class="opt_list">';
-                $.each( item.optData, (seindex, seitem) => {
-                    selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
-                });
-                selectHtml+= '  </div>';
-                selectHtml+= '</div>';
-                $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
-            });
-        },
-        boxOpen : (obj) =>{
-            if(obj.hasClass('active')){
-                obj.removeClass('active');
-            }else{
-                obj.addClass('active');
-            }
-        },
-        optionClick : (obj) =>{
-            obj.parent().parent().children('.select_name').text(obj.text());
-            obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
-        },
-    }
     selectUi.init();
 
 </script>
