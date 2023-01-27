@@ -817,7 +817,7 @@
                             <div class="motiv_tbl_box name_k pd_0">
                                 <div class="tbl_item">
                                     <table class="motiv_normal_tbl">
-                                        <caption>상품 강제종료</caption>
+                                        <caption>판매자 정보</caption>
                                         <colgroup>
                                             <col style="width:20%;">
                                             <col style="width:30%;">
@@ -826,38 +826,40 @@
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th><div>회사명</div></td>
+                                                <th><div>상품코드</div></td>
                                                 <td><div><span>사업자 회사명</span></div></td>
-                                                <th><div>사업자 등록번호</div></td>
-                                                <td><div><span>사업자 등록번호</span></div></td>
+                                                <th><div>상품명(옵션수)</div></td>
+                                                <td><div><span>상품명 (<span>00</span>)</span></div></td>
                                             </tr>
                                             <tr>
-                                                <th><div>사업자유형</div></td>
-                                                <td><div><span>법인, 개인</span></div></td>
-                                                <th><div>대표</div></td>
-                                                <td><div><span>대표이름</span></div></td>
+                                                <th><div>판매자 이름</div></td>
+                                                <td><div><span>홍길동</span></div></td>
+                                                <th><div>닉네임</div></td>
+                                                <td><div><span>판매자 닉네임</span></div></td>
                                             </tr>
                                             <tr>
-                                                <th><div>대표번호</div></td>
-                                                <td><div><span>대표전화번호</span></div></td>
                                                 <th><div>아이디</div></td>
-                                                <td><div><span>아이디</span></div></td>
+                                                <td><div><span>판매자 아이디</span></div></td>
+                                                <th><div>사업자등록여부</div></td>
+                                                <td><div><span>사업자 미승인</span></div></td>
                                             </tr>
                                             <tr>
                                                 <th><div>휴대폰번호</div></td>
                                                 <td><div><span>휴대폰번호</span></div></td>
-                                                <th><div>회원유형</div></td>
-                                                <td><div><span>공급사</span></div></td>
-                                            </tr>
-                                            <tr>
                                                 <th><div>이메일</div></td>
                                                 <td><div><span>이메일</span></div></td>
-                                                <th><div>회원역할</div></td>
-                                                <td><div><span>상품공급, 직접판매</span></div></td>
                                             </tr>
                                             <tr>
-                                                <th><div>사업자주소</div></td>
-                                                <td colspan="3"><div><span>주소정보</span></div></td>
+                                                <th><div>판매자 피드</div></td>
+                                                <td><div><div class="btn btn_sm">피드보기</div></div></td>
+                                                <th><div>소싱날짜</div></td>
+                                                <td><div><span>2023-01-01 00:00:00</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>동일상품 판매자 수</div></td>
+                                                <td><div><span>판매자 수</span></div></td>
+                                                <th><div>평균판매가</div></td>
+                                                <td><div><span>000</span>원</div></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -1145,57 +1147,6 @@
             tFlex.init('pcacme004001_1', tableData2, true);
         })
 
-        var selectUi = {
-            class: 'select_wrap',
-            seData: [],
-            init: () => {
-                $.each($('.' + selectUi.class + ''), (index, item) => {
-                    var seObjData = new Object();
-                    seObjData.optData = new Array();
-                    seObjData.seNum = index;
-                    seObjData.actNum = '';
-                    seObjData.actVal = '';
-                    seObjData.actSta = false;
-                    var seTarget = $('.' + selectUi.class + '').eq(index).children('select');
-                    $.each(seTarget.children("option"), (seIndex, seItem) => {
-                        if (seTarget.children("option").eq(seIndex).attr('selected') != undefined) {
-                            seObjData.actSta = true;
-                            seObjData.actNum = seIndex;
-                            seObjData.actVal = seItem.text;
-                        }
-                        seObjData.optData.push(seItem.text);
-                    });
-                    selectUi.seData.push(seObjData);
-                })
-                selectUi.customSelect();
-            },
-            customSelect: () => {
-                $.each(selectUi.seData, (index, item) => {
-                    var selectHtml = '';
-                    var selectTname = item.actVal ? item.actVal : item.optData[0];
-                    selectHtml += '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
-                    selectHtml += '  <div class="select_name">' + selectTname + '</div>';
-                    selectHtml += '  <div class="opt_list">';
-                    $.each(item.optData, (seindex, seitem) => {
-                        selectHtml += '<div class="opt_item" optnum="' + seindex + '" onclick="selectUi.optionClick($(this))">' + seitem + '</div>';
-                    });
-                    selectHtml += '  </div>';
-                    selectHtml += '</div>';
-                    $('.' + selectUi.class + '').eq(item.seNum).append(selectHtml);
-                });
-            },
-            boxOpen: (obj) => {
-                if (obj.hasClass('active')) {
-                    obj.removeClass('active');
-                } else {
-                    obj.addClass('active');
-                }
-            },
-            optionClick: (obj) => {
-                obj.parent().parent().children('.select_name').text(obj.text());
-                obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
-            },
-        }
         selectUi.init();
 
     </script>

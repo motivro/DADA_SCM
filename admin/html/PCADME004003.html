@@ -443,62 +443,761 @@
 
     </div>
     <!-- wrap E -->
+
+    <!-- 레이어 팝업 S-->
+    <h2>팝업 내용</h2>
+    <div class="motiv_layer type1" style="margin-top:20px">
+        <div class="layer_head">
+            <div class="title">판매상품 상세정보</div>
+            <div class="btn_close"></div>
+        </div>
+        <!-- 레이어 body S -->
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="tab_area">
+                    <div class="tab_box">
+                        <div class="tab_item active">상품정보</div>
+                        <div class="tab_item">공급사정보</div>
+                        <div class="tab_item">판매자정보</div>
+                    </div>
+                    <div class="tab_cont">
+                        <div class="sect">
+                            <div class="motiv_tbl_box name_k pd_0">
+                                <div class="tbl_item">
+                                    <table class="motiv_normal_tbl">
+                                        <caption>상품 강제종료</caption>
+                                        <colgroup>
+                                            <col style="width:20%;">
+                                            <col style="width:30%;">
+                                            <col style="width:20%;">
+                                            <col style="width:30%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th><div>판매쇼핑몰</div></th>
+                                                <td><div>다다 쇼핑몰</div></td>
+                                                <th><div>상품 카테고리</div></th>
+                                                <td><div>[<span class="cate_code">카테고리 코드</span>] <span>대 > 중 > 소</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>상품 유형</div></td>
+                                                <td><div>일반상품, 다다딜상품</div></td>
+                                                <th><div>판매방식</div></td>
+                                                <td><div>위탁판매, 지정판매</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>판매상품(<span>옵션수</span>)</div></th>
+                                                <td colspan="3"><div>[<span class="prd_code">상품 코드</span>] <span>상품단위명</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>상품태그</div></th>
+                                                <td colspan="3">
+                                                    <div>[<span>공급사</span>] <span>상품태그</span></div>
+                                                    <div>[<span>판매사</span>] <span>상품태그 모음</span></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>공급가</div></td>
+                                                <td><div><span>00</span>원</div></td>
+                                                <th><div>다다딜 판매가</div></td>
+                                                <td><div class="d_flex a_c gap5"><div class="txt_line-thru">(일반가격)</div><div><span>00</span>원 </div></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>목표수량(금액)</div></td>
+                                                <td><div><span>00</span> (<span>00</span>원)</div></td>
+                                                <th><div>리워드 누적 수</div></td>
+                                                <td><div><span>00</span>%</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>다다딜 재고</div></td>
+                                                <td><div><span>00</span></div></td>
+                                                <th><div>판매자 누적 수</div></td>
+                                                <td><div><span>00</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>배송비</div></td>
+                                                <td><div><span>00</span>원  (추가배송비 <span>00</span>원)</div></td>
+                                                <th><div>소싱날짜</div></td>
+                                                <td><div><span>2023-01-01 00:00:00</span></div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sect mgt_0">
+                            <div class="contents_box pd_0">
+                                <div class="panel_body">
+                                    <div class="tbl_wrap cus_height">
+                                        <div class="motiv_tbl normal layer_type2">
+                                            <div class="tbl_inner">
+                                                <div class="tbl_head">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>SKU코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>SKU옵션상품명</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>옵션값</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>추가금액</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>최초재고</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>현재재고</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tbl_body">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>SKU코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>SKU옵션상품명</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>빨강</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>00</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>00</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>SKU코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>SKU옵션상품명</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>노랑</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>00</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>00</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>SKU코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>SKU옵션상품명</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>노랑</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>00</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>00</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>00</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sect">
+                            <div class="flex_wrap prd_dtl_img">
+                                <div class="left">
+                                    <div class="cont_tit">대표이미지</div>
+                                    <div class="cont_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div>
+                                </div>
+                                <div class="right">
+                                    <div class="cont_tit">추가이미지</div>
+                                    <div class="swiper sub_img_box swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                                        <ul class="swiper-wrapper" id="swiper-wrapper-b02771028d0eea3fe" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);">
+                                            <li class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 7" style="margin-right: 10px;"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 7" style="margin-right: 10px;"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide" role="group" aria-label="3 / 7" style="margin-right: 10px;"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide" role="group" aria-label="4 / 7" style="margin-right: 10px;"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide" role="group" aria-label="5 / 7" style="margin-right: 10px;"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide" role="group" aria-label="6 / 7" style="margin-right: 10px;"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide" role="group" aria-label="7 / 7" style="margin-right: 10px;"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                        </ul>
+                                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                                    <!-- Swiper JS -->
+                                    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+                                    <!-- Initialize Swiper -->
+                                    <script>
+                                        var swiper = new Swiper(".sub_img_box", {
+                                            slidesPerView: "auto",
+                                            spaceBetween: 10,
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bot_btn_wrap"><div class="btn">강제종료</div></div>
+                    </div>
+
+                    <div class="tab_box">
+                        <div class="tab_item">상품정보</div>
+                        <div class="tab_item active">공급사정보</div>
+                        <div class="tab_item">판매자정보</div>
+                    </div>
+                    <div class="tab_cont">
+                        <div class="sect">
+                            <div class="motiv_tbl_box name_k pd_0">
+                                <div class="tbl_item">
+                                    <table class="motiv_normal_tbl">
+                                        <caption>공급사정보</caption>
+                                        <colgroup>
+                                            <col style="width:20%;">
+                                            <col style="width:30%;">
+                                            <col style="width:20%;">
+                                            <col style="width:30%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th><div>회사명</div></td>
+                                                <td><div><span>사업자 회사명</span></div></td>
+                                                <th><div>사업자 등록번호</div></td>
+                                                <td><div><span>사업자 등록번호</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>사업자유형</div></td>
+                                                <td><div><span>법인, 개인</span></div></td>
+                                                <th><div>대표</div></td>
+                                                <td><div><span>대표이름</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>대표번호</div></td>
+                                                <td><div><span>대표전화번호</span></div></td>
+                                                <th><div>아이디</div></td>
+                                                <td><div><span>아이디</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>휴대폰번호</div></td>
+                                                <td><div><span>휴대폰번호</span></div></td>
+                                                <th><div>회원유형</div></td>
+                                                <td><div><span>공급사</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>이메일</div></td>
+                                                <td><div><span>이메일</span></div></td>
+                                                <th><div>회원역할</div></td>
+                                                <td><div><span>상품공급, 직접판매</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>사업자주소</div></td>
+                                                <td colspan="3"><div><span>주소정보</span></div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sect">
+                            <div class="sub_tab_area">
+                                <div class="sub_tab_box">
+                                    <div class="sub_tab_item active">총 등록상품<span>00</span></div>
+                                    <div class="sub_tab_item">일반상품<span>00</span></div>
+                                    <div class="sub_tab_item">다다딜 상품<span>00</span></div>
+                                </div>
+                                <div class="sub_tab_cont">
+                                    <div class="contents_box pd_0">
+                                        <div class="panel_body paging">
+                                            <div class="tbl_wrap">
+                                                <div class="motiv_tbl normal layer_type3">
+                                                    <div class="tbl_inner">
+                                                        <div class="tbl_head">
+                                                            <div class="row_item d_flex">
+                                                                <div class="hd_item">
+                                                                    <div>상품코드</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>상품유형</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>상품명(옵션수)</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>공급가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매제안가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>배송비</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>최초재고</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>현재고</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>카테고리</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>등록날짜</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tbl_body">
+                                                            <div class="row_item d_flex">
+                                                                <div class="hd_item">
+                                                                    <div>상품코드</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>상품유형</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>상품명(옵션수)</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>공급가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매제안가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>배송비</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>최초재고</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>현재고</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>카테고리</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>등록날짜</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="motiv_paging"><a class="first" href="#none"></a><a class="prev" href="#none"></a><ul><li><a class="this" href="#none">1</a></li><li><a href="#none">2</a></li><li><a href="#none">3</a></li><li><a href="#none">4</a></li><li><a href="#none">5</a></li><li><a href="#none">6</a></li><li><a href="#none">7</a></li><li><a href="#none">8</a></li><li><a href="#none">9</a></li><li><a href="#none">10</a></li></ul><a class="next" href="#none"></a><a class="last" href="#none"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab_box">
+                        <div class="tab_item">상품정보</div>
+                        <div class="tab_item">공급사정보</div>
+                        <div class="tab_item active">판매자정보</div>
+                    </div>
+                    <div class="tab_cont">
+                        <div class="sect">
+                            <div class="motiv_tbl_box name_k pd_0">
+                                <div class="tbl_item">
+                                    <table class="motiv_normal_tbl">
+                                        <caption>판매자 정보</caption>
+                                        <colgroup>
+                                            <col style="width:20%;">
+                                            <col style="width:30%;">
+                                            <col style="width:20%;">
+                                            <col style="width:30%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th><div>상품코드</div></td>
+                                                <td><div><span>사업자 회사명</span></div></td>
+                                                <th><div>상품명(옵션수)</div></td>
+                                                <td><div><span>상품명 (<span>00</span>)</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>판매자 이름</div></td>
+                                                <td><div><span>홍길동</span></div></td>
+                                                <th><div>닉네임</div></td>
+                                                <td><div><span>판매자 닉네임</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>아이디</div></td>
+                                                <td><div><span>판매자 아이디</span></div></td>
+                                                <th><div>사업자등록여부</div></td>
+                                                <td><div><span>사업자 미승인</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>휴대폰번호</div></td>
+                                                <td><div><span>휴대폰번호</span></div></td>
+                                                <th><div>이메일</div></td>
+                                                <td><div><span>이메일</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>판매자 피드</div></td>
+                                                <td><div><div class="btn btn_sm">피드보기</div></div></td>
+                                                <th><div>소싱날짜</div></td>
+                                                <td><div><span>2023-01-01 00:00:00</span></div></td>
+                                            </tr>
+                                            <tr>
+                                                <th><div>동일상품 판매자 수</div></td>
+                                                <td><div><span>판매자 수</span></div></td>
+                                                <th><div>평균판매가</div></td>
+                                                <td><div><span>000</span>원</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sect mgt_0">
+                            <div class="contents_box pd_0">
+                                <div class="panel_body">
+                                    <div class="tbl_wrap cus_height">
+                                        <div class="motiv_tbl normal layer_type1">
+                                            <div class="tbl_inner">
+                                                <div class="tbl_head">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>판매자</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>닉네임</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품유형</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매쇼핑몰</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매가격</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매여부</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>소싱날짜</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tbl_body">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>판매자</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>닉네임</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품유형</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매쇼핑몰</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매가격</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매여부</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>소싱날짜</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>판매자</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>닉네임</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품유형</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매쇼핑몰</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매가격</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매여부</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>소싱날짜</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>판매자</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>닉네임</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품유형</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매쇼핑몰</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매가격</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매여부</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>소싱날짜</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sect">
+                            <div class="sub_tab_area">
+                                <div class="sub_tab_box">
+                                    <div class="sub_tab_item active">총 소싱상품<span>00</span></div>
+                                    <div class="sub_tab_item">소싱상품<span>00</span></div>
+                                    <div class="sub_tab_item">다다딜 상품<span>00</span></div>
+                                </div>
+                                <div class="sub_tab_cont">
+                                    <div class="contents_box pd_0">
+                                        <div class="panel_body">
+                                            <div class="tbl_wrap cus_height">
+                                                <div class="motiv_tbl normal layer_type1">
+                                                    <div class="tbl_inner">
+                                                        <div class="tbl_head">
+                                                            <div class="row_item d_flex">
+                                                                <div class="hd_item">
+                                                                    <div>상품코드</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>상품유형</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>상품명(옵션수)</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>공급가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매제안가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매자판매가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>배송비</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>다다딜재고</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매수량</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>달성여부</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>현황</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>기준날짜</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tbl_body">
+                                                            <div class="row_item d_flex">
+                                                                <div class="hd_item">
+                                                                    <div>상품코드</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>상품유형</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>상품명(옵션수)</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>공급가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매제안가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매자판매가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>배송비</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>다다딜재고</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매수량</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div><span>달성 목표 수량</span>/<span>달성율</span>%</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매중</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매시작일</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tbl_body">
+                                                            <div class="row_item d_flex">
+                                                                <div class="hd_item">
+                                                                    <div>상품코드</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>상품유형</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>상품명(옵션수)</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>공급가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매제안가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매자판매가</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>배송비</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>다다딜재고</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>판매수량</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div><span>달성 목표 수량</span>/<span>달성율</span>%</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>종료</div>
+                                                                </div>
+                                                                <div class="hd_item">
+                                                                    <div>종료일</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 레이어 body E -->
+    </div>
+
+    <div class="motiv_layer type1">
+        <div class="layer_head">
+            <div class="title">강제종료</div>
+            <div class="btn_close"></div>
+        </div>
+        <!-- 레이어 body S -->
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="motiv_tbl_box name_k pd_0">
+                    <div class="tbl_title">
+                        <div class="tit"><strong>[<span class="prd_name">팬매상품</span>]</strong>강제종료 시 바로 종료됩니다.</div>
+                    </div>
+                    <div class="tbl_item">
+                        <table class="motiv_normal_tbl">
+                            <caption>상품 강제종료</caption>
+                            <colgroup>
+                                <col style="width:15%;">
+                                <col style="width:auto;">
+                                <col style="width:15%;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><div>판매쇼핑몰</div></th>
+                                    <td><div>다다 쇼핑몰</div></td>
+                                    <th><div>상품 카테고리</div></th>
+                                    <td><div>[<span class="cate_code">카테고리 코드</span>] <span>대 > 중 > 소</span></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>상품 유형</div></th>
+                                    <td colspan="3"><div>일반상품 또는 다다딜 상품</div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>판매상품(<span>옵션수</span>)</div></th>
+                                    <td colspan="3"><div>[<span class="prd_code">상품 코드</span>] <span>상품단위명</span></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="sect">
+                    <div class="radio_wrap motiv_radio">
+                        <label for="end_chk_1-1" class="radio_btn">판매상품
+                            <input type="radio" id="end_chk_1-1" name="end_chk" checked>
+                            <span class="radio_custom"></span>
+                        </label>
+                        <label for="end_chk_1-2" class="radio_btn">공급사
+                            <input type="radio" id="end_chk_1-2" name="end_chk">
+                            <span class="radio_custom"></span>
+                        </label>
+                        <label for="end_chk_1-3" class="radio_btn">판매사 강제종료
+                            <input type="radio" id="end_chk_1-3" name="end_chk">
+                            <span class="radio_custom"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="sect">
+                    <div class="txtarea_box">
+                        <textarea></textarea>
+                        <div class="file_box"><div class="btn btn_md">첨부파일</div></div>
+                    </div>
+                </div>
+                <div class="bot_btn_wrap"><div class="btn">강제종료 처리</div></div>
+            </div>
+        </div>
+        <!-- 레이어 body E -->
+    </div>
+    <!-- 레이어팝업 E -->
+
     <script>
         $(document).ready(() => {
             tFlex.init('pcacme004003_1', tableData2, true);
         })
 
-        var selectUi = {
-            class: 'select_wrap',
-            seData: [],
-            init: () => {
-                $.each($('.' + selectUi.class + ''), (index, item) => {
-                    var seObjData = new Object();
-                    seObjData.optData = new Array();
-                    seObjData.seNum = index;
-                    seObjData.actNum = '';
-                    seObjData.actVal = '';
-                    seObjData.actSta = false;
-                    var seTarget = $('.' + selectUi.class + '').eq(index).children('select');
-                    $.each(seTarget.children("option"), (seIndex, seItem) => {
-                        if (seTarget.children("option").eq(seIndex).attr('selected') != undefined) {
-                            seObjData.actSta = true;
-                            seObjData.actNum = seIndex;
-                            seObjData.actVal = seItem.text;
-                        }
-                        seObjData.optData.push(seItem.text);
-                    });
-                    selectUi.seData.push(seObjData);
-                })
-                selectUi.customSelect();
-            },
-            customSelect: () => {
-                $.each(selectUi.seData, (index, item) => {
-                    var selectHtml = '';
-                    var selectTname = item.actVal ? item.actVal : item.optData[0];
-                    selectHtml += '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
-                    selectHtml += '  <div class="select_name">' + selectTname + '</div>';
-                    selectHtml += '  <div class="opt_list">';
-                    $.each(item.optData, (seindex, seitem) => {
-                        selectHtml += '<div class="opt_item" optnum="' + seindex + '" onclick="selectUi.optionClick($(this))">' + seitem + '</div>';
-                    });
-                    selectHtml += '  </div>';
-                    selectHtml += '</div>';
-                    $('.' + selectUi.class + '').eq(item.seNum).append(selectHtml);
-                });
-            },
-            boxOpen: (obj) => {
-                if (obj.hasClass('active')) {
-                    obj.removeClass('active');
-                } else {
-                    obj.addClass('active');
-                }
-            },
-            optionClick: (obj) => {
-                obj.parent().parent().children('.select_name').text(obj.text());
-                obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
-            },
-        }
         selectUi.init();
 
     </script>
