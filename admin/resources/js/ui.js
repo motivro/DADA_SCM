@@ -7,7 +7,20 @@ $(document).ready(function(){
         githubUi.ini();
     }
     
+    // 검색창 단순 이벤트 
+    $('.btn_search_open').click(function(){
+        if($(this).children().hasClass('down')){
+            $(this).children().removeClass('down');
+            $(this).closest('.contents_box').addClass('open');
+        } else {
+            $(this).closest('.contents_box').removeClass('open');
+            $(this).children().addClass('down');
+        }
+    });
+
 });
+
+
 
 gitHubTgMenu = () => {
     
@@ -226,7 +239,7 @@ var selectUi = {
             obj.addClass('active');
         }
     },
-    
+
     optionClick : (obj) =>{
         obj.parent().parent().children('.select_name').text(obj.text());
         obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');

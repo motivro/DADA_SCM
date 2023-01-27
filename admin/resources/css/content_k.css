@@ -52,6 +52,32 @@
 #content .contents_box.prd_cont .prd_list .prd_item .thumb .info_item.bar > div.open{ height: 35px;transform: translate(0%, 0px);}
 
 
+
+/* 상품관리 */
+.srh_item_wrap{visibility: hidden;height: 0;}
+.hide_srh_box{border-top: var(--cont_border);display:none}
+.open .hide_srh_box{display:block}
+.search_block{width:40%}
+.search_block .srh_cont{width:100%}
+.search_block .srh_cont .inp_wrap{max-width:100%!important;width:100%}
+
+#sandbox_container{width:500px;}
+#sandbox_container > input{float:left;max-width:210px;margin-left:10px;border: var(--cont_border);}
+#sandbox_container > input:first-child{float:left;max-width:210px;margin-left:0}
+#sandbox_container > span{float:left;height:40px;padding:0 10px;margin:0;line-height:40px;box-sizing:border-box}
+
+.datepicker table tr td.active, 
+.datepicker table tr td.active.disabled, 
+.datepicker table tr td.active.disabled:hover, 
+.datepicker table tr td.active:hover{
+    background-image: -moz-linear-gradient(to bottom,#08c,#04c);
+    background-image: -ms-linear-gradient(to bottom,#fd6760,#fd6760);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fd6760),to(#fd6760));
+    background-image: -webkit-linear-gradient(to bottom,#fd6760,#fd6760);
+    background-image: -o-linear-gradient(to bottom,#fd6760,#fd6760);
+    background-image: linear-gradient(to bottom,#fd6760,#fd6760);
+}
+
 /* tblList */
 #content .panel_head{padding: 20px;}
 #content .panel_head.bdr_bot{border-bottom: var(--box_border);}

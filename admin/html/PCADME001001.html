@@ -9,22 +9,21 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/content_hs.css">
     <link rel="stylesheet" href="../resources/css/content_k.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
+    
 </head>
 
 <body>
 
-    <style>
-        .srh_item_wrap{visibility: hidden;height: 0;}
-        .hide_srh_box{border-top: var(--cont_border);display:none}
-        .open .hide_srh_box{display:block}
-        .search_block{width:40%}
-        .search_block .srh_cont{width:100%}
-        .search_block .srh_cont .inp_wrap{max-width:100%!important;width:100%}
-        
-    </style>
     <!-- wrap S -->
     <div class="wrap">
         <!-- header S -->
@@ -237,7 +236,7 @@
                 <div class="inner">
                     <h1>상품관리</h1>
                     
-                    <div class="contents_box">
+                    <div class="contents_box open">
                         <div class="srh_box">
                             <div class="srh_item">
                                 <div class="srh_item_inner search_block">
@@ -444,26 +443,28 @@
                                                 <div class="btn">3개월</div>
                                                 <div class="btn">1년</div>
                                             </div>
-                                            <div class="inp_wrap">
-                                                <input type="text" name="" id="" placeholder="2021-00-00">
+                        
+                                            <style>
+                                                
+                                                
+                                            </style>
+                                            <div id="sandbox_container" class="input-daterange input-group" id="datepicker">
+                                                <input type="text" class="input-sm form-control" name="start" />
+                                                <input type="text" class="input-sm form-control" name="end" />
                                             </div>
-                                            <div class="inp_wrap">
-                                                <input type="text" name="" id="" placeholder="2021-00-00">
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
+                        
                         <div class="srh_btn_box">
                             <div class="btn_wrap">
                                 <div class="btn btn_search">검색</div>
                                 <div class="btn">초기화</div>
                                 <div class="btn btn_search_open"><i class="arrow down"></i>펼처보기</div>
                             </div>
-                        
                         </div>
            
                     </div>
@@ -921,6 +922,10 @@
    <script>
 
     $(document).ready(() => {
+        $('#sandbox_container.input-daterange').datepicker({
+            language : "ko"
+        });
+        
         tFlex.init('pcacme001001_1', tableData2, true);
         tFlex.init('pcacme001001_2', tableData2, true);
         
@@ -930,16 +935,7 @@
         });
     });
 
-    $('.btn_search_open').click(function(){
-        console.log(123)
-        if($(this).children().hasClass('down')){
-            $(this).children().removeClass('down');
-            $(this).closest('.contents_box').addClass('open');
-        } else {
-            $(this).closest('.contents_box').removeClass('open');
-            $(this).children().addClass('down');
-        }
-    })
+    
 
     selectUi.init();
 
