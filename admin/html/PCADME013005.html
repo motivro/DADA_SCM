@@ -16,21 +16,15 @@
 
 <style>
     .btn.close_as{position:relative;width:40px;height:40px;}
-    .btn.plus_as{position:relative;width:30px;height:30px;position:absolute;    top: 50%;
-    right: 6px;
-    margin-top: -15px;right:5px;}
+    .btn.plus_as{position:relative;width:30px;height:30px;position:absolute;top: 50%;right: 6px;margin-top: -15px;right:5px;}
 
     .btn.close_as:before,
-    .btn.close_as:after,
     .btn.plus_as:before,
-    .btn.plus_as:after{content:'';display:block;clear:both;position:absolute;top:50%;left:50%;background-color:var(--color14)}
-    .btn.plus_as:before{width:12px;height:1px;margin-top:-1px;margin-left:-6px;}
-    .btn.plus_as:after{width:1px;height:12px;margin-top:-6px;margin-left:-1px;}
+    .btn.plus_as:after{content:'';display:block;clear:both;position:absolute;top:50%;left:50%;background-color:var(--color1)}
+    .btn.plus_as:before{width:12px;height:2px;margin-top:-1px;margin-left:-6px;}
+    .btn.plus_as:after{width:2px;height:12px;margin-top:-6px;margin-left:-1px;}
 
-    .btn.close_as:before{width:15px;height:1px;margin-top:-1px;margin-left:-8px;}
-    .btn.close_as:after{width:1px;height:15px;margin-top:-8px;margin-left:-1px;}
-    .btn.close_as:before,
-    .btn.close_as:after{transform: rotate(45deg);}
+    .btn.close_as:before{width:12px;height:2px;margin-top:-1px;margin-left:-6px;}
     
 
 </style>
@@ -256,11 +250,11 @@
                                             <ul class="sub_store_list">
                                                 <li>
                                                     <div class="name">디디피 패션몰</div>
-                                                    <div class="sta_info"><span>수정</span> | <span>삭제</span></div>
+                                                    <div class="sta_info"><span>수정</span><span>삭제</span></div>
                                                 </li>
                                                 <li>
                                                     <div class="name">디디피 패션몰</div>
-                                                    <div class="sta_info"><span>수정</span> | <span>삭제</span></div>
+                                                    <div class="sta_info"><span>수정</span><span>삭제</span></div>
                                                 </li>
                                             </ul>
                                         </li>
@@ -269,11 +263,11 @@
                                             <ul class="sub_store_list">
                                                 <li>
                                                     <div class="name">디디피 패션몰</div>
-                                                    <div class="sta_info"><span>수정</span> | <span>삭제</span></div>
+                                                    <div class="sta_info"><span>수정</span><span>삭제</span></div>
                                                 </li>
                                                 <li>
                                                     <div class="name">디디피 패션몰</div>
-                                                    <div class="sta_info"><span>수정</span> | <span>삭제</span></div>
+                                                    <div class="sta_info"><span>수정</span><span>삭제</span></div>
                                                 </li>
                                             </ul>
                                         </li>
@@ -347,90 +341,32 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                                <div class="store_add_box dtl_img">
+                                                    <!-- <div class="tit">사진 등록</div> -->
+                                                    <div class="store_add_cont">
+                                                        <div class="store_inner">
+                                                            <div class="store_cont">
+                                                                <div class="store_img_wrap">
+                                                                    <div class="store_img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
+                                                                </div>
+                                                                <div class="store_add_btnbox">
+                                                                    <div class="store_btn_plus"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="store_add_box dtl_img">
-                                    <div class="tit">사진 등록</div>
-                                    <div class="add_dtl_img">이미지 등록 박스</div>
-                                </div>
+                                
                                 <div class="store_add_box dtl_info">
                                     <div class="tit">상세정보</div>
                                     <div><textarea name="" id="" cols="30" rows="10">에디터 삽입</textarea></div>
                                 </div>
 
-                                <!-- <div class="panel_body pd_0">
-                                    <div class="motiv_tbl_box name_k">
-                                        <h2>계정정보</h2>
-                                        <div class="tbl_item">
-                                            <table class="motiv_normal_tbl ta_c">
-                                                <caption>카테고리 분류정보관리</caption>
-                                                <colgroup>
-                                                    <col style="width:15%;">
-                                                    <col style="width:auto;">
-                                                    <col style="width:15%">
-                                                    <col style="width:auto">
-                                                    <col style="width:15%;">
-                                                    <col style="width:auto">
-                                                </colgroup>
-                                                <tbody>
-                                                    <tr>
-                                                        <th><div>쇼핑몰</div></th>
-                                                        <td class="ta_l">
-                                                            <div>
-                                                                <div class="inp_wrap"><input type="text" name="" id="" value="다다몰" disabled></div>
-                                                            </div>
-                                                        </td>
-                                                        <th><div>계정아이디</div></th>
-                                                        <td class="ta_l">
-                                                            <div>
-                                                                <div class="inp_wrap"><input type="text" name="" id="" placeholder="ID"></div>
-                                                            </div>
-                                                        </td>
-                                                        <th><div>계정암호</div></th>
-                                                        <td class="ta_l">
-                                                            <div>
-                                                                <div class="inp_wrap"><input type="text" name="" id="" placeholder="Password"></div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="add_store_info">
-                                                        <td colspan="6">
-                                                            <div class="custom_tbl" style="display:table;padding:20px; border:var(--cont_border);">
-                                                                <div class="hd_item" style="display: table-row;">
-                                                                    <div style="display:table-cell;width:30%;"><div style="padding: 5px;" class="name">층수</div></div>
-                                                                    <div style="display:table-cell;width:70%"><div style="padding: 5px;" class="name">주요 컨텐츠</div></div>
-                                                                </div>
-                                                                <div class="bd_item" style="display: table-row;">
-                                                                    <div style="display:table-cell;width: 30%;padding: 10px 20px;">
-                                                                        <div class="d_flex">
-                                                                            <div class="select_wrap">
-                                                                                <select>
-                                                                                    <option value="분류선택" selected>분류선택</option>
-                                                                                    <option value="분류선택">분류선택</option>
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="inp_wrap">
-                                                                                <input type="text" placeholder="1">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div style="display:table-cell;width: 70%;padding: 10px 20px;">
-                                                                        <div class="inp_wrap">
-                                                                            <input type="text" placeholder="층수 설명">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div> -->
                                 <div class="srh_btn_box bd_0">
                                     <div class="btn_wrap"><div class="btn">상가정보 저장</div>
                                     </div>
