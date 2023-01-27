@@ -1150,6 +1150,10 @@
 .motiv_layer .tab_area .tab_box .tab_item .new_sta{display: flex;align-items: center;gap:2px;}
 .motiv_layer .tab_area .tab_box .tab_item .new_sta:before{content: 'N';display: inline-block;font-size: 10px;line-height: 14px;color:#fff;background: var(--color1);padding: 0 3px;}
 
+.motiv_layer .sub_tab_area{}
+.motiv_layer .sub_tab_area .sub_tab_box{display: flex;align-items: center;gap:8px;text-align: center;}
+.motiv_layer .sub_tab_area .sub_tab_box .sub_tab_item{padding:0 15px;font-size: var(--fts13);font-weight: var(--ftw500);line-height:28px;color: var(--color13);background: var(--color21);cursor: pointer;display: flex;justify-content: center;align-items: center;gap:3px;border: var(--cont_border);}
+.motiv_layer .sub_tab_area .sub_tab_box .sub_tab_item.active{color: #fff;background: var(--color5);border-color: var(--color5);}
 
 .motiv_layer .flex_wrap.seller_info{gap: 25px;align-items: flex-end;}
 .motiv_layer .flex_wrap.seller_info .left{width: 140px;}
@@ -1202,6 +1206,7 @@
 .motiv_layer .tab_cont .cont_box .cont_item .list_item .date{font-size: var(--fts12);font-weight: var(--ftw500);color: var(--color19);}
 .motiv_layer .tab_cont .question_txt{min-height: 100px;}
 
+.motiv_layer .motiv_tbl.normal .tbl_inner .row_item{flex-wrap: nowrap;}
 .motiv_layer .motiv_normal_tbl.prd_calc .prd_code{display: flex;align-items: center;gap: 8px;}
 .motiv_layer .motiv_normal_tbl.prd_calc .prd_code .code_item{color: var(--color13);font-size: var(--fts14);font-weight: var(--ftw500);}
 .motiv_layer .chart_box{border: var(--box_border);padding: 20px;min-height: 100px;}
