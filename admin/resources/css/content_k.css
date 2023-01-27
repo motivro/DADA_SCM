@@ -70,12 +70,12 @@
 .datepicker table tr td.active.disabled, 
 .datepicker table tr td.active.disabled:hover, 
 .datepicker table tr td.active:hover{
-    background-image: -moz-linear-gradient(to bottom,#08c,#04c);
+    background-image: -moz-linear-gradient(to bottom,#08c,#04c)!important;
     background-image: -ms-linear-gradient(to bottom,#fd6760,#fd6760);
-    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fd6760),to(#fd6760));
-    background-image: -webkit-linear-gradient(to bottom,#fd6760,#fd6760);
-    background-image: -o-linear-gradient(to bottom,#fd6760,#fd6760);
-    background-image: linear-gradient(to bottom,#fd6760,#fd6760);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fd6760),to(#fd6760))!important;
+    background-image: -webkit-linear-gradient(to bottom,#fd6760,#fd6760)!important;
+    background-image: -o-linear-gradient(to bottom,#fd6760,#fd6760)!important;
+    background-image: linear-gradient(to bottom,#fd6760,#fd6760)!important;
 }
 
 /* tblList */
