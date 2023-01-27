@@ -28,7 +28,7 @@
 #content .select_wrap .select_box .select_name{width:100%;font-size: var(--fts13);font-weight: var(--ftw500);line-height: 20px;position: relative;cursor: pointer;}
 #content .select_wrap .select_box .select_name:after{content:'';display: block;width: 12px;height: 12px;background: url('../images/common/arrow_select_down.svg')no-repeat center center;background-size: cover;position: absolute;right: 0;top: 50%;transform: translateY(-50%);}
 #content .select_wrap .select_box.active .select_name:after{background: url('../images/common/arrow_select_up.svg')no-repeat center center;background-size: cover;}
-#content .select_wrap .select_box .opt_list{display: none;width:calc(100% + 2px);padding:0 10px;position: absolute;left: -1px;top: 100%;z-index: 5;background: #fff;border: var(--cont_border);}
+#content .select_wrap .select_box .opt_list{display: none;width:calc(100% + 2px);padding:0;position: absolute;left: -1px;top: 100%;z-index: 5;background: #fff;border: var(--cont_border);}
 #content .select_wrap .select_box.active .opt_list{display: block;cursor: pointer;}
 #content .select_wrap .select_box .opt_list .opt_item{padding: 5px 0;}
 /* select_custom E */

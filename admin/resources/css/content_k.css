@@ -67,6 +67,8 @@
 #content .cont_group .select_wrap{width: 150px;}
 #content .cont_group .select_wrap.tbl_search{width:100px}
 #content .cont_group .icon_tbl_cus{display:inline-block;width: 20px;height:20px;background: url('../images/common/icon_tbl_cus.svg')no-repeat center center;background-size: cover;cursor: pointer;}
+#content .cont_group .icon_tbl_cus:hover{animation: rotate 2s linear infinite}
+
 #content .btn_group{display: flex;justify-content: flex-end;align-items: center;}
 #content .panel_body{padding: 20px;}
 
@@ -143,7 +145,8 @@ i.down{transform:rotate(45deg);-webkit-transform:rotate(45deg);margin-top:-5px;}
 #content .inp_wrap.email_form > .select_wrap{text-align:left;min-width:100px;}
 #content .inp_wrap.email_form > .select_wrap .select_name:after{right: 0;}
 
-#content .select_wrap .select_box .opt_list .opt_item{padding:5px 0;display:block;display:-webkit-box;overflow:hidden;max-height:30px;text-overflow:ellipsis;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+#content .select_wrap .select_box .opt_list .opt_item{padding:5px 10px;display:block;display:-webkit-box;overflow:hidden;max-height:30px;text-overflow:ellipsis;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+#content .select_wrap .select_box .opt_list .opt_item:hover{background-color:var(--color15)}
 
 .calendar_form{display:inline-block;}
 .calendar_form:after{content:'';display:block;clear:both}

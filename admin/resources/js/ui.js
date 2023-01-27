@@ -202,6 +202,7 @@ var selectUi = {
         })
         selectUi.customSelect();
     },
+
     customSelect: () => {
         $.each( selectUi.seData, (index, item) => {
             var selectHtml = '';
@@ -217,6 +218,7 @@ var selectUi = {
             $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
         });
     },
+
     boxOpen : (obj) =>{
         if(obj.hasClass('active')){
             obj.removeClass('active');
@@ -224,6 +226,7 @@ var selectUi = {
             obj.addClass('active');
         }
     },
+    
     optionClick : (obj) =>{
         obj.parent().parent().children('.select_name').text(obj.text());
         obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
