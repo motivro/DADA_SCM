@@ -25,7 +25,9 @@
 /* select_custom S */
 #content .select_wrap select{display:none}
 #content .select_wrap .select_box{min-width:90px;width:100%;padding:9px 10px;border: var(--cont_border);position: relative;}
+#content .motiv_tbl_box .motiv_normal_tbl.question td .view_info .item .select_wrap .select_box{}
 #content .select_wrap .select_box .select_name{width:100%;font-size: var(--fts13);font-weight: var(--ftw500);line-height: 20px;position: relative;cursor: pointer;}
+
 #content .select_wrap .select_box .select_name:after{content:'';display: block;width: 12px;height: 12px;background: url('../images/common/arrow_select_down.svg')no-repeat center center;background-size: cover;position: absolute;right: 0;top: 50%;transform: translateY(-50%);}
 #content .select_wrap .select_box.active .select_name:after{background: url('../images/common/arrow_select_up.svg')no-repeat center center;background-size: cover;}
 #content .select_wrap .select_box .opt_list{display: none;width:calc(100% + 2px);padding:0;position: absolute;left: -1px;top: 100%;z-index: 5;background: #fff;border: var(--cont_border);}
@@ -255,7 +257,9 @@
 
 #content .inp_wrap input[type="text"]{border: var(--cont_border);}
 #content .contents_box .srh_box{padding:0 20px;background: var(--search_box_bg);}
+#content .contents_box .srh_box.child_box{background:none;padding:0}
 #content .contents_box .srh_box .srh_item{padding:20px 0;border-top:var(--cont_border);display: flex;}
+#content .contents_box .srh_box.child_box .srh_item{padding:0}
 #content .contents_box .srh_box .srh_item:first-child{border-top: 0;}
 #content .contents_box .srh_box .srh_item.row-2 .srh_item_inner{width: 50%;}
 #content .contents_box .srh_box .srh_item.row-2 .srh_item_inner + .srh_item_inner{margin-left:0;}
@@ -267,10 +271,11 @@
 
 #content .contents_box .srh_box .srh_item .srh_item_inner:first-child{padding-left: 5px;}
 #content .contents_box .srh_box .srh_item .srh_title{min-width: 100px;font-size: 14px;font-weight:700;line-height: 20px;}
+#content .contents_box .srh_box.child_box .srh_item .srh_title{font-size: var(--fts16);font-weight: var(--ftw500);}
 #content .contents_box .srh_box .srh_item .srh_cont{display: flex;align-items:center;gap: 14px;color:var(--color14)}
 #content .contents_box .srh_btn_box{padding: 20px 0;text-align: center;background: #fff;border-top: var(--cont_border);}
 #content .contents_box .srh_btn_box .btn_wrap{display: flex; justify-content: center;align-items: center;gap: 14px;}
-#content .contents_box .srh_btn_box .btn_wrap .btn{width:130px;}
+#content .contents_box .srh_btn_box .btn_wrap .btn{width:155px;}
 #content .contents_box .srh_box .inp_wrap{max-width: 210px;}
 #content .contents_box .srh_box .inp_wrap input[type="text"]{padding:5px 10px;font-size:14px;font-weight: 500;line-height: 18px;}
 #content .contents_box .srh_box .date_wrap{display: flex;align-items: center;gap: 10px;}
@@ -546,7 +551,7 @@
 #content .motiv_tbl_box .motiv_normal_tbl.statis tbody tr th{background: var(--color10);}
 
 #content .chart_box{display: flex;justify-content: space-between; align-items: stretch;}
-#content .chart_box .chart_item{width: calc(50% - 10px);height:100px;background: #fff;border: var(--box_border);}
+#content .chart_box .chart_item{width: calc(50% - 10px);min-height:100px;background: #fff;border: var(--box_border);}
 
 #content .calender_box{padding: 20px;}
 #content .calender_box .cal_select{display: flex;justify-content:center;align-items: center;gap: 8px;}
@@ -699,10 +704,10 @@
 #content .shop_cont_box{padding:20px;display: flex;justify-content: space-between;align-items: stretch;}
 #content .shop_cont_box .left_box{width: 320px;}
 #content .shop_cont_box .shop_info{height:100%;padding:20px;border: var(--box_border);background: var(--color16);}
-#content .shop_cont_box .shop_info .use_now{padding-bottom:5px;border-bottom: var(--box_border);}
-#content .shop_cont_box .shop_info .shop_list{margin-top: 15px;}
-#content .shop_cont_box .shop_info .shop_list > li{display:flex;justify-content:space-between;padding:0 5px 5px;border-bottom: var(--box_border);}
-#content .shop_cont_box .shop_info .shop_list > li + li{margin-top: 10px;}
+#content .shop_cont_box .shop_info .use_now{font-size:var(--fts14);font-weight:700;padding:10px 0;border-bottom: var(--box_border);}
+#content .shop_cont_box .shop_info .shop_list{}
+#content .shop_cont_box .shop_info .shop_list > li{display:flex;justify-content:space-between;padding: 15px;border-bottom: var(--box_border);}
+#content .shop_cont_box .shop_info .shop_list > li + li{}
 #content .shop_cont_box .right_box{width: calc(100% - 340px);}
 #content .shop_cont_box .right_box .srh_cont{display: flex;gap: 10px;align-items: center;}
 #content .shop_cont_box .right_box .srh_cont + .srh_cont{margin-top: 10px;}
@@ -718,7 +723,7 @@
 #content .store_cont_box .store_info{height:100%;padding:20px;border: var(--box_border);background: var(--color16);}
 /* #content .store_cont_box .store_info .store_list{margin-top: 15px;} */
 #content .store_cont_box .store_info .store_list > li + li{margin-top: 40px;}
-#content .store_cont_box .store_info .store_list > li > a{display:block;padding-bottom: 5px;border-bottom: var(--box_border);}
+#content .store_cont_box .store_info .store_list > li > a{font-size:var(--fts14);font-weight:700;padding:10px 0;display:block;border-bottom: var(--box_border);}
 #content .store_cont_box .store_info .store_list .sub_store_list{}
 #content .store_cont_box .store_info .store_list .sub_store_list > li {display:flex;justify-content:space-between;padding:15px;border-bottom: var(--box_border);}
 #content .store_cont_box .store_info .store_list .sub_store_list > li .sta_info > span{cursor: pointer;font-weight:var(--ftw500);}
@@ -935,7 +940,7 @@
 #content .motiv_tbl_box .motiv_normal_tbl.question td .view_info .item{display: flex;align-items:center;gap: 5px;}
 #content .motiv_tbl_box .motiv_normal_tbl.question td .view_info .item + .item{margin-top: 5px;}
 #content .motiv_tbl_box .motiv_normal_tbl.question td .view_info .item .select_wrap{min-width: 70px;}
-#content .motiv_tbl_box .motiv_normal_tbl.question td .view_info .item .select_wrap .select_box{padding: 5px;}
+#content .motiv_tbl_box .motiv_normal_tbl.question td .view_info .item .select_wrap .select_box{}
 #content .motiv_tbl_box .motiv_normal_tbl.question td .view_info .item .select_wrap .select_box .select_name{font-size: var(--fts12);line-height: 8px;}
 
 /* 소싱진열관리 */

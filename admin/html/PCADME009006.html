@@ -9,9 +9,23 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/content_hs.css">
     <link rel="stylesheet" href="../resources/css/content_k.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
 </head>
 
 <body>
@@ -225,31 +239,26 @@
                 <!-- inner S -->
                 <div class="inner">
                     <h1>SCM플랫폼 리포트</h1>
-                    <div class="contents_box">
-                        <div class="srh_box">
-                            <div class="srh_item">
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">기간</div>
-                                    <div class="srh_cont">
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="2021-00-00">
-                                        </div>
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="2021-00-00">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="srh_btn_box">
-                            <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
-                        </div>
-                    </div>
+                  
 
                     <div class="contents_box pd_0 bg_none bd_0">
                         <div class="statis_dash row-2">
                             <div class="dash_item">
-                                <div class="dash_tit"><span class="tit">회원 통계</span></div>
+                                <div class="srh_box child_box">
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">회원 통계</div>
+                                            <div class="srh_cont">
+                                                <div id="sandbox_container" class="input-daterange input-group mini range1">
+                                                    <input type="text" class="input-sm form-control" name="start" placeholder="경과일자 시작"/>
+                                                    <input type="text" class="input-sm form-control" name="end" placeholder="경과일자 종료"/>
+                                                </div>
+                                                <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                  
                                 <div class="dash_cont">
                                     <div class="data_list">
                                         <div class="data_item">
@@ -303,8 +312,22 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="dash_item">
-                                <div class="dash_tit"><span class="tit">배송 통계</span></div>
+                                <div class="srh_box child_box">
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">배송 통계</div>
+                                            <div class="srh_cont">
+                                                <div id="sandbox_container" class="input-daterange input-group mini range2">
+                                                    <input type="text" class="input-sm form-control" name="start" placeholder="경과일자 시작"/>
+                                                    <input type="text" class="input-sm form-control" name="end" placeholder="경과일자 종료"/>
+                                                </div>
+                                                <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="dash_cont">
                                     <div class="data_list">
                                         <div class="data_item">
@@ -357,16 +380,41 @@
                         </div>
                         <div class="statis_dash row-1">
                             <div class="dash_item">
-                                <div class="dash_tit">
-                                    <span class="tit">접속 통계</span>
-                                    <div class="btn_wrap">
-                                        <div class="btn">요일분석</div>
-                                        <div class="btn">시간별 분석</div>
-                                        <div class="btn">엑셀다운로드</div>
+                                <div class="cont_group d_flex">
+                                    <div class="cont_left">
+                                        <div class="srh_box child_box">
+                                    
+                                            <div class="srh_item">
+                                                
+                                                <div class="srh_item_inner">
+                                                    <div class="srh_title">접속 통계</div>
+                                                    <div class="srh_cont">
+                                                        <div id="sandbox_container" class="input-daterange input-group mini range3">
+                                                            <input type="text" class="input-sm form-control" name="start" placeholder="경과일자 시작"/>
+                                                            <input type="text" class="input-sm form-control" name="end" placeholder="경과일자 종료"/>
+                                                        </div>
+                                                        <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cont_right">
+                                        <div class="btn_wrap">
+                                            <div class="btn">요일분석</div>
+                                            <div class="btn">시간별 분석</div>
+                                            <div class="btn">엑셀다운로드</div>
+                                            <div class="btn">새창</div>
+                                        </div>
                                     </div>
                                 </div>
+                                
                                 <div class="dash_cont">
-                                    <div class="ta_c" style="padding: 30px 0;">차트가 들어갈 예정</div>
+                                    <div class="ta_c" style="padding: 30px 0;">
+                                        <figure class="highcharts-figure">
+                                            <div id="highcharts_container"></div>
+                                        </figure>
+                                    </div>
                                     <div class="data_tbl">
                                         <table>
                                             <caption>회원 통계</caption>
@@ -426,7 +474,111 @@
     </div>
     <!-- wrap E -->
     <script>
-       
+        $(document).ready(() => {
+            $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
+            $('#sandbox_container.input-daterange.range2').datepicker({language : "ko"});
+            $('#sandbox_container.input-daterange.range3').datepicker({language : "ko"});
+        });
+
+       Highcharts.chart('highcharts_container', {
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: ' ',
+                align: 'left'
+            },
+
+            xAxis: {
+                categories: ['22.01', '22.02', '22.03', '22.04', '22.05', '22.06', '22.07', '22.08', '22.09', '22.10', '22.11', '22.12'],
+                accessibility: {
+                description: ' '
+                }
+            },
+            yAxis: {
+                title: {
+                text: ' '
+                },
+                labels: {
+                formatter: function () {
+                    return this.value + '°';
+                }
+                }
+            },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            plotOptions: {
+                spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+                }
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+            series: [
+                {
+                    name: '로그인 횟수',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [21908, 5548, 8105, 11248, 8989, 11816, 18274,17300, 13053, 11906, 10073]
+                }, {
+                    name: '신규가입자',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [24916, 37941, 29742, 29851, 32490, 30282,38121, 36885, 33726, 34243, 31050]
+                }, {
+                    name: '결제상품수',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [11744, 30000, 16005, 19771, 20185, 24377,32147, 30912, 29243, 29213, 25663]
+                }, {
+                    name: '결제금액',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [null, null, null, null, null, null, null,null, 11164, 11218, 10077]
+                }, {
+                    name: '환불상품수',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [43934, 48656, 65165, 81827, 112143, 142383,171533, 165174, 155157, 161454, 154610]
+                }, {
+                    name: '환불금액',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [43934, 48656, 65165, 81827, 112143, 142383,171533, 165174, 155157, 161454, 154610]
+                }
+            ],
+
+            responsive: {
+            rules: [{
+                condition: {
+                maxWidth: 500
+                },
+                chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+                }
+            }]
+        }
+        });
         selectUi.init();
 
     </script>

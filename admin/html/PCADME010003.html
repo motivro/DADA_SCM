@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/content_hs.css">
     <link rel="stylesheet" href="../resources/css/content_k.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
 </head>
 
 <body>
@@ -241,16 +248,14 @@
                                 <div class="srh_item_inner">
                                     <div class="srh_title">접속일자</div>
                                     <div class="srh_cont">
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="접속일자">
+                                        <div id="sandbox_container" class="input-group date">
+                                            <input type="text" class="form-control" placeholder="접속일자"><span class="input-group-addon"></span>
                                         </div>
                                     </div>
                                     <div class="srh_cont">
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="경과일자 시작">
-                                        </div>
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="경과일자 종료">
+                                        <div id="sandbox_container" class="input-daterange input-group">
+                                            <input type="text" class="input-sm form-control" name="start" placeholder="경과일자 시작"/>
+                                            <input type="text" class="input-sm form-control" name="end" placeholder="경과일자 종료"/>
                                         </div>
                                     </div>
                                 </div>
@@ -316,6 +321,13 @@
     <!-- wrap E -->
     <script>
         $(document).ready(() => {
+            $('#sandbox_container.input-daterange').datepicker({
+                language : "ko"
+            });
+            $('#sandbox_container.input-group.date').datepicker({
+                language : "ko"
+            });
+
             tFlex.init('pcacme001001_1', tableData2, true);
         });
 

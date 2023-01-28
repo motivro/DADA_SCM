@@ -9,9 +9,23 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/content_hs.css">
     <link rel="stylesheet" href="../resources/css/content_k.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
+    
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
 </head>
 
 <body>
@@ -241,17 +255,16 @@
                                     </div>
                                 </div>
                                 <div class="srh_item_inner">
-                                    <div class="srh_title">기간</div>
+                                    <div class="srh_title">검색기간</div>
                                     <div class="srh_cont">
+                                        <div id="sandbox_container" class="input-daterange input-group range1">
+                                            <input type="text" class="input-sm form-control" name="start" placeholder=""/>
+                                            <span class="tilde">~</span>
+                                            <input type="text" class="input-sm form-control" name="end" placeholder=""/>
+                                        </div>
                                         <div class="btn_wrap">
                                             <div class="btn">오늘</div>
                                             <div class="btn">7일</div>
-                                        </div>
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="2021-00-00">
-                                        </div>
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="2021-00-00">
                                         </div>
                                     </div>
                                 </div>
@@ -359,8 +372,10 @@
                         </div>
                     </div>
                     <div class="contents_box bg_none bd_0">
-                        <div class="chart_box">
-                            <div class="chart_item" style="width: 100%;">차트</div>
+                        <div class="" style="width:100%;padding:30px;background-color:#fff">
+                            <figure class="highcharts-figure">
+                                <div id="highcharts_container2"></div>
+                            </figure>
                         </div>
                     </div>
                     <!-- tableList S -->
@@ -519,15 +534,15 @@
                                 <div class="srh_item_inner">
                                     <div class="srh_title">기간</div>
                                     <div class="srh_cont">
+                                        <div id="sandbox_container" class="input-daterange input-group range2">
+                                            <input type="text" class="input-sm form-control" name="start" placeholder=""/>
+                                            <span class="tilde">~</span>
+                                            <input type="text" class="input-sm form-control" name="end" placeholder=""/>
+                                        </div>
+
                                         <div class="btn_wrap">
                                             <div class="btn">오늘</div>
                                             <div class="btn">10일</div>
-                                        </div>
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="2021-00-00">
-                                        </div>
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="2021-00-00">
                                         </div>
                                     </div>
                                 </div>
@@ -751,9 +766,61 @@
     </div>
     <!-- wrap E -->
     <script>
-       
+        $(document).ready(() => {
+            $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
+            $('#sandbox_container.input-daterange.range2').datepicker({language : "ko"});
+        });
         selectUi.init();
 
+        Highcharts.chart('highcharts_container2', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: ' '
+            },
+            
+            xAxis: {
+                categories: ['22.01', '22.02', '22.03', '22.04', '22.05', '22.06', '22.07', '22.08', '22.09', '22.10', '22.11', '22.12'],
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                text: 'Rainfall (mm)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+                }
+            },
+            series: [{
+                name: '전체',
+                data: [249.9, 171.5, 306.4, 229.2, 224.0, 276.0, 335.6, 348.5, 316.4,394.1, 295.6, 154.4]
+
+            }, {
+                name: '일반판매',
+                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5,106.6, 92.3]
+
+            }, {
+                name: '지정판매',
+                data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3,51.2]
+
+            }, {
+                name: '직접판매',
+                data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8,51.1]
+            }]
+            });
     </script>
 </body>
 

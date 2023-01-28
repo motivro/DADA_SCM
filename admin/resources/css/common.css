@@ -52,7 +52,7 @@
 .d_flex{display: flex;}
 
 html{position: relative;}
-body{background: #f0f1f2;}
+body{background: #fafafa;}
 body > .wrap{min-width: 1400px;min-height:100%;position: relative;}
 
 input[type="text"]{width: 100%;min-height:40px;}
