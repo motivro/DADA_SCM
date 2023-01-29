@@ -59,6 +59,9 @@ var tFlex = {
         //테스트용 
         if(test) $('#'+id+'.contents_box .panel_body .tbl_wrap').append(tableListData);
 
+        if(obj.scrollLook == undefined) obj.scrollLook = new Array();
+        if(obj.scrollLookSta == undefined) obj.scrollLookSta = false;
+
         if (obj.scrollLookSta) {// tableData.scrollLookSta의 값이 true 일때 실행됨니다.
             tFlex.scrollLookSta = true;
             $('#'+id+' .motiv_tbl').addClass('look_tbl');
@@ -95,12 +98,15 @@ var tFlex = {
     },
 
     //락이 걸리는 테이블일때 실행됨니다.
-    lookSize: (data) => {
+    lookSize: (data, id) => {
         var widthHeadVal = tFlex.ckbSize; //체크박스의 넗이 만큼 추가 됨니다.
         var widthBodyVal = 0;
+        
         $.each(data.scrollLook, (index, item) => {
             widthHeadVal = widthHeadVal + data.tableSize[item];
         });
+
+        console.log(data)
 
         $.each(data.tableSize, (index, item) => {
             if (!data.scrollLook.includes(index)) {
@@ -111,6 +117,7 @@ var tFlex = {
         tFlex.leftWidth = widthHeadVal;
         tFlex.rightWidth = widthBodyVal;
         tFlex.totalWidth = widthHeadVal + widthBodyVal;
+        
     },
 
     dynamicUi: (obj, id) => {
@@ -164,20 +171,20 @@ var tFlex = {
 
     lookWheelUi: (id) => {
         var wheelStart = 0;
-        $('#'+ id +' .motiv_tbl.look_tbl .tbl_inner .tbl_body .look_body_box .look_body_list').on("wheel scroll", function (e) {
+        $('#'+ id).find('.look_body_list').on("wheel scroll", function (e) {
             if(e.type == "wheel"){
                 var wheel = e.originalEvent.deltaX;
                 wheelStart = wheelStart - wheel;
                 var motivrTbl = tFlex.motivTblWidth - tFlex.leftWidth - tFlex.rightWidth;
                 if (wheelStart >= 0) wheelStart = 0;
                 if (wheelStart < motivrTbl) wheelStart = motivrTbl;
-                $('#'+ id +' .motiv_tbl.look_tbl .tbl_inner .tbl_body .look_body_box .look_body_list').scrollLeft(Math.abs(wheelStart));
+                $('#'+ id).find('.look_body_list').scrollLeft(Math.abs(wheelStart));
             } else {
                 var wheel = $(this).scrollLeft();
                 wheelStart = -wheel;
             }
-
-            $('#'+ id +' .motiv_tbl .tbl_head .look_head_box .look_head_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
+            $('#'+ id).find('.look_head_list').find('.d_flex').css('transform', 'translateX(' + wheelStart + 'px');
+            // $('#'+ id +' .motiv_tbl .tbl_head .look_head_box .look_head_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
             // $('#'+ id +' .motiv_tbl .tbl_body .look_body_box .look_body_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
 
             e.preventDefault();

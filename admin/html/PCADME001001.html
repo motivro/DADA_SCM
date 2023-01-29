@@ -19,7 +19,7 @@
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
-    
+
 </head>
 
 <body>
@@ -235,7 +235,7 @@
                 <!-- inner S -->
                 <div class="inner">
                     <h1>상품관리</h1>
-                    
+
                     <div class="contents_box">
                         <div class="srh_box">
                             <div class="srh_item">
@@ -250,7 +250,8 @@
                                 <div class="srh_item_inner">
                                     <div class="srh_title">공급사</div>
                                     <div class="srh_cont">
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="SCM회원 ID, 상호명">
+                                        <div class="inp_wrap"><input type="text" name="" id=""
+                                                placeholder="SCM회원 ID, 상호명">
                                         </div>
                                     </div>
                                 </div>
@@ -315,7 +316,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="srh_item row-2">
                                     <div class="srh_item_inner">
                                         <div class="srh_title">카테고리</div>
@@ -326,14 +327,14 @@
                                                     <option value="대분류1">대분류1</option>
                                                 </select>
                                             </div>
-    
+
                                             <div class="select_wrap">
                                                 <select>
                                                     <option value="중분류" selected>중분류</option>
                                                     <option value="중분류1">중분류1</option>
                                                 </select>
                                             </div>
-    
+
                                             <div class="select_wrap">
                                                 <select>
                                                     <option value="소분류" selected>소분류</option>
@@ -358,7 +359,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="srh_item row-2">
                                     <div class="srh_item_inner">
                                         <div class="srh_title">리워드율(%)</div>
@@ -366,7 +367,7 @@
                                             <div class="inp_wrap">
                                                 <input type="text" name="" id="" placeholder="0">
                                             </div>
-    
+
                                             <div class="select_wrap">
                                                 <select>
                                                     <option value="이상" selected>이상</option>
@@ -381,7 +382,7 @@
                                             <div class="inp_wrap">
                                                 <input type="text" name="" id="" placeholder="0">
                                             </div>
-    
+
                                             <div class="select_wrap">
                                                 <select>
                                                     <option value="이상" selected>이상</option>
@@ -391,7 +392,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="srh_item row-2">
                                     <div class="srh_item_inner">
                                         <div class="srh_title">사유</div>
@@ -399,7 +400,7 @@
                                             <div class="inp_wrap">
                                                 <input type="text" name="" id="" placeholder="반려사유">
                                             </div>
-    
+
                                             <div class="select_wrap">
                                                 <select>
                                                     <option value="이상" selected>이상</option>
@@ -424,7 +425,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="srh_item">
                                     <div class="srh_item_inner">
                                         <div class="srh_title">기간</div>
@@ -435,7 +436,7 @@
                                                     <option value="다다딜 판매기간">다다딜 판매기간</option>
                                                 </select>
                                             </div>
-    
+
                                             <div class="btn_wrap">
                                                 <div class="btn active">오늘</div>
                                                 <div class="btn">1주일</div>
@@ -443,10 +444,12 @@
                                                 <div class="btn">3개월</div>
                                                 <div class="btn">1년</div>
                                             </div>
-                        
+
                                             <div id="sandbox_container" class="input-daterange input-group">
-                                                <input type="text" class="input-sm form-control" name="start" placeholder="2022-00-00"/>
-                                                <input type="text" class="input-sm form-control" name="end" placeholder="2022-00-00"/>
+                                                <input type="text" class="input-sm form-control" name="start"
+                                                    placeholder="2022-00-00" />
+                                                <input type="text" class="input-sm form-control" name="end"
+                                                    placeholder="2022-00-00" />
                                             </div>
 
                                         </div>
@@ -454,7 +457,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="srh_btn_box">
                             <div class="btn_wrap">
                                 <div class="btn btn_search">검색</div>
@@ -462,7 +465,7 @@
                                 <div class="btn btn_search_open"><i class="arrow down"></i>펼처보기</div>
                             </div>
                         </div>
-           
+
                     </div>
 
                     <!-- tableList S -->
@@ -487,7 +490,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="panel_body">
                             <div class="btn_group d_flex">
                                 <div class="btn_wrap">
@@ -497,14 +500,370 @@
                                 </div>
                             </div>
 
-                            <div class="tbl_wrap"></div>
+                            <div class="tbl_wrap">
+                                <div class='motiv_tbl'>
+                                    <div class='tbl_inner'>
+                                        <div class='tbl_head'>
+                                            <div class='look_head_head'>
+                                                <div class='row_item d_flex'>
+                                                    <div class='hd_item' keyname='checkedbox'>
+                                                        <div>
+                                                            <div class='cus_inp_wrap checkbox_inp'> 
+                                                                <label for='tbl_head_0' class='inp_box'> 
+                                                                    <input type='checkbox' id='tbl_head_0' name='ckb_all'><span class='inp_custom'></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class='look_head_box'>
+                                                <div class='look_head_list'>
+                                                    <div class='row_item d_flex'>
+                                                        <div class='hd_item' keyname='sell1'>
+                                                            <div>상품코드</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell2'>
+                                                            <div>자체코드</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell3'>
+                                                            <div>상품명(옵션수)</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell4'>
+                                                            <div>관리명</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell5'>
+                                                            <div>판매구분</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell6'>
+                                                            <div>진열여부</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell7'>
+                                                            <div>카테고리</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell8'>
+                                                            <div>최초재고</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell9'>
+                                                            <div>담아간수</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell10'>
+                                                            <div>현재고</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell11'>
+                                                            <div>공급가</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell12'>
+                                                            <div>판매 제안가</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell13'>
+                                                            <div>배송구분</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell14'>
+                                                            <div>배송비</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell15'>
+                                                            <div>배송비 구성</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell16'>
+                                                            <div>판매방식</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell17'>
+                                                            <div>배송속성</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell18'>
+                                                            <div>묶음배송여부</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell19'>
+                                                            <div>추가배송비</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell20'>
+                                                            <div>브랜드</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell21'>
+                                                            <div>제조사</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell22'>
+                                                            <div>미디어</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell23'>
+                                                            <div>조회수</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell24'>
+                                                            <div>즐겨찾기수</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell25'>
+                                                            <div>최소주문수량</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell26'>
+                                                            <div>최대주문수량</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell27'>
+                                                            <div>회원유형</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell28'>
+                                                            <div>관리자</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell29'>
+                                                            <div>등록일</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell30'>
+                                                            <div>수정일</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='tbl_body'>
+                                            <div class='look_body_head'>
+                                                <div class='row_item d_flex'>
+                                                    <div class='hd_item' keyname='checkedbox'>
+                                                        <div>
+                                                            <div class='cus_inp_wrap checkbox_inp'>
+                                                                <label for='tbl_head_0' class='inp_box'>
+                                                                    <input type='checkbox' id='tbl_head_0' name='ckb_all'>
+                                                                    <span class='inp_custom'></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class='row_item d_flex'>
+                                                    <div class='hd_item' keyname='checkedbox'>
+                                                        <div>
+                                                            <div class='cus_inp_wrap checkbox_inp'> 
+                                                                <label for='tbl_head_0' class='inp_box'> 
+                                                                    <input type='checkbox' id='tbl_head_0' name='ckb_all'>
+                                                                    <span class='inp_custom'></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class='look_body_box'>
+                                                <div class='look_body_list'>
+                                                    <div class='row_item d_flex'>
+                                                        <div class='hd_item' keyname='sell1'>
+                                                            <div>상품코드</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell2'>
+                                                            <div>자체코드</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell3'>
+                                                            <div>상품명(옵션수)</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell4'>
+                                                            <div>관리명</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell5'>
+                                                            <div>판매구분</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell6'>
+                                                            <div class='tbl_row'>
+                                                                <div>진열여부</div>
+                                                            </div>
+                                                            <div class='tbl_row'>
+                                                                <div>진열여부</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell7'>
+                                                            <div>카테고리</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell8'>
+                                                            <div>최초재고</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell9'>
+                                                            <div>담아간수</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell10'>
+                                                            <div>현재고</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell11'>
+                                                            <div>공급가</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell12'>
+                                                            <div>판매 제안가</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell13'>
+                                                            <div>배송구분</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell14'>
+                                                            <div>배송비</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell15'>
+                                                            <div>배송비 구성</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell16'>
+                                                            <div>판매방식</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell17'>
+                                                            <div>배송속성</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell18'>
+                                                            <div>묶음배송여부</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell19'>
+                                                            <div>추가배송비</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell20'>
+                                                            <div>브랜드</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell21'>
+                                                            <div>제조사</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell22'>
+                                                            <div>미디어</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell23'>
+                                                            <div>조회수</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell24'>
+                                                            <div>즐겨찾기수</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell25'>
+                                                            <div>최소주문수량</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell26'>
+                                                            <div>최대주문수량</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell27'>
+                                                            <div>회원유형</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell28'>
+                                                            <div>관리자</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell29'>
+                                                            <div>등록일</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell30'>
+                                                            <div>수정일</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class='row_item d_flex'>
+                                                        <div class='hd_item' keyname='sell1'>
+                                                            <div>상품코드</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell2'>
+                                                            <div>자체코드</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell3'>
+                                                            <div>상품명(옵션수)</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell4'>
+                                                            <div>관리명</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell5'>
+                                                            <div>판매구분</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell6'>
+                                                            <div class='tbl_row'>
+                                                                <div>진열여부</div>
+                                                            </div>
+                                                            <div class='tbl_row'>
+                                                                <div>진열여부</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell7'>
+                                                            <div>카테고리</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell8'>
+                                                            <div>최초재고</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell9'>
+                                                            <div>담아간수</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell10'>
+                                                            <div>현재고</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell11'>
+                                                            <div>공급가</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell12'>
+                                                            <div>판매 제안가</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell13'>
+                                                            <div>배송구분</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell14'>
+                                                            <div>배송비</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell15'>
+                                                            <div>배송비 구성</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell16'>
+                                                            <div>판매방식</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell17'>
+                                                            <div>배송속성</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell18'>
+                                                            <div>묶음배송여부</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell19'>
+                                                            <div>추가배송비</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell20'>
+                                                            <div>브랜드</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell21'>
+                                                            <div>제조사</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell22'>
+                                                            <div>미디어</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell23'>
+                                                            <div>조회수</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell24'>
+                                                            <div>즐겨찾기수</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell25'>
+                                                            <div>최소주문수량</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell26'>
+                                                            <div>최대주문수량</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell27'>
+                                                            <div>회원유형</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell28'>
+                                                            <div>관리자</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell29'>
+                                                            <div>등록일</div>
+                                                        </div>
+                                                        <div class='hd_item' keyname='sell30'>
+                                                            <div>수정일</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='motiv_paging'>
+                                    <a class='first' href='#none'></a><a class='prev'href='#none'></a>
+                                    <ul>
+                                        <li><a class='this' href='#none'>1</a></li>
+                                        <li><a href='#none'>2</a></li>
+                                        <li><a href='#none'>3</a></li>
+                                        <li><a href='#none'>4</a></li>
+                                        <li><a href='#none'>5</a></li>
+                                        <li><a href='#none'>6</a></li>
+                                        <li><a href='#none'>7</a></li>
+                                        <li><a href='#none'>8</a></li>
+                                        <li><a href='#none'>9</a></li>
+                                        <li><a href='#none'>10</a></li>
+                                    </ul>
+                                    <a class='next' href='#none'></a><a class='last' href='#none'></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- tableList E -->
-
-                    
-                    
-
                 </div>
                 <!-- inner E -->
             </div>
@@ -538,18 +897,34 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th><div>판매쇼핑몰</div></th>
-                                    <td><div>다다 쇼핑몰</div></td>
-                                    <th><div>상품 카테고리</div></th>
-                                    <td><div>[<span class="cate_code">카테고리 코드</span>] <span>대 > 중 > 소</span></div></td>
+                                    <th>
+                                        <div>판매쇼핑몰</div>
+                                    </th>
+                                    <td>
+                                        <div>다다 쇼핑몰</div>
+                                    </td>
+                                    <th>
+                                        <div>상품 카테고리</div>
+                                    </th>
+                                    <td>
+                                        <div>[<span class="cate_code">카테고리 코드</span>] <span>대 > 중 > 소</span></div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <th><div>상품 유형</div></th>
-                                    <td colspan="3"><div>일반상품 또는 다다딜 상품</div></td>
+                                    <th>
+                                        <div>상품 유형</div>
+                                    </th>
+                                    <td colspan="3">
+                                        <div>일반상품 또는 다다딜 상품</div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <th><div>판매상품(<span>옵션수</span>)</div></th>
-                                    <td colspan="3"><div>[<span class="prd_code">상품 코드</span>] <span>상품단위명</span></div></td>
+                                    <th>
+                                        <div>판매상품(<span>옵션수</span>)</div>
+                                    </th>
+                                    <td colspan="3">
+                                        <div>[<span class="prd_code">상품 코드</span>] <span>상품단위명</span></div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -574,10 +949,14 @@
                 <div class="sect">
                     <div class="txtarea_box">
                         <textarea></textarea>
-                        <div class="file_box"><div class="btn btn_md">첨부파일</div></div>
+                        <div class="file_box">
+                            <div class="btn btn_md">첨부파일</div>
+                        </div>
                     </div>
                 </div>
-                <div class="bot_btn_wrap"><div class="btn">강제종료 처리</div></div>
+                <div class="bot_btn_wrap">
+                    <div class="btn">강제종료 처리</div>
+                </div>
             </div>
         </div>
     </div>
@@ -604,24 +983,52 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th><div>공급사</div></th>
-                                    <th><div>상품코드</div></th>
-                                    <th><div>상품유형</div></th>
-                                    <th><div>상품명</div></th>
-                                    <th><div>이미지</div></th>
-                                    <th><div>처리날짜</div></th>
-                                    <th><div>해지날짜</div></th>
+                                    <th>
+                                        <div>공급사</div>
+                                    </th>
+                                    <th>
+                                        <div>상품코드</div>
+                                    </th>
+                                    <th>
+                                        <div>상품유형</div>
+                                    </th>
+                                    <th>
+                                        <div>상품명</div>
+                                    </th>
+                                    <th>
+                                        <div>이미지</div>
+                                    </th>
+                                    <th>
+                                        <div>처리날짜</div>
+                                    </th>
+                                    <th>
+                                        <div>해지날짜</div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="ta_c"><div>상호(ID)</div></td>
-                                    <td class="ta_c"><div>상품단위코드</div></td>
-                                    <td class="ta_c"><div>일반, 다다딜 상품</div></td>
-                                    <td class="ta_c"><div>상품명입니다. 상품명입니다. 상품명입니다.</div></td>
-                                    <td class="ta_c"><div>이미지</div></td>
-                                    <td class="ta_c"><div>2023-01-01</div></td>
-                                    <td class="ta_c"><div>2023-01-01</div></td>
+                                    <td class="ta_c">
+                                        <div>상호(ID)</div>
+                                    </td>
+                                    <td class="ta_c">
+                                        <div>상품단위코드</div>
+                                    </td>
+                                    <td class="ta_c">
+                                        <div>일반, 다다딜 상품</div>
+                                    </td>
+                                    <td class="ta_c">
+                                        <div>상품명입니다. 상품명입니다. 상품명입니다.</div>
+                                    </td>
+                                    <td class="ta_c">
+                                        <div>이미지</div>
+                                    </td>
+                                    <td class="ta_c">
+                                        <div>2023-01-01</div>
+                                    </td>
+                                    <td class="ta_c">
+                                        <div>2023-01-01</div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -636,16 +1043,28 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th><div>Sku코드</div></th>
-                                    <th><div>상품명</div></th>
-                                    <th><div>컬러</div></th>
+                                    <th>
+                                        <div>Sku코드</div>
+                                    </th>
+                                    <th>
+                                        <div>상품명</div>
+                                    </th>
+                                    <th>
+                                        <div>컬러</div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="ta_c"><div>코드</div></td>
-                                    <td class="ta_c"><div>옵션명</div></td>
-                                    <td class="ta_c"><div>컬러</div></td>
+                                    <td class="ta_c">
+                                        <div>코드</div>
+                                    </td>
+                                    <td class="ta_c">
+                                        <div>옵션명</div>
+                                    </td>
+                                    <td class="ta_c">
+                                        <div>컬러</div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -664,8 +1083,14 @@
                         </label>
                     </div>
                 </div>
-                <div class="sect"><div class="file_box"><div class="btn">첨부파일</div></div></div>
-                <div class="bot_btn_wrap"><div class="btn">강제종료 해지</div></div>
+                <div class="sect">
+                    <div class="file_box">
+                        <div class="btn">첨부파일</div>
+                    </div>
+                </div>
+                <div class="bot_btn_wrap">
+                    <div class="btn">강제종료 해지</div>
+                </div>
             </div>
         </div>
     </div>
@@ -693,20 +1118,44 @@
                                 </colgroup>
                                 <tbody>
                                     <tr>
-                                        <th><div>사업자정보</div></td>
-                                        <td><div>회사명</div></td>
-                                        <th><div>관리자명</div></td>
-                                        <td><div>홍길동</div></td>
-                                        <th><div>관리자ID</div></td>
-                                        <td><div>ID</div></td>
+                                        <th>
+                                            <div>사업자정보</div>
+                                            </td>
+                                        <td>
+                                            <div>회사명</div>
+                                        </td>
+                                        <th>
+                                            <div>관리자명</div>
+                                            </td>
+                                        <td>
+                                            <div>홍길동</div>
+                                        </td>
+                                        <th>
+                                            <div>관리자ID</div>
+                                            </td>
+                                        <td>
+                                            <div>ID</div>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <th><div>이메일</div></td>
-                                        <td><div>관리자 이메일</div></td>
-                                        <th><div>연락번호</div></td>
-                                        <td><div>관리자 연락처(HP))</div></td>
-                                        <th><div>회원메모</div></td>
-                                        <td><div>회원메모</div></td>
+                                        <th>
+                                            <div>이메일</div>
+                                            </td>
+                                        <td>
+                                            <div>관리자 이메일</div>
+                                        </td>
+                                        <th>
+                                            <div>연락번호</div>
+                                            </td>
+                                        <td>
+                                            <div>관리자 연락처(HP))</div>
+                                        </td>
+                                        <th>
+                                            <div>회원메모</div>
+                                            </td>
+                                        <td>
+                                            <div>회원메모</div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -744,22 +1193,46 @@
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th><div>상품의 종류</div></td>
-                                                <td><div>SCM(공급)상품</div></td>
-                                                <th><div>상품명</div></td>
-                                                <td><div>상품단뒤 상품명</div></td>
+                                                <th>
+                                                    <div>상품의 종류</div>
+                                                    </td>
+                                                <td>
+                                                    <div>SCM(공급)상품</div>
+                                                </td>
+                                                <th>
+                                                    <div>상품명</div>
+                                                    </td>
+                                                <td>
+                                                    <div>상품단뒤 상품명</div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th><div>상품코드</div></td>
-                                                <td><div>상품단위 코드정보</div></td>
-                                                <th><div>관리명</div></td>
-                                                <td><div>상품단위 관리명</div></td>
+                                                <th>
+                                                    <div>상품코드</div>
+                                                    </td>
+                                                <td>
+                                                    <div>상품단위 코드정보</div>
+                                                </td>
+                                                <th>
+                                                    <div>관리명</div>
+                                                    </td>
+                                                <td>
+                                                    <div>상품단위 관리명</div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th><div>관리코드</div></td>
-                                                <td><div>공급사 관리코드</div></td>
-                                                <th><div>브랜드</div></td>
-                                                <td><div>상품브랜드</div></td>
+                                                <th>
+                                                    <div>관리코드</div>
+                                                    </td>
+                                                <td>
+                                                    <div>공급사 관리코드</div>
+                                                </td>
+                                                <th>
+                                                    <div>브랜드</div>
+                                                    </td>
+                                                <td>
+                                                    <div>상품브랜드</div>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -767,9 +1240,9 @@
                             </div>
                         </div>
                         <div class="sect_tit">상품옵션정보 (<span>00</span>)</div>
-                        <div  class="sect">
+                        <div class="sect">
                             <div id="pcacme001001_2" class="contents_box pd_0">
-                                <div  class="panel_body pd_0">
+                                <div class="panel_body pd_0">
                                     <div class="tbl_wrap pd_0">테이블 리스트 수정 예정</div>
                                 </div>
                             </div>
@@ -792,28 +1265,56 @@
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th><div>원가</div></td>
-                                                <td colspan="3" class="ta_r"><div><span>5,000</span> 원</div></td>
+                                                <th>
+                                                    <div>원가</div>
+                                                    </td>
+                                                <td colspan="3" class="ta_r">
+                                                    <div><span>5,000</span> 원</div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th><div>공급가격</div></td>
-                                                <td colspan="3" class="ta_r"><div><span>20,000</span> 원</div></td>
+                                                <th>
+                                                    <div>공급가격</div>
+                                                    </td>
+                                                <td colspan="3" class="ta_r">
+                                                    <div><span>20,000</span> 원</div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th><div>판매제안가격</div></td>
-                                                <td colspan="3" class="ta_r"><div><span>15,000</span> 원</div></td>
+                                                <th>
+                                                    <div>판매제안가격</div>
+                                                    </td>
+                                                <td colspan="3" class="ta_r">
+                                                    <div><span>15,000</span> 원</div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th><div>최초재고</div></td>
-                                                <td><div>20</div></td>
-                                                <th><div>현재고</div></td>
-                                                <td><div>100</div></td>
+                                                <th>
+                                                    <div>최초재고</div>
+                                                    </td>
+                                                <td>
+                                                    <div>20</div>
+                                                </td>
+                                                <th>
+                                                    <div>현재고</div>
+                                                    </td>
+                                                <td>
+                                                    <div>100</div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th><div>판매시작일</div></td>
-                                                <td><div>2022-00-00</div></td>
-                                                <th><div>종료일</div></td>
-                                                <td><div>2022-00-00</div></td>
+                                                <th>
+                                                    <div>판매시작일</div>
+                                                    </td>
+                                                <td>
+                                                    <div>2022-00-00</div>
+                                                </td>
+                                                <th>
+                                                    <div>종료일</div>
+                                                    </td>
+                                                <td>
+                                                    <div>2022-00-00</div>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -838,23 +1339,49 @@
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th><div>배송방법</div></th>
-                                                <td><div>위탁, 직접</div></td>
-                                                <th><div>배송업체</div></th>
-                                                <td><div>택배회사</div></td>
-                                                <th><div>배송속성</div></th>
-                                                <td><div>일반배송</div></td>
+                                                <th>
+                                                    <div>배송방법</div>
+                                                </th>
+                                                <td>
+                                                    <div>위탁, 직접</div>
+                                                </td>
+                                                <th>
+                                                    <div>배송업체</div>
+                                                </th>
+                                                <td>
+                                                    <div>택배회사</div>
+                                                </td>
+                                                <th>
+                                                    <div>배송속성</div>
+                                                </th>
+                                                <td>
+                                                    <div>일반배송</div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th><div>주문제작여부</div></th>
-                                                <td colspan="2"><div>결제 후 14일 발송예정</div></td>
-                                                <th><div>묶음배송여부</div></th>
-                                                <td colspan="2"><div>불가, 가능</div></td>
+                                                <th>
+                                                    <div>주문제작여부</div>
+                                                </th>
+                                                <td colspan="2">
+                                                    <div>결제 후 14일 발송예정</div>
+                                                </td>
+                                                <th>
+                                                    <div>묶음배송여부</div>
+                                                </th>
+                                                <td colspan="2">
+                                                    <div>불가, 가능</div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th><div>기본배송비</div></th>
-                                                <td colspan="2"><div>무료</div></td>
-                                                <th rowspan="3"><div>묶음그룹 정보</div></th>
+                                                <th>
+                                                    <div>기본배송비</div>
+                                                </th>
+                                                <td colspan="2">
+                                                    <div>무료</div>
+                                                </td>
+                                                <th rowspan="3">
+                                                    <div>묶음그룹 정보</div>
+                                                </th>
                                                 <td rowspan="3" colspan="2">
                                                     <div class="dot_info">
                                                         <p>· 기본배송비 묶음그룹</p>
@@ -864,12 +1391,20 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th><div>제주/도서산간</div></th>
-                                                <td colspan="2"><div>없음</div></td>
+                                                <th>
+                                                    <div>제주/도서산간</div>
+                                                </th>
+                                                <td colspan="2">
+                                                    <div>없음</div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th><div>별도설치여부</div></th>
-                                                <td colspan="2"><div>0</div></td>
+                                                <th>
+                                                    <div>별도설치여부</div>
+                                                </th>
+                                                <td colspan="2">
+                                                    <div>0</div>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -878,28 +1413,65 @@
                         </div>
                     </div>
                 </div>
-                    
-                <div class="bot_btn_wrap"><div class="btn">강제종료 해지</div></div>
+
+                <div class="bot_btn_wrap">
+                    <div class="btn">강제종료 해지</div>
+                </div>
             </div>
         </div>
     </div>
 
-   <script>
+    <script>
 
-    $(document).ready(() => {
-        $('#sandbox_container.input-daterange').datepicker({
-            language : "ko"
+        $(document).ready(() => {
+            $('#sandbox_container.input-daterange').datepicker({
+                language: "ko"
+            });
+
+            var testData = { // 변수명은 변경이 가능합니다.
+                tableSize: { // tableSize 변수명은 변경되면 안됨니다.
+                    sell1: 100,
+                    sell2: 150,
+                    sell3: 180,
+                    sell4: 100,
+                    sell5: 100,
+                    sell6: 100,
+                    sell7: 180,
+                    sell8: 80,
+                    sell9: 80,
+                    sell10: 80,
+                    sell11: 100,
+                    sell12: 100,
+                    sell13: 100,
+                    sell14: 80,
+                    sell15: 100,
+                    sell16: 100,
+                    sell17: 100,
+                    sell18: 80,
+                    sell19: 80,
+                    sell20: 100,
+                    sell21: 100,
+                    sell22: 80,
+                    sell23: 80,
+                    sell24: 100,
+                    sell25: 100,
+                    sell26: 100,
+                    sell27: 100,
+                    sell28: 100,
+                    sell29: 150,
+                    sell30: 150
+                },
+                // scrollLookSta 값이 false일 경우 삭제하면 됨니다.
+                // scrollLookSta: true,
+                // scrollLook: ['itemCode', 'itselfCode'],
+            }
+
+            tFlex.init('pcacme001001_1', testData, false);
         });
-        
-        tFlex.init('pcacme001001_1', tableData2, true);
-        tFlex.init('pcacme001001_2', tableData2, true);
-    });
 
-    
+        selectUi.init();
 
-    selectUi.init();
-
-</script>
+    </script>
 </body>
 
 </html>

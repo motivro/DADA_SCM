@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 searchCont = {
     init: () => {
-        console.log(123)
+        // console.log(123)
     },
 
     
