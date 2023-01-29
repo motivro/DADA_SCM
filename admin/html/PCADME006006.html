@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/content_hs.css">
     <link rel="stylesheet" href="../resources/css/content_k.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
 </head>
 
 <body>
@@ -343,11 +350,10 @@
                                             <div class="btn">3개월</div>
                                             <div class="btn">1년</div>
                                         </div>
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="2021-00-00">
-                                        </div>
-                                        <div class="inp_wrap">
-                                            <input type="text" name="" id="" placeholder="2021-00-00">
+                                        <div id="sandbox_container" class="input-daterange input-group range1">
+                                            <input type="text" class="input-sm form-control" name="start" placeholder=""/>
+                                            <span class="tilde">~</span>
+                                            <input type="text" class="input-sm form-control" name="end" placeholder=""/>
                                         </div>
                                     </div>
                                 </div>
@@ -371,9 +377,9 @@
                             <div class="cont_group d_flex">
                                 <div class="cont_left">
                                     <div class="panel_count">
-                                        <div class="all_count">총 상품수<span class="count_sta">50</span></div>
+                                        <div class="all_count">총 등록 수<span class="count_sta">50</span></div>
                                         <div class="slash">/</div>
-                                        <div class="srh_count">검색된 상품 수<span class="count_sta">00</span></div>
+                                        <div class="srh_count">검색 수<span class="count_sta">00</span></div>
                                     </div>
                                 </div>
                                 <div class="cont_right">
@@ -741,6 +747,7 @@
     
     <script>
         $(document).ready(() => {
+            $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
             tFlex.init('pcacme006006_1', tableData2, true);
         });
 

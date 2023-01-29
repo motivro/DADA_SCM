@@ -164,14 +164,22 @@ var tFlex = {
 
     lookWheelUi: (id) => {
         var wheelStart = 0;
-        $('#'+ id +' .motiv_tbl.look_tbl .tbl_inner .tbl_body .look_body_box .look_body_list').on("mousewheel", function (e) {
-            var wheel = e.originalEvent.deltaX;
-            wheelStart = wheelStart - wheel;
-            var motivrTbl = tFlex.motivTblWidth - tFlex.leftWidth - tFlex.rightWidth;
-            if (wheelStart >= 0) wheelStart = 0;
-            if (wheelStart < motivrTbl) wheelStart = motivrTbl;
+        $('#'+ id +' .motiv_tbl.look_tbl .tbl_inner .tbl_body .look_body_box .look_body_list').on("wheel scroll", function (e) {
+            if(e.type == "wheel"){
+                var wheel = e.originalEvent.deltaX;
+                wheelStart = wheelStart - wheel;
+                var motivrTbl = tFlex.motivTblWidth - tFlex.leftWidth - tFlex.rightWidth;
+                if (wheelStart >= 0) wheelStart = 0;
+                if (wheelStart < motivrTbl) wheelStart = motivrTbl;
+                $('#'+ id +' .motiv_tbl.look_tbl .tbl_inner .tbl_body .look_body_box .look_body_list').scrollLeft(Math.abs(wheelStart));
+            } else {
+                var wheel = $(this).scrollLeft();
+                wheelStart = -wheel;
+            }
+
             $('#'+ id +' .motiv_tbl .tbl_head .look_head_box .look_head_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
-            $('#'+ id +' .motiv_tbl .tbl_body .look_body_box .look_body_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
+            // $('#'+ id +' .motiv_tbl .tbl_body .look_body_box .look_body_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
+
             e.preventDefault();
             e.stopPropagation();
             return false;
