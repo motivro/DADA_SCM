@@ -51,7 +51,7 @@
 .motiv_layer.type1 .layer_head .btn_close{width: 12px;height: 12px;padding:5px;position: absolute;top:50%;right: 15px;background: url('../images/common/icon_pop_close.svg')no-repeat center center;background-size:12px;transform: translateY(-50%);box-sizing:content-box;cursor: pointer;}
 
 .motiv_layer.type2{position: relative;}
-.motiv_layer.type2 .btn_close{width: 40px;height: 40px;position: absolute;left: 50%;top: -20px;transform: translateX(-50%);background: #000;}
+.motiv_layer.type2 .btn_close{width: 40px;height: 40px;position: absolute;left: 50%;top: -20px;transform: translateX(-50%);background: rgba(0, 0, 0, .5) url('../images/common/icon_pop_close.svg')no-repeat center center;background-size:12px;cursor: pointer;border-radius: 100%;}
 .motiv_layer.type2 .layer_body{padding: 35px 20px 45px;}
 
 .motiv_layer .layer_body{padding:25px 20px 30px;}
@@ -64,6 +64,7 @@
 .motiv_layer .contents_box .sect .contents_box .motiv_paging{display: none;}
 .motiv_layer .contents_box .sect .contents_box .panel_body.paging .motiv_paging{display: flex;}
 
+.motiv_layer .contents_box .sect_tit .imp{color: var(--color1);}
 .motiv_layer .contents_box .sect_tit.d_flex{align-items: flex-end;gap: 10px;}
 .motiv_layer .contents_box .sect_tit .sub_tit{display: flex;align-items: center;gap: 15px;font-size: var(--fts12);font-weight: var(--ftw700);color: var(--color19);}
 .motiv_layer .contents_box .sect_tit .sub_tit span{font-weight: var(--ftw400);}
@@ -83,6 +84,14 @@
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl tr td.ta_r{text-align: right;}
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl .jc_sb{justify-content: space-between;}
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl .a_c{align-items: center;}
+
+.motiv_layer .motiv_tbl_box tr.acc_tblList{}
+.motiv_layer .motiv_tbl_box tr.dtl_tbl td{padding: 0;}
+.motiv_layer .motiv_tbl_box tr.dtl_tbl .tbl_wrap{padding: 10px 10px 20px;}
+.motiv_layer .motiv_tbl_box tr.dtl_tbl.acc_tblList .tbl_wrap .tbl_head .hd_item{background: var(--color8);color: #fff;}
+.motiv_layer .motiv_tbl_box tr td.half_item .d_flex{align-items: center;text-align: center;}
+.motiv_layer .motiv_tbl_box tr td.half_item .d_flex span{flex: 1;}
+.motiv_layer .motiv_tbl_box tr td.half_item .d_flex span:first-child{border-right: var(--cont_border);}
 
 .motiv_layer .motiv_tbl.normal .tbl_head .row_item,
 .motiv_layer .motiv_tbl.normal .tbl_body .row_item{max-width:100%;flex-wrap: nowrap;}
@@ -185,3 +194,28 @@
 
 .motiv_layer .log_detail{margin-top: 30px;padding-top: 20px;border-top: var(--box_border);}
 .motiv_layer .log_detail .txt_list_tit{font-size: var(--fts14);font-weight: var(--ftw500);color: var(--color7);margin-bottom: 10px;}
+
+.motiv_layer .top_info_box{padding: 40px 20px 30px;background: var(--color21);}
+.motiv_layer .top_info_box.dash p{padding-left: 8px;position: relative;}
+.motiv_layer .top_info_box.dash p:before{content: '-';display: inline-block;position: absolute;left: 0;}
+.motiv_layer .top_info_box p{font-size: var(--fts12);font-weight: var(--ftw500);}
+.motiv_layer .top_info_box p.imp{color: var(--color3);}
+
+.motiv_layer .row_line{}
+.motiv_layer .row_line + .row_line{margin-top: 30px;}
+.motiv_layer .row_line.row-2{display: flex;align-items: flex-end;gap: 10px;}
+.motiv_layer .row_line.row-2 .line_item{width: 50%;}
+.motiv_layer .row_line.row-4{display: flex;align-items: flex-end;gap: 10px;}
+.motiv_layer .row_line.row-4 .line_item{width: 25%;}
+
+.motiv_layer .row_line .line_item{width: 100%;}
+.motiv_layer .row_line .line_item .inp_tit{margin-bottom: 10px;font-size: var(--fts14);font-weight: var(--ftw500);}
+.motiv_layer .row_line .line_item .inp_tit.required{display: flex;align-items: center;}
+.motiv_layer .row_line .line_item .inp_tit.required:after{content: '';display: inline-block;margin-left: 5px;width: 8px;height: 8px;border-radius: 100%;background: var(--color1);}
+.motiv_layer .row_line .line_item textarea{min-height: 100px;}
+
+.motiv_layer .notice_info p{font-size:var(--fts12);font-weight:var(--ftw500);color: var(--color1);}
+
+.motiv_layer .row_line.addr{display: flex;align-items: flex-end;gap: 10px;}
+.motiv_layer .row_line.addr .line_item.addr_post{width:45%;}
+.motiv_layer .row_line.addr .line_item.addr_dtl{}

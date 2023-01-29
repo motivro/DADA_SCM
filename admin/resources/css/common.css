@@ -249,6 +249,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .motiv_tbl.normal.layer_type3 .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis:120px}
 .motiv_tbl.normal.layer_type3 .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis:100px}
 
+.motiv_tbl.normal.basic .tbl_inner .hd_item:first-child{flex-basis: 80px;flex-grow: 1;}
 .motiv_tbl.normal.log_tbl .tbl_inner .hd_item:first-child{flex-basis: 80px;flex-grow: 1;}
 
 .motiv_tbl.question_tbl .tbl_inner .hd_item:first-child{flex-grow: 0;flex-basis: 40px;}
