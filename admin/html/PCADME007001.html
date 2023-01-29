@@ -997,7 +997,7 @@
         <div class="layer_body">
             <div class="contents_box">
                 <div class="sect mgt_0">
-                    <div class="total_price_box">
+                    <div class="top_info_box">
                         <div class="info_tit">정산지급 금액 총합계</div>
                         <div class="info_cont"><span class="price_sta">000</span> 원</div>
                     </div>
@@ -1075,6 +1075,26 @@
                                                             <div>정산금액</div>
                                                         </div>
                                                         <div class="hd_item">
+                                                            <div>정산완료</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>회원(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>은행정보</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>계좌정보</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>예금주정보</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>정산금액</div>
+                                                        </div>
+                                                        <div class="hd_item">
                                                             <div>
                                                                 <div class="btn btn_md">지급처리</div>
                                                             </div>
@@ -1090,6 +1110,234 @@
                     </div>
                 </div>
                 <div class="bot_btn_wrap"><div class="btn">일괄 지급처리</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="motiv_layer type1">
+        <div class="layer_head">
+            <div class="title">정산지급 보류</div>
+            <div class="btn_close"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect mgt_0">
+                    <div class="top_info_box">
+                        <div class="info_tit">정산지급 금액 총합계</div>
+                        <div class="info_cont"><span class="price_sta">000</span> 원</div>
+                    </div>
+                </div>
+                <div class="sect">
+                    <div class="motiv_tbl_box name_k pd_0">
+                        <div class="tbl_item">
+                            <table class="motiv_normal_tbl">
+                                <caption>수수료 보기</caption>
+                                <colgroup>
+                                    <col style="width:15%;">
+                                    <col style="width:35%;">
+                                    <col style="width:15%;">
+                                    <col style="width:35%;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th><div>지급건수</div></th>
+                                        <td><div><span>00</span>건</div></td>
+                                        <th><div>정산주기</div></th>
+                                        <td><div><span>1</span>회</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>정산기간</div></th>
+                                        <td><div>정산기간 정보</div></td>
+                                        <th><div>정산지급일</div></th>
+                                        <td><div>2023-01-01 00:00:00</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tbl_item">
+                            <div class="panel_body">
+                                <div class="tbl_wrap pd_0 cus_height bd_0">
+                                    <div class="motiv_tbl_box name_k">
+                                        <div class="motiv_tbl normal">
+                                            <div class="tbl_inner">
+                                                <div class="tbl_head">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="tbl_head_0" class="inp_box">
+                                                                        <input type="checkbox" id="tbl_head_0" name="ckb_all">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>회원정보(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>주문번호</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>매출가격</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>정산지급금액</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tbl_body">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="tbl_head_0" class="inp_box">
+                                                                        <input type="checkbox" id="tbl_head_0" name="ckb_all">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>회원명(ID), 상호, 닉네임</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>주문번호</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매가격 합계</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>정산지급금액</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="tbl_head_0" class="inp_box">
+                                                                        <input type="checkbox" id="tbl_head_0" name="ckb_all">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>회원명(ID), 상호, 닉네임</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>주문번호</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매가격 합계</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>정산지급금액</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="tbl_head_0" class="inp_box">
+                                                                        <input type="checkbox" id="tbl_head_0" name="ckb_all">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>회원명(ID), 상호, 닉네임</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>주문번호</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>판매가격 합계</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>정산지급금액</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect_tit">정산지급 보류처리 이력</div>
+                <div class="sect">
+                    <div class="motiv_tbl_box name_k pd_0">
+                        <div class="tbl_item">
+                            <div class="panel_body">
+                                <div class="tbl_wrap pd_0 cus_height bd_0">
+                                    <div class="motiv_tbl_box name_k">
+                                        <div class="motiv_tbl normal calc_tbl">
+                                            <div class="tbl_inner">
+                                                <div class="tbl_head">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>처리구분</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>거래은행</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>담당자</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>등록일</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tbl_body">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>보류</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>정산지급 보류 사유</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>관리자(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>2023-01-01 00:00:00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>해지</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>정산지급 보류 해지 내용</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>관리자(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>2023-01-01 00:00:00</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect_tit">정산지급 보류 사유</div>
+                <div class="sect">
+                    <div class="txtarea_box">
+                        <textarea placeholder="사유내용"></textarea>
+                    </div>
+                </div>
+                <div class="bot_btn_wrap"><div class="btn">일괄 지급보류 처리</div><div class="btn">일괄 지급처리</div></div>
             </div>
         </div>
     </div>

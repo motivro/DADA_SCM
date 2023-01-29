@@ -56,6 +56,12 @@
 .motiv_layer .contents_box .srh_box .date_wrap{display: flex;align-items: center;gap: 10px;}
 .motiv_layer .contents_box .srh_box .date_wrap .tilde{font-size: var(--fts14);}
 
+/* normal tbl */
+.motiv_tbl.normal.calc_tbl .tbl_inner .hd_item:first-child{flex-grow: 0;flex-basis: 80px;}
+.motiv_tbl.normal.calc_tbl .tbl_inner .hd_item:first-child + .hd_item{flex:2;}
+.motiv_tbl.normal.sales_calc_info .tbl_inner .hd_item:first-child{flex-basis: 90px;}
+.motiv_tbl.normal.sales_calc_info .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis:140px;}
+
 /* 레이어 팝업 */
 .motiv_layer{background: #fff;}
 .motiv_layer.type1 .layer_head{height:45px;padding:0 20px;display:flex;justify-content:center;align-items:center;background: var(--color5);position: relative;}
@@ -257,7 +263,10 @@
 .motiv_layer .motiv_tbl_box .tbl_item.price_total .motiv_normal_tbl tr th,
 .motiv_layer .motiv_tbl_box .tbl_item.price_total .motiv_normal_tbl tr td{padding:12px 15px 14px;line-height: 24px;}
 
-.motiv_layer .total_price_box{padding:30px 0;display: flex;flex-direction: column;gap: 3px;justify-content: center;align-items:center;border: var(--box_border);}
-.motiv_layer .total_price_box .info_tit{font-size: var(--fts16);font-weight: var(--ftw700);}
-.motiv_layer .total_price_box .info_cont{font-size: var(fts12);font-weight: var(--ftw500);color:var(--color13);}
-.motiv_layer .total_price_box .info_cont .price_sta{font-size: var(--fts20);font-weight: var(--ftw700);color:var(--color2);}
+.motiv_layer .top_info_box{padding:30px 0;display: flex;flex-direction: column;gap: 3px;justify-content: center;align-items:center;border: var(--box_border);}
+.motiv_layer .top_info_box .info_tit{font-size: var(--fts16);font-weight: var(--ftw700);}
+.motiv_layer .top_info_box .info_cont{font-size: var(--fts12);font-weight: var(--ftw500);color:var(--color13);}
+.motiv_layer .top_info_box .info_cont .price_sta{font-size: var(--fts20);font-weight: var(--ftw700);color:var(--color2);}
+
+.motiv_layer .sect .filter_cont{display: flex;justify-content: space-between;align-items: center;}
+.motiv_layer .sect .filter_cont .select_wrap{width: 300px;}
