@@ -445,8 +445,8 @@
                                             </div>
                         
                                             <div id="sandbox_container" class="input-daterange input-group">
-                                                <input type="text" class="input-sm form-control" name="start" />
-                                                <input type="text" class="input-sm form-control" name="end" />
+                                                <input type="text" class="input-sm form-control" name="start" placeholder="2022-00-00"/>
+                                                <input type="text" class="input-sm form-control" name="end" placeholder="2022-00-00"/>
                                             </div>
 
                                         </div>
@@ -884,37 +884,6 @@
         </div>
     </div>
 
-    <div class="script_test_body">
-        <div class="alert_open" ac="open">알럿 열기</div>
-        <div class="alert_close" ac="close">알럿 닫기</div>
-    </div>
-    
-    <div class="dada_toast"></div>
-
-    <div class="dada_alt_wrap">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn"></div>
-            </div>
-            <div class="dada_cont">
-                정상인 회원은 중지, <br/>
-                중지된 회원은 정상으로 처리합니다.
-            </div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1">확인</div>
-                <div class="dada_btn co_9">취소</div>
-            </div>
-        </div>
-        <div class="dada_bg"></div>
-    </div> 
-
-    <style>
-        .script_test_body{position:fixed;top:50%;right:0;z-index:900}
-        .script_test_body > div{padding:10px 20px;border:solid 1px #ccc;background-color:#fff;border-right:none;cursor:pointer;margin-top:10px;}
-        .script_test_body > div:first-child{margin-top:0}
-       
-    </style>
-
    <script>
 
     $(document).ready(() => {
@@ -924,11 +893,6 @@
         
         tFlex.init('pcacme001001_1', tableData2, true);
         tFlex.init('pcacme001001_2', tableData2, true);
-        
-        $('.script_test_body > div').click(function (){
-            if($(this).attr('ac') == 'open') dadaAlert.open();
-            if($(this).attr('ac') == 'close') dadaAlert.close();
-        });
     });
 
     

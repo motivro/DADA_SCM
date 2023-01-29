@@ -487,9 +487,11 @@
                         <div class="panel_body">
                             <div class="btn_group d_flex">
                                 <div class="btn_wrap">
-                                    <div class="btn">정산지급 처리</div>
-                                    <div class="btn">일괄 정산지급</div>
-                                    <div class="btn">정산지급 보류</div>
+                                    <div class="btn">승인처리</div>
+                                    <div class="btn">대기처리</div>
+                                    <div class="btn">반려처리</div>
+                                    <div class="btn">종료처리</div>
+                                    <div class="btn">강제종료</div>
                                     <div class="btn">엑셀다운로드</div>
                                 </div>
                             </div>
@@ -716,28 +718,6 @@
         </div>
     </div>
 
-    <div class="script_test_body">
-        <div class="alert_open" ac="open">알럿 열기</div>
-        <div class="alert_close" ac="close">알럿 닫기</div>
-    </div>
-    
-    <div class="dada_alt_wrap">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn"></div>
-            </div>
-            <div class="dada_cont">
-                정상인 회원은 중지, <br/>
-                중지된 회원은 정상으로 처리합니다.
-            </div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1">확인</div>
-                <div class="dada_btn co_9">취소</div>
-            </div>
-        </div>
-        <div class="dada_bg"></div>
-    </div> 
-
    <script>
 
     $(document).ready(() => {
@@ -745,11 +725,6 @@
             language : "ko"
         });
         tFlex.init('pcacme002001_1', tableData2, true);
-        
-        $('.script_test_body > div').click(function (){
-            if($(this).attr('ac') == 'open') dadaAlert.open();
-            if($(this).attr('ac') == 'close') dadaAlert.close();
-        });
     });
 
     selectUi.init();

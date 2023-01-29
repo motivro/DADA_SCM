@@ -6,7 +6,8 @@ $(document).ready(function(){
     if(location.href.indexOf('github') != -1){
         githubUi.ini();
     }
-    
+    searchCont.init();
+
     // 검색창 단순 이벤트 
     $('.btn_search_open').click(function(){
         if($(this).children().hasClass('down')){
@@ -17,13 +18,18 @@ $(document).ready(function(){
             $(this).children().addClass('down');
         }
     });
-
 });
 
+searchCont = {
+    init: () => {
+        console.log(123)
+    },
+
+    
+}
 
 
 gitHubTgMenu = () => {
-    
     var locationOrigin = location.origin;
     var serverSta = location.href.indexOf('github') != -1 ? '/DADA_SCM/admin/html/' : '/admin/html/';
     var pageRoute = location.origin + serverSta;
@@ -284,7 +290,6 @@ var dadaAlert = {
     }
 }
 
-
 /* 타이머 */
 startTimer = (time, obj) => {
     var hour, min, sec;
@@ -334,7 +339,6 @@ toast = (string, location) => {
 
 listToast = (obj) => {
     /* 토스트메세지 바디를 생성합니다. */
-
     $(obj).addClass('close');
     if($(obj).closest('.thumb').children('.dada_toast').length == 0) $(obj).closest('.thumb').append('<div class="dada_toast"><div class="loading_spinner"></div>담는 중 입니다.</div>');
   
@@ -348,7 +352,6 @@ listToast = (obj) => {
         }, 1500);
     }, 10);
 }
-
 
 /* 복사 기능 */
 clip = (obj) => {
@@ -365,7 +368,6 @@ clip = (obj) => {
 }
 
 /* 텍스트 실시간 체크 */
-
 textKeyup = () => {
     
 }
