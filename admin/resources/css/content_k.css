@@ -129,6 +129,7 @@
 /* btn */
 #content .contents_box .srh_btn_box .btn_wrap{position:relative}
 #content .contents_box .srh_btn_box .btn_wrap .btn.btn_search_open{width:40px;position:absolute;bottom:0;right:20px;font-size:0;}
+#content .btn.btn_search_open.infor_box{width:40px;position:relative;bottom:0;right:20px;font-size:0;}
 
 i.arrow{border:solid var(--color5);border-width:0 2px 2px 0;display:inline-block;padding:4px 4px 2px 2px;position: absolute;top: 50%;left: 50%;margin-top:-3px;margin-left:-3px;transition:.5s;transform:rotate(-135deg);-webkit-transform:rotate(-135deg)}
 i.down{transform:rotate(45deg);-webkit-transform:rotate(45deg);margin-top:-5px;}

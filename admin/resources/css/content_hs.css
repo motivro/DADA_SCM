@@ -439,7 +439,8 @@
 #content .txt_info_box{padding: 20px 20px;}
 #content .txt_info_box .info_tit{padding: 5px 0;display: flex;justify-content: space-between;align-items: center;}
 #content .txt_info_box .info_tit .tit{font-size: var(--fts13);font-weight: var(--ftw700);color: var(--color1);}
-#content .txt_info_box .info_cont{padding: 5px 0;}
+#content .txt_info_box .info_cont{padding: 5px 0;display: none;}
+#content .contents_box.open .txt_info_box .info_cont{display: block;}
 
 #content .txt_info_box .txt_info{font-size: var(--fts13);font-weight: var(--ftw500);line-height: 2;}
 #content .txt_info_box .txt_info.point{color: var(--color1);}
