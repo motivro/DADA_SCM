@@ -237,7 +237,7 @@
                     <div class="contents_box">
                         <div class="srh_box">
                             <div class="srh_item">
-                                <div class="srh_item_inner">
+                                <div class="srh_item_inner search_block">
                                     <div class="srh_title">검색어</div>
                                     <div class="srh_cont">
                                         <div class="inp_wrap">
@@ -253,7 +253,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="srh_item_inner">
                                     <div class="srh_title">판매사</div>
                                     <div class="srh_cont">
@@ -261,19 +260,28 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="srh_item">
 
                                 <div class="srh_item_inner">
                                     <div class="srh_title">판매현황</div>
                                     <div class="srh_cont">
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="전체" selected>전체</option>
-                                                <option value="대분류1">판매중</option>
-                                                <option value="대분류1">준비중</option>
-                                                <option value="대분류1">종료</option>
-                                                <option value="대분류1">강제종료</option>
-                                            </select>
+                                        <div class="cus_inp_wrap checkbox_inp">
+                                            <label for="in_4_1" class="inp_box">전체
+                                                <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                            <label for="in_4_2" class="inp_box">판매중
+                                                <input type="checkbox" id="in_4_2" name="ord_sta">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                            <label for="in_4_3" class="inp_box">준비중
+                                                <input type="checkbox" id="in_4_3" name="ord_sta">
+                                                <span class="inp_custom"></span>
+                                            </label>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
