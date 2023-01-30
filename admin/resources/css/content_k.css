@@ -68,7 +68,7 @@
 #sandbox_container.date{width:auto}
 #sandbox_container.mini > input{max-width:160px;}
 #sandbox_container.mini > input:first-child{max-width:160px;}
-#sandbox_container > input{float:left;max-width:210px;margin-left:10px;border: var(--cont_border);padding:10px;}
+#sandbox_container > input{float:left;max-width:210px;margin-left:10px;border: var(--cont_border);padding:10px;position: relative;}
 #sandbox_container > input:first-child{float:left;max-width:210px;margin-left:0}
 #sandbox_container > input:first-child + span + input{margin-left:0}
 #sandbox_container > span{float:left;height:40px;padding:0 10px;margin:0;line-height:40px;box-sizing:border-box}
@@ -84,6 +84,7 @@
     background-image: -o-linear-gradient(to bottom,#fd6760,#fd6760)!important;
     background-image: linear-gradient(to bottom,#fd6760,#fd6760)!important;
 }
+#sandbox_container > input{background: rgb(255,255,255) url('../images/common/icon_calendar.svg')no-repeat right 10px center;background-size: 20px;cursor: pointer;}
 
 
 /* 쇼핑몰 관리 */

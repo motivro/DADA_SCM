@@ -18,7 +18,7 @@
 
 .icon{display: inline-block;cursor:pointer}
 .icon_refresh{width: 12px;height: 12px;background: url('../images/common/icon_refresh.svg')no-repeat center center;background-size: cover;}
-.icon_blank{width:19px;height:19px;background: url('../images/common/icon_blank.svg')no-repeat center center;background-size: cover;}
+.icon_blank{width:12px;height:12px;background: url('../images/common/icon_blank.svg')no-repeat center center;background-size: cover;}
 
 .wrap #content .contents_box.dash{background: none;border: 0;}
 
@@ -1100,3 +1100,12 @@
 #content .motiv_normal_tbl .dead_line .flex_item{display: flex;align-items: center;gap: 8px;}
 #content .motiv_normal_tbl .serv_price{display: flex;align-items: center;gap: 14px;}
 #content .motiv_normal_tbl .serv_price .inp_wrap{display: flex;align-items: center;gap: 5px;max-width:100px}
+
+
+.cate_set_box{display: flex;justify-content: center;align-items: stretch;}
+.cate_set_box .line_item{flex: 1;border-left: var(--box_border);}
+.cate_set_box .line_item:first-child{border-left: 0;}
+.cate_set_box .line_item .checkbox_inp{justify-content: center;flex-direction: column;gap: 20px;}
+
+.cate_drag_list{margin-top:50px;display: flex;align-items: center;flex-wrap: wrap;}
+.cate_drag_list .drag_item{padding: 5px 20px;margin:0 5px 5px 0;border: var(--cont_border);font-size: var(--fts12);background: var(--color10);}

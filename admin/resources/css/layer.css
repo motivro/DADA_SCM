@@ -2,10 +2,6 @@
 .txt_line-thru{text-decoration: line-through;}
 /* .txt_line-thru:after{content: '';display: block;width: 100%;height: 1px;position: absolute;left:0;top:50%;transform: translateY(-50%);} */
 
-.d_flex.jc_c{justify-content: center !important;}
-.d_flex.jc_sb{justify-content: space-between !important;}
-.d_flex.a_c{align-items: center !important;}
-.d_flex.gap5{gap: 5px !important;}
 .motiv_layer .btn_sm{padding:0 10px;font-size: var(--fts12);}
 .motiv_layer .bold{font-weight: var(--ftw700);}
 .motiv_layer .txt_success{color: var(--color3);}
