@@ -102,12 +102,15 @@ input[type="password"]{border-radius:5px;}
 .btn_excelUp{background: #fff;color: var(--color14);display: flex;align-items: center;gap: 3px;}
 .btn_excelUp:before{content: '';display: inline-block;width:14px;height:14px;background: url('../images/common/icon_excelup.svg')no-repeat center center;}
 
+.btn_inquire .badge{color: var(--color1);}
+
 textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 
 .d_flex.jc_c{justify-content: center !important;}
 .d_flex.jc_sb{justify-content: space-between !important;}
 .d_flex.a_c{align-items: center !important;}
 .d_flex.gap5{gap: 5px !important;}
+.d_flex.gap8{gap: 8px !important;}
 .d_flex.gap10{gap: 10px !important;}
 
 /* header s*/
@@ -237,6 +240,12 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .motiv_tbl .tbl_body .hd_item > div.tbl_row > div{padding: 10px 0;display: table-cell;vertical-align: middle;}
 .motiv_tbl .tbl_body .hd_item > div.tbl_row:first-child > div{display: table-cell;vertical-align: middle;box-sizing:border-box;border-bottom:solid 1px #e3e3e3;}
 
+.motiv_tbl .tbl_body .hd_item > div.tbl_col{width:50%;}
+.motiv_tbl .tbl_body .hd_item > div.tbl_col > div{height:100%;padding: 10px;}
+.motiv_tbl .tbl_body .hd_item > div.tbl_col:first-child > div{border-right: solid 1px #e3e3e3;}
+
+.motiv_tbl .tbl_body .hd_item .flex_item{display: flex;align-items: center;gap:8px;}
+
 .motiv_tbl.look_tbl .tbl_inner .tbl_head,
 .motiv_tbl.look_tbl .tbl_inner .tbl_body{display:flex}
 .motiv_tbl.look_tbl .tbl_inner{overflow-x: visible;}
@@ -309,6 +318,29 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .motiv_tbl.fees_form .tbl_inner .hd_item:first-child{flex-grow: 0;flex-basis: 40px;}
 .motiv_tbl.fees_form .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 150px;}
 
+
+.motiv_tbl.appoint_sales .tbl_inner .hd_item{flex-grow: 1;flex-basis: 80px;}
+.motiv_tbl.appoint_sales .tbl_inner .hd_item:first-child{flex-basis: 180px;}
+.motiv_tbl.appoint_sales .tbl_inner .hd_item:first-child + .hd_item + .hd_item{flex-basis:200px;}
+.motiv_tbl.appoint_sales .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis:120px;}
+.motiv_tbl.appoint_sales .tbl_inner .hd_item > div{padding: 5px 10px;}
+.motiv_tbl.appoint_sales .tbl_inner .hd_item .btn_wrap .btn{flex: 1;}
+
+.motiv_tbl.appoint_sales.in_image .tbl_inner .hd_item:first-child{flex-basis: 80px;}
+.motiv_tbl.appoint_sales.in_image .tbl_inner .hd_item:first-child + .hd_item + .hd_item{flex-basis:150px;}
+.motiv_tbl.appoint_sales.in_image .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item{flex-basis:180px;}
+.motiv_tbl.appoint_sales.in_image .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis:80px;}
+.motiv_tbl.appoint_sales.in_image .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis:150px;}
+.motiv_tbl.in_image .tbl_inner .hd_item .img_box{max-width: 50px;max-height: 50px;margin: 0 auto;padding:5px 10px;line-height:0;}
+.motiv_tbl.in_image .tbl_inner .hd_item .img_box img{width: 100%;}
+
+.motiv_tbl.normal.appoint_seller .tbl_inner .hd_item{flex-grow:1;flex-basis:80px;}
+.motiv_tbl.normal.appoint_seller .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 100px;}
+.motiv_tbl.normal.appoint_seller .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 150px;}
+.motiv_tbl.normal.appoint_seller .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis:100px;}
+
+.motiv_tbl.normal.withdraw .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 150px;}
+.motiv_tbl.normal.withdraw .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 150px;}
 
 .look_head_box,
 .look_body_box{overflow:hidden}

@@ -1101,11 +1101,4 @@
 #content .motiv_normal_tbl .serv_price{display: flex;align-items: center;gap: 14px;}
 #content .motiv_normal_tbl .serv_price .inp_wrap{display: flex;align-items: center;gap: 5px;max-width:100px}
 
-
-.cate_set_box{display: flex;justify-content: center;align-items: stretch;}
-.cate_set_box .line_item{flex: 1;border-left: var(--box_border);}
-.cate_set_box .line_item:first-child{border-left: 0;}
-.cate_set_box .line_item .checkbox_inp{justify-content: center;flex-direction: column;gap: 20px;}
-
-.cate_drag_list{margin-top:50px;display: flex;align-items: center;flex-wrap: wrap;}
-.cate_drag_list .drag_item{padding: 5px 20px;margin:0 5px 5px 0;border: var(--cont_border);font-size: var(--fts12);background: var(--color10);}
+#content .chart_info_box{padding: 15px 20px;}
