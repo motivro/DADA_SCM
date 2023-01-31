@@ -106,8 +106,6 @@ var tFlex = {
             widthHeadVal = widthHeadVal + data.tableSize[item];
         });
 
-        console.log(data)
-
         $.each(data.tableSize, (index, item) => {
             if (!data.scrollLook.includes(index)) {
                 widthBodyVal = widthBodyVal + data.tableSize[index];
@@ -117,7 +115,6 @@ var tFlex = {
         tFlex.leftWidth = widthHeadVal;
         tFlex.rightWidth = widthBodyVal;
         tFlex.totalWidth = widthHeadVal + widthBodyVal;
-        
     },
 
     dynamicUi: (obj, id) => {
