@@ -242,7 +242,9 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 
 .motiv_tbl .tbl_body .hd_item > div.tbl_col{width:50%;}
 .motiv_tbl .tbl_body .hd_item > div.tbl_col > div{height:100%;padding: 10px;}
-.motiv_tbl .tbl_body .hd_item > div.tbl_col:first-child > div{border-right: solid 1px #e3e3e3;}
+.motiv_tbl .tbl_body .hd_item > div.tbl_col:first-child{border-right: solid 1px #e3e3e3;}
+
+.motiv_tbl .tbl_body .hd_item > div.tbl_col .tbl_row:first-child{border-bottom:solid 1px #e3e3e3;}
 
 .motiv_tbl .tbl_body .hd_item .flex_item{display: flex;align-items: center;gap:8px;}
 
@@ -314,10 +316,8 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .motiv_tbl.exhibit_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
 .motiv_tbl.exhibit_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
 
-
 .motiv_tbl.fees_form .tbl_inner .hd_item:first-child{flex-grow: 0;flex-basis: 40px;}
 .motiv_tbl.fees_form .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 150px;}
-
 
 .motiv_tbl.appoint_sales .tbl_inner .hd_item{flex-grow: 1;flex-basis: 80px;}
 .motiv_tbl.appoint_sales .tbl_inner .hd_item:first-child{flex-basis: 180px;}
@@ -341,6 +341,23 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 
 .motiv_tbl.normal.withdraw .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 150px;}
 .motiv_tbl.normal.withdraw .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 150px;}
+
+.motiv_tbl.normal.daily_sales .tbl_inner .hd_item{flex-grow:1;flex-basis:80px;}
+.motiv_tbl.normal.daily_sales .tbl_inner .hd_item:first-child{flex-grow:0;flex-basis:120px}
+.motiv_tbl.normal.daily_sales .tbl_inner .hd_item:first-child + .hd_item{flex-grow:0;flex-basis:80px;}
+.motiv_tbl.normal.daily_sales .tbl_inner .hd_item:first-child + .hd_item + .hd_item{flex-basis: 100px;}
+.motiv_tbl.normal.daily_sales .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item{flex-basis: 100px;}
+.motiv_tbl.normal.daily_sales .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 150px;}
+.motiv_tbl.normal.daily_sales .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 150px;}
+.motiv_tbl.normal.daily_sales .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 150px;}
+.motiv_tbl.normal.daily_sales .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 150px;}
+
+.motiv_tbl.normal.hourly_sales .tbl_inner .hd_item{flex-grow:1;flex-basis:80px;}
+.motiv_tbl.normal.hourly_sales .tbl_inner .hd_item:first-child{flex-grow:0;flex-basis:120px}
+.motiv_tbl.normal.hourly_sales .tbl_inner .hd_item:first-child + .hd_item{flex-grow:0;flex-basis: 80px;}
+.motiv_tbl.normal.hourly_sales .tbl_inner .hd_item:first-child + .hd_item + .hd_item{flex-basis: 150px;}
+.motiv_tbl.normal.hourly_sales .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item{flex-basis: 150px;}
+.motiv_tbl.normal.hourly_sales .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 180px;}
 
 .look_head_box,
 .look_body_box{overflow:hidden}

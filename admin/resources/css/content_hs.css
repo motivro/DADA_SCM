@@ -537,6 +537,12 @@
 #content .rank_chart .top_rink_list .top_mem_wrap .info .data_box{display: flex;gap: 15px;}
 #content .rank_chart .top_rink_list .top_mem_wrap .info .data_box .price .sta{margin-right:2px;font-weight: var(--ftw700);color: var(--color7);}
 
+#content .contents_box .panel_head .cont_left .data_list{display:flex;align-items:center;gap:20px;padding:20px;background: var(--color16);border: var(--box_border);}
+#content .contents_box .panel_head .cont_left .data_list .data_item{display: flex;align-items: center;gap: 120px;}
+#content .contents_box .panel_head .cont_left .data_list .data_item:first-child{padding-right: 20px;border-right: var(--box_border);}
+#content .contents_box .panel_head .cont_left .data_list .data_item .tit{font-size: var(--fts14);font-weight: var(--ftw500);}
+#content .contents_box .panel_head .cont_left .data_list .data_item .cont{font-size: var(--fts20);font-weight: var(--ftw500);}
+
 
 /* 매출통계 */
 /* tab */

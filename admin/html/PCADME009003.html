@@ -303,8 +303,22 @@
                     <div class="contents_box">
                         <div class="panel_head bdr_bot">
                             <div class="cont_group d_flex">
-                                <div class="cont_left"></div>
+                                <div class="cont_left">
+                                    <div class="data_list">
+                                        <div class="data_item">
+                                            <div class="tit">결제건수 합계</div>
+                                            <div class="cont">222</div>
+                                        </div>
+                                        <div class="data_item">
+                                            <div class="tit">매출 합계</div>
+                                            <div class="cont">5,000,000</div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="cont_right">
+                                    <div class="btn_group">
+                                        <div class="btn btn_excelDown">엑셀 다운로드</div>
+                                    </div>
                                     <div class="select_wrap">
                                         <select>
                                             <option value="50" selected>10개씩</option>
@@ -314,92 +328,63 @@
                                 </div>
                             </div>
                         </div>
-
-                        <style>
-                            .motiv_tbl.normal{}
-                            .motiv_tbl.normal .tbl_head .d_flex, 
-                            .motiv_tbl.normal .tbl_body .d_flex{width:100%;max-width: 1800px;gap: 0;}
-                            .motiv_tbl.normal .tbl_inner{overflow:hidden}
-                            .motiv_tbl.normal .tbl_inner .hd_item{flex-basis: 80px;flex-grow: 1;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child{flex-grow: 0;flex-basis: 40px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item{flex-grow: 0;flex-basis: 150px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item{flex-grow: 0;flex-basis: 80px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 80px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 80px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 80px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 150px;}
-                            .motiv_tbl.normal .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 150px;}
-                        </style>
                         <div class="panel_body">
-                            <div class="btn_group">
-                                <div class="btn btn_excelDown">엑셀 다운로드</div>
-                            </div>
                             <div class="tbl_wrap">
-                                테이블리스트 타입 정리 예정
-                                <div class='motiv_tbl normal'>
+                                <div class='motiv_tbl normal basic'>
                                     <div class='tbl_inner'>
                                         <div class='tbl_head'>
                                             <div class='row_item d_flex'>
                                                 <div class='hd_item'>
-                                                    <div>번호</div>
+                                                    <div>공급사(ID)</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>관리기능</div>
+                                                    <div>판매방식</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>처리상태</div>
+                                                    <div>판매사(ID)</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>문의유형</div>
+                                                    <div>날짜</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>문의제목</div>
+                                                    <div>결제수단</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>작성자(ID)</div>
+                                                    <div>매출건수</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>첨부파일</div>
+                                                    <div>매출금액</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>접수일</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>처리일</div>
+                                                    <div>매출건수 비율</div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class='tbl_body'>
                                             <div class='row_item d_flex'>
                                                 <div class='hd_item'>
-                                                    <div>1</div>
+                                                    <div>공급사(ID)</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>
-                                                        <div class="btn btn_sm">답변</div>
-                                                        <div class="btn btn_sm">삭제</div>
-                                                    </div>
+                                                    <div>위탁판매</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>처리상태</div>
+                                                    <div>닉네임(ID)</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>문의유형</div>
+                                                    <div>2023-01-01</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>문의제목</div>
+                                                    <div>고객 결제수단</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>작성자(ID)</div>
+                                                    <div>00</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>첨부파일</div>
+                                                    <div>00</div>
                                                 </div>
                                                 <div class='hd_item'>
-                                                    <div>2022-00-00 00:00:00</div>
-                                                </div>
-                                                <div class='hd_item'>
-                                                    <div>2022-00-00 00:00:00</div>
+                                                    <div>00%</div>
                                                 </div>
                                             </div>
                                         </div>
