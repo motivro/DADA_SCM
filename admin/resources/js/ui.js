@@ -24,16 +24,46 @@ $(document).ready(function(){
         
     });
 
+    $('.add_large_cate').click(function(){
+        console.log(123)
+        sdfun = '<li><div class="cateTree_folder"><span class="cateTree_del" onclick="cateDynamic.cateDel($(this))"></span><span class="cateTree_cont"><a href="#none">[<span class="cate_code">분류코드</span>]<span class="cate_name">대분류</span></a></span><span class="cateTree_add" onclick="cateDynamic.cateAdd($(this))"></span></div></li>';
+        $('.cateTree_wrap').append(sdfun)
+    });
+    
+
 });
 
 searchCont = {
     init: () => {
         // console.log(123)
     },
-
-    
 }
 
+cateDynamic = {
+    init: () => {
+        // console.log(123)
+
+    },
+
+    cateAdd: (obj) => {
+        console.log(obj)
+        sdfun = '<li><div class="cateTree_folder"><span class="cateTree_del" onclick="cateDynamic.cateDel($(this))"></span><span class="cateTree_cont"><a href="#none">[<span class="cate_code">분류코드</span>]<span class="cate_name">대분류</span></a></span><span class="cateTree_add" onclick="cateDynamic.cateAdd($(this))"></span></div></li>';
+
+
+        if(obj.closest('li').children('ul').length == 0){
+            obj.closest('li').append('<ul></ul>');
+        } else {
+
+        }
+
+        obj.closest('li').children('ul').append(sdfun)
+    },
+
+    cateDel: (obj) => {
+        obj.closest('li').remove();
+        console.log(obj)
+    },
+}
 
 gitHubTgMenu = () => {
     var locationOrigin = location.origin;
@@ -49,7 +79,6 @@ gitHubTgMenu = () => {
             if(numBer == 0){
                 numBer++;
                 sideMenuHtml += '<li class="nav_item" menuname="' + s_index + '" childmenu="'+Object.keys(item).length+'">';
-                console.log(s_index, s_item)
                 if(s_index == 'PCADME001'){
                     sideMenuHtml += '   <i class="icon_nav_menu testAc"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><g id="vuesax_linear_3d-square" data-name="vuesax/linear/3d-square" transform="translate(-300 -252)"><g id="_3d-square" data-name="3d-square" transform="translate(300 252)"><path id="Vector" d="M12.5,19.984H6.732c-2.672,0-4.483-.566-5.7-1.782S-.75,15.174-.75,12.5V6.732c0-2.672.566-4.483,1.782-5.7S4.059-.75,6.732-.75H12.5c2.672,0,4.483.566,5.7,1.782s1.782,3.027,1.782,5.7V12.5c0,2.672-.566,4.483-1.782,5.7S15.174,19.984,12.5,19.984ZM6.732.75c-2.248,0-3.722.427-4.639,1.343S.75,4.483.75,6.732V12.5c0,2.248.427,3.722,1.343,4.639s2.39,1.343,4.639,1.343H12.5c2.248,0,3.722-.427,4.639-1.343s1.343-2.39,1.343-4.639V6.732c0-2.248-.427-3.722-1.343-4.639S14.75.75,12.5.75Z" transform="translate(1.383 1.383)" fill="#fff"/><g id="Group" transform="translate(5.72 5.497)"><g id="Group-2" data-name="Group" transform="translate(0.422 2.992)"><path id="Vector-2" data-name="Vector" d="M4.858,3.564a.749.749,0,0,1-.376-.1L-.376.649A.75.75,0,0,1-.649-.376.75.75,0,0,1,.376-.649l4.482,2.6L9.3-.63a.75.75,0,1,1,.752,1.3l-4.822,2.8A.75.75,0,0,1,4.858,3.564Z" fill="#fff"/><path id="Vector-3" data-name="Vector" d="M0,5.746A.75.75,0,0,1-.75,5V0A.75.75,0,0,1,0-.75.75.75,0,0,1,.75,0V5A.75.75,0,0,1,0,5.746Z" transform="translate(4.858 2.805)" fill="#fff"/></g><path id="Vector-4" data-name="Vector" d="M5.289-.75h0a3.158,3.158,0,0,1,1.5.353L9.724,1.236a3.305,3.305,0,0,1,1.6,2.709V7.062a3.371,3.371,0,0,1-1.6,2.709L6.79,11.4a3.177,3.177,0,0,1-1.509.356,3.133,3.133,0,0,1-1.5-.357L.845,9.771A3.305,3.305,0,0,1-.75,7.062V3.954a3.371,3.371,0,0,1,1.6-2.709l2.93-1.63A3.1,3.1,0,0,1,5.289-.75ZM5.281,10.258a1.715,1.715,0,0,0,.783-.168L8.995,8.46a1.88,1.88,0,0,0,.825-1.4V3.945A1.835,1.835,0,0,0,9,2.55L6.061.916A1.7,1.7,0,0,0,5.289.75h0a1.641,1.641,0,0,0-.773.17l-.009,0L1.575,2.556a1.88,1.88,0,0,0-.825,1.4V7.062a1.835,1.835,0,0,0,.82,1.4l2.938,1.634A1.675,1.675,0,0,0,5.281,10.258Z" transform="translate(0 0)" fill="#fff"/></g><path id="Vector-5" data-name="Vector" d="M0,0H22V22H0Z" fill="none" opacity="0"/></g></g></svg></i>';
                 } else {
@@ -77,8 +106,8 @@ gitHubTgMenu = () => {
     }
 
     openMenu(depth1, depth2, dp2ChilH);
-    $('.nav_item').click(function(){
-        if($(this).find('.icon_nav_menu').hasClass('testAc')) return
+    $('.nav_item').click(function(){open
+        if($(this).find('.icon_nav_menu').hasClass('testAc') && $(this).hasClass('open')) return
         var dp2ChilHSta = $(this).attr('childmenu') * dp2ChilH;
         //dp2ChilH
         if($(this).hasClass('open')){

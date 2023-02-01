@@ -648,6 +648,12 @@
 #content .cate_cont_box .cate_set .cateTree_wrap ul.lastTree{padding-left: 40px;}
 #content .cate_cont_box .cate_set .cateTree_wrap ul.lastTree .cateTree_folder .cateTree_del,
 #content .cate_cont_box .cate_set .cateTree_wrap ul.lastTree .cateTree_folder .cateTree_add{display: none;}
+.cateTree_wrap li > ul{}
+.cateTree_wrap li > ul > li > ul{}
+.cateTree_wrap li > ul > li > ul > li > ul > li{}
+.cateTree_wrap li > ul > li > ul > li > ul > li .cateTree_folder .cateTree_del,
+.cateTree_wrap li > ul > li > ul > li > ul > li .cateTree_folder .cateTree_add{display: none!important;}
+.cateTree_wrap li > ul > li > ul > li > ul > li .cateTree_folder .cateTree_cont{border-left: var(--cont_border)!important;}
 #content .cate_cont_box .cate_set .cateTree_wrap ul.lastTree .cateTree_folder .cateTree_cont{border-left: var(--cont_border);}
 
 #content .cate_cont_box .right_box{width: calc(100% - 340px);}

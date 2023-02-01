@@ -92,11 +92,7 @@ var tFlex = {
             if(obj.scrollLookSta) tFlex.lookWheelUi(id);
         })
         .then(() => {
-
-            if(Object.keys(obj).includes('thRow')){
-                tFlex.hdItemRow(obj)
-            }
-
+            if(Object.keys(obj).includes('thRow')) tFlex.hdItemRow(obj);
         })
 
         $(window).on('resize', function(){
@@ -106,8 +102,6 @@ var tFlex = {
     },
 
     hdItemRow: (obj) => {
-        console.log(obj, obj.thRow)
-
         for(var i=0;obj.thRow.length > i;i++){
             tFlex.hdItemRowAc(obj.thRow[i], obj);
         }
@@ -122,17 +116,13 @@ var tFlex = {
         var itemRowSize = 0;
         for(var i=0;itemRow >= i;i++){
             itemArray.push(itemSizeName[itemRows]);
-            itemRows++
+            itemRows++;
         };
         $.each( itemArray, (index, item) => {
             itemRowSize = itemRowSize + obj.tableSize[itemArray[index]];
-
-            console.log( $('#'+ obj.id +' .motiv_tbl .hd_item[keyname='+ item +']').html() )
-            
-            if(index>0){
+            if(index > 0){
                 $('#'+ obj.id +' .motiv_tbl .look_head_list .hd_item[keyname='+ item +']').html('<div class="tbl_row"></div><div class="tbl_row">'+$('#'+ obj.id +' .motiv_tbl .hd_item[keyname='+ item +']').html()+'</div>');
             }
-
         });
         target.children('.tbl_row').eq(0).addClass('multi_row').css('width', itemRowSize);
     },
@@ -153,15 +143,25 @@ var tFlex = {
         })
         tFlex.motivTblWidth = $('.motiv_tbl').width();
         tFlex.leftWidth = widthHeadVal;
-        tFlex.rightWidth = widthBodyVal;
-        tFlex.totalWidth = widthHeadVal + widthBodyVal;
+        tFlex.rightWidth = (widthHeadVal + widthBodyVal) < tFlex.motivTblWidth ? tFlex.motivTblWidth-widthHeadVal : widthBodyVal;
+        if((widthHeadVal + widthBodyVal) < tFlex.motivTblWidth) tFlex.lookSizeChange(data, (widthHeadVal + widthBodyVal));
+
+        tFlex.totalWidth = (widthHeadVal + widthBodyVal) < tFlex.motivTblWidth ? (widthHeadVal + widthBodyVal) : tFlex.motivTblWidth;
+
+    },
+
+    lookSizeChange: (data, resize) => {
+        var firstSize = (tFlex.motivTblWidth - resize) / Object.keys(data.tableSize).length;
+        $.each(data.tableSize, (index, item) => {
+            data.tableSize[index] = item + firstSize;
+        });
     },
 
     dynamicUi: (obj, id) => {
         tFlex.hdItemStyle('checkedbox', tFlex.ckbSize, id);
         var tFlexLeft = tFlex.leftWidth;
         var tFlexRight = tFlex.rightWidth;
-
+        
         $('#'+ id +' '+ tFlex.headTgh).css('width', tFlexLeft +'px');
         $('#'+ id +' '+ tFlex.headTgb).css('width', tFlexRight +'px');
         $('#'+ id +' '+ tFlex.bodyTgh).css('width', tFlexLeft +'px');

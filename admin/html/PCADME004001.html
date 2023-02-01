@@ -1375,10 +1375,7 @@
     <!-- 레이어팝업 E -->
 
     <script>
-        $(document).ready(() => {
-            $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
-
-            var testData = { // 변수명은 변경이 가능합니다.
+        var testData = { // 변수명은 변경이 가능합니다.
                 tableSize: { // tableSize 변수명은 변경되면 안됨니다.
                     //하단의 변수 명칭은 변경이 가능하지만 리스트 테이블html 에서 keyname값과 동일 하면 됨니다. 
                     sell1: 80,
@@ -1402,6 +1399,10 @@
                 // scrollLookSta: true,
                 // scrollLook: ['sell1', 'sell2'], 
             }
+        $(document).ready(() => {
+            $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
+
+            
 
             tFlex.init('pcacme004001_1', testData, false);
             // 첫번째 객체 값은 아이디
