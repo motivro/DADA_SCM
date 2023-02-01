@@ -91,19 +91,26 @@ input[type="password"]{border-radius:5px;}
 .btn.btn_sm{font-size:var(--fts10);height:20px;line-height:18px;}
 .btn.btn_md{height: 30px;line-height: 28px;}
 .btn.btn_lg{height:50px;line-height: 48px;}
+.btn.btn_red{background: var(--color1);border-color:var(--color1);color: #fff;}
+.btn.btn_blk{background: var(--color17);border-color: var(--color17);color: #fff;}
+.btn.btn_gray{background: var(--color9);border-color: var(--color9);color: #fff;}
+
 
 .btn.active,
 .btn.color1{background: var(--color1);border:1px solid var(--color1);color: #fff;}
 .btn.color6{background: var(--color6);border:1px solid var(--color6);color: #fff;}
-
 .btn.disabled{cursor: default;background: var(--color9);color: #fff;}
 .btn_excelDown{background: var(--color6);border-color:var(--color6);color: #fff;display: flex;align-items: center;gap: 3px;}
 .btn_excelDown:before{content: '';display: inline-block;width:14px;height:14px;background: url('../images/common/icon_exceldown.svg')no-repeat center center;}
-
 .btn_excelUp{background: #fff;color: var(--color14);display: flex;align-items: center;gap: 3px;}
 .btn_excelUp:before{content: '';display: inline-block;width:14px;height:14px;background: url('../images/common/icon_excelup.svg')no-repeat center center;}
-
+.btn_exit{background: var(--color17);border-color:var(--color17);color: #fff;}
+.btn_ordLog{background: var(--color2);border-color: var(--color2);color:#fff}
+.btn_view_fee{background: var(--color5);border-color: var(--color5);color:#fff;}
 .btn_inquire .badge{color: var(--color1);}
+.btn_del{background: var(--color9);border-color: var(--color9);color: #fff;}
+.btn_reply{background: var(--color1);border-color:var(--color1);color: #fff;}
+.btn_modi{background: var(--color5);border-color:var(--color5);color: #fff;}
 
 textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 

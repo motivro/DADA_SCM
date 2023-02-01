@@ -280,6 +280,7 @@
 #content .contents_box .srh_btn_box .btn_wrap .btn{width:155px;}
 #content .contents_box .srh_box .inp_wrap{max-width: 210px;}
 #content .contents_box .srh_box .inp_wrap input[type="text"]{padding:5px 10px;font-size:14px;font-weight: 500;line-height: 18px;}
+#content .contents_box .srh_cont input[type="text"]{padding:5px 10px;font-size:14px;font-weight: 500;line-height: 18px;}
 #content .contents_box .srh_box .date_wrap{display: flex;align-items: center;gap: 10px;}
 #content .contents_box .srh_box .date_wrap .tilde{font-size: var(--fts14);}
 .motiv_radio {display: flex;align-items: center;gap: 14px;}
@@ -1166,6 +1167,27 @@
 #content .detail_review .review_img .img_box{width: 100%;height: 100%;position: relative;}
 #content .detail_review .review_img img{position: absolute;left: 0;right: 0;bottom: 0;top: 0;width: 100%;height: 100%;object-fit: cover;object-position: center;}
 /* 리뷰 추천 */
+
+/* qna */
+#content .detail_qna{}
+#content .detail_qna .qna_list .list_hd .row_line{background: var(--color10);}
+#content .detail_qna .qna_list .row_line{display: flex;align-items: center;padding:10px 20px;border-bottom: var(--cont_border);}
+#content .detail_qna .qna_list .row_line.answer{background: var(--color10);}
+#content .detail_qna .qna_list .row_line > div{flex-grow: 0;text-align: center;font-size: var(--fts13);font-weight: var(--ftw500);line-height: 20px;}
+#content .detail_qna .qna_list .row_line .reply_sta{flex-basis: 130px;text-align: left;}
+#content .detail_qna .qna_list .list_bd .row_line .subject{text-align: left;}
+#content .detail_qna .qna_list .row_line .subject{flex: 1 auto;flex-basis: auto;}
+#content .detail_qna .qna_list .row_line .writer{flex-basis: 80px;}
+#content .detail_qna .qna_list .row_line .date{flex-basis:120px;}
+#content .detail_qna .qna_list .row_line .manage{flex-basis:120px;}
+#content .detail_qna .qna_list .row_line .manage .btn_wrap{justify-content: center;}
+#content .detail_qna .qna_list .row_line .manage .btn_wrap .btn{width: 50%;}
+
+#content .detail_qna .qna_list .answer_box{background: var(--color10);border-bottom: var(--cont_border);}
+#content .detail_qna .qna_list .answer_box .question_item{padding: 10px 20px 10px 150px;}
+#content .detail_qna .qna_list .answer_box .answer_item{padding: 20px 20px 10px 150px;border-top: var(--cont_border);}
+#content .detail_qna .qna_list .answer_box .btn_wrap{padding: 10px 20px 10px 150px;justify-content: flex-end;}
+
 #content .detail_review .review_more{margin-top: 20px;display: flex;align-items: center;gap: 10px;}
 #content .detail_review .review_more .txt_box{font-size: var(--fts14);font-weight: var(--ftw500);color: var(--color14);}
 #content .detail_review .review_more .icon_box{padding: 6px 12px;display: flex;align-items:center;gap: 10px;background:#fff;border:var(--box_border);border-radius: 15px;cursor: pointer;}

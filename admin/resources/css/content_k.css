@@ -164,7 +164,7 @@ i.down{transform:rotate(45deg);-webkit-transform:rotate(45deg);margin-top:-5px;}
 
 /**/
 #content .contents_box.center_cont .srh_box{background-color:#fff}
-#content .contents_box .srh_box .srh_item .srh_title + .srh_value{margin-left:10px;font-size:var(--fts16);font-weight:var(--ftw700)}
+#content .contents_box .srh_box .srh_item .srh_title + .srh_value{margin-left:10px;font-size:var(--fts16);font-weight:var(--ftw700);white-space: nowrap;}
 #content .contents_box .srh_box .srh_item .srh_title + .srh_value + .btn{margin-left:20px;}
 .blue_val .srh_value{color:var(--color3)}
 
