@@ -56,6 +56,7 @@ var tFlex = {
     scrollLookSta: false,
 
     init: (id, obj, test) => {
+        obj.id = id;
         //테스트용 
         if(test) $('#'+id+'.contents_box .panel_body .tbl_wrap').append(tableListData);
 
@@ -90,11 +91,50 @@ var tFlex = {
             //scrollLookSta 값이 true 일때만 실행됨니다.
             if(obj.scrollLookSta) tFlex.lookWheelUi(id);
         })
+        .then(() => {
+
+            if(Object.keys(obj).includes('thRow')){
+                tFlex.hdItemRow(obj)
+            }
+
+        })
 
         $(window).on('resize', function(){
             tFlex.lookSize(obj, id);
         });
 
+    },
+
+    hdItemRow: (obj) => {
+        console.log(obj, obj.thRow)
+
+        for(var i=0;obj.thRow.length > i;i++){
+            tFlex.hdItemRowAc(obj.thRow[i], obj);
+        }
+    },
+
+    hdItemRowAc: (name, obj) => {
+        var target = $('#'+ obj.id +' .motiv_tbl .hd_item[keyname='+ name +']');
+        var itemRow = Number(target.attr('item_row')) - 1;
+        var itemRows = itemRow;
+        var itemSizeName = Object.keys(obj.tableSize);
+        var itemArray = new Array();
+        var itemRowSize = 0;
+        for(var i=0;itemRow >= i;i++){
+            itemArray.push(itemSizeName[itemRows]);
+            itemRows++
+        };
+        $.each( itemArray, (index, item) => {
+            itemRowSize = itemRowSize + obj.tableSize[itemArray[index]];
+
+            console.log( $('#'+ obj.id +' .motiv_tbl .hd_item[keyname='+ item +']').html() )
+            
+            if(index>0){
+                $('#'+ obj.id +' .motiv_tbl .look_head_list .hd_item[keyname='+ item +']').html('<div class="tbl_row"></div><div class="tbl_row">'+$('#'+ obj.id +' .motiv_tbl .hd_item[keyname='+ item +']').html()+'</div>');
+            }
+
+        });
+        target.children('.tbl_row').eq(0).addClass('multi_row').css('width', itemRowSize);
     },
 
     //락이 걸리는 테이블일때 실행됨니다.
@@ -128,11 +168,15 @@ var tFlex = {
         $('#'+ id +' '+ tFlex.bodyTgb).css('width', tFlexRight +'px');
 
         $.each( obj.tableSize, (index, item) => {
-            tFlex.hdItemStyle(index, item, id);
+            tFlex.hdItemStyle(index, item, id, obj);
         });
     },
 
-    hdItemStyle: (name, size, id) => {
+    hdItemStyle: (name, size, id, obj) => {
+        if($('#'+ id +' .motiv_tbl .hd_item[keyname='+ name +']').attr('item_row') != undefined){
+            obj['thRow'] = new Array();
+            obj['thRow'].push(name);
+        }
         $('#'+ id +' .motiv_tbl .hd_item[keyname='+ name +']').css('width', size +'px');
     },
 
@@ -165,7 +209,7 @@ var tFlex = {
             $("div[table_name=" + item + "]").css('height', name[item] + 'px');
         });
     },
-
+    
     lookWheelUi: (id) => {
         var wheelStart = 0;
         $('#'+ id).find('.look_body_list').on("wheel scroll", function (e) {
@@ -181,9 +225,6 @@ var tFlex = {
                 wheelStart = -wheel;
             }
             $('#'+ id).find('.look_head_list').find('.d_flex').css('transform', 'translateX(' + wheelStart + 'px');
-            // $('#'+ id +' .motiv_tbl .tbl_head .look_head_box .look_head_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
-            // $('#'+ id +' .motiv_tbl .tbl_body .look_body_box .look_body_list .d_flex').css('transform', 'translateX(' + wheelStart + 'px');
-
             e.preventDefault();
             e.stopPropagation();
             return false;

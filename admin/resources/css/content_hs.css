@@ -464,7 +464,7 @@
 #content .statis_box .statis_item .tit_name{font-size: var(--fts16);font-weight: var(--ftw700);}
 #content .statis_box .statis_item .tit_inp{display: flex;gap: 5px;}
 #content .statis_box .statis_item .tit_inp .inp_wrap input[type="text"]{padding: 5px 10px;font-size: 14px;font-weight: 500;line-height: 18px;}
-
+#content .statis_box .statis_item .tit_inp .inp_wrap input[type="text"]::placeholder {text-align:left}
 
 #content .statis_box .statis_item .item_cont{width:100%;height:100%;padding: 20px;}
 #content .statis_box .statis_item .item_cont .f_col{display: flex;flex-direction: column;}

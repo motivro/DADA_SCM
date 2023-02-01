@@ -66,6 +66,8 @@
 #sandbox_container{width:500px;}
 #sandbox_container.mini{width:340px;}
 #sandbox_container.date{width:auto}
+#sandbox_container.date.size_m{width:250px}
+
 #sandbox_container.mini > input{max-width:160px;}
 #sandbox_container.mini > input:first-child{max-width:160px;}
 #sandbox_container > input{float:left;max-width:210px;margin-left:10px;border: var(--cont_border);padding:10px;position: relative;}
