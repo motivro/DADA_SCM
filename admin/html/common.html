@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/content_hs.css">
+    <link rel="stylesheet" href="../resources/css/content_k.css">
+    <script src="../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../resources/js/ui.js"></script>
+    <script src="../resources/js/table_list.js"></script>
+</head>
+<body> 
+    <!-- wrap S -->
+    <div class="wrap">
+        
+        <!-- container S -->
+        <div id="container">
+            <!-- content S -->
+            <div id="content">
+                
+                
+                <div class="script_test_body">
+                    <div class="alert_open" ac="open">알럿 열기</div>
+                    <div class="alert_close" ac="close">알럿 닫기</div>
+                </div>
+
+            </div>
+            <!-- content E -->
+        </div>
+        <!-- container E -->
+
+    </div>
+    <!-- wrap E -->
+
+    <div class="dada_alt_wrap">
+        <div class="dada_alt_body">
+            <div class="dada_close_box">
+                <div class="dada_close_btn"></div>
+            </div>
+            <div class="dada_cont">
+                정상인 회원은 중지, <br/>
+                중지된 회원은 정상으로 처리합니다.
+            </div>
+            <div class="dada_btn_wrap">
+                <div class="dada_btn co_1">확인</div>
+                <div class="dada_btn co_9">취소</div>
+            </div>
+        </div>
+        <div class="dada_bg"></div>
+    </div> 
+
+</body>
+<script>
+    $(document).ready(function(){
+        $('.script_test_body > div').click(function (){
+            if($(this).attr('ac') == 'open') dadaAlert.open();
+            if($(this).attr('ac') == 'close') dadaAlert.close();
+        });
+    });
+</script>
+</html>

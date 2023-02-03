@@ -232,6 +232,8 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .motiv_tbl .tbl_body .d_flex{width: 2562px;flex-direction:row;display: flex;flex-wrap: wrap;}
 .motiv_tbl .tbl_head .hd_item{box-sizing:border-box; min-height:40px;display: table;text-align:center;font-size: 12px;font-weight: 400;line-height: 17px;color: #000;border-left: 1px solid #e3e3e3;border-top: 1px solid #e3e3e3;background: #f5f5f5;}
 .motiv_tbl .tbl_body .hd_item{box-sizing:border-box;min-height:40px;display: table;text-align:center;font-size: 12px;font-weight: 400;line-height: 17px;color: #000;border-left: 1px solid #e3e3e3;border-top: 1px solid #e3e3e3;background: #ffffff;}
+.motiv_tbl .row_item{position:relative}
+
 .motiv_tbl .tbl_body .sub_row{width:2562px;padding: 20px 15px 30px;background: #e3e3e3;overflow: hidden;}
 .motiv_tbl .tbl_body .sub_row .sub_row_inner{overflow-x: scroll;}
 .motiv_tbl .tbl_body .sub_row .sub_row_inner .tbl_head,
@@ -257,10 +259,10 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 
 .motiv_tbl .tbl_body .hd_item .flex_item{display: flex;align-items: center;gap:8px;}
 
-.motiv_tbl.look_tbl .tbl_inner .tbl_head,
-.motiv_tbl.look_tbl .tbl_inner .tbl_body{display:flex}
-.motiv_tbl.look_tbl .tbl_inner{overflow-x: visible;}
-.motiv_tbl.look_tbl .tbl_body .look_body_list {overflow-x:scroll}
+.motiv_tbl.lock_tbl .tbl_inner .tbl_head,
+.motiv_tbl.lock_tbl .tbl_inner .tbl_body{display:flex}
+.motiv_tbl.lock_tbl .tbl_inner{overflow-x: visible;}
+.motiv_tbl.lock_tbl .tbl_body .look_body_list {overflow-x:scroll}
 
 .motiv_tbl.normal_tbl .tbl_inner .tbl_head,
 .motiv_tbl.normal_tbl .tbl_inner .tbl_body{display:flex}
@@ -372,6 +374,16 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .look_body_box{overflow:hidden}
 .look_head_head,
 .look_body_head{position:relative}
+
+.lock_tbl .look_head_box,
+.lock_tbl .look_body_box{}
+.lock_tbl .look_head_head,
+.lock_tbl .look_body_head{}
+
+.row_item.row_th .hd_item{box-sizing:border-box;min-height:40px;display:table;text-align:center;font-size:12px;font-weight:400;line-height:17px;color:#000;border-left:1px solid #e3e3e3;border-top:1px solid #e3e3e3;background:#f5f5f5;}
+
+.lock_tbl .look_body_box{overflow-x: auto;}
+
 .look_head_head:after,
 .look_body_head:after{content:'';display:block;clear:both;position:absolute;top:0;right:-1px;width:1px;height:100%;background-color:#e3e3e3;z-index:100}
 
