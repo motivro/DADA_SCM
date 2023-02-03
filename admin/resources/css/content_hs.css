@@ -280,7 +280,8 @@
 #content .contents_box .srh_btn_box .btn_wrap .btn{width:155px;}
 #content .contents_box .srh_box .inp_wrap{max-width: 210px;}
 #content .contents_box .srh_box .inp_wrap input[type="text"]{padding:5px 10px;font-size:14px;font-weight: 500;line-height: 18px;}
-#content .contents_box .srh_cont input[type="text"]{padding:5px 10px;font-size:14px;font-weight: 500;line-height: 18px;}
+#content .contents_box .inp_wrap.size_L input[type="text"]{min-width:210px;}
+#content .contents_box .inp_wrap input[type="text"]{padding:5px 10px;font-size:14px;font-weight: 500;line-height: 18px;}
 #content .contents_box .srh_box .date_wrap{display: flex;align-items: center;gap: 10px;}
 #content .contents_box .srh_box .date_wrap .tilde{font-size: var(--fts14);}
 .motiv_radio {display: flex;align-items: center;gap: 14px;}
@@ -295,6 +296,8 @@
 #content .motiv_tbl_box{padding: 30px 20px;background: #fff;}
 #content .motiv_tbl_box .tbl_title{display: flex;justify-content: space-between;color: var(--color13);}
 #content .motiv_tbl_box .tbl_title .tit .date_sta{color: #000;}
+
+#content .motiv_tbl_box .tbl_item + .tbl_title{margin-top: 30px;}
 
 #content .panel_head .tbl_title{color: var(--color13);}
 #content .panel_head .tbl_title .tit .date_sta{color: #000;}
@@ -1219,3 +1222,26 @@
 #content .motiv_normal_tbl .serv_price .inp_wrap{display: flex;align-items: center;gap: 5px;max-width:100px}
 
 #content .chart_info_box{padding: 15px 20px;}
+
+/* 회원탈퇴신청 */
+#content.mem_del .txt_info_box .sub_info_box{margin-top: 15px;}
+#content.mem_del .txt_info_box .sub_info_box .info_cont{padding: 0;}
+#content.mem_del .txt_info_box .txt_info.tit{font-size: var(--fts13);font-weight: var(--ftw500);}
+#content.mem_del .txt_info_box .txt_info{font-size: var(--fts12);}
+#content.mem_del .txt_info_box .txt_info.underline{text-decoration: underline;}
+#content.mem_del .txt_info_box .sub_info_box .sub_txt_list{padding-left: 10px;}
+
+#content .motiv_tbl_box .mem_del_tbl .data_box{padding: 10px;}
+#content .motiv_tbl_box .mem_del_tbl .data_box .row_line{display: flex;justify-content: flex-start;}
+#content .motiv_tbl_box .mem_del_tbl .data_box .row_line + .row_line{margin-top: 5px;}
+#content .motiv_tbl_box .mem_del_tbl .data_box .row_line .tit{flex-basis: 110px;}
+#content .motiv_tbl_box .mem_del_tbl .data_box .row_line .cont{flex-basis: 50px;text-align: right;}
+#content .motiv_tbl_box .mem_del_tbl .data_box .row_line .cont span{margin-right: 5px;font-weight: var(--ftw700);}
+.motiv_tbl.no_scroll .tbl_inner{overflow-x: auto;}
+
+/* 주문 대시보드 */
+#content .motiv_tbl_box .motiv_normal_tbl.ord_dash tr th{background: var(--search_box_bg);}
+#content .motiv_tbl_box .motiv_normal_tbl.ord_dash tr td .d_flex{justify-content: flex-end;align-items: center;gap:5px;}
+#content .motiv_tbl_box .motiv_normal_tbl.ord_dash tr td .price{font-size:var(--fts16);font-weight:var(--ftw500);}
+#content .motiv_tbl_box .motiv_normal_tbl.ord_dash tr td .price.emphasis{color: var(--color3);}
+#content .motiv_tbl_box .motiv_normal_tbl.ord_dash tr td .num_status > span{font-size:var(--fts16);font-weight:var(--ftw500);}

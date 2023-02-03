@@ -274,3 +274,6 @@
 
 .cate_drag_list{margin-top:50px;display: flex;align-items: center;flex-wrap: wrap;}
 .cate_drag_list .drag_item{padding: 5px 20px;margin:0 5px 5px 0;border: var(--cont_border);font-size: var(--fts12);background: var(--color10);}
+
+.motiv_layer .radio_row_box .row_item + .row_item{margin-top: 10px;}
+.motiv_layer .txt_info_box.type1 .txt_info + .txt_info{margin-top: 8px;}

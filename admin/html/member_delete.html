@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/content_hs.css">
+    <link rel="stylesheet" href="../resources/css/content_k.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
+    <script src="../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../resources/js/ui.js"></script>
+    <script src="../resources/js/table_list.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 로그인 전 s-->
+        <!-- <header id="header" class="logout">
+            <div class="hd_inner">
+                <h1>
+                    <a class="logo" title="DADA" href="#none"><span class="blind">DADA</span></a>
+                    <a class="slogo" href="#none"><span>다다 SCM</span></a>
+                </h1>
+            </div>
+        </header> -->
+        <!-- 로그인 전 end-->
+
+        <!-- 로그인 후 s-->
+        <header id="header" class="login">
+            <div class="hd_inner">
+                <h1>
+                    <a class="logo" title="DADA" href="#none"><span class="blind">DADA</span></a>
+                    <div class="slogo"><span>최고관리자</span></div>
+                    <div class="hd_notice">
+                        <span>다다SCM 공지사항 알림</span>
+                    </div>
+                </h1>
+
+                <div class="hd_search">
+                    <div class="hd_search_inner">
+                        <div class="inp_wrap"><input type="text" placeholder="상품명, 태그, 상품코드 검색"></div>
+                        <div class="submit_btn">검색</div>
+                    </div>
+                </div>
+
+                <div class="hd_gnb">
+                    <nav>
+                        <ul class="depth1_menu">
+                            <li class="menu_item lang"><a href="#none">Kor</a></li>
+                            <li class="menu_item">
+                                <a href="#none">고객센터<span class="icon_arrow"></span></a>
+                                <ul class="depth2_menu">
+                                    <li class="menu_item"><a href="#none">문의사항</a></li>
+                                    <li class="menu_item"><a href="#none">공지사항</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu_item">
+                                <a href="#none">메뉴얼<span class="icon_arrow"></span></a>
+                                <ul class="depth2_menu">
+                                    <li class="menu_item"><a href="#none">상품관리</a></li>
+                                    <li class="menu_item"><a href="#none">주문관리</a></li>
+                                    <li class="menu_item"><a href="#none">배송관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu_item"><a href="#none">아이디</a></li>
+                            <li class="menu_item"><a href="#none">로그아웃</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- 로그인 후 end-->
+        <aside id="lnb">
+            <div class="lnb_inner">
+                <div class="profile_info">
+                    <div class="member_info">
+                        <div class="thumb"><img class="member_img" src="../../admin/resources/images/common/profile_noimg.jpeg" alt="회원 이미지"></div>
+                        <div class="desc">
+                            <span class="member_name">홍길동</span>
+                            <a href="#none">로그아웃</a>
+                            <span class="biz_info">사업자 미승인</span>
+                        </div>
+                    </div>
+                    <div class="sell_info">
+                        <ul>
+                            <li>
+                                <div class="tit">주문</div>
+                                <div class="txt"><span class="ord_num">100</span>건</div>
+                            </li>
+                            <li>
+                                <div class="tit">매출</div>
+                                <div class="txt"><span class="sales_num">14,000,000</span>원</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn_wrap">
+                        <a class="btn tomato" href="#none">다다마켓</a>
+                        <a class="btn dark" href="#none">대시보드</a>
+                    </div>
+                </div>
+
+                <div class="lnb_menu">
+                    <ul class="nav_list motiv_acc">
+                        <li class="nav_item">
+                            <div class="nav_menu">상품관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">상품목록</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">다다딜관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">상품관리</a></li>
+                                <li class="sub_item"><a href="#none">판매요청</a></li>
+                                <li class="sub_item"><a href="#none">판매현황</a></li>
+                                <li class="sub_item"><a href="#none">판매종료</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">지정판매관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">지정판매자 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">판매상품관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">전체상품목록</a></li>
+                                <li class="sub_item"><a href="#none">소싱 일반상품</a></li>
+                                <li class="sub_item"><a href="#none">다다딜상품</a></li>
+                                <li class="sub_item"><a href="#none">지정판매자 상품</a></li>
+                                <li class="sub_item"><a href="#none">쇼핑몰 연계상품</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">강제종료관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">강제종료 상품관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">주문관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">주문조회</a></li>
+                                <li class="sub_item"><a href="#none">미결제 확인</a></li>
+                                <li class="sub_item"><a href="#none">발주확인/발송</a></li>
+                                <li class="sub_item"><a href="#none">배송현황</a></li>
+                                <li class="sub_item"><a href="#none">구매확정 내역조회</a></li>
+                                <li class="sub_item"><a href="#none">취소관리</a></li>
+                                <li class="sub_item"><a href="#none">반품관리</a></li>
+                                <li class="sub_item"><a href="#none">교환관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">정산관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">정산내역 조회</a></li>
+                                <li class="sub_item"><a href="#none">정산지급 현황</a></li>
+                                <li class="sub_item"><a href="#none">매출증빙 내역</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">통계</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">통계요약</a></li>
+                                <li class="sub_item"><a href="#none">매출통계</a></li>
+                                <li class="sub_item"><a href="#none">결제수단통계</a></li>
+                                <li class="sub_item"><a href="#none">상품매출통계</a></li>
+                                <li class="sub_item"><a href="#none">판매자 판매통계</a></li>
+                                <li class="sub_item"><a href="#none">SCM플랫폼 리포트</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">회원관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">회원현황</a></li>
+                                <li class="sub_item"><a href="#none">패널티관리</a></li>
+                                <li class="sub_item"><a href="#none">휴면회원관리</a></li>
+                                <li class="sub_item"><a href="#none">탈퇴회원관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">고객센터</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">문의사항관리</a></li>
+                                <li class="sub_item"><a href="#none">공지사항관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">기본정보관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">약관/개인/금융관리</a></li>
+                                <li class="sub_item"><a href="#none">운영자관리</a></li>
+                                <li class="sub_item"><a href="#none">수수료관리</a></li>
+                                <li class="sub_item"><a href="#none">다다마켓 진열관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <div class="nav_menu">쇼핑몰관리</div>
+                            <ul class="submenu">
+                                <li class="sub_item"><a href="#none">카테고리관리</a></li>
+                                <li class="sub_item"><a href="#none">주소지관리</a></li>
+                                <li class="sub_item"><a href="#none">금칙어관리</a></li>
+                                <li class="sub_item"><a href="#none">통합쇼핑몰관리</a></li>
+                                <li class="sub_item"><a href="#none">로컬상가관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <div id="container">
+            
+            <div id="content" class="mem_del">
+                <div class="inner">
+                    <h1>회원탈퇴 신청</h1>
+                    <div class="contents_box open">
+                        <div class="txt_info_box">
+                            <div class="info_tit">
+                                <div class="tit">필수 확인사항 입니다.</div>
+                                <div class="btn btn_search_open infor_box"><i class="arrow"></i>펼처보기</div>
+                            </div>
+                            
+                            <div class="info_cont">
+                                <p class="txt_info tit">탈퇴시 서비스 이용 제한 안내</p>
+                                <p class="txt_info">다다 SCM 이용이 제한되며, 다다몰 판매회원인 경우 노출중인 상품의 전시가 중단됩니다.</p>
+                                <div class="sub_info_box">
+                                    <p class="txt_info tit">탈퇴 후 재가입</p>
+                                    <p class="txt_info">
+                                        • 판매자 탈퇴를 하신경우 동일 판매자정보(사업자번포, 개인식별정보)로 30일간 다시 가입하실수 없습니다.
+                                        <div class="sub_txt_list">
+                                            <p class="txt_info sub">(단,상표법, 고의적 부당행위,부적합 판매자 유사정보 계정, 라이선수가 있는 제품 키 판매로 인한 이용정지의 경우에는 강제탈퇴 불가)</p>
+                                        </div>
+                                    </p>
+                                    <p class="txt_info">• 이용정기 중 강제 탈퇴가 진행된 경우, 이용정지 사유에 따라 동일 판매자 정보(사업자번호, 개인식별번호)로 30일 ~1년간 가입할 수 없습니다.</p>
+                                    <p class="txt_info">
+                                        • 회사는 안정적인 서비스 운영 등을 위해 다음의 경우 재가입을 제한할 수 있습니다.
+                                        <div class="sub_txt_list">
+                                            <p class="txt_info sub">- 약관 및 서비스 운영정책 위반으로 직권해지된 이력이 있는 경우</p>
+                                            <p class="txt_info sub">- 약관 및 서비스 운영정책 위반으로 서비스 이용정지된 상태에서 탈퇴한 이력이 있는 경우</p>
+                                            <p class="txt_info sub">- 약관 및 판매자운영정책에 중대하게 어긋나는 행동을 한 후 자진하여 탈퇴한 이력이 있는 경우</p>
+                                            <p class="txt_info sub">- 단, 부정거래 소명 또는 특수 사유로 인해 재가입을 허용할 경우 소정의 절차레 따라 재가입이 허용됩니다.</p>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="sub_info_box">
+                                    <p class="txt_info tit">탈퇴 조건</p>
+                                    <p class="txt_info">
+                                        • '<a href="#none" class="txt_info subPoint underline">탈퇴 조건 현황</a>'을 통해, ‘진행중인 거래, 클레임 등’ 탈퇴를 조건이 모두 충족되어야 탈퇴 신청이 가능합니다.
+                                        <div class="sub_txt_list">
+                                            <p class="txt_info sub">(탈퇴 조건이 충족된 경우, 탈퇴 조건 현황은 노출되지 않습니다.)</p>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contents_box">
+                        <div class="srh_box">
+                            <div class="srh_item">
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">회원이름</div>
+                                    <div class="srh_cont">
+                                        <div class="txt_cont"><span>홍*동</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="srh_item">
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">인증번호</div>
+                                    <div class="srh_cont">
+                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="인증번호 입력"></div>
+                                        <div class="btn btn_blk">인증번호 요청</div>
+                                        <div class="message d_flex a_c gap5">
+                                            <span class="msgFail"><i class="icon_fail"></i>인증 실패</span>
+                                            <span class="msgSuccess "><i class="icon_success"></i>인증 성공</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="srh_item">
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">담당자 이메일</div>
+                                    <div class="srh_cont">
+                                        <div class="txt_cont"><span>e****@email.com</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="srh_btn_box">
+                            <div class="btn_wrap"><a href="" class="btn btn_blk">탈퇴신청</a></div>
+                        </div>
+                    </div>
+
+                    <div class="contents_box">
+                        <div class="motiv_tbl_box">
+                            <div class="tbl_item">
+                                <table class="motiv_normal_tbl mem_del_tbl">
+                                    <caption>정산내역 조회</caption>
+                                    <colgroup>
+                                        <col style="width:25%;">
+                                        <col style="width:25%;">
+                                        <col style="width:auto;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>탈퇴조건</th>
+                                            <th>현황</th>
+                                            <th>탈퇴 불가능한 경우</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="ta_c">진행중 거래</td>
+                                            <td>
+                                                <div class="data_box">
+                                                    <div class="row_line"><div class="tit">입금대기 주문</div><div class="cont"><span>23</span>건</div></div>
+                                                    <div class="row_line"><div class="tit">진행중인 주문</div><div class="cont"><span>0</span>건</div></div>
+                                                </div>
+                                            </td>
+                                            <td>입금대기 주문건 및 구매확정이 되지 않은 주문 진행건이 존재합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ta_c">클레임</td>
+                                            <td>
+                                                <div class="data_box">
+                                                    <div class="row_line"><div class="tit">취소중</div><div class="cont"><span>23</span>건</div></div>
+                                                    <div class="row_line"><div class="tit">진행중인 주문</div><div class="cont"><span>0</span>건</div></div>
+                                                    <div class="row_line"><div class="tit">교환중</div><div class="cont"><span>0</span>건</div></div>
+                                                    <div class="row_line"><div class="tit">구매확정 보류중</div><div class="cont"><span>0</span>건</div></div>
+                                                </div>
+                                            </td>
+                                            <td>취소/반품/교환 및 구매확정 보류 중인건이 존재하는 경우</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ta_c">판매중 상품</td>
+                                            <td>
+                                                <div class="data_box">
+                                                    <div class="row_line"><div class="tit">입금대기 주문</div><div class="cont"><span>23</span>건</div></div>
+                                                    <div class="row_line"><div class="tit">진행중인 주문</div><div class="cont"><span>0</span>건</div></div>
+                                                </div>
+                                            </td>
+                                            <td>구매자 구매확정건이 존재하여 아직 정산예정 금액으로 집계되지 않은 경우</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <!-- inner E -->
+            </div>
+            <!-- content E -->
+        </div>
+        <!-- container E -->
+
+    </div>
+    <!-- wrap E -->
+
+    <div class="motiv_layer type1">
+        <div class="layer_head">
+            <div class="title">설문조사</div>
+            <div class="btn_close"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect mgt_0">
+                    <div class="txt_info_box type1">
+                        <div class="info_cont">
+                            <p class="txt_info">회원님께 만족을 드리지 못한 점에 대해서 진심으로 사과 드립니다.</p>
+                            <p class="txt_info">회원님의 불만족 요인에 대해 아래와 같은 간단한 조사를 진행하고자 합니다.</p>
+                            <p class="txt_info">회원님의 답변은 서비스 개선에 도움이 될 것입니다. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect_tit">1. 다다scm을 탈퇴하는 사유를 체크해 주세요.</div>
+                <div class="sect radio_row_box">
+                    <div class="row_item">
+                        <div class="radio_wrap motiv_radio">
+                            <label for="5-1" class="radio_btn">다다 회원탈퇴 후 재가입을 위해서 
+                                <input type="radio" id="5-1" name="ava_sta" checked>
+                                <span class="radio_custom"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row_item">
+                        <div class="radio_wrap motiv_radio">
+                            <label for="5-1" class="radio_btn">다다 구매 빈도가 낮아 이용할 필요가 없어서
+                                <input type="radio" id="5-1" name="ava_sta" checked>
+                                <span class="radio_custom"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row_item">
+                        <div class="radio_wrap motiv_radio">
+                            <label for="5-1" class="radio_btn">다다서비스가 마음에 들지 않아서
+                                <input type="radio" id="5-1" name="ava_sta" checked>
+                                <span class="radio_custom"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect_tit">2. 다다SCM에 바라는 점을 남겨주세요. </div>
+                <div class="sect">
+                    <div class="txtarea_box">
+                        <textarea placeholder="사유내용"></textarea>
+                    </div>
+                </div>
+                <div class="bot_btn_wrap"><div class="btn btn_red">확인</div><div class="btn btn_gray">취소</div></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(() => {
+            
+        });
+
+        selectUi.init();
+    
+    </script>
+</body>
+</html>
