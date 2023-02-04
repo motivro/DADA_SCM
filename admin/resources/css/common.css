@@ -250,14 +250,41 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu path{transition:1s}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu path{transform-origin: 50% 50%;}
 
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg1 #menu_svg01{fill: var(--color1);}
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg1 #menu_svg02,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg1 #menu_svg03,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg1 #menu_svg04{fill: var(--color1);}
+
 #lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path1,
 #lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path1_line,
 #lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path4,
 #lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path4_line{fill: var(--color1);}
 #lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #vector,
 #lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #vector{fill: var(--color1);}
-
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg3 #vector22{fill: var(--color1);}
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg4 #vector{fill: var(--color1);}
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg5 #vector-2,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg5 #vector-3{fill: var(--color1);}
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-5,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-4,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-2{fill: var(--color1);}
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg7 #vector,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg7 #vector-2{fill: var(--color1);}
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-2,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-3,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-4,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-5{fill: var(--color1);}
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg9 #vector{fill: var(--color1);}
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-2,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-3,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-4,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-5,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-6{fill: var(--color1);}
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg11 #vector-2,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg11 #vector-3{fill: var(--color1);}
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg12 #vector,
+#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg12 #vector-3{fill: var(--color1);}
 
 #menusvg1 #menu_svg01{transform-origin: calc(50% - 1.383px) calc(50% - 1.383px)!important;transform: translate(1.383px, 1.383px) rotateY( 0deg );}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg1 #menu_svg01{transform: translate(1.383px, 1.383px) rotateY( 360deg )}
@@ -273,10 +300,8 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg2 #path4_line{transform: translate(-12.533px, 9.818px) rotateX(360deg)}
 
 #menusvg3 #vector{opacity:.3}
-#menusvg3 #vector22,
-#menusvg3 #path4_line{transform-origin: 35% 25%!important;transform: translate(1.812px, 1.831px) rotateY( 0deg );}
+#menusvg3 #vector22{transform-origin: 35% 25%!important;transform: translate(1.812px, 1.831px) rotateY( 0deg );}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg3 #vector22{transform: translate(1.812px, 1.831px) rotateY(360deg)}
-
 
 #menusvg4 #vector{transform-origin: calc(50% - 2.672px) calc(50% - 1.747px)!important;transform: translate(2.672px, 1.747px) rotate(0deg);}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg4 #vector{transform: translate(2.672px, 1.747px) rotate( 180deg )}
@@ -284,13 +309,11 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #menusvg5 #vector{transform-origin: calc(50% - 2px) calc(50% - 2px)!important;transform: translate(2px, 2px) rotateX(0deg);}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg5 #vector{transform: translate(2px, 2px) rotateX( 360deg )}
 
-
 #menusvg6 #vector{transform-origin: 0% 15%!important;transform: translate(4.758px, 1.833px) rotate(0deg);}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg6 #vector{animation:menusvg6_1 1.5s linear infinite;}
 
 #menusvg6 #vector-2{transform-origin: 3px 3px!important;transform: translate(13.924px, 1.833px) rotate(0deg);}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg6 #vector-2{animation:menusvg6_2 1.5s linear infinite;}
-
 
 #menusvg7 #vector-3{transform-origin: calc(50% - 2px) calc(50% - 2px)!important;transform: translate(2px, 2px) rotateY(0deg);}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg7 #vector-3{transform: translate(2px, 2px) rotateY( 360deg )}
@@ -304,7 +327,6 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #menusvg9 #vector2{transform-origin: calc(50% - 1.831px) calc(50% - 2.374px)!important;transform: translate(1.831px, 2.374px) scale3d(1, 1, 1);}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg9 #vector2{animation:menusvg9_2 1s linear infinite;}
 
-
 #menusvg10 #vector{transform-origin: calc(50% - 1.816px) calc(50% - 2.724px)!important;transform: translate(1.816px, 2.724px) rotateY(0deg);}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg10 #vector{transform: translate(1.816px, 2.724px) rotateY( 360deg )}
 
@@ -313,8 +335,6 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 
 #menusvg12 #vector{transform-origin: calc(50% - 3.161px) calc(50% - 6.108px)!important;transform: translate(3.161px, 6.108px) rotateY(0deg);}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg12 #vector{transform: translate(3.161px, 6.108px) rotateY( 360deg )}
-
-
 #menusvg12 #vector-3{transform-origin: calc(50% - 7.47px) calc(50% - 15.611px)!important;transform: translate(7.47px, 15.611px) rotateY(0deg);}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg12 #vector-3{transform: translate(7.47px, 15.611px) rotateY( 360deg )}
 
