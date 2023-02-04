@@ -1,12 +1,8 @@
 
 $(document).ready(function(){
     
-    //사이드메뉴 추가
+    //사이드메뉴
     gitHubTgMenu();
-    if(location.href.indexOf('github') != -1){
-        githubUi.ini();
-    }
-    searchCont.init();
 
     // 검색창 단순 이벤트 
     $('.btn_search_open').click(function(){
@@ -19,44 +15,26 @@ $(document).ready(function(){
         }
     });
 
-    $('.testAc').click(function(){
-        console.log(123)
-        
-    });
-
     $('.add_large_cate').click(function(){
-        console.log(123)
         sdfun = '<li><div class="cateTree_folder"><span class="cateTree_del" onclick="cateDynamic.cateDel($(this))"></span><span class="cateTree_cont"><a href="#none">[<span class="cate_code">분류코드</span>]<span class="cate_name">대분류</span></a></span><span class="cateTree_add" onclick="cateDynamic.cateAdd($(this))"></span></div></li>';
         $('.cateTree_wrap').append(sdfun)
     });
-    
-
 });
-
-searchCont = {
-    init: () => {
-        // console.log(123)
-    },
-}
 
 cateDynamic = {
     init: () => {
         // console.log(123)
-
     },
-
     cateAdd: (obj) => {
         console.log(obj)
-        sdfun = '<li><div class="cateTree_folder"><span class="cateTree_del" onclick="cateDynamic.cateDel($(this))"></span><span class="cateTree_cont"><a href="#none">[<span class="cate_code">분류코드</span>]<span class="cate_name">대분류</span></a></span><span class="cateTree_add" onclick="cateDynamic.cateAdd($(this))"></span></div></li>';
-
+        cateAddHtml = '<li><div class="cateTree_folder"><span class="cateTree_del" onclick="cateDynamic.cateDel($(this))"></span><span class="cateTree_cont"><a href="#none">[<span class="cate_code">분류코드</span>]<span class="cate_name">대분류</span></a></span><span class="cateTree_add" onclick="cateDynamic.cateAdd($(this))"></span></div></li>';
 
         if(obj.closest('li').children('ul').length == 0){
             obj.closest('li').append('<ul></ul>');
         } else {
 
         }
-
-        obj.closest('li').children('ul').append(sdfun)
+        obj.closest('li').children('ul').append(cateAddHtml);
     },
 
     cateDel: (obj) => {
@@ -66,159 +44,57 @@ cateDynamic = {
 }
 
 gitHubTgMenu = () => {
-    var locationOrigin = location.origin;
-    var serverSta = location.href.indexOf('github') != -1 ? '/DADA_SCM/admin/html/' : '/admin/html/';
-    var pageRoute = location.origin + serverSta;
-    var depth2 = location.pathname.replace(serverSta, '').split('.')[0];
-    var depth1 = depth2.substr(0, 9);
-    var sideMenuHtml = '';
-    sideMenuHtml += '<ul class="nav_list motiv_acc">';
-    $.each(PCADME, (index, item) => {
-        var numBer = 0;
-        $.each( item, (s_index, s_item) => {
-            if(numBer == 0){
-                numBer++;
-                sideMenuHtml += '<li class="nav_item" menuname="' + s_index + '" childmenu="'+Object.keys(item).length+'">';
-                if(s_index == 'PCADME001'){
-                    sideMenuHtml += '   <i class="icon_nav_menu testAc"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><g id="vuesax_linear_3d-square" data-name="vuesax/linear/3d-square" transform="translate(-300 -252)"><g id="_3d-square" data-name="3d-square" transform="translate(300 252)"><path id="Vector" d="M12.5,19.984H6.732c-2.672,0-4.483-.566-5.7-1.782S-.75,15.174-.75,12.5V6.732c0-2.672.566-4.483,1.782-5.7S4.059-.75,6.732-.75H12.5c2.672,0,4.483.566,5.7,1.782s1.782,3.027,1.782,5.7V12.5c0,2.672-.566,4.483-1.782,5.7S15.174,19.984,12.5,19.984ZM6.732.75c-2.248,0-3.722.427-4.639,1.343S.75,4.483.75,6.732V12.5c0,2.248.427,3.722,1.343,4.639s2.39,1.343,4.639,1.343H12.5c2.248,0,3.722-.427,4.639-1.343s1.343-2.39,1.343-4.639V6.732c0-2.248-.427-3.722-1.343-4.639S14.75.75,12.5.75Z" transform="translate(1.383 1.383)" fill="#fff"/><g id="Group" transform="translate(5.72 5.497)"><g id="Group-2" data-name="Group" transform="translate(0.422 2.992)"><path id="Vector-2" data-name="Vector" d="M4.858,3.564a.749.749,0,0,1-.376-.1L-.376.649A.75.75,0,0,1-.649-.376.75.75,0,0,1,.376-.649l4.482,2.6L9.3-.63a.75.75,0,1,1,.752,1.3l-4.822,2.8A.75.75,0,0,1,4.858,3.564Z" fill="#fff"/><path id="Vector-3" data-name="Vector" d="M0,5.746A.75.75,0,0,1-.75,5V0A.75.75,0,0,1,0-.75.75.75,0,0,1,.75,0V5A.75.75,0,0,1,0,5.746Z" transform="translate(4.858 2.805)" fill="#fff"/></g><path id="Vector-4" data-name="Vector" d="M5.289-.75h0a3.158,3.158,0,0,1,1.5.353L9.724,1.236a3.305,3.305,0,0,1,1.6,2.709V7.062a3.371,3.371,0,0,1-1.6,2.709L6.79,11.4a3.177,3.177,0,0,1-1.509.356,3.133,3.133,0,0,1-1.5-.357L.845,9.771A3.305,3.305,0,0,1-.75,7.062V3.954a3.371,3.371,0,0,1,1.6-2.709l2.93-1.63A3.1,3.1,0,0,1,5.289-.75ZM5.281,10.258a1.715,1.715,0,0,0,.783-.168L8.995,8.46a1.88,1.88,0,0,0,.825-1.4V3.945A1.835,1.835,0,0,0,9,2.55L6.061.916A1.7,1.7,0,0,0,5.289.75h0a1.641,1.641,0,0,0-.773.17l-.009,0L1.575,2.556a1.88,1.88,0,0,0-.825,1.4V7.062a1.835,1.835,0,0,0,.82,1.4l2.938,1.634A1.675,1.675,0,0,0,5.281,10.258Z" transform="translate(0 0)" fill="#fff"/></g><path id="Vector-5" data-name="Vector" d="M0,0H22V22H0Z" fill="none" opacity="0"/></g></g></svg></i>';
-                } else {
-                    sideMenuHtml += '   <i class="icon_nav_menu"></i>';
-                }
+    var lnb_menu_h = window.innerHeight - $('#header').height();// 브라우져의 높이와 헤더 높이를 뺀 값을 $lnb의 높이로 지정합니다.
+    var submenuHeight = 0;//오픈되어 있는 서브 메뉴의 높이를 넣는 변수 입니다.
 
-                sideMenuHtml += '   <div class="nav_menu_wrap">';
-                sideMenuHtml += '   <div class="nav_menu">' + s_item + '</div>';
-                sideMenuHtml += '   <ul class="submenu">';
-            } else {
-                sideMenuHtml += '<li class="sub_item" menuname="' + s_index + '"><a href="' + pageRoute + s_index + '.html">' + s_item + '</a></li>';
-            }
-        })
-        sideMenuHtml += '</ul>';
-        sideMenuHtml += '</div>';
-        sideMenuHtml += '</li>';
+    $('.lnb_inner').css('height', lnb_menu_h);
+    $('.profile_info').css('height', $('.profile_info').height());// 메뉴를 줄였을때 효과를 주기 위해 추가되었습니다.
+
+    //메뉴에서 active 값을 찾습니다.
+    $.each($('.nav_list > li'), (index, item) => {
+        submenuHeight = $('.nav_list > li').eq(index).find('.submenu > li').outerHeight(true) * $('.nav_list > li').eq(index).find('.submenu > li').length;
+        if($('.nav_list > li').eq(index).hasClass('active')){
+            $('.nav_list > li').eq(index).addClass('open');
+            //서브메뉴중 하나의 대상의 마진 높이를 포함한 높이값을 찾고 서브메뉴 갯수를 곱합니다.
+            $('.nav_list > li').eq(index).find('.submenu').css({'height': submenuHeight, 'max-height': submenuHeight});
+        }
+
+        $('.nav_list > li').eq(index).find('.submenu').attr('ulh', submenuHeight)
     })
-    sideMenuHtml += '</ul>';
-    $('.lnb_menu .motiv_acc').remove();
-    $('.lnb_menu').append(sideMenuHtml);
-    
-    var dp2ChilH = $('li.nav_item[menuname='+depth1+']').children('.nav_menu_wrap').children('.submenu').children('li').eq(0).outerHeight(true);
-    if(dp2ChilH == undefined){
-        dp2ChilH = $('li.nav_item').children('.nav_menu_wrap').children('.submenu').children('li').eq(0).outerHeight(true);
-    }
 
-    openMenu(depth1, depth2, dp2ChilH);
-    $('.nav_item').click(function(){open
-        if($(this).find('.icon_nav_menu').hasClass('testAc') && $(this).hasClass('open')) return
-        var dp2ChilHSta = $(this).attr('childmenu') * dp2ChilH;
-        //dp2ChilH
+    //메뉴를 아코디언
+    $('.nav_item').click(function(){
         if($(this).hasClass('open')){
-            $(this).removeClass('open').children('.nav_menu_wrap').children('.submenu').removeAttr('style');
+            $(this).removeClass('open').find('.submenu').removeAttr('style');
         } else {
-            $(this).addClass('open').children('.nav_menu_wrap').children('.submenu').css('max-height', dp2ChilHSta);
+            var ulh = $(this).find('.submenu').attr('ulh')
+            $(this).addClass('open').find('.submenu').css({'height':ulh+'px', 'max-height': ulh+'px'});
         }
     });
-}
 
-openMenu = (depth1, depth2, dp2ChilH) => {
-    var openTg = $('li.nav_item[menuname='+depth1+']');
-    var dp2ChilHSta = openTg.attr('childmenu') * dp2ChilH;
-    openTg.addClass('open').children('.nav_menu_wrap').children('.submenu').css('max-height', dp2ChilHSta).children('.sub_item[menuname='+depth2+']').addClass('active');
-}
+    //#lnb를 줄이고 늘리는 이벤트
+    $('.ham_menu').click(function(){
+        if($('#lnb').hasClass('open')){
+            $('#lnb').removeClass('open');
+            $('.nav_item.open').find('.submenu').css('height', submenuHeight);
+            $('.wrap #container').removeClass('lnb_open');//콘테이너의 padding-left의 값 조정 이벤트 입니다.
+        } else {
+            $('#lnb').addClass('open');
+            $('.nav_item.open').find('.submenu').css('height', 0);
+            $('.wrap #container').addClass('lnb_open');
+        }
+    });
 
-var githubUi = {
-    ini: () => {
-        console.log('github');
-    },
-}
+    //#lnb가 줄어든 상태일때만 구동 합니다.
+    $('#lnb').hover(function(){
+        if(!$(this).hasClass('open')) return;//#lnb에 open 클래스가 없으면 리턴시킵니다.
+        $('.nav_item.open').find('.submenu').css('height', submenuHeight);
+    }, function() {
+        if(!$(this).hasClass('open')) return;
+       $('.nav_item.open').find('.submenu').css('height', 0);
+    });
 
-var PCADME = [
-    {
-        PCADME001: '상품관리',
-        PCADME001001: '상품목록',
-        PCADME001002: '일괄등록',
-    },
-    {
-        PCADME002: '다다딜관리',
-        PCADME002001: '상품관리',
-        PCADME002002: '판매요청',
-        PCADME002003: '판매현황',
-        PCADME002004: '판매종료',
-    },
-    {
-        PCADME003: '지정판매관리',
-        PCADME003001: '지정판매자 관리',
-    },
-    {
-        PCADME004: '판매상품관리',
-        PCADME004001: '전체상품목록',
-        PCADME004002: '소싱일반상품',
-        PCADME004003: '다다딜상품',
-        PCADME004004: '지정판매자상품',
-        PCADME004005: '쇼핑몰연계상품',
-    },
-    {
-        PCADME005: '강제종료관리',
-        PCADME005001: '강제종료상품관리',
-    },
-    {
-        PCADME006: '주문관리',
-        PCADME006001: '주문조회',
-        PCADME006002: '미결제확인',
-        PCADME006003: '발주확인/발송',
-        PCADME006004: '배송현황',
-        PCADME006005: '구매확정내역조회',
-        PCADME006006: '취소관리',
-        PCADME006007: '반품관리',
-        PCADME006008: '교환관리',
-    },
-    {
-        PCADME007: '정산관리',
-        PCADME007001: '정산내역조회',
-        PCADME007002: '정산지급현황',
-        PCADME007003: '매출증빙내용',
-    },
-    // {
-    //     PCADME008: '고객센터',
-    //     PCADME008001: '고객센터',
-    // },
-    {
-        PCADME009: '통계',
-        PCADME009001: '통계요약',
-        PCADME009002: '매출통계',
-        PCADME009003: '결제수단통계',
-        PCADME009004: '상품매출통계',
-        PCADME009005: '판매자판매통계',
-        PCADME009006: 'SCM플랫폼리포트',
-    },
-    
-    {
-        PCADME010: '회원관리',
-        PCADME010001: '회원현황',
-        // PCADME010002: '패널티관리',
-        PCADME010003: '휴면회원관리',
-        PCADME010004: '탈퇴회원관리',
-    },
-    {
-        PCADME011: '고객센터',
-        PCADME011001: '문의사항관리',
-        PCADME011002: '공지사항관리',
-    },
-    {
-        PCADME012: '기본정보관리',
-        PCADME012001: '회사정보관리',
-        PCADME012002: '약관/개인/금융관리',
-        PCADME012003: '운영자계정관리',
-        PCADME012004: '수수료설정',
-        PCADME012005: '소싱진열관리',
-    },
-    {
-        PCADME013: '쇼핑몰관리',
-        PCADME013001: '상품카테고리관리',
-        PCADME013002: '주소지관리',
-        PCADME013003: '금칙단어관리',
-        PCADME013004: '통합쇼핑몰',
-        PCADME013005: '로컬상가관리'
-    }
-]
+}
 
 navToggle = () => {
     var clickTarget = $('#btnNavbar');
@@ -233,7 +109,6 @@ navToggle = () => {
         }
     });
 }
-
 
 /* 셀렉트 박스 */
 var selectUi = {

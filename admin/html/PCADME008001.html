@@ -33,12 +33,18 @@
         <header id="header" class="login">
             <div class="hd_inner">
                 <h1>
+                    <div class="ham_menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
                     <a class="logo" title="DADA" href="#none"><span class="blind">DADA SCM</span></a>
                     <div class="slogo"><span>최고관리자</span></div>
                     <div class="hd_notice">
                         <span>다다SCM 공지사항 알림</span>
                     </div>
                 </h1>
+
                 <div class="hd_search">
                     <div class="hd_search_inner">
                         <div class="inp_wrap"><input type="text" placeholder="상품명, 태그, 상품코드 검색"></div>
@@ -77,11 +83,11 @@
 
         <!-- lnb S -->
         <aside id="lnb">
+            <!-- <div id="btnNavbar"><i class="icon_navbar"></i></div> -->
             <div class="lnb_inner">
                 <div class="profile_info">
                     <div class="member_info">
-                        <div class="thumb"><img class="member_img"
-                                src="../../admin/resources/images/common/profile_noimg.jpeg" alt="회원 이미지"></div>
+                        <!-- <div class="thumb"><img class="member_img" src="../resources/images/common/profile_noimg.jpeg" alt="회원 이미지"></div> -->
                         <div class="desc">
                             <span class="member_name">홍길동</span>
                             <a href="#none">로그아웃</a>
@@ -101,116 +107,291 @@
                         </ul>
                     </div>
                     <div class="btn_wrap">
-                        <a class="btn tomato" href="#none">다다마켓</a>
-                        <a class="btn dark" href="#none">대시보드</a>
+                        <a class="btn tomato dada_market" href="#none">다다마켓</a>
+                        <a class="btn dark dash_board" href="#none">대시보드</a>
                     </div>
                 </div>
-
                 <div class="lnb_menu">
-                    <ul class="nav_list motiv_acc">
-                        <li class="nav_item">
-                            <div class="nav_menu">상품관리</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">상품목록</a></li>
-                            </ul>
+                    <ul class="nav_list">
+                        <li class="nav_item active">
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <path id="menu_svg01" d="M12.5,19.984H6.732c-2.672,0-4.483-.566-5.7-1.782S-.75,15.174-.75,12.5V6.732c0-2.672.566-4.483,1.782-5.7S4.059-.75,6.732-.75H12.5c2.672,0,4.483.566,5.7,1.782s1.782,3.027,1.782,5.7V12.5c0,2.672-.566,4.483-1.782,5.7S15.174,19.984,12.5,19.984ZM6.732.75c-2.248,0-3.722.427-4.639,1.343S.75,4.483.75,6.732V12.5c0,2.248.427,3.722,1.343,4.639s2.39,1.343,4.639,1.343H12.5c2.248,0,3.722-.427,4.639-1.343s1.343-2.39,1.343-4.639V6.732c0-2.248-.427-3.722-1.343-4.639S14.75.75,12.5.75Z" transform="translate(1.383 1.383)" fill="#fff"></path>
+                                    <g id="Group" transform="translate(5.72 5.497)">
+                                        <g id="Group-2" data-name="Group" transform="translate(0.422 2.992)">
+                                            <path id="menu_svg02" data-name="vector02" d="M4.858,3.564a.749.749,0,0,1-.376-.1L-.376.649A.75.75,0,0,1-.649-.376.75.75,0,0,1,.376-.649l4.482,2.6L9.3-.63a.75.75,0,1,1,.752,1.3l-4.822,2.8A.75.75,0,0,1,4.858,3.564Z" fill="#fff"></path>
+                                            <path id="menu_svg03" data-name="vector" d="M0,5.746A.75.75,0,0,1-.75,5V0A.75.75,0,0,1,0-.75.75.75,0,0,1,.75,0V5A.75.75,0,0,1,0,5.746Z" transform="translate(4.858 2.805)" fill="#fff"></path>
+                                        </g>
+                                        <path id="menu_svg04" data-name="vector" d="M5.289-.75h0a3.158,3.158,0,0,1,1.5.353L9.724,1.236a3.305,3.305,0,0,1,1.6,2.709V7.062a3.371,3.371,0,0,1-1.6,2.709L6.79,11.4a3.177,3.177,0,0,1-1.509.356,3.133,3.133,0,0,1-1.5-.357L.845,9.771A3.305,3.305,0,0,1-.75,7.062V3.954a3.371,3.371,0,0,1,1.6-2.709l2.93-1.63A3.1,3.1,0,0,1,5.289-.75ZM5.281,10.258a1.715,1.715,0,0,0,.783-.168L8.995,8.46a1.88,1.88,0,0,0,.825-1.4V3.945A1.835,1.835,0,0,0,9,2.55L6.061.916A1.7,1.7,0,0,0,5.289.75h0a1.641,1.641,0,0,0-.773.17l-.009,0L1.575,2.556a1.88,1.88,0,0,0-.825,1.4V7.062a1.835,1.835,0,0,0,.82,1.4l2.938,1.634A1.675,1.675,0,0,0,5.281,10.258Z" transform="translate(0 0)" fill="#fff"></path>
+                                    </g>
+                                </svg>
+                            </i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">상품관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item active"><a href="./PCADME001001.html">상품목록</a></li>
+                                    <li class="sub_item"><a href="./PCADME001002.html">일괄등록</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav_item">
-                            <div class="nav_menu">다다딜관리</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">상품관리</a></li>
-                                <li class="sub_item"><a href="#none">판매요청</a></li>
-                                <li class="sub_item"><a href="#none">판매현황</a></li>
-                                <li class="sub_item"><a href="#none">판매종료</a></li>
-                            </ul>
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 22">
+                                    <g id="maste" transform="translate(0.599 0.127)" clip-path="url(#clip-path)">
+                                        <path id="path1" data-name="path1" d="M5.631,1.97a3.419,3.419,0,0,1,3.6,3.209,3.419,3.419,0,0,1-3.6,3.209h-3.6V1.97h3.6m0-1.07H.833V9.456h4.8A4.561,4.561,0,0,0,10.423,5.18,4.561,4.561,0,0,0,5.631.9" transform="translate(-0.607 -0.527)" fill="#fff"></path>
+                                        <path id="path1_line" data-name="path1_line" d="M5.631,9.656h-5V.7h5a4.766,4.766,0,0,1,4.993,4.48A4.768,4.768,0,0,1,5.631,9.656Zm-4.6-.4h4.6A4.369,4.369,0,0,0,10.223,5.18,4.368,4.368,0,0,0,5.63,1.1h-4.6Zm4.6-.669h-3.8V1.77h3.8a3.623,3.623,0,0,1,3.8,3.409A3.622,3.622,0,0,1,5.631,8.588Zm-3.4-.4h3.4a3.224,3.224,0,0,0,3.4-3.009,3.224,3.224,0,0,0-3.4-3.009h-3.4Z" transform="translate(-0.607 -0.527)" fill="#fff"></path>
+                                        <path id="path2" data-name="path2" d="M5.631,1.97a3.419,3.419,0,0,1,3.6,3.209,3.419,3.419,0,0,1-3.6,3.209h-3.6V1.97h3.6m0-1.07H.833V9.456h4.8A4.561,4.561,0,0,0,10.423,5.18,4.561,4.561,0,0,0,5.631.9" transform="translate(-0.607 9.818)" fill="#fff"></path>
+                                        <path id="path2_line" data-name="path2_line" d="M5.631,9.656h-5V.7h5a4.766,4.766,0,0,1,4.993,4.48A4.768,4.768,0,0,1,5.631,9.656Zm-4.6-.4h4.6A4.369,4.369,0,0,0,10.223,5.18,4.368,4.368,0,0,0,5.63,1.1h-4.6Zm4.6-.669h-3.8V1.77h3.8a3.623,3.623,0,0,1,3.8,3.409A3.622,3.622,0,0,1,5.631,8.588Zm-3.4-.4h3.4a3.224,3.224,0,0,0,3.4-3.009,3.224,3.224,0,0,0-3.4-3.009h-3.4Z" transform="translate(-0.607 9.818)" fill="#fff"></path>
+                                        <path id="path3" data-name="path3" d="M28.343,1.97a3.423,3.423,0,0,1,3.6,3.21V8.389H24.746V5.18a3.423,3.423,0,0,1,3.6-3.209m0-1.07A4.561,4.561,0,0,0,23.548,5.18v4.28h9.59V5.18A4.561,4.561,0,0,0,28.343.9" transform="translate(-12.533 -0.527)" fill="#fff"></path>
+                                        <path id="path3_line" data-name="path3_line" d="M33.338,9.661h-9.99V5.18A4.767,4.767,0,0,1,28.343.7v0a4.766,4.766,0,0,1,5,4.48Zm-9.59-.4h9.19V5.18a4.367,4.367,0,0,0-4.6-4.08v0A4.368,4.368,0,0,0,23.748,5.18Zm8.391-.671H24.546V5.18a3.628,3.628,0,0,1,3.8-3.409h0a3.624,3.624,0,0,1,3.8,3.408Zm-7.193-.4h6.793V5.18a3.226,3.226,0,0,0-3.4-3.009,3.229,3.229,0,0,0-3.4,3.009Z" transform="translate(-12.533 -0.527)" fill="#fff"></path>
+                                        <path id="path4" data-name="path4" d="M28.343,1.97a3.423,3.423,0,0,1,3.6,3.21V8.389H24.746V5.18a3.423,3.423,0,0,1,3.6-3.209m0-1.07A4.561,4.561,0,0,0,23.548,5.18v4.28h9.59V5.18A4.561,4.561,0,0,0,28.343.9" transform="translate(-12.533 9.818)" fill="#fff"></path>
+                                        <path id="path4_line" data-name="path4_line" d="M33.338,9.661h-9.99V5.18A4.767,4.767,0,0,1,28.343.7v0a4.766,4.766,0,0,1,5,4.48Zm-9.59-.4h9.19V5.18a4.367,4.367,0,0,0-4.6-4.08v0A4.368,4.368,0,0,0,23.748,5.18Zm8.391-.671H24.546V5.18a3.628,3.628,0,0,1,3.8-3.409h0a3.624,3.624,0,0,1,3.8,3.408Zm-7.193-.4h6.793V5.18a3.226,3.226,0,0,0-3.4-3.009,3.229,3.229,0,0,0-3.4,3.009Z" transform="translate(-12.533 9.818)" fill="#fff"></path>
+                                    </g>
+                                </svg>
+                            </i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">다다딜관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="./PCADME002001.html">상품관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME002002.html">판매요청</a></li>
+                                    <li class="sub_item"><a href="./PCADME002003.html">판매현황</a></li>
+                                    <li class="sub_item"><a href="./PCADME002004.html">판매종료</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item"> 
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <g id="vuesax_linear">
+                                        <path id="vector22" d="M5.1-.75a10.588,10.588,0,0,1,1.637.139l4.3.679c2.049.32,4.794,1.146,4.977,4.611a9.467,9.467,0,0,1-.127,2.057l-.669,4.3a6.69,6.69,0,0,1-1.574,3.728,4.565,4.565,0,0,1-3.457,1.272A10.588,10.588,0,0,1,8.55,15.9l-4.3-.679a7.437,7.437,0,0,1-3.2-1.145C-.989,12.651-.874,10.239-.61,8.549l.679-4.3A6.687,6.687,0,0,1,1.643.522,4.565,4.565,0,0,1,5.1-.75Zm5.088,15.285a3.116,3.116,0,0,0,2.383-.819A5.31,5.31,0,0,0,13.737,10.8l.669-4.3a8.006,8.006,0,0,0,.112-1.733v-.01a2.86,2.86,0,0,0-.889-2.128A5.459,5.459,0,0,0,10.805,1.55L6.5.871A9.238,9.238,0,0,0,5.1.75a3.116,3.116,0,0,0-2.383.819A5.31,5.31,0,0,0,1.551,4.483l-.678,4.3A6.358,6.358,0,0,0,.893,11.4a2.468,2.468,0,0,0,1.015,1.447l.006,0a6.021,6.021,0,0,0,2.568.888l4.3.679A9.238,9.238,0,0,0,10.187,14.535Z" transform="translate(1.812 1.831)" fill="#fff"></path>
+                                        <path id="vector" d="M5.1-.75a10.588,10.588,0,0,1,1.637.139l4.3.679c2.049.32,4.794,1.146,4.977,4.611a9.467,9.467,0,0,1-.127,2.057l-.669,4.3a6.69,6.69,0,0,1-1.574,3.728,4.565,4.565,0,0,1-3.457,1.272A10.588,10.588,0,0,1,8.55,15.9l-4.3-.679a7.437,7.437,0,0,1-3.2-1.145C-.989,12.651-.874,10.239-.61,8.549l.679-4.3A6.687,6.687,0,0,1,1.643.522,4.565,4.565,0,0,1,5.1-.75Zm5.088,15.285a3.116,3.116,0,0,0,2.383-.819A5.31,5.31,0,0,0,13.737,10.8l.669-4.3a8.006,8.006,0,0,0,.112-1.733v-.01a2.86,2.86,0,0,0-.889-2.128A5.459,5.459,0,0,0,10.805,1.55L6.5.871A9.238,9.238,0,0,0,5.1.75a3.116,3.116,0,0,0-2.383.819A5.31,5.31,0,0,0,1.551,4.483l-.678,4.3A6.358,6.358,0,0,0,.893,11.4a2.468,2.468,0,0,0,1.015,1.447l.006,0a6.021,6.021,0,0,0,2.568.888l4.3.679A9.238,9.238,0,0,0,10.187,14.535Z" transform="translate(1.812 1.831)" fill="#fff"></path>
+                                        <path id="vector-2" data-name="vector" d="M13.787-.75a.749.749,0,0,1,.352.088,4.475,4.475,0,0,1,2.4,2.711,6.737,6.737,0,0,1-.331,3.981l-1.375,4.134c-.6,1.8-1.737,4.2-4.684,4.2a8.594,8.594,0,0,1-2.69-.506L3.329,12.482C.952,11.7-.339,10.561-.73,8.909a.75.75,0,0,1,.311-.795.75.75,0,0,1,.853.011A6.021,6.021,0,0,0,3,9.012l4.3.679a9.238,9.238,0,0,0,1.4.121,3.116,3.116,0,0,0,2.383-.819,5.311,5.311,0,0,0,1.166-2.914l.669-4.3A8.006,8.006,0,0,0,13.038.049a.75.75,0,0,1,.341-.679A.75.75,0,0,1,13.787-.75ZM10.154,12.863a2.589,2.589,0,0,0,1.884-.7,5.9,5.9,0,0,0,1.377-2.476l1.375-4.134c.715-2.151.474-3.34-.3-4.14q-.032.286-.08.6l-.669,4.3a6.69,6.69,0,0,1-1.574,3.728,4.565,4.565,0,0,1-3.457,1.272,10.738,10.738,0,0,1-1.637-.139l-4.3-.679q-.244-.038-.475-.083a8.355,8.355,0,0,0,1.506.647l4.136,1.375A7.154,7.154,0,0,0,10.154,12.863Z" transform="translate(3.291 6.554)" fill="#fff"></path>
+                                        <path id="vector-3" data-name="vector" d="M1.595-.75A2.345,2.345,0,1,1-.75,1.595,2.348,2.348,0,0,1,1.595-.75Zm0,3.19A.845.845,0,1,0,.75,1.595.846.846,0,0,0,1.595,2.44Z" transform="translate(5.958 5.042)" fill="#fff"></path>
+                                    </g>
+                                </svg>
+                            </i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">지정판매관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="./PCADME003001.html">지정판매자 관리</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item"> 
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <g id="vuesax_linear_setting" data-name="vuesax/linear/setting" transform="translate(-236 -188)">
+                                        <g id="setting" transform="translate(236 188)">
+                                            <path id="vector" d="M8.332-.75a3.48,3.48,0,0,1,1.746.435L15.2,2.672l.041.026a5.511,5.511,0,0,1,1.843,1.59,4.312,4.312,0,0,1,.327,2.247v5.433a4.312,4.312,0,0,1-.327,2.247,5.511,5.511,0,0,1-1.843,1.59l-.041.026-5.121,2.989a3.478,3.478,0,0,1-1.743.433,3.521,3.521,0,0,1-1.75-.433L1.461,15.831l-.041-.026A5.5,5.5,0,0,1-.424,14.214,4.341,4.341,0,0,1-.75,11.959V6.535A4.312,4.312,0,0,1-.423,4.288,5.511,5.511,0,0,1,1.42,2.7l.041-.026L6.582-.317A3.52,3.52,0,0,1,8.332-.75Zm6.144,4.631L9.376.9A2.118,2.118,0,0,0,8.332.66,2.156,2.156,0,0,0,7.281.9l-5.1,2.977a5.311,5.311,0,0,0-1.4,1.113A3.77,3.77,0,0,0,.647,6.535v5.424a3.8,3.8,0,0,0,.139,1.55,5.29,5.29,0,0,0,1.395,1.113l5.1,2.977a2.156,2.156,0,0,0,1.051.244,2.117,2.117,0,0,0,1.04-.242l5.1-2.979a5.31,5.31,0,0,0,1.4-1.113,3.77,3.77,0,0,0,.139-1.541V6.535a3.77,3.77,0,0,0-.139-1.541A5.311,5.311,0,0,0,14.476,3.881Z" transform="translate(2.672 1.747)" fill="#fff"></path>
+                                            <path id="vector-2" data-name="vector" d="M3-.75A3.75,3.75,0,1,1-.75,3,3.754,3.754,0,0,1,3-.75Zm0,6A2.25,2.25,0,1,0,.75,3,2.253,2.253,0,0,0,3,5.25Z" transform="translate(8 8)" fill="#fff"></path>
+                                            <path id="vector-3" data-name="vector" d="M0,0H22V22H0Z" fill="none" opacity="0"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">판매상품관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="./PCADME004001.html">전체상품목록</a></li>
+                                    <li class="sub_item"><a href="./PCADME004002.html">소싱일반상품</a></li>
+                                    <li class="sub_item"><a href="./PCADME004003.html">다다딜상품</a></li>
+                                    <li class="sub_item"><a href="./PCADME004004.html">지정판매자상품</a></li>
+                                    <li class="sub_item"><a href="./PCADME004005.html">쇼핑몰연계상품</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item"> 
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <g id="vuesax_linear_group" data-name="vuesax/linear/group" transform="translate(-108 -700)">
+                                        <g id="group" transform="translate(108 700)">
+                                            <path id="vector" d="M6.39-.75h5.22A3.843,3.843,0,0,1,14.048.262l3.69,3.69A3.843,3.843,0,0,1,18.75,6.39v5.22a3.843,3.843,0,0,1-1.012,2.438l-3.69,3.69A3.843,3.843,0,0,1,11.61,18.75H6.39a3.843,3.843,0,0,1-2.438-1.012l-3.69-3.69A3.843,3.843,0,0,1-.75,11.61V6.39A3.843,3.843,0,0,1,.262,3.952L3.952.262A3.843,3.843,0,0,1,6.39-.75Zm5.22,18a2.4,2.4,0,0,0,1.378-.572l3.69-3.69a2.4,2.4,0,0,0,.572-1.378V6.39a2.4,2.4,0,0,0-.572-1.378l-3.69-3.69A2.4,2.4,0,0,0,11.61.75H6.39a2.4,2.4,0,0,0-1.378.572l-3.69,3.69A2.4,2.4,0,0,0,.75,6.39v5.22a2.4,2.4,0,0,0,.572,1.378l3.69,3.69a2.4,2.4,0,0,0,1.378.572Z" transform="translate(2 2)" fill="#fff"></path>
+                                            <path id="vector-2" data-name="vector" d="M0,7.75a.748.748,0,0,1-.53-.22.75.75,0,0,1,0-1.061l7-7a.75.75,0,0,1,1.061,0A.75.75,0,0,1,7.53.53l-7,7A.748.748,0,0,1,0,7.75Z" transform="translate(7.5 7.5)" fill="#fff"></path>
+                                            <path id="vector-3" data-name="vector" d="M7,7.75a.748.748,0,0,1-.53-.22l-7-7A.75.75,0,0,1-.53-.53.75.75,0,0,1,.53-.53l7,7A.75.75,0,0,1,7,7.75Z" transform="translate(7.5 7.5)" fill="#fff"></path>
+                                            <path id="vector-4" data-name="vector" d="M0,0H22V22H0Z" fill="none" opacity="0"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">강제종료관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="./PCADME005001.html">강제종료상품관리</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item"> 
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <g id="vuesax_linear_bag" data-name="vuesax/linear/bag" transform="translate(-108 -188)">
+                                        <g id="bag" transform="translate(108 188)">
+                                            <path id="vector" d="M0,4.078a.748.748,0,0,1-.53-.219.75.75,0,0,1,0-1.061L2.787-.53a.75.75,0,0,1,1.061,0,.75.75,0,0,1,0,1.061L.531,3.857A.748.748,0,0,1,0,4.078Z" transform="translate(4.758 1.833)" fill="#fff"></path>
+                                            <path id="vector-2" data-name="vector" d="M3.318,4.078a.748.748,0,0,1-.531-.22L-.531.53a.75.75,0,0,1,0-1.061.75.75,0,0,1,1.061,0L3.849,2.8a.75.75,0,0,1-.531,1.28Z" transform="translate(13.924 1.833)" fill="#fff"></path>
+                                            <path id="vector-3" data-name="vector" d="M2.035-.75H16.3a3.272,3.272,0,0,1,1.858.408,2.4,2.4,0,0,1,.927,2.176,2.717,2.717,0,0,1-.736,2.143,2.453,2.453,0,0,1-1.646.443l-.4,0H2.035l-.4,0A2.453,2.453,0,0,1-.014,3.976,2.717,2.717,0,0,1-.75,1.833,2.4,2.4,0,0,1,.177-.342,3.272,3.272,0,0,1,2.035-.75ZM16.7,2.919a1.546,1.546,0,0,0,.686-.1c.033-.027.2-.2.2-.99,0-.344-.045-.784-.262-.929A2.2,2.2,0,0,0,16.3.75H2.035A2.2,2.2,0,0,0,1.012.9C.8,1.049.75,1.489.75,1.833c0,.787.163.963.2.99a1.547,1.547,0,0,0,.686.1l.4,0H16.3Z" transform="translate(1.833 5.363)" fill="#fff"></path>
+                                            <path id="vector-4" data-name="vector" d="M0,4a.75.75,0,0,1-.75-.75V0A.75.75,0,0,1,0-.75.75.75,0,0,1,.75,0V3.254A.75.75,0,0,1,0,4Z" transform="translate(8.947 12.833)" fill="#fff"></path>
+                                            <path id="vector-5" data-name="vector" d="M0,4a.75.75,0,0,1-.75-.75V0A.75.75,0,0,1,0-.75.75.75,0,0,1,.75,0V3.254A.75.75,0,0,1,0,4Z" transform="translate(13.163 12.833)" fill="#fff"></path>
+                                            <path id="vector-6" data-name="vector" d="M10.441,11.75H4.913C1.59,11.75.837,9.768.552,8.042L-.74.121A.75.75,0,0,1-.121-.74.75.75,0,0,1,.74-.121L2.033,7.8c.262,1.589.8,2.451,2.881,2.451h5.528a3.013,3.013,0,0,0,2.2-.607,3.44,3.44,0,0,0,.662-1.754l1.54-8.03a.75.75,0,0,1,.878-.6.75.75,0,0,1,.6.878l-1.54,8.03C14.419,10.057,13.815,11.75,10.441,11.75Z" transform="translate(3.208 9.167)" fill="#fff"></path>
+                                            <path id="vector-7" data-name="vector" d="M0,0H22V22H0Z" fill="none" opacity="0"></path>
+                                        </g>
+                                    </g>
+                                </svg></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">주문관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="./PCADME006001.html">주문조회</a></li>
+                                    <li class="sub_item"><a href="./PCADME006002.html">미결제확인</a></li>
+                                    <li class="sub_item"><a href="./PCADME006003.html">발주확인/발송</a></li>
+                                    <li class="sub_item"><a href="./PCADME006004.html">배송현황</a></li>
+                                    <li class="sub_item"><a href="./PCADME006005.html">구매확정내역조회</a></li>
+                                    <li class="sub_item"><a href="./PCADME006006.html">취소관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME006007.html">반품관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME006008.html">교환관리</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item"> 
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <g id="vuesax_linear_dollar-circle" data-name="vuesax/linear/dollar-circle" transform="translate(-236 -572)">
+                                        <g id="dollar-circle" transform="translate(236 572)">
+                                            <path id="vector" d="M4.73,10.07H2.22A3.03,3.03,0,0,1-.75,6.99.75.75,0,0,1,0,6.24a.75.75,0,0,1,.75.75A1.53,1.53,0,0,0,2.22,8.57H4.73A1.239,1.239,0,0,0,5.92,7.29c0-.84-.263-1.025-.821-1.223l-4.026-1.4A2.476,2.476,0,0,1-.75,2.03,2.739,2.739,0,0,1,1.94-.75H4.45A3.03,3.03,0,0,1,7.42,2.33a.75.75,0,0,1-1.5,0A1.53,1.53,0,0,0,4.45.75H1.94A1.239,1.239,0,0,0,.75,2.03c0,.84.263,1.025.821,1.223L5.6,4.652A2.476,2.476,0,0,1,7.42,7.29,2.739,2.739,0,0,1,4.73,10.07Z" transform="translate(7.671 6.34)" fill="#fff"></path>
+                                            <path id="vector-2" data-name="vector" d="M0,12.158a.734.734,0,0,1-.75-.717V-.033A.734.734,0,0,1,0-.75a.734.734,0,0,1,.75.717V11.441A.734.734,0,0,1,0,12.158Z" transform="translate(11 5.296)" fill="#fff"></path>
+                                            <path id="vector-3" data-name="vector" d="M9-.75A9.75,9.75,0,0,1,18.75,9,9.75,9.75,0,0,1,9,18.75,9.75,9.75,0,0,1-.75,9,9.75,9.75,0,0,1,9-.75ZM9,17.39A8.39,8.39,0,1,0,.61,9,8.4,8.4,0,0,0,9,17.39Z" transform="translate(2 2)" fill="#fff"></path>
+                                            <path id="vector-4" data-name="vector" d="M0,0H22V22H0Z" fill="none" opacity="0"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">정산관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="./PCADME007001.html">정산내역조회</a></li>
+                                    <li class="sub_item"><a href="./PCADME007002.html">정산지급현황</a></li>
+                                    <li class="sub_item"><a href="./PCADME007003.html">매출증빙내용</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item"> 
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <g id="vuesax_linear_status-up" data-name="vuesax/linear/status-up" transform="translate(-236 -252)">
+                                        <g id="status-up" transform="translate(236 252)">
+                                            <path id="vector" d="M0,2.647A.75.75,0,0,1-.75,1.9V0A.75.75,0,0,1,0-.75.75.75,0,0,1,.75,0V1.9A.75.75,0,0,1,0,2.647Z" transform="translate(6.307 14.74)" fill="#fff"></path>
+                                            <path id="vector-2" data-name="vector" d="M0,4.545a.75.75,0,0,1-.75-.75V0A.75.75,0,0,1,0-.75.75.75,0,0,1,.75,0v3.8A.75.75,0,0,1,0,4.545Z" transform="translate(11 12.843)" fill="#fff"></path>
+                                            <path id="vector-3" data-name="vector" d="M0,6.452A.75.75,0,0,1-.75,5.7V0A.75.75,0,0,1,0-.75.75.75,0,0,1,.75,0V5.7A.75.75,0,0,1,0,6.452Z" transform="translate(15.693 10.936)" fill="#fff"></path>
+                                            <path id="vector-4" data-name="vector" d="M0,6.782a.75.75,0,0,1-.727-.569A.75.75,0,0,1-.181,5.3,16.467,16.467,0,0,0,8.4.007l.421-.494A.75.75,0,0,1,9.873-.571.75.75,0,0,1,9.958.486l-.422.5A18,18,0,0,1,5.31,4.6,18.07,18.07,0,0,1,.181,6.759.752.752,0,0,1,0,6.782Z" transform="translate(6.307 5.363)" fill="#fff"></path>
+                                            <path id="vector-5" data-name="vector" d="M2.686,3.427a.75.75,0,0,1-.75-.75V.75H0A.75.75,0,0,1-.75,0,.75.75,0,0,1,0-.75H2.686a.75.75,0,0,1,.75.75V2.677A.75.75,0,0,1,2.686,3.427Z" transform="translate(13.008 5.363)" fill="#fff"></path>
+                                            <path id="vector-6" data-name="vector" d="M11.917,19.083h-5.5c-2.557,0-4.291-.543-5.457-1.709S-.75,14.474-.75,11.917v-5.5C-.75,3.86-.207,2.125.959.959S3.86-.75,6.417-.75h5.5c2.557,0,4.291.543,5.457,1.709s1.709,2.9,1.709,5.457v5.5c0,2.557-.543,4.291-1.709,5.457S14.474,19.083,11.917,19.083ZM6.417.75c-2.133,0-3.53.4-4.4,1.27S.75,4.283.75,6.417v5.5c0,2.133.4,3.53,1.27,4.4s2.263,1.27,4.4,1.27h5.5c2.133,0,3.53-.4,4.4-1.27s1.27-2.263,1.27-4.4v-5.5c0-2.133-.4-3.53-1.27-4.4S14.05.75,11.917.75Z" transform="translate(1.833 1.833)" fill="#fff"></path>
+                                            <path id="vector-7" data-name="vector" d="M0,0H22V22H0Z" fill="none" opacity="0"></path>
+                                        </g>
+                                    </g>
+                                </svg></i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">통계</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="./PCADME009001.html">통계요약</a></li>
+                                    <li class="sub_item"><a href="./PCADME009002.html">매출통계</a></li>
+                                    <li class="sub_item"><a href="./PCADME009003.html">결제수단통계</a></li>
+                                    <li class="sub_item"><a href="./PCADME009004.html">상품매출통계</a></li>
+                                    <li class="sub_item"><a href="./PCADME009005.html">판매자판매통계</a></li>
+                                    <li class="sub_item"><a href="./PCADME009006.html">SCM플랫폼리포트</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_item"> 
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <g id="vuesax_linear_headphone" data-name="vuesax/linear/headphone" transform="translate(-620 -188)">
+                                        <g id="headphone" transform="translate(620 188)">
+                                            <path id="vector2" d="M3.274,18.5a4.035,4.035,0,0,1-2.83-1.156A3.86,3.86,0,0,1-.748,14.563V9.077A9.475,9.475,0,0,1,1.978,2.21,9.909,9.909,0,0,1,9.123-.75a10.012,10.012,0,0,1,7.064,2.858,9.555,9.555,0,0,1,2.9,6.864v5.493a3.86,3.86,0,0,1-1.193,2.782,4.051,4.051,0,0,1-5.659,0,3.86,3.86,0,0,1-1.193-2.782V11.959a2.368,2.368,0,0,1,.688-1.671,2.433,2.433,0,0,1,1.749-.719,2.464,2.464,0,0,1,1.689.661,2.341,2.341,0,0,1,.748,1.73v2.7a.75.75,0,1,1-1.5,0v-2.7a.938.938,0,0,0-1.873,0v2.506a2.524,2.524,0,0,0,5.045,0V8.971a8.067,8.067,0,0,0-2.45-5.793A8.521,8.521,0,0,0,9.123.75,8.42,8.42,0,0,0,3.05,3.259a7.987,7.987,0,0,0-2.3,5.795q0,.008,0,.015v5.493a2.524,2.524,0,0,0,5.045,0V12.057a.907.907,0,0,0-.937-.891.9.9,0,0,0-.937.891v2.6a.75.75,0,0,1-1.5,0v-2.6a2.368,2.368,0,0,1,.688-1.671A2.433,2.433,0,0,1,4.86,9.666a2.464,2.464,0,0,1,1.689.661,2.341,2.341,0,0,1,.748,1.73v2.506A3.86,3.86,0,0,1,6.1,17.344,4.038,4.038,0,0,1,3.274,18.5Z" transform="translate(1.831 2.374)" fill="#fff"></path>
+                                            <path id="vector" d="M3.274,18.5a4.035,4.035,0,0,1-2.83-1.156A3.86,3.86,0,0,1-.748,14.563V9.077A9.475,9.475,0,0,1,1.978,2.21,9.909,9.909,0,0,1,9.123-.75a10.012,10.012,0,0,1,7.064,2.858,9.555,9.555,0,0,1,2.9,6.864v5.493a3.86,3.86,0,0,1-1.193,2.782,4.051,4.051,0,0,1-5.659,0,3.86,3.86,0,0,1-1.193-2.782V11.959a2.368,2.368,0,0,1,.688-1.671,2.433,2.433,0,0,1,1.749-.719,2.464,2.464,0,0,1,1.689.661,2.341,2.341,0,0,1,.748,1.73v2.7a.75.75,0,1,1-1.5,0v-2.7a.938.938,0,0,0-1.873,0v2.506a2.524,2.524,0,0,0,5.045,0V8.971a8.067,8.067,0,0,0-2.45-5.793A8.521,8.521,0,0,0,9.123.75,8.42,8.42,0,0,0,3.05,3.259a7.987,7.987,0,0,0-2.3,5.795q0,.008,0,.015v5.493a2.524,2.524,0,0,0,5.045,0V12.057a.907.907,0,0,0-.937-.891.9.9,0,0,0-.937.891v2.6a.75.75,0,0,1-1.5,0v-2.6a2.368,2.368,0,0,1,.688-1.671A2.433,2.433,0,0,1,4.86,9.666a2.464,2.464,0,0,1,1.689.661,2.341,2.341,0,0,1,.748,1.73v2.506A3.86,3.86,0,0,1,6.1,17.344,4.038,4.038,0,0,1,3.274,18.5Z" transform="translate(1.831 2.374)" fill="#fff"></path>
+                                            <path id="vector-2" data-name="vector" d="M0,0H22V22H0Z" fill="none" opacity="0"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">회원관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="./PCADME010001.html">회원현황</a></li>
+                                    <li class="sub_item"><a href="./PCADME010003.html">휴면회원관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME010004.html">탈퇴회원관리</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav_item">
-                            <div class="nav_menu">지정판매관리</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">지정판매자 관리</a></li>
-                            </ul>
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <g id="vuesax_linear_personalcard" data-name="vuesax/linear/personalcard" transform="translate(-172 -252)">
+                                        <g id="personalcard" transform="translate(172 252)">
+                                            <path id="vector" d="M13.776,17.3H4.592c-2.178,0-3.4-.33-4.2-1.14S-.75,14.133-.75,11.954V4.6C-.75,2.418-.42,1.2.388.39S2.414-.75,4.592-.75h9.184c2.178,0,3.4.33,4.2,1.14S19.118,2.418,19.118,4.6v7.356c0,2.18-.33,3.4-1.138,4.208S15.953,17.3,13.776,17.3ZM4.592.75c-1.713,0-2.653.209-3.143.7S.75,2.882.75,4.6v7.356c0,1.716.209,2.657.7,3.148s1.43.7,3.143.7h9.184c1.713,0,2.653-.209,3.143-.7s.7-1.432.7-3.148V4.6c0-1.716-.209-2.657-.7-3.148s-1.43-.7-3.143-.7Z" transform="translate(1.816 2.724)" fill="#fff"></path>
+                                            <path id="vector-2" data-name="vector" d="M4.541.75H0A.75.75,0,0,1-.75,0,.75.75,0,0,1,0-.75H4.541a.75.75,0,0,1,.75.75A.75.75,0,0,1,4.541.75Z" transform="translate(12.865 7.333)" fill="#fff"></path>
+                                            <path id="vector-3" data-name="vector" d="M3.632.75H0A.75.75,0,0,1-.75,0,.75.75,0,0,1,0-.75H3.632a.75.75,0,0,1,.75.75A.75.75,0,0,1,3.632.75Z" transform="translate(13.776 11)" fill="#fff"></path>
+                                            <path id="vector-4" data-name="vector" d="M1.816.75H0A.75.75,0,0,1-.75,0,.75.75,0,0,1,0-.75H1.816a.75.75,0,0,1,.75.75A.75.75,0,0,1,1.816.75Z" transform="translate(15.597 14.667)" fill="#fff"></path>
+                                            <path id="vector-5" data-name="vector" d="M1.644-.75A2.394,2.394,0,1,1-.75,1.644,2.4,2.4,0,0,1,1.644-.75Zm0,3.287A.894.894,0,1,0,.75,1.644.895.895,0,0,0,1.644,2.537Z" transform="translate(6.143 7.042)" fill="#fff"></path>
+                                            <path id="vector-6" data-name="vector" d="M6.356,3.254a.75.75,0,0,1-.746-.678A2,2,0,0,0,3.8.781H3.794a6.268,6.268,0,0,0-1.233,0,2.011,2.011,0,0,0-1.815,1.8.75.75,0,0,1-.819.674.75.75,0,0,1-.674-.819A3.513,3.513,0,0,1,2.416-.712a7.769,7.769,0,0,1,1.523,0A3.5,3.5,0,0,1,7.1,2.432a.75.75,0,0,1-.674.819C6.4,3.253,6.38,3.254,6.356,3.254Z" transform="translate(4.601 12.457)" fill="#fff"></path>
+                                            <path id="vector-7" data-name="vector" d="M0,0H22V22H0Z" fill="none" opacity="0"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">고객센터</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="./PCADME011001.html">문의사항관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME011002.html">공지사항관리</a></li>
+                                </ul>
+                            </div>
                         </li>
-                        <li class="nav_item">
-                            <div class="nav_menu">판매상품관리</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">전체상품목록</a></li>
-                                <li class="sub_item"><a href="#none">소싱 일반상품</a></li>
-                                <li class="sub_item"><a href="#none">다다딜상품</a></li>
-                                <li class="sub_item"><a href="#none">지정판매자 상품</a></li>
-                                <li class="sub_item"><a href="#none">쇼핑몰 연계상품</a></li>
-                            </ul>
+                        <li class="nav_item"> 
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <g id="vuesax_linear_user-octagon" data-name="vuesax/linear/user-octagon" transform="translate(-620 -188)">
+                                        <g id="user-octagon" transform="translate(620 188)">
+                                            <path id="vector" d="M8.3-.75a3.662,3.662,0,0,1,1.815.483l5.432,3.14,0,0a3.665,3.665,0,0,1,1.8,3.144v6.258a3.665,3.665,0,0,1-1.8,3.144l0,0-5.429,3.138a3.624,3.624,0,0,1-1.811.485,3.662,3.662,0,0,1-1.815-.483l-5.432-3.14A3.642,3.642,0,0,1-.75,12.279V6.02a3.665,3.665,0,0,1,1.8-3.144l0,0L6.488-.265A3.624,3.624,0,0,1,8.3-.75Zm6.494,4.921L9.367,1.034A2.156,2.156,0,0,0,8.3.75a2.122,2.122,0,0,0-1.061.284L1.813,4.171A2.159,2.159,0,0,0,.75,6.02v6.258a2.138,2.138,0,0,0,1.06,1.849l5.429,3.138a2.156,2.156,0,0,0,1.068.284,2.122,2.122,0,0,0,1.061-.284l5.426-3.137a2.159,2.159,0,0,0,1.063-1.85V6.02A2.131,2.131,0,0,0,14.793,4.171Z" transform="translate(2.692 1.85)" fill="#fff"></path>
+                                            <g id="Group" transform="translate(7.299 5.771)">
+                                                <path id="vector-2" data-name="vector" d="M2.156-.75A2.906,2.906,0,1,1-.75,2.156,2.909,2.909,0,0,1,2.156-.75Zm0,4.311A1.406,1.406,0,1,0,.75,2.156,1.407,1.407,0,0,0,2.156,3.561Z" transform="translate(1.545)" fill="#fff"></path>
+                                                <path id="vector-3" data-name="vector" d="M7.4,3.766a.75.75,0,0,1-.75-.75C6.652,1.767,5.328.75,3.7.75S.75,1.767.75,3.016a.75.75,0,0,1-.75.75.75.75,0,0,1-.75-.75A3.483,3.483,0,0,1,.61.3,4.888,4.888,0,0,1,3.7-.75,4.888,4.888,0,0,1,6.792.3a3.483,3.483,0,0,1,1.36,2.714A.75.75,0,0,1,7.4,3.766Z" transform="translate(0 6.532)" fill="#fff"></path>
+                                            </g>
+                                            <path id="vector-4" data-name="vector" d="M0,0H22V22H0Z" fill="none" opacity="0"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">기본정보관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="./PCADME012001.html">회사정보관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME012002.html">약관/개인/금융관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME012003.html">운영자계정관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME012004.html">수수료설정</a></li>
+                                    <li class="sub_item"><a href="./PCADME012005.html">소싱진열관리</a></li>
+                                </ul>
+                            </div>
                         </li>
-                        <li class="nav_item">
-                            <div class="nav_menu">강제종료관리</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">강제종료 상품관리</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav_item">
-                            <div class="nav_menu">주문관리</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">주문조회</a></li>
-                                <li class="sub_item"><a href="#none">미결제 확인</a></li>
-                                <li class="sub_item"><a href="#none">발주확인/발송</a></li>
-                                <li class="sub_item"><a href="#none">배송현황</a></li>
-                                <li class="sub_item"><a href="#none">구매확정 내역조회</a></li>
-                                <li class="sub_item"><a href="#none">취소관리</a></li>
-                                <li class="sub_item"><a href="#none">반품관리</a></li>
-                                <li class="sub_item"><a href="#none">교환관리</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav_item">
-                            <div class="nav_menu">정산관리</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">정산내역 조회</a></li>
-                                <li class="sub_item"><a href="#none">정산지급 현황</a></li>
-                                <li class="sub_item"><a href="#none">매출증빙 내역</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav_item">
-                            <div class="nav_menu">통계</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">통계요약</a></li>
-                                <li class="sub_item"><a href="#none">매출통계</a></li>
-                                <li class="sub_item"><a href="#none">결제수단통계</a></li>
-                                <li class="sub_item"><a href="#none">상품매출통계</a></li>
-                                <li class="sub_item"><a href="#none">판매자 판매통계</a></li>
-                                <li class="sub_item"><a href="#none">SCM플랫폼 리포트</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav_item">
-                            <div class="nav_menu">회원관리</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">회원현황</a></li>
-                                <li class="sub_item"><a href="#none">패널티관리</a></li>
-                                <li class="sub_item"><a href="#none">휴면회원관리</a></li>
-                                <li class="sub_item"><a href="#none">탈퇴회원관리</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav_item">
-                            <div class="nav_menu">고객센터</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">문의사항관리</a></li>
-                                <li class="sub_item"><a href="#none">공지사항관리</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav_item">
-                            <div class="nav_menu">기본정보관리</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">약관/개인/금융관리</a></li>
-                                <li class="sub_item"><a href="#none">운영자관리</a></li>
-                                <li class="sub_item"><a href="#none">수수료관리</a></li>
-                                <li class="sub_item"><a href="#none">다다마켓 진열관리</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav_item">
-                            <div class="nav_menu">쇼핑몰관리</div>
-                            <ul class="submenu">
-                                <li class="sub_item"><a href="#none">카테고리관리</a></li>
-                                <li class="sub_item"><a href="#none">주소지관리</a></li>
-                                <li class="sub_item"><a href="#none">금칙어관리</a></li>
-                                <li class="sub_item"><a href="#none">통합쇼핑몰관리</a></li>
-                                <li class="sub_item"><a href="#none">로컬상가관리</a></li>
-                            </ul>
+                        <li class="nav_item"> 
+                            <i class="icon_nav_menu">
+                                <svg id="menusvg12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <g id="vuesax_linear_shopping-bag" data-name="vuesax/linear/shopping-bag" transform="translate(-686 -188)">
+                                        <g id="shopping-bag" transform="translate(686 188)">
+                                            <path id="vector" d="M4.527-.75h6.625A4.284,4.284,0,0,1,14.643.455a4.78,4.78,0,0,1,.907,2.661l.828,6.81a4.465,4.465,0,0,1-.838,3.623,4.546,4.546,0,0,1-3.56,1.277H3.708A4.552,4.552,0,0,1,.137,13.544,4.446,4.446,0,0,1-.69,9.925L.138,3.115a4.734,4.734,0,0,1,.9-2.659A4.279,4.279,0,0,1,4.527-.75ZM11.98,13.326a3.169,3.169,0,0,0,2.438-.773,3.083,3.083,0,0,0,.47-2.448L14.06,3.3A3.586,3.586,0,0,0,13.5,1.429,3.031,3.031,0,0,0,11.152.75H4.527C1.92.75,1.8,1.761,1.628,3.291L.8,10.107A3.067,3.067,0,0,0,1.26,12.55a3.176,3.176,0,0,0,2.447.776Z" transform="translate(3.161 6.108)" fill="#fff"></path>
+                                            <path id="vector-2" data-name="vector" d="M7.265,6.75A.75.75,0,0,1,6.515,6V2.5c0-1.079-.583-1.75-1.52-1.75H2.27C1.333.75.75,1.421.75,2.5V6A.75.75,0,0,1,0,6.75.75.75,0,0,1-.75,6V2.5A3.005,3.005,0,0,1,2.27-.75H4.995A3.005,3.005,0,0,1,8.015,2.5V6A.75.75,0,0,1,7.265,6.75Z" transform="translate(7.368 1.816)" fill="#fff"></path>
+                                            <path id="vector-3" data-name="vector" d="M11.27.75H0A.75.75,0,0,1-.75,0,.75.75,0,0,1,0-.75H11.27a.75.75,0,0,1,.75.75A.75.75,0,0,1,11.27.75Z" transform="translate(7.47 15.611)" fill="#fff"></path>
+                                            <path id="vector-4" data-name="vector" d="M0,0H22V22H0Z" fill="none" opacity="0"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </i>
+                            <div class="nav_menu_wrap">
+                                <div class="nav_menu">쇼핑몰관리</div>
+                                <ul class="submenu">
+                                    <li class="sub_item"><a href="./PCADME013001.html">상품카테고리관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME013002.html">주소지관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME013003.html">금칙단어관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME013004.html">통합쇼핑몰</a></li>
+                                    <li class="sub_item"><a href="./PCADME013005.html">로컬상가관리</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
