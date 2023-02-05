@@ -44,7 +44,11 @@ var tableData2 = {
 var tFlex = {
     ckbSize: 40,
     init: (obj) => {
+<<<<<<< HEAD
         // console.log(obj)
+=======
+        tFlex.obj = obj;
+>>>>>>> 9714673 (111)
         obj.totalSize = tFlex.ckbSize; 
         $('#'+ obj.id +' .motiv_tbl .hd_item[keyname=checkedbox]').css('width', '40px');
         $.each( obj.tableSize, (name, size) => {
@@ -54,10 +58,27 @@ var tFlex = {
         
         $('#'+ obj.id +' .motiv_tbl').find('.tbl_head, .tbl_body').css('width', obj.totalSize +'px');
         $('#'+ obj.id +' .motiv_tbl').find('.row_item').css('width', obj.totalSize +'px');
+
+        $.each( $('#'+ tFlex.obj.id).find('.hd_item'), (index, target) => {
+            var hdItem = $('#'+ tFlex.obj.id).find('.hd_item').eq(index);
+            if(hdItem.hasClass('item_row')){
+                hdItem.css('width', tFlex.rowItemTh(hdItem));
+            }
+        });
         $(window).on('resize', function(){
             tFlex.init(obj);
         });
-        
+    },
+
+    rowItemTh: (obj) => {
+        var itemThSize = 0;
+        var targetCh = obj.children('.item_row_tbl').children('div');
+        $.each(  targetCh, (index, size) => {
+            var keynameSize = tFlex.obj.tableSize[targetCh.eq(index).attr('keyname')];
+            targetCh.eq(index).css('width', keynameSize);
+            itemThSize = itemThSize + keynameSize;
+        });
+        obj.css('width', itemThSize);
     },
 }
 

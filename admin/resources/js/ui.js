@@ -2,8 +2,19 @@
 $(document).ready(function(){
     
     //사이드메뉴
+<<<<<<< HEAD
     dadaLnbMenu();
     
+=======
+    Promise.resolve()
+    .then(() => {
+        //사이드메뉴의 깜빡이는 효과를 없에려면 초기에 높이를 미리 주는 방법뿐이 없습니다.
+        dadaLnbMenu();
+    })
+    .then(() => {
+        $('#lnb').addClass('complete');
+    })
+>>>>>>> 9714673 (111)
 
     // 검색창 단순 이벤트 
     $('.btn_search_open').click(function(){
