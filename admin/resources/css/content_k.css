@@ -58,7 +58,7 @@
 /* 상품관리 */
 .srh_item_wrap{visibility: hidden;height: 0;}
 .hide_srh_box{border-top: var(--cont_border);display:none}
-.open .hide_srh_box{display:block}
+.contents_box.open .hide_srh_box{display:block}
 .search_block{width:40%}
 .search_block .srh_cont{width:100%}
 .search_block .srh_cont .inp_wrap{max-width:100%!important;width:100%}
