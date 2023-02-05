@@ -1245,3 +1245,40 @@
 #content .motiv_tbl_box .motiv_normal_tbl.ord_dash tr td .price{font-size:var(--fts16);font-weight:var(--ftw500);}
 #content .motiv_tbl_box .motiv_normal_tbl.ord_dash tr td .price.emphasis{color: var(--color3);}
 #content .motiv_tbl_box .motiv_normal_tbl.ord_dash tr td .num_status > span{font-size:var(--fts16);font-weight:var(--ftw500);}
+
+/* 개인정보 관리 */
+#content .mem_notice_box{text-align: center;}
+#content .mem_notice_box .tit{font-size: var(--fts24);}
+#content .mem_notice_box .sub_tit{margin-top:10px;font-size: var(--fts16);}
+
+/* 본인인증 */
+#content .modify .find_box{margin:30px auto 0;}
+#content .find_box{max-width: 625px;margin: 0 auto;}
+#content .find_box .cont_tit{margin-bottom:30px;text-align: center;}
+#content .find_box .cont_tit h2{font-size: 30px;font-weight: 500;color: #000;}
+#content .find_box .tab_tit{display: flex;align-items: center;margin-bottom:30px;}
+#content .find_box .tab_tit .tit_item{width: 50%;height:54px;padding:15px 0;font-size:16px;font-weight:500;line-height:24px;color:#84898d;text-align: center;background: #f6f6f6;border:1px solid #f6f6f6;border-radius: 10px;box-sizing: border-box;}
+#content .find_box .tab_tit .tit_item.active{background: #fff;border-color: var(--color1);color: var(--color1);}
+#content .find_box .cont_item .cont_inner{padding:40px 75px 50px;border: 1px solid #e3e3e3;border-radius:10px;background: #fff;}
+#content .find_box .send_item{margin-bottom: 80px;}
+#content .find_box.finIdFin .send_item{margin-bottom: 40px;}
+#content .find_box .send_item .info_wrap{margin-bottom:30px;text-align: center;}
+#content .find_box .send_item .txt_info{font-size: 16px;font-weight: 500;line-height: 24px;color: #000;}
+#content .find_box .send_item .txt_info .point{color: var(--color1);}
+#content .find_box .send_item .flex_row{display: flex;gap: 8px;}
+#content .find_box .send_item .flex_row .inp_wrap{width: calc(100% - 158px);}
+#content .find_box .send_item .flex_row .btn_wrap{width: 150px;align-items: flex-start;}
+#content .find_box .send_item .flex_row .btn_wrap .btn{width: 100%;font-size:14px;font-weight:500;text-align: center;color: #fff;border-radius: 5px;background:var(--color1);border-color: var(--color1);}
+#content .find_box .cus_inp_wrap.txt_inp{margin-bottom:100px;gap: 0;border-radius: 5px;border: var(--cont_border);}
+#content .find_box .cus_inp_wrap.txt_inp .left{padding:0 20px;font-size:14px;line-height:38px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;border-right: var(--cont_border);background: #f6f6f6;}
+#content .find_box .cus_inp_wrap.txt_inp input[type="text"]{width: auto;min-height:38px;padding:0 15px;flex-basis: auto; flex-grow: 1;font-size:16px;line-height:38px;}
+#content .find_box .cus_inp_wrap.txt_inp .right{display:flex;gap:14px;padding:0 20px;font-size:14px;line-height:38px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+#content .find_box .cus_inp_wrap.txt_inp .right .code_confirm{font-weight:700;cursor: pointer;}
+#content .find_box .cus_inp_wrap.txt_inp .right .timer{font-weight: 500;color: var(--color1);}
+#content .find_box .btn_wrap.bottom{margin-top: 40px;}
+#content .find_box .btn_wrap .btn_codeCerti{width: 245px;text-align: center;font-size:15px;font-weight:700;color: #fff;border-radius: 5px;background:var(--color1);border-color: var(--color1);}
+#content .find_box .btn_wrap .btn_next{width: 245px;text-align: center;font-size:15px;font-weight:700;color: #fff;border-radius: 5px;background:var(--color9);border-color: var(--color9);}
+#content .find_box .btn_wrap .btn_next.active{background:var(--color14);border-color: var(--color14);}
+#content .find_box .btn_wrap .btn_goLogin{width: 245px;text-align: center;font-size:15px;font-weight:700;color: #fff;border-radius: 5px;background:var(--color1);border-color: var(--color1);}
+#content .find_box .btn_wrap .btn_findPw{width: 245px;text-align: center;font-size:15px;font-weight:700;color: #fff;border-radius: 5px;background:#000;border-color: #000;}
+#content .find_box .btn_wrap .btn_newPwSave{width: 245px;text-align: center;font-size:15px;font-weight:700;color: #fff;border-radius: 5px;background:var(--color1);border-color: var(--color1);}

@@ -44,7 +44,7 @@ var tableData2 = {
 var tFlex = {
     ckbSize: 40,
     init: (obj) => {
-        console.log(obj)
+        // console.log(obj)
         obj.totalSize = tFlex.ckbSize; 
         $('#'+ obj.id +' .motiv_tbl .hd_item[keyname=checkedbox]').css('width', '40px');
         $.each( obj.tableSize, (name, size) => {

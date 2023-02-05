@@ -2,14 +2,8 @@
 $(document).ready(function(){
     
     //사이드메뉴
-    Promise.resolve()
-    .then(() => {
-        //사이드메뉴의 깜빡이는 효과를 없에려면 초기에 높이를 미리 주는 방법뿐이 없습니다.
-        dadaLnbMenu('open');
-    })
-    .then(() => {
-        $('#lnb').addClass('complete');
-    })
+    dadaLnbMenu();
+    
 
     // 검색창 단순 이벤트 
     $('.btn_search_open').click(function(){
@@ -51,6 +45,34 @@ cateDynamic = {
 }
 
 dadaLnbMenu = () => {
+    // lnb가 닫혔을 때와 열렸을 때를 애니메이션 적용을 위해서 필요한 구문입니다.
+    // 프로필박스 높이를 주기위한 변수
+    var profileBoxHeight = $('.profile_info .member_info').outerHeight() + $('.profile_info .sell_info').outerHeight(true) + $('.profile_info .btn_wrap').outerHeight(true);
+    
+    // 닫혔을 때 인지를 위한 쿼리문
+    if($('#lnb').hasClass('closeLnb')){
+        $('#lnb, .ham_menu, .wrap #container').addClass('open');
+        $('.nav_item.open').find('.submenu').css('height', 0);
+    }
+
+    // 순차적으로 진행하기 위한 쿼리문
+    // 깜밖이는 효과 방지
+    Promise.resolve()
+    .then(() => {
+        dadaLnbMenuSta1(profileBoxHeight);
+    })
+    .then(() => {
+        if($('#lnb').hasClass('closeLnb')){
+            dadaLnbMenuSta2();
+        }
+    })
+    .then(() => {
+        $('.wrap').addClass('complete');
+    })
+
+}
+
+dadaLnbMenuSta1 = (profileBoxHeight) => {
     var lnb_menu_h = window.innerHeight - $('#header').height();// 브라우져의 높이와 헤더 높이를 뺀 값을 $lnb의 높이로 지정합니다.
     var submenuHeight = 0;//오픈되어 있는 서브 메뉴의 높이를 넣는 변수 입니다.
 
@@ -80,16 +102,22 @@ dadaLnbMenu = () => {
         }
     });
 
+    // 프로필박스의 높이값을 추가하는 구문
+    $('.profile_info').css({
+        'height' : profileBoxHeight,
+        'transition' : '.5s',
+    });
+
     //#lnb를 줄이고 늘리는 이벤트
     $('.ham_menu').click(function(){
         if($('#lnb').hasClass('open')){
             $('#lnb,.ham_menu').removeClass('open');
             $('.nav_item.open').find('.submenu').css('height', submenuHeight);
-            $('.wrap #container').removeClass('lnb_open');//콘테이너의 padding-left의 값 조정 이벤트 입니다.
+            $('.wrap #container').removeClass('open');//콘테이너의 padding-left의 값 조정 이벤트 입니다.
         } else {
             $('#lnb,.ham_menu').addClass('open');
             $('.nav_item.open').find('.submenu').css('height', 0);
-            $('.wrap #container').addClass('lnb_open');
+            $('.wrap #container').addClass('open');
         }
     });
 
@@ -99,8 +127,14 @@ dadaLnbMenu = () => {
         $('.nav_item.open').find('.submenu').css('height', submenuHeight);
     }, function() {
         if(!$(this).hasClass('open')) return;
-       $('.nav_item.open').find('.submenu').css('height', 0);
+        $('.nav_item.open').find('.submenu').css('height', 0);
     });
+}
+
+// lnb를 정상적으로 동작하기위한 구문
+dadaLnbMenuSta2 = () => {
+    $('#lnb').removeClass('closeLnb');
+    $('.nav_item.open').find('.submenu').css('height', 0);
 }
 
 navToggle = () => {
