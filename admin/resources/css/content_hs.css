@@ -691,15 +691,8 @@
 .motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 100px;}
 .motiv_tbl.addr2_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
 
-.motiv_tbl.api_tbl .tbl_inner .hd_item:first-child{flex-grow: 0;flex-basis: 100px;}
-.motiv_tbl.api_tbl .tbl_inner .hd_item:first-child + .hd_item{flex-grow: 0;flex-basis: 100px;}
-.motiv_tbl.api_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item{flex-grow: 0;flex-basis: 1 00px;}
-.motiv_tbl.api_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
-.motiv_tbl.api_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
-.motiv_tbl.api_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
-.motiv_tbl.api_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 100px;}
-.motiv_tbl.api_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 100px;}
-.motiv_tbl.api_tbl .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-grow: 1;flex-basis: 100px;}
+.motiv_tbl.api_tbl .tbl_inner .hd_item{flex-grow:1;}
+.motiv_tbl.api_tbl .tbl_inner .hd_item:first-child{flex-basis:80px;}
 
 /* 금칙단어 관리 */
 #content .motiv_tbl_box .tbl_util{display: flex;justify-content:flex-start;align-items: center;gap: 10px;}

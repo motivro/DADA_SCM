@@ -60,7 +60,7 @@ input[type="text"]{width: 100%;min-height:40px;}
 input[type="password"]{width: 100%;min-height:40px;}
 
 /* contents s */
-.wrap #container{padding-left:204px;transition:.5s}
+.wrap #container{padding-left:230px;padding-top:74px;transition:.5s}
 .wrap #content{max-width:1920px;}
 .wrap #content .inner{padding: 30px 40px 80px;}
 .wrap #content .contents_box{margin-top: 40px;background-color: #fff;border: var(--cont_border);}
@@ -442,7 +442,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 
 .motiv_tbl .tbl_body .hd_item > div.tbl_col .tbl_row:first-child{border-bottom:solid 1px #e3e3e3;}
 
-.motiv_tbl .tbl_body .hd_item .flex_item{display: flex;align-items: center;gap:8px;}
+.motiv_tbl .tbl_body .hd_item .flex_item{display: flex;justify-content:center;align-items: center;gap:8px;}
 
 .motiv_tbl.lock_tbl .tbl_inner .tbl_head,
 .motiv_tbl.lock_tbl .tbl_inner .tbl_body{display:flex}
