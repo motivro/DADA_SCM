@@ -84,32 +84,33 @@ var tFlex = {
 
             const $target = document.querySelector('#'+ obj.id +' .tbl_inner');
             const observer = new ResizeObserver((entries) => {
-                reSize = 0;
-                if($('#'+ obj.id).find('.tbl_inner').width() > obj.totalSize){
-                    var reTotalSize = tFlex.ckbSize;
-                    reSize = ($('#'+ obj.id).find('.tbl_inner').width() - obj.totalSize) / Object.keys(obj.tableSize).length;
-                    $.each( obj.tableSize, (name, size) => {
-                        obj.tableSize[name] = size + reSize;
-                        reTotalSize = reTotalSize + size + reSize;
-                    });
-                    obj.totalSize = reTotalSize;
-                }
-    
-                $.each( obj.tableSize, (name, size) => $('#'+ obj.id +' .motiv_tbl .hd_item[keyname='+ name +']').css('width', size +'px') );
-                $('#'+ obj.id +' .motiv_tbl').find('.tbl_head, .tbl_body').css('width', obj.totalSize +'px');
-                $('#'+ obj.id +' .motiv_tbl').find('.row_item').css('width', obj.totalSize +'px');
-                
-                $.each( $('#'+ obj.id).find('.hd_item'), (index, target) => {
-                    var hdItem = $('#'+ obj.id).find('.hd_item').eq(index);
-                    if(hdItem.hasClass('item_row')){
-                        hdItem.css('width', tFlex.rowItemTh(hdItem, obj));
-                    }
-                });
+                tFlex.reSizeChange(obj);
             });
             observer.observe($target);  // 크기변화를 관찰할 요소지정
-            
         })
        
+    },
+
+    reSizeChange: (obj) => {
+        reSize = 0;
+        if($('#'+ obj.id).find('.tbl_inner').width() > obj.totalSize){
+            var reTotalSize = tFlex.ckbSize;
+            reSize = ($('#'+ obj.id).find('.tbl_inner').width() - obj.totalSize) / Object.keys(obj.tableSize).length;
+            $.each( obj.tableSize, (name, size) => {
+                obj.tableSize[name] = size + reSize;
+                reTotalSize = reTotalSize + size + reSize;
+            });
+            obj.totalSize = reTotalSize;
+        }
+        $.each( obj.tableSize, (name, size) => $('#'+ obj.id +' .motiv_tbl .hd_item[keyname='+ name +']').css('width', size +'px') );
+        $('#'+ obj.id +' .motiv_tbl').find('.tbl_head, .tbl_body').css('width', obj.totalSize +'px');
+        $('#'+ obj.id +' .motiv_tbl').find('.row_item').css('width', obj.totalSize +'px');
+        $.each( $('#'+ obj.id).find('.hd_item'), (index, target) => {
+            var hdItem = $('#'+ obj.id).find('.hd_item').eq(index);
+            if(hdItem.hasClass('item_row')){
+                hdItem.css('width', tFlex.rowItemTh(hdItem, obj));
+            }
+        });
     },
 
     tableSize: (obj) => {
