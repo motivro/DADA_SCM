@@ -127,6 +127,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #header{width:100%;background-color:#2f2f2f;position: fixed;top: 0;z-index: 500;}
 #header .ham_menu{width:34px;height:34px;margin-right:10px;padding:7px 5px;background:#4C4E57;border-radius:100%;display:flex;justify-content:center;flex-direction:column;cursor:pointer;align-items:center;}
 #header .ham_menu .line{display:block;width:76%;height:2px;background:#fff;border-radius:5px;margin:2px 0;}
+#header .ham_menu.open .line{background-color:var(--color1)}
 
 #header .hd_inner{display:flex;justify-content:space-between;align-items:center;width:100%;padding: 17px 23px;}
 #header h1{display: flex;justify-content: flex-start;align-items: center;flex-wrap: nowrap;flex-direction: row;}
@@ -213,13 +214,12 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #lnb .lnb_menu .nav_list .nav_item.open .nav_menu{font-weight: 700;}
 #lnb .lnb_menu .nav_list .nav_item .nav_menu:after{content: '';display:block;width:16px;height:16px;background: url('../images/common/menu_close.svg') no-repeat center center;background-size: contain;position: absolute;right: 0;top: 50%;transform:translateY(-50%);}
 #lnb .lnb_menu .nav_list .nav_item.open .nav_menu:after{background: url('../images/common/menu_opn.svg')no-repeat center center;background-size: contain;}
-#lnb .lnb_menu .nav_list .nav_item .submenu{max-height: 0;overflow: hidden;transition: max-height .3s;padding-left: 7px;transition:.5s}
+#lnb .lnb_menu .nav_list .nav_item .submenu{max-height: 0;overflow: hidden;padding-left: 7px;}
+#lnb.complete .lnb_menu .nav_list .nav_item .submenu{transition:.5s}
+
 #lnb .lnb_menu .nav_list .nav_item .submenu .sub_item{margin-top:14px;font-size:14px;font-weight:500;color: #959595;transition: color .3s;}
 #lnb .lnb_menu .nav_list .nav_item .submenu .sub_item:hover{color: var(--color1);}
-#lnb .lnb_menu .nav_list .nav_item .submenu .sub_item + .sub_item{}
 #lnb .lnb_menu .nav_list .nav_item .submenu .sub_item.active a{color:var(--color1);text-decoration:underlind}
-
-#lnb .lnb_menu .nav_list .nav_item.open .submenu{}
 
 #lnb.open{width:90px;}
 #lnb .lnb_menu .nav_list .nav_item > .nav_menu_wrap{opacity:1;transition: .5s;width:127px;white-space: nowrap;left:0;position:relative;margin-top:10px;}
@@ -231,16 +231,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 
 #lnb .lnb_menu .nav_list .nav_item{transition:.5s}
 #lnb.open .lnb_menu .nav_list .nav_item{margin-left:6px;}
-/* #lnb.open .lnb_menu .nav_list .nav_item > .nav_menu_wrap{animation:nav_menu_wrap .8s linear forwards;}
 
-@keyframes nav_menu_wrap {
-	50% {
-		opacity: 0;position: relative;top: 0;left:-20px;
-	}
-    100% {
-		opacity: 0;position: relative;top: 0;left:-20px;height:0;width:0
-	}
-} */
 
 #lnb.open .lnb_menu .nav_list .nav_item > .nav_menu_wrap .submenu{}
 
@@ -287,56 +278,56 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg12 #vector-3{fill: var(--color1);}
 
 #menusvg1 #menu_svg01{transform-origin: calc(50% - 1.383px) calc(50% - 1.383px)!important;transform: translate(1.383px, 1.383px) rotateY( 0deg );}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg1 #menu_svg01{transform: translate(1.383px, 1.383px) rotateY( 360deg )}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg1 #menu_svg01{transform: translate(1.383px, 1.383px) rotateY( 360deg )}
 
 #menusvg2 #path1,
 #path1_line{transform-origin: calc(25% - 0.607px) calc(50% - 0.527px)!important;transform: translate(-0.607px, -0.527px) rotateY( 0deg );}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg2 #path1,
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg2 #path1_line{transform: translate(-0.607px, -0.527px) rotateY(360deg)}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg2 #path1,
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg2 #path1_line{transform: translate(-0.607px, -0.527px) rotateY(360deg)}
 
 #menusvg2 #path4,
 #menusvg2 #path4_line{transform-origin: 130% 25%!important;transform: translate(-12.533px, 9.818px) rotateX( 0deg );}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg2 #path4,
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg2 #path4_line{transform: translate(-12.533px, 9.818px) rotateX(360deg)}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg2 #path4,
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg2 #path4_line{transform: translate(-12.533px, 9.818px) rotateX(360deg)}
 
 #menusvg3 #vector{opacity:.3}
 #menusvg3 #vector22{transform-origin: 35% 25%!important;transform: translate(1.812px, 1.831px) rotateY( 0deg );}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg3 #vector22{transform: translate(1.812px, 1.831px) rotateY(360deg)}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg3 #vector22{transform: translate(1.812px, 1.831px) rotateY(360deg)}
 
 #menusvg4 #vector{transform-origin: calc(50% - 2.672px) calc(50% - 1.747px)!important;transform: translate(2.672px, 1.747px) rotate(0deg);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg4 #vector{transform: translate(2.672px, 1.747px) rotate( 180deg )}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg4 #vector{transform: translate(2.672px, 1.747px) rotate( 180deg )}
 
 #menusvg5 #vector{transform-origin: calc(50% - 2px) calc(50% - 2px)!important;transform: translate(2px, 2px) rotateX(0deg);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg5 #vector{transform: translate(2px, 2px) rotateX( 360deg )}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg5 #vector{transform: translate(2px, 2px) rotateX( 360deg )}
 
 #menusvg6 #vector{transform-origin: 0% 15%!important;transform: translate(4.758px, 1.833px) rotate(0deg);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg6 #vector{animation:menusvg6_1 1.5s linear infinite;}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg6 #vector{animation:menusvg6_1 1.5s linear infinite;}
 
 #menusvg6 #vector-2{transform-origin: 3px 3px!important;transform: translate(13.924px, 1.833px) rotate(0deg);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg6 #vector-2{animation:menusvg6_2 1.5s linear infinite;}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg6 #vector-2{animation:menusvg6_2 1.5s linear infinite;}
 
 #menusvg7 #vector-3{transform-origin: calc(50% - 2px) calc(50% - 2px)!important;transform: translate(2px, 2px) rotateY(0deg);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg7 #vector-3{transform: translate(2px, 2px) rotateY( 360deg )}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg7 #vector-3{transform: translate(2px, 2px) rotateY( 360deg )}
 
 #menusvg8 #vector-6{transform-origin: calc(50% - 1.883px) calc(50% - 1.883px)!important;transform: translate(1.883px, 1.883px) rotateY(0deg);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg8 #vector-6{transform: translate(1.883px, 1.883px) rotateY( 360deg )}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg8 #vector-6{transform: translate(1.883px, 1.883px) rotateY( 360deg )}
 
 #menusvg9 #vector{transform-origin: calc(50% - 1.831px) calc(50% - 2.374px)!important;transform: translate(1.831px, 2.374px) scale3d(1, 1, 1);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg9 #vector{animation:menusvg9_1 1s linear infinite;}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg9 #vector{animation:menusvg9_1 1s linear infinite;}
 
 #menusvg9 #vector2{transform-origin: calc(50% - 1.831px) calc(50% - 2.374px)!important;transform: translate(1.831px, 2.374px) scale3d(1, 1, 1);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg9 #vector2{animation:menusvg9_2 1s linear infinite;}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg9 #vector2{animation:menusvg9_2 1s linear infinite;}
 
 #menusvg10 #vector{transform-origin: calc(50% - 1.816px) calc(50% - 2.724px)!important;transform: translate(1.816px, 2.724px) rotateY(0deg);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg10 #vector{transform: translate(1.816px, 2.724px) rotateY( 360deg )}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg10 #vector{transform: translate(1.816px, 2.724px) rotateY( 360deg )}
 
 #menusvg11 #vector{transform-origin: calc(50% - 2.692px) calc(50% - 1.85px)!important;transform: translate(2.692px, 1.85px) rotateX(0deg);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg11 #vector{transform: translate(2.692px, 1.85px) rotateX( 360deg )}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg11 #vector{transform: translate(2.692px, 1.85px) rotateX( 360deg )}
 
 #menusvg12 #vector{transform-origin: calc(50% - 3.161px) calc(50% - 6.108px)!important;transform: translate(3.161px, 6.108px) rotateY(0deg);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg12 #vector{transform: translate(3.161px, 6.108px) rotateY( 360deg )}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg12 #vector{transform: translate(3.161px, 6.108px) rotateY( 360deg )}
 #menusvg12 #vector-3{transform-origin: calc(50% - 7.47px) calc(50% - 15.611px)!important;transform: translate(7.47px, 15.611px) rotateY(0deg);}
-#lnb .lnb_menu .nav_list .nav_item .icon_nav_menu:hover #menusvg12 #vector-3{transform: translate(7.47px, 15.611px) rotateY( 360deg )}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg12 #vector-3{transform: translate(7.47px, 15.611px) rotateY( 360deg )}
 
 @keyframes menusvg9_1 {
     0% {transform: translate(1.831px, 2.374px) scale3d(1, 1, 1);opacity: 1;}
@@ -379,17 +370,11 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
     transform-origin: calc(25% - 0.607px) calc(50% - 0.527px);
     transform: translate(-0.607px, -0.527px) rotateY( 0deg );
     transform: translate(-0.607px, -0.527px) rotateY( 360deg );
-
 }
 
-
 @keyframes dash1 {
-	30% {
-		fill: var(--color1);
-	}
-    100% {
-		fill: var(--color1);
-	}
+	30% {fill: var(--color1);}
+    100% {fill: var(--color1);}
 }
 
 /* 예제 svg stroke 

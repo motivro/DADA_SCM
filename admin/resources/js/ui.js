@@ -2,7 +2,14 @@
 $(document).ready(function(){
     
     //사이드메뉴
-    gitHubTgMenu();
+    Promise.resolve()
+    .then(() => {
+        //사이드메뉴의 깜빡이는 효과를 없에려면 초기에 높이를 미리 주는 방법뿐이 없습니다.
+        gitHubTgMenu();
+    })
+    .then(() => {
+        $('#lnb').addClass('complete');
+    })
 
     // 검색창 단순 이벤트 
     $('.btn_search_open').click(function(){
@@ -75,11 +82,11 @@ gitHubTgMenu = () => {
     //#lnb를 줄이고 늘리는 이벤트
     $('.ham_menu').click(function(){
         if($('#lnb').hasClass('open')){
-            $('#lnb').removeClass('open');
+            $('#lnb,.ham_menu').removeClass('open');
             $('.nav_item.open').find('.submenu').css('height', submenuHeight);
             $('.wrap #container').removeClass('lnb_open');//콘테이너의 padding-left의 값 조정 이벤트 입니다.
         } else {
-            $('#lnb').addClass('open');
+            $('#lnb,.ham_menu').addClass('open');
             $('.nav_item.open').find('.submenu').css('height', 0);
             $('.wrap #container').addClass('lnb_open');
         }
@@ -93,7 +100,6 @@ gitHubTgMenu = () => {
         if(!$(this).hasClass('open')) return;
        $('.nav_item.open').find('.submenu').css('height', 0);
     });
-
 }
 
 navToggle = () => {
