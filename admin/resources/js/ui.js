@@ -5,7 +5,7 @@ $(document).ready(function(){
     Promise.resolve()
     .then(() => {
         //사이드메뉴의 깜빡이는 효과를 없에려면 초기에 높이를 미리 주는 방법뿐이 없습니다.
-        gitHubTgMenu();
+        dadaLnbMenu('open');
     })
     .then(() => {
         $('#lnb').addClass('complete');
@@ -50,7 +50,7 @@ cateDynamic = {
     },
 }
 
-gitHubTgMenu = () => {
+dadaLnbMenu = () => {
     var lnb_menu_h = window.innerHeight - $('#header').height();// 브라우져의 높이와 헤더 높이를 뺀 값을 $lnb의 높이로 지정합니다.
     var submenuHeight = 0;//오픈되어 있는 서브 메뉴의 높이를 넣는 변수 입니다.
 
@@ -59,14 +59,15 @@ gitHubTgMenu = () => {
 
     //메뉴에서 active 값을 찾습니다.
     $.each($('.nav_list > li'), (index, item) => {
+        //서브메뉴중 하나의 대상의 마진 높이를 포함한 높이값을 찾고 서브메뉴 갯수를 곱합니다.
         submenuHeight = $('.nav_list > li').eq(index).find('.submenu > li').outerHeight(true) * $('.nav_list > li').eq(index).find('.submenu > li').length;
+
         if($('.nav_list > li').eq(index).hasClass('active')){
             $('.nav_list > li').eq(index).addClass('open');
             //서브메뉴중 하나의 대상의 마진 높이를 포함한 높이값을 찾고 서브메뉴 갯수를 곱합니다.
             $('.nav_list > li').eq(index).find('.submenu').css({'height': submenuHeight, 'max-height': submenuHeight});
         }
-
-        $('.nav_list > li').eq(index).find('.submenu').attr('ulh', submenuHeight)
+        $('.nav_list > li').eq(index).find('.submenu').attr('ulh', submenuHeight);
     })
 
     //메뉴를 아코디언

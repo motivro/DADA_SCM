@@ -57,6 +57,7 @@ var tFlex = {
         $(window).on('resize', function(){
             tFlex.init(obj);
         });
+        
     },
 }
 
