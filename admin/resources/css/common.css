@@ -60,7 +60,7 @@ input[type="text"]{width: 100%;min-height:40px;}
 input[type="password"]{width: 100%;min-height:40px;}
 
 /* contents s */
-.wrap #container{padding-left:230px;padding-top:74px;transition:.5s}
+.wrap #container{padding-left:230px;margin-top:74px;transition:.5s}
 .wrap #content{max-width:1920px;}
 .wrap #content .inner{padding: 30px 40px 80px;}
 .wrap #content .contents_box{margin-top: 40px;background-color: #fff;border: var(--cont_border);}
@@ -123,7 +123,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .d_flex.gap10{gap: 10px !important;}
 
 /* header s*/
-#header{width:100%;background-color:#2f2f2f;position: fixed;top: 0;z-index: 500;}
+#header{width:100%;background-color:#2f2f2f;position: sticky;top: 0;z-index: 500;}
 #header .ham_menu{width:34px;height:34px;margin-right:10px;padding:7px 5px;background:#4C4E57;border-radius:100%;display:flex;justify-content:center;flex-direction:column;cursor:pointer;align-items:center;}
 #header .ham_menu .line{display:block;width:76%;height:2px;background:#fff;border-radius:5px;margin:2px 0;}
 #header .ham_menu.open .line{background-color:var(--color1)}
@@ -159,7 +159,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 /* header e */
 
 /* lnb s */
-#lnb{position: fixed;left: 204px;top: 0;bottom:0;z-index: 10;background: #40424a;width: 230px;margin-top: 74px;margin-left: -204px;transition: width .45s ease;}
+#lnb{float:left;position: sticky;left: 0;top: 74px;bottom:0;z-index: 10;background: #40424a;width: 230px;margin-top: 74px;transition: width .45s ease;}
 
 #lnb.closeLnb{width: 90px;}
 #lnb.closeLnb .lnb_menu .nav_list .nav_item > .nav_menu_wrap{opacity:1;left:0}
@@ -170,7 +170,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #lnb.closeLnb .profile_info{height: 0 !important;}
 
 
-#lnb .lnb_inner{width:100%;min-height:100%;background: #40424a;position: relative;}
+#lnb .lnb_inner{width:100%;min-height:100%;background: #40424a;position: relative;overflow:hidden}
 
 #lnb .profile_info{margin: 30px 20px;white-space: nowrap;}
 #lnb .profile_info .member_info{display: flex;}
