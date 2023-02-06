@@ -259,11 +259,7 @@ var tFlexLock = {
         } else {
             reScrollRowSize = scrollRowSize;
         }
-        
-        console.log(reSize, obj.tableSize)
-
         obj.staVal = false;
-
         if((motivTblW - obj.scrollLookSize) > rowSize){
             //체크박스 넓이를 제외한 데이터 전체 넓이를 계산합니다.
             //hd_item에 해당 데이터 넓이를 추가합니다.
@@ -282,9 +278,7 @@ var tFlexLock = {
                     }
                 });
             }
-            console.log(222)
         } else {
-            console.log(111)
             //체크박스 넓이를 제외한 데이터 전체 넓이를 계산합니다.
             //hd_item에 해당 데이터 넓이를 추가합니다.
             $.each( originSize, (name, size) => {

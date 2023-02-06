@@ -60,7 +60,7 @@ input[type="text"]{width: 100%;min-height:40px;}
 input[type="password"]{width: 100%;min-height:40px;}
 
 /* contents s */
-.wrap #container{padding-left:230px;margin-top:74px;transition:.5s}
+.wrap #container{padding-left:230px;transition:.5s}
 .wrap #content{max-width:1920px;}
 .wrap #content .inner{padding: 30px 40px 80px;}
 .wrap #content .contents_box{margin-top: 40px;background-color: #fff;border: var(--cont_border);}
