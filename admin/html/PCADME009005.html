@@ -658,11 +658,35 @@
     <!-- wrap E -->
     <script>
 
+        var testData1 = { // 변수명은 변경이 가능합니다.
+            id: 'pcacme009005_1',
+            tableSize: { // tableSize 변수명은 변경되면 안됨니다.
+                //하단의 변수 명칭은 변경이 가능하지만 리스트 테이블html 에서 keyname값과 동일 하면 됨니다. 
+                sell1: 80,
+                sell2: 100,
+                sell3: 100,
+                sell4: 100,
+                sell5: 100,
+                sell6: 100,
+                sell7: 100,
+                sell8: 100,
+                sell9: 100,
+                sell10: 100,
+                sell11: 100,
+                sell12: 100,
+                sell13: 100,
+                sell14: 100,
+                sell15: 100,
+                sell16: 100,
+            },
+            // scrollLook: ['sell1', 'sell2'],
+        }
+
         $(document).ready(() => {
             $('#sandbox_container.input-daterange').datepicker({language : "ko"});
-            tFlex.init('pcacme009005_1', tableData2, true);
+            tFlex.init(testData1);//일반적인 스크롤되는 리스트
         });
-      
+   
         selectUi.init();
 
     </script>

@@ -26,7 +26,6 @@ cateDynamic = {
         // console.log(123)
     },
     cateAdd: (obj) => {
-        console.log(obj)
         cateAddHtml = '<li><div class="cateTree_folder"><span class="cateTree_del" onclick="cateDynamic.cateDel($(this))"></span><span class="cateTree_cont"><a href="#none">[<span class="cate_code">분류코드</span>]<span class="cate_name">대분류</span></a></span><span class="cateTree_add" onclick="cateDynamic.cateAdd($(this))"></span></div></li>';
 
         if(obj.closest('li').children('ul').length == 0){
