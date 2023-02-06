@@ -131,6 +131,8 @@ var tFlexLock = {
         var scrollTableName = new Array(); 
         var reScrollRowSize = 0;
         var firstSize = new Object();
+        var originSize = new Object();
+        obj.staVal = false;
         //일반 테이블 리스트를 재활용하기 위해 클래스를 추가합니다.
         $('#'+ obj.id +' .motiv_tbl').addClass('lock_tbl');
 
@@ -150,6 +152,7 @@ var tFlexLock = {
             //hd_item에 해당 데이터 넓이를 추가합니다.
             $.each( obj.tableSize, (name, size) => {
                 firstSize[name] = size;
+                originSize[name] = size;
                 scrollTableName.push(name);
                 obj.totalSize = obj.totalSize + size;
             });
@@ -165,8 +168,6 @@ var tFlexLock = {
                 }
             });
 
-            
-
             //테이블의 전체 넓이를 구합니다.
             motivTblW = $('#'+ obj.id +' .motiv_tbl').width();
             scrollRowSize = obj.totalSize - obj.scrollLookSize;
@@ -174,6 +175,7 @@ var tFlexLock = {
             reSize = 0;//사이즈를 다시 체크하기 위한 여비 변수 입니다.
 
             if(($('#'+ obj.id).find('.tbl_inner').width() - obj.scrollLookSize) > scrollRowSize){
+                obj.staVal = true;
                 //데이터의 전체 넓이가 테이블의 넓이보다 작을 경우에 각 데이터의 넓이를 테이블의 넓이에 맞게 변경합니다.
                 //전체 데이터의 넓이를 다시 구하기 시작합니다.
                 //테이블의 넓이와 데이터 넓이를 뺀 값에 데이터 갯수를 나눠 데이터 각각에 나눠주기 위한 값을 계산합니다.
@@ -183,10 +185,8 @@ var tFlexLock = {
                     obj.tableSize[name] = obj.tableSize[name] + reSize;
                     reScrollRowSize = reScrollRowSize + obj.tableSize[name];
                 });
-                //다시 구한 전체 넓이로 값을 변경합니다.
-            } else {
-                reScrollRowSize = scrollRowSize;
             }
+           
         })
         .then(() => {
             //체크박스 넓이를 제외한 데이터 전체 넓이를 계산합니다.
@@ -224,12 +224,12 @@ var tFlexLock = {
             //주 대상은 데이터 전체 넓이가 데이블 넓이보다 작을 경우에 주 대상입니다.
             const $target = document.querySelector('#'+ obj.id +' .tbl_inner');
             const observer = new ResizeObserver((entries) => {
-                tFlexLock.reSizeChange(obj, scrollTableName, reScrollRowSize, scrollRowSize, firstSize);
+                tFlexLock.reSizeChange(obj, scrollTableName, reScrollRowSize, scrollRowSize, firstSize, originSize);
             });
             observer.observe($target);  // 크기변화를 관찰할 요소지정
 
             $(window).on('resize', function(){
-                // tFlexLock.reInit(obj);
+                tFlexLock.reSizeChange(obj, scrollTableName, reScrollRowSize, scrollRowSize, firstSize, originSize);
             });
         })
         
@@ -237,28 +237,32 @@ var tFlexLock = {
 
     //리사이즈 및 lnb 이벤트가 발생할때 값을 다시 구합니다.
     //함수 내용은 위와 동일 합니다.
-    reSizeChange: (obj, scrollTableName, reScrollRowSize, rowSize,firstSize) => {
+    reSizeChange: (obj, scrollTableName, reScrollRowSize, rowSize, firstSize, originSize) => {
         var motivTblW = $('#'+ obj.id +' .motiv_tbl').width();
         var scrollRowSize = obj.totalSize - obj.scrollLookSize;
         var scrollRowBoxSize = (motivTblW - obj.scrollLookSize) > rowSize ? (motivTblW - obj.scrollLookSize) : rowSize;
         var reSize = 0;//사이즈를 다시 체크하기 위한 여비 변수 입니다.
         var reScrollRowSize = 0;
+
         
         if(($('#'+ obj.id).find('.tbl_inner').width() - obj.scrollLookSize) > scrollRowSize){
             //데이터의 전체 넓이가 테이블의 넓이보다 작을 경우에 각 데이터의 넓이를 테이블의 넓이에 맞게 변경합니다.
             //전체 데이터의 넓이를 다시 구하기 시작합니다.
             //테이블의 넓이와 데이터 넓이를 뺀 값에 데이터 갯수를 나눠 데이터 각각에 나눠주기 위한 값을 계산합니다.
             reSize = (scrollRowBoxSize - scrollRowSize) / scrollTableName.length;
-            console.log(reSize)
             $.each( scrollTableName, (index, name) => {
                 //전달받은 데이터 각각의 값에 reSize값을 더합니다.
-                firstSize[name] = obj.tableSize[name] + reSize;
+                firstSize[name] = obj.staVal ? obj.tableSize[name] : obj.tableSize[name] + reSize;
                 reScrollRowSize = reScrollRowSize + firstSize[name];
             });
             //다시 구한 전체 넓이로 값을 변경합니다.
         } else {
             reScrollRowSize = scrollRowSize;
         }
+        
+        console.log(reSize, obj.tableSize)
+
+        obj.staVal = false;
 
         if((motivTblW - obj.scrollLookSize) > rowSize){
             //체크박스 넓이를 제외한 데이터 전체 넓이를 계산합니다.
@@ -275,6 +279,26 @@ var tFlexLock = {
                     var hdItem = $('#'+ obj.id).find('.hd_item').eq(index);
                     if(hdItem.hasClass('item_row')){
                         hdItem.css('width', tFlexLock.rowItemTh(hdItem, firstSize));
+                    }
+                });
+            }
+            console.log(222)
+        } else {
+            console.log(111)
+            //체크박스 넓이를 제외한 데이터 전체 넓이를 계산합니다.
+            //hd_item에 해당 데이터 넓이를 추가합니다.
+            $.each( originSize, (name, size) => {
+                $('#'+ obj.id +' .motiv_tbl .hd_item[keyname='+ name +']').css('width', size +'px');
+                //전체 데이터 name을 배열에 저장합니다.
+            });
+
+            //item_row가 있을 경우 실행됨니다.
+            if($('#'+ obj.id).find('.item_row').length > 0){
+                //item_row 넓이값을 구하기 위해 필요한 값을 구합니다.
+                $.each( $('#'+ obj.id).find('.hd_item'), (index, target) => {
+                    var hdItem = $('#'+ obj.id).find('.hd_item').eq(index);
+                    if(hdItem.hasClass('item_row')){
+                        hdItem.css('width', tFlexLock.rowItemTh(hdItem, originSize));
                     }
                 });
             }
