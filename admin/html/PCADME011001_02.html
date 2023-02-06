@@ -9,16 +9,9 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/content_hs.css">
     <link rel="stylesheet" href="../resources/css/content_k.css">
-    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.min.css">
-    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.standalone.min.css">
-    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
-    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
 </head>
 
 <body>
@@ -278,7 +271,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav_item active"> 
+                        <li class="nav_item"> 
                             <i class="icon_nav_menu">
                                 <svg id="menusvg8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
                                     <g id="vuesax_linear_status-up" data-name="vuesax/linear/status-up" transform="translate(-236 -252)">
@@ -300,7 +293,7 @@
                                     <li class="sub_item"><a href="./PCADME009002.html">매출통계</a></li>
                                     <li class="sub_item"><a href="./PCADME009003.html">결제수단통계</a></li>
                                     <li class="sub_item"><a href="./PCADME009004.html">상품매출통계</a></li>
-                                    <li class="sub_item active"><a href="./PCADME009005.html">판매자판매통계</a></li>
+                                    <li class="sub_item"><a href="./PCADME009005.html">판매자판매통계</a></li>
                                     <li class="sub_item"><a href="./PCADME009006.html">SCM플랫폼리포트</a></li>
                                 </ul>
                             </div>
@@ -326,7 +319,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav_item">
+                        <li class="nav_item active">
                             <i class="icon_nav_menu">
                                 <svg id="menusvg10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
                                     <g id="vuesax_linear_personalcard" data-name="vuesax/linear/personalcard" transform="translate(-172 -252)">
@@ -345,7 +338,7 @@
                             <div class="nav_menu_wrap">
                                 <div class="nav_menu">고객센터</div>
                                 <ul class="submenu">
-                                    <li class="sub_item"><a href="./PCADME011001.html">문의사항관리</a></li>
+                                    <li class="sub_item active"><a href="./PCADME011001.html">문의사항관리</a></li>
                                     <li class="sub_item"><a href="./PCADME011002.html">공지사항관리</a></li>
                                 </ul>
                             </div>
@@ -412,362 +405,139 @@
             <div id="content">
                 <!-- inner S -->
                 <div class="inner">
-                    <h1>판매자 판매통계</h1>
+                    <h1> 문의사항 관리 상세</h1>
+
                     <div class="contents_box">
-                        <div class="srh_box">
-                            <div class="srh_item">
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">회원(ID)</div>
-                                    <div class="srh_cont">
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
-                                    </div>
-                                </div>
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">검색기간</div>
-                                    <div class="srh_cont">
-                                        <div class="btn_wrap">
-                                            <div class="btn">오늘</div>
-                                            <div class="btn">10일</div>
-                                        </div>
-                                        <div class="date_wrap">
-                                            <div id="sandbox_container" class="input-daterange input-group">
-                                                <input type="text" class="input-sm form-control" name="start" placeholder="경과일자 시작"/>
-                                                <span class="tilde">~</span>
-                                                <input type="text" class="input-sm form-control" name="end" placeholder="경과일자 종료"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="srh_item row-2">
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">판매 형식</div>
-                                    <div class="srh_cont">
-                                        <div class="cus_inp_wrap checkbox_inp">
-                                            <label for="1-1" class="inp_box">전체
-                                                <input type="checkbox" id="1-1" name="member_sta" checked>
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                            <label for="1-2" class="inp_box">위탁판매
-                                                <input type="checkbox" id="1-2" name="member_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                            <label for="1-3" class="inp_box">직접판매
-                                                <input type="checkbox" id="1-3" name="member_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">판매 유형</div>
-                                    <div class="srh_cont">
-                                        <div class="cus_inp_wrap checkbox_inp">
-                                            <label for="2-1" class="inp_box">전체
-                                                <input type="checkbox" id="2-1" name="member_sta" checked>
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                            <label for="2-2" class="inp_box">일반상품
-                                                <input type="checkbox" id="2-2" name="member_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                            <label for="2-3" class="inp_box">다다딜상품
-                                                <input type="checkbox" id="2-3" name="member_sta">
-                                                <span class="inp_custom"></span>
-                                            </label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="srh_btn_box">
-                            <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
-                        </div>
-                    </div>
-
-                    <div class="contents_box pd_0">
-                        <div class="rank_chart">
-                            <div class="box_body bd_0">
-                                <div class="top_rink_list row-3 bd_0">
-                                    <div class="top_rink_item">
-                                        <div class="item_tit consign">위탁판매자 순위 Top 10</div>
-                                        <div class="item_ranking">
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
+                        <div class="motiv_tbl_box name_k">
+                            <div class="tbl_item">
+                                <table class="motiv_normal_tbl question ta_c">
+                                    <caption>정산내역 조회</caption>
+                                    <colgroup>
+                                        <col style="width:15%;">
+                                        <col style="width:35%">
+                                        <col style="width:15%;">
+                                        <col style="width:35%">
+                                    </colgroup>
+                                   
+                                    <tbody>
+                                        <tr>
+                                            <th><div>접수일</div></th>
+                                            <td><div>2021-00-00 00:00:00</div></td>
+                                            <th><div>처리일</div></th>
+                                            <td><div>2021-00-00</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>문의자</div></th>
+                                            <td><div>홍길동(ID)</div></td>
+                                            <th><div>상품명</div></th>
+                                            <td><div>상품명</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>문의유형/제목</div></th>
+                                            <td colspan="3" class="ta_l"><div class="qa_title">다다 쇼핑몰 상품전송 등록 작업 상세 내용문의</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>문의내용</div></th>
+                                            <td colspan="3" class="ta_l">
+                                                <div>
+                                                    <div class="view_area">
+                                                        <p>작업 상세 내용문의 입니다.</p>
+                                                        <p>문의입니다.</p>
+                                                    </div>
+                                                    <div class="view_info">
+                                                        <div class="item">
+                                                            <div class="tit">• 문의 유형 :</div>
+                                                            <div class="cont">
+                                                                <div class="select_wrap">
+                                                                    <select>
+                                                                        <option value="50" selected>제목</option>
+                                                                        <option value="100">작성자</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item"><div class="tit">• 회원구분 :</div><div class="cont">판매자 회원</div></div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="top_rink_item">
-                                        <div class="item_tit direct">직접판매자 순위 Top 10</div>
-                                        <div class="item_ranking">
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="top_rink_item">
-                                        <div class="item_tit dada">다다딜판매자 순위 Top 10</div>
-                                        <div class="item_ranking">
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- tableList S -->
-                    <div class="contents_box">
-                        <div class="panel_head bdr_bot">
-                            <div class="cont_group d_flex">
-                                <div class="cont_left">
-                                    <div class="panel_count">
-                                        <div class="all_count">총 상품수<span class="count_sta">50</span></div>
-                                        <div class="slash">/</div>
-                                        <div class="srh_count">검색된 상품 수<span class="count_sta">00</span></div>
-                                    </div>
-                                </div>
-                                <div class="cont_right">
-                                    <div class="select_wrap">
-                                        <select>
-                                            <option value="50" selected>10개씩</option>
-                                            <option value="100">100개씩 </option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel_body">
-                            <div class="btn_group">
-                                <div class="btn btn_excelDown">엑셀 다운로드</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>첨부파일</div></th>
+                                            <td colspan="3" class="ta_l"><div>파일명</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                             
-                            <div class="tbl_wrap">
-                                <div class='motiv_tbl normal basic seller_sta'>
-                                    <div class='tbl_inner'>
-                                        <div class='tbl_head'>
-                                            <div class='look_head_box'>
-                                                <div class='look_head_list'>
-                                                    <div class='row_item d_flex'>
-                                                        <div class='hd_item' keyname='sell1'>
-                                                            <div>순위</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell2'>
-                                                            <div>판매자</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell3'>
-                                                            <div>소싱 상품수</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell4'>
-                                                            <div>판매건수</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell5'>
-                                                            <div>판매유형</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell6'>
-                                                            <div>판매금액</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell7'>
-                                                            <div>팔로워수</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell8'>
-                                                            <div>누적방송회수</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell9'>
-                                                            <div>누적방송시간</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='tbl_body'>
-                                            <div class='look_body_box'>
-                                                <div class='look_body_list'>
-                                                    <div class='row_item d_flex'>
-                                                        <div class='hd_item' keyname='sell1'>
-                                                            <div><span>1</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell2'>
-                                                            <div><span>이니셜(ID)</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell3'>
-                                                            <div><span>00</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell4'>
-                                                            <div><span>판매건수</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell5'>
-                                                            <div><span>일반</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell6'>
-                                                            <div><span>판매금액</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell7'>
-                                                            <div><span>00</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell8'>
-                                                            <div><span>00</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell9'>
-                                                            <div><span>00</span>시간</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class='row_item d_flex'>
-                                                        <div class='hd_item' keyname='sell1'>
-                                                            <div><span>1</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell2'>
-                                                            <div><span>이니셜(ID)</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell3'>
-                                                            <div><span>00</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell4'>
-                                                            <div><span>판매건수</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell5'>
-                                                            <div><span>다다딜</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell6'>
-                                                            <div><span>판매금액</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell7'>
-                                                            <div><span>00</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell8'>
-                                                            <div><span>00</span></div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell9'>
-                                                            <div><span>00</span>시간</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='motiv_paging'>
-                                    <a class='first' href='#none'></a><a class='prev'href='#none'></a>
-                                    <ul>
-                                        <li><a class='this' href='#none'>1</a></li>
-                                        <li><a href='#none'>2</a></li>
-                                        <li><a href='#none'>3</a></li>
-                                        <li><a href='#none'>4</a></li>
-                                        <li><a href='#none'>5</a></li>
-                                        <li><a href='#none'>6</a></li>
-                                        <li><a href='#none'>7</a></li>
-                                        <li><a href='#none'>8</a></li>
-                                        <li><a href='#none'>9</a></li>
-                                        <li><a href='#none'>10</a></li>
-                                    </ul>
-                                    <a class='next' href='#none'></a><a class='last' href='#none'></a>
-                                </div>
+                            <div class="tbl_item">
+                                <table class="motiv_normal_tbl ta_c">
+                                    <caption>답변내용</caption>
+                                    <colgroup>
+                                        <col style="width:15%;">
+                                        <col style="width:35%">
+                                        <col style="width:15%;">
+                                        <col style="width:35%">
+                                    </colgroup>
+                                   
+                                    <tbody>
+                                        <tr>
+                                            <th><div>답변내용</div></th>
+                                            <td colspan="3" class="ta_l">
+                                                <textarea name="" id="" cols="30" rows="10">
+                                                    에디터 노출 영역
+                                                    에디터 노출 영역
+                                                    에디터 노출 영역
+                                                    에디터 노출 영역
+                                                </textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>첨부파일</div></th>
+                                            <td colspan="3" class="ta_l"><div>파일명</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tbl_item">
+                                <table class="motiv_normal_tbl ta_c">
+                                    <caption>삭제사유</caption>
+                                    <colgroup>
+                                        <col style="width:15%;">
+                                        <col style="width:35%">
+                                        <col style="width:15%;">
+                                        <col style="width:35%">
+                                    </colgroup>
+                                   
+                                    <tbody>
+                                        <tr>
+                                            <th><div>삭제사유</div></th>
+                                            <td colspan="3" class="ta_l">
+                                                <textarea name="" id="" cols="30" rows="10">
+                                                    에디터 노출 영역
+                                                    에디터 노출 영역
+                                                    에디터 노출 영역
+                                                    에디터 노출 영역
+                                                </textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>첨부파일</div></th>
+                                            <td colspan="3" class="ta_l"><div>파일명</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="srh_btn_box">
+                            <div class="btn_wrap">
+                                <div class="btn btn_blk">답변저장</div>
+                                <div class="btn btn_gray">닫기</div>
+                                <div class="btn btn_gray">삭제</div>
                             </div>
                         </div>
                     </div>
-                    <!-- tableList E -->
                 </div>
                 <!-- inner E -->
             </div>
@@ -777,9 +547,25 @@
 
     </div>
     <!-- wrap E -->
+
+    <div class="motiv_layer type1" style="margin-top:20px">
+        <div class="layer_head">
+            <div class="title">문의내용 삭제</div>
+            <div class="btn_close"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect">
+                    <div class="txtarea_box">
+                        <textarea placeholder="삭제사유 작성"></textarea>
+                    </div>
+                </div>
+                <div class="bot_btn_wrap"><div class="btn">저장</div></div>
+            </div>
+        </div>
+    </div>
     <script>
         $(document).ready(() => {
-            $('#sandbox_container.input-daterange').datepicker({language : "ko"});
         });
 
         selectUi.init();

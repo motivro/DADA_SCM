@@ -440,7 +440,7 @@
                                             <div class="data_box">
                                                 <div class="data_item solo">
                                                     <div class="name">총 매출금액</div>
-                                                    <div class="data"><span class="sta">5,000,000</span>원</div>
+                                                    <div class="data"><span class="sta green">5,000,000</span>원</div>
                                                 </div>
                                             </div>
                                             <div class="data_box">
@@ -448,15 +448,15 @@
                                                     <div class="item_row">
                                                         <div class="data_item">
                                                             <div class="name">결제금액</div>
-                                                            <div class="data"><span class="sta">150,000</span>원</div>
+                                                            <div class="data"><span class="sta red">150,000</span>원</div>
                                                         </div>
                                                         <div class="data_item">
                                                             <div class="name">결제건수</div>
-                                                            <div class="data"><span class="sta">200</span>건</div>
+                                                            <div class="data"><span class="sta red">200</span>건</div>
                                                         </div>
                                                         <div class="data_item">
                                                             <div class="name">배송처리</div>
-                                                            <div class="data"><span class="sta">120</span>건</div>
+                                                            <div class="data"><span class="sta red">120</span>건</div>
                                                         </div>
                                                     </div>
                                                     <div class="item_row">
@@ -495,21 +495,74 @@
                                             <div class="data_list row-3">
                                                 <div class="item_row">
                                                     <div class="data_item">
-                                                        <div class="name">매출액</div>
+                                                        <div class="name">
+                                                            매출액
+                                                            <div class="helper">
+                                                                <span>?</span>
+                                                                <div class="tooltip_box">
+                                                                    <div class="info_txt">
+                                                                        <p class="tit_txt">매출액</p>
+                                                                        <p class="txt">조회기간 동안 발생한 주문의 결제 금액입니다. 결제 완료된 주문만 집계됩니다.</p>
+                                                                        <p class="txt">모든 결제는 실시간으로 분석되나, 무통장입금 결제는 최대 2시간 후에 반영됩니다.</p>
+                                                                        <p class="txt">예) 1시대에 입금 확인된 주문 → 3시에 조회 시 확인 가능</p>
+                                                                    </div>
+                                                                    <div class="info_txt">
+                                                                        <p class="tit_txt">금액 산정 기준</p>
+                                                                        <p class="txt">상품 할인가 반영, 쿠폰 할인액 차감, 배송비는 포함한 금액입니다.</p>
+                                                                        <p class="txt">예) 할인가가 10,000원인 상품을 2개 구매하면서 3,000원 쿠폰 사용,</p>
+                                                                        <p class="txt">배송비가 3,000 원인 주문인 경우 계산식은 (10,000×2)-3,000원)+3,000원=20,000원</p>
+                                                                        <p class="txt">만약, 위 주문에서 다다캐시를 사용하였더라도 동일하게 20,000원으로 집계됩니다.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="data">
                                                             <div class="data_sta"><span class="sta">100,000</span></div>
                                                             <div class="data_per">(<span class="sta down">10%</span>)</div>
                                                         </div>
                                                     </div>
                                                     <div class="data_item">
-                                                        <div class="name">위탁판매 매출액</div>
+                                                        <div class="name">
+                                                            위탁판매 매출액
+                                                            <div class="helper">
+                                                                <span>?</span>
+                                                                <div class="tooltip_box">
+                                                                    <div class="info_txt">
+                                                                        <p class="tit_txt">위탁판매 매출액</p>
+                                                                        <p class="txt">조회기간 동안 발생한 주문의 결제 금액입니다. 결제 완료된 주문만 집계됩니다.</p>
+                                                                        <p class="txt">모든 결제는 실시간으로 분석되나, 무통장입금 결제는 최대 2시간 후에 반영됩니다.</p>
+                                                                        <p class="txt">예) 1시대에 입금 확인된 주문 → 3시에 조회 시 확인 가능</p>
+                                                                    </div>
+                                                                    <div class="info_txt">
+                                                                        <p class="tit_txt">금액 산정 기준</p>
+                                                                        <p class="txt">상품 할인가 반영, 쿠폰 할인액 차감, 배송비는 포함한 금액입니다.</p>
+                                                                        <p class="txt">예) 할인가가 10,000원인 상품을 2개 구매하면서 3,000원 쿠폰 사용,</p>
+                                                                        <p class="txt">배송비가 3,000 원인 주문인 경우 계산식은 (10,000×2)-3,000원)+3,000원=20,000원</p>
+                                                                        <p class="txt">만약, 위 주문에서 다다캐시를 사용하였더라도 동일하게 20,000원으로 집계됩니다.</p>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="data">
                                                             <div class="data_sta"><span class="sta">20,000</span></div>
                                                             <div class="data_per">(<span class="sta up">10%</span>)</div>
                                                         </div>
                                                     </div>
                                                     <div class="data_item">
-                                                        <div class="name">다다딜 매출액</div>
+                                                        <div class="name">
+                                                            다다딜 매출액
+                                                            <div class="helper">
+                                                                <span>?</span>
+                                                                <div class="tooltip_box">
+                                                                    <div class="info_txt">
+                                                                        <p class="tit_txt">다다딜 매출액</p>
+                                                                        <p class="txt">조회기간 동안 발생한 다다딜에 대한 주문의 결제액 입니다.</p>
+                                                                        <p class="txt">결제 완료된 주문만 집계되며, 모든 결제는 실시간으로 분 석됩니다.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="data">
                                                             <div class="data_sta"><span class="sta">110,000,000</span></div>
                                                             <div class="data_per">(<span class="sta down">10%</span>)</div>
@@ -520,21 +573,67 @@
                                             <div class="data_list row-3">
                                                 <div class="item_row">
                                                     <div class="data_item">
-                                                        <div class="name">구매건수</div>
+                                                        <div class="name">
+                                                            구매건수
+                                                            <div class="helper">
+                                                                <span>?</span>
+                                                                <div class="tooltip_box">
+                                                                    <div class="info_txt">
+                                                                        <p class="tit_txt">구매건수</p>
+                                                                        <p class="txt">조회기간 동안 발생한 주문의 개수입니다.</p>
+                                                                        <p class="txt">결제 완료된 주문만 집계됩니다.</p>
+                                                                        <p class="txt">단, 타 마켓연동 주문은 반영되지 않습니다.(자사몰 매출만 취급)</p>
+                                                                        <p class="txt">모든 결제는 실시간으로 분석되나, 무통장입금 결제는 최대 2시간 후에 반영됩니다.</p>
+                                                                        <p class="txt">예) 1시대에 입금 확인된 주문 → 3시에 조회 시 확인 가능</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="data">
                                                             <div class="data_sta"><span class="sta">12</span></div>
                                                             <div class="data_per">(<span class="sta down">10%</span>)</div>
                                                         </div>
                                                     </div>
                                                     <div class="data_item">
-                                                        <div class="name">방문수</div>
+                                                        <div class="name">
+                                                            방문수
+                                                            <div class="helper">
+                                                                <span>?</span>
+                                                                <div class="tooltip_box">
+                                                                    <div class="info_txt">
+                                                                        <p class="tit_txt">방문수</p>
+                                                                        <p class="txt">조회기간 동안 발생한 방문의 수입니다.</p>
+                                                                    </div>
+                                                                    
+                                                                    <div class="info_txt">
+                                                                        <p class="tit_txt">금액 산정 기준</p>
+                                                                        <p class="txt">방문의 정의는 통계 서비스마다 상이하며, 다다몰은 사용자의 접속~마지막 활동으로부 터 60분 까지를 기준으로 합니다.</p>
+                                                                        <p class="txt">따라서 한 번 접속했다가 사이트 창을 닫았더라도, 마지막 활동으로부터 60분 이내에 다 시 접속했다면 같은 방문입니다.</p>
+                                                                        <p class="txt">마지막 활동으로부터 60분이 경과하면 방문이 종료되었다고 간주하며, 이후에 다시 접 속(또는 활동)하더라도 다른 방문으로 집계됩니다.</p>
+                                                                        <p class="txt">또한 방문은 브라우저 별로 구분되므로, 한 기기에서 다른 브라우저로 중복 접속하는 경 우 각각 다른 방문으로 집계됩니다.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="data">
                                                             <div class="data_sta"><span class="sta">145</span></div>
                                                             <div class="data_per">(<span class="sta up">10%</span>)</div>
                                                         </div>
                                                     </div>
                                                     <div class="data_item">
-                                                        <div class="name">구매전환율</div>
+                                                        <div class="name">
+                                                            구매전환율
+                                                            <div class="helper">
+                                                                <span>?</span>
+                                                                <div class="tooltip_box">
+                                                                    <div class="info_txt">
+                                                                        <p class="tit_txt">구매전환율</p>
+                                                                        <p class="txt">조회기간 동안 발생한 방문 대비 구매 비율입니다.</p>
+                                                                        <p class="txt">'(구매건수 ÷ 방문수) × 100'으로 계산됩니다.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="data">
                                                             <div class="data_sta"><span class="sta">50%</span></div>
                                                             <div class="data_per">(<span class="sta down">10%</span>)</div>

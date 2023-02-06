@@ -1222,8 +1222,10 @@
                         </div>
                         <div class="line_item">
                             <div class="inp_tit">발송기한</div>
-                            <div class="inp_wrap inp_item">
-                                <input type="text" name="" id="" placeholder="2021-00-00">
+                            <div id="sandbox_container" class="input-group date">
+                                    <div class="inp_wrap inp_item">
+                                    <input type="text" class="form-control" placeholder="발송기한"><span class="input-group-addon"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1340,6 +1342,7 @@
 
         $(document).ready(() => {
             $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
+            $('#sandbox_container.input-group.date').datepicker({language : "ko"});
 
             var testData = {
                 id: "pcacme006001_1",
