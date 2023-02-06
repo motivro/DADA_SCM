@@ -4,7 +4,7 @@
 @import url('./font.css');
 @import url('./layer.css');
 @import url('./swiper-bundle.min.css');
-
+ 
 :root{
     --fts10:10px;
     --fts12:12px;
@@ -46,7 +46,7 @@
 
     --box_border:1px solid #dddddd;
     --cont_border:1px solid #e3e3e3;
-}
+} 
 
 .blind{visibility: hidden;overflow: hidden;position: absolute;top: 0;left: 0;width: 0;height: 0;font-size: 0;line-height: 0;}
 .displaynone{display:none;}
@@ -123,11 +123,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .d_flex.gap10{gap: 10px !important;}
 
 /* header s*/
-<<<<<<< HEAD
 #header{width:100%;background-color:#2f2f2f;position: sticky;top: 0;z-index: 500;}
-=======
-#header{min-width: 1400px;width:100%;background-color:#2f2f2f;position: fixed;top: 0;z-index: 500;}
->>>>>>> e43273c (11111)
 #header .ham_menu{width:34px;height:34px;margin-right:10px;padding:7px 5px;background:#4C4E57;border-radius:100%;display:flex;justify-content:center;flex-direction:column;cursor:pointer;align-items:center;}
 #header .ham_menu .line{display:block;width:76%;height:2px;background:#fff;border-radius:5px;margin:2px 0;}
 #header .ham_menu.open .line{background-color:var(--color1)}
