@@ -1062,12 +1062,17 @@
                                     <div class="btn btn_excelDown">엑셀다운로드</div>
                                 </div>
                             </div>
-
+                            <!-- 락이 있는 테이블 -->
                             <div class="tbl_wrap">
                                 <div class='motiv_tbl'>
                                     <div class='tbl_inner'>
                                         <div class='tbl_body d_flex'>
+
+                                            <!-- 락을 걸어야하는 item을 넣는 곳 S-->
                                             <div class='look_body_head'>
+                                                <!-- row_item : tr의 의미(한 줄) -->
+                                                <!-- 첫번째 줄 -->
+                                                <!-- th들을 가지고 있는 row_item에는 row_th클래스 추가필요 -->
                                                 <div class='row_item row_th d_flex'>
                                                     <div class='hd_item' keyname='checkedbox'>
                                                         <div>
@@ -1086,6 +1091,8 @@
                                                         <div>자체코드</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- 두번째 줄 -->
                                                 <div class='row_item d_flex'>
                                                     <div class='hd_item' keyname='checkedbox'>
                                                         <div>
@@ -1104,6 +1111,8 @@
                                                         <div>자체코드</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- 세번째 줄 -->
                                                 <div class='row_item d_flex'>
                                                     <div class='hd_item' keyname='checkedbox'>
                                                         <div>
@@ -1123,6 +1132,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- 락을 걸어야하는 item을 넣는 곳 E-->
 
                                             <div class='look_body_box'>
                                                 <div class='row_item row_th d_flex'>
@@ -1160,7 +1170,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                 
+
                                                     <div class='hd_item' keyname='sell10'>
                                                         <div>현재고</div>
                                                     </div>
@@ -2132,6 +2142,7 @@
                 sell29: 150,
                 sell30: 150
             },
+            // 락을 걸어야하는 item의 셀 번호 입력
             scrollLook: ['sell1', 'sell2'], 
         }
 
