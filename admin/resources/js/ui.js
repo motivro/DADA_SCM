@@ -206,43 +206,6 @@ var selectUi = {
     },
 }
 
-/* 공용 알럿 */
-var dadaAlert = {
-    open: (id, text) => {
-        var target = dadaAlert.targetCk(id);
-        $(target+' .dada_cont').html(text);
-
-        $(target).show().css({
-            'visibility': 'hidden',
-        });
-
-        var dadaAlertOpen = setTimeout( function() {
-            $(target).show().css({
-                'visibility': 'visible',
-                'opacity': '1',
-            });
-            clearTimeout(dadaAlertOpen);
-        }, 100);
-
-        //닫기 이벤트 활성화
-        $(target+' .dada_close_btn').click( () => { dadaAlert.close(id); });
-    },
-
-    close: (id) => {
-        var target = dadaAlert.targetCk(id);
-        $(target).css({
-            'opacity': '0',
-        });
-        var dadaAlertClose = setTimeout( function() {
-            $(target).hide();
-            clearTimeout(dadaAlertClose);
-        }, 100);
-    },
-
-    targetCk: (id) => {
-        return id == undefined ? '.dada_alt_wrap': '#'+id+'.dada_alt_wrap';
-    }
-}
 
 /* 타이머 */
 startTimer = (time, obj) => {
