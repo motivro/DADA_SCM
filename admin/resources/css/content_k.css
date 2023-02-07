@@ -90,7 +90,7 @@
 
 
 /* 쇼핑몰 관리 */
-.store_add_cont{}
+.store_add_cont{padding:0 20px 20px 20px}
 .store_inner{display:flex;align-items:center;gap:14px;color:var(--color14);}
 .store_cont{display:flex;align-items:center;gap:14px;color:var(--color14);}
 .store_img_wrap{display:flex;gap:15px;}
