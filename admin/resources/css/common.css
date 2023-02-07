@@ -257,41 +257,59 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu path{transition:1s}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu path{transform-origin: 50% 50%;}
 
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg1 #menu_svg02,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg1 #menu_svg03,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg1 #menu_svg04{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg1 #menu_svg01,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg1 #menu_svg02,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg1 #menu_svg03,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg1 #menu_svg04{fill: var(--color1);}
 
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path1,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path1_line,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path4,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path4_line{fill: var(--color1);}
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #vector,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #vector{fill: var(--color1);}
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg3 #vector22{fill: var(--color1);}
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg4 #vector{fill: var(--color1);}
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg5 #vector-2,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg5 #vector-3{fill: var(--color1);}
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-5,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-4,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-2{fill: var(--color1);}
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg7 #vector,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg7 #vector-2{fill: var(--color1);}
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-2,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-3,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-4,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-5{fill: var(--color1);}
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg9 #vector{fill: var(--color1);}
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-2,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-3,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-4,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-5,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-6{fill: var(--color1);}
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg11 #vector-2,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg11 #vector-3{fill: var(--color1);}
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg12 #vector,
-#lnb.open .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg12 #vector-3{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path1,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path1_line,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path2,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path2_line,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path3,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path3_line,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path4,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #path4_line{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #vector,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg2 #vector{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg3 #vector,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg3 #vector-2,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg3 #vector-3,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg3 #vector22{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg4 #vector-2,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg4 #vector{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg5 #vector,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg5 #vector-2,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg5 #vector-3{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-2,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-3,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-4,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-5,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-6,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg6 #vector-7{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg7 #vector,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg7 #vector-2,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg7 #vector-3{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-2,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-3,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-4,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-5,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg8 #vector-6{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg9 #vector{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-2,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-3,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-4,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-5,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg10 #vector-6{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg11 #vector,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg11 #vector-2,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg11 #vector-3{fill: var(--color1);}
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg12 #vector,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg12 #vector-2,
+#lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg12 #vector-3{fill: var(--color1);}
 
 #menusvg1 #menu_svg01{transform-origin: calc(50% - 1.383px) calc(50% - 1.383px)!important;transform: translate(1.383px, 1.383px) rotateY( 0deg );}
 #lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg1 #menu_svg01{transform: translate(1.383px, 1.383px) rotateY( 360deg )}
