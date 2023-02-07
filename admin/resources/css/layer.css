@@ -124,7 +124,17 @@
 .motiv_layer .flex_wrap .left.img_area{display: flex;flex-direction: column;}
 .motiv_layer .flex_wrap .left.img_area .sect{display: flex;flex:1;}
 .motiv_layer .flex_wrap.prd_dtl .right{width: calc(100% - 33.33%);}
-.motiv_layer .dtl_img{border: var(--cont_border);width:100%;height: 100%;}
+
+.motiv_layer .dtl_img{border: var(--cont_border);width:100%;height: 100%;padding:25px 20px 50px;position: relative;}
+.motiv_layer .dtl_img .dtlImgSlide{width: 80%;}
+.motiv_layer .dtl_img .dtlImgSlide .slide_list{}
+.motiv_layer .dtl_img .dtlImgSlide .slide_item{display: flex;justify-content: center;align-items: center;}
+.motiv_layer .dtl_img .dtlImgSlide .slide_item .img_box{width: 100%;}
+.motiv_layer .dtl_img .dtlImgSlide .slide_item .img_box img{width: 100%;}
+.motiv_layer .dtl_img .btn_img{position: absolute;top: 50%;transform: translateY(-50%);width:12px;height:22px;padding:5px 10px;background-size: cover;background-repeat: no-repeat;background-position: center;box-sizing: content-box;cursor: pointer;}
+.motiv_layer .dtl_img .btn_img.next{right: 3%;background-image: url('../images/common/slide_next.svg');}
+.motiv_layer .dtl_img .btn_img.prev{left: 3%;background-image: url('../images/common/slide_prev.svg');}
+.motiv_layer .dtl_img .pagination{bottom: 20px;}
 
 .motiv_layer .tab_area{}
 .motiv_layer .tab_area .tab_box{display: flex;align-items: stretch;border: 1px solid var(--color9);text-align: center;}
@@ -295,17 +305,24 @@
 .motiv_layer .motiv_normal_tbl tr td .list_box .list_item .tit{font-size: var(--fts14);font-weight: var(--ftw500);}
 .motiv_layer .motiv_normal_tbl tr td .list_box .list_item .cont{margin-top:5px;padding-left: 15px;font-size: var(--fts12);}
 .motiv_layer .motiv_normal_tbl tr td .list_box .list_item .cont.chk_list > div{padding-left: 12px;position: relative;}
-.motiv_layer .motiv_normal_tbl tr td .list_box .list_item .cont.chk_list > div.chk_in::before{
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 55%;
-    width: 5px;
-    height: 10px;
-    border-width: 0 2px 2px 0;
-    border-style: solid;
-    border-color: var(--color1);
-    transform-origin: top right;
-    transform: rotate(45deg) translateY(-50%);
-}
+.motiv_layer .motiv_normal_tbl tr td .list_box .list_item .cont.chk_list > div.chk_in::before{content: '';display: block;position: absolute;left: 0;top: 55%;width: 5px;height: 10px;border-width: 0 2px 2px 0;border-style: solid;border-color: var(--color1);transform-origin: top right;transform: rotate(45deg) translateY(-50%);}
+
+.motiv_layer .acc_box{padding: 10px 20px;border: var(--box_border);cursor: pointer;}
+.motiv_layer .acc_box .acc_tit{display: flex;justify-content: space-between;align-items: center;}
+.motiv_layer .acc_box .acc_tit .tit{}
+
+.motiv_layer .acc_box .acc_cont{display:none;margin-top:20px;transition: height .5s ease;overflow: hidden;}
+.motiv_layer .acc_box.open .acc_cont{display: block;}
+
+.motiv_layer .acc_box .accBtn{width: 30px;height: 30px;border: var(--box_border);position: relative;}
+.motiv_layer .acc_box .accBtn .icon_arrow{border: solid var(--color5);border-width: 0 2px 2px 0;display: inline-block;padding: 4px 4px 2px 2px;position: absolute;top: 50%;left: 50%;margin-left:-5px;transition: .5s;transform-origin: center;transform: rotate(45deg) translate(-50%,-50%);}
+.motiv_layer .acc_box.open .acc_tit .icon_arrow{margin-top:-2px;transform: rotate(-135deg);}
+
+.motiv_layer .prd_list{display: flex;gap: 10px;align-items: stretch;flex-wrap: wrap;}
+.motiv_layer .prd_list .prd_item{width: calc(20% - 8px);}
+.motiv_layer .prd_list .prd_item .thumb{width: 100%;line-height: 0;}
+.motiv_layer .prd_list .prd_item .thumb .img_box{display: block;width: 100%;}
+.motiv_layer .prd_list .prd_item .thumb .img_box img{width: 100%;}
+
+.motiv_layer .prd_list .prd_item .info{padding: 10px 5px;}
+.motiv_layer .prd_list .prd_item .info > div{color: var(--color14);overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;letter-spacing: normal;word-break: break-word;overflow-wrap: break-word;}

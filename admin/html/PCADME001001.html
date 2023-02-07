@@ -1734,252 +1734,528 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex_wrap prd_dtl">
-                    <div class="left img_area">
-                        <div class="sect_tit d_flex">
-                            <div class="tit">상품정보</div>
-                            <div class="sub_tit"><span>대분류 > 중분류 > 소분류 > 상세분류</span></div>
-                        </div>
-                        <div class="sect">
-                            <div class="dtl_img">이미지 슬라이드 삽입 예정</div>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="sect_tit d_flex">
-                            <div class="tit">위탁판매 상품</div>
-                            <div class="sub_tit">
-                                <div>등록날짜 : <span>2023-01-01 00:00</span></div>
-                                <div></div>
+                <div class="sect">
+                    <div class="flex_wrap prd_dtl">
+                        <div class="left img_area">
+                            <div class="sect_tit d_flex">
+                                <div class="tit">상품정보</div>
+                                <div class="sub_tit"><span>대분류 > 중분류 > 소분류 > 상세분류</span></div>
                             </div>
-                        </div>
-                        <div class="sect">
-                            <div class="motiv_tbl_box name_k pd_0">
-                                <div class="tbl_item">
-                                    <table class="motiv_normal_tbl">
-                                        <caption>상품 강제종료</caption>
-                                        <colgroup>
-                                            <col style="width:10%;">
-                                            <col style="width:23.33%;">
-                                            <col style="width:10%;">
-                                            <col style="width:23.33%;">
-                                        </colgroup>
-                                        <tbody>
-                                            <tr>
-                                                <th>
-                                                    <div>상품의 종류</div>
-                                                    </td>
-                                                <td>
-                                                    <div>SCM(공급)상품</div>
-                                                </td>
-                                                <th>
-                                                    <div>상품명</div>
-                                                    </td>
-                                                <td>
-                                                    <div>상품단뒤 상품명</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div>상품코드</div>
-                                                    </td>
-                                                <td>
-                                                    <div>상품단위 코드정보</div>
-                                                </td>
-                                                <th>
-                                                    <div>관리명</div>
-                                                    </td>
-                                                <td>
-                                                    <div>상품단위 관리명</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div>관리코드</div>
-                                                    </td>
-                                                <td>
-                                                    <div>공급사 관리코드</div>
-                                                </td>
-                                                <th>
-                                                    <div>브랜드</div>
-                                                    </td>
-                                                <td>
-                                                    <div>상품브랜드</div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                            <div class="sect">
+                                <div class="dtl_img">
+                                    <!-- Swiper -->
+                                    <div class="swiper dtlImgSlide">
+                                        <ul class="slide_list swiper-wrapper">
+                                            <li class="slide_item swiper-slide">
+                                                <div class="img_box"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
+                                            </li>
+                                            <li class="slide_item swiper-slide">
+                                                <div class="img_box"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
+                                            </li>
+                                            <li class="slide_item swiper-slide">
+                                                <div class="img_box"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="btn_img next"></div>
+                                    <div class="btn_img prev"></div>
+
+                                    <div class="swiper-pagination pagination"></div>
+
+                                    <!-- Swiper JS -->
+                                    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+                                    <!-- Initialize Swiper -->
+                                    <script>
+                                        var swiper = new Swiper(".dtlImgSlide", {
+                                            pagination: {
+                                                el: ".swiper-pagination",
+                                                type: "fraction",
+                                            },
+                                            navigation: {
+                                                nextEl: ".btn_img.next",
+                                                prevEl: ".btn_img.prev",
+                                            },
+                                        });
+                                    </script>
                                 </div>
                             </div>
                         </div>
-                        <div class="sect_tit">상품옵션정보 (<span>00</span>)</div>
-                        <div class="sect">
-                            <div id="pcacme001001_2" class="contents_box pd_0">
-                                <div class="panel_body pd_0">
-                                    <div class="tbl_wrap pd_0">테이블 리스트 수정 예정</div>
+                        <div class="right">
+                            <div class="sect_tit d_flex">
+                                <div class="tit">위탁판매 상품</div>
+                                <div class="sub_tit">
+                                    <div>등록날짜 : <span>2023-01-01 00:00</span></div>
+                                </div>
+                            </div>
+                            <div class="sect">
+                                <div class="motiv_tbl_box name_k pd_0">
+                                    <div class="tbl_item">
+                                        <table class="motiv_normal_tbl">
+                                            <caption>상품 강제종료</caption>
+                                            <colgroup>
+                                                <col style="width:15%;">
+                                                <col style="width:35%;">
+                                                <col style="width:15%;">
+                                                <col style="width:35%;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                        <div>상품의 종류</div>
+                                                        </td>
+                                                    <td>
+                                                        <div>SCM(공급)상품</div>
+                                                    </td>
+                                                    <th>
+                                                        <div>상품명</div>
+                                                        </td>
+                                                    <td>
+                                                        <div>상품단뒤 상품명</div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div>상품코드</div>
+                                                        </td>
+                                                    <td>
+                                                        <div>상품단위 코드정보</div>
+                                                    </td>
+                                                    <th>
+                                                        <div>관리명</div>
+                                                        </td>
+                                                    <td>
+                                                        <div>상품단위 관리명</div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div>관리코드</div>
+                                                        </td>
+                                                    <td>
+                                                        <div>공급사 관리코드</div>
+                                                    </td>
+                                                    <th>
+                                                        <div>브랜드</div>
+                                                        </td>
+                                                    <td>
+                                                        <div>상품브랜드</div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sect_tit">상품옵션정보 (<span>00</span>)</div>
+                            <div class="sect">
+                                <div id="pcacme001001_3" class="contents_box pd_0">
+                                    <div class="panel_body pd_0">
+                                        <div class="tbl_wrap pd_0">
+                                            <div class='motiv_tbl'>
+                                                <div class='tbl_inner'>
+                                                    <div class='tbl_body'>
+                                                        <div class='look_body_box'>
+                                                            <div class='row_item row_th d_flex'>
+                                                                <div class='hd_item' keyname='sell1'>
+                                                                    <div>SKU코드</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell2'>
+                                                                    <div>SKU상품명</div>
+                                                                </div>
+                                                                <div class="hd_item" keyname='sell3'>
+                                                                    <div>옵션속 성명</div>
+                                                                </div>
+                                                                <div class="hd_item" keyname='sell4'>
+                                                                    <div>옵션값</div>
+                                                                </div>
+                                                                <div class="hd_item" keyname='sell5'>
+                                                                    <div>관리코드</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell6'>
+                                                                    <div>공급가</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell7'>
+                                                                    <div>최초재고</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell8'>
+                                                                    <div>추가금액</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell9'>
+                                                                    <div>담아간수</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell10'>
+                                                                    <div>조회수</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell11'>
+                                                                    <div>등록날짜</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class='row_item d_flex'>
+                                                                <div class='hd_item' keyname='sell1'>
+                                                                    <div>SKU코드</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell2'>
+                                                                    <div>SKU상품명</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell3'>
+                                                                    <div>색상</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell4'>
+                                                                    <div>빨강</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell5'>
+                                                                    <div>코드</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell6'>
+                                                                    <div>공급가</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell7'>
+                                                                    <div>재고</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell8'>
+                                                                    <div>추가금액</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell9'>
+                                                                    <div>0</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell10'>
+                                                                    <div>0</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell11'>
+                                                                    <div>2023-01-01</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class='row_item d_flex'>
+                                                                <div class='hd_item' keyname='sell1'>
+                                                                    <div>SKU코드</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell2'>
+                                                                    <div>SKU상품명</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell3'>
+                                                                    <div>색상</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell4'>
+                                                                    <div>빨강</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell5'>
+                                                                    <div>코드</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell6'>
+                                                                    <div>공급가</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell7'>
+                                                                    <div>재고</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell8'>
+                                                                    <div>추가금액</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell9'>
+                                                                    <div>0</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell10'>
+                                                                    <div>0</div>
+                                                                </div>
+                                                                <div class='hd_item' keyname='sell11'>
+                                                                    <div>2023-01-01</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex_wrap prd_dtl">
-                    <div class="left">
-                        <div class="sect_tit d_flex">위탁판매 상품</div>
-                        <div class="sect">
-                            <div class="motiv_tbl_box name_k pd_0">
-                                <div class="tbl_item">
-                                    <table class="motiv_normal_tbl">
-                                        <caption>상품 강제종료</caption>
-                                        <colgroup>
-                                            <col style="width:20%;">
-                                            <col style="width:auto;">
-                                            <col style="width:20%;">
-                                            <col style="width:auto;">
-                                        </colgroup>
-                                        <tbody>
-                                            <tr>
-                                                <th>
-                                                    <div>원가</div>
+                <div class="sect">
+                    <div class="flex_wrap prd_dtl">
+                        <div class="left">
+                            <div class="sect_tit d_flex">위탁판매 상품</div>
+                            <div class="sect">
+                                <div class="motiv_tbl_box name_k pd_0">
+                                    <div class="tbl_item">
+                                        <table class="motiv_normal_tbl">
+                                            <caption>상품 강제종료</caption>
+                                            <colgroup>
+                                                <col style="width:20%;">
+                                                <col style="width:auto;">
+                                                <col style="width:20%;">
+                                                <col style="width:auto;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                        <div>원가</div>
+                                                        </td>
+                                                    <td colspan="3" class="ta_r">
+                                                        <div><span>5,000</span> 원</div>
                                                     </td>
-                                                <td colspan="3" class="ta_r">
-                                                    <div><span>5,000</span> 원</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div>공급가격</div>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div>공급가격</div>
+                                                        </td>
+                                                    <td colspan="3" class="ta_r">
+                                                        <div><span>20,000</span> 원</div>
                                                     </td>
-                                                <td colspan="3" class="ta_r">
-                                                    <div><span>20,000</span> 원</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div>판매제안가격</div>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div>판매제안가격</div>
+                                                        </td>
+                                                    <td colspan="3" class="ta_r">
+                                                        <div><span>15,000</span> 원</div>
                                                     </td>
-                                                <td colspan="3" class="ta_r">
-                                                    <div><span>15,000</span> 원</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div>최초재고</div>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div>최초재고</div>
+                                                        </td>
+                                                    <td>
+                                                        <div>20</div>
                                                     </td>
-                                                <td>
-                                                    <div>20</div>
-                                                </td>
-                                                <th>
-                                                    <div>현재고</div>
+                                                    <th>
+                                                        <div>현재고</div>
+                                                        </td>
+                                                    <td>
+                                                        <div>100</div>
                                                     </td>
-                                                <td>
-                                                    <div>100</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div>판매시작일</div>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div>판매시작일</div>
+                                                        </td>
+                                                    <td>
+                                                        <div>2022-00-00</div>
                                                     </td>
-                                                <td>
-                                                    <div>2022-00-00</div>
-                                                </td>
-                                                <th>
-                                                    <div>종료일</div>
+                                                    <th>
+                                                        <div>종료일</div>
+                                                        </td>
+                                                    <td>
+                                                        <div>2022-00-00</div>
                                                     </td>
-                                                <td>
-                                                    <div>2022-00-00</div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="sect_tit d_flex">위탁판매 상품</div>
+                            <div class="sect">
+                                <div class="motiv_tbl_box name_k pd_0">
+                                    <div class="tbl_item">
+                                        <table class="motiv_normal_tbl">
+                                            <caption>상품 강제종료</caption>
+                                            <colgroup>
+                                                <col style="width:15%;">
+                                                <col style="width:18.33%;">
+                                                <col style="width:15%;">
+                                                <col style="width:18.33%;">
+                                                <col style="width:15%;">
+                                                <col style="width:18.33%;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                        <div>배송방법</div>
+                                                    </th>
+                                                    <td>
+                                                        <div>위탁, 직접</div>
+                                                    </td>
+                                                    <th>
+                                                        <div>배송업체</div>
+                                                    </th>
+                                                    <td>
+                                                        <div>택배회사</div>
+                                                    </td>
+                                                    <th>
+                                                        <div>배송속성</div>
+                                                    </th>
+                                                    <td>
+                                                        <div>일반배송</div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div>주문제작여부</div>
+                                                    </th>
+                                                    <td colspan="2">
+                                                        <div>결제 후 14일 발송예정</div>
+                                                    </td>
+                                                    <th>
+                                                        <div>묶음배송여부</div>
+                                                    </th>
+                                                    <td colspan="2">
+                                                        <div>불가, 가능</div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div>기본배송비</div>
+                                                    </th>
+                                                    <td colspan="2">
+                                                        <div>무료</div>
+                                                    </td>
+                                                    <th rowspan="3">
+                                                        <div>묶음그룹 정보</div>
+                                                    </th>
+                                                    <td rowspan="3" colspan="2">
+                                                        <div class="dot_info">
+                                                            <p>· 기본배송비 묶음그룹</p>
+                                                            <p>· 계산방식 : 묶음 그룹에서 가장 작은 배송비로 부과</p>
+                                                            <p>· 제주/도서산간 추가배송비 : 없음</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div>제주/도서산간</div>
+                                                    </th>
+                                                    <td colspan="2">
+                                                        <div>없음</div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        <div>별도설치여부</div>
+                                                    </th>
+                                                    <td colspan="2">
+                                                        <div>0</div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="right">
-                        <div class="sect_tit d_flex">위탁판매 상품</div>
-                        <div class="sect">
-                            <div class="motiv_tbl_box name_k pd_0">
-                                <div class="tbl_item">
-                                    <table class="motiv_normal_tbl">
-                                        <caption>상품 강제종료</caption>
-                                        <colgroup>
-                                            <col style="width:15%;">
-                                            <col style="width:18.33%;">
-                                            <col style="width:15%;">
-                                            <col style="width:18.33%;">
-                                            <col style="width:15%;">
-                                            <col style="width:18.33%;">
-                                        </colgroup>
-                                        <tbody>
-                                            <tr>
-                                                <th>
-                                                    <div>배송방법</div>
-                                                </th>
-                                                <td>
-                                                    <div>위탁, 직접</div>
-                                                </td>
-                                                <th>
-                                                    <div>배송업체</div>
-                                                </th>
-                                                <td>
-                                                    <div>택배회사</div>
-                                                </td>
-                                                <th>
-                                                    <div>배송속성</div>
-                                                </th>
-                                                <td>
-                                                    <div>일반배송</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div>주문제작여부</div>
-                                                </th>
-                                                <td colspan="2">
-                                                    <div>결제 후 14일 발송예정</div>
-                                                </td>
-                                                <th>
-                                                    <div>묶음배송여부</div>
-                                                </th>
-                                                <td colspan="2">
-                                                    <div>불가, 가능</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div>기본배송비</div>
-                                                </th>
-                                                <td colspan="2">
-                                                    <div>무료</div>
-                                                </td>
-                                                <th rowspan="3">
-                                                    <div>묶음그룹 정보</div>
-                                                </th>
-                                                <td rowspan="3" colspan="2">
-                                                    <div class="dot_info">
-                                                        <p>· 기본배송비 묶음그룹</p>
-                                                        <p>· 계산방식 : 묶음 그룹에서 가장 작은 배송비로 부과</p>
-                                                        <p>· 제주/도서산간 추가배송비 : 없음</p>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div>제주/도서산간</div>
-                                                </th>
-                                                <td colspan="2">
-                                                    <div>없음</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div>별도설치여부</div>
-                                                </th>
-                                                <td colspan="2">
-                                                    <div>0</div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                </div>
+                <div class="sect_tit">자체생산품</div>
+                <div class="sect">
+                    <div class="acc_box">
+                        <div class="acc_tit"><div class="tit">생산 납품소요기간 / Lead Time</div><div class="accBtn"><i class="icon icon_arrow"></i></div></div>
+                        <div class="acc_cont">컨텐츠 영역</div>
+                    </div>
+                </div>
+                <div class="sect_tit d_flex jc_sb">
+                    <div class="tit">위탁판매 상품</div>
+                    <div class="sub_tit">
+                        <div class="cus_inp_wrap checkbox_inp">
+                            <label for="moreInfo_1" class="inp_box">"상품 상세 참조"로 전체 입력
+                                <input type="checkbox" id="moreInfo_1" name="moreInfo" checked="">
+                                <span class="inp_custom"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect">
+                    <div class="acc_box">
+                        <div class="acc_tit"><div class="tit">상품정보고시 상품</div><div class="accBtn"><i class="icon icon_arrow"></i></div></div>
+                        <div class="acc_cont">컨텐츠 영역</div>
+                    </div>
+                </div>
+                <div class="sect_tit">주소지 정보</div>
+                <div class="sect">
+                    <div class="motiv_tbl_box name_k pd_0">
+                        <div class="tbl_item">
+                            <table class="motiv_normal_tbl ta_l">
+                                <caption>주소지 정보</caption>
+                                <colgroup>
+                                    <col style="width:15%;">
+                                    <col style="width:85%;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th><div>방문지 주소</div></th>
+                                        <td><div>[<span>우편번호</span>] 주소</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>출고지 주소</div></th>
+                                        <td><div>[<span>우편번호</span>] 주소</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>반품지 주소</div></th>
+                                        <td><div>[<span>우편번호</span>] 주소</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>교환지 주소</div></th>
+                                        <td><div>[<span>우편번호</span>] 주소</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>퀵서비스 주소</div></th>
+                                        <td><div>미사용</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect_tit">상세정보</div>
+                <div class="sect">상세정보 영역(어떤 컨텐츠 넣을지 확인)</div>
+                <div class="sect">
+                    <div class="acc_box">
+                        <div class="acc_tit"><div class="tit">A/S 정보 및 특이사항</div><div class="accBtn"><i class="icon icon_arrow"></i></div></div>
+                        <div class="acc_cont">컨텐츠 영역</div>
+                    </div>
+                </div>
+                <div class="sect">
+                    <div class="acc_box">
+                        <div class="acc_tit"><div class="tit">배송 묶음그룹 상품리스트</div><div class="accBtn"><i class="icon icon_arrow"></i></div></div>
+                        <div class="acc_cont">
+                            <div class="prd_list">
+                                <div class="prd_item">
+                                    <div class="thumb"><a class="img_box" href="#none"><img src="../resources/images/product/sample_thumb.jpg" alt=""></a></div>
+                                    <div class="info">
+                                        <div class="name">상품명</div>
+                                        <div class="price">제품공급가격</div>
+                                        <div class="sell_price">판매제안가격</div>
+                                        <div class="option">옵션</div>
+                                    </div>
+                                </div>
+                                <div class="prd_item">
+                                    <div class="thumb"><a class="img_box" href="#none"><img src="../resources/images/product/sample_thumb.jpg" alt=""></a></div>
+                                    <div class="info">
+                                        <div class="name">상품명</div>
+                                        <div class="price">제품공급가격</div>
+                                        <div class="sell_price">판매제안가격</div>
+                                        <div class="option">옵션</div>
+                                    </div>
+                                </div>
+                                <div class="prd_item">
+                                    <div class="thumb"><a class="img_box" href="#none"><img src="../resources/images/product/sample_thumb.jpg" alt=""></a></div>
+                                    <div class="info">
+                                        <div class="name">상품명</div>
+                                        <div class="price">제품공급가격</div>
+                                        <div class="sell_price">판매제안가격</div>
+                                        <div class="option">옵션</div>
+                                    </div>
+                                </div>
+                                <div class="prd_item">
+                                    <div class="thumb"><a class="img_box" href="#none"><img src="../resources/images/product/sample_thumb.jpg" alt=""></a></div>
+                                    <div class="info">
+                                        <div class="name">상품명</div>
+                                        <div class="price">제품공급가격</div>
+                                        <div class="sell_price">판매제안가격</div>
+                                        <div class="option">옵션</div>
+                                    </div>
+                                </div>
+                                <div class="prd_item">
+                                    <div class="thumb"><a class="img_box" href="#none"><img src="../resources/images/product/sample_thumb.jpg" alt=""></a></div>
+                                    <div class="info">
+                                        <div class="name">상품명</div>
+                                        <div class="price">제품공급가격</div>
+                                        <div class="sell_price">판매제안가격</div>
+                                        <div class="option">옵션</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2148,12 +2424,43 @@
             scrollLook: ['sell1', 'sell2'], 
         }
 
+        var pcacme001001_3 = { // 변수명은 변경이 가능합니다.
+            id: 'pcacme001001_3',
+            tableSize: { // tableSize 변수명은 변경되면 안됨니다.
+                //하단의 변수 명칭은 변경이 가능하지만 리스트 테이블html 에서 keyname값과 동일 하면 됨니다. 
+                sell1: 100,
+                sell2: 100,
+                sell3: 100,
+                sell4: 100,
+                sell5: 100,
+                sell6: 100,
+                sell7: 100,
+                sell8: 100,
+                sell9: 100,
+                sell10: 100,
+                sell11: 100,
+            },
+        }
+
         $(document).ready(() => {
             $('#sandbox_container.input-daterange').datepicker({language: "ko"});
 
             tFlex.init(testData);//일반적인 스크롤되는 리스트
             tFlexLock.init(testData1);//일부 고정영역이 있고 스크롤 되는 리스트
+            tFlex.init(pcacme001001_3);//일반적인 스크롤되는 리스트
 
+
+            // 레이어팝업 아코디언 메뉴 단순 이벤트 
+            $('.acc_box').each(function(){
+                var accBtn = $(this).children('.acc_tit');
+                $(accBtn).click(function(){
+                    if($(this).closest('.acc_box').hasClass('open')){
+                        $(this).closest('.acc_box').removeClass('open');
+                    } else {
+                        $(this).closest('.acc_box').addClass('open');
+                    }
+                });
+            });
         });
 
         selectUi.init();
