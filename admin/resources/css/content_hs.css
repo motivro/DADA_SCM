@@ -804,7 +804,7 @@
 
 #content .contents_box .right_box .srh_btn_box .btn_wrap{gap: 8px;}
 #content .contents_box .right_box .srh_btn_box .btn_wrap .btn{width: auto;}
-#content .contents_box .right_box .store_add_box{margin-top: 5px;}
+#content .contents_box .right_box .store_add_box{}
 #content .contents_box .right_box .store_add_box .tit{font-size: var(--fts20);font-weight: var(--ftw400);}
 #content .contents_box .right_box .store_add_box .tit + div{margin-top: 20px;}
 

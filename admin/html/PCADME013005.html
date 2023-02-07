@@ -479,47 +479,31 @@
                                                 <div class="tbl_cell td">
                                                     <div class="d_flex">
                                                         <div class="inp_wrap"><input type="text" name="" id="" placeholder="전체층수"></div>
-                                                        <div class="btn_wrap"><div class="btn">생성</div></div>
+                                                        <div class="btn_wrap"><div class="btn" onClick="selectAsyncUi.addThRow($(this))">생성</div></div>
                                                     </div>
                                                 </div>
                                                 <div class="tbl_cell th">온라인주소</div>
                                                 <div class="tbl_cell td"><div class="inp_wrap"><input type="text" name="" id="" placeholder="온라인주소"></div></div>
                                             </div>
                                         </div>
-                                        <div class="tbl_body" >
-                                            <div class="tbl_item">
-                                                <div class="tbl_row_item th_item">
-                                                    <div class="tbl_cell th">층수</div>
-                                                    <div class="tbl_cell th">
-                                                        주요 콘텐츠
-                                                        <div class="btn plus_as"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="tbl_row_item td_item">
-                                                    <div class="tbl_cell td">
-                                                        <div class="d_flex">
-                                                            <div class="select_wrap">
-                                                                <select>
-                                                                    <option value="분류선택" selected>분류선택</option>
-                                                                    <option value="분류선택">분류선택</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="inp_wrap">
-                                                                <input type="text" placeholder="1">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tbl_cell td">
-                                                        <div class="d_flex">
-                                                            <div class="inp_wrap">
-                                                                <input type="text" name="" id="" placeholder="층수 설명">
-                                                            </div>
-                                                            <div class="btn_wrap"><div class="btn close_as"></div></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
 
+                                        <style>
+                                            #content .store_cont_box .custom_tbl .tbl_body .tbl_item.th_head{padding:20px 20px 0 20px}
+                                            #content .store_cont_box .custom_tbl .tbl_item.td_head .tbl_cell.td{border-top:none}
+                                            #content .store_cont_box .custom_tbl .tbl_body .tbl_item.td_head{padding:0 20px 20px 20px}
+
+                                            .store_img_add{width:140px;height:140px;overflow:hidden;background:#fff;border:2px dashed var(--color5);position:relative;background-image:url(../resources/images/common/store_btn_plus.svg);box-sizing:border-box;background-repeat:no-repeat;background-position:center;background-size:45px;}
+                                            .store_img_add label{float:left;width:140px;height:140px;}
+                                            .store_img_add input[type="file"]{position:absolute;width:0;height:0;padding:0;overflow:hidden;border:0;}
+
+                                        </style>
+
+                                        <div class="tbl_body" >
+                                            <div class="tbl_item_wrap">
+                                                <div class="tbl_item_box">
+                                                    <div class="tbl_item th_head"></div>
+                                                    <div class="tbl_item td_head"></div>
+                                                </div>
                                             </div>
 
                                             <div class="store_add_box dtl_img">
@@ -530,15 +514,17 @@
                                                             <div class="store_img_wrap">
                                                                 <div class="store_img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
                                                             </div>
-                                                            <div class="store_add_btnbox">
-                                                                <div class="store_btn_plus"></div>
+                                                            <div class="store_img_add">
+                                                                <label for="file"></label> 
+                                                                <input type="file" id="file" onchange="selectAsyncUi.storeImg(this);">
                                                             </div>
+                                                           
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            
                                         </div>
+
                                     </div>
                                 </div>
                                 
@@ -566,49 +552,148 @@
 
     </div>
     <!-- wrap E -->
-    <script>
 
-var sdfun = ''
-    sdfun += '<div class="tbl_row_item td_item">'
-    sdfun += '    <div class="tbl_cell td">'
-    sdfun += '        <div class="d_flex">'
-    sdfun += '            <div class="select_wrap">'
-    sdfun += '                <select>'
-    sdfun += '                    <option value="분류선택" selected="">분류선택</option>'
-    sdfun += '                    <option value="분류선택">분류선택</option>'
-    sdfun += '                </select>'
-    sdfun +='            <div class="select_box" onclick="selectUi.boxOpen($(this))">  <div class="select_name">분류선택</div>  <div class="opt_list"><div class="opt_item" optnum="0" onclick="selectUi.optionClick($(this))">분류선택</div><div class="opt_item" optnum="1" onclick="selectUi.optionClick($(this))">분류선택</div>  </div></div></div>'
-    sdfun +='            <div class="inp_wrap">'
-    sdfun +='                <input type="text" placeholder="1">'
-    sdfun +='            </div>'
-    sdfun +='        </div>'
-    sdfun +='    </div>'
-    sdfun +='    <div class="tbl_cell td">'
-    sdfun +='        <div class="d_flex">'
-    sdfun +='            <div class="inp_wrap">'
-    sdfun +='                <input type="text" name="" id="" placeholder="층수 설명">'
-    sdfun +='            </div>'
-    sdfun +='            <div class="btn_wrap"><div class="btn close_as"></div></div>'
-    sdfun +='        </div>'
-    sdfun +='    </div>'
-    sdfun +='</div>'
 
-        $(document).ready(() => {
-            
-            
-            $('.btn.plus_as').click(function(){
-                $(this).closest('.tbl_row_item').next()
-                sdfun
-            })
+<script>
 
-            $('.btn.close_as').click(function(){
-                $(this).closest('.tbl_row_item').remove()
-            })
+    /* 셀렉트 박스 */
+    var selectAsyncUi = {
+        seData : [],
+        s_num: 0,
 
-        });
-        selectUi.init();
+        init :(obj) => {
+            selectAsyncUi.s_num = $('.tbl_item.td_head .tbl_row_item').length;
+            // if($('.tbl_item.td_head .tbl_row_item').length == 0) $('.tbl_item.td_head').css('padding', 0);
+        },
 
-    </script>
+        addThRow: (obj) => {
+            //갯수가 1개 이상일때 리턴 시킴니다.
+            var html = selectAsyncUi.returnThHtml(selectAsyncUi.s_num);
+            $('.tbl_item.th_head').append(html);
+            $('.tbl_item.td_head').removeAttr('style')
+        },
+
+        addTdRow: (obj) => {
+            var html = selectAsyncUi.returnTdHtml(selectAsyncUi.s_num);
+            $('.tbl_item.td_head').append(html);
+            selectAsyncUi.pushSelect(selectAsyncUi.s_num);
+        },
+
+        pushSelect: (num) => {
+            selectAsyncUi.s_num++;
+            var seObjData = new Object();
+            seObjData.optData = new Array();
+            seObjData.seData = new Array();
+            seObjData.num = num;
+            seObjData.actNum = '';
+            seObjData.actVal = '';
+            seObjData.actSta = false;
+            var seTarget = $('div[row_index='+num+']').find('.select_wrap').children('select');
+            $.each( seTarget.children("option"), (seIndex, seItem) => {
+                if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
+                    seObjData.actSta = true;
+                    seObjData.actNum = seIndex;
+                    seObjData.actVal = seItem.text;
+                }
+                seObjData.optData.push(seItem.text);
+            });
+            seObjData.seData.push(seObjData);
+            selectAsyncUi.customSelect(seObjData);
+        },
+
+        returnThHtml: (num) => {
+            var html = ''
+                html += '<div class="tbl_row_item th_item">';
+                html += '<div class="tbl_cell th">층수</div>';
+                html += '<div class="tbl_cell th">주요 콘텐츠<div class="btn plus_as" onClick="selectAsyncUi.addTdRow($(this))"></div></div>';
+                html += '</div>';
+            return html;
+        },
+
+        returnTdHtml: (num) => {
+            var html = ''
+            html += '<div row_index="'+ num +'" class="tbl_row_item td_item">'
+            html += '    <div class="tbl_cell td">'
+            html += '        <div class="d_flex">'
+            html += '            <div class="select_wrap">'
+            html += '                <select>'
+            html += '                    <option value="분류선택" selected="">분류선택</option>'
+            html += '                    <option value="분류선택">분류선택</option>'
+            html += '                </select>'
+            html +='            </div>'
+            html +='            <div class="inp_wrap">'
+            html +='                <input type="text" placeholder="1">'
+            html +='            </div>'
+            html +='        </div>'
+            html +='    </div>'
+            html +='    <div class="tbl_cell td">'
+            html +='        <div class="d_flex">'
+            html +='            <div class="inp_wrap">'
+            html +='                <input type="text" name="" id="" placeholder="층수 설명">'
+            html +='            </div>'
+            html +='            <div class="btn_wrap"><div class="btn close_as" onClick="selectAsyncUi.floorsRemove('+num+')"></div></div>'
+            html +='        </div>'
+            html +='    </div>'
+            html +='</div>'
+            return html;
+        },
+
+        floorsRemove: (num) => {
+            $('div[row_index='+num+']').remove();
+        },
+
+        customSelect: (seObjData) => {
+            $.each( seObjData.seData, (index, item) => {
+                var selectHtml = '';
+                var selectTname = item.actVal ? item.actVal : item.optData[0];
+                selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
+                selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
+                selectHtml+= '  <div class="opt_list">';
+                $.each( item.optData, (seindex, seitem) => {
+                    selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
+                });
+                selectHtml+= '  </div>';
+                selectHtml+= '</div>';
+                $('div[row_index='+seObjData.num+']').find('.select_wrap').append(selectHtml);
+            });
+        },
+
+        boxOpen : (obj) =>{
+            if(!obj.hasClass('active')) $('.select_box.active').removeClass('active');
+            if(obj.hasClass('active')){
+                obj.removeClass('active');
+            }else{
+                obj.addClass('active');
+            }
+        },
+
+        optionClick : (obj) =>{
+            obj.parent().parent().children('.select_name').text(obj.text());
+            obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
+        },
+
+        storeImg: (input) => {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.store_img_wrap').append('<div class="store_img_item"><img src="'+e.target.result+'" alt=""></div>');
+                };
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                $('.store_img_wrap').append('<div class="store_img_item">실패</div>');
+            }
+        }
+    }
+    selectUi.init();
+    selectAsyncUi.init();
+    $(document).ready(() => {
+        
+    });
+
+
+</script>
+
+
 </body>
 
 </html>
