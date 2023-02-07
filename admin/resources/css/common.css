@@ -90,7 +90,7 @@ input[type="password"]{border-radius:5px;}
 .btn_wrap{display:flex;align-items:center;gap: 8px;}
 
 .btn{display:inline-block;height:40px;line-height: 38px;padding:0 15px;font-size: var(--fts13);font-weight: var(--ftw500);color:var(--color14);border: var(--cont_border);background: #fff;box-sizing: border-box;cursor: pointer;white-space: nowrap;}
-.btn.btn_sm{font-size:var(--fts10);height:20px;line-height:18px;}
+.btn.btn_sm{font-size:var(--fts10);height:20px;line-height:18px;padding:0 10px}
 .btn.btn_md{height: 30px;line-height: 28px;}
 .btn.btn_lg{height:50px;line-height: 48px;}
 .btn.btn_red{background: var(--color1);border-color:var(--color1);color: #fff;}
@@ -311,58 +311,99 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg12 #vector-2,
 #lnb .lnb_menu .nav_list .nav_item.active .icon_nav_menu #menusvg12 #vector-3{fill: var(--color1);}
 
+
 #menusvg1 #menu_svg01{transform-origin: calc(50% - 1.383px) calc(50% - 1.383px)!important;transform: translate(1.383px, 1.383px) rotateY( 0deg );}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg1 #menu_svg01{transform: translate(1.383px, 1.383px) rotateY( 360deg )}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg1 #Group{transform-origin: calc(50% - 5.72px) calc(50% - 5.497px);animation:menusvg1_2 1s linear infinite;}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg1 #menu_svg01{animation:menusvg1_1 1s linear infinite;}
+@keyframes menusvg1_1 {
+    0% {transform: translate(1.383px, 1.383px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(1.383px, 1.383px) scale3d(1.4, 1.4, 1.4);opacity: .5;}
+}
+@keyframes menusvg1_2 {
+    0% {transform: translate(5.72px, 5.497px) scale3d(1, 1, 1);opacity: 1;}
+    100% {transform: translate(5.72px, 5.497px) scale3d(.8, .8, .8);opacity: .5;}
+}
 
-#menusvg2 #path1,
-#path1_line{transform-origin: calc(25% - 0.607px) calc(50% - 0.527px)!important;transform: translate(-0.607px, -0.527px) rotateY( 0deg );}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg2 #path1,
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg2 #path1_line{transform: translate(-0.607px, -0.527px) rotateY(360deg)}
-
-#menusvg2 #path4,
-#menusvg2 #path4_line{transform-origin: 130% 25%!important;transform: translate(-12.533px, 9.818px) rotateX( 0deg );}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg2 #path4,
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg2 #path4_line{transform: translate(-12.533px, 9.818px) rotateX(360deg)}
+#menusvg2 #maste{transform-origin: calc(50% - 0.599px) calc(50% - 0.127px)!important;transform: translate(0.599px, 0.127px) rotateY( 0deg );}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg2 #maste{animation:menusvg2_1 1s linear infinite;}
+@keyframes menusvg2_1 {
+    0% {transform: translate(0.599px, 0.127px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(0.599px, 0.127px) scale3d(1.4, 1.4, 1.4);opacity: .5;}
+}
 
 #menusvg3 #vector{opacity:.3}
-#menusvg3 #vector22{transform-origin: 35% 25%!important;transform: translate(1.812px, 1.831px) rotateY( 0deg );}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg3 #vector22{transform: translate(1.812px, 1.831px) rotateY(360deg)}
+#menusvg3 #vuesax_linear{transform-origin: 50% 50%!important;transform:  rotateY( 0deg );}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg3 #vuesax_linear{animation:menusvg3_1 1s linear infinite;}
+@keyframes menusvg3_1 {
+    0% {transform: scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: scale3d(1.4, 1.4, 1.4);opacity: .5;}
+}
 
 #menusvg4 #vector{transform-origin: calc(50% - 2.672px) calc(50% - 1.747px)!important;transform: translate(2.672px, 1.747px) rotate(0deg);}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg4 #vector{transform: translate(2.672px, 1.747px) rotate( 180deg )}
-
+#menusvg4 #vector-2{transform-origin: calc(50% - 8px) calc(50% - 8px)!important;transform: translate(8px, 8px) rotate(0deg);}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg4 #vector{animation:menusvg4_1 1s linear infinite}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg4 #vector-2{animation:menusvg4_2 1s linear infinite}
+@keyframes menusvg4_1 {
+    0% {transform: translate(2.672px, 1.747px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(2.672px, 1.747px) scale3d(1.4, 1.4, 1.4);opacity: .5;}
+}
+@keyframes menusvg4_2 {
+    0% {transform: translate(8px, 8px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(8px, 8px) scale3d(.8, .8, .8);opacity: .5;}
+}
 #menusvg5 #vector{transform-origin: calc(50% - 2px) calc(50% - 2px)!important;transform: translate(2px, 2px) rotateX(0deg);}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg5 #vector{transform: translate(2px, 2px) rotateX( 360deg )}
+#menusvg5 #vector-2,
+#menusvg5 #vector-3{transform-origin: calc(50% - 7.5px) calc(50% - 7.5px)!important;transform: translate(7.5px, 7.5px) rotateX(0deg);}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg5 #vector{animation:menusvg5_1 1s linear infinite}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg5 #vector-2,
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg5 #vector-3{animation:menusvg5_2 1s linear infinite}
+@keyframes menusvg5_1 {
+    0% {transform: translate(2px, 2px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(2px, 2px) scale3d(1.4, 1.4, 1.4);opacity: .5;}
+}
+@keyframes menusvg5_2 {
+    0% {transform: translate(7.5px, 7.5) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(7.5, 7.5) scale3d(.8, .8, .8);opacity: .5;}
+}
 
-#menusvg6 #vector{transform-origin: 0% 15%!important;transform: translate(4.758px, 1.833px) rotate(0deg);}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg6 #vector{animation:menusvg6_1 1.5s linear infinite;}
+#menusvg6 #bag{transform-origin: 50% 50%!important;transform: translate(108px, 188px) rotate(0deg);}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg6 #bag{animation:menusvg6_1 1.5s linear infinite;}
+@keyframes menusvg6_1 {
+    0% {transform: translate(108px, 188px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(108px, 188px) scale3d(1.4, 1.4, 1.4);opacity: .5;}
+}
 
-#menusvg6 #vector-2{transform-origin: 3px 3px!important;transform: translate(13.924px, 1.833px) rotate(0deg);}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg6 #vector-2{animation:menusvg6_2 1.5s linear infinite;}
+#menusvg7 #vector{transform-origin: calc(50% - 7.671px) calc(50% - 6.34px)!important;transform: translate(7.671px, 6.34px)}
+#menusvg7 #vector-2{transform-origin: calc(50% - 11px) calc(50% - 5.296px)!important;transform: translate(11px, 5.296px) }
+#menusvg7 #vector-3{transform-origin: calc(50% - 2px) calc(50% - 2px)!important;transform: translate(2px, 2px) }
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg7 #vector{animation:menusvg7_1 1.5s linear infinite;}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg7 #vector-2{animation:menusvg7_2 1.5s linear infinite;}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg7 #vector-3{animation:menusvg7_3 1.5s linear infinite;}
 
-#menusvg7 #vector-3{transform-origin: calc(50% - 2px) calc(50% - 2px)!important;transform: translate(2px, 2px) rotateY(0deg);}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg7 #vector-3{transform: translate(2px, 2px) rotateY( 360deg )}
+@keyframes menusvg7_1 {
+    0% {transform: translate(7.671px, 6.34px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(7.671px, 6.34px) scale3d(.8, .8, .8);opacity: .5;}
+}
+@keyframes menusvg7_2 {
+    0% {transform: translate(11px, 5.296px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(11px, 5.296px) scale3d(.8, .8, .8);opacity: .5;}
+}
+@keyframes menusvg7_3 {
+    0% {transform: translate(2px, 2pxx) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(2px, 2px) scale3d(1.4, 1.4, 1.4);opacity: .5;}
+}
 
 #menusvg8 #vector-6{transform-origin: calc(50% - 1.883px) calc(50% - 1.883px)!important;transform: translate(1.883px, 1.883px) rotateY(0deg);}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg8 #vector-6{transform: translate(1.883px, 1.883px) rotateY( 360deg )}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg8 #vector-6{animation:menusvg8_1 1.5s linear infinite;}
+@keyframes menusvg8_1 {
+    0% {transform: translate(1.883px, 1.883px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(1.883px, 1.883px) scale3d(1.4, 1.4, 1.4);opacity: .5;}
+}
 
 #menusvg9 #vector{transform-origin: calc(50% - 1.831px) calc(50% - 2.374px)!important;transform: translate(1.831px, 2.374px) scale3d(1, 1, 1);}
 #lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg9 #vector{animation:menusvg9_1 1s linear infinite;}
-
 #menusvg9 #vector2{transform-origin: calc(50% - 1.831px) calc(50% - 2.374px)!important;transform: translate(1.831px, 2.374px) scale3d(1, 1, 1);}
 #lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg9 #vector2{animation:menusvg9_2 1s linear infinite;}
-
-#menusvg10 #vector{transform-origin: calc(50% - 1.816px) calc(50% - 2.724px)!important;transform: translate(1.816px, 2.724px) rotateY(0deg);}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg10 #vector{transform: translate(1.816px, 2.724px) rotateY( 360deg )}
-
-#menusvg11 #vector{transform-origin: calc(50% - 2.692px) calc(50% - 1.85px)!important;transform: translate(2.692px, 1.85px) rotateX(0deg);}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg11 #vector{transform: translate(2.692px, 1.85px) rotateX( 360deg )}
-
-#menusvg12 #vector{transform-origin: calc(50% - 3.161px) calc(50% - 6.108px)!important;transform: translate(3.161px, 6.108px) rotateY(0deg);}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg12 #vector{transform: translate(3.161px, 6.108px) rotateY( 360deg )}
-#menusvg12 #vector-3{transform-origin: calc(50% - 7.47px) calc(50% - 15.611px)!important;transform: translate(7.47px, 15.611px) rotateY(0deg);}
-#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg12 #vector-3{transform: translate(7.47px, 15.611px) rotateY( 360deg )}
-
 @keyframes menusvg9_1 {
     0% {transform: translate(1.831px, 2.374px) scale3d(1, 1, 1);opacity: 1;}
 	90% {transform: translate(1.831px, 2.374px) scale3d(.5, .5, .5);opacity: 0;}
@@ -372,18 +413,36 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 @keyframes menusvg9_2 {
     0% {transform: translate(1.831px, 2.374px) scale3d(1, 1, 1);opacity: 1;}
 	50% {transform: translate(1.831px, 2.374px) scale3d(1.1, 1.1, 1.1);opacity: 1;}
-    100% {transform: translate(1.831px, 2.374px) scale3d(1.2, 1.2, 1.2);opacity: 1;}
+    100% {transform: translate(1.831px, 2.374px) scale3d(1.4, 1.4, 1.4);opacity: 1;}
+}
+#menusvg10 #vector{transform-origin: calc(50% - 1.816px) calc(50% - 2.724px)!important;transform: translate(1.816px, 2.724px) rotateY(0deg);}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg10 #vector{animation:menusvg10_1 1s linear infinite;}
+@keyframes menusvg10_1 {
+    0% {transform: translate(1.816px, 2.724px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(1.816px, 2.724px) scale3d(1.4, 1.4, 1.4);opacity: .5;}
 }
 
-@keyframes menusvg6_1 {
-	50% {transform: translate(4.758px, 1.833px) rotate( -60deg )}
-    100% {transform: translate(4.758px, 1.833px) rotate( 00deg )}
+#menusvg11 #vector{transform-origin: calc(50% - 2.692px) calc(50% - 1.85px)!important;transform: translate(2.692px, 1.85px) rotateX(0deg);}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg11 #vector{animation:menusvg11_1 1s linear infinite;}
+@keyframes menusvg11_1 {
+    0% {transform: translate(2.692px, 1.85px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(2.692px, 1.85px) scale3d(1.4, 1.4, 1.4);opacity: .5;}
+}
 
+#menusvg12 #shopping-bag{transform-origin: calc(50%) calc(50%)!important;transform: translate(686px, 188px) rotateY(0deg);}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg12 #shopping-bag{animation:menusvg12_1 1s linear infinite;}
+@keyframes menusvg12_1 {
+    0% {transform: translate(686px, 188px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(686px, 188px) scale3d(1.4, 1.4, 1.4);opacity: .5;}
 }
-@keyframes menusvg6_2 {
-	50% {transform: translate(13.924px, 1.833px) rotate( 60deg )}
-    100% {transform: translate(13.924px, 1.833px) rotate( 00deg )}
+
+#menusvg12 #shopping-bag{transform-origin: calc(50%) calc(50%)!important;transform: translate(686px, 188px) rotateY(0deg);}
+#lnb .lnb_menu .nav_list .nav_item:hover .icon_nav_menu #menusvg12 #shopping-bag{animation:menusvg12_1 1s linear infinite;}
+@keyframes menusvg12_1 {
+    0% {transform: translate(686px, 188px) scale3d(1, 1, 1);opacity: 1;}
+	100% {transform: translate(686px, 188px) scale3d(1.2, 1.2, 1.2);opacity: .5;}
 }
+
 
 .sdfun{
     transition: 1s;
