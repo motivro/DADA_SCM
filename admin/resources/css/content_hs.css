@@ -804,7 +804,7 @@
 
 #content .contents_box .right_box .srh_btn_box .btn_wrap{gap: 8px;}
 #content .contents_box .right_box .srh_btn_box .btn_wrap .btn{width: auto;}
-#content .contents_box .right_box .store_add_box{}
+#content .contents_box .right_box .store_add_box{padding-top: 20px;}
 #content .contents_box .right_box .store_add_box .tit{font-size: var(--fts20);font-weight: var(--ftw400);}
 #content .contents_box .right_box .store_add_box .tit + div{margin-top: 20px;}
 
@@ -1301,17 +1301,3 @@
 
 /* 약관 등록 */
 #content.terms .contents_box .srh_btn_box .btn_wrap .btn{width: auto;}
-
-/* 판매상품관리 - 쇼핑몰연계상품 */
-#content .flex_wrap{display: flex;}
-#content .mallInfo_box{align-items: flex-start;gap: 20px;margin-top: 15px;}
-#content .mallInfo_box .shopInfo{width:30%;background: #fff;border: var(--box_border);}
-#content .mallInfo_box .shopInfo .motiv_tbl_box{}
-#content .mallInfo_box .shopInfo .motiv_tbl_box .tbl_item{max-height:350px;overflow-y: auto;}
-#content .mallInfo_box .shopInfo .motiv_normal_tbl tr th, 
-#content .mallInfo_box .shopInfo .motiv_normal_tbl tr td{border-top:0;border-right: 0;}
-#content .mallInfo_box .shopInfo .motiv_normal_tbl tr th:first-child,
-#content .mallInfo_box .shopInfo .motiv_normal_tbl tr td:first-child{border-left: 0;}
-#content .mallInfo_box .shopInfo .motiv_normal_tbl tr:last-child td{border-bottom: 0;}
-
-#content .mallInfo_box .tblInfo{flex:1;width:70%;padding-top: 0;}
