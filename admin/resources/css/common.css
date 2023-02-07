@@ -179,7 +179,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 
 #lnb .lnb_inner{width:100%;min-height:100%;background: #40424a;position: relative;overflow:hidden}
 
-#lnb .profile_info{margin: 30px 20px;white-space: nowrap;}
+#lnb .profile_info{margin: 25px 20px;white-space: nowrap;}
 #lnb .profile_info .member_info{display: flex;}
 #lnb .profile_info .member_info .thumb{width: 75px;height: 75px;}
 #lnb .profile_info .member_info .thumb > img{width: 100%;border-radius: 50%;}
@@ -208,7 +208,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #lnb.open .profile_info{height:0!important;}
 
 #lnb .lnb_inner{overflow-y:auto}
-#lnb .lnb_menu .nav_list{padding: 20px 20px 50px 10px;}
+#lnb .lnb_menu .nav_list{padding: 0px 20px 50px 10px;}
 #lnb .lnb_menu .nav_list .nav_item{position:relative;width:100%;padding:4px 0;cursor: pointer;display:flex;align-items:flex-start;gap:15px;}
 #lnb .lnb_menu .nav_list .nav_item .icon_nav_menu{display:block;;width: 42px;height: 42px;background-repeat: no-repeat;background-size: cover;background-position: center;flex:0 0 auto;overflow:hidden}
 #lnb .lnb_menu .nav_list .nav_item > .nav_menu_wrap{flex-grow:1;}
