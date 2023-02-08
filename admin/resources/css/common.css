@@ -44,6 +44,8 @@
     --color23:#747474;
     --color24:#FBFBFB;
     --color25:#A80000;
+    --color26:#CECECE;
+    --color27:#84898D;
 
     --box_border:1px solid #dddddd;
     --cont_border:1px solid #e3e3e3;
@@ -119,6 +121,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .d_flex.jc_c{justify-content: center !important;}
 .d_flex.jc_sb{justify-content: space-between !important;}
 .d_flex.a_c{align-items: center !important;}
+.d_flex.fd_col{flex-direction: column !important;}
 .d_flex.gap5{gap: 5px !important;}
 .d_flex.gap8{gap: 8px !important;}
 .d_flex.gap10{gap: 10px !important;}
