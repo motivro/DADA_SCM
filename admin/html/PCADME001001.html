@@ -641,7 +641,7 @@
                         <div class="srh_btn_box">
                             <div class="btn_wrap">
                                 <div class="btn btn_search">검색</div>
-                                <div class="btn">초기화</div>
+                                <div class="btn" onClick="mtvLp.open('pcacme001001_lp333')">초기화</div>
                                 <div class="btn btn_search_open"><i class="arrow down"></i>펼처보기</div>
                             </div>
                         </div>
@@ -1444,7 +1444,7 @@
     <!-- wrap E -->
 
     <style>
-        .dada_lp_wrap{position:fixed;top:0;left:0;width:100%;height:100%;display:none;z-index:1;transition:.3s;opacity:0}
+        .dada_lp_wrap{position:fixed;top:0;left:0;width:100%;height:100%;display:none;z-index:1;transition:.5s;opacity:0}
         .dada_lp_wrap.open{}
         .dada_lp_wrap.open .dada_alt_body{}
         .dada_lp_wrap .dada_alt_body{position:absolute;top:50%;left:50%;min-width:500px;max-height:500px;margin-top:-250px;margin-left:-130px;background-color:#fff;z-index:100}
@@ -1462,10 +1462,13 @@
         .dada_close_box .dada_close_btn:after {transform: rotate(-45deg);}
         .dada_lp_wrap .dada_bg{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0, .5)}
 
+        .size_sm_cont{}
+        .size_dm_cont{}
+        .size_lg_cont{}
+        .size_full_cont{}
 
-        .motiv_layer{}
-        .motiv_layer{position:fixed;top:50%;left:50%;z-index:100}
-        .motiv_layer_bg{width:100vw;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);z-index:99;}
+        .motiv_layer{position:fixed;top:50%;left:50%;transition:.5s;opacity:0;z-index:100}
+        .motiv_layer_bg{width:100vw;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);opacity:0;transition:.5s;z-index:99;}
         
         .lp_active{z-index:201}
         .lp_active_bg{z-index:200}
@@ -1487,7 +1490,6 @@
             </div>
         </div>
     </div> 
-
 
     <div id="sss2" class="dada_lp_wrap">
         <div class="dada_alt_body">
@@ -1610,12 +1612,12 @@
         </div>
     </div>
 
-    <div class="motiv_layer_bg" style="visibility:hidden"></div>
+    <div class="motiv_layer_bg" style="visibility:hidden" style="display:none"></div>
 
-    <div id="pcacme001001_lp09" class="motiv_layer type1" style="margin-top:20px">
+    <div id="pcacme001001_lp09" class="motiv_layer type1" style="display:none">
         <div class="layer_head">
             <div class="title">강제종료 해지</div>
-            <div class="btn_close"></div>
+            <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp09')"></div>
         </div>
         <div class="layer_body">
             <div class="contents_box">
@@ -1747,7 +1749,7 @@
         </div>
     </div>
 
-    <div id="pcacme001001_lp09232" class="motiv_layer type1 full_cont" style="margin-top:20px">
+    <div id="pcacme001001_lp09232" class="motiv_layer type1 size_full_cont" style="display:none">
         <div class="layer_head">
             <div class="title">상품상세정보 : <span>상품명</span></div>
             <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp09232')"></div>
@@ -2349,7 +2351,7 @@
         </div>
     </div>
 
-    <div id="pcacme001001_lp333" class="motiv_layer type2">
+    <div id="pcacme001001_lp333" class="motiv_layer type2" style="display:none">
         <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp333')"></div>
         <div class="layer_body">
             <div class="contents_box">
@@ -2436,38 +2438,30 @@
             nowActiveName: '',
             widthF: .5,
 
-
             init: () => {
-
                 var mtv_w1 = mtvLp.bw - mtvLp.lnbw; // 브라우져넓이 빼기 lnb 넓이
-                var mtv_w2 = mtv_w1 / 2
-                var mtv_w3 = mtvLp.lnbw / 2
-                var mtv_w4 = mtv_w2 - mtv_w3
-                
+                var mtv_w2 = mtv_w1 / 2;
+                var mtv_w3 = mtvLp.lnbw / 2;
+                var mtv_w4 = mtv_w2 - mtv_w3;
+                var mtv_max_h = ( mtvLp.bh - $('#header').height() ) * .8;
+
                 $.each( $('.motiv_layer'), function(index, obj){
 
-                    if($('.motiv_layer').eq(index).hasClass('full_cont')){
+                    if($('.motiv_layer').eq(index).hasClass('size_full_cont')){
                         var full_w = .85;
                         lp_width = ( (mtvLp.bw - mtvLp.lnbw) * full_w / 2 ) - (mtvLp.lnbw/2);
-
                         $('.motiv_layer').eq(index).css({
                             'display': 'none',
                             'visibility': 'hidden',
-                            'margin-top': -(mtvLp.bh * .8)/2,
+                            'margin-top': -$('.motiv_layer').eq(index).height()/2,
                             'margin-left': -lp_width,
                             'width': (mtvLp.bw - mtvLp.lnbw) * full_w,
                             'height': mtvLp.bh * .8,
                             'overflow':'hidden'
                         });
-
-                        $('.motiv_layer .layer_body').eq(index).css({
-                            'height': (mtvLp.bh * .8) - $('.layer_head').height(),
-                            'overflow-y':'auto'
-                        });
+                        
                     } else {
-
                         lp_width = ( (mtvLp.bw - mtvLp.lnbw) * mtvLp.widthF / 2 ) - (mtvLp.lnbw/2);
-
                         $('.motiv_layer').eq(index).css({
                             'display': 'none',
                             'visibility': 'hidden',
@@ -2476,8 +2470,17 @@
                             'width': (mtvLp.bw - mtvLp.lnbw) * mtvLp.widthF,
                         });
                     }
-                    
-                    
+
+                    if($('.motiv_layer').eq(index).height() > mtv_max_h ){
+                        $('.motiv_layer').eq(index).css({
+                            'margin-top': -(mtvLp.bh * .8)/2,
+                            'height': mtvLp.bh * .8,
+                        });
+                        $('.motiv_layer .layer_body').eq(index).css({
+                            'height': (mtvLp.bh * .8) - $('.layer_head').height(),
+                            'overflow-y':'auto'
+                        });
+                    }
                     
                     $('.motiv_layer').eq(index).attr({
                         'cont_w': $('.motiv_layer').eq(index).width(),
@@ -2486,31 +2489,45 @@
                         'm_left': $('.motiv_layer').eq(index).height(),
                     })
                 })
+
+                $(window).on('resize', function(){
+                    // mtvLp.init();
+                });
+            },
+
+            staForm: () => {
+
             },
 
             open: (id) => {
-                console.log(mtvLp)
                 if(mtvLp.prevActiveName != ''){
                     $('#'+id).attr('prep_name', mtvLp.prevActiveName);
                     mtvLp.prevActiveName = mtvLp.nowActiveName;
                 }
                 mtvLp.nowActiveName = id;
+                $('div').removeClass('lp_active');
                 $('#'+id).css({
                     'display': 'block',
                     'visibility': 'visible'
                 }).addClass('lp_active');
-                $('.motiv_layer_bg').css({'visibility': 'visible'}).addClass('lp_active_bg')
+
+                var mtvLpOpen = setTimeout( function() {
+                    $('#'+id).css({'opacity': '1'});
+                    $('.motiv_layer_bg').css({'opacity': '1', 'visibility': 'visible'}).addClass('lp_active_bg');
+                    clearTimeout(mtvLpOpen);
+                }, 100);
+
             },
 
             close: (id) => {
-                $('#'+id).css({
-                    'display': 'none',
-                    'visibility': 'hidden'
-                })
-                
+                $('#'+id).css({'display': 'none','visibility': 'hidden'});
                 if(mtvLp.prevActiveName == ''){
                     mtvLp.nowActiveName = '';
-                    $('.motiv_layer_bg').css({'visibility': 'hidden'});
+                    $('.motiv_layer_bg').css({'opacity': '0'});
+                    var mtvLpClose = setTimeout( function() {
+                        $('.motiv_layer_bg').css({'visibility': 'hidden'});
+                        clearTimeout(mtvLpClose);
+                    }, 501);
                 } else {
                     $('#'+mtvLp.nowActiveName).attr('prep_name', '');
                     mtvLp.nowActiveName = mtvLp.prevActiveName;
@@ -2520,48 +2537,33 @@
                         mtvLp.prevActiveName = '';
                     }
                     $('#'+mtvLp.nowActiveName).addClass('lp_active');
-                }
-                
-                
+                    }
                 $('#'+id).removeClass('lp_active');
-
-                // $('.motiv_layer_bg').css({'visibility': 'hidden'});
-            },
-
-            change: () => {
-
             },
 
             alertOpen: (id, text) => {
                 mtvLp.prevActiveName = mtvLp.nowActiveName;
-                mtvLp.nowActiveName = id;
                 if(mtvLp.prevActiveName != ''){
                     $('#'+id).attr('prep_name', mtvLp.prevActiveName);
                 }
-
-                console.log(mtvLp)
-                var target = mtvLp.targetCk(id);
-                $(target+' .dada_cont').html(text);
-                $(target).show().css({
+                mtvLp.nowActiveName = id;
+                $('#'+id).show().css({
                     'visibility': 'hidden',
                 });
                 $('div').removeClass('lp_active');
 
-                $(target).addClass('lp_active')
+                $('#'+id).addClass('lp_active');
                 var mtvLpOpen = setTimeout( function() {
-                    $(target).show().css({
+                    $('#'+id).show().css({
                         'visibility': 'visible',
                         'opacity': '1',
                     });
                     clearTimeout(mtvLpOpen);
                 }, 100);
-
             },
 
             alertClose: (id) => {
-                var target = mtvLp.targetCk(id);
-                $(target).css({'opacity': '0'});
-
+                $('#'+id).css({'opacity': '0'});
                 $('#'+mtvLp.nowActiveName).attr('prep_name', '');
                 mtvLp.nowActiveName = mtvLp.prevActiveName;
                 if( $('#'+mtvLp.prevActiveName).attr('prep_name') != undefined){
@@ -2569,19 +2571,13 @@
                 } else {
                     mtvLp.prevActiveName = '';
                 }
-
                 var mtvLpClose = setTimeout( function() {
-                    $(target).hide();
+                    $('#'+id).hide();
                     $('#'+mtvLp.nowActiveName).addClass('lp_active');
-                    $(target).removeClass('lp_active');
+                    $('#'+id).removeClass('lp_active');
                     clearTimeout(mtvLpClose);
                 }, 100);
             },
-
-            targetCk: (id) => {
-                return id == undefined ? '.dada_lp_wrap': '#'+id+'.dada_lp_wrap';
-            },
-
             
         }
         mtvLp.init();
