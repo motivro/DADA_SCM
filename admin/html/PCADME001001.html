@@ -1524,7 +1524,7 @@
     </div> 
 
 
-    <div id="pcacme001001_lp" class="motiv_layer motiv_layers type1" style="display:none">
+    <div id="pcacme001001_lp" class="motiv_layer motiv_layers type1" cont_size="normal" style="display:none">
         <div class="layer_head">
             <div class="title">강제종료</div>
             <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp')"></div>
@@ -1612,9 +1612,7 @@
         </div>
     </div>
 
-    <div class="motiv_layer_bg" style="visibility:hidden" style="display:none"></div>
-
-    <div id="pcacme001001_lp09" class="motiv_layer type1" style="display:none">
+    <div id="pcacme001001_lp09" class="motiv_layer type1" cont_size="large" style="display:none">
         <div class="layer_head">
             <div class="title">강제종료 해지</div>
             <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp09')"></div>
@@ -1749,7 +1747,7 @@
         </div>
     </div>
 
-    <div id="pcacme001001_lp09232" class="motiv_layer type1 size_full_cont" style="display:none">
+    <div id="pcacme001001_lp09232" class="motiv_layer type1" cont_size="full" style="display:none">
         <div class="layer_head">
             <div class="title">상품상세정보 : <span>상품명</span></div>
             <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp09232')"></div>
@@ -2351,7 +2349,7 @@
         </div>
     </div>
 
-    <div id="pcacme001001_lp333" class="motiv_layer type2" style="display:none">
+    <div id="pcacme001001_lp333" class="motiv_layer type2" cont_size="normal" style="display:none">
         <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp333')"></div>
         <div class="layer_body">
             <div class="contents_box">
@@ -2427,9 +2425,31 @@
             </div>
         </div>
     </div>
+    
+    <div class="motiv_layer_bg" style="visibility:hidden" style="display:none"></div>
 
     <script>
+        $(document).ready(() => {
+            mtvLp.init();
+            selectUi.init();
+            $('#sandbox_container.input-daterange').datepicker({language: "ko"});
+            tFlex.init(testData);//일반적인 스크롤되는 리스트
+            tFlexLock.init(testData1);//일부 고정영역이 있고 스크롤 되는 리스트
+            tFlex.init(pcacme001001_3);//일반적인 스크롤되는 리스트
 
+            // 레이어팝업 아코디언 메뉴 단순 이벤트 
+            $('.acc_box').each(function(){
+                var accBtn = $(this).children('.acc_tit');
+                $(accBtn).click(function(){
+                    if($(this).closest('.acc_box').hasClass('open')){
+                        $(this).closest('.acc_box').removeClass('open');
+                    } else {
+                        $(this).closest('.acc_box').addClass('open');
+                    }
+                });
+            });
+        });
+        
         var mtvLp = {
             lnbw: $('#lnb').width(),
             bw: window.innerWidth,
@@ -2437,57 +2457,55 @@
             prevActiveName: '',
             nowActiveName: '',
             widthF: .5,
+            normal: .5,
+            large: .7,
+            full: .9,
 
             init: () => {
+                mtvLp.lnbw = $('#lnb').width();
                 var mtv_w1 = mtvLp.bw - mtvLp.lnbw; // 브라우져넓이 빼기 lnb 넓이
                 var mtv_w2 = mtv_w1 / 2;
                 var mtv_w3 = mtvLp.lnbw / 2;
                 var mtv_w4 = mtv_w2 - mtv_w3;
                 var mtv_max_h = ( mtvLp.bh - $('#header').height() ) * .8;
-
+                var cont_size = '';
                 $.each( $('.motiv_layer'), function(index, obj){
+                    var index_obj = $('.motiv_layer').eq(index);
+                    cont_size = mtvLp[index_obj.attr('cont_size')];
+                    lp_width = ( (mtvLp.bw - mtvLp.lnbw) * cont_size / 2 ) - (mtvLp.lnbw/2);
 
-                    if($('.motiv_layer').eq(index).hasClass('size_full_cont')){
-                        var full_w = .85;
-                        lp_width = ( (mtvLp.bw - mtvLp.lnbw) * full_w / 2 ) - (mtvLp.lnbw/2);
-                        $('.motiv_layer').eq(index).css({
-                            'display': 'none',
-                            'visibility': 'hidden',
-                            'margin-top': -$('.motiv_layer').eq(index).height()/2,
-                            'margin-left': -lp_width,
-                            'width': (mtvLp.bw - mtvLp.lnbw) * full_w,
-                            'height': mtvLp.bh * .8,
-                            'overflow':'hidden'
-                        });
-                        
-                    } else {
-                        lp_width = ( (mtvLp.bw - mtvLp.lnbw) * mtvLp.widthF / 2 ) - (mtvLp.lnbw/2);
-                        $('.motiv_layer').eq(index).css({
-                            'display': 'none',
-                            'visibility': 'hidden',
-                            'margin-top': -$('.motiv_layer').eq(index).height()/2,
-                            'margin-left': -lp_width,
-                            'width': (mtvLp.bw - mtvLp.lnbw) * mtvLp.widthF,
-                        });
-                    }
+                    index_obj.css({
+                        'display': 'none',
+                        'visibility': 'hidden',
+                        'margin-top': -index_obj.height()/2,
+                        'margin-left': -lp_width,
+                        'width': (mtvLp.bw - mtvLp.lnbw) * cont_size,
+                    });
 
-                    if($('.motiv_layer').eq(index).height() > mtv_max_h ){
-                        $('.motiv_layer').eq(index).css({
+                    if(index_obj.height() > mtv_max_h ){
+                        index_obj.css({
                             'margin-top': -(mtvLp.bh * .8)/2,
                             'height': mtvLp.bh * .8,
                         });
-                        $('.motiv_layer .layer_body').eq(index).css({
+                        index_obj.find('.layer_body').eq(index).css({
                             'height': (mtvLp.bh * .8) - $('.layer_head').height(),
                             'overflow-y':'auto'
                         });
                     }
                     
-                    $('.motiv_layer').eq(index).attr({
-                        'cont_w': $('.motiv_layer').eq(index).width(),
-                        'cont_h': $('.motiv_layer').eq(index).height(),
-                        'm_top': $('.motiv_layer').eq(index).height(),
-                        'm_left': $('.motiv_layer').eq(index).height(),
+                    index_obj.attr({
+                        'cont_w': index_obj.width(),
+                        'cont_h': index_obj.height(),
+                        'm_top': index_obj.height(),
+                        'm_left': index_obj.height(),
                     })
+                })
+
+                $('.ham_menu').click(function(){
+                    var mtvLnbOpen = setTimeout( function() {
+                        mtvLp.init();
+                        clearTimeout(mtvLnbOpen);
+                    }, 500);
                 })
 
                 $(window).on('resize', function(){
@@ -2500,9 +2518,9 @@
             },
 
             open: (id) => {
+                mtvLp.prevActiveName = mtvLp.nowActiveName;
                 if(mtvLp.prevActiveName != ''){
                     $('#'+id).attr('prep_name', mtvLp.prevActiveName);
-                    mtvLp.prevActiveName = mtvLp.nowActiveName;
                 }
                 mtvLp.nowActiveName = id;
                 $('div').removeClass('lp_active');
@@ -2516,7 +2534,6 @@
                     $('.motiv_layer_bg').css({'opacity': '1', 'visibility': 'visible'}).addClass('lp_active_bg');
                     clearTimeout(mtvLpOpen);
                 }, 100);
-
             },
 
             close: (id) => {
@@ -2537,7 +2554,7 @@
                         mtvLp.prevActiveName = '';
                     }
                     $('#'+mtvLp.nowActiveName).addClass('lp_active');
-                    }
+                }
                 $('#'+id).removeClass('lp_active');
             },
 
@@ -2551,7 +2568,6 @@
                     'visibility': 'hidden',
                 });
                 $('div').removeClass('lp_active');
-
                 $('#'+id).addClass('lp_active');
                 var mtvLpOpen = setTimeout( function() {
                     $('#'+id).show().css({
@@ -2578,9 +2594,8 @@
                     clearTimeout(mtvLpClose);
                 }, 100);
             },
-            
         }
-        mtvLp.init();
+        
 
         /* 공용 알럿 */
         var dadaAlert = {
@@ -2716,28 +2731,9 @@
             },
         }
 
-        $(document).ready(() => {
-            $('#sandbox_container.input-daterange').datepicker({language: "ko"});
+       
 
-            tFlex.init(testData);//일반적인 스크롤되는 리스트
-            tFlexLock.init(testData1);//일부 고정영역이 있고 스크롤 되는 리스트
-            tFlex.init(pcacme001001_3);//일반적인 스크롤되는 리스트
-
-
-            // 레이어팝업 아코디언 메뉴 단순 이벤트 
-            $('.acc_box').each(function(){
-                var accBtn = $(this).children('.acc_tit');
-                $(accBtn).click(function(){
-                    if($(this).closest('.acc_box').hasClass('open')){
-                        $(this).closest('.acc_box').removeClass('open');
-                    } else {
-                        $(this).closest('.acc_box').addClass('open');
-                    }
-                });
-            });
-        });
-
-        selectUi.init();
+        
 
     </script>
 </body>
