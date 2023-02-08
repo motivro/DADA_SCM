@@ -640,7 +640,7 @@
 
                         <div class="srh_btn_box">
                             <div class="btn_wrap">
-                                <div class="btn btn_search">검색</div>
+                                <div class="btn btn_search" onclick="mtvLp.alertOpen('sss1', '테스트 팝업1')">검색</div>
                                 <div class="btn" onClick="mtvLp.open('pcacme001001_lp333')">초기화</div>
                                 <div class="btn btn_search_open"><i class="arrow down"></i>펼처보기</div>
                             </div>
@@ -2562,7 +2562,10 @@
                 mtvLp.prevActiveName = mtvLp.nowActiveName;
                 if(mtvLp.prevActiveName != ''){
                     $('#'+id).attr('prep_name', mtvLp.prevActiveName);
+                } else {
+                    $('.motiv_layer_bg').css({'display': 'block','visibility': 'visible'});
                 }
+
                 mtvLp.nowActiveName = id;
                 $('#'+id).show().css({
                     'visibility': 'hidden',
@@ -2570,6 +2573,7 @@
                 $('div').removeClass('lp_active');
                 $('#'+id).addClass('lp_active');
                 var mtvLpOpen = setTimeout( function() {
+                    $('.motiv_layer_bg').css({'opacity': '1'});
                     $('#'+id).show().css({
                         'visibility': 'visible',
                         'opacity': '1',
@@ -2581,21 +2585,27 @@
             alertClose: (id) => {
                 $('#'+id).css({'opacity': '0'});
                 $('#'+mtvLp.nowActiveName).attr('prep_name', '');
+
                 mtvLp.nowActiveName = mtvLp.prevActiveName;
-                if( $('#'+mtvLp.prevActiveName).attr('prep_name') != undefined){
+
+                if(mtvLp.prevActiveName != ''){
                     mtvLp.prevActiveName = $('#'+mtvLp.prevActiveName).attr('prep_name');
-                } else {
-                    mtvLp.prevActiveName = '';
-                }
-                var mtvLpClose = setTimeout( function() {
+                    console.log(11)
                     $('#'+id).hide();
                     $('#'+mtvLp.nowActiveName).addClass('lp_active');
-                    $('#'+id).removeClass('lp_active');
-                    clearTimeout(mtvLpClose);
-                }, 100);
+                } else {
+                    console.log(22)
+                    $('.motiv_layer_bg').css({'opacity': '0'});
+                    var mtvLpClose = setTimeout( function() {
+                        $('#'+id).hide();
+                        $('.motiv_layer_bg').css({'visibility': 'hidden'});
+                        $('#'+id).removeClass('lp_active');
+                        clearTimeout(mtvLpClose);
+                    }, 100);
+                }
+                
             },
         }
-        
 
         /* 공용 알럿 */
         var dadaAlert = {
