@@ -1444,7 +1444,7 @@
     <!-- wrap E -->
 
     <style>
-        .dada_lp_wrap{position:fixed;top:0;left:0;width:100%;height:100%;display:none;z-index:1;transition:.5s;opacity:0}
+        .dada_lp_wrap{position:fixed;top:0;left:0;width:100%;height:100%;display:none;z-index:1;transition:opacity .5s;opacity:0}
         .dada_lp_wrap.open{}
         .dada_lp_wrap.open .dada_alt_body{}
         .dada_lp_wrap .dada_alt_body{position:absolute;top:50%;left:50%;min-width:500px;max-height:500px;margin-top:-250px;margin-left:-130px;background-color:#fff;z-index:100}
@@ -1467,7 +1467,7 @@
         .size_lg_cont{}
         .size_full_cont{}
 
-        .motiv_layer{position:fixed;top:50%;left:50%;transition:.5s;opacity:0;z-index:100}
+        .motiv_layer{position:fixed;top:50%;left:50%;transition:opacity .5s;opacity:0;z-index:100}
         .motiv_layer_bg{width:100vw;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);opacity:0;transition:.5s;z-index:99;}
         
         .lp_active{z-index:201}
@@ -2546,7 +2546,9 @@
                         clearTimeout(mtvLpClose);
                     }, 501);
                 } else {
+                    console.log(123)
                     $('#'+mtvLp.nowActiveName).attr('prep_name', '');
+
                     mtvLp.nowActiveName = mtvLp.prevActiveName;
                     if( $('#'+mtvLp.prevActiveName).attr('prep_name') != undefined){
                         mtvLp.prevActiveName = $('#'+mtvLp.prevActiveName).attr('prep_name');
@@ -2587,14 +2589,11 @@
                 $('#'+mtvLp.nowActiveName).attr('prep_name', '');
 
                 mtvLp.nowActiveName = mtvLp.prevActiveName;
-
                 if(mtvLp.prevActiveName != ''){
-                    mtvLp.prevActiveName = $('#'+mtvLp.prevActiveName).attr('prep_name');
-                    console.log(11)
+                    mtvLp.prevActiveName = $('#'+mtvLp.prevActiveName).attr('prep_name') != undefined ? $('#'+mtvLp.prevActiveName).attr('prep_name') : '';
                     $('#'+id).hide();
                     $('#'+mtvLp.nowActiveName).addClass('lp_active');
                 } else {
-                    console.log(22)
                     $('.motiv_layer_bg').css({'opacity': '0'});
                     var mtvLpClose = setTimeout( function() {
                         $('#'+id).hide();

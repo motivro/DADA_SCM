@@ -116,6 +116,15 @@ input[type="password"]{border-radius:5px;}
 .btn_reply{background: var(--color1);border-color:var(--color1);color: #fff;}
 .btn_modi{background: var(--color5);border-color:var(--color5);color: #fff;}
 
+.btn.close_as{position:relative;width:40px;height:40px;}
+.btn.plus_as{position:relative;width:30px;height:30px;position:absolute;top: 50%;right: 6px;margin-top: -15px;right:5px;}
+.btn.close_as:before,
+.btn.plus_as:before,
+.btn.plus_as:after{content:'';display:block;clear:both;position:absolute;top:50%;left:50%;background-color:var(--color1)}
+.btn.plus_as:before{width:12px;height:2px;margin-top:-1px;margin-left:-6px;}
+.btn.plus_as:after{width:2px;height:12px;margin-top:-6px;margin-left:-1px;}
+.btn.close_as:before{width:12px;height:2px;margin-top:-1px;margin-left:-6px;}
+
 textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 
 .d_flex.jc_c{justify-content: center !important;}
