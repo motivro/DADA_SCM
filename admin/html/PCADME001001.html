@@ -666,7 +666,7 @@
                                             <option value="100">100개씩 </option>
                                         </select>
                                     </div>
-                                    <span class="icon icon_tbl_cus"></span>
+                                    <span class="icon icon_tbl_cus" onClick="mtvLp.open('cont_lp4')"></span>
                                 </div>
                             </div>
                         </div>
@@ -679,6 +679,7 @@
                                     <div class="btn btn_excelDown">엑셀다운로드</div>
                                 </div>
                             </div>
+
 
                             <div class="tbl_wrap">
                                 <div class='motiv_tbl'>
@@ -820,7 +821,7 @@
                                                         <div>자체코드</div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell3'>
-                                                        <div>상품명(옵션수)</div>
+                                                        <div>상품명<span class="opt_sta">(<a href="#none" class="opt_more">옵션수</a>)</span></div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell4'>
                                                         <div>관리명</div>
@@ -903,7 +904,121 @@
                                                     <div class='hd_item' keyname='sell30'>
                                                         <div>수정일</div>
                                                     </div>
+
+                                                    <div class="sub_row row_item" style="width: 1234px;">
+                                                        <div class="motiv_tbl normal "> <!-- appoint_sales -->
+                                                            <div class="tbl_inner">
+                                                                
+                                                                <div class="tbl_body" style="width: 1234px;">
+                                                                    <div class="row_item row_th d_flex" style="width: 1234px;">
+                                                                        <div class="hd_item" keyname="checkedbox">
+                                                                            <div>
+                                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                                    <label for="tbl_head_0" class="inp_box">
+                                                                                        <input type="checkbox" id="tbl_head_0" name="ckb_all">
+                                                                                        <span class="inp_custom"></span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU상품명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션속성명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션값</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>관리코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>공급가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>최초재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>담아간 수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>현재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>판매제안가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>추가금액</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>조회수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>등록날짜</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row_item d_flex" style="width: 1234px;">
+                                                                        <div class="hd_item" keyname="checkedbox">
+                                                                            <div>
+                                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                                    <label for="tbl_head_0" class="inp_box">
+                                                                                        <input type="checkbox" id="tbl_head_0" name="ckb_all">
+                                                                                        <span class="inp_custom"></span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU상품명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션속성명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션값</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>관리코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>공급가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>최초재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>담아간 수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>현재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>판매제안가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>추가금액</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>조회수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>등록날짜</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
+                                                
                                                 <div class='row_item d_flex'>
                                                     <div class='hd_item' keyname='checkedbox'>
                                                         <div>
@@ -922,7 +1037,7 @@
                                                         <div>자체코드</div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell3'>
-                                                        <div>상품명(옵션수)</div>
+                                                        <div>상품명<span class="opt_sta">(<a href="#none" class="opt_more">옵션수</a>)</span></div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell4'>
                                                         <div>관리명</div>
@@ -1049,7 +1164,7 @@
                                             <option value="100">100개씩 </option>
                                         </select>
                                     </div>
-                                    <span class="icon icon_tbl_cus"></span>
+                                    <span class="icon icon_tbl_cus" onClick="mtvLp.open('cont_lp4')"></span>
                                 </div>
                             </div>
                         </div>
@@ -1443,29 +1558,7 @@
     </div>
     <!-- wrap E -->
 
-    <style>
-        .motiv_layer{position:fixed;top:50%;left:50%;transition:opacity .3s;opacity:0;z-index:100}
-        .motiv_layer .dada_cont{font-size:var(--fts16);font-weight:var(--ftw500);text-align:center;margin:45px 0}
-        .motiv_layer .dada_btn_wrap{text-align:center;padding-bottom: 30px;}
-        .motiv_layer .dada_btn_wrap .dada_btn{display:inline-block;color:#fff;min-width:120px;height:40px;margin:0 5px;line-height:40px;font-size:var(--fts14);font-weight:var(--ftw500);cursor:pointer}
-        .motiv_layer .dada_btn_wrap .dada_btn.co_1{background-color:var(--color1)}
-        .motiv_layer .dada_btn_wrap .dada_btn.co_9{background-color:var(--color9)}
-        .dada_close_box:after{content:'';display:block;clear:both;}
-        .dada_close_box .dada_close_btn{position:absolute;top:10px;right:10px;width:25px;height:25px;cursor:pointer}
-        .dada_close_box .dada_close_btn:before, 
-        .dada_close_box .dada_close_btn:after{position:absolute;top:50%;left:50%;content:' ';height:25px;width:2px;background-color:#000;margin-top:-12px}
-        .dada_close_box .dada_close_btn:before {transform: rotate(45deg);}
-        .dada_close_box .dada_close_btn:after {transform: rotate(-45deg);}
-
-        .motiv_layer_bg{width:100vw;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);opacity:0;transition:.3s;z-index:199;}
-        .motiv_layer_bg.{}
-        .lp_active{z-index:201}
-        .lp_active_bg{z-index:200}
-    </style>
-
-   
-
-    <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
+    <div id="alert1" class="motiv_layer" cont_type="alert">
         <div class="dada_close_box">
             <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
         </div>
@@ -1479,7 +1572,7 @@
         </div>
     </div>
 
-    <div id="alert2" class="motiv_layer" cont_type="alert" style="display:none">
+    <div id="alert2" class="motiv_layer" cont_type="alert">
         <div class="dada_close_box">
             <div class="dada_close_btn" onClick="mtvLp.close('alert2')"></div>
         </div>
@@ -1493,7 +1586,7 @@
         </div>
     </div>
 
-    <div id="alert3" class="motiv_layer" cont_type="alert" style="display:none">
+    <div id="alert3" class="motiv_layer" cont_type="alert">
         <div class="dada_close_box">
             <div class="dada_close_btn" onClick="mtvLp.close('alert3')"></div>
         </div>
@@ -1507,7 +1600,7 @@
         </div>
     </div>
 
-    <div id="cont_lp1" class="motiv_layer type1" cont_size="normal" style="display:none">
+    <div id="cont_lp1" class="motiv_layer type1" cont_size="normal">
         <div class="layer_head">
             <div class="title">강제종료</div>
             <div class="btn_close" onClick="mtvLp.close('cont_lp1')"></div>
@@ -1595,7 +1688,7 @@
         </div>
     </div>
 
-    <div id="cont_lp2" class="motiv_layer type1" cont_size="large" style="display:none">
+    <div id="cont_lp2" class="motiv_layer type1" cont_size="large">
         <div class="layer_head">
             <div class="title">강제종료 해지</div>
             <div class="btn_close" onClick="mtvLp.close('cont_lp2')"></div>
@@ -1730,7 +1823,7 @@
         </div>
     </div>
 
-    <div id="cont_lp3" class="motiv_layer type1" cont_size="full" style="display:none">
+    <div id="cont_lp3" class="motiv_layer type1" cont_size="full">
         <div class="layer_head">
             <div class="title">상품상세정보 : <span>상품명</span></div>
             <div class="btn_close" onClick="mtvLp.close('cont_lp3')"></div>
@@ -2332,7 +2425,7 @@
         </div>
     </div>
 
-    <div id="cont_lp4" class="motiv_layer type2" cont_size="normal" style="display:none">
+    <div id="cont_lp4" class="motiv_layer type2" cont_size="normal">
         <div class="layer_head">
             <div class="title"></div>
             <div class="btn_close" onClick="mtvLp.close('cont_lp4')"></div>
@@ -2413,11 +2506,11 @@
         </div>
     </div>
     
-    <div class="motiv_layer_bg" style="visibility:hidden" style="display:none"></div>
+    <div class="motiv_layer_bg" style="visibility:hidden"></div>
 
     <script>
         $(document).ready(() => {
-            mtvLp.init();
+            // mtvLp.init();
             selectUi.init();
             $('#sandbox_container.input-daterange').datepicker({language: "ko"});
             tFlex.init(testData);//일반적인 스크롤되는 리스트

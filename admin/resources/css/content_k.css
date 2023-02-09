@@ -215,6 +215,6 @@ i.down{transform:rotate(45deg);-webkit-transform:rotate(45deg);margin-top:-5px;}
 #content .store_cont_box .custom_tbl .tbl_item.td_head .tbl_cell.td{border-top:none}
 #content .store_cont_box .custom_tbl .tbl_body .tbl_item.td_head{padding:0 20px 20px 20px}
 
-.store_img_add{width:140px;height:140px;overflow:hidden;background:#fff;border:2px dashed var(--color5);position:relative;background-image:url(../resources/images/common/store_btn_plus.svg);box-sizing:border-box;background-repeat:no-repeat;background-position:center;background-size:45px;}
+.store_img_add{width:140px;height:140px;overflow:hidden;background:#fff;border:2px dashed var(--color5);position:relative;background-image:url(../images/common/store_btn_plus.svg);box-sizing:border-box;background-repeat:no-repeat;background-position:center;background-size:45px;}
 .store_img_add label{float:left;width:140px;height:140px;}
 .store_img_add input[type="file"]{position:absolute;width:0;height:0;padding:0;overflow:hidden;border:0;}

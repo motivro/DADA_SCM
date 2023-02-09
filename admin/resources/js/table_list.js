@@ -40,7 +40,23 @@ var tFlex = {
             $('#'+ obj.id +' .motiv_tbl').find('.tbl_body').css('width', obj.totalSize +'px');
             //리스트의 형태를 잡기 위해 넓이를 추가합니다.
             $('#'+ obj.id +' .motiv_tbl').find('.row_item').css('width', obj.totalSize +'px');
-            
+
+            $.each( $('#'+ obj.id +' .motiv_tbl .look_body_box > .row_item'), (name, size) => {
+                var sub_row = $('#'+ obj.id +' .motiv_tbl .look_body_box > .row_item').eq(name).find('.sub_row');
+                if(sub_row.length > 0){
+                    sub_row.attr('cont_h', $('#'+ obj.id).find('.sub_row .motiv_tbl').outerHeight());
+                    $('#'+ obj.id+' .opt_sta').click(function(){
+                        if($(this).hasClass('sub_open')){
+                            $(this).removeClass('sub_open');
+                            sub_row.css('height', 0);
+                        } else {
+                            $(this).addClass('sub_open');
+                            sub_row.css('height', $(this).closest('.row_item').find('.sub_row').attr('cont_h')+'px');
+                        }
+                    });
+                };
+            });
+
             //item_row가 있을 경우 실행됨니다.
             if($('#'+ obj.id).find('.item_row').length > 0){
                 //item_row 넓이값을 구하기 위해 필요한 값을 구합니다.
