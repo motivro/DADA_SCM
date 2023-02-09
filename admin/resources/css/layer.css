@@ -98,6 +98,8 @@
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl tr th{font-size: var(--fts12);font-weight: var(--ftw500);}
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl tr th,
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl tr td{padding: 6px 10px 7px;font-size: var(--fts12); vertical-align: middle;border: var(--cont_border);}
+.motiv_layer .motiv_tbl_box .motiv_normal_tbl tr td .more_info{text-decoration: underline;}
+.motiv_layer .motiv_tbl_box .motiv_normal_tbl tr td .more_info > .data_sta{color: var(--color3);}
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl thead tr th{background: var(--search_box_bg);}
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl tr td.ta_c{text-align: center;}
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl tr td.ta_l{text-align: left;}

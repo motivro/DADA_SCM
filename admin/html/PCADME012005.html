@@ -413,821 +413,786 @@
                 <!-- inner S -->
                 <div class="inner">
                     <h1>소싱 진열관리</h1>
-                    <!-- 베스트상품 S -->
-                    <div class="tab_box">
-                        <div class="tab_item">
-                            <div class="btn active">베스트상품</div>
-                            <div class="btn">신상품</div>
-                            <div class="btn">다다딜 상품</div>
-                            <div class="btn">일반상품</div>
+                    <div class="tab_area">
+                        <!-- 베스트상품 S -->
+                        <div class="tab_box">
+                            <div class="tab_item active" tab_name="box1">베스트상품</div>
+                            <div class="tab_item" tab_name="box2">신상품</div>
+                            <div class="tab_item" tab_name="box3">다다딜 상품</div>
+                            <div class="tab_item" tab_name="box4">일반상품</div>
                         </div>
-                    </div>
-                    <div class="tab_cont">
-                        <div class="contents_box">
-                            <div class="srh_box">
-                                <div class="srh_item">
-                                    <div class="srh_item_inner">
-                                        <div class="srh_title">상품정보</div>
-                                        <div class="srh_cont">
-                                            <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
+                        <div id="box1" class="tab_cont active">
+                            <div class="contents_box">
+                                <div class="srh_box">
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">상품정보</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="srh_item_inner">
-                                        <div class="srh_title">적용일자</div>
-                                        <div class="srh_cont">
-                                            <div id="sandbox_container" class="input-daterange input-group">
-                                                <input type="text" class="input-sm form-control" name="start" />
-                                                <span>~</span>
-                                                <input type="text" class="input-sm form-control" name="end" />
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">적용일자</div>
+                                            <div class="srh_cont">
+                                                <div id="sandbox_container" class="input-daterange input-group">
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span>~</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="srh_btn_box">
+                                    <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
+                                </div>
                             </div>
-                            <div class="srh_btn_box">
-                                <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
-                            </div>
-                        </div>
-                        <!-- tableList S -->
-                        <div class="contents_box">
-                            <div class="panel_head bdr_bot">
-                                <div class="cont_group d_flex">
-                                    <div class="cont_left">
-                                        <div class="srh_box exhibit">
-                                            <div class="srh_item">
-                                                <div class="srh_item_inner">
-                                                    <div class="srh_title">베스트 상품</div>
-                                                    <div class="srh_cont">
-                                                        <div class="tab_box type2">
-                                                            <div class="tab_item">
-                                                                <div class="btn active">표시</div>
-                                                                <div class="btn">숨김</div>
+                            <!-- tableList S -->
+                            <div class="contents_box">
+                                <div class="panel_head bdr_bot">
+                                    <div class="cont_group d_flex">
+                                        <div class="cont_left">
+                                            <div class="srh_box exhibit">
+                                                <div class="srh_item">
+                                                    <div class="srh_item_inner">
+                                                        <div class="srh_title">베스트 상품</div>
+                                                        <div class="srh_cont">
+                                                            <div class="chk_tab">
+                                                                <div class="chk_btn active">표시</div>
+                                                                <div class="chk_btn">숨김</div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="srh_item">
-                                                <div class="srh_item_inner">
-                                                    <div class="srh_title">베스트상품 정렬기준</div>
-                                                    <div class="srh_cont">
-                                                        <div class="cus_inp_wrap radio_inp">
-                                                            <label for="sort_1_1" class="inp_box">이름순 정렬
-                                                                <input type="radio" id="sort_1_1" name="sc_sort1" checked="">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-                                                            <label for="sort_1_2" class="inp_box">가격순 정렬
-                                                                <input type="radio" id="sort_1_2" name="sc_sort1">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-    
-                                                            <label for="sort_1_3" class="inp_box">등록순 정렬
-                                                                <input type="radio" id="sort_1_3" name="sc_sort1">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="cont_right">
-                                        <div class="btn btn_blk">베스트 상품 삭제</div>
-                                        <div class="btn">상품 불러오기</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="panel_body">
-                                <div class="btn_group d_flex">
-                                    <div class="btn_wrap">
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="50" selected>50개씩</option>
-                                                <option value="100">100개씩</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="tbl_wrap">
-                                    <div class="motiv_tbl normal exhibit_tbl">
-                                        <div class="tbl_inner">
-                                            <div class="tbl_head">
-                                                <div class="row_item d_flex">
-                                                    <div class="hd_item">
-                                                        <div>
-                                                            <div class="cus_inp_wrap checkbox_inp">
-                                                                <label for="in_4_1" class="inp_box">
-                                                                    <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                <div class="srh_item">
+                                                    <div class="srh_item_inner">
+                                                        <div class="srh_title">베스트상품 정렬기준</div>
+                                                        <div class="srh_cont">
+                                                            <div class="cus_inp_wrap radio_inp">
+                                                                <label for="sort_1_1" class="inp_box">이름순 정렬
+                                                                    <input type="radio" id="sort_1_1" name="sc_sort1" checked="">
+                                                                    <span class="inp_custom"></span>
+                                                                </label>
+                                                                <label for="sort_1_2" class="inp_box">가격순 정렬
+                                                                    <input type="radio" id="sort_1_2" name="sc_sort1">
+                                                                    <span class="inp_custom"></span>
+                                                                </label>
+        
+                                                                <label for="sort_1_3" class="inp_box">등록순 정렬
+                                                                    <input type="radio" id="sort_1_3" name="sc_sort1">
                                                                     <span class="inp_custom"></span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="hd_item">
-                                                        <div>상품코드</div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="cont_right">
+                                            <div class="btn btn_blk">베스트 상품 삭제</div>
+                                            <div class="btn">상품 불러오기</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel_body">
+                                    <div class="btn_group d_flex">
+                                        <div class="btn_wrap">
+                                            <div class="select_wrap">
+                                                <select>
+                                                    <option value="50" selected>50개씩</option>
+                                                    <option value="100">100개씩</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="tbl_wrap">
+                                        <div class="motiv_tbl normal exhibit_tbl">
+                                            <div class="tbl_inner">
+                                                <div class="tbl_head">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="in_4_1" class="inp_box">
+                                                                        <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품명(옵션)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>역할</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>재고수량</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품금액</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>공급사(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>등록날짜</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>적용날짜</div>
+                                                        </div>
                                                     </div>
-                                                    <div class="hd_item">
-                                                        <div>상품명(옵션)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>역할</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>재고수량</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품금액</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>공급사(ID)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>등록날짜</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>적용날짜</div>
+                                                </div>
+                                                <div class="tbl_body">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="in_4_1" class="inp_box">
+                                                                        <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품명(옵션)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>역할</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>재고수량</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품금액</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>공급사(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>등록날짜</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>적용날짜</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tbl_body">
-                                                <div class="row_item d_flex">
-                                                    <div class="hd_item">
-                                                        <div>
-                                                            <div class="cus_inp_wrap checkbox_inp">
-                                                                <label for="in_4_1" class="inp_box">
-                                                                    <input type="checkbox" id="in_4_1" name="ord_sta">
+                                        </div>
+                                        <div class="motiv_paging">
+                                            <a class="first" href="#none"></a>
+                                            <a class="prev" href="#none"></a>
+                                            <ul>
+                                                <li><a class="this" href="#none">1</a></li>
+                                                <li><a href="#none">2</a></li>
+                                                <li><a href="#none">3</a></li>
+                                                <li><a href="#none">4</a></li>
+                                                <li><a href="#none">5</a></li>
+                                                <li><a href="#none">6</a></li>
+                                                <li><a href="#none">7</a></li>
+                                                <li><a href="#none">8</a></li>
+                                                <li><a href="#none">9</a></li>
+                                                <li><a href="#none">10</a></li>
+                                            </ul>
+                                            <a class="next" href="#none"></a>
+                                            <a class="last" href="#none"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- tableList E -->
+                        </div>
+                        <!-- 베스트상품 E -->
+                        <!-- 신상품 S -->
+                        <div id="box2" class="tab_cont">
+                            <div class="contents_box">
+                                <div class="srh_box">
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">상품정보</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
+                                            </div>
+                                        </div>
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">적용일자</div>
+                                            <div class="srh_cont">
+                                                <div id="sandbox_container" class="input-daterange input-group">
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span>~</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="srh_btn_box">
+                                    <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
+                                </div>
+                            </div>
+                            <!-- tableList S -->
+                            <div class="contents_box">
+                                <div class="panel_head bdr_bot">
+                                    <div class="cont_group d_flex">
+                                        <div class="cont_left">
+                                            <div class="srh_box exhibit">
+                                                <div class="srh_item">
+                                                    <div class="srh_item_inner">
+                                                        <div class="srh_title">신상품</div>
+                                                        <div class="srh_cont">
+                                                            <div class="chk_tab">
+                                                                <div class="chk_btn active">표시</div>
+                                                                <div class="chk_btn">숨김</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="srh_item">
+                                                    <div class="srh_item_inner">
+                                                        <div class="srh_title">신상품 정렬기준</div>
+                                                        <div class="srh_cont">
+                                                            <div class="cus_inp_wrap radio_inp">
+                                                                <label for="sort_2_1" class="inp_box">이름순 정렬
+                                                                    <input type="radio" id="sort_2_1" name="sc_sort2" checked="">
+                                                                    <span class="inp_custom"></span>
+                                                                </label>
+                                                                <label for="sort_2_2" class="inp_box">가격순 정렬
+                                                                    <input type="radio" id="sort_2_2" name="sc_sort2">
+                                                                    <span class="inp_custom"></span>
+                                                                </label>
+        
+                                                                <label for="sort_2_3" class="inp_box">등록순 정렬
+                                                                    <input type="radio" id="sort_2_3" name="sc_sort2">
                                                                     <span class="inp_custom"></span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="hd_item">
-                                                        <div>상품코드</div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="cont_right">
+                                            <div class="btn btn_blk">베스트 상품 삭제</div>
+                                            <div class="btn">상품 불러오기</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel_body">
+                                    <div class="btn_group d_flex">
+                                        <div class="btn_wrap">
+                                            <div class="select_wrap">
+                                                <select>
+                                                    <option value="50" selected>50개씩</option>
+                                                    <option value="100">100개씩</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="tbl_wrap">
+                                        <div class="motiv_tbl normal exhibit_tbl">
+                                            <div class="tbl_inner">
+                                                <div class="tbl_head">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="in_4_1" class="inp_box">
+                                                                        <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품명(옵션)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>역할</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>재고수량</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품금액</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>공급사(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>등록날짜</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>적용날짜</div>
+                                                        </div>
                                                     </div>
-                                                    <div class="hd_item">
-                                                        <div>상품명(옵션)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>역할</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>재고수량</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품금액</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>공급사(ID)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>등록날짜</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>적용날짜</div>
+                                                </div>
+                                                <div class="tbl_body">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="in_4_1" class="inp_box">
+                                                                        <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품명(옵션)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>역할</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>재고수량</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품금액</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>공급사(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>등록날짜</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>적용날짜</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="motiv_paging">
-                                        <a class="first" href="#none"></a>
-                                        <a class="prev" href="#none"></a>
-                                        <ul>
-                                            <li><a class="this" href="#none">1</a></li>
-                                            <li><a href="#none">2</a></li>
-                                            <li><a href="#none">3</a></li>
-                                            <li><a href="#none">4</a></li>
-                                            <li><a href="#none">5</a></li>
-                                            <li><a href="#none">6</a></li>
-                                            <li><a href="#none">7</a></li>
-                                            <li><a href="#none">8</a></li>
-                                            <li><a href="#none">9</a></li>
-                                            <li><a href="#none">10</a></li>
-                                        </ul>
-                                        <a class="next" href="#none"></a>
-                                        <a class="last" href="#none"></a>
+                                        <div class="motiv_paging">
+                                            <a class="first" href="#none"></a>
+                                            <a class="prev" href="#none"></a>
+                                            <ul>
+                                                <li><a class="this" href="#none">1</a></li>
+                                                <li><a href="#none">2</a></li>
+                                                <li><a href="#none">3</a></li>
+                                                <li><a href="#none">4</a></li>
+                                                <li><a href="#none">5</a></li>
+                                                <li><a href="#none">6</a></li>
+                                                <li><a href="#none">7</a></li>
+                                                <li><a href="#none">8</a></li>
+                                                <li><a href="#none">9</a></li>
+                                                <li><a href="#none">10</a></li>
+                                            </ul>
+                                            <a class="next" href="#none"></a>
+                                            <a class="last" href="#none"></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- tableList E -->
                         </div>
-                        <!-- tableList E -->
-                    </div>
-                    <!-- 베스트상품 E -->
-
-                    <!-- 신상품 S -->
-                    <div class="tab_box">
-                        <div class="tab_item">
-                            <div class="btn ">베스트상품</div>
-                            <div class="btn active">신상품</div>
-                            <div class="btn">다다딜 상품</div>
-                            <div class="btn">일반상품</div>
-                        </div>
-                    </div>
-                    <div class="tab_cont">
-                        <div class="contents_box">
-                            <div class="srh_box">
-                                <div class="srh_item">
-                                    <div class="srh_item_inner">
-                                        <div class="srh_title">상품정보</div>
-                                        <div class="srh_cont">
-                                            <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
+                        <!-- 신상품 E -->
+                        <!-- 다다딜 상품 S -->
+                        <div id="box3" class="tab_cont">
+                            <div class="contents_box">
+                                <div class="srh_box">
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">상품정보</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="srh_item_inner">
-                                        <div class="srh_title">적용일자</div>
-                                        <div class="srh_cont">
-                                            <div id="sandbox_container" class="input-daterange input-group">
-                                                <input type="text" class="input-sm form-control" name="start" />
-                                                <span>~</span>
-                                                <input type="text" class="input-sm form-control" name="end" />
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">적용일자</div>
+                                            <div class="srh_cont">
+                                                <div id="sandbox_container" class="input-daterange input-group">
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span>~</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="srh_btn_box">
+                                    <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
+                                </div>
                             </div>
-                            <div class="srh_btn_box">
-                                <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
-                            </div>
-                        </div>
-                        <!-- tableList S -->
-                        <div class="contents_box">
-                            <div class="panel_head bdr_bot">
-                                <div class="cont_group d_flex">
-                                    <div class="cont_left">
-                                        <div class="srh_box exhibit">
-                                            <div class="srh_item">
-                                                <div class="srh_item_inner">
-                                                    <div class="srh_title">신상품</div>
-                                                    <div class="srh_cont">
-                                                        <div class="tab_box type2">
-                                                            <div class="tab_item">
-                                                                <div class="btn active">표시</div>
-                                                                <div class="btn">숨김</div>
+                            <!-- tableList S -->
+                            <div class="contents_box">
+                                <div class="panel_head bdr_bot">
+                                    <div class="cont_group d_flex">
+                                        <div class="cont_left">
+                                            <div class="srh_box exhibit">
+                                                <div class="srh_item">
+                                                    <div class="srh_item_inner">
+                                                        <div class="srh_title">다다딜 상품</div>
+                                                        <div class="srh_cont">
+                                                            <div class="chk_tab">
+                                                                <div class="chk_btn active">표시</div>
+                                                                <div class="chk_btn">숨김</div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="srh_item">
-                                                <div class="srh_item_inner">
-                                                    <div class="srh_title">신상품 정렬기준</div>
-                                                    <div class="srh_cont">
-                                                        <div class="cus_inp_wrap radio_inp">
-                                                            <label for="sort_2_1" class="inp_box">이름순 정렬
-                                                                <input type="radio" id="sort_2_1" name="sc_sort2" checked="">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-                                                            <label for="sort_2_2" class="inp_box">가격순 정렬
-                                                                <input type="radio" id="sort_2_2" name="sc_sort2">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-    
-                                                            <label for="sort_2_3" class="inp_box">등록순 정렬
-                                                                <input type="radio" id="sort_2_3" name="sc_sort2">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="cont_right">
-                                        <div class="btn btn_blk">베스트 상품 삭제</div>
-                                        <div class="btn">상품 불러오기</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="panel_body">
-                                <div class="btn_group d_flex">
-                                    <div class="btn_wrap">
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="50" selected>50개씩</option>
-                                                <option value="100">100개씩</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="tbl_wrap">
-                                    <div class="motiv_tbl normal exhibit_tbl">
-                                        <div class="tbl_inner">
-                                            <div class="tbl_head">
-                                                <div class="row_item d_flex">
-                                                    <div class="hd_item">
-                                                        <div>
-                                                            <div class="cus_inp_wrap checkbox_inp">
-                                                                <label for="in_4_1" class="inp_box">
-                                                                    <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                <div class="srh_item">
+                                                    <div class="srh_item_inner">
+                                                        <div class="srh_title">다다딜상품 정렬기준</div>
+                                                        <div class="srh_cont">
+                                                            <div class="cus_inp_wrap radio_inp">
+                                                                <label for="sort_3_1" class="inp_box">이름순 정렬
+                                                                    <input type="radio" id="sort_3_1" name="sc_sort3" checked="">
+                                                                    <span class="inp_custom"></span>
+                                                                </label>
+                                                                <label for="sort_3_2" class="inp_box">가격순 정렬
+                                                                    <input type="radio" id="sort_3_2" name="sc_sort3">
+                                                                    <span class="inp_custom"></span>
+                                                                </label>
+        
+                                                                <label for="sort_3_3" class="inp_box">등록순 정렬
+                                                                    <input type="radio" id="sort_3_3" name="sc_sort3">
                                                                     <span class="inp_custom"></span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="hd_item">
-                                                        <div>상품코드</div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="cont_right">
+                                            <div class="btn btn_blk">베스트 상품 삭제</div>
+                                            <div class="btn">상품 불러오기</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel_body">
+                                    <div class="btn_group d_flex">
+                                        <div class="btn_wrap">
+                                            <div class="select_wrap">
+                                                <select>
+                                                    <option value="50" selected>50개씩</option>
+                                                    <option value="100">100개씩</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="tbl_wrap">
+                                        <div class="motiv_tbl normal exhibit_tbl">
+                                            <div class="tbl_inner">
+                                                <div class="tbl_head">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="in_4_1" class="inp_box">
+                                                                        <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품명(옵션)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>역할</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>재고수량</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품금액</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>공급사(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>등록날짜</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>적용날짜</div>
+                                                        </div>
                                                     </div>
-                                                    <div class="hd_item">
-                                                        <div>상품명(옵션)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>역할</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>재고수량</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품금액</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>공급사(ID)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>등록날짜</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>적용날짜</div>
+                                                </div>
+                                                <div class="tbl_body">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="in_4_1" class="inp_box">
+                                                                        <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품명(옵션)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>역할</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>재고수량</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품금액</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>공급사(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>등록날짜</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>적용날짜</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tbl_body">
-                                                <div class="row_item d_flex">
-                                                    <div class="hd_item">
-                                                        <div>
-                                                            <div class="cus_inp_wrap checkbox_inp">
-                                                                <label for="in_4_1" class="inp_box">
-                                                                    <input type="checkbox" id="in_4_1" name="ord_sta">
+                                        </div>
+                                        <div class="motiv_paging">
+                                            <a class="first" href="#none"></a>
+                                            <a class="prev" href="#none"></a>
+                                            <ul>
+                                                <li><a class="this" href="#none">1</a></li>
+                                                <li><a href="#none">2</a></li>
+                                                <li><a href="#none">3</a></li>
+                                                <li><a href="#none">4</a></li>
+                                                <li><a href="#none">5</a></li>
+                                                <li><a href="#none">6</a></li>
+                                                <li><a href="#none">7</a></li>
+                                                <li><a href="#none">8</a></li>
+                                                <li><a href="#none">9</a></li>
+                                                <li><a href="#none">10</a></li>
+                                            </ul>
+                                            <a class="next" href="#none"></a>
+                                            <a class="last" href="#none"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- tableList E -->
+                        </div>
+                        <!-- 다다딜 상품 E -->
+                        <!-- 일반상품 S -->
+                        <div id="box4" class="tab_cont">
+                            <div class="contents_box">
+                                <div class="srh_box">
+                                    <div class="srh_item">
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">상품정보</div>
+                                            <div class="srh_cont">
+                                                <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
+                                            </div>
+                                        </div>
+                                        <div class="srh_item_inner">
+                                            <div class="srh_title">적용일자</div>
+                                            <div class="srh_cont">
+                                                <div id="sandbox_container" class="input-daterange input-group">
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span>~</span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="srh_btn_box">
+                                    <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
+                                </div>
+                            </div>
+                            <!-- tableList S -->
+                            <div class="contents_box">
+                                <div class="panel_head bdr_bot">
+                                    <div class="cont_group d_flex">
+                                        <div class="cont_left">
+                                            <div class="srh_box exhibit">
+                                                <div class="srh_item">
+                                                    <div class="srh_item_inner">
+                                                        <div class="srh_title">일반 상품</div>
+                                                        <div class="srh_cont">
+                                                            <div class="chk_tab">
+                                                                <div class="chk_btn active">표시</div>
+                                                                <div class="chk_btn">숨김</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="srh_item">
+                                                    <div class="srh_item_inner">
+                                                        <div class="srh_title">일반상품 정렬기준</div>
+                                                        <div class="srh_cont">
+                                                            <div class="cus_inp_wrap radio_inp">
+                                                                <label for="sort_4_1" class="inp_box">이름순 정렬
+                                                                    <input type="radio" id="sort_4_1" name="sc_sort4" checked="">
+                                                                    <span class="inp_custom"></span>
+                                                                </label>
+                                                                <label for="sort_4_2" class="inp_box">가격순 정렬
+                                                                    <input type="radio" id="sort_4_2" name="sc_sort4">
+                                                                    <span class="inp_custom"></span>
+                                                                </label>
+        
+                                                                <label for="sort_4_3" class="inp_box">등록순 정렬
+                                                                    <input type="radio" id="sort_4_3" name="sc_sort4">
                                                                     <span class="inp_custom"></span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="hd_item">
-                                                        <div>상품코드</div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="cont_right">
+                                            <div class="btn btn_blk">베스트 상품 삭제</div>
+                                            <div class="btn">상품 불러오기</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel_body">
+                                    <div class="btn_group d_flex">
+                                        <div class="btn_wrap">
+                                            <div class="select_wrap">
+                                                <select>
+                                                    <option value="50" selected>50개씩</option>
+                                                    <option value="100">100개씩</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="tbl_wrap">
+                                        <div class="motiv_tbl normal exhibit_tbl">
+                                            <div class="tbl_inner">
+                                                <div class="tbl_head">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="in_4_1" class="inp_box">
+                                                                        <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품명(옵션)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>역할</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>재고수량</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품금액</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>공급사(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>등록날짜</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>적용날짜</div>
+                                                        </div>
                                                     </div>
-                                                    <div class="hd_item">
-                                                        <div>상품명(옵션)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>역할</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>재고수량</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품금액</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>공급사(ID)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>등록날짜</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>적용날짜</div>
+                                                </div>
+                                                <div class="tbl_body">
+                                                    <div class="row_item d_flex">
+                                                        <div class="hd_item">
+                                                            <div>
+                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                    <label for="in_4_1" class="inp_box">
+                                                                        <input type="checkbox" id="in_4_1" name="ord_sta">
+                                                                        <span class="inp_custom"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품코드</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품명(옵션)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>역할</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>재고수량</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>상품금액</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>공급사(ID)</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>등록날짜</div>
+                                                        </div>
+                                                        <div class="hd_item">
+                                                            <div>적용날짜</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="motiv_paging">
-                                        <a class="first" href="#none"></a>
-                                        <a class="prev" href="#none"></a>
-                                        <ul>
-                                            <li><a class="this" href="#none">1</a></li>
-                                            <li><a href="#none">2</a></li>
-                                            <li><a href="#none">3</a></li>
-                                            <li><a href="#none">4</a></li>
-                                            <li><a href="#none">5</a></li>
-                                            <li><a href="#none">6</a></li>
-                                            <li><a href="#none">7</a></li>
-                                            <li><a href="#none">8</a></li>
-                                            <li><a href="#none">9</a></li>
-                                            <li><a href="#none">10</a></li>
-                                        </ul>
-                                        <a class="next" href="#none"></a>
-                                        <a class="last" href="#none"></a>
+                                        <div class="motiv_paging">
+                                            <a class="first" href="#none"></a>
+                                            <a class="prev" href="#none"></a>
+                                            <ul>
+                                                <li><a class="this" href="#none">1</a></li>
+                                                <li><a href="#none">2</a></li>
+                                                <li><a href="#none">3</a></li>
+                                                <li><a href="#none">4</a></li>
+                                                <li><a href="#none">5</a></li>
+                                                <li><a href="#none">6</a></li>
+                                                <li><a href="#none">7</a></li>
+                                                <li><a href="#none">8</a></li>
+                                                <li><a href="#none">9</a></li>
+                                                <li><a href="#none">10</a></li>
+                                            </ul>
+                                            <a class="next" href="#none"></a>
+                                            <a class="last" href="#none"></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- tableList E -->
                         </div>
-                        <!-- tableList E -->
+                        <!-- 일반상품 E -->
                     </div>
-                    <!-- 신상품 E -->
-
-                    <!-- 다다딜 상품 S -->
-                    <div class="tab_box">
-                        <div class="tab_item">
-                            <div class="btn ">베스트상품</div>
-                            <div class="btn">신상품</div>
-                            <div class="btn active">다다딜 상품</div>
-                            <div class="btn">일반상품</div>
-                        </div>
-                    </div>
-                    <div class="tab_cont">
-                        <div class="contents_box">
-                            <div class="srh_box">
-                                <div class="srh_item">
-                                    <div class="srh_item_inner">
-                                        <div class="srh_title">상품정보</div>
-                                        <div class="srh_cont">
-                                            <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
-                                        </div>
-                                    </div>
-                                    <div class="srh_item_inner">
-                                        <div class="srh_title">적용일자</div>
-                                        <div class="srh_cont">
-                                            <div id="sandbox_container" class="input-daterange input-group">
-                                                <input type="text" class="input-sm form-control" name="start" />
-                                                <span>~</span>
-                                                <input type="text" class="input-sm form-control" name="end" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="srh_btn_box">
-                                <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
-                            </div>
-                        </div>
-                        <!-- tableList S -->
-                        <div class="contents_box">
-                            <div class="panel_head bdr_bot">
-                                <div class="cont_group d_flex">
-                                    <div class="cont_left">
-                                        <div class="srh_box exhibit">
-                                            <div class="srh_item">
-                                                <div class="srh_item_inner">
-                                                    <div class="srh_title">다다딜 상품</div>
-                                                    <div class="srh_cont">
-                                                        <div class="tab_box type2">
-                                                            <div class="tab_item">
-                                                                <div class="btn active">표시</div>
-                                                                <div class="btn">숨김</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="srh_item">
-                                                <div class="srh_item_inner">
-                                                    <div class="srh_title">다다딜상품 정렬기준</div>
-                                                    <div class="srh_cont">
-                                                        <div class="cus_inp_wrap radio_inp">
-                                                            <label for="sort_3_1" class="inp_box">이름순 정렬
-                                                                <input type="radio" id="sort_3_1" name="sc_sort3" checked="">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-                                                            <label for="sort_3_2" class="inp_box">가격순 정렬
-                                                                <input type="radio" id="sort_3_2" name="sc_sort3">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-    
-                                                            <label for="sort_3_3" class="inp_box">등록순 정렬
-                                                                <input type="radio" id="sort_3_3" name="sc_sort3">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="cont_right">
-                                        <div class="btn btn_blk">베스트 상품 삭제</div>
-                                        <div class="btn">상품 불러오기</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="panel_body">
-                                <div class="btn_group d_flex">
-                                    <div class="btn_wrap">
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="50" selected>50개씩</option>
-                                                <option value="100">100개씩</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="tbl_wrap">
-                                    <div class="motiv_tbl normal exhibit_tbl">
-                                        <div class="tbl_inner">
-                                            <div class="tbl_head">
-                                                <div class="row_item d_flex">
-                                                    <div class="hd_item">
-                                                        <div>
-                                                            <div class="cus_inp_wrap checkbox_inp">
-                                                                <label for="in_4_1" class="inp_box">
-                                                                    <input type="checkbox" id="in_4_1" name="ord_sta">
-                                                                    <span class="inp_custom"></span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품코드</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품명(옵션)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>역할</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>재고수량</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품금액</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>공급사(ID)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>등록날짜</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>적용날짜</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tbl_body">
-                                                <div class="row_item d_flex">
-                                                    <div class="hd_item">
-                                                        <div>
-                                                            <div class="cus_inp_wrap checkbox_inp">
-                                                                <label for="in_4_1" class="inp_box">
-                                                                    <input type="checkbox" id="in_4_1" name="ord_sta">
-                                                                    <span class="inp_custom"></span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품코드</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품명(옵션)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>역할</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>재고수량</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품금액</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>공급사(ID)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>등록날짜</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>적용날짜</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="motiv_paging">
-                                        <a class="first" href="#none"></a>
-                                        <a class="prev" href="#none"></a>
-                                        <ul>
-                                            <li><a class="this" href="#none">1</a></li>
-                                            <li><a href="#none">2</a></li>
-                                            <li><a href="#none">3</a></li>
-                                            <li><a href="#none">4</a></li>
-                                            <li><a href="#none">5</a></li>
-                                            <li><a href="#none">6</a></li>
-                                            <li><a href="#none">7</a></li>
-                                            <li><a href="#none">8</a></li>
-                                            <li><a href="#none">9</a></li>
-                                            <li><a href="#none">10</a></li>
-                                        </ul>
-                                        <a class="next" href="#none"></a>
-                                        <a class="last" href="#none"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- tableList E -->
-                    </div>
-                    <!-- 다다딜 상품 E -->
-
-                    <!-- 일반상품 S -->
-                    <div class="tab_box">
-                        <div class="tab_item">
-                            <div class="btn ">베스트상품</div>
-                            <div class="btn">신상품</div>
-                            <div class="btn">다다딜 상품</div>
-                            <div class="btn active">일반상품</div>
-                        </div>
-                    </div>
-                    <div class="tab_cont">
-                        <div class="contents_box">
-                            <div class="srh_box">
-                                <div class="srh_item">
-                                    <div class="srh_item_inner">
-                                        <div class="srh_title">상품정보</div>
-                                        <div class="srh_cont">
-                                            <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
-                                        </div>
-                                    </div>
-                                    <div class="srh_item_inner">
-                                        <div class="srh_title">적용일자</div>
-                                        <div class="srh_cont">
-                                            <div id="sandbox_container" class="input-daterange input-group">
-                                                <input type="text" class="input-sm form-control" name="start" />
-                                                <span>~</span>
-                                                <input type="text" class="input-sm form-control" name="end" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="srh_btn_box">
-                                <div class="btn_wrap"><a href="" class="btn btn_search">검색</a></div>
-                            </div>
-                        </div>
-                        <!-- tableList S -->
-                        <div class="contents_box">
-                            <div class="panel_head bdr_bot">
-                                <div class="cont_group d_flex">
-                                    <div class="cont_left">
-                                        <div class="srh_box exhibit">
-                                            <div class="srh_item">
-                                                <div class="srh_item_inner">
-                                                    <div class="srh_title">일반 상품</div>
-                                                    <div class="srh_cont">
-                                                        <div class="tab_box type2">
-                                                            <div class="tab_item">
-                                                                <div class="btn active">표시</div>
-                                                                <div class="btn">숨김</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="srh_item">
-                                                <div class="srh_item_inner">
-                                                    <div class="srh_title">일반상품 정렬기준</div>
-                                                    <div class="srh_cont">
-                                                        <div class="cus_inp_wrap radio_inp">
-                                                            <label for="sort_4_1" class="inp_box">이름순 정렬
-                                                                <input type="radio" id="sort_4_1" name="sc_sort4" checked="">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-                                                            <label for="sort_4_2" class="inp_box">가격순 정렬
-                                                                <input type="radio" id="sort_4_2" name="sc_sort4">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-    
-                                                            <label for="sort_4_3" class="inp_box">등록순 정렬
-                                                                <input type="radio" id="sort_4_3" name="sc_sort4">
-                                                                <span class="inp_custom"></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="cont_right">
-                                        <div class="btn btn_blk">베스트 상품 삭제</div>
-                                        <div class="btn">상품 불러오기</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="panel_body">
-                                <div class="btn_group d_flex">
-                                    <div class="btn_wrap">
-                                        <div class="select_wrap">
-                                            <select>
-                                                <option value="50" selected>50개씩</option>
-                                                <option value="100">100개씩</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="tbl_wrap">
-                                    <div class="motiv_tbl normal exhibit_tbl">
-                                        <div class="tbl_inner">
-                                            <div class="tbl_head">
-                                                <div class="row_item d_flex">
-                                                    <div class="hd_item">
-                                                        <div>
-                                                            <div class="cus_inp_wrap checkbox_inp">
-                                                                <label for="in_4_1" class="inp_box">
-                                                                    <input type="checkbox" id="in_4_1" name="ord_sta">
-                                                                    <span class="inp_custom"></span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품코드</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품명(옵션)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>역할</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>재고수량</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품금액</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>공급사(ID)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>등록날짜</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>적용날짜</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tbl_body">
-                                                <div class="row_item d_flex">
-                                                    <div class="hd_item">
-                                                        <div>
-                                                            <div class="cus_inp_wrap checkbox_inp">
-                                                                <label for="in_4_1" class="inp_box">
-                                                                    <input type="checkbox" id="in_4_1" name="ord_sta">
-                                                                    <span class="inp_custom"></span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품코드</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품명(옵션)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>역할</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>재고수량</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>상품금액</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>공급사(ID)</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>등록날짜</div>
-                                                    </div>
-                                                    <div class="hd_item">
-                                                        <div>적용날짜</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="motiv_paging">
-                                        <a class="first" href="#none"></a>
-                                        <a class="prev" href="#none"></a>
-                                        <ul>
-                                            <li><a class="this" href="#none">1</a></li>
-                                            <li><a href="#none">2</a></li>
-                                            <li><a href="#none">3</a></li>
-                                            <li><a href="#none">4</a></li>
-                                            <li><a href="#none">5</a></li>
-                                            <li><a href="#none">6</a></li>
-                                            <li><a href="#none">7</a></li>
-                                            <li><a href="#none">8</a></li>
-                                            <li><a href="#none">9</a></li>
-                                            <li><a href="#none">10</a></li>
-                                        </ul>
-                                        <a class="next" href="#none"></a>
-                                        <a class="last" href="#none"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- tableList E -->
-                    </div>
-                    <!-- 일반상품 E -->
 
                 </div>
                 <!-- inner E -->
@@ -1440,8 +1405,10 @@
             $('#sandbox_container.input-daterange').datepicker({
                 language : "ko"
             });
-            $('.tab_box.type2').each(function () {
-                var tabBtnType2 = $(this).find('.btn');
+            tab_area.init(); //탭 이벤트
+
+            $('.chk_tab').each(function () {
+                var tabBtnType2 = $(this).find('.chk_btn');
                 $(tabBtnType2).click(function(){
                     var target = $(this);
                     $(tabBtnType2).removeClass('active');

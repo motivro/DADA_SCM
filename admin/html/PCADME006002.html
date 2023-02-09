@@ -1004,7 +1004,7 @@
                                 <tbody>
                                     <tr>
                                         <th><div>주문상태</div></th>
-                                        <td colspan="3"><div><a href="#none" class="more_info"><span>결제/입금 대기</span>(<span>1</span>)</a></div></td>
+                                        <td colspan="3"><div><a href="#none" class="more_info"><span>결제/입금 대기</span><span class="data_sta">(1)</span></a></div></td>
                                     </tr>
                                     <tr class="dtl_tbl acc_tblList">
                                         <td colspan="4">
@@ -1147,6 +1147,8 @@
 
     <script>
         $(document).ready(() => {
+            dtlTbl.init();
+
             var pcacme006002_1 = {
                 id:'pcacme006002_1',
                 tableSize: {

@@ -577,6 +577,12 @@ h2.type2 .read_more > a:hover:after{}
 .tab_box .tab_item{display: flex;gap:10px;align-items: center;}
 .tab_box .tab_item .btn{color: #fff;background: var(--color9);border-color: var(--color9);}
 .tab_box .tab_item .btn.active{background: var(--color17);border-color: var(--color17);}
+
+#content .tab_area .tab_box{margin: 15px 0;display: flex;gap:10px;align-items: center;}
+#content .tab_area .tab_box .tab_item{color: #fff;background: var(--color9);border-color: var(--color9);display:block;height: 40px;line-height: 38px;padding: 0 15px;font-size: var(--fts13);font-weight: var(--ftw500);border: var(--cont_border);box-sizing: border-box;cursor: pointer;white-space: nowrap;border-radius: 5px;}
+#content .tab_area .tab_box .tab_item.active{background: var(--color17);border-color: var(--color17);}
+#content .tab_area .tab_cont{display: none;}
+#content .tab_area .tab_cont.active{display: block;}
 /* normal table */
 .motiv_tbl_box .motiv_normal_tbl.statis tr td{padding: 10px 10px 15px;}
 .motiv_tbl_box .motiv_normal_tbl tr td > div .row_item{display: flex;justify-content: space-between;align-items: center;}
@@ -980,11 +986,12 @@ h2.type2 .read_more > a:hover:after{}
 .srh_box.exhibit .srh_item + .srh_item{margin-top: 20px;}
 .srh_box.exhibit .srh_item .srh_item_inner{padding: 0;gap: 20px;}
 .srh_box.exhibit .srh_item .srh_title{min-width: auto;}
-.srh_box.exhibit .srh_item .tab_box.type2 .tab_item{gap: 0;}
-.srh_box.exhibit .srh_item .tab_box.type2 .btn{height:30px;padding:0 20px;font-size:var(--fts14);font-weight:var(--ftw500);line-height:28px;color: var(--color14);border-radius: 0;border-color: var(--color15);background: #fff;}
-.srh_box.exhibit .srh_item .tab_box.type2 .btn.active{color: #fff;border-color: var(--color1);background: var(--color1);}
-.srh_box.exhibit .srh_item .tab_box.type2 .btn:first-child{border-top-left-radius:5px;border-bottom-left-radius:5px;}
-.srh_box.exhibit .srh_item .tab_box.type2 .btn:last-child{border-top-right-radius:5px;border-bottom-right-radius:5px;}
+
+.srh_box.exhibit .srh_item .chk_tab{display:flex;align-items:center;gap: 0;}
+.srh_box.exhibit .srh_item .chk_tab .chk_btn{height: 30px;padding: 0 20px;font-size: var(--fts14);font-weight: var(--ftw500);line-height: 28px;color: var(--color14);border: var(--cont_border);border-radius: 0;border-color: var(--color15);background: #fff;cursor: pointer;}
+.srh_box.exhibit .srh_item .chk_tab .chk_btn.active{color: #fff;border-color: var(--color1);background: var(--color1);}
+.srh_box.exhibit .srh_item .chk_tab .chk_btn:first-child{border-top-left-radius:5px;border-bottom-left-radius:5px;}
+.srh_box.exhibit .srh_item .chk_tab .chk_btn:last-child{border-top-right-radius:5px;border-bottom-right-radius:5px;}
 
 /* 상품일괄등록 */
 .fileUpload_box{display: flex;align-items: stretch;gap:20px;}

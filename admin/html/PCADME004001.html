@@ -850,11 +850,11 @@
             <div class="contents_box">
                 <div class="tab_area">
                     <div class="tab_box">
-                        <div class="tab_item">상품정보</div>
-                        <div class="tab_item">공급사정보</div>
-                        <div class="tab_item">판매자정보</div>
+                        <div class="tab_item active" tab_name="box1">상품정보</div>
+                        <div class="tab_item" tab_name="box2">공급사정보</div>
+                        <div class="tab_item" tab_name="box3">판매자정보</div>
                     </div>
-                    <div class="tab_cont">
+                    <div id="box1" class="tab_cont active">
                         <div class="sect">
                             <div class="motiv_tbl_box name_k pd_0">
                                 <div class="tbl_item">
@@ -1049,13 +1049,7 @@
                         </div>
                         <div class="bot_btn_wrap"><div class="btn">강제종료</div></div>
                     </div>
-
-                    <div class="tab_box">
-                        <div class="tab_item">상품정보</div>
-                        <div class="tab_item">공급사정보</div>
-                        <div class="tab_item">판매자정보</div>
-                    </div>
-                    <div class="tab_cont">
+                    <div id="box2" class="tab_cont">
                         <div class="sect">
                             <div class="motiv_tbl_box name_k pd_0">
                                 <div class="tbl_item">
@@ -1198,13 +1192,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="tab_box">
-                        <div class="tab_item">상품정보</div>
-                        <div class="tab_item">공급사정보</div>
-                        <div class="tab_item">판매자정보</div>
-                    </div>
-                    <div class="tab_cont">
+                    <div id="box3" class="tab_cont">
                         <div class="sect">
                             <div class="motiv_tbl_box name_k pd_0">
                                 <div class="tbl_item">
@@ -1564,6 +1552,8 @@
         $(document).ready(() => {
             $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
             tFlex.init(pcacme004001_1);
+            
+            tab_area.init(); //탭 이벤트
         });
 
         selectUi.init();

@@ -85,6 +85,14 @@ var tab_area = {
             $('.layer_body .tab_cont').removeClass('active');
             $('#'+target).addClass('active');
         });
+
+        $('#content .tab_area .tab_item').click(function(){
+            var target = $(this).attr('tab_name');
+            $('#content .tab_area .tab_item').removeClass('active');
+            $(this).addClass('active');
+            $('#content .tab_area .tab_cont').removeClass('active');
+            $('#'+target).addClass('active');
+        });
     },
 }
 
