@@ -41,19 +41,20 @@ var tFlex = {
             //리스트의 형태를 잡기 위해 넓이를 추가합니다.
             $('#'+ obj.id +' .motiv_tbl').find('.row_item').css('width', obj.totalSize +'px');
 
-            $.each( $('#'+ obj.id +' .motiv_tbl .look_body_box > .row_item'), (name, size) => {
-                var sub_row = $('#'+ obj.id +' .motiv_tbl .look_body_box > .row_item').eq(name).find('.sub_row');
-                if(sub_row.length > 0){
-                    sub_row.attr('cont_h', $('#'+ obj.id).find('.sub_row .motiv_tbl').outerHeight());
-                    $('#'+ obj.id+' .opt_sta').click(function(){
+            $.each( $('#'+ obj.id +' .motiv_tbl .look_body_box > .row_item'), (index, size) => {
+                var sub_row = $('#'+ obj.id +' .motiv_tbl .look_body_box > .row_item').eq(index);
+                if(sub_row.find('.sub_row').length > 0){
+                    sub_row.find('.sub_row').attr('cont_h', sub_row.find('.sub_row .motiv_tbl').outerHeight());
+                    sub_row.find('.opt_more').click(function(){
+                        var row_sub_row = $(this).closest('.row_item').children('.sub_row');
                         if($(this).hasClass('sub_open')){
                             $(this).removeClass('sub_open');
-                            sub_row.css('height', 0);
+                            row_sub_row.css('height', 0);
                         } else {
                             $(this).addClass('sub_open');
-                            sub_row.css('height', $(this).closest('.row_item').find('.sub_row').attr('cont_h')+'px');
+                            row_sub_row.css('height', row_sub_row.attr('cont_h') );
                         }
-                    });
+                    })
                 };
             });
 
