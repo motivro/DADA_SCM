@@ -640,8 +640,8 @@
 
                         <div class="srh_btn_box">
                             <div class="btn_wrap">
-                                <div class="btn btn_search" onclick="mtvLp.alertOpen('sss1', '테스트 팝업1')">검색</div>
-                                <div class="btn" onClick="mtvLp.open('pcacme001001_lp333')">초기화</div>
+                                <div class="btn btn_search" onclick="mtvLp.open('alert1', '테스트 팝업1')">검색</div>
+                                <div class="btn" onClick="mtvLp.open('cont_lp4')">초기화</div>
                                 <div class="btn btn_search_open"><i class="arrow down"></i>펼처보기</div>
                             </div>
                         </div>
@@ -1444,90 +1444,73 @@
     <!-- wrap E -->
 
     <style>
-        .dada_lp_wrap{position:fixed;top:0;left:0;width:100%;height:100%;display:none;z-index:1;transition:opacity .5s;opacity:0}
-        .dada_lp_wrap.open{}
-        .dada_lp_wrap.open .dada_alt_body{}
-        .dada_lp_wrap .dada_alt_body{position:absolute;top:50%;left:50%;min-width:500px;max-height:500px;margin-top:-250px;margin-left:-130px;background-color:#fff;z-index:100}
-        .dada_lp_wrap .dada_alt_body .dada_cont{font-size:var(--fts16);font-weight:var(--ftw500);text-align:center;margin:45px 0}
-        .dada_lp_wrap .dada_alt_body .dada_btn_wrap{text-align:center;padding-bottom: 30px;}
-        .dada_lp_wrap .dada_alt_body .dada_btn_wrap .dada_btn{display:inline-block;color:#fff;min-width:120px;height:40px;margin:0 5px;line-height:40px;font-size:var(--fts14);font-weight:var(--ftw500);cursor:pointer}
-        .dada_lp_wrap .dada_alt_body .dada_btn_wrap .dada_btn.co_1{background-color:var(--color1)}
-        .dada_lp_wrap .dada_alt_body .dada_btn_wrap .dada_btn.co_9{background-color:var(--color9)}
-        .dada_close_box{}
+        .motiv_layer{position:fixed;top:50%;left:50%;transition:opacity .3s;opacity:0;z-index:100}
+        .motiv_layer .dada_cont{font-size:var(--fts16);font-weight:var(--ftw500);text-align:center;margin:45px 0}
+        .motiv_layer .dada_btn_wrap{text-align:center;padding-bottom: 30px;}
+        .motiv_layer .dada_btn_wrap .dada_btn{display:inline-block;color:#fff;min-width:120px;height:40px;margin:0 5px;line-height:40px;font-size:var(--fts14);font-weight:var(--ftw500);cursor:pointer}
+        .motiv_layer .dada_btn_wrap .dada_btn.co_1{background-color:var(--color1)}
+        .motiv_layer .dada_btn_wrap .dada_btn.co_9{background-color:var(--color9)}
         .dada_close_box:after{content:'';display:block;clear:both;}
         .dada_close_box .dada_close_btn{position:absolute;top:10px;right:10px;width:25px;height:25px;cursor:pointer}
         .dada_close_box .dada_close_btn:before, 
         .dada_close_box .dada_close_btn:after{position:absolute;top:50%;left:50%;content:' ';height:25px;width:2px;background-color:#000;margin-top:-12px}
         .dada_close_box .dada_close_btn:before {transform: rotate(45deg);}
         .dada_close_box .dada_close_btn:after {transform: rotate(-45deg);}
-        .dada_lp_wrap .dada_bg{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0, .5)}
 
-        .size_sm_cont{}
-        .size_dm_cont{}
-        .size_lg_cont{}
-        .size_full_cont{}
-
-        .motiv_layer{position:fixed;top:50%;left:50%;transition:opacity .5s;opacity:0;z-index:100}
-        .motiv_layer_bg{width:100vw;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);opacity:0;transition:.5s;z-index:99;}
-        
+        .motiv_layer_bg{width:100vw;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);opacity:0;transition:.3s;z-index:199;}
+        .motiv_layer_bg.{}
         .lp_active{z-index:201}
         .lp_active_bg{z-index:200}
-
     </style>
 
-    <div id="sss1" class="dada_lp_wrap">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn mu_close_btn"></div>
-            </div>
-            <div class="dada_cont">
-                정상인 회원은 중지, <br/>
-                중지된 회원은 정상으로 처리합니다.
-            </div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1" onClick="mtvLp.open('pcacme001001_lp09')">확인</div>
-                <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.alertClose('sss1')" >취소</div>
-            </div>
+   
+
+    <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
         </div>
-    </div> 
-
-    <div id="sss2" class="dada_lp_wrap">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn"></div>
-            </div>
-            <div class="dada_cont">
-                정상인 회원은 중지, <br/>
-                중지된 회원은 정상으로 처리합니다.
-            </div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1" onClick="mtvLp.open('pcacme001001_lp09232')">확인</div>
-                <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.alertClose('sss2')">취소</div>
-            </div>
+        <div class="dada_cont">
+            정상인 회원은 중지, <br/>
+            중지된 회원은 정상으로 처리합니다.
         </div>
-    </div> 
-
-    <div id="sss3" class="dada_lp_wrap">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn"></div>
-            </div>
-            <div class="dada_cont">
-                정상인 회원은 중지, <br/>
-                중지된 회원은 정상으로 처리합니다.
-            </div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1"  onClick="mtvLp.open('pcacme001001_lp')">확인</div>
-                <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.alertClose('sss3')">취소</div>
-            </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.open('cont_lp2')">확인</div>
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('alert1')">취소</div>
         </div>
-    </div> 
+    </div>
 
+    <div id="alert2" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn" onClick="mtvLp.close('alert2')"></div>
+        </div>
+        <div class="dada_cont">
+            정상인 회원은 중지, <br/>
+            중지된 회원은 정상으로 처리합니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.open('cont_lp3')">확인</div>
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('alert2')">취소</div>
+        </div>
+    </div>
 
-    <div id="pcacme001001_lp" class="motiv_layer motiv_layers type1" cont_size="normal" style="display:none">
+    <div id="alert3" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn" onClick="mtvLp.close('alert3')"></div>
+        </div>
+        <div class="dada_cont">
+            정상인 회원은 중지, <br/>
+            중지된 회원은 정상으로 처리합니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1"  onClick="mtvLp.open('cont_lp1')">확인</div>
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('alert3')">취소</div>
+        </div>
+    </div>
+
+    <div id="cont_lp1" class="motiv_layer type1" cont_size="normal" style="display:none">
         <div class="layer_head">
             <div class="title">강제종료</div>
-            <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp')"></div>
+            <div class="btn_close" onClick="mtvLp.close('cont_lp1')"></div>
         </div>
         <div class="layer_body">
             <div class="contents_box">
@@ -1612,10 +1595,10 @@
         </div>
     </div>
 
-    <div id="pcacme001001_lp09" class="motiv_layer type1" cont_size="large" style="display:none">
+    <div id="cont_lp2" class="motiv_layer type1" cont_size="large" style="display:none">
         <div class="layer_head">
             <div class="title">강제종료 해지</div>
-            <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp09')"></div>
+            <div class="btn_close" onClick="mtvLp.close('cont_lp2')"></div>
         </div>
         <div class="layer_body">
             <div class="contents_box">
@@ -1741,16 +1724,16 @@
                     </div>
                 </div>
                 <div class="bot_btn_wrap">
-                    <div class="btn" onClick="mtvLp.alertOpen('sss2', '테스트 팝업2')">강제종료 해지</div>
+                    <div class="btn" onClick="mtvLp.open('alert2', '테스트 팝업2')">강제종료 해지</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="pcacme001001_lp09232" class="motiv_layer type1" cont_size="full" style="display:none">
+    <div id="cont_lp3" class="motiv_layer type1" cont_size="full" style="display:none">
         <div class="layer_head">
             <div class="title">상품상세정보 : <span>상품명</span></div>
-            <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp09232')"></div>
+            <div class="btn_close" onClick="mtvLp.close('cont_lp3')"></div>
         </div>
         <div class="layer_body">
             <div class="contents_box">
@@ -2343,14 +2326,18 @@
                 </div>
 
                 <div class="bot_btn_wrap">
-                    <div class="btn" onClick="mtvLp.alertOpen('sss3', '테스트 팝업3')">강제종료 해지</div>
+                    <div class="btn" onClick="mtvLp.open('alert3', '테스트 팝업3')">강제종료 해지</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="pcacme001001_lp333" class="motiv_layer type2" cont_size="normal" style="display:none">
-        <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp333')"></div>
+    <div id="cont_lp4" class="motiv_layer type2" cont_size="normal" style="display:none">
+        <div class="layer_head">
+            <div class="title"></div>
+            <div class="btn_close" onClick="mtvLp.close('cont_lp4')"></div>
+        </div>
+
         <div class="layer_body">
             <div class="contents_box">
                 <div class="sect">
@@ -2420,7 +2407,7 @@
                 </div>
 
                 <div class="bot_btn_wrap">
-                    <div class="btn" onClick="mtvLp.alertOpen('sss1', '테스트 팝업1')">저장하기</div>
+                    <div class="btn" onClick="mtvLp.open('alert1', '테스트 팝업1')">저장하기</div>
                 </div>
             </div>
         </div>
@@ -2456,42 +2443,41 @@
             bh: window.innerHeight,
             prevActiveName: '',
             nowActiveName: '',
-            widthF: .5,
             normal: .5,
             large: .7,
             full: .9,
 
             init: () => {
                 mtvLp.lnbw = $('#lnb').width();
-                var mtv_w1 = mtvLp.bw - mtvLp.lnbw; // 브라우져넓이 빼기 lnb 넓이
-                var mtv_w2 = mtv_w1 / 2;
-                var mtv_w3 = mtvLp.lnbw / 2;
-                var mtv_w4 = mtv_w2 - mtv_w3;
-                var mtv_max_h = ( mtvLp.bh - $('#header').height() ) * .8;
+                var mtv_max_h = '';
                 var cont_size = '';
                 $.each( $('.motiv_layer'), function(index, obj){
                     var index_obj = $('.motiv_layer').eq(index);
-                    cont_size = mtvLp[index_obj.attr('cont_size')];
-                    lp_width = ( (mtvLp.bw - mtvLp.lnbw) * cont_size / 2 ) - (mtvLp.lnbw/2);
-
+                    mtv_max_h = ( mtvLp.bh - $('#header').height() ) * .8;
+                    cont_size = index_obj.attr('cont_size') != undefined ? mtvLp[index_obj.attr('cont_size')] : mtvLp.normal;
+                    var marginTop = (index_obj.height()/2)-($('#header').height()/2);
+                    var cont_width = index_obj.attr('cont_type') != undefined ? 500 : (mtvLp.bw - mtvLp.lnbw) * cont_size;
+                    lp_width = ( cont_width / 2 ) - (mtvLp.lnbw/2);
+                    
                     index_obj.css({
                         'display': 'none',
                         'visibility': 'hidden',
-                        'margin-top': -index_obj.height()/2,
+                        'margin-top': -marginTop,
                         'margin-left': -lp_width,
-                        'width': (mtvLp.bw - mtvLp.lnbw) * cont_size,
+                        'width': cont_width,
                     });
-
+                    
                     if(index_obj.height() > mtv_max_h ){
+                        marginTop = ((mtvLp.bh * .8)/2)-($('#header').height()/2);
                         index_obj.css({
-                            'margin-top': -(mtvLp.bh * .8)/2,
+                            'margin-top': -marginTop,
                             'height': mtvLp.bh * .8,
                         });
-                        index_obj.find('.layer_body').eq(index).css({
+                        index_obj.find('.layer_body').css({
                             'height': (mtvLp.bh * .8) - $('.layer_head').height(),
                             'overflow-y':'auto'
                         });
-                    }
+                    };
                     
                     index_obj.attr({
                         'cont_w': index_obj.width(),
@@ -2499,79 +2485,25 @@
                         'm_top': index_obj.height(),
                         'm_left': index_obj.height(),
                     })
-                })
+                });
 
                 $('.ham_menu').click(function(){
                     var mtvLnbOpen = setTimeout( function() {
                         mtvLp.init();
                         clearTimeout(mtvLnbOpen);
                     }, 500);
-                })
-
-                $(window).on('resize', function(){
-                    // mtvLp.init();
                 });
-            },
-
-            staForm: () => {
-
             },
 
             open: (id) => {
                 mtvLp.prevActiveName = mtvLp.nowActiveName;
                 if(mtvLp.prevActiveName != ''){
                     $('#'+id).attr('prep_name', mtvLp.prevActiveName);
-                }
-                mtvLp.nowActiveName = id;
-                $('div').removeClass('lp_active');
-                $('#'+id).css({
-                    'display': 'block',
-                    'visibility': 'visible'
-                }).addClass('lp_active');
-
-                var mtvLpOpen = setTimeout( function() {
-                    $('#'+id).css({'opacity': '1'});
-                    $('.motiv_layer_bg').css({'opacity': '1', 'visibility': 'visible'}).addClass('lp_active_bg');
-                    clearTimeout(mtvLpOpen);
-                }, 100);
-            },
-
-            close: (id) => {
-                $('#'+id).css({'display': 'none','visibility': 'hidden'});
-                if(mtvLp.prevActiveName == ''){
-                    mtvLp.nowActiveName = '';
-                    $('.motiv_layer_bg').css({'opacity': '0'});
-                    var mtvLpClose = setTimeout( function() {
-                        $('.motiv_layer_bg').css({'visibility': 'hidden'});
-                        clearTimeout(mtvLpClose);
-                    }, 501);
-                } else {
-                    console.log(123)
-                    $('#'+mtvLp.nowActiveName).attr('prep_name', '');
-
-                    mtvLp.nowActiveName = mtvLp.prevActiveName;
-                    if( $('#'+mtvLp.prevActiveName).attr('prep_name') != undefined){
-                        mtvLp.prevActiveName = $('#'+mtvLp.prevActiveName).attr('prep_name');
-                    } else {
-                        mtvLp.prevActiveName = '';
-                    }
-                    $('#'+mtvLp.nowActiveName).addClass('lp_active');
-                }
-                $('#'+id).removeClass('lp_active');
-            },
-
-            alertOpen: (id, text) => {
-                mtvLp.prevActiveName = mtvLp.nowActiveName;
-                if(mtvLp.prevActiveName != ''){
-                    $('#'+id).attr('prep_name', mtvLp.prevActiveName);
                 } else {
                     $('.motiv_layer_bg').css({'display': 'block','visibility': 'visible'});
                 }
-
                 mtvLp.nowActiveName = id;
-                $('#'+id).show().css({
-                    'visibility': 'hidden',
-                });
+                $('#'+id).show().css({'visibility': 'hidden'});
                 $('div').removeClass('lp_active');
                 $('#'+id).addClass('lp_active');
                 var mtvLpOpen = setTimeout( function() {
@@ -2584,67 +2516,28 @@
                 }, 100);
             },
 
-            alertClose: (id) => {
-                $('#'+id).css({'opacity': '0'});
-                $('#'+mtvLp.nowActiveName).attr('prep_name', '');
-
-                mtvLp.nowActiveName = mtvLp.prevActiveName;
-                if(mtvLp.prevActiveName != ''){
-                    mtvLp.prevActiveName = $('#'+mtvLp.prevActiveName).attr('prep_name') != undefined ? $('#'+mtvLp.prevActiveName).attr('prep_name') : '';
-                    $('#'+id).hide();
-                    $('#'+mtvLp.nowActiveName).addClass('lp_active');
-                } else {
+            close: (id) => {
+                $('#'+id).css({'display': 'none','visibility': 'hidden'});
+                if(mtvLp.prevActiveName == ''){
+                    mtvLp.nowActiveName = '';
                     $('.motiv_layer_bg').css({'opacity': '0'});
                     var mtvLpClose = setTimeout( function() {
-                        $('#'+id).hide();
                         $('.motiv_layer_bg').css({'visibility': 'hidden'});
-                        $('#'+id).removeClass('lp_active');
                         clearTimeout(mtvLpClose);
-                    }, 100);
+                    }, 301);
+                } else {
+                    $('#'+mtvLp.nowActiveName).attr('prep_name', '');
+                    mtvLp.nowActiveName = mtvLp.prevActiveName;
+                    if( $('#'+mtvLp.prevActiveName).attr('prep_name') != undefined){
+                        mtvLp.prevActiveName = $('#'+mtvLp.prevActiveName).attr('prep_name');
+                    } else {
+                        mtvLp.prevActiveName = '';
+                    }
+                    $('#'+mtvLp.nowActiveName).addClass('lp_active');
                 }
-                
+                $('#'+id).removeClass('lp_active');
             },
         }
-
-        /* 공용 알럿 */
-        var dadaAlert = {
-            open: (id, text) => {
-                var target = dadaAlert.targetCk(id);
-                $(target+' .dada_cont').html(text);
-
-                $(target).show().css({
-                    'visibility': 'hidden',
-                });
-
-                var dadaAlertOpen = setTimeout( function() {
-                    $(target).show().css({
-                        'visibility': 'visible',
-                        'opacity': '1',
-                    });
-                    clearTimeout(dadaAlertOpen);
-                }, 100);
-
-                //닫기 이벤트 활성화
-                $(target+' .dada_close_btn').click( () => { dadaAlert.close(id); });
-            },
-
-            close: (id) => {
-                var target = dadaAlert.targetCk(id);
-                $(target).css({
-                    'opacity': '0',
-                });
-                var dadaAlertClose = setTimeout( function() {
-                    $(target).hide();
-                    clearTimeout(dadaAlertClose);
-                }, 100);
-            },
-
-            targetCk: (id) => {
-                return id == undefined ? '.dada_lp_wrap': '#'+id+'.dada_lp_wrap';
-            }
-        }
-
-
 
         var testData = { // 변수명은 변경이 가능합니다.
             id: 'pcacme001001_1',
@@ -2739,11 +2632,6 @@
                 sell11: 100,
             },
         }
-
-       
-
-        
-
     </script>
 </body>
 
