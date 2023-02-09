@@ -321,7 +321,8 @@
                                 <div class="nav_menu">회원관리</div>
                                 <ul class="submenu">
                                     <li class="sub_item"><a href="./PCADME010001.html">회원현황</a></li>
-                                    <li class="sub_item active"><a href="./PCADME010003.html">휴면회원관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME010002.html">휴면회원관리</a></li>
+                                    <li class="sub_item active"><a href="./PCADME010003.html">중지회원관리</a></li>
                                     <li class="sub_item"><a href="./PCADME010004.html">탈퇴회원관리</a></li>
                                 </ul>
                             </div>
@@ -412,7 +413,7 @@
             <div id="content">
                 <!-- inner S -->
                 <div class="inner">
-                    <h1>휴면회원관리</h1>
+                    <h1>중지회원관리</h1>
                     
                     <div class="contents_box">
                         <div class="srh_box">
@@ -451,15 +452,12 @@
                     </div>
 
                     <!-- tableList S -->
-                    <div id="pcacme001003_1" class="contents_box">
+                    <div id="pcacme010003_1" class="contents_box">
                         <div class="panel_head bdr_bot">
                             <div class="cont_group d_flex">
                                 <div class="cont_left">
                                     <div class="panel_count">
-                                        <div class="all_count">총 휴면회원<span class="count_sta">50</span> 명</div>
-                                        <div class="sub_infor">
-                                            <p>※ 장기 미접속 40일 이상 경과된 회원 현황이며, 365일 경과 시 자동 휴면처리 됩니다.</p>
-                                        </div>
+                                        <div class="all_count">서비스 중지 회원 총<span class="count_sta">50</span> 명</div>
                                     </div>
                                 </div>
                                 <div class="cont_right">
@@ -483,141 +481,134 @@
                                 </div>
                             </div>
                             <div class="tbl_wrap">
-                                <div class='motiv_tbl normal'>
+                                <div class='motiv_tbl'>
                                     <div class='tbl_inner'>
-                                        <div class='tbl_head'>
-                                            <div class='look_head_box'>
-                                                <div class='look_head_list'>
-                                                    <div class='row_item d_flex'>
-                                                        <div class='hd_item' keyname='checkedbox'>
-                                                            <div>
-                                                                <div class='cus_inp_wrap checkbox_inp'> 
-                                                                    <label for='tbl_head_0' class='inp_box'> 
-                                                                        <input type='checkbox' id='tbl_head_0' name='ckb_all'>
-                                                                        <span class='inp_custom'></span>
-                                                                    </label>
-                                                                </div>
+                                        <div class='tbl_body'>
+                                            <div class='look_body_box'>
+                                                <div class='row_item row_th d_flex'>
+                                                    <div class='hd_item' keyname='checkedbox'>
+                                                        <div>
+                                                            <div class='cus_inp_wrap checkbox_inp'> 
+                                                                <label for='tbl_head_0' class='inp_box'> 
+                                                                    <input type='checkbox' id='tbl_head_0' name='ckb_all'>
+                                                                    <span class='inp_custom'></span>
+                                                                </label>
                                                             </div>
                                                         </div>
-                                                        <div class='hd_item' keyname='sell1'>
-                                                            <div>아이디</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell1'>
+                                                        <div>아이디</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell2'>
+                                                        <div>이름</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell3'>
+                                                        <div>이메일</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell4'>
+                                                        <div>핸드폰번호</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell5'>
+                                                        <div>역직</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell6'>
+                                                        <div>운영</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell7'>
+                                                        <div>중지일자</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell8'>
+                                                        <div>해지일자</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell9'>
+                                                        <div>서비스 중지내용</div>
+                                                    </div>
+                                                </div>
+                                                <div class='row_item d_flex'>
+                                                    <div class='hd_item' keyname='checkedbox'>
+                                                        <div>
+                                                            <div class='cus_inp_wrap checkbox_inp'> 
+                                                                <label for='tbl_head_0' class='inp_box'> 
+                                                                    <input type='checkbox' id='tbl_head_0' name='ckb_all'>
+                                                                    <span class='inp_custom'></span>
+                                                                </label>
+                                                            </div>
                                                         </div>
-                                                        <div class='hd_item' keyname='sell2'>
-                                                            <div>이름</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell3'>
-                                                            <div>이메일</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell4'>
-                                                            <div>핸드폰번호</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell5'>
-                                                            <div>역직</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell6'>
-                                                            <div>운영</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell7'>
-                                                            <div>마지막 접속일</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell8'>
-                                                            <div>경과일</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell9'>
-                                                            <div>국적</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell10'>
-                                                            <div>비고</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell1'>
+                                                        <div>아이디</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell2'>
+                                                        <div>이름</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell3'>
+                                                        <div>이메일</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell4'>
+                                                        <div>핸드폰번호</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell5'>
+                                                        <div>역직</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell6'>
+                                                        <div>운영</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell7'>
+                                                        <div>마지막 접속일</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell8'>
+                                                        <div>경과일</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell9'>
+                                                        <div>
+                                                            <div class="flex_item">
+                                                                <div>중지내용 요약</div>
+                                                                <div class="btn btn_sm">상세보기</div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class='tbl_body'>
-                                            <div class='look_body_box'>
-                                                <div class='look_body_list'>
-                                                    <div class='row_item d_flex'>
-                                                        <div class='hd_item' keyname='checkedbox'>
-                                                            <div>
-                                                                <div class='cus_inp_wrap checkbox_inp'> 
-                                                                    <label for='tbl_head_0' class='inp_box'> 
-                                                                        <input type='checkbox' id='tbl_head_0' name='ckb_all'>
-                                                                        <span class='inp_custom'></span>
-                                                                    </label>
-                                                                </div>
+                                                <div class='row_item d_flex'>
+                                                    <div class='hd_item' keyname='checkedbox'>
+                                                        <div>
+                                                            <div class='cus_inp_wrap checkbox_inp'> 
+                                                                <label for='tbl_head_0' class='inp_box'> 
+                                                                    <input type='checkbox' id='tbl_head_0' name='ckb_all'>
+                                                                    <span class='inp_custom'></span>
+                                                                </label>
                                                             </div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell1'>
-                                                            <div>아이디</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell2'>
-                                                            <div>이름</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell3'>
-                                                            <div>이메일</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell4'>
-                                                            <div>핸드폰번호</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell5'>
-                                                            <div>역직</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell6'>
-                                                            <div>운영</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell7'>
-                                                            <div>마지막 접속일</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell8'>
-                                                            <div>경과일</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell9'>
-                                                            <div>국적</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell10'>
-                                                            <div><div class="btn btn_sm">휴면해지</div></div>
                                                         </div>
                                                     </div>
-                                                    <div class='row_item d_flex'>
-                                                        <div class='hd_item' keyname='checkedbox'>
-                                                            <div>
-                                                                <div class='cus_inp_wrap checkbox_inp'> 
-                                                                    <label for='tbl_head_0' class='inp_box'> 
-                                                                        <input type='checkbox' id='tbl_head_0' name='ckb_all'>
-                                                                        <span class='inp_custom'></span>
-                                                                    </label>
-                                                                </div>
+                                                    <div class='hd_item' keyname='sell1'>
+                                                        <div>아이디</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell2'>
+                                                        <div>이름</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell3'>
+                                                        <div>이메일</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell4'>
+                                                        <div>핸드폰번호</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell5'>
+                                                        <div>역직</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell6'>
+                                                        <div>운영</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell7'>
+                                                        <div>마지막 접속일</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell8'>
+                                                        <div>경과일</div>
+                                                    </div>
+                                                    <div class='hd_item' keyname='sell9'>
+                                                        <div>
+                                                            <div class="flex_item">
+                                                                <div>중지내용 요약</div>
+                                                                <div class="btn btn_sm">상세보기</div>
                                                             </div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell1'>
-                                                            <div>아이디</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell2'>
-                                                            <div>이름</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell3'>
-                                                            <div>이메일</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell4'>
-                                                            <div>핸드폰번호</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell5'>
-                                                            <div>역직</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell6'>
-                                                            <div>운영</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell7'>
-                                                            <div>마지막 접속일</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell8'>
-                                                            <div>경과일</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell9'>
-                                                            <div>국적</div>
-                                                        </div>
-                                                        <div class='hd_item' keyname='sell10'>
-                                                            <div><div class="btn btn_sm">휴면해지</div></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -658,6 +649,37 @@
 
     </div>
     <!-- wrap E -->
+    <h2>팝업내용</h2>
+    <div class="motiv_layer type1">
+        <div class="layer_head">
+            <div class="title">서비스 중지</div>
+            <div class="btn_close"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect_tit">서비스 중지내용</div>
+                <div class="sect">
+                    <div class="txt_info_box type1">
+                        <div class="info_cont">
+                            <p class="txt_info">• <span>상품등록, 수정 중지</span></p>
+                            <p class="txt_info">• <span>다다딜 상품등록, 수정 중지</span></p>
+                            <p class="txt_info">• <span>상품소싱 및 다다플레이스 상품전송 중지</span></p>
+                            <p class="txt_info">• <span>고객센터 등록중지 등</span></p>
+                            <p class="txt_info">• <span>다다플레이스(다다몰) 회원소싱 판매상품 판매중지</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sect_tit">서비스 중지 이유 작성</div>
+                <div class="sect">
+                    <div class="txtarea_box">
+                        <textarea placeholder="이유내용"></textarea>
+                    </div>
+                </div>
+                <div class="bot_btn_wrap"><div class="btn btn_blk">저장</div></div>
+            </div>
+        </div>
+    </div>
     <script>
         $(document).ready(() => {
             $('#sandbox_container.input-daterange').datepicker({
@@ -665,30 +687,21 @@
             });
             $('#sandbox_container.input-group.date').datepicker({language : "ko"});
 
-            // var testData = { // 변수명은 변경이 가능합니다.
-            //     tableSize: { // tableSize 변수명은 변경되면 안됨니다.
-            //         //하단의 변수 명칭은 변경이 가능하지만 리스트 테이블html 에서 keyname값과 동일 하면 됨니다. 
-            //         sell1: 80,
-            //         sell2: 100,
-            //         sell3: 100,
-            //         sell4: 100,
-            //         sell5: 150,
-            //         sell6: 80,
-            //         sell7: 80,
-            //         sell8: 120,
-            //         sell9: 80,
-            //         sell10: 80,
-            //     },
-            //     // scrollLookSta 값이 false일 경우 삭제하면 됨니다.
-            //     // scrollLookSta: true,
-            //     // scrollLook: ['sell1', 'sell2'], 
-            // }
-
-            // tFlex.init('pcacme001003_1', testData, false);
-            // 첫번째 객체 값은 아이디
-            // 두번째 객체는 데이터
-            // 세번째 객체는 변수에 저장된 html을 사용 유무
-
+            var pcacme010003_1 = {
+                id:'pcacme010003_1',
+                tableSize: {
+                    sell1: 100,
+                    sell2: 100,
+                    sell3: 100,
+                    sell4: 100,
+                    sell5: 100,
+                    sell6: 100,
+                    sell7: 100,
+                    sell8: 100,
+                    sell9: 150,
+                },
+            }
+            tFlex.init(pcacme010003_1);
         });
 
 

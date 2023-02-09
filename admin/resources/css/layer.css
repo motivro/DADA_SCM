@@ -70,7 +70,8 @@
 /* 공용 레이어 개발중 일부 충돌 
 .motiv_layer.type2{position: relative;}
 */
-.motiv_layer.type2 .btn_close{width: 40px;height: 40px;position: absolute;left: 50%;top: -20px;transform: translateX(-50%);background: rgba(0, 0, 0, .5) url('../images/common/icon_pop_close.svg')no-repeat center center;background-size:12px;cursor: pointer;border-radius: 100%;}
+.motiv_layer.type2 .layer_head{position:relative;}
+.motiv_layer.type2 .layer_head .btn_close{width: 40px;height: 40px;position: absolute;left: 50%;top: -20px;transform: translateX(-50%);background: rgba(0, 0, 0, .5) url('../images/common/icon_pop_close.svg')no-repeat center center;background-size:12px;cursor: pointer;border-radius: 100%;}
 .motiv_layer.type2 .layer_body{padding: 35px 20px 45px;}
 
 .motiv_layer .layer_body{padding:25px 20px 30px;}

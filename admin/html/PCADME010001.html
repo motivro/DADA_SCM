@@ -320,9 +320,10 @@
                             <div class="nav_menu_wrap">
                                 <div class="nav_menu">회원관리</div>
                                 <ul class="submenu">
-                                    <li class="sub_item active"><a href="./PCADME010001.html">회원현황</a></li>
-                                    <li class="sub_item"><a href="./PCADME010003.html">휴면회원관리</a></li>
-                                    <li class="sub_item"><a href="./PCADME010004.html">탈퇴회원관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME010001.html">회원현황</a></li>
+                                    <li class="sub_item"><a href="./PCADME010002.html">휴면회원관리</a></li>
+                                    <li class="sub_item"><a href="./PCADME010003.html">중지회원관리</a></li>
+                                    <li class="sub_item active"><a href="./PCADME010004.html">탈퇴회원관리</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -945,10 +946,6 @@
                         </div>
                     </div>
                     <!-- tableList E -->
-
-                    <div class="contents_box pd_0 bd_0">
-                        <div class=""></div>
-                    </div>
                 </div>
                 <!-- inner E -->
             </div>
@@ -1288,7 +1285,7 @@
         </div>
     </div>
 
-    <div class="motiv_layer type1" style="margin-top:20px">
+    <div class="motiv_layer type1">
         <div class="layer_head">
             <div class="title">단체공지</div>
             <div class="btn_close"></div>
@@ -1373,7 +1370,7 @@
 
     <script>
 
-        var testData = { // 변수명은 변경이 가능합니다.
+        var pcacme010001_1 = { // 변수명은 변경이 가능합니다.
             id: 'pcacme010001_1',
             tableSize: { // tableSize 변수명은 변경되면 안됨니다.
                 //하단의 변수 명칭은 변경이 가능하지만 리스트 테이블html 에서 keyname값과 동일 하면 됨니다. 
@@ -1402,7 +1399,7 @@
             $('#sandbox_container.input-group.date').datepicker({
                 language : "ko"
             });
-            tFlex.init(testData);//일반적인 스크롤되는 리스트
+            tFlex.init(pcacme010001_1);//일반적인 스크롤되는 리스트
 
         });
 

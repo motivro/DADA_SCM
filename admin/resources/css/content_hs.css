@@ -1327,3 +1327,6 @@
 
 /* 약관 등록 */
 #content.terms .contents_box .srh_btn_box .btn_wrap .btn{width: auto;}
+
+/* 리스트 테이블 */
+.motiv_tbl.normal.hs .tbl_inner .hd_item:first-child{flex-grow: 1;flex-basis: 80px;}
