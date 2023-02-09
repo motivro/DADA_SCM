@@ -905,12 +905,12 @@
                                                         <div>수정일</div>
                                                     </div>
 
-                                                    <div class="sub_row row_item" style="width: 1234px;">
+                                                    <div class="sub_row row_item">
                                                         <div class="motiv_tbl normal "> <!-- appoint_sales -->
                                                             <div class="tbl_inner">
                                                                 
-                                                                <div class="tbl_body" style="width: 1234px;">
-                                                                    <div class="row_item row_th d_flex" style="width: 1234px;">
+                                                                <div class="tbl_body">
+                                                                    <div class="row_item row_th d_flex">
                                                                         <div class="hd_item" keyname="checkedbox">
                                                                             <div>
                                                                                 <div class="cus_inp_wrap checkbox_inp">
@@ -2511,7 +2511,8 @@
 
     <script>
         $(document).ready(() => {
-            mtvLp.init();
+            mtvLp.init();//
+
             selectUi.init();
             $('#sandbox_container.input-daterange').datepicker({language: "ko"});
             tFlex.init(testData);//일반적인 스크롤되는 리스트
