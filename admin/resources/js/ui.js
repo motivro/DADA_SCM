@@ -44,6 +44,7 @@ var mtvLp = {
             var cont_width = index_obj.attr('cont_type') != undefined ? 500 : (mtvLp.bw - mtvLp.lnbw) * cont_size;
             lp_width = ( cont_width / 2 ) - (mtvLp.lnbw/2);
             
+            if($('.motiv_layer_bg').length == 0) $('body').append('<div class="motiv_layer_bg" style="visibility:hidden" style="display:none"></div>');
             index_obj.css({
                 'display': 'none',
                 'visibility': 'hidden',

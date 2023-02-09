@@ -396,7 +396,7 @@
             </div>
         </aside>
         <!-- lnb E -->
-        
+         
         <!-- container S -->
         <div id="container">
             <!-- content S -->
@@ -460,7 +460,7 @@
                                                 <div class="title"><span>진행완료</span></div>
                                                 <ul>
                                                     <li>
-                                                        <a href="#none" class="uploadedFile">
+                                                        <div class="uploadedFile" onClick="mtvLp.open('cont_lp1')">
                                                             <div class="left_box">
                                                                 <i class="icon_file"><em class="type">csv</em></i>
                                                                 <div class="file_info">
@@ -475,10 +475,10 @@
                                                                 </div>
                                                                 <i class="icon_arrow"></i>
                                                             </div>
-                                                        </a>
+                                                        </div>
                                                     </li>
                                                     <li>
-                                                        <a href="#none" class="uploadedFile">
+                                                        <div class="uploadedFile" onClick="mtvLp.open('cont_lp1')">
                                                             <div class="left_box">
                                                                 <i class="icon_file"><em class="type">csv</em></i>
                                                                 <div class="file_info">
@@ -493,7 +493,7 @@
                                                                 </div>
                                                                 <i class="icon_arrow"></i>
                                                             </div>
-                                                        </a>
+                                                        </div>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -507,87 +507,7 @@
                         </div>
                     </div>
                     <!-- tableList E -->
-                    <div class="contents_box">
-                        <div class="upload_result">
-                            <h2>상품 엑셀 업로드 결과</h2>
-                            <section>
-                                <div class="motiv_tbl_box">
-                                    <div class="subtit">상품 엑셀 업로드 결과</div>
-                                    <div class="tbl_item">
-                                        <table class="motiv_normal_tbl">
-                                            <caption>업로드 내역</caption>
-                                            <colgroup>
-                                                <col style="width: 30%;">
-                                                <col style="width: auto;">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <th>전체 업로드 개수</th>
-                                                    <td>
-                                                        <div>
-                                                            <span>3개</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>성공 개수</th>
-                                                    <td>
-                                                        <div>
-                                                            <span class="msgSuccess"><i class="icon_success"></i>2개</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>실패 개수</th>
-                                                    <td>
-                                                        <div>
-                                                            <span class="msgFail"><i class="icon_fail"></i>2개</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </section>
-                            <section>
-                                <div class="motiv_tbl_box">
-                                    <div class="subtit">실패사유 안내</div>
-                                    <div class="tbl_item">
-                                        <table class="motiv_normal_tbl ta_c">
-                                            <caption>실패사유 안내</caption>
-                                            <colgroup>
-                                                <col style="width: 15%;">
-                                                <col style="width: 15%;">
-                                                <col style="width: 15%;">
-                                                <col style="width: auto;">
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>엑셀 행번호</th>
-                                                    <th>상품코드</th>
-                                                    <th>실패사유</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><div>1</div></td>
-                                                    <td><div>1</div></td>
-                                                    <td><div></div></td>
-                                                    <td><div>이미지등록(추가)에 입력한 파일이 존재하지 않습니다. 도움말 확인 후 다시 시도해 주세요.</div></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
-                                
-                                <table>
-                                </table>
-                            </section>
-                        </div>
-                    </div>
+                
                 </div>
                 <!-- inner E -->
             </div>
@@ -597,8 +517,103 @@
 
     </div>
     <!-- wrap E -->
+
+    <div id="cont_lp1" class="motiv_layer type1" cont_size="large" style="display:none">
+        <div class="layer_head">
+            <div class="title">상품 엑셀 업로드 결과</div>
+            <div class="btn_close" onClick="mtvLp.close('cont_lp1')"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="upload_result">
+                    <!-- <h2>상품 엑셀 업로드 결과</h2> -->
+                    <section>
+                        <div class="motiv_tbl_box">
+                            <div class="subtit">상품 엑셀 업로드 결과</div>
+                            <div class="tbl_item">
+                                <table class="motiv_normal_tbl">
+                                    <caption>업로드 내역</caption>
+                                    <colgroup>
+                                        <col style="width: 30%;">
+                                        <col style="width: auto;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>전체 업로드 개수</th>
+                                            <td>
+                                                <div>
+                                                    <span>3개</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>성공 개수</th>
+                                            <td>
+                                                <div>
+                                                    <span class="msgSuccess"><i class="icon_success"></i>2개</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>실패 개수</th>
+                                            <td>
+                                                <div>
+                                                    <span class="msgFail"><i class="icon_fail"></i>2개</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="motiv_tbl_box">
+                            <div class="subtit">실패사유 안내</div>
+                            <div class="tbl_item">
+                                <table class="motiv_normal_tbl ta_c">
+                                    <caption>실패사유 안내</caption>
+                                    <colgroup>
+                                        <col style="width: 15%;">
+                                        <col style="width: 15%;">
+                                        <col style="width: 15%;">
+                                        <col style="width: auto;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>엑셀 행번호</th>
+                                            <th>상품코드</th>
+                                            <th>실패사유</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div>1</div></td>
+                                            <td><div>1</div></td>
+                                            <td><div></div></td>
+                                            <td><div>이미지등록(추가)에 입력한 파일이 존재하지 않습니다. 도움말 확인 후 다시 시도해 주세요.</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        
+                        <table>
+                        </table>
+                    </section>
+                </div>
+                <div class="bot_btn_wrap">
+                    <div class="btn" onClick="mtvLp.open('alert1')">강제종료 처리</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         $(document).ready(() => {
+            mtvLp.init();
         });
         selectUi.init();
 

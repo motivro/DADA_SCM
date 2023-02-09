@@ -1269,7 +1269,7 @@
     <!-- wrap E -->
 
     <h2>팝업 내용</h2>
-    <div class="motiv_layer type2">
+    <div id="cont_lp1" class="motiv_layer type2" cont_size="full">
         <div class="layer_head">
             <div class="btn_close"></div>
         </div>
@@ -1277,11 +1277,11 @@
             <div class="contents_box">
                 <div class="tab_area">
                     <div class="tab_box">
-                        <div class="tab_item">기본정보</div>
-                        <div class="tab_item">예상수익계산</div>
-                        <div class="tab_item">상태정보 <span class="new_sta">22</span></div>
+                        <div class="tab_item active" tab_name="box1">기본정보</div>
+                        <div class="tab_item" tab_name="box2">예상수익계산</div>
+                        <div class="tab_item" tab_name="box3">상태정보 <span class="new_sta">22</span></div>
                     </div>
-                    <div class="tab_cont">
+                    <div id="box1" class="tab_cont active">
                         <div class="flex_wrap seller_info">
                             <div class="left">
                                 <div class="seller_dtl">
@@ -1368,13 +1368,7 @@
                         </div>
                     </div>
 
-                    
-                    <div class="tab_box" style="margin-top: 20px;">
-                        <div class="tab_item">기본정보</div>
-                        <div class="tab_item">예상수익계산</div>
-                        <div class="tab_item">상태정보 <span class="new_sta">22</span></div>
-                    </div>
-                    <div class="tab_cont">
+                    <div id="box2" class="tab_cont">
                         <div class="flex_wrap prd_calc">
                             <div class="left">
                                 <div class="inp_row row-3">
@@ -1440,12 +1434,7 @@
                         </div>
                     </div>
 
-                    <div class="tab_box" style="margin-top: 20px;">
-                        <div class="tab_item">기본정보</div>
-                        <div class="tab_item">예상수익계산</div>
-                        <div class="tab_item">상태정보 <span class="new_sta">22</span></div>
-                    </div>
-                    <div class="tab_cont">
+                    <div id="box3" class="tab_cont">
                         <div class="flex_wrap state_info">
                             <div class="left">
                                 <div class="cont_box">
@@ -1487,7 +1476,7 @@
         </div>
     </div>
 
-    <div class="motiv_layer type1">
+    <div id="cont_lp2" class="motiv_layer type1" cont_size="normal">
         <div class="layer_head">
             <div class="title">반려사유 작성</div>
             <div class="btn_close"></div>
@@ -1518,10 +1507,18 @@
             </div>
         </div>
     </div>
+
     <script>
     $(document).ready(() => {
-        $('#sandbox_container.input-daterange').datepicker({
-            language: "ko"
+        $('#sandbox_container.input-daterange').datepicker({language: "ko"});
+
+        $('.layer_body .tab_item').click(function(){
+            var target = $(this).attr('tab_name');
+            console.log(target)
+            $('.layer_body .tab_item').removeClass('active');
+            $(this).addClass('active');
+            $('.layer_body .tab_cont').removeClass('active');
+            $('#'+target).addClass('active');
         });
 
         var pcacme002002 = {
