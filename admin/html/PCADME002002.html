@@ -1510,16 +1510,9 @@
 
     <script>
     $(document).ready(() => {
-        $('#sandbox_container.input-daterange').datepicker({language: "ko"});
+        tab_area.init(); //탭 이벤트
 
-        $('.layer_body .tab_item').click(function(){
-            var target = $(this).attr('tab_name');
-            console.log(target)
-            $('.layer_body .tab_item').removeClass('active');
-            $(this).addClass('active');
-            $('.layer_body .tab_cont').removeClass('active');
-            $('#'+target).addClass('active');
-        });
+        $('#sandbox_container.input-daterange').datepicker({language: "ko"});
 
         var pcacme002002 = {
             id: 'pcacme002002_1',

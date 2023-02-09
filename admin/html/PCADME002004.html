@@ -1004,11 +1004,11 @@
             <div class="contents_box">
                 <div class="tab_area">
                     <div class="tab_box">
-                        <div class="tab_item active" tab_name="box1">기본정보</div>
+                        <div class="tab_item" tab_name="box1">기본정보</div>
                         <div class="tab_item" tab_name="box2">예상수익계산</div>
                         <div class="tab_item" tab_name="box3">상태정보 <span class="new_sta">22</span></div>
                     </div>
-                    <div id="box1" class="tab_cont active">
+                    <div id="box1" class="tab_cont">
                         <div class="flex_wrap seller_info">
                             <div class="left">
                                 <div class="seller_dtl">
@@ -1324,20 +1324,10 @@
         </div>
     </div>
 <script>
-
+ 
     $(document).ready(() => {
-        
+        tab_area.init(); //탭 이벤트
         $('#sandbox_container.input-daterange').datepicker({language: "ko"});
-
-        $('.layer_body .tab_item').click(function(){
-            var target = $(this).attr('tab_name');
-            console.log(target)
-            $('.layer_body .tab_item').removeClass('active');
-            $(this).addClass('active');
-            $('.layer_body .tab_cont').removeClass('active');
-            $('#'+target).addClass('active');
-        });
-
         var pcacme002004 = {
             id: 'pcacme002004_1',
             tableSize: {

@@ -21,6 +21,42 @@ $(document).ready(function(){
     });
 });
 
+//탭 기능
+var tab_area = {
+    openVal: false,
+    
+    init: () => {
+        if($('.tab_area').length > 0){
+            tab_area.checked();
+        }
+    },
+
+    checked: () => {
+        var tab_item = $('.tab_area .tab_box .tab_item');
+        $.each(tab_item, function(index, obj){
+            if(tab_item.eq(index).hasClass('active')){
+                tab_area.openVal = true;
+                return;
+            }
+        });
+        if(!tab_area.openVal){
+            tab_item.eq(0).addClass('active');
+            $('.tab_area .tab_cont').eq(0).addClass('active');
+        }
+        tab_area.event();
+    },
+
+    event: () => {
+        $('.layer_body .tab_item').click(function(){
+            var target = $(this).attr('tab_name');
+            $('.layer_body .tab_item').removeClass('active');
+            $(this).addClass('active');
+            $('.layer_body .tab_cont').removeClass('active');
+            $('#'+target).addClass('active');
+        });
+    },
+}
+
 // 공통 알럿 및 레이어팝업
 var mtvLp = {
     lnbw: $('#lnb').width(),
