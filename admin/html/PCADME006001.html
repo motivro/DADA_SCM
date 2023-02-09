@@ -1050,7 +1050,7 @@
                                     </tr>
                                     <tr>
                                         <th><div>배송지 주소</div></th>
-                                        <td colspan="3"><div>배송지 주소</div></td>
+                                        <td colspan="3"><div><a href="#none" class="more_info">배송지 주소</a></div></td>
                                     </tr>
                                     <tr class="dtl_tbl">
                                         <td colspan="4">
@@ -1340,6 +1340,7 @@
 
     <script>
         $(document).ready(() => {
+            dtlTbl.init();
             $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
             $('#sandbox_container.input-group.date').datepicker({language : "ko"});
 

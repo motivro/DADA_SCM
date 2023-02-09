@@ -21,6 +21,37 @@ $(document).ready(function(){
     });
 });
 
+//레이어팝업 아코디언
+var dtlTbl = {
+    init: () => {
+        if($('.dtl_tbl').length > 0){
+            dtlTbl.checked();
+        }
+    },
+
+    checked: () => {
+        var dtl_tbl = $('.dtl_tbl');
+        $.each(dtl_tbl, function(index, obj){
+            dtl_tbl.eq(index).find('.tbl_wrap').attr('outer_h', dtl_tbl.eq(index).find('.motiv_tbl').outerHeight());
+        });
+        dtlTbl.event();
+    },
+
+    event: () => {
+        $('.motiv_normal_tbl .more_info').click(function(){
+            var more_dtl_tbl = $(this).closest('tr').next('.dtl_tbl');
+            var acc_height = $(this).closest('tr').next('.dtl_tbl').find('.tbl_wrap').attr('outer_h');
+            if($(this).closest('tr').next('.dtl_tbl').hasClass('active')){
+                more_dtl_tbl.removeClass('active');
+                $(this).closest('tr').next('.dtl_tbl').find('.tbl_wrap').css('height', 0);
+            } else {
+                more_dtl_tbl.addClass('active');
+                $(this).closest('tr').next('.dtl_tbl').find('.tbl_wrap').css('height', acc_height);
+            }
+        });
+    },
+}
+
 //탭 기능
 var tab_area = {
     openVal: false,
