@@ -744,6 +744,21 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .motiv_layers .dada_close_box .dada_close_btn:before {transform: rotate(45deg);}
 .motiv_layers .dada_close_box .dada_close_btn:after {transform: rotate(-45deg);}
 .motiv_layers_bg{width:100vw;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);opacity:0;transition:.3s;z-index:199;}
+/* 교체
+.motiv_layer{position:fixed;top:50%;left:50%;transition:opacity .3s;opacity:0;visibility: hidden;z-index:100}
+.motiv_layer .dada_cont{font-size:var(--fts16);font-weight:var(--ftw500);text-align:center;margin:45px 0}
+.motiv_layer .dada_btn_wrap{text-align:center;padding-bottom: 30px;}
+.motiv_layer .dada_btn_wrap .dada_btn{display:inline-block;color:#fff;min-width:120px;height:40px;margin:0 5px;line-height:40px;font-size:var(--fts14);font-weight:var(--ftw500);cursor:pointer}
+.motiv_layer .dada_btn_wrap .dada_btn.co_1{background-color:var(--color1)}
+.motiv_layer .dada_btn_wrap .dada_btn.co_9{background-color:var(--color9)}
+.motiv_layer .dada_close_box:after{content:'';display:block;clear:both;}
+.motiv_layer .dada_close_box .dada_close_btn{position:absolute;top:10px;right:10px;width:25px;height:25px;cursor:pointer}
+.motiv_layer .dada_close_box .dada_close_btn:before, 
+.motiv_layer .dada_close_box .dada_close_btn:after{position:absolute;top:50%;left:50%;content:' ';height:25px;width:2px;background-color:#000;margin-top:-12px}
+.motiv_layer .dada_close_box .dada_close_btn:before {transform: rotate(45deg);}
+.motiv_layer .dada_close_box .dada_close_btn:after {transform: rotate(-45deg);}
+.motiv_layer_bg{width:100vw;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);opacity:0;transition:.3s;z-index:199;}
+*/
 .lp_active{z-index:201}
 .lp_active_bg{z-index:200}
 
