@@ -92,6 +92,8 @@
 .motiv_layer .motiv_tbl_box .tbl_title{font-weight:var(--ftw500);color: var(--color19);}
 .motiv_layer .motiv_tbl_box .tbl_title .tit strong{font-weight:var(--ftw700);color: #000;margin-right: 3px;}
 .motiv_layer .motiv_tbl_box .tbl_item{margin-top: 20px;}
+.motiv_layer .motiv_tbl_box .tbl_item + .tbl_item.bdt_0 .motiv_normal_tbl tbody tr:first-child th,
+.motiv_layer .motiv_tbl_box .tbl_item + .tbl_item.bdt_0 .motiv_normal_tbl tbody tr:first-child td{border-top: 0;}
 .motiv_layer .motiv_tbl_box .tbl_item:first-child{margin-top: 0;}
 .motiv_layer .motiv_tbl_box.name_k .motiv_normal_tbl tbody tr th{background: var(--search_box_bg);}
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl tr{background: #fff;}
@@ -360,6 +362,17 @@
 .motiv_layer .upload_file_list .file_item .close_btn{width: 10px;height: 10px;background: url('../images/common/icon_close_red.svg')no-repeat center center;background-size: cover;cursor: pointer;}
 .motiv_layer .file_size_warning{text-align:center;font-size: var(--fts14);font-weight: var(--ftw500);line-height: 1;color: var(--color19);}
 
+/* 회원관리 */
+.motiv_layer .sect.stop_reply{margin-top: 30px;padding-top: 20px;border-top: var(--box_border);}
+.motiv_layer .sect.stop_reply .stop_sta_box + .stop_sta_box{margin-top: 10px;padding-top: 10px;border-top: var(--box_border);}
+.motiv_layer .sect.stop_reply .stop_sta_box .tit{display: flex;align-items: center;justify-content: space-between;}
+.motiv_layer .sect.stop_reply .stop_sta_box .tit .mem_info{padding: 5px 15px;border-radius:15px;font-size: var(--fts14);font-weight: var(--ftw500);color: #fff;}
+.motiv_layer .sect.stop_reply .stop_sta_box.adm_ver .tit .mem_info{background: var(--color3);}
+.motiv_layer .sect.stop_reply .stop_sta_box.mem_ver .tit .mem_info{background: var(--color5);}
+.motiv_layer .sect.stop_reply .stop_sta_box .tit .date_info{font-size: var(--ftw12);font-weight: var(--ftw500);color: var(--color19);}
+.motiv_layer .sect.stop_reply .stop_sta_box .cont{margin-top: 10px;}
+.motiv_layer .sect.stop_reply .stop_sta_box.adm_ver .cont{min-height:50px;max-height: 100px;overflow-y: auto;}
+.motiv_layer .sect.stop_reply .stop_sta_box.mem_ver .cont{min-height: 100px;}
 
 
 /* 레이어팝업 알럿 공용 신규 */
@@ -388,3 +401,9 @@ h2 + .motiv_layer + .motiv_layer + .motiv_layer + .motiv_layer,
 h2 + .motiv_layer + .motiv_layer + .motiv_layer,
 h2 + .motiv_layer + .motiv_layer,
 h2 + .motiv_layer{position:static!important;opacity:1!important;visibility:visible!important}
+
+.motiv_tbl.normal.re_his .tbl_inner .hd_item{flex-grow:1;flex-basis:100px;}
+.motiv_tbl.normal.re_his .tbl_inner .hd_item:first-child{flex-grow: 0;flex-basis: 100px;}
+.motiv_tbl.normal.re_his .tbl_inner .hd_item:first-child + .hd_item{flex-basis: 150px;text-align: left;}
+.motiv_tbl.normal.re_his .tbl_inner .hd_item:first-child + .hd_item + .hd_item{flex-grow: 0;flex-basis: 100px;}
+.motiv_tbl.normal.re_his .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 120px;}

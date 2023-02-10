@@ -1108,9 +1108,9 @@
                                 <caption>회원 정보</caption>
                                 <colgroup>
                                     <col style="width:15%;">
-                                    <col style="width:auto;">
+                                    <col style="width:35%;">
                                     <col style="width:15%;">
-                                    <col style="width:auto;">
+                                    <col style="width:35%;">
                                 </colgroup>
                                 <tbody>
                                     <tr>
@@ -1133,25 +1133,27 @@
                                     </tr>
                                     <tr>
                                         <th><div>운영</div></th>
-                                        <td><div class="d_flex a_c gap5"><span>정상</span><div class="btn btn_sm">탈퇴사유</div></div></td>
+                                        <td><div class="d_flex a_c gap5"><span>정상</span><a href="#none" class="more_info"><div class="btn btn_sm">탈퇴/설문</div></a></div></td>
                                         <th><div>최초가입날짜</div></th>
                                         <td><div><span>2023-01-01 00:00:00</span></div></td>
                                     </tr>
-                                    <tr class="more_box active">
+                                    <tr class="dtl_tbl acc_tblList">
                                         <td colspan="4">
-                                            <div class="list_box">
-                                                <div class="list_item">
-                                                    <div class="tit">1. 다다서비스를 탈퇴하는 사유를 체크해 주세요.</div>
-                                                    <div class="cont chk_list">
-                                                        <div class="chk_in">다다 회원 탈퇴 후 재가입을 위해서</div>
-                                                        <div>다다 구매 빈도가 낮아 이용할 필요가 없어서</div>
-                                                        <div>다다서비스가 마음에 들지 않아서</div>
+                                            <div class="list_box tbl_wrap">
+                                                <div class="motiv_tbl bd_0">
+                                                    <div class="list_item">
+                                                        <div class="tit">1. 다다서비스를 탈퇴하는 사유를 체크해 주세요.</div>
+                                                        <div class="cont chk_list">
+                                                            <div class="chk_in">다다 회원 탈퇴 후 재가입을 위해서</div>
+                                                            <div>다다 구매 빈도가 낮아 이용할 필요가 없어서</div>
+                                                            <div>다다서비스가 마음에 들지 않아서</div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="list_item">
-                                                    <div class="tit">2. 다다에 바라는 점을 남겨주세요.</div>
-                                                    <div class="cont">
-                                                        <div class="txt">메세지 내용</div>
+                                                    <div class="list_item">
+                                                        <div class="tit">2. 다다에 바라는 점을 남겨주세요.</div>
+                                                        <div class="cont">
+                                                            <div class="txt">메세지 내용</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1159,19 +1161,9 @@
                                     </tr>
                                     <tr>
                                         <th><div>서비스평가</div></th>
-                                        <td><div class="d_flex a_c gap5"><span>정상</span><div class="btn btn_sm">보기</div></div></td>
+                                        <td><div><span>정상</span></div></td>
                                         <th><div>사업자인증</div></th>
                                         <td><div><span>인증</span></div></td>
-                                    </tr>
-                                    <tr class="more_box active">
-                                        <td colspan="4">
-                                            <div class="list_box">
-                                                <div class="list_item">
-                                                    <div class="tit">※ 탈퇴정보는 “회원관리 / 탈퇴회원관리” 에서 확인할 수 있다.</div>
-                                                    <div class="tit">※ 통계에서 탈퇴현황을 확인할 수 있다.</div>
-                                                </div>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <th><div>결제은행</div></th>
@@ -1179,6 +1171,19 @@
                                         <th><div>결제 계좌번호</div></th>
                                         <td><div><span>계좌번호</span></div></td>
                                     </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tbl_item mgt_0 bdt_0">
+                            <table class="motiv_normal_tbl">
+                                <caption>회원 정보</caption>
+                                <colgroup>
+                                    <col style="width:15%;">
+                                    <col style="width:35%;">
+                                    <col style="width:15%;">
+                                    <col style="width:35%;">
+                                </colgroup>
+                                <tbody>
                                     <tr>
                                         <th><div>사업자명</div></th>
                                         <td><div>상호명</div></td>
@@ -1202,8 +1207,55 @@
                                         <td colspan="3"><div>첨부된 파일</div></td>
                                     </tr>
                                     <tr>
-                                        <th rowspan="3"><div>반려내용</div></th>
-                                        <td colspan="3" rowspan="3"><div>반려내용</div></td>
+                                        <th><div>서류심사 이력</div></th>
+                                        <td colspan="3">
+                                            <div>
+                                                <div class="tbl_wrap cus_height bd_0 pd_0">
+                                                    <div class="motiv_tbl normal re_his">
+                                                        <div class="tbl_inner">
+                                                            <div class="tbl_body">
+                                                                <div class="row_item d_flex">
+                                                                    <div class="hd_item">
+                                                                        <div>반려</div>
+                                                                    </div>
+                                                                    <div class="hd_item">
+                                                                        <div>반려내용</div>
+                                                                    </div>
+                                                                    <div class="hd_item">
+                                                                        <div>작성자</div>
+                                                                    </div>
+                                                                    <div class="hd_item">
+                                                                        <div>23-01-01</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row_item d_flex">
+                                                                    <div class="hd_item">
+                                                                        <div>승인</div>
+                                                                    </div>
+                                                                    <div class="hd_item">
+                                                                        <div>사업자 승인완료</div>
+                                                                    </div>
+                                                                    <div class="hd_item">
+                                                                        <div>작성자</div>
+                                                                    </div>
+                                                                    <div class="hd_item">
+                                                                        <div>23-01-01</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>심사관리</div></th>
+                                        <td colspan="3">
+                                            <div>
+                                                <textarea name="" id="" cols="30" rows="10">반려처리 시 내용 작성</textarea>
+                                            </div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1400,6 +1452,7 @@
                 language : "ko"
             });
             tFlex.init(pcacme010001_1);//일반적인 스크롤되는 리스트
+            dtlTbl.init();
 
         });
 
