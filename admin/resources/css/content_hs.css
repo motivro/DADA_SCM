@@ -1045,7 +1045,8 @@ h2.type2 .read_more > a:hover:after{}
 .upload_result .motiv_normal_tbl tbody th{background: var(--search_box_bg);}
 .upload_result .motiv_tbl_box{padding:30px 0;}
 /* 다다딜마켓 상세 */
-.prd_dtl_item{padding: 20px;}
+.prd_dtl_item{background-color: transparent;}
+/* .prd_dtl_item .prd_dtl_box{padding:20px;background-color: #fff;} */
 .prd_dtl_item .prd_dtl_box + .prd_dtl_box{margin-top: 30px;}
 
 .dtl_area{display: flex;gap: 30px;}
