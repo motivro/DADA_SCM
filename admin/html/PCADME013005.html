@@ -659,10 +659,12 @@
             selectAsyncUi.customSelect(seObjData, obj, num);
         },
 
-        
-
         floorsRemove: (obj) => {
-            obj.closest('.tbl_row_item').remove()
+            if(obj.closest('.tbl_item').children('.td_item').length == 1){
+                obj.closest('.tbl_item_box').remove();
+            } else {
+                obj.closest('.tbl_row_item').remove();
+            }
         },
 
         customSelect: (seObjData, obj, num) => {
