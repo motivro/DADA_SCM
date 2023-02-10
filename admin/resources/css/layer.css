@@ -8,10 +8,11 @@
 .motiv_layer .txt_fail{color: var(--color1);}
 
 /* select_custom S */
-.motiv_layer .select_wrap.size_md{width: 150px;}
-.motiv_layer .select_wrap.size_lg{width:210px}
-.motiv_layer .inp_wrap.size_md{width: 150px;}
-.motiv_layer .inp_wrap.size_lg{width:210px}
+.select_wrap.size_sm{width: 100px;}
+.select_wrap.size_md{width: 150px;}
+.select_wrap.size_lg{width:210px}
+.inp_wrap.size_md{width: 150px;}
+.inp_wrap.size_lg{width:210px}
 
 .motiv_layer .select_wrap select{display:none}
 .motiv_layer .select_wrap .select_box{min-width:90px;width:100%;padding:9px 10px;background:#fff;border: var(--cont_border);position: relative;}

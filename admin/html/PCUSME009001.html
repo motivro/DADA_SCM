@@ -573,21 +573,21 @@
                                                     </div>
                                                     <div class="data_item">
                                                         <div class="name">
-                                                            방문수
+                                                            공급가매출
                                                             <div class="helper">
                                                                 <span>?</span>
                                                                 <div class="tooltip_box">
                                                                     <div class="info_txt">
-                                                                        <p class="tit_txt">방문수</p>
-                                                                        <p class="txt">조회기간 동안 발생한 방문의 수입니다.</p>
+                                                                        <p class="tit_txt">상품 공급가 매출금액</p>
+                                                                        <p class="txt">조회기간 동안 발생한 주문의 결제 상품에 대한 공급 금액입니다. 결제 완료된 주문만 집계됩니다. </p>
+                                                                        <p class="txt">모든 결제는 실시간으로 분석되나, 무통장입금 결제는 최대 2시간 후에 반영됩니다. </p>
+                                                                        <p class="txt">예) 1시대에 입금 확인된 주문 → 3시에 조회 시 확인 가능</p>
                                                                     </div>
-                                                                    
                                                                     <div class="info_txt">
                                                                         <p class="tit_txt">금액 산정 기준</p>
-                                                                        <p class="txt">방문의 정의는 통계 서비스마다 상이하며, 다다몰은 사용자의 접속~마지막 활동으로부 터 60분 까지를 기준으로 합니다.</p>
-                                                                        <p class="txt">따라서 한 번 접속했다가 사이트 창을 닫았더라도, 마지막 활동으로부터 60분 이내에 다 시 접속했다면 같은 방문입니다.</p>
-                                                                        <p class="txt">마지막 활동으로부터 60분이 경과하면 방문이 종료되었다고 간주하며, 이후에 다시 접 속(또는 활동)하더라도 다른 방문으로 집계됩니다.</p>
-                                                                        <p class="txt">또한 방문은 브라우저 별로 구분되므로, 한 기기에서 다른 브라우저로 중복 접속하는 경 우 각각 다른 방문으로 집계됩니다.</p>
+                                                                        <p class="txt">상품판매가격에 상관없이 상품 공급가 기준 계산된 금액입니다.</p>
+                                                                        <p class="txt">예) 공급가 10,000원인 상품을 2개 구매하면서 3,000원 쿠폰 사용, 배송비가 3,000원인 주문인 경우 계산식은 (10,000×2)＋3,000원(배송비) = 23,000원</p>
+                                                                        <p class="txt">만약, 위 주문에서 다다캐시를 사용하였더라도 동일하게 23,000원으로 집계됩니다.</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -599,14 +599,21 @@
                                                     </div>
                                                     <div class="data_item">
                                                         <div class="name">
-                                                            구매전환율
+                                                            직접판매 매출
                                                             <div class="helper">
                                                                 <span>?</span>
                                                                 <div class="tooltip_box">
                                                                     <div class="info_txt">
-                                                                        <p class="tit_txt">구매전환율</p>
-                                                                        <p class="txt">조회기간 동안 발생한 방문 대비 구매 비율입니다.</p>
-                                                                        <p class="txt">'(구매건수 ÷ 방문수) × 100'으로 계산됩니다.</p>
+                                                                        <p class="tit_txt">상품 공급가 매출금액</p>
+                                                                        <p class="txt">조회기간 동안 발생한 주문의 결제 상품에 대한 공급 금액입니다. 결제 완료된 주문만 집계됩니다. </p>
+                                                                        <p class="txt">모든 결제는 실시간으로 분석되나, 무통장입금 결제는 최대 2시간 후에 반영됩니다. </p>
+                                                                        <p class="txt">예) 1시대에 입금 확인된 주문 → 3시에 조회 시 확인 가능</p>
+                                                                    </div>
+                                                                    <div class="info_txt">
+                                                                        <p class="tit_txt">금액 산정 기준</p>
+                                                                        <p class="txt">상품판매가격에 상관없이 상품 공급가 기준 계산된 금액입니다.</p>
+                                                                        <p class="txt">예) 공급가 10,000원인 상품을 2개 구매하면서 3,000원 쿠폰 사용, 배송비가 3,000원인 주문인 경우 계산식은 (10,000×2)＋3,000원(배송비) = 23,000원</p>
+                                                                        <p class="txt">만약, 위 주문에서 다다캐시를 사용하였더라도 동일하게 23,000원으로 집계됩니다.</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -657,7 +664,6 @@
                                     <div class="item_cont">차트</div>
                                 </div>
                             </div>
-                            <p class="txtInfo">※ 결제금액을 조회기간 별 살펴볼 수 있으며, 평균 차트를 통해 결제금액 트렌드를 살펴볼 수 있습니다.</p>
                         </div>
                     </div>
 
@@ -677,7 +683,7 @@
                                             </div>
                                         </div>
                                         <div class="prd_info_item">
-                                            <div class="item_tit"><span class="name">위탁판매 매출액</span></div>
+                                            <div class="item_tit"><span class="name">상품 판매건수</span></div>
                                             <div class="item_cont">
                                                 <div class="data_sta"><span class="sta">100,000,000</span></div>
                                                 <div class="data_per">(<span class="sta down">10%</span>)</div>
@@ -843,149 +849,6 @@
                                                     <div class="info_dtl">
                                                         <span class="name">상품명 영역</span>
                                                         <span class="price">124,000</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contents_box pd_0">
-                        <div class="rank_chart">
-                            <div class="box_head">
-                                <div class="box_title">판매자 지표</div>
-                            </div>
-                            <div class="box_body bd_0">
-                                <div class="top_rink_list row-3">
-                                    <div class="top_rink_item">
-                                        <div class="item_tit">판매순위 Top 10</div>
-                                        <div class="item_ranking">
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="top_rink_item">
-                                        <div class="item_tit">팔로워 Top 10</div>
-                                        <div class="item_ranking">
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="compare"><span class="sta">+100</span></div>
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="compare"><span class="sta">+100</span></div>
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="compare"><span class="sta">+100</span></div>
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="compare"><span class="sta">+100</span></div>
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="top_rink_item">
-                                        <div class="item_tit">다다딜 판매순위 Top 10</div>
-                                        <div class="item_ranking">
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="compare"><span class="sta">+100</span></div>
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="compare"><span class="sta">+100</span></div>
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="compare"><span class="sta">+100</span></div>
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="top_mem_wrap">
-                                                <div class="rank">1위</div>
-                                                <div class="info">
-                                                    <div class="name"><span class="sta">닉네임(ID)</span></div>
-                                                    <div class="data_box">
-                                                        <div class="compare"><span class="sta">+100</span></div>
-                                                        <div class="price"><span class="sta">9,800,000</span>원</div>
                                                     </div>
                                                 </div>
                                             </div>
