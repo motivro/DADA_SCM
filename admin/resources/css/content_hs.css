@@ -1350,6 +1350,11 @@ h2.type2 .read_more > a:hover:after{}
 .contents_box .panel_body .tbl_wrap.sell_sta .chart_box{margin-top: 20px;}
 .contents_box .panel_body .tbl_wrap.sell_sta .motiv_tbl_box{margin-top: 20px;}
 
+.mallInfo_box{display: flex;align-items: flex-start;gap:20px;margin-top: 15px;}
+.mallInfo_box .shopInfo{width: 30%;max-height: 200px;overflow: hidden;}
+.mallInfo_box .shopInfo .tbl_item{max-height: 200px;overflow-y: auto;}
+.mallInfo_box .tblInfo{flex:1;width: 70%;}
+
 /* 약관 등록 */
 #content.terms .contents_box .srh_btn_box .btn_wrap .btn{width: auto;}
 
