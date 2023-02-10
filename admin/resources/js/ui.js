@@ -291,10 +291,19 @@ dadaLnbMenuSta1 = (profileBoxHeight) => {
             $('#lnb,.ham_menu').removeClass('open');
             $('.nav_item.open').find('.submenu').css('height', submenuHeight);
             $('.wrap #container').removeClass('open');//콘테이너의 padding-left의 값 조정 이벤트 입니다.
+            var ham_menu = setTimeout( function() {
+                $('#lnb').removeAttr('style');
+                clearTimeout(ham_menu);
+            }, 400);
         } else {
             $('#lnb,.ham_menu').addClass('open');
             $('.nav_item.open').find('.submenu').css('height', 0);
             $('.wrap #container').addClass('open');
+
+            var ham_menu = setTimeout( function() {
+                $('#lnb').css('position', 'fixed');
+                clearTimeout(ham_menu);
+            }, 400);
         }
     });
 
@@ -305,6 +314,7 @@ dadaLnbMenuSta1 = (profileBoxHeight) => {
     }, function() {
         if(!$(this).hasClass('open')) return;
         $('.nav_item.open').find('.submenu').css('height', 0);
+
     });
 }
 
