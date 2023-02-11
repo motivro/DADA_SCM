@@ -646,6 +646,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .motiv_tbl.in_image .tbl_inner .hd_item .img_box{max-width: 50px;max-height: 50px;margin: 0 auto;padding:5px 10px;line-height:0;}
 .motiv_tbl.in_image .tbl_inner .hd_item .img_box img{width: 100%;}
 
+
 .motiv_tbl.normal.appoint_seller .tbl_inner .hd_item{flex-grow:1;flex-basis:80px;}
 .motiv_tbl.normal.appoint_seller .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 100px;}
 .motiv_tbl.normal.appoint_seller .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item + .hd_item{flex-basis: 150px;}
