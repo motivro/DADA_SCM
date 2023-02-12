@@ -642,7 +642,7 @@
                                             <option value="100">100개씩 </option>
                                         </select>
                                     </div>
-                                    <span class="icon icon_tbl_cus"></span>
+                                    <span class="icon icon_tbl_cus" onClick="mtvLp.open('cont_lp4')"></span>
                                 </div>
                             </div>
                         </div>
@@ -650,11 +650,12 @@
                         <div class="panel_body">
                             <div class="btn_group d_flex">
                                 <div class="btn_wrap">
-                                    <div class="btn btn_exit">강제종료</div>
-                                    <div class="btn">강제 해지</div>
+                                    <div class="btn btn_exit" onClick="mtvLp.open('cont_lp1')">강제종료</div>
+                                    <div class="btn" onClick="mtvLp.open('cont_lp2')">강제 해지</div>
                                     <div class="btn btn_excelDown">엑셀다운로드</div>
                                 </div>
                             </div>
+
 
                             <div class="tbl_wrap">
                                 <div class='motiv_tbl'>
@@ -790,13 +791,15 @@
                                                         </div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell1'>
-                                                        <div>상품코드</div>
+                                                        <div >
+                                                            <span class="opt_sta"><a href="#none" class="prd_more">상품코드</a></span>
+                                                        </div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell2'>
                                                         <div>자체코드</div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell3'>
-                                                        <div>상품명(옵션수)</div>
+                                                        <div>상품명<span class="opt_sta">(<a href="#none" class="opt_more">옵션수</a>)</span></div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell4'>
                                                         <div>관리명</div>
@@ -879,7 +882,121 @@
                                                     <div class='hd_item' keyname='sell30'>
                                                         <div>수정일</div>
                                                     </div>
+
+                                                    <div class="sub_row row_item">
+                                                        <div class="motiv_tbl normal "> <!-- appoint_sales -->
+                                                            <div class="tbl_inner">
+                                                                
+                                                                <div class="tbl_body">
+                                                                    <div class="row_item row_th d_flex">
+                                                                        <div class="hd_item" keyname="checkedbox">
+                                                                            <div>
+                                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                                    <label for="tbl_head_0" class="inp_box">
+                                                                                        <input type="checkbox" id="tbl_head_0" name="ckb_all">
+                                                                                        <span class="inp_custom"></span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU상품명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션속성명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션값</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>관리코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>공급가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>최초재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>담아간 수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>현재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>판매제안가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>추가금액</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>조회수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>등록날짜</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row_item d_flex" style="width: 1234px;">
+                                                                        <div class="hd_item" keyname="checkedbox">
+                                                                            <div>
+                                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                                    <label for="tbl_head_0" class="inp_box">
+                                                                                        <input type="checkbox" id="tbl_head_0" name="ckb_all">
+                                                                                        <span class="inp_custom"></span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU상품명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션속성명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션값</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>관리코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>공급가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>최초재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>담아간 수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>현재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>판매제안가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>추가금액</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>조회수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>등록날짜</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
+                                                
                                                 <div class='row_item d_flex'>
                                                     <div class='hd_item' keyname='checkedbox'>
                                                         <div>
@@ -892,13 +1009,15 @@
                                                         </div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell1'>
-                                                        <div>상품코드</div>
+                                                        <div>
+                                                            <span class="opt_sta"><a href="#none" class="prd_more">상품코드</a></span>
+                                                        </div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell2'>
                                                         <div>자체코드</div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell3'>
-                                                        <div>상품명(옵션수)</div>
+                                                        <div>상품명<span class="opt_sta">(<a href="#none" class="opt_more">옵션수</a>)</span></div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell4'>
                                                         <div>관리명</div>
@@ -981,6 +1100,170 @@
                                                     <div class='hd_item' keyname='sell30'>
                                                         <div>수정일</div>
                                                     </div>
+
+                                                    <div class="sub_row row_item">
+                                                        <div class="motiv_tbl normal "> <!-- appoint_sales -->
+                                                            <div class="tbl_inner">
+                                                                
+                                                                <div class="tbl_body">
+                                                                    <div class="row_item row_th d_flex">
+                                                                        <div class="hd_item" keyname="checkedbox">
+                                                                            <div>
+                                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                                    <label for="tbl_head_0" class="inp_box">
+                                                                                        <input type="checkbox" id="tbl_head_0" name="ckb_all">
+                                                                                        <span class="inp_custom"></span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU상품명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션속성명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션값</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>관리코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>공급가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>최초재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>담아간 수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>현재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>판매제안가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>추가금액</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>조회수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>등록날짜</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row_item d_flex">
+                                                                        <div class="hd_item" keyname="checkedbox">
+                                                                            <div>
+                                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                                    <label for="tbl_head_0" class="inp_box">
+                                                                                        <input type="checkbox" id="tbl_head_0" name="ckb_all">
+                                                                                        <span class="inp_custom"></span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU상품명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션속성명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션값</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>관리코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>공급가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>최초재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>담아간 수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>현재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>판매제안가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>추가금액</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>조회수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>등록날짜</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row_item d_flex">
+                                                                        <div class="hd_item" keyname="checkedbox">
+                                                                            <div>
+                                                                                <div class="cus_inp_wrap checkbox_inp">
+                                                                                    <label for="tbl_head_0" class="inp_box">
+                                                                                        <input type="checkbox" id="tbl_head_0" name="ckb_all">
+                                                                                        <span class="inp_custom"></span>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>SKU상품명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션속성명</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>옵션값</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>관리코드</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>공급가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>최초재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>담아간 수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>현재고</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>판매제안가</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>추가금액</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>조회수</div>
+                                                                        </div>
+                                                                        <div class="hd_item">
+                                                                            <div>등록날짜</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -1025,7 +1308,7 @@
                                             <option value="100">100개씩 </option>
                                         </select>
                                     </div>
-                                    <span class="icon icon_tbl_cus"></span>
+                                    <span class="icon icon_tbl_cus" onClick="mtvLp.open('cont_lp4')"></span>
                                 </div>
                             </div>
                         </div>
@@ -1033,8 +1316,8 @@
                         <div class="panel_body">
                             <div class="btn_group d_flex">
                                 <div class="btn_wrap">
-                                    <div class="btn btn_exit">강제종료</div>
-                                    <div class="btn">강제 해지</div>
+                                    <div class="btn btn_exit" onClick="mtvLp.open('cont_lp1')">강제종료</div>
+                                    <div class="btn" onClick="mtvLp.open('cont_lp2')">강제 해지</div>
                                     <div class="btn btn_excelDown">엑셀다운로드</div>
                                 </div>
                             </div>
@@ -1080,7 +1363,9 @@
                                                         </div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell1'>
-                                                        <div>상품코드</div>
+                                                        <div>
+                                                            <span class="opt_sta"><a href="#none" class="prd_more">상품코드</a></span>
+                                                        </div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell2'>
                                                         <div>자체코드</div>
@@ -1100,7 +1385,9 @@
                                                         </div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell1'>
-                                                        <div>상품코드</div>
+                                                        <div>
+                                                            <span class="opt_sta"><a href="#none" class="prd_more">상품코드</a></span>
+                                                        </div>
                                                     </div>
                                                     <div class='hd_item' keyname='sell2'>
                                                         <div>자체코드</div>
@@ -1419,89 +1706,71 @@
     </div>
     <!-- wrap E -->
 
-    <style>
-        .dada_lp_wrap{position:fixed;top:0;left:0;width:100%;height:100%;display:none;z-index:1;transition:.3s;opacity:0}
-        .dada_lp_wrap.open{}
-        .dada_lp_wrap.open .dada_alt_body{}
-        .dada_lp_wrap .dada_alt_body{position:absolute;top:50%;left:50%;min-width:500px;max-height:500px;margin-top:-250px;margin-left:-130px;background-color:#fff;z-index:100}
-        .dada_lp_wrap .dada_alt_body .dada_cont{font-size:var(--fts16);font-weight:var(--ftw500);text-align:center;margin:45px 0}
-        .dada_lp_wrap .dada_alt_body .dada_btn_wrap{text-align:center;padding-bottom: 30px;}
-        .dada_lp_wrap .dada_alt_body .dada_btn_wrap .dada_btn{display:inline-block;color:#fff;min-width:120px;height:40px;margin:0 5px;line-height:40px;font-size:var(--fts14);font-weight:var(--ftw500);cursor:pointer}
-        .dada_lp_wrap .dada_alt_body .dada_btn_wrap .dada_btn.co_1{background-color:var(--color1)}
-        .dada_lp_wrap .dada_alt_body .dada_btn_wrap .dada_btn.co_9{background-color:var(--color9)}
-        .dada_close_box{}
-        .dada_close_box:after{content:'';display:block;clear:both;}
-        .dada_close_box .dada_close_btn{position:absolute;top:10px;right:10px;width:25px;height:25px;cursor:pointer}
-        .dada_close_box .dada_close_btn:before, 
-        .dada_close_box .dada_close_btn:after{position:absolute;top:50%;left:50%;content:' ';height:25px;width:2px;background-color:#000;margin-top:-12px}
-        .dada_close_box .dada_close_btn:before {transform: rotate(45deg);}
-        .dada_close_box .dada_close_btn:after {transform: rotate(-45deg);}
-        .dada_lp_wrap .dada_bg{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0, .5)}
+
+    <!--
+        레이어팝업 사용방법
+        mtvLp.init(); 실행시켜 레이어팝업을 인지하게 합니다.
+        구동박식은 .motiv_layer에 아이디로 대상을 찾습니다.
+        일반 알럿과 레이어팝업의 형태는 cont_type값으로 인지하며 cont_type값이 alert 이여야 알럿으로 인지합니다.
+        기본 레이어팝업에는 cont_size를 넣어야하며 값이 없으면 기본 normal로 계산합니다.
+        사이즈는 크게 normal, large, full 3가지 사이즈가 존재합니다.
+        .motiv_layer_bg는 mtvLp.init() 에서 존재하지 않으면 append 합니다.
+    -->
+
+    <!-- 
+        각각의 형태 실행문
+        mtvLp.open('alert1') 
+        mtvLp.close('cont_lp1')
+    -->
 
 
-        .motiv_layer{}
-        .motiv_layer{position:fixed;top:50%;left:50%;z-index:100}
-        .motiv_layer_bg{width:100vw;height:100vh;position:fixed;top:0;left:0;background-color:rgba(0,0,0,.4);z-index:99;}
-        
-        .lp_active{z-index:201}
-        .lp_active_bg{z-index:200}
-
-    </style>
-
-    <div id="sss1" class="dada_lp_wrap">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn mu_close_btn"></div>
-            </div>
-            <div class="dada_cont">
-                정상인 회원은 중지, <br/>
-                중지된 회원은 정상으로 처리합니다.
-            </div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1" onClick="mtvLp.open('pcacme001001_lp09')">확인</div>
-                <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.alertClose('sss1')" >취소</div>
-            </div>
+    <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
         </div>
-    </div> 
-
-
-    <div id="sss2" class="dada_lp_wrap">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn"></div>
-            </div>
-            <div class="dada_cont">
-                정상인 회원은 중지, <br/>
-                중지된 회원은 정상으로 처리합니다.
-            </div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1" onClick="mtvLp.open('pcacme001001_lp09232')">확인</div>
-                <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.alertClose('sss2')">취소</div>
-            </div>
+        <div class="dada_cont">
+            강제종료 시 다다마켓플레이스에 노출되지 않습니다.
         </div>
-    </div> 
-
-    <div id="sss3" class="dada_lp_wrap">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn"></div>
-            </div>
-            <div class="dada_cont">
-                정상인 회원은 중지, <br/>
-                중지된 회원은 정상으로 처리합니다.
-            </div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1"  onClick="mtvLp.open('pcacme001001_lp')">확인</div>
-                <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.alertClose('sss3')">취소</div>
-            </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1">확인</div>
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('alert1')">취소</div>
         </div>
-    </div> 
+    </div>
 
+    <div id="alert2" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn" onClick="mtvLp.close('alert2')"></div>
+        </div>
+        <div class="dada_cont">
+            현재 판매자가 소싱한 상품입니다.<br/>
+             무시하 고 강제종료 하시겠습니까?<br/>
+             (강제종료 시 다다마켓플레이스에 노출되지 않습니다.)
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" >확인</div>
+            <div class="dada_btn co_9 mu_close_btn">취소</div>
+        </div>
+    </div>
 
-    <div id="pcacme001001_lp" class="motiv_layer motiv_layers type1" style="display:none">
+    <div id="alert3" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn" onClick="mtvLp.close('alert3')"></div>
+        </div>
+        <div class="dada_cont">
+            다다딜 상품에 등록된 상품입니다. <br/>
+            무시하 고 강제종료 하시겠습니까?<br/>
+            (강제종료 시 다다마켓플레이스에 노출되지 않습니다.)
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1">확인</div>
+            <div class="dada_btn co_9 mu_close_btn">취소</div>
+        </div>
+    </div>
+
+    <div id="cont_lp1" class="motiv_layer type1" cont_size="normal" style="display:none">
         <div class="layer_head">
             <div class="title">강제종료</div>
-            <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp')"></div>
+            <div class="btn_close" onClick="mtvLp.close('cont_lp1')"></div>
         </div>
         <div class="layer_body">
             <div class="contents_box">
@@ -1580,18 +1849,16 @@
                     </div>
                 </div>
                 <div class="bot_btn_wrap">
-                    <div class="btn">강제종료 처리</div>
+                    <div class="btn" onClick="mtvLp.open('alert1')">강제종료 처리</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="motiv_layer_bg" style="visibility:hidden"></div>
-
-    <div id="pcacme001001_lp09" class="motiv_layer type1" style="margin-top:20px">
+    <div id="cont_lp2" class="motiv_layer type1" cont_size="large" style="display:none">
         <div class="layer_head">
             <div class="title">강제종료 해지</div>
-            <div class="btn_close"></div>
+            <div class="btn_close" onClick="mtvLp.close('cont_lp2')"></div>
         </div>
         <div class="layer_body">
             <div class="contents_box">
@@ -1717,16 +1984,16 @@
                     </div>
                 </div>
                 <div class="bot_btn_wrap">
-                    <div class="btn" onClick="mtvLp.alertOpen('sss2', '테스트 팝업2')">강제종료 해지</div>
+                    <div class="btn">강제종료 해지</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="pcacme001001_lp09232" class="motiv_layer type1 full_cont" style="margin-top:20px">
+    <div id="cont_lp3" class="motiv_layer type1" cont_size="full" style="display:none">
         <div class="layer_head">
             <div class="title">상품상세정보 : <span>상품명</span></div>
-            <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp09232')"></div>
+            <div class="btn_close" onClick="mtvLp.close('cont_lp3')"></div>
         </div>
         <div class="layer_body">
             <div class="contents_box">
@@ -1843,6 +2110,7 @@
                                 <div class="tit">위탁판매 상품</div>
                                 <div class="sub_tit">
                                     <div>등록날짜 : <span>2023-01-01 00:00</span></div>
+                                    <div>상품수정날짜 : <span>2023-01-01 00:00</span></div>
                                 </div>
                             </div>
                             <div class="sect">
@@ -1904,7 +2172,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="sect_tit">상품옵션정보 (<span>00</span>)</div>
+                            <div class="sect_tit d_flex a_c jc_sb"><div class="tit">상품옵션정보 (<span>00</span>)</div><div class="btn btn_md">옵션상품수정</div></div>
                             <div class="sect">
                                 <div id="pcacme001001_3" class="contents_box pd_0">
                                     <div class="panel_body pd_0">
@@ -2032,7 +2300,7 @@
                 <div class="sect">
                     <div class="flex_wrap prd_dtl">
                         <div class="left">
-                            <div class="sect_tit d_flex">위탁판매 상품</div>
+                            <div class="sect_tit d_flex">가격정보</div>
                             <div class="sect">
                                 <div class="motiv_tbl_box name_k pd_0">
                                     <div class="tbl_item">
@@ -2104,7 +2372,7 @@
                             </div>
                         </div>
                         <div class="right">
-                            <div class="sect_tit d_flex">위탁판매 상품</div>
+                            <div class="sect_tit d_flex">배송정보</div>
                             <div class="sect">
                                 <div class="motiv_tbl_box name_k pd_0">
                                     <div class="tbl_item">
@@ -2319,14 +2587,18 @@
                 </div>
 
                 <div class="bot_btn_wrap">
-                    <div class="btn" onClick="mtvLp.alertOpen('sss3', '테스트 팝업3')">강제종료 해지</div>
+                    <div class="btn">강제종료 해지</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="pcacme001001_lp333" class="motiv_layer type2">
-        <div class="btn_close" onClick="mtvLp.close('pcacme001001_lp333')"></div>
+    <div id="cont_lp4" class="motiv_layer type2" cont_size="normal" style="display:none">
+        <div class="layer_head">
+            <div class="title"></div>
+            <div class="btn_close" onClick="mtvLp.close('cont_lp4')"></div>
+        </div>
+
         <div class="layer_body">
             <div class="contents_box">
                 <div class="sect">
@@ -2396,212 +2668,42 @@
                 </div>
 
                 <div class="bot_btn_wrap">
-                    <div class="btn" onClick="mtvLp.alertOpen('sss1', '테스트 팝업1')">저장하기</div>
+                    <div class="btn">저장하기</div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <div class="motiv_layer_bg" style="visibility:hidden" style="display:none"></div>
 
     <script>
+        $(document).ready(() => {
+            mtvLp.init();//
 
-        var mtvLp = {
-            lnbw: $('#lnb').width(),
-            bw: window.innerWidth,
-            bh: window.innerHeight,
-            prevActiveName: '',
-            nowActiveName: '',
-            widthF: .5,
+            selectUi.init();
+            $('#sandbox_container.input-daterange').datepicker({language: "ko"});
+            tFlex.init(testData);//일반적인 스크롤되는 리스트
+            tFlexLock.init(testData1);//일부 고정영역이 있고 스크롤 되는 리스트
+            tFlex.init(pcacme001001_3);//일반적인 스크롤되는 리스트
 
-
-            init: () => {
-
-                var mtv_w1 = mtvLp.bw - mtvLp.lnbw; // 브라우져넓이 빼기 lnb 넓이
-                var mtv_w2 = mtv_w1 / 2
-                var mtv_w3 = mtvLp.lnbw / 2
-                var mtv_w4 = mtv_w2 - mtv_w3
-                
-                $.each( $('.motiv_layer'), function(index, obj){
-
-                    if($('.motiv_layer').eq(index).hasClass('full_cont')){
-                        var full_w = .85;
-                        lp_width = ( (mtvLp.bw - mtvLp.lnbw) * full_w / 2 ) - (mtvLp.lnbw/2);
-
-                        $('.motiv_layer').eq(index).css({
-                            'display': 'none',
-                            'visibility': 'hidden',
-                            'margin-top': -(mtvLp.bh * .8)/2,
-                            'margin-left': -lp_width,
-                            'width': (mtvLp.bw - mtvLp.lnbw) * full_w,
-                            'height': mtvLp.bh * .8,
-                            'overflow':'hidden'
-                        });
-
-                        $('.motiv_layer .layer_body').eq(index).css({
-                            'height': (mtvLp.bh * .8) - $('.layer_head').height(),
-                            'overflow-y':'auto'
-                        });
+            // 레이어팝업 아코디언 메뉴 단순 이벤트 
+            $('.acc_box').each(function(){
+                var accBtn = $(this).children('.acc_tit');
+                $(accBtn).click(function(){
+                    if($(this).closest('.acc_box').hasClass('open')){
+                        $(this).closest('.acc_box').removeClass('open');
                     } else {
-
-                        lp_width = ( (mtvLp.bw - mtvLp.lnbw) * mtvLp.widthF / 2 ) - (mtvLp.lnbw/2);
-
-                        $('.motiv_layer').eq(index).css({
-                            'display': 'none',
-                            'visibility': 'hidden',
-                            'margin-top': -$('.motiv_layer').eq(index).height()/2,
-                            'margin-left': -lp_width,
-                            'width': (mtvLp.bw - mtvLp.lnbw) * mtvLp.widthF,
-                        });
+                        $(this).closest('.acc_box').addClass('open');
                     }
-                    
-                    
-                    
-                    $('.motiv_layer').eq(index).attr({
-                        'cont_w': $('.motiv_layer').eq(index).width(),
-                        'cont_h': $('.motiv_layer').eq(index).height(),
-                        'm_top': $('.motiv_layer').eq(index).height(),
-                        'm_left': $('.motiv_layer').eq(index).height(),
-                    })
-                })
-            },
-
-            open: (id) => {
-                console.log(mtvLp)
-                if(mtvLp.prevActiveName != ''){
-                    $('#'+id).attr('prep_name', mtvLp.prevActiveName);
-                    mtvLp.prevActiveName = mtvLp.nowActiveName;
-                }
-                mtvLp.nowActiveName = id;
-                $('#'+id).css({
-                    'display': 'block',
-                    'visibility': 'visible'
-                }).addClass('lp_active');
-                $('.motiv_layer_bg').css({'visibility': 'visible'}).addClass('lp_active_bg')
-            },
-
-            close: (id) => {
-                $('#'+id).css({
-                    'display': 'none',
-                    'visibility': 'hidden'
-                })
-                
-                if(mtvLp.prevActiveName == ''){
-                    mtvLp.nowActiveName = '';
-                    $('.motiv_layer_bg').css({'visibility': 'hidden'});
-                } else {
-                    $('#'+mtvLp.nowActiveName).attr('prep_name', '');
-                    mtvLp.nowActiveName = mtvLp.prevActiveName;
-                    if( $('#'+mtvLp.prevActiveName).attr('prep_name') != undefined){
-                        mtvLp.prevActiveName = $('#'+mtvLp.prevActiveName).attr('prep_name');
-                    } else {
-                        mtvLp.prevActiveName = '';
-                    }
-                    $('#'+mtvLp.nowActiveName).addClass('lp_active');
-                }
-                
-                
-                $('#'+id).removeClass('lp_active');
-
-                // $('.motiv_layer_bg').css({'visibility': 'hidden'});
-            },
-
-            change: () => {
-
-            },
-
-            alertOpen: (id, text) => {
-                mtvLp.prevActiveName = mtvLp.nowActiveName;
-                mtvLp.nowActiveName = id;
-                if(mtvLp.prevActiveName != ''){
-                    $('#'+id).attr('prep_name', mtvLp.prevActiveName);
-                }
-
-                console.log(mtvLp)
-                var target = mtvLp.targetCk(id);
-                $(target+' .dada_cont').html(text);
-                $(target).show().css({
-                    'visibility': 'hidden',
                 });
-                $('div').removeClass('lp_active');
+            });
 
-                $(target).addClass('lp_active')
-                var mtvLpOpen = setTimeout( function() {
-                    $(target).show().css({
-                        'visibility': 'visible',
-                        'opacity': '1',
-                    });
-                    clearTimeout(mtvLpOpen);
-                }, 100);
+            $('.prd_more').click(function(){
+                mtvLp.open('cont_lp3');
+            });
 
-            },
-
-            alertClose: (id) => {
-                var target = mtvLp.targetCk(id);
-                $(target).css({'opacity': '0'});
-
-                $('#'+mtvLp.nowActiveName).attr('prep_name', '');
-                mtvLp.nowActiveName = mtvLp.prevActiveName;
-                if( $('#'+mtvLp.prevActiveName).attr('prep_name') != undefined){
-                    mtvLp.prevActiveName = $('#'+mtvLp.prevActiveName).attr('prep_name');
-                } else {
-                    mtvLp.prevActiveName = '';
-                }
-
-                var mtvLpClose = setTimeout( function() {
-                    $(target).hide();
-                    $('#'+mtvLp.nowActiveName).addClass('lp_active');
-                    $(target).removeClass('lp_active');
-                    clearTimeout(mtvLpClose);
-                }, 100);
-            },
-
-            targetCk: (id) => {
-                return id == undefined ? '.dada_lp_wrap': '#'+id+'.dada_lp_wrap';
-            },
-
-            
-        }
-        mtvLp.init();
-
-        /* 공용 알럿 */
-        var dadaAlert = {
-            open: (id, text) => {
-                var target = dadaAlert.targetCk(id);
-                $(target+' .dada_cont').html(text);
-
-                $(target).show().css({
-                    'visibility': 'hidden',
-                });
-
-                var dadaAlertOpen = setTimeout( function() {
-                    $(target).show().css({
-                        'visibility': 'visible',
-                        'opacity': '1',
-                    });
-                    clearTimeout(dadaAlertOpen);
-                }, 100);
-
-                //닫기 이벤트 활성화
-                $(target+' .dada_close_btn').click( () => { dadaAlert.close(id); });
-            },
-
-            close: (id) => {
-                var target = dadaAlert.targetCk(id);
-                $(target).css({
-                    'opacity': '0',
-                });
-                var dadaAlertClose = setTimeout( function() {
-                    $(target).hide();
-                    clearTimeout(dadaAlertClose);
-                }, 100);
-            },
-
-            targetCk: (id) => {
-                return id == undefined ? '.dada_lp_wrap': '#'+id+'.dada_lp_wrap';
-            }
-        }
-
-
-
+        });
+        
         var testData = { // 변수명은 변경이 가능합니다.
             id: 'pcacme001001_1',
             tableSize: { // tableSize 변수명은 변경되면 안됨니다.
@@ -2695,30 +2797,6 @@
                 sell11: 100,
             },
         }
-
-        $(document).ready(() => {
-            $('#sandbox_container.input-daterange').datepicker({language: "ko"});
-
-            tFlex.init(testData);//일반적인 스크롤되는 리스트
-            tFlexLock.init(testData1);//일부 고정영역이 있고 스크롤 되는 리스트
-            tFlex.init(pcacme001001_3);//일반적인 스크롤되는 리스트
-
-
-            // 레이어팝업 아코디언 메뉴 단순 이벤트 
-            $('.acc_box').each(function(){
-                var accBtn = $(this).children('.acc_tit');
-                $(accBtn).click(function(){
-                    if($(this).closest('.acc_box').hasClass('open')){
-                        $(this).closest('.acc_box').removeClass('open');
-                    } else {
-                        $(this).closest('.acc_box').addClass('open');
-                    }
-                });
-            });
-        });
-
-        selectUi.init();
-
     </script>
 </body>
 
