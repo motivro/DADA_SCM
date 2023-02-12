@@ -1237,7 +1237,8 @@ h2.type2 .read_more > a:hover:after{}
 .detail_review .review_more .icon_box .icon_recom{width: 15px;height: 15px;background-image: url('../images/common/icon_recom.svg');background-repeat: no-repeat;background-position: center;background-size: 15px;}
 .detail_review .review_more .icon_box > span{font-size: var(--fts14);font-weight: var(--ftw500);color: var(--color14);}
 
-.detail_area .dtl_opt_box{width:230px;border: var(--box_border);}
+.detail_area .dtl_opt_box{width:230px;border: var(--box_border);position:relative}
+.detail_area .dtl_opt_box .btn_wrap{position:absolute;bottom:0;width:100%}
 .detail_area .dtl_opt_box .box_tit{display: flex;justify-content: center;padding: 15px 0;background: var(--color24);border-bottom: var(--box_border);}
 .detail_area .dtl_opt_box .box_tit > span{font-size: var(--fts14);font-weight: var(--ftw500);color: var(--14);}
 
