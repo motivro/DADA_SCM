@@ -2,15 +2,17 @@
 var tFlex = {
     ckbSize: 40,
     init: (obj) => {
+        obj.ckbSize = 40;
         //체크박스 유무 확인을 합니다.
         if($('#'+ obj.id +' .motiv_tbl .hd_item[keyname=checkedbox]').length == 0){
-            //체크박스가 없다면 tFlex.ckbSize 을 0으로 변경합니다.
-            tFlex.ckbSize = 0;
+            //체크박스가 없다면 obj.ckbSize 을 0으로 변경합니다.
+            obj.ckbSize = 0;
         } else {
-            $('#'+ obj.id +' .motiv_tbl .hd_item[keyname=checkedbox]').css('width', tFlex.ckbSize+'px');
+            $('#'+ obj.id +' .motiv_tbl .hd_item[keyname=checkedbox]').css('width', obj.ckbSize+'px');
         }
+
         //전체 데이터의 넓이를 구하기 시작합니다.
-        obj.totalSize = tFlex.ckbSize; 
+        obj.totalSize = obj.ckbSize; 
         //순차적으로 값을 계산하기 위해 Promise를 사용합니다.
         Promise.resolve()
         .then(() => {
@@ -22,7 +24,7 @@ var tFlex = {
             //데이터의 전체 넓이가 테이블의 넓이보다 작을 경우에 각 데이터의 넓이를 테이블의 넓이에 맞게 변경합니다.
             if($('#'+ obj.id).find('.tbl_inner').width() > obj.totalSize){
                 //전체 데이터의 넓이를 다시 구하기 시작합니다.
-                var reTotalSize = tFlex.ckbSize;
+                var reTotalSize = obj.ckbSize;
                 //테이블의 넓이와 데이터 넓이를 뺀 값에 데이터 갯수를 나눠 데이터 각각에 나눠주기 위한 값을 계산합니다.
                 reSize = ($('#'+ obj.id).find('.tbl_inner').width() - obj.totalSize) / Object.keys(obj.tableSize).length;
                 $.each( obj.tableSize, (name, val) => {
@@ -88,7 +90,7 @@ var tFlex = {
     reSizeChange: (obj) => {
         reSize = 0;
         if($('#'+ obj.id).find('.tbl_inner').width() > obj.totalSize){
-            var reTotalSize = tFlex.ckbSize;
+            var reTotalSize = obj.ckbSize;
             reSize = ($('#'+ obj.id).find('.tbl_inner').width() - obj.totalSize) / Object.keys(obj.tableSize).length;
             $.each( obj.tableSize, (name, size) => {
                 obj.tableSize[name] = size + reSize;
@@ -133,14 +135,15 @@ var tFlex = {
 var tFlexLock = {
     ckbSize: 40,
     init: (obj) => {
+        obj.ckbSize = 40;
         //체크박스 유무 확인을 합니다.
         if($('#'+ obj.id +' .motiv_tbl .hd_item[keyname=checkedbox]').length == 0){
-            tFlexLock.ckbSize = 0;
+            obj.ckbSize = 0;
         } else {
-            $('#'+ obj.id +' .motiv_tbl .hd_item[keyname=checkedbox]').css('width', tFlexLock.ckbSize+'px');
+            $('#'+ obj.id +' .motiv_tbl .hd_item[keyname=checkedbox]').css('width', obj.ckbSize+'px');
         }
         //전체 데이터의 넓이를 구하기 시작합니다.
-        obj.totalSize = tFlexLock.ckbSize; 
+        obj.totalSize = obj.ckbSize; 
         var motivTblW = 0;
         var scrollRowSize = 0;
         var scrollRowBoxSize = 0;
@@ -175,7 +178,7 @@ var tFlexLock = {
             });
             
             //고정되는 리스트의 넓이를 구합니다.
-            obj.scrollLookSize = tFlexLock.ckbSize;
+            obj.scrollLookSize = obj.ckbSize;
             $.each( obj.scrollLook, (index, name) => {
                 obj.scrollLookSize = obj.scrollLookSize + obj.tableSize[name];
                 //스크롤 리스트의 데이터 객체만 변수에 저장합니다.
@@ -190,6 +193,36 @@ var tFlexLock = {
             scrollRowSize = obj.totalSize - obj.scrollLookSize;
             scrollRowBoxSize = motivTblW - obj.scrollLookSize;
             reSize = 0;//사이즈를 다시 체크하기 위한 여비 변수 입니다.
+
+            $.each( $('#'+ obj.id +' .motiv_tbl .look_body_box > .row_item'), (index, size) => {
+                var sub_row = $('#'+ obj.id +' .motiv_tbl .look_body_box > .row_item').eq(index);
+
+                if(sub_row.find('.sub_row').length > 0){
+                    var nor_h = Number(sub_row.attr('nor_h')) + Number(sub_row.find('.sub_row .motiv_tbl').outerHeight());
+                    sub_row.attr('cont_h', nor_h);
+                    sub_row.find('.sub_row').attr('cont_h', sub_row.find('.sub_row .motiv_tbl').outerHeight());
+
+                    $('#'+ obj.id +' .motiv_tbl').find('.opt_more').click(function(){
+                        var row_num = $(this).closest('.row_item').attr('row_num')
+                        var sub_row_target = $('#'+ obj.id +' .motiv_tbl .look_body_box > .row_item[row_num='+row_num+']');
+                        var subhead_row_target = $('#'+ obj.id +' .motiv_tbl .look_body_head > .row_item[row_num='+row_num+']');
+                        var row_sub_row = sub_row_target.find('.sub_row');
+                        
+                        if($(this).hasClass('sub_open')){
+                            $(this).removeClass('sub_open');
+                            sub_row_target.css({'padding-bottom':0});
+                            subhead_row_target.css({'padding-bottom': 0})
+                            row_sub_row.css('height', 0);
+                        } else {
+                            $(this).addClass('sub_open');
+                            console.log(row_sub_row.attr('cont_h'))
+                            sub_row_target.css({'padding-bottom': sub_row_target.attr('cont_h') +'px'});
+                            subhead_row_target.css({'padding-bottom': sub_row_target.attr('cont_h') +'px'});
+                            row_sub_row.css('height', row_sub_row.attr('cont_h') );
+                        }
+                    })
+                };
+            });
 
             if(($('#'+ obj.id).find('.tbl_inner').width() - obj.scrollLookSize) > scrollRowSize){
                 obj.staVal = true;
@@ -362,7 +395,7 @@ var tFlexLock = {
         $.each( $('#'+ obj.id).find('.'+ name + ' .row_item'), (index, object) => {
             var rowCont = $('div[row_num='+index+']');
             var rowContHeight = rowCont.eq(0).height() > rowCont.eq(1).height() ? rowCont.eq(0).height() : rowCont.eq(1).height();
-            rowCont.css('height', rowContHeight);
+            rowCont.css('height', rowContHeight).attr('nor_h', rowContHeight);
         });
     },
 }
