@@ -247,6 +247,9 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #lnb .lnb_menu .nav_list .nav_item .submenu{max-height: 0;overflow: hidden;padding-left: 7px;}
 .wrap.complete #lnb .lnb_menu .nav_list .nav_item .submenu{transition:.5s}
 
+#lnb .lnb_menu .nav_list .nav_item.active .nav_menu{    color: var(--color1);}
+
+
 #lnb .lnb_menu .nav_list .nav_item .submenu .sub_item{margin-top:14px;font-size:14px;font-weight:500;color: #959595;transition: color .3s;}
 #lnb .lnb_menu .nav_list .nav_item .submenu .sub_item:hover{color: var(--color1);}
 #lnb .lnb_menu .nav_list .nav_item .submenu .sub_item.active a{color:var(--color1);text-decoration:underlind}

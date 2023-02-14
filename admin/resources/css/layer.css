@@ -435,7 +435,7 @@ h2 + .motiv_layer{position:static!important;opacity:1!important;visibility:visib
 .motiv_layer .data_flex_box .data_left .data_box{display: flex;flex-direction: column;gap: 20px;}
 .motiv_layer .data_flex_box .data_left .data_box .top_area .inp_wrap{flex: 1;}
 .motiv_layer .data_flex_box .data_left .data_box .data_item + .data_item{margin-top: 5px;}
-.motiv_layer .data_flex_box .data_left .data_box .data_item.dataNone{display: flex;justify-content: center;align-items: center;}
+.motiv_layer .data_flex_box .data_left .data_box .data_item.dataNone{display: flex;justify-content: center;align-items: center;border: solid 1px #ddd;border-radius: 10px;margin-top: 10%;background-color: #fff;}
 .motiv_layer .data_flex_box .data_left .data_box .data_item.dataNone > div{padding: 30px 0;}
 
 

@@ -1090,12 +1090,10 @@
                                                 <td colspan="3"><div>[<span class="prd_code">상품 코드</span>] <span>상품단위명</span></div></td>
                                             </tr>
                                             <tr>
-                                                <th><div class="d_flex a_c gap5 jc_c"><div>상품태그</div><div class="btn btn_sm">추가</div></div></th>
+                                                <th><div class="d_flex a_c gap5 jc_c"><div>상품태그</div><div class="btn btn_sm tag_add">추가</div></div></th>
                                                 <td colspan="3">
-                                                    <div class="btn_wrap prd_tag">
-                                                        <div class="btn btn_sm"><span>태그명</span><span class="tag_close"></span></div>
-                                                        <div class="btn btn_sm"><span>태그명</span><span class="tag_close"></span></div>
-                                                    </div>
+                                                    <input type="text" id="prd_tag_input" size="20" placeholder="상품태그를 입력해 주세요." style="display:none"/>
+                                                    <div id="prd_tag" class="btn_wrap prd_tag"></div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -1121,9 +1119,10 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="sect mgt_0">
                             <div class="contents_box pd_0">
-                                <div class="panel_body">
+                                <div class="panel_body pd_0">
                                     <div class="tbl_wrap cus_height">
                                         <div class="motiv_tbl normal layer_type2">
                                             <div class="tbl_inner">
@@ -1735,6 +1734,19 @@
     </div>
     <!-- 레이어팝업 E -->
 
+    <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
+        </div>
+        <div class="dada_cont">
+            태그값이 중복됩니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1">확인</div>
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('alert1')">취소</div>
+        </div>
+    </div>
+
     <script>
         var pcacme004001_1 = {
             id: "pcacme004001_1",
@@ -1776,6 +1788,73 @@
             },
         }
 
+        $('.tag_add').click(function(){
+            prd_tag.init();
+        })
+
+        var prd_tag = {
+            tag: {},
+            
+            init: () => {
+                $('#prd_tag_input').show();
+                prd_tag.dynamicTag();
+            },
+
+            dynamicTag: () => {
+                var counter = 0;
+                // 태그를 추가한다.
+                function addTag(value) {
+                    prd_tag.tag[counter] = value; // 태그를 Object 안에 추가 합니다.
+                    counter++; // counter 증가 삭제를 위한 tag_close 의 고유 id 가 됩니다.
+                }
+
+                // 최종적으로 서버에 넘길때 tag 안에 있는 값을 array type 으로 만들어서 넘깁니다.
+                function marginTag() {
+                    return Object
+                        .values(prd_tag.tag)
+                        .filter(function (word) {
+                            return word !== "";
+                        });
+                }
+
+                $("#prd_tag_input").on("keyup", function (e) {
+                    var self = $(this);
+                    // input 에 focus 되있을 때 엔터 및 스페이스바 입력시 구동됨니다.
+                    if (e.key === "Enter" || e.keyCode == 32) {
+                        var tagValue = self.val(); // 값 가져오기
+                        // 값이 없으면 동작 안합니다.
+                        if (tagValue !== "") {
+                            // 같은 태그가 있는지 검사합니다.
+                            // 있다면 해당값이 array 로 return 됨니다.
+                            var result = Object
+                                .values(prd_tag.tag)
+                                .filter(function (word) {
+                                    return word === tagValue;
+                                })
+
+                            // 태그 중복 검사
+                            if (result.length == 0) {
+                                $("#prd_tag").append("<div class='btn btn_sm'><span>" + tagValue + "</span><span class='tag_close' idx='" + counter +"'></span></div>");
+                                addTag(tagValue);
+                                self.val("");
+                            } else {
+                                self.val("");
+                                alert("태그값이 중복됩니다.");
+                                // mtvLp.open('alert1');
+                            }
+                        }
+                        e.preventDefault(); // SpaceBar 시 빈공간이 생기지 않도록 방지합니다.
+                    }
+                });
+                // 삭제 버튼 삭제 버튼은 비동기적 생성이므로 document 최초 생성시가 아닌 검색을 통해 이벤트를 구현시킵니다.
+                $(document).on("click", ".tag_close", function (e) {
+                    var index = $(this).attr("idx");
+                    prd_tag.tag[index] = "";
+                    $(this).parent().remove();
+                });
+            }
+        }
+                            
         $(document).ready(() => {
             $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
             tFlex.init(pcacme004001_1);
