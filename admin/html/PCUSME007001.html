@@ -481,34 +481,7 @@
                     <div class="contents_box">
                         <div class="srh_box">
                             <div class="srh_item">
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">판매자</div>
-                                    <div class="srh_cont">
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="ID, 닉네임" style="width:210px"></div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="srh_item">
-                                <div class="srh_item_inner">
-                                    <div class="srh_title">주문번호</div>
-                                    <div class="srh_cont">
-                                        <div class="radio_wrap motiv_radio">
-                                            <label for="2-1" class="radio_btn">주문번호
-                                                <input type="radio" id="2-1" name="ord_sta" checked>
-                                                <span class="radio_custom"></span>
-                                            </label>
-                                            <label for="2-2" class="radio_btn">상품주문번호
-                                                <input type="radio" id="2-2" name="ord_sta">
-                                                <span class="radio_custom"></span>
-                                            </label>
-                                        </div>
-                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품주문번호"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="srh_item">
                                 <div class="srh_item_inner">
                                     <div class="srh_title">정산조회기간</div>
                                     <div class="srh_cont">
@@ -528,9 +501,16 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">판매자</div>
+                                    <div class="srh_cont">
+                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="ID, 닉네임" style="width:210px"></div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="srh_item">
+                            <div class="srh_item row-2">
                                 <div class="srh_item_inner">
                                     <div class="srh_title">상품유형</div>
                                     <div class="srh_cont">
@@ -546,8 +526,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="srh_item">
+
                                 <div class="srh_item_inner">
                                     <div class="srh_title">정산진행</div>
                                     <div class="srh_cont">
@@ -567,6 +546,12 @@
                                         </div>
                                     </div>
                                 </div>
+                                
+                            </div>
+
+                        
+                            <div class="srh_item row-2">
+                                
                                 <div class="srh_item_inner">
                                     <div class="srh_title">정산지급</div>
                                     <div class="srh_cont">
@@ -588,6 +573,23 @@
                                                 <span class="radio_custom"></span>
                                             </label>
                                         </div>
+                                    </div>
+                                </div>
+
+                                <div class="srh_item_inner">
+                                    <div class="srh_title">주문번호</div>
+                                    <div class="srh_cont">
+                                        <div class="radio_wrap motiv_radio">
+                                            <label for="2-1" class="radio_btn">주문번호
+                                                <input type="radio" id="2-1" name="ord_sta" checked>
+                                                <span class="radio_custom"></span>
+                                            </label>
+                                            <label for="2-2" class="radio_btn">상품주문번호
+                                                <input type="radio" id="2-2" name="ord_sta">
+                                                <span class="radio_custom"></span>
+                                            </label>
+                                        </div>
+                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품주문번호"></div>
                                     </div>
                                 </div>
                             </div>
@@ -1396,7 +1398,7 @@
                 <div class="sect">
                     <div class="panel_body">
                         <div class="tbl_wrap pd_0 cus_height bd_0">
-                            <div class="motiv_tbl_box name_k">
+                            <div class="motiv_tbl_box pd_0 name_k">
                                 <div class="motiv_tbl normal basic">
                                     <div class="tbl_inner">
                                         <div class="tbl_head">
@@ -1462,6 +1464,18 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect">
+                    <div class="info_cont">
+                        <div class="sub_info_box">
+                            <p class="txt_info">※ (a) 다다몰 수수료 계산 : 판매가격 * 수수료</p>
+                            <p class="txt_info">※ (b) 다다SCM 수수료 계산 : 공급가격 * 수수료</p>
+                            <p class="txt_info">ㅁ※ (c) 다다딜 위탁판매 수수료 계산 : 판매가격 * 판매자 수수료(공급사가 지급할 수수료)ㅇㅁㄴㅇㅁㄴㅇ</p>
+                            <p class="txt_info">※ (d) 다다딜 직접판매 수수료 계산 : 공급가격 * SCM수수료 + 판매가격 * 다다몰 수수료다다딜 위탁판매 판매가 ※ 결제수수료 : PG 사로부터 설정된 수수료를 의미</p>
+                            <p class="txt_info">※ 판매상품가(판매가)격 : PG 수수료 및 배송비를 제외한 상품판매가격을 의미</p>
+                            <p class="txt_info">※ 상계처리는 정산금액보다 수수료가 더 많을 때 “-”처리되며, 결제 비용</p>
                         </div>
                     </div>
                 </div>

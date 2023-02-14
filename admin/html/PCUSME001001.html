@@ -650,8 +650,24 @@
                         <div class="panel_body">
                             <div class="btn_group d_flex">
                                 <div class="btn_wrap">
-                                    <div class="btn btn_exit" onClick="mtvLp.open('cont_lp1')">강제종료</div>
-                                    <div class="btn" onClick="mtvLp.open('cont_lp2')">강제 해지</div>
+
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="판매" selected>판매 </option>
+                                            <option value="품절">품절 </option>
+                                            <option value="단종">단종 </option>
+                                            <option value="중지">중지 </option>
+                                        </select>
+                                    </div>
+                                    <div class="select_wrap">
+                                        <select>
+                                            <option value="진열중" selected>진열중 </option>
+                                            <option value="진열중지">진열중지 </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="btn btn_exit">삭제</div>
+                                    <div class="btn">상품등록</div>
                                     <div class="btn btn_excelDown">엑셀다운로드</div>
                                 </div>
                             </div>

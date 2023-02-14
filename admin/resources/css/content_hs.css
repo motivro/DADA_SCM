@@ -1360,7 +1360,7 @@ h2.type2 .read_more > a:hover:after{}
 .mallInfo_box .shopInfo{width: 30%;max-height: 200px;overflow: hidden;}
 .mallInfo_box .shopInfo .tbl_item{max-height: 200px;overflow-y: auto;}
 .mallInfo_box .tblInfo{flex:1;width: 70%;}
-
+.mallInfo_box .tblInfo .motiv_tbl .tbl_inner{max-height:200px}
 /* 약관 등록 */
 #content.terms .contents_box .srh_btn_box .btn_wrap .btn{width: auto;}
 
