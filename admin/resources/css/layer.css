@@ -6,13 +6,16 @@
 .motiv_layer .bold{font-weight: var(--ftw700);}
 .motiv_layer .txt_success{color: var(--color3);}
 .motiv_layer .txt_fail{color: var(--color1);}
+.mgt_20{margin-top: 20px !important;}
 
 /* select_custom S */
-.select_wrap.size_sm{width: 100px;}
-.select_wrap.size_md{width: 150px;}
+.select_wrap.size_sm{width: 100px !important;}
+.select_wrap.size_md{width: 150px !important;}
 .select_wrap.size_lg{width:210px}
 .inp_wrap.size_md{width: 150px;}
 .inp_wrap.size_lg{width:210px}
+.lock_tbl .hd_item .inp_wrap{padding: 5px 0 !important;}
+.lock_tbl .hd_item .inp_wrap input[type="text"]{height: 30px;line-height: 28px;}
 
 .motiv_layer .select_wrap select{display:none}
 .motiv_layer .select_wrap .select_box{min-width:90px;width:100%;padding:9px 10px;background:#fff;border: var(--cont_border);position: relative;}
@@ -186,6 +189,9 @@
 .motiv_layer .flex_wrap.seller_info.type2 .left .select_box{border-radius: 5px;}
 .motiv_layer .seller_info.type2 .seller_dtl{height:100%;justify-content: space-between;}
 
+.motiv_layer .flex_wrap.seller_info.type2 .row-1-2.type2{}
+.motiv_layer .flex_wrap.seller_info.type2 .row-1-2.type2 .inp_wrap:last-child{width: 66.66%;}
+
 .motiv_layer .seller_info .dtl_info{border: var(--cont_border);padding: 30px 14px;text-align: center}
 .motiv_layer .seller_info .dtl_info .info_name{font-size: var(--fts12);font-weight: var(--ftw500);color: #000;}
 .motiv_layer .seller_info .dtl_info .btn{margin-top: 5px;font-size: var(--fts12);font-weight: var(--ftw500);}
@@ -204,6 +210,8 @@
 .motiv_layer .inp_row.row-2-1 #sandbox_container .inp_wrap input{text-align: left;}
 .motiv_layer .inp_wrap input[type="text"]{border: var(--box_border);padding: 5px 10px;font-size: var(--fts13);font-weight: 500;line-height: 18px;}
 .motiv_layer .inp_wrap input[type="text"].ta_r{text-align: right;}
+.motiv_layer .inp_wrap.type_flex{width:100% !important;display: flex;align-items: center;gap: 8px;}
+.motiv_layer .inp_wrap.type_flex > div{flex: 1;width: 100% !important;}
 
 .motiv_layer .sect.bd_top{margin-top: 30px;padding-top: 15px;border-top: var(--box_border);}
 .motiv_layer .flex_wrap.prd_dtl_img{display: flex;gap: 40px;}
@@ -418,3 +426,22 @@ h2 + .motiv_layer{position:static!important;opacity:1!important;visibility:visib
 .motiv_tbl.normal.re_his .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item{flex-grow: 0;flex-basis: 120px;}
 
 .motiv_normal_tbl.question .txt_list{display: flex;flex-direction: column;justify-content: flex-start;align-items: flex-start;}
+
+.motiv_tbl .tbl_body .hd_item .flex_item .inp_wrap.size_md{padding:0;flex-basis:120px;flex-grow: 0;width: auto;}
+.motiv_tbl .tbl_body .hd_item .flex_item .inp_wrap.size_md input[type="text"]{height: 30px;padding: 0 10px;line-height:28px;box-sizing: border-box;}
+
+.motiv_layer .data_flex_box{display: flex;align-items: stretch;gap: 20px;}
+.motiv_layer .data_flex_box .data_left{width: 400px;padding: 15px;border: var(--box_border);background: var(--color16);}
+.motiv_layer .data_flex_box .data_left .data_box{display: flex;flex-direction: column;gap: 20px;}
+.motiv_layer .data_flex_box .data_left .data_box .top_area .inp_wrap{flex: 1;}
+.motiv_layer .data_flex_box .data_left .data_box .data_item + .data_item{margin-top: 5px;}
+.motiv_layer .data_flex_box .data_left .data_box .data_item.dataNone{display: flex;justify-content: center;align-items: center;}
+.motiv_layer .data_flex_box .data_left .data_box .data_item.dataNone > div{padding: 30px 0;}
+
+
+.motiv_layer .data_flex_box .data_right{width: calc(100% - 420px);padding: 15px;border: var(--box_border);}
+
+.motiv_layer .cate_match_tbl .select_wrap{flex: 1;}
+.motiv_layer .cateSelectBtn{width: 40px;height: 40px;border: var(--box_border);position: relative;}
+.motiv_layer .cateSelectBtn .icon_arrow{border: solid var(--color5);border-width: 0 2px 2px 0;display: inline-block;padding: 4px 4px 2px 2px;position: absolute;top: 50%;left: 50%;margin-left:-5px;transition: .5s;transform-origin: center;transform: rotate(45deg) translate(-50%,-50%);}
+.motiv_layer .cateSelectBtn.active .icon_arrow{margin-top:-2px;transform: rotate(-135deg);}

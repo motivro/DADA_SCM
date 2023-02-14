@@ -19,6 +19,12 @@
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
+    
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
 
 <body>
@@ -1553,11 +1559,259 @@
             </div>
         </div>
     </div>
+    <div class="motiv_layer type1">
+        <div class="layer_head">
+            <div class="title">다다딜 상품판매보고서</div>
+            <div class="btn_close"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="data_flex_box">
+                    <div class="data_left">
+                        <div class="sect_tit">다다딜 판매상품 검색</div>
+                        <div class="sect">
+                            <div class="data_box">
+                                <div class="top_area d_flex a_c gap10">
+                                    <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
+                                    <div class="btn btn_search">검색</div>
+                                </div>
+                                <div class="bot_area">
+                                    <div class="data_list">
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item dataNone"><div>검색된 상품이 없습니다.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data_right">
+                        <div class="sect_tit d_flex a_c jc_sb">
+                            <div class="tit">[상품코드] 상품명1</div>
+                            <div class="desc d_flex a_c gap10">
+                                <div class="inp_wrap">
+                                    <div id="sandbox_container" class="input-group date">
+                                        <input type="text" class="form-control" placeholder=""><span class="input-group-addon"></span>
+                                    </div>
+                                </div>
+                                <div class="btn btn_search">검색</div>
+                            </div>
+                        </div>
+                        <div class="sect">
+                            <div class="statis_box">
+                                <div class="statis_list">
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container1"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container2"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container3"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container4"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="motiv_layer type1">
+        <div class="layer_head">
+            <div class="title">다다딜 상품판매보고서 통계</div>
+            <div class="btn_close"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="data_flex_box">
+                    <div class="data_left">
+                        <div class="sect_tit">다다딜 판매상품 검색</div>
+                        <div class="sect">
+                            <div class="data_box">
+                                <div class="top_area d_flex a_c gap10">
+                                    <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
+                                    <div class="btn btn_search">검색</div>
+                                </div>
+                                <div class="bot_area">
+                                    <div class="data_list">
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item dataNone"><div>검색된 상품이 없습니다.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data_right">
+                        <div class="sect_tit d_flex a_c jc_sb">
+                            <div class="tit">[상품코드] 상품명1</div>
+                            <div class="desc d_flex a_c gap10">
+                                <div class="inp_wrap">
+                                    <div id="sandbox_container" class="input-group date">
+                                        <input type="text" class="form-control" placeholder=""><span class="input-group-addon"></span>
+                                    </div>
+                                </div>
+                                <div class="btn btn_search">검색</div>
+                            </div>
+                        </div>
+                        <div class="sect">
+                            <div class="statis_box">
+                                <div class="statis_list">
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container5"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container6"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect">
+                            <!-- tableList S -->
+                            <div id="pcacme002004_2" class="contents_box bd_none pd_0 bd_0">
+                                <div class="panel_body">
+                                    <div class="tbl_wrap">
+                                        <div class='motiv_tbl'>
+                                            <div class='tbl_inner'>
+                                                <div class='tbl_body'>
+                                                    <div class='look_body_box'>
+                                                        <div class='row_item row_th d_flex'>
+                                                            <div class='hd_item' keyname='sell1'>
+                                                                <div>판매날짜</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell2'>
+                                                                <div>옵션코드</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell3'>
+                                                                <div>상품옵션</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell4'>
+                                                                <div>판매가</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell5'>
+                                                                <div>판매수량</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell6'>
+                                                                <div>매출금액</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class='row_item d_flex'>
+                                                            <div class='hd_item' keyname='sell1'>
+                                                                <div>2023-01-01 00:00:00</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell2'>
+                                                                <div>옵션코드</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell3'>
+                                                                <div>옵션상품</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell4'>
+                                                                <div>판매가</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell5'>
+                                                                <div>00</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell6'>
+                                                                <div>판매가*수량</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class='row_item d_flex'>
+                                                            <div class='hd_item' keyname='sell1'>
+                                                                <div>2023-01-01 00:00:00</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell2'>
+                                                                <div>옵션코드</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell3'>
+                                                                <div>옵션상품</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell4'>
+                                                                <div>판매가</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell5'>
+                                                                <div>00</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell6'>
+                                                                <div>판매가*수량</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- tableList E -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 <script>
 
     $(document).ready(() => {
         tab_area.init(); //탭 이벤트
         $('#sandbox_container.input-daterange').datepicker({language: "ko"});
+        $('#sandbox_container.input-group.date').datepicker({language : "ko"});
         var pcacme002004 = {
             id: 'pcacme002004_1',
             tableSize: {
@@ -1586,10 +1840,317 @@
                 sell23: 100,
             },
         }
+        var pcacme002004_2 = {
+            id: 'pcacme002004_2',
+            tableSize: {
+                sell1: 150,
+                sell2: 80,
+                sell3: 80,
+                sell4: 80,
+                sell5: 80,
+                sell6: 100,
+            },
+        }
+
         tFlex.init(pcacme002004);
+        tFlex.init(pcacme002004_2);
     });
 
     selectUi.init();
+    Highcharts.chart('highcharts_container1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: ' '
+            },
+            
+            xAxis: {
+                categories: ['22.01', '22.02', '22.03', '22.04', '22.05', '22.06', '22.07', '22.08', '22.09', '22.10', '22.11', '22.12'],
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                text: 'Rainfall (mm)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+                }
+            },
+            series: [{
+                name: '전체',
+                data: [249.9, 171.5, 306.4, 229.2, 224.0, 276.0, 335.6, 348.5, 316.4,394.1, 295.6, 154.4]
+
+            }, {
+                name: '일반판매',
+                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5,106.6, 92.3]
+
+            }, {
+                name: '지정판매',
+                data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3,51.2]
+
+            }, {
+                name: '직접판매',
+                data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8,51.1]
+            }]
+    });
+    Highcharts.chart('highcharts_container2', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: ' '
+            },
+            
+            xAxis: {
+                categories: ['22.01', '22.02', '22.03', '22.04', '22.05', '22.06', '22.07', '22.08', '22.09', '22.10', '22.11', '22.12'],
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                text: 'Rainfall (mm)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+                }
+            },
+            series: [{
+                name: '전체',
+                data: [249.9, 171.5, 306.4, 229.2, 224.0, 276.0, 335.6, 348.5, 316.4,394.1, 295.6, 154.4]
+
+            }, {
+                name: '일반판매',
+                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5,106.6, 92.3]
+
+            }, {
+                name: '지정판매',
+                data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3,51.2]
+
+            }, {
+                name: '직접판매',
+                data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8,51.1]
+            }]
+    });
+    Highcharts.chart('highcharts_container3', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: ' '
+            },
+            
+            xAxis: {
+                categories: ['22.01', '22.02', '22.03', '22.04', '22.05', '22.06', '22.07', '22.08', '22.09', '22.10', '22.11', '22.12'],
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                text: 'Rainfall (mm)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+                }
+            },
+            series: [{
+                name: '전체',
+                data: [249.9, 171.5, 306.4, 229.2, 224.0, 276.0, 335.6, 348.5, 316.4,394.1, 295.6, 154.4]
+
+            }, {
+                name: '일반판매',
+                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5,106.6, 92.3]
+
+            }, {
+                name: '지정판매',
+                data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3,51.2]
+
+            }, {
+                name: '직접판매',
+                data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8,51.1]
+            }]
+    });
+    Highcharts.chart('highcharts_container4', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: ' '
+            },
+            
+            xAxis: {
+                categories: ['22.01', '22.02', '22.03', '22.04', '22.05', '22.06', '22.07', '22.08', '22.09', '22.10', '22.11', '22.12'],
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                text: 'Rainfall (mm)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+                }
+            },
+            series: [{
+                name: '전체',
+                data: [249.9, 171.5, 306.4, 229.2, 224.0, 276.0, 335.6, 348.5, 316.4,394.1, 295.6, 154.4]
+
+            }, {
+                name: '일반판매',
+                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5,106.6, 92.3]
+
+            }, {
+                name: '지정판매',
+                data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3,51.2]
+
+            }, {
+                name: '직접판매',
+                data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8,51.1]
+            }]
+    });
+    Highcharts.chart('highcharts_container5', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: ' '
+            },
+            
+            xAxis: {
+                categories: ['22.01', '22.02', '22.03', '22.04', '22.05', '22.06', '22.07', '22.08', '22.09', '22.10', '22.11', '22.12'],
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                text: 'Rainfall (mm)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+                }
+            },
+            series: [{
+                name: '전체',
+                data: [249.9, 171.5, 306.4, 229.2, 224.0, 276.0, 335.6, 348.5, 316.4,394.1, 295.6, 154.4]
+
+            }, {
+                name: '일반판매',
+                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5,106.6, 92.3]
+
+            }, {
+                name: '지정판매',
+                data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3,51.2]
+
+            }, {
+                name: '직접판매',
+                data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8,51.1]
+            }]
+    });
+    Highcharts.chart('highcharts_container6', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: ' '
+            },
+            
+            xAxis: {
+                categories: ['22.01', '22.02', '22.03', '22.04', '22.05', '22.06', '22.07', '22.08', '22.09', '22.10', '22.11', '22.12'],
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                text: 'Rainfall (mm)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+                }
+            },
+            series: [{
+                name: '전체',
+                data: [249.9, 171.5, 306.4, 229.2, 224.0, 276.0, 335.6, 348.5, 316.4,394.1, 295.6, 154.4]
+
+            }, {
+                name: '일반판매',
+                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5,106.6, 92.3]
+
+            }, {
+                name: '지정판매',
+                data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3,51.2]
+
+            }, {
+                name: '직접판매',
+                data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8,51.1]
+            }]
+    });
 
 </script>
 </body>
