@@ -1380,8 +1380,8 @@ h2.type2 .read_more > a:hover:after{}
 .motiv_tbl.notice_tbl2 .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item {flex-grow: 0;flex-basis: 80px;}
 .motiv_tbl.notice_tbl2 .tbl_inner .hd_item:first-child + .hd_item + .hd_item + .hd_item + .hd_item {flex-grow: 0;flex-basis: 150px;}
 
-#content .acc_box{border: var(--box_border);cursor: pointer;}
-#content .acc_box .acc_tit{padding: 20px;display: flex;justify-content: space-between;align-items: center;background: #fff;}
+#content .acc_box{border: var(--box_border);}
+#content .acc_box .acc_tit{padding: 20px;display: flex;justify-content: space-between;align-items: center;background: #fff;cursor: pointer;}
 #content .acc_box .acc_tit .tit{font-size: var(--fts16);font-weight: var(--ftw700);}
 #content .acc_box .acc_tit .tit.flex_tit{display: flex;gap: 30px;align-items: center; font-size: var(--fts16);font-weight: var(--ftw700);}
 #content .acc_box .acc_cont{display:none;transition: height .5s ease;overflow: hidden;border-top: var(--box_border);}
