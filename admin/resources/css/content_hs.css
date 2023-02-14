@@ -31,6 +31,7 @@
 /* select_custom S */
 .select_wrap select{display:none}
 .select_wrap .select_box{min-width:90px;width:100%;padding:9px 10px;border: var(--cont_border);position: relative;}
+.select_wrap .select_box.active{border-radius: 5px 5px 0 0!important;}
 .motiv_tbl_box .motiv_normal_tbl.question td .view_info .item .select_wrap .select_box{}
 .select_wrap .select_box .select_name{width:100%;font-size: var(--fts13);font-weight: var(--ftw500);line-height: 20px;position: relative;cursor: pointer;}
 
@@ -1301,8 +1302,10 @@ h2.type2 .read_more > a:hover:after{}
 #content.modify .find_box .cont_tit{margin-bottom:30px;text-align: center;}
 #content.modify .find_box .cont_tit h2{font-size: 30px;font-weight: 500;color: #000;}
 #content.modify .find_box .tab_tit{display: flex;align-items: center;margin-bottom:30px;}
-#content.modify .find_box .tab_tit .tit_item{width: 50%;height:54px;padding:15px 0;font-size:16px;font-weight:500;line-height:24px;color:#84898d;text-align: center;background: #f6f6f6;border:var(--box_border);border-radius: 10px;box-sizing: border-box;}
+#content.modify .find_box .tab_tit .tit_item{width: calc(50% - 6px);height:54px;padding:15px 0;font-size:16px;font-weight:500;line-height:24px;color:#84898d;text-align: center;background: #f6f6f6;border:var(--box_border);border-radius: 10px;box-sizing: border-box;}
+#content.modify .find_box .tab_tit .tit_item:first-child{margin-right:6px;}
 #content.modify .find_box .tab_tit .tit_item.active{background: #fff;border-color: var(--color1);color: var(--color1);}
+
 #content.modify .find_box .cont_item .cont_inner{padding:40px 75px 50px;border: 1px solid #e3e3e3;border-radius:10px;background: #fff;}
 #content.modify .find_box .send_item{margin-bottom: 50px;}
 #content.modify .find_box.finIdFin .send_item{margin-bottom: 40px;}

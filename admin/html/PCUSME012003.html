@@ -763,17 +763,26 @@
     <script>
         $(document).ready(() => {
             // tFlex.init('pcacme001001_1', tableData2);
+
             $('.inp_wrap.password > i').on('click', function () {
-                var inpPassword = $('.inp_wrap.password > input[type="password"]')
-                $(inpPassword).toggleClass('active');
-                if ($(inpPassword).hasClass('active')) {
-                    $(this).attr('class', "icon icon_eye_slash")
-                    .prev('input').attr('type', "text");
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active').parent().children('input').attr('type', "password");
                 } else {
-                    $(this).attr('class', "icon icon_eye")
-                    .prev('input').attr('type', 'password');
+                    $(this).addClass('active').parent().children('input').attr('type', "text");
                 }
             });
+
+            // $('.inp_wrap.password > i').on('click', function () {
+            //     var inpPassword = $('.inp_wrap.password > input[type="password"]')
+            //     $(inpPassword).toggleClass('active');
+            //     if ($(inpPassword).hasClass('active')) {
+            //         $(this).attr('class', "icon icon_eye_slash")
+            //         .prev('input').attr('type', "text");
+            //     } else {
+            //         $(this).attr('class', "icon icon_eye")
+            //         .prev('input').attr('type', 'password');
+            //     }
+            // });
         });
 
         selectUi.init();

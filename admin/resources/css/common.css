@@ -140,8 +140,9 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .inp_wrap.password{position: relative;}
 .inp_wrap.password input[type="password"]{border: var(--box_border);padding: 5px 10px;font-size: var(--fts13);font-weight: 500;line-height: 18px;}
 .inp_wrap.password > i{width: 16px;height: 14px;position: absolute;right: 15px;top: 50%;transform: translateY(-50%);}
+
 .icon.icon_eye{background: url('../images/common/icon_eye.svg')no-repeat center center;background-size: cover;}
-.icon.icon_eye_slash{background: url('../images/common/icon_eye_slash.svg')no-repeat center center;background-size: cover;}
+.icon.icon_eye.active{background: url('../images/common/icon_eye_slash.svg')no-repeat center center;}
 
 /* header s*/
 #header{width:100%;background-color:#2f2f2f;position: sticky;top: 0;z-index: 100;}
