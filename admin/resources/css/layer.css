@@ -180,6 +180,12 @@
 .motiv_layer .flex_wrap.seller_info .left{width: 140px;}
 .motiv_layer .flex_wrap.seller_info .right{width: calc(100% - 140px);}
 .motiv_layer .seller_info .seller_dtl{display: flex;flex-direction: column;gap: 7px;}
+
+.motiv_layer .flex_wrap.seller_info.type2{align-items: stretch;gap: 15px;}
+.motiv_layer .flex_wrap.seller_info.type2 .left{padding-top:25px;}
+.motiv_layer .flex_wrap.seller_info.type2 .left .select_box{border-radius: 5px;}
+.motiv_layer .seller_info.type2 .seller_dtl{height:100%;justify-content: space-between;}
+
 .motiv_layer .seller_info .dtl_info{border: var(--cont_border);padding: 30px 14px;text-align: center}
 .motiv_layer .seller_info .dtl_info .info_name{font-size: var(--fts12);font-weight: var(--ftw500);color: #000;}
 .motiv_layer .seller_info .dtl_info .btn{margin-top: 5px;font-size: var(--fts12);font-weight: var(--ftw500);}
@@ -187,7 +193,7 @@
 
 .motiv_layer .inp_row{display: flex;align-items: flex-end;gap: 10px;width: 100%;flex-wrap: nowrap;}
 .motiv_layer .inp_row + .inp_row{margin-top: 20px;}
-.motiv_layer .inp_row .inp_tit{margin-bottom: 5px;font-size: var(--fts13);font-weight: var(--ftw500);}
+.motiv_layer .inp_row .inp_tit{margin-bottom: 5px;font-size: var(--fts13);font-weight: var(--ftw500);line-height:20px;}
 .motiv_layer .inp_row.row-3 .inp_wrap{width: 33.33%;}
 .motiv_layer .inp_row.row-1-2 > .inp_wrap:first-child{width: calc(33.33% - 5px);}
 .motiv_layer .inp_row.row-1-2 #sandbox_container{width: 66.66%;display: flex;align-items: flex-end;flex-wrap: nowrap;gap: 10px;}
