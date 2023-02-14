@@ -52,6 +52,38 @@ var dtlTbl = {
     },
 }
 
+var cateAcc = {
+    init: () => {
+        if($('.cate_match_tbl .dtl_cate').length > 0){
+            cateAcc.checked();
+        }
+    },
+
+    checked: () => {
+        var dtl_cate_box = $('.cate_match_tbl .dtl_cate');
+        $.each(dtl_cate_box, function(index, obj){
+            dtl_cate_box.eq(index).find('.select_cate_wrap').attr('outer_h', dtl_cate_box.eq(index).find('.mp_cate_box').outerHeight());
+        });
+        cateAcc.event();
+    },
+
+    event: () => {
+        $('.cate_match_tbl .cateSelectBtn').click(function(){
+            var more_cate_box = $(this).closest('tr').next('.dtl_cate');
+            var acc_height = $(this).closest('tr').next('.dtl_cate').find('.select_cate_wrap').attr('outer_h');
+            if($(this).closest('tr').next('.dtl_cate').hasClass('active')){
+                $(this).removeClass('active')
+                more_cate_box.removeClass('active');
+                $(this).closest('tr').next('.dtl_cate').find('.select_cate_wrap').css('height', 0);
+            } else {
+                $(this).addClass('active')
+                more_cate_box.addClass('active');
+                $(this).closest('tr').next('.dtl_cate').find('.select_cate_wrap').css('height', acc_height);
+            }
+        });
+    },
+}
+
 //탭 기능
 var tab_area = {
     openVal: false,

@@ -167,6 +167,7 @@
 .motiv_layer .tab_area{}
 .motiv_layer .tab_area .tab_box{display: flex;align-items: stretch;border: 1px solid var(--color9);text-align: center;}
 .motiv_layer .tab_area .tab_box .tab_item{width: 33.33%;padding:10px 0;border-left: 1px solid var(--color9);font-size: var(--fts14);font-weight: var(--ftw500);color: var(--color13);background: var(--color21);cursor: pointer;display: flex;justify-content: center;align-items: center;gap: 5px;}
+.motiv_layer .tab_area .tab_box.row-2 .tab_item{width: 50%;}
 .motiv_layer .tab_area .tab_box .tab_item:first-child{border-left: 0;}
 .motiv_layer .tab_area .tab_box .tab_item.active{color: #fff;background: var(--color5);}
 .motiv_layer .tab_area .tab_box .tab_item .new_sta{display: flex;align-items: center;gap:2px;}
@@ -442,6 +443,14 @@ h2 + .motiv_layer{position:static!important;opacity:1!important;visibility:visib
 .motiv_layer .data_flex_box .data_right{width: calc(100% - 420px);padding: 15px;border: var(--box_border);}
 
 .motiv_layer .cate_match_tbl .select_wrap{flex: 1;}
+.motiv_layer .cate_match_tbl .mp_cate_box .cate_result{padding:10px;font-size:var(--fts14);font-weight:var(--ftw500);color:#fff;text-align: left;background: var(--color1);border-radius: 5px;}
+.motiv_layer .cate_match_tbl tr.dtl_cate td{padding: 0;border-bottom: none;}
+.motiv_layer .cate_match_tbl tr.dtl_cate.active td{border: var(--cont_border);padding: 10px;}
+.motiv_layer .cate_match_tbl tr.dtl_cate .select_cate_wrap{padding: 0;transition: .3s;height: 0;overflow: hidden;}
 .motiv_layer .cateSelectBtn{width: 40px;height: 40px;border: var(--box_border);position: relative;}
 .motiv_layer .cateSelectBtn .icon_arrow{border: solid var(--color5);border-width: 0 2px 2px 0;display: inline-block;padding: 4px 4px 2px 2px;position: absolute;top: 50%;left: 50%;margin-left:-5px;transition: .5s;transform-origin: center;transform: rotate(45deg) translate(-50%,-50%);}
 .motiv_layer .cateSelectBtn.active .icon_arrow{margin-top:-2px;transform: rotate(-135deg);}
+.motiv_layer .motiv_tbl_box .motiv_normal_tbl.cate_match_tbl{border-bottom: var(--cont_border);}
+.motiv_layer .motiv_tbl_box .motiv_normal_tbl.cate_match_tbl tr td{border-bottom: 0;}
+.motiv_layer .motiv_tbl_box .motiv_normal_tbl.cate_match_tbl tr.dtl_cate td{border:none;padding:0}
+.motiv_layer .motiv_tbl_box .motiv_normal_tbl.cate_match_tbl tr.dtl_cate.active td{border: var(--cont_border);}

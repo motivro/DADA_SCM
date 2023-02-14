@@ -1444,141 +1444,460 @@
         <!-- 레이어 body S -->
         <div class="layer_body">
             <div class="contents_box">
-                <div class="data_flex_box">
-                    <div class="data_left">
-                        <div class="sect mg_0">
-                            <div class="data_box">
-                                <div class="top_area d_flex a_c gap10">
-                                    <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
-                                    <div class="btn btn_search">검색</div>
+                <div class="tab_area">
+                    <div class="tab_box row-2">
+                        <div class="tab_item active" tab_name="box1">카테고리 매칭</div>
+                        <div class="tab_item" tab_name="box2">상품 부가정보</div>
+                    </div>
+                    <div id="box1" class="tab_cont active">
+                        <div class="data_flex_box">
+                            <div class="data_left">
+                                <div class="sect mg_0">
+                                    <div class="data_box">
+                                        <div class="top_area d_flex a_c gap10">
+                                            <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
+                                            <div class="btn btn_search">검색</div>
+                                        </div>
+                                        <div class="bot_area">
+                                            <div class="motiv_tbl_box name_k pd_0">
+                                                <div class="tbl_item">
+                                                    <table class="motiv_normal_tbl ta_c">
+                                                        <caption>담당자 정보</caption>
+                                                        <colgroup>
+                                                            <col style="width:15%;">
+                                                            <col style="width:55%;">
+                                                            <col style="width:15%;">
+                                                            <col style="width:15%;">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th><div>판매사(ID)</div></th>
+                                                                <th><div>카테고리</div></th>
+                                                                <th><div>상품명</div></th>
+                                                                <th><div>매칭</div></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><div>닉네임(ID)</div></td>
+                                                                <td><div>대분류>중분류>소 분류</div></td>
+                                                                <td><div>상품명</div></td>
+                                                                <td><div>N</div></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="bot_area">
+                            </div>
+                            <div class="data_right">
+                                <div class="sect_tit d_flex a_c jc_sb">
+                                    <div class="tit">카테고리 : <span>대분류 > 중분류 > 소분류</span></div>
+                                    <div class="desc">[상품코드] 상품명1</div>
+                                </div>
+                                <div class="sect">
                                     <div class="motiv_tbl_box name_k pd_0">
                                         <div class="tbl_item">
-                                            <table class="motiv_normal_tbl ta_c">
+                                            <table class="motiv_normal_tbl cate_match_tbl ta_c">
                                                 <caption>담당자 정보</caption>
                                                 <colgroup>
-                                                    <col style="width:15%;">
-                                                    <col style="width:55%;">
-                                                    <col style="width:15%;">
-                                                    <col style="width:15%;">
+                                                    <col style="width:20%;">
+                                                    <col style="width:20%;">
+                                                    <col style="width:60%;">
                                                 </colgroup>
                                                 <thead>
                                                     <tr>
-                                                        <th><div>판매사(ID)</div></th>
-                                                        <th><div>카테고리</div></th>
-                                                        <th><div>상품명</div></th>
-                                                        <th><div>매칭</div></th>
+                                                        <th><div>쇼핑몰</div></th>
+                                                        <th><div>계정(ID)</div></th>
+                                                        <th><div>카테고리 매칭</div></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td><div>닉네임(ID)</div></td>
                                                         <td><div>대분류>중분류>소 분류</div></td>
-                                                        <td><div>상품명</div></td>
-                                                        <td><div>N</div></td>
+                                                        <td>
+                                                            <div class="d_flex a_c gap10">
+                                                                <div class="select_wrap">
+                                                                    <select>
+                                                                        <option value="카테고리 명" selected>카테고리 명</option>
+                                                                        <option value="카테고리 명">카테고리 명</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="cateSelectBtn"><i class="icon icon_arrow"></i></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="dtl_cate">
+                                                        <td colspan="3">
+                                                            <div class="select_cate_wrap">
+                                                                <div class="mp_cate_box">
+                                                                    <div class="cate_result"><div>대카테고리 > 중카테고리 > 소카테고리</div></div>
+                                                                    <div class="filter_wrap">
+                                                                        <div class="filter_inner">
+                                                                            <div class="list depth1">
+                                                                                <ul>
+                                                                                    <li class="list_item selected">의류</li>
+                                                                                    <li class="list_item">대분류2</li>
+                                                                                    <li class="list_item">대분류3</li>
+                                                                                    <li class="list_item">대분류4</li>
+                                                                                    <li class="list_item">대분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="list depth2">
+                                                                                <ul>
+                                                                                    <li class="list_item">중분류1</li>
+                                                                                    <li class="list_item">중분류2</li>
+                                                                                    <li class="list_item">중분류3</li>
+                                                                                    <li class="list_item">중분류4</li>
+                                                                                    <li class="list_item">중분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="list depth3 ">
+                                                                                <ul>
+                                                                                    <li class="list_item">소분류1</li>
+                                                                                    <li class="list_item">소분류2</li>
+                                                                                    <li class="list_item">소분류3</li>
+                                                                                    <li class="list_item">소분류4</li>
+                                                                                    <li class="list_item">소분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="list depth4 ">
+                                                                                <ul>
+                                                                                    <li class="list_item">상세분류1</li>
+                                                                                    <li class="list_item">상세분류2</li>
+                                                                                    <li class="list_item">상세분류3</li>
+                                                                                    <li class="list_item">상세분류4</li>
+                                                                                    <li class="list_item">상세분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bot_btn_wrap">
+                                                                        <div class="btn">카테고리 매칭 적용</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><div>닉네임(ID)</div></td>
+                                                        <td><div>대분류>중분류>소 분류</div></td>
+                                                        <td>
+                                                            <div class="d_flex a_c gap10">
+                                                                <div class="select_wrap">
+                                                                    <select>
+                                                                        <option value="카테고리 명" selected>카테고리 명</option>
+                                                                        <option value="카테고리 명">카테고리 명</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="cateSelectBtn"><i class="icon icon_arrow"></i></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="dtl_cate">
+                                                        <td colspan="3">
+                                                            <div class="select_cate_wrap">
+                                                                <div class="mp_cate_box">
+                                                                    <div class="cate_result"><div>대카테고리 > 중카테고리 > 소카테고리</div></div>
+                                                                    <div class="filter_wrap">
+                                                                        <div class="filter_inner">
+                                                                            <div class="list depth1">
+                                                                                <ul>
+                                                                                    <li class="list_item selected">의류</li>
+                                                                                    <li class="list_item">대분류2</li>
+                                                                                    <li class="list_item">대분류3</li>
+                                                                                    <li class="list_item">대분류4</li>
+                                                                                    <li class="list_item">대분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="list depth2">
+                                                                                <ul>
+                                                                                    <li class="list_item">중분류1</li>
+                                                                                    <li class="list_item">중분류2</li>
+                                                                                    <li class="list_item">중분류3</li>
+                                                                                    <li class="list_item">중분류4</li>
+                                                                                    <li class="list_item">중분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="list depth3 ">
+                                                                                <ul>
+                                                                                    <li class="list_item">소분류1</li>
+                                                                                    <li class="list_item">소분류2</li>
+                                                                                    <li class="list_item">소분류3</li>
+                                                                                    <li class="list_item">소분류4</li>
+                                                                                    <li class="list_item">소분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="list depth4 ">
+                                                                                <ul>
+                                                                                    <li class="list_item">상세분류1</li>
+                                                                                    <li class="list_item">상세분류2</li>
+                                                                                    <li class="list_item">상세분류3</li>
+                                                                                    <li class="list_item">상세분류4</li>
+                                                                                    <li class="list_item">상세분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bot_btn_wrap">
+                                                                        <div class="btn">카테고리 매칭 적용</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><div>닉네임(ID)</div></td>
+                                                        <td><div>대분류>중분류>소 분류</div></td>
+                                                        <td>
+                                                            <div class="d_flex a_c gap10">
+                                                                <div class="select_wrap">
+                                                                    <select>
+                                                                        <option value="카테고리 명" selected>카테고리 명</option>
+                                                                        <option value="카테고리 명">카테고리 명</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="cateSelectBtn"><i class="icon icon_arrow"></i></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="dtl_cate">
+                                                        <td colspan="3">
+                                                            <div class="select_cate_wrap">
+                                                                <div class="mp_cate_box">
+                                                                    <div class="cate_result"><div>대카테고리 > 중카테고리 > 소카테고리</div></div>
+                                                                    <div class="filter_wrap">
+                                                                        <div class="filter_inner">
+                                                                            <div class="list depth1">
+                                                                                <ul>
+                                                                                    <li class="list_item selected">의류</li>
+                                                                                    <li class="list_item">대분류2</li>
+                                                                                    <li class="list_item">대분류3</li>
+                                                                                    <li class="list_item">대분류4</li>
+                                                                                    <li class="list_item">대분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="list depth2">
+                                                                                <ul>
+                                                                                    <li class="list_item">중분류1</li>
+                                                                                    <li class="list_item">중분류2</li>
+                                                                                    <li class="list_item">중분류3</li>
+                                                                                    <li class="list_item">중분류4</li>
+                                                                                    <li class="list_item">중분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="list depth3 ">
+                                                                                <ul>
+                                                                                    <li class="list_item">소분류1</li>
+                                                                                    <li class="list_item">소분류2</li>
+                                                                                    <li class="list_item">소분류3</li>
+                                                                                    <li class="list_item">소분류4</li>
+                                                                                    <li class="list_item">소분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="list depth4 ">
+                                                                                <ul>
+                                                                                    <li class="list_item">상세분류1</li>
+                                                                                    <li class="list_item">상세분류2</li>
+                                                                                    <li class="list_item">상세분류3</li>
+                                                                                    <li class="list_item">상세분류4</li>
+                                                                                    <li class="list_item">상세분류5</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bot_btn_wrap">
+                                                                        <div class="btn">카테고리 매칭 적용</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="data_right">
-                        <div class="sect_tit d_flex a_c jc_sb">
-                            <div class="tit">카테고리 : <span>대분류 > 중분류 > 소분류</span></div>
-                            <div class="desc">[상품코드] 상품명1</div>
-                        </div>
-                        <div class="sect">
-                            <div class="motiv_tbl_box name_k pd_0">
-                                <div class="tbl_item">
-                                    <table class="motiv_normal_tbl cate_match_tbl ta_c">
-                                        <caption>담당자 정보</caption>
-                                        <colgroup>
-                                            <col style="width:20%;">
-                                            <col style="width:20%;">
-                                            <col style="width:60%;">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th><div>쇼핑몰</div></th>
-                                                <th><div>계정(ID)</div></th>
-                                                <th><div>카테고리 매칭</div></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><div>닉네임(ID)</div></td>
-                                                <td><div>대분류>중분류>소 분류</div></td>
-                                                <td>
-                                                    <div class="d_flex a_c gap10">
-                                                        <div class="select_wrap">
-                                                            <select>
-                                                                <option value="카테고리 명" selected>카테고리 명</option>
-                                                                <option value="카테고리 명">카테고리 명</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="cateSelectBtn"><i class="icon icon_arrow"></i></div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="3">
-                                                    <div>
-                                                        <div class="mp_cate_box">
-                                                            <div class="cate_result"><div>대카테고리 > 중카테고리 > 소카테고리</div></div>
-                                                            <div class="filter_wrap">
-                                                                <div class="filter_inner">
-                                                                    <div class="list depth1">
-                                                                        <ul>
-                                                                            <li class="list_item selected">의류</li>
-                                                                            <li class="list_item">대분류2</li>
-                                                                            <li class="list_item">대분류3</li>
-                                                                            <li class="list_item">대분류4</li>
-                                                                            <li class="list_item">대분류5</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="list depth2">
-                                                                        <ul>
-                                                                            <li class="list_item">중분류1</li>
-                                                                            <li class="list_item">중분류2</li>
-                                                                            <li class="list_item">중분류3</li>
-                                                                            <li class="list_item">중분류4</li>
-                                                                            <li class="list_item">중분류5</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="list depth3 ">
-                                                                        <ul>
-                                                                            <li class="list_item">소분류1</li>
-                                                                            <li class="list_item">소분류2</li>
-                                                                            <li class="list_item">소분류3</li>
-                                                                            <li class="list_item">소분류4</li>
-                                                                            <li class="list_item">소분류5</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="list depth4 ">
-                                                                        <ul>
-                                                                            <li class="list_item">상세분류1</li>
-                                                                            <li class="list_item">상세분류2</li>
-                                                                            <li class="list_item">상세분류3</li>
-                                                                            <li class="list_item">상세분류4</li>
-                                                                            <li class="list_item">상세분류5</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="sect">
                                 </div>
                             </div>
                         </div>
-                        <div class="sect">
+
+                    </div>
+                    <div id="box2" class="tab_cont">
+                        <div class="shop_cont_box">
+                            <div class="left_box">
+                                <div class="shop_info">
+                                    <div class="use_now">사용중인 쇼핑몰 : <span>1</span></div>
+                                    <ul class="shop_list">
+                                        <li>
+                                            <div class="name">다다몰</div>
+                                            <div class="sta_info"><span>정상</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="name">다다몰</div>
+                                            <div class="sta_info"><span>정상</span></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right_box">
+                                <div class="srh_cont">
+                                    <div class="inp_wrap"><input type="text" name="" id="" placeholder=""></div>
+                                    <div class="btn_wrap">
+                                        <div class="btn btn_blk">검색</div>
+                                    </div>
+                                </div>
+                                <div class="srh_cont">
+                                    <div class="inp_wrap"><input type="text" name="" id="" placeholder=""></div>
+                                </div>
+                                <div class="panel_body pd_0">
+                                    <div class="motiv_tbl_box name_k">
+                                        <div class="sect_tit">계정정보</div>
+                                        <div class="tbl_item sect">
+                                            <table class="motiv_normal_tbl ta_c">
+                                                <caption>카테고리 분류정보관리</caption>
+                                                <colgroup>
+                                                    <col style="width:15%;">
+                                                    <col style="width:auto;">
+                                                    <col style="width:15%">
+                                                    <col style="width:auto">
+                                                    <col style="width:15%;">
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th><div>쇼핑몰</div></th>
+                                                        <td class="ta_l">
+                                                            <div>
+                                                                <div class="inp_wrap"><input type="text" name="" id="" value="다다몰" disabled></div>
+                                                            </div>
+                                                        </td>
+                                                        <th><div>계정아이디</div></th>
+                                                        <td class="ta_l">
+                                                            <div>
+                                                                <div class="inp_wrap"><input type="text" name="" id="" placeholder="ID"></div>
+                                                            </div>
+                                                        </td>
+                                                        <th><div>계정암호</div></th>
+                                                        <td class="ta_l">
+                                                            <div>
+                                                                <div class="inp_wrap"><input type="text" name="" id="" placeholder="Password"></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                    
+                                            <style>
+                                                .textse_spiner{color:var(--color1);font-weight:50}
+                                                .textse{font-weight:400;font-size:14px;position:relative;}
+                                                .textse span{position:absolute;bottom:10px;opacity:0;font-size:30px;line-height:38px;}
+                                                .textse span:nth-child(1){right:-20px;-webkit-animation:dot 1.2s infinite ease-in 1s;animation:dot 1.2s infinite ease-in 1s;}
+                                                .textse span:nth-child(2){right:-35px;-webkit-animation:dot 1.2s infinite ease-in 2s;animation:dot 1.2s infinite ease-in 2s;}
+                                                .textse span:nth-child(3){right:-50px;-webkit-animation:dot 1.2s infinite ease-in 3s;animation:dot 1.2s infinite ease-in 3s;}
+                                                @-webkit-keyframes dot {
+                                                    0% {bottom: 10px;opacity: 0;}
+                                                    30% {bottom: 0;opacity: 1;}
+                                                    70% {bottom: 0;opacity: 1;}
+                                                    100% {bottom: -10px;opacity: 0;}
+                                                }
+                                                @keyframes dot {
+                                                    0% {bottom: 10px;opacity: 0;}
+                                                    30% {bottom: 0;opacity: 1;}
+                                                    70% {bottom: 0;opacity: 1;}
+                                                    100% {bottom: -10px;opacity: 0;}
+                                                }
+                                            </style>
+                                            <div class="btn_wrap">
+                                                <div class="btn">로그인 확인</div>
+                                                <div class="textse_spiner">로그인 확인 중 
+                                                    <p class="textse">
+                                                    <span>.</span>
+                                                    <span>.</span>
+                                                    <span>.</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sect_tit">배송정책</div>
+                                        <div class="tbl_item sect">
+                                            <table class="motiv_normal_tbl ta_c">
+                                                <caption>카테고리 분류정보관리</caption>
+                                                <colgroup>
+                                                    <col style="width:15%;">
+                                                    <col style="width:auto;">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th><div>배송정보</div></th>
+                                                        <td class="ta_l">
+                                                            <div>
+                                                                <div class="txt_box">
+                                                                    <div class="txt_list">
+                                                                        <div class="select_wrap tbl_search">
+                                                                            <select>
+                                                                                <option value="공동설정" selected>공동설정</option>
+                                                                                <option value="무료배송">무료배송</option>
+                                                                                <option value="조건부무료배송">조건부무료배송</option>
+                                                                                <option value="유료배송">유료배송</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="txt_list">
+                                                                        <div class="txtInfo">배송비결제</div>
+                                                                        <div class="select_wrap tbl_search">
+                                                                            <select>
+                                                                                <option value="선불" selected>선불</option>
+                                                                                <option value="착불">착불</option>
+                                                                                <option value="사용자선택">사용자선택</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div>배송가능 지역</div></th>
+                                                        <td class="ta_l">
+                                                            <div>
+                                                                <div class="select_wrap tbl_search">
+                                                                    <select>
+                                                                        <option value="공동설정" selected>공동설정</option>
+                                                                        <option value="무료배송">무료배송</option>
+                                                                        <option value="조건부무료배송">조건부무료배송</option>
+                                                                        <option value="유료배송">유료배송</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div>추가설명</div></th>
+                                                        <td class="ta_l">
+                                                            <div>
+                                                                <div class="inp_wrap"><input type="text" name="" id="" placeholder=""></div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="sect_tit">배송/교환/반품안내</div>
+                                        <div class="tbl_item sect">
+                                            <div class="inp_wrap"><input type="text" name="" id="" placeholder="배송, 교환, 반품 안내 내용 입력"></div>
+                                        </div>
+                                        <div class="srh_btn_box bd_0">
+                                            <div class="btn_wrap"><div class="btn btn_red">기본 부과정보 저장</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1596,6 +1915,7 @@
                 $(this).addClass('selected').closest('.list').addClass('selected');
             });
 
+            
             var pcacme004005_1 = {
                 id:'pcacme004005_1',
                 tableSize: {
@@ -1629,6 +1949,8 @@
             }
             tFlex.init(pcacme004005_1);
             tFlex.init(pcacme004005_2);
+            tab_area.init(); //탭 이벤트
+            cateAcc.init();
         });
 
         selectUi.init();
