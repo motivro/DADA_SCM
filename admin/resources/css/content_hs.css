@@ -1255,6 +1255,9 @@ h2.type2 .read_more > a:hover:after{}
 .detail_area .dtl_opt_box .prd_opt .cont span.img_type{padding: 0;line-height: 0;width: 25px;height: 20px;overflow: hidden;position: relative;}
 .detail_area .dtl_opt_box .prd_opt .cont span img{position: absolute;left:0;top:0;right:0;bottom:0;width: 100%;height: 100%;object-fit: cover;object-position: center;}
 
+/* 반품, 교환설정 */
+.detail_guide{margin-top:20px;}
+
 /* 수수료 설정 */
 .motiv_normal_tbl .calc_cycle{display:flex;gap:10px;align-items: center;}
 .motiv_normal_tbl .calc_cycle .cycle{align-items: center;gap: 5px;}

@@ -107,8 +107,8 @@
                         </ul>
                     </div>
                     <div class="btn_wrap">
-                        <a class="btn tomato dada_market" href="#none">다다마켓</a>
-                        <a class="btn dark dash_board" href="#none">대시보드</a>
+                        <a class="btn tomato dada_market" href="./PCADET004001.html">다다마켓</a>
+                        <a class="btn dark dash_board" href="./PCADET003001.html">대시보드</a>
                     </div>
                 </div>
                 <div class="lnb_menu">
@@ -1062,16 +1062,12 @@
 
             $('.tab_list .tab_item a').click(function(){
                 var move_s = $($(this).attr('href')).attr('cont_h') ;
-                var move_sc = cont_top_sta + Number(move_s) ;
+                var move_sc = cont_top_sta + Number(move_s) - 29;
                 var mtvLnbOpen = setTimeout( function() {
                     window.scrollTo(0, move_sc);
                     console.log(move_sc)
                     clearTimeout(mtvLnbOpen);
                 }, 100);
-                // $('.tab_list .tab_item').removeClass('active');
-                // if(!$(this).parent().hasClass('active')){
-                //     $(this).parent().addClass('active')
-                // }
             });
 
             scrollSta('productDetail');
@@ -1082,9 +1078,9 @@
 
         $(window).scroll(function () {
             if ($(this).scrollTop() > cont_top_sta) {
-                sdfun = (window.scrollY-30)-lockVal_scroll;
+                var translateY = (window.scrollY-30)-lockVal_scroll;
                 $('.prd_bottom_box').addClass('fixed_active');
-                $('.dtl_cont_scroll').css('transform', 'translateY(-'+sdfun+'px)');
+                $('.dtl_cont_scroll').css('transform', 'translateY(-'+translateY+'px)');
                 $('.fixed_top_0').addClass('lock_active');
             } else {
                 $('.prd_bottom_box').removeClass('fixed_active');
@@ -1096,13 +1092,12 @@
         $(window).on('resize', function(){
             $('.dtl_area2').css('width', $('.contents_box').width())
         });
-        // contents_box
-        
 
         scrollSta = (id) => {
             var move_s = $('#'+id).attr('cont_h') ;
-            var move_sc = cont_top_sta + Number(move_s) - 10;
+            var move_sc = cont_top_sta + Number(move_s) - 30;
 
+            if(id == 'detail_guide') move_sc = move_sc - 400
             $(window).scroll(function () {
                 if ($(this).scrollTop() > move_sc) {
                     $('.tab_list .tab_item').removeClass('active');
