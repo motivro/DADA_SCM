@@ -1070,6 +1070,17 @@
                 }, 100);
             });
 
+            $('.btn_moreInfo .btn_more').click(function(){
+                
+
+                if($(this).hasClass('open')){
+                    $(this).removeClass('open').closest('.productDetail').find('.productDetail_info').removeClass('open');
+                } else {
+                    $(this).addClass('open').closest('.productDetail').find('.productDetail_info').addClass('open');
+                }
+            });
+
+
             scrollSta('productDetail');
             scrollSta('detail_review');
             scrollSta('detail_qna');
