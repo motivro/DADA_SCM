@@ -518,8 +518,10 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .motiv_tbl{width:100%;border-right: 1px solid #e3e3e3;border-bottom: 1px solid #e3e3e3;overflow: hidden;}
 .motiv_tbl .tbl_inner{overflow-x: auto;}
 .motiv_tbl .tbl_head .d_flex,
-.motiv_tbl .tbl_body .d_flex{width: 2562px;flex-direction:row;display: flex;flex-wrap: wrap;background-color: #e3e3e3;transition:.3s}
+.motiv_tbl .tbl_body .d_flex{width: 2562px;flex-direction:row;display: flex;flex-wrap: wrap;background-color: #e3e3e3;}
 .motiv_tbl .tbl_body .d_flex.row_item{transition:none}
+.motiv_tbl.lock_tbl .tbl_body .d_flex.row_item{transition:.3s}
+
 .motiv_tbl .tbl_body .hd_item > div .d_flex{background-color:#fff;}
 .motiv_tbl .tbl_head .hd_item{box-sizing:border-box; min-height:40px;display: table;text-align:center;font-size: 12px;font-weight: 400;line-height: 17px;color: #000;border-left: 1px solid #e3e3e3;border-top: 1px solid #e3e3e3;background: #f5f5f5;}
 .motiv_tbl .tbl_body .hd_item{box-sizing:border-box;min-height:40px;display: table;text-align:center;font-size: 12px;font-weight: 400;line-height: 17px;color: #000;border-left: 1px solid #e3e3e3;border-top: 1px solid #e3e3e3;background: #ffffff;}
