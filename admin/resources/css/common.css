@@ -541,11 +541,11 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .motiv_tbl .row_sorting .hd_item > div{position: relative;}
 .motiv_tbl .row_sorting .hd_item .sort_box{display: flex;align-items: center;gap:6px;justify-content: center;}
 .motiv_tbl .row_sorting .hd_item .sort_item{display: flex;}
-.motiv_tbl .row_sorting .hd_item .sort_item > span{width: 6px;height: 9px;background-repeat: no-repeat;background-position: center;background-size: cover;cursor: pointer;}
+/* .motiv_tbl .row_sorting .hd_item .sort_item > span{width: 6px;height: 9px;background-repeat: no-repeat;background-position: center;background-size: cover;cursor: pointer;}
 .motiv_tbl .row_sorting .hd_item .sort_item > span.up{background-image: url('../images/common/sort_up.svg');}
 .motiv_tbl .row_sorting .hd_item .sort_item > span.down{background-image: url('../images/common/sort_under.svg');}
 .motiv_tbl .row_sorting .hd_item .sort_item > span.up.on{background-image: url('../images/common/sort_up_on.svg');}
-.motiv_tbl .row_sorting .hd_item .sort_item > span.down.on{background-image: url('../images/common/sort_under_on.svg');}
+.motiv_tbl .row_sorting .hd_item .sort_item > span.down.on{background-image: url('../images/common/sort_under_on.svg');} */
 
 .motiv_tbl .tbl_head .hd_item > div,
 .motiv_tbl .tbl_body .hd_item > div{height:100%;vertical-align: middle;display: table-cell;word-break: break-all;padding:0 5px;}
