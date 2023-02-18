@@ -96,7 +96,7 @@
         <!-- header E -->
 
         <!-- lnb S -->
-        <aside id="lnb" class="closeLnb">
+        <aside id="lnb">
             <!-- <div id="btnNavbar"><i class="icon_navbar"></i></div> -->
             <div class="lnb_inner">
                 <div class="profile_info">
@@ -565,10 +565,10 @@
                                         <div class="cont_group d_flex">
                                             <div class="cont_left tab_area sub">
                                                 <div class="tab_box">
-                                                    <div class="tab_item active" tab_name="box1_1">품목별 매출</div>
+                                                    <div class="tab_item" tab_name="box1_1">품목별 매출</div>
                                                     <div class="tab_item" tab_name="box1_2">상품별 매출</div>
-                                                    <div class="tab_item" tab_name="box1_3">카테고리별 매출</div>
-                                                    <div class="tab_item" tab_name="box1_4">구매자 성별 및 지역 매출</div>
+                                                    <div class="tab_item " tab_name="box1_3">카테고리별 매출</div>
+                                                    <div class="tab_item active" tab_name="box1_4">구매자 성별 및 지역 매출</div>
                                                 </div>
                                             </div>
                                             <div class="cont_right">
@@ -585,7 +585,7 @@
                                         <div class="btn_group">
                                             <div class="btn btn_excelDown">엑셀 다운로드</div>
                                         </div>
-                                        <div id="box1_1" class="tab_cont active">
+                                        <div id="box1_1" class="tab_cont ">
                                             <div id="pcacme009004_1" class="tbl_wrap">
                                                 <div class='motiv_tbl'>
                                                     <div class='tbl_inner'>
@@ -838,7 +838,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="box1_3" class="tab_cont">
+                                        <div id="box1_3" class="tab_cont ">
                                             <div id="pcacme009004_3" class="tbl_wrap">
                                                 <div class='motiv_tbl'>
                                                     <div class='tbl_inner'>
@@ -971,7 +971,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="box1_4" class="tab_cont">
+                                        <div id="box1_4" class="tab_cont active">
                                             <div id="pcacme009004_4" class="tbl_wrap sell_sta">
                                                 <div class='motiv_tbl'>
                                                     <div class='tbl_inner'>
@@ -1210,7 +1210,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                
                                                 <div class="motiv_tbl_box pd_0 bd_0">
                                                     <div class="tbl_item">
                                                         <table class="motiv_normal_tbl">
@@ -1301,22 +1300,6 @@
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                </div>
-                                                <div class='motiv_paging'>
-                                                    <a class='first' href='#none'></a><a class='prev'href='#none'></a>
-                                                    <ul>
-                                                        <li><a class='this' href='#none'>1</a></li>
-                                                        <li><a href='#none'>2</a></li>
-                                                        <li><a href='#none'>3</a></li>
-                                                        <li><a href='#none'>4</a></li>
-                                                        <li><a href='#none'>5</a></li>
-                                                        <li><a href='#none'>6</a></li>
-                                                        <li><a href='#none'>7</a></li>
-                                                        <li><a href='#none'>8</a></li>
-                                                        <li><a href='#none'>9</a></li>
-                                                        <li><a href='#none'>10</a></li>
-                                                    </ul>
-                                                    <a class='next' href='#none'></a><a class='last' href='#none'></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1765,7 +1748,7 @@
             tFlex.init(testData1);//일반적인 스크롤되는 리스트
             tFlex.init(testData2);//일반적인 스크롤되는 리스트
             tFlex.init(testData3);//일반적인 스크롤되는 리스트
-            tFlexLock.init(testData4);//일반적인 스크롤되는 리스트
+            tFlexLock.init(testData4);
             tFlex.init(testData5);//일반적인 스크롤되는 리스트
 
         });

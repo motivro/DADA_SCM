@@ -409,39 +409,73 @@
                 <!-- inner S -->
                 <div class="inner">
                     <h1>DaDa MarketPlace(상세)</h1>
-
                     <div class="contents_box not_bg bd_0">
                         <div class="prd_dtl_item">
                             <div class="prd_dtl_box prd_first_box">
                                 <div class="dtl_area">
                                     <div class="img_area">
-                                        <div class="prd_img">
-                                            <div class="thumbnail"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div>
-                                        </div>
-                                        <div class="prd_img_more">
-                                            <div class="swiper dtl_img_more">
-                                                <ul class="swiper-wrapper">
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                </ul>
+                                        <div class="thumbnail">
+                                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper thumb_img">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
                                             </div>
-                                            
-                                            <!-- Swiper JS -->
-                                            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-                                            
-                                            <!-- Initialize Swiper -->
-                                            <script>
-                                                var swiper = new Swiper(".dtl_img_more", {
-                                                    loop: true,
-                                                    slidesPerView: 6,
-                                                    spaceBetween: 5,
-                                                });
-                                            </script>
+                                            <div thumbsSlider="" class="swiper thumb_list">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <script>
+                                            var swiper = new Swiper(".thumb_list", {
+                                                loop: true,
+                                                spaceBetween: 10,
+                                                slidesPerView: 4,
+                                                freeMode: true,
+                                                watchSlidesProgress: true,
+                                            });
+                                            var swiper2 = new Swiper(".thumb_img", {
+                                                loop: true,
+                                                spaceBetween: 10,
+                                                navigation: {
+                                                    nextEl: ".swiper-button-next",
+                                                    prevEl: ".swiper-button-prev",
+                                                },
+                                                thumbs: {
+                                                    swiper: swiper,
+                                                },
+                                            });
+                                        </script>
                                         <div class="btn_box">
                                             <div class="btn_wrap">
                                                 <div class="btn btn_lt sizeM" onClick="mtvLp.open('cont_lp1')">Lead Time</div>
@@ -542,6 +576,17 @@
                                             </div>
                                             <div class="progress_box">
                                                 <div class="progress_item review">
+                                                    <div class="tit d_flex a_c">
+                                                        <div class="review_box">
+                                                            <div class="star_sta"><span class=""></span></div>
+                                                            <div class="name">평가 <span>4.5</span></div>
+                                                            <div class="total_review">(<span class="review_count">213</span>)</div>
+                                                        </div>
+                                                        <div class="heart_box">
+                                                            <div class="heart"></div>
+                                                            <div class="count">20</div>
+                                                        </div>
+                                                    </div>
                                                     <div class="item_list">
                                                         <div class="line">
                                                             <div class="name">최고</div>
@@ -650,13 +695,33 @@
                                         </div>
 
                                         <div class="util_box2">
-                                            <div class="prd_data">
-                                                <div class="data_line"><span class="tit">누적 담아간 수 : </span><span class="cont"><span>00</span>(횟수)</span></div>
-                                                <div class="data_line"><span class="tit">누적 판매량 순 : </span><span class="cont"><span>00</span>건</span></div>
-                                                <div class="data_line"><span class="tit">상품리뷰 건수 : </span><span class="cont"><span>00</span>건</span></div>
+                                            <div class="util_item">
+                                                <div class="tit">평가 (<span>423</span>)</div>
+                                                <div class="cont">
+                                                    <div class="review_box">
+                                                        <div class="review_rate">
+                                                            <div class="star">
+                                                                <span class="star_sta on"></span>
+                                                                <span class="star_sta on"></span>
+                                                                <span class="star_sta on"></span>
+                                                                <span class="star_sta on"></span>
+                                                                <span class="star_sta"></span>
+                                                            </div>
+                                                            <div class="count"><span class="rate">4</span>/<span class="total">5</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="util_item">
+                                                <div class="tit">좋아요</div>
+                                                <div class="cont">
+                                                    <div class="heart_box">
+                                                        <div class="heart"></div>
+                                                        <div class="count">20</div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>

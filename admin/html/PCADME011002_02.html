@@ -436,14 +436,14 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th><div>공지사항 제목 [필수]</div></th>
+                                            <th><div>공지사항 제목 <span class="fn_co1">[필수]</span></div></th>
                                             <td class="ta_l"><div>공지사항 제목</div></td>
                                             <th><div>작성날짜</div></th>
                                             <td class="ta_l"><div>2021-00-00</div></td>
                                         </tr>
                         
                                         <tr>
-                                            <th><div>내용 [필수]</div></th>
+                                            <th><div>내용 <span class="fn_co1">[필수]</span></div></th>
                                             <td colspan="3" class="ta_l">
                                                 <div>
                                                     <textarea name="" id="" cols="30" rows="10">
@@ -457,7 +457,15 @@
                                         </tr>
                                         <tr>
                                             <th><div>첨부파일</div></th>
-                                            <td colspan="3" class="ta_l"><div>자료첨부 첨부된파일명 (x) </td>
+                                            <td colspan="3" class="ta_l">
+                                                <div class="d_flex a_c gap5">
+                                                    <div class="filebox">
+                                                        <label for="file">자료첨부</label> 
+                                                        <input type="file" id="file">
+                                                    </div>
+                                                    <span>자료첨부 첨부된파일명 (x)</span>
+                                                </div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>

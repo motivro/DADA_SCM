@@ -8,6 +8,15 @@
 .motiv_layer .txt_fail{color: var(--color1);}
 .mgt_20{margin-top: 20px !important;}
 
+.delete_btn{width:15px;height: 15px;position: relative;cursor: pointer;}
+.delete_btn:before,
+.delete_btn:after {position: absolute;left: 50%;content:' ';width: 2px;height: 100%;background-color: var(--color1);}
+.delete_btn:before {transform:translateX(-50%) rotate(45deg);}
+.delete_btn:after {transform:translateX(-50%) rotate(-45deg);}
+
+.btn_wrap.jc_c{justify-content: center;}
+.btn_wrap.jc_fe{justify-content: flex-end;}
+
 /* select_custom S */
 .select_wrap.size_sm{width: 100px !important;}
 .select_wrap.size_md{width: 150px !important;}
@@ -86,7 +95,7 @@
 .motiv_layer .contents_box .sect{margin-top: 20px;}
 .motiv_layer .contents_box .sect.mgt30{margin-top: 30px;}
 .motiv_layer .contents_box .sect + .sect_tit{margin-top: 20px;}
-.motiv_layer .contents_box .sect .contents_box .motiv_paging{display: none;}
+/* .motiv_layer .contents_box .sect .contents_box .motiv_paging{display: none;} */
 .motiv_layer .contents_box .sect .contents_box .panel_body.paging .motiv_paging{display: flex;}
 
 .motiv_layer .contents_box .sect_tit .imp{color: var(--color1);}
@@ -496,7 +505,7 @@ h2 + .motiv_layer{position:static!important;opacity:1!important;visibility:visib
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl.cate_match_tbl tr.dtl_cate td{border:none;padding:0}
 .motiv_layer .motiv_tbl_box .motiv_normal_tbl.cate_match_tbl tr.dtl_cate.active td{border: var(--cont_border);}
 
-/* 통계 */
-.txtInfo{}
+/* 대시보드 */
+.motiv_layer .notice_cont{min-height:100px;max-height: 300px;overflow-y: auto;padding: 20px;border: var(--box_border);}
 
 
