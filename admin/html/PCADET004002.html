@@ -1140,9 +1140,12 @@
         </div>
     </div>
 
+    <style>
+        .detail_qna{min-height:calc(100vh - 450px)}
+        .detail_guide{min-height:calc(100vh - 450px)}
+    </style>
     <script>
 
-        // fullSlider.open('slider_img1');
         selectUi.init();
         $('.favor').click(function(){
             $(this).toggleClass('selected');
@@ -1152,9 +1155,14 @@
             if($(this).hasClass('open')){
                 $(this).removeClass('open');
                 $(this).closest('.list_item').removeClass('open');
+
+                $('.bottom_sta').css('height', $('.prd_bottom_box > .dtl_area').outerHeight()+20);
+                console.log($('.prd_bottom_box > .dtl_area').outerHeight())
             } else {
                 $(this).addClass('open');
                 $(this).closest('.list_item').addClass('open');
+                $('.bottom_sta').css('height', $('.prd_bottom_box > .dtl_area').outerHeight()+20);
+
             }
         });
 
@@ -1172,26 +1180,28 @@
         });
         
         var detailTop = 0;
-        const lockVal = 810.14; //head.height + content.inner.paddingtop + h1.height + contents_box.margintop
-        const lockVal_scroll = lockVal-314; //head.height + content.inner.paddingtop + h1.height + contents_box.margintop
+        $('#header').height() +  Number($('.inner').css('padding-top').replace('px', '')) + $('.inner > h1').height() + Number($('.prd_bottom_box').css('margin-top').replace('px', ''))
+        const lockVal = 810.14;
+        const lockVal_scroll = lockVal - 314;
         var cont_top_sta = $('.prd_first_box').height() - ($('.wrap #content .inner > h1').height() + 55);
 
         $(document).ready(function(){
             $('.dtl_area2').css('width', $('.contents_box').width());
             $('.bottom_sta').css('height', $('.prd_bottom_box').height()+20);
             
-            $('#productDetail').attr('cont_h', 1);
+            $('#productDetail').attr('cont_h', 30);
             $('#detail_review').attr('cont_h', $('#productDetail').outerHeight());
-            $('#detail_qna').attr('cont_h', ($('#detail_review').height()+$('#productDetail').outerHeight()));
+            $('#detail_qna').attr('cont_h', ($('#detail_review').height() + $('#productDetail').outerHeight()));
             $('#detail_guide').attr('cont_h', ($('#detail_review').height()+$('#productDetail').outerHeight()+$('#detail_qna').height()));
-            var cont1_h = window.innerHeight - $('#header').height();
-            var cont2_h = $('.fixed_top_0').height() + 30;
-            var cont3_h = cont1_h - cont2_h;
-            $('.prd_bottom_box').css('height', cont3_h);
-            $('.detail_area .dtl_opt_box').css('height', cont3_h - 50);
+            var cont1_h =  $('#header').height() + $('.fixed_top_0').height() + 30;
+            var cont2_h = window.innerHeight - cont1_h;
+
+            $('.prd_bottom_box').css('height', cont2_h);
+            $('.detail_area .dtl_opt_box').css('height', cont2_h - 50);
 
             $('.tab_list .tab_item a').click(function(){
                 var move_s = $($(this).attr('href')).attr('cont_h') ;
+                console.log($(this).attr('href'), move_s)
                 var move_sc = cont_top_sta + Number(move_s) - 29;
                 var mtvLnbOpen = setTimeout( function() {
                     window.scrollTo(0, move_sc);
@@ -1234,8 +1244,7 @@
         scrollSta = (id) => {
             var move_s = $('#'+id).attr('cont_h') ;
             var move_sc = cont_top_sta + Number(move_s) - 30;
-
-            if(id == 'detail_guide') move_sc = move_sc - 400
+            // if(id == 'detail_guide') move_sc = move_sc - 400
             $(window).scroll(function () {
                 if ($(this).scrollTop() > move_sc) {
                     $('.tab_list .tab_item').removeClass('active');

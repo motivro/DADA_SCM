@@ -2169,7 +2169,7 @@
             tFlex.init(pcusme001002_2);
             tFlex.init(pcusme001002_3);
 
-// readTimeSta S
+            // readTimeSta S
             var minRow = 2;
             var maxRow = 9;
             var readHtml = '';
@@ -2205,8 +2205,7 @@
                 $('.row_item:not(.row_th) .hd_item[keyname='+keyname+']').find('input').val(itemVal);
             });
 
-// readTimeSta E
-
+            // readTimeSta E
             $.each($('.prd_hs_inner > div'),function(index, obj){
                 var height = $('.prd_hs_inner > div').eq(index).height();
                 var name = $('.prd_hs_inner > div').eq(index).attr('id');
@@ -2257,7 +2256,7 @@
                     }
                 })
             }
-
+ 
             scrollSta2 = (name, objVal) => {
                 $('div[prd_info_box = '+name).click(function(){
                     window.scrollTo(0, prd_sta2[name] + 1);
