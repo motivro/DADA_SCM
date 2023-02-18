@@ -1,6 +1,15 @@
 
 $(document).ready(function(){
     
+    //패스워드 보기
+    $('.inp_wrap.password > i').on('click', function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active').parent().children('input').attr('type', "password");
+        } else {
+            $(this).addClass('active').parent().children('input').attr('type', "text");
+        }
+    });
+
     //사이드메뉴
     dadaLnbMenu();
   
@@ -124,6 +133,75 @@ var tab_area = {
 
 }
 
+// 슬라이드 팝업
+var fullSlider = {
+    bw: window.innerWidth,
+    bh: window.innerHeight,
+    normal: .5,
+    large: .7,
+    full: .9,
+    checkBgSta: false,
+
+    checkBg: (id) => {
+        if( !fullSlider.checkBgSta ){
+            if($('.motiv_layer_bg').length == 0) $('body').append('<div class="motiv_layer_bg" style="visibility:hidden" style="display:none"></div>');
+        }
+    },
+
+    open: (id) => {
+        fullSlider.checkBg(id);
+        var fullSlider_h = fullSlider.bh/2;
+        
+        $('#'+id).attr({'mar_t': (fullSlider.bh/2), 'mar_l': (fullSlider.bh/2)});
+        $('#'+id).css({
+            'width': fullSlider_h,
+            'margin-top': -(fullSlider_h/2),
+            'margin-left': -(fullSlider_h/2)
+        });
+
+        $('.motiv_layer_bg').css({'display': 'block','visibility': 'visible'});
+
+        $('#'+id).show().css({'visibility': 'hidden'});
+        $('div').removeClass('lp_active');
+        $('#'+id).addClass('lp_active');
+        var fullSliderOpen = setTimeout( function() {
+            $('.motiv_layer_bg').css({'opacity': '1'});
+            $('#'+id).show().css({
+                'visibility': 'visible',
+                'opacity': '1',
+            });
+            clearTimeout(fullSliderOpen);
+        }, 100);
+
+        var swiper = new Swiper('#'+id+' .motiv_slider2', {
+            spaceBetween: 10,
+            slidesPerView: 8,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper('#'+id+' .motiv_slider1', {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    },
+
+    close: (id) => {
+        $('#'+id).css({'display': 'none','visibility': 'hidden'});
+        $('.motiv_layer_bg').css({'opacity': '0'});
+        var fullSliderClose = setTimeout( function() {
+            $('.motiv_layer_bg').css({'visibility': 'hidden'});
+            clearTimeout(fullSliderClose);
+        }, 301);
+        $('#'+id).removeClass('lp_active');
+    },
+}
+
+
 // 공통 알럿 및 레이어팝업
 var mtvLp = {
     lnbw: $('#lnb').width(),
@@ -134,9 +212,10 @@ var mtvLp = {
     normal: .5,
     large: .7,
     full: .9,
+    checkBgSta: false,
 
     init: () => {
-        mtvLp.lnbw = $('#lnb').width();
+        mtvLp.lnbw = $('#lnb').width() != undefined ? $('#lnb').width() : 0;
         var mtv_max_h = '';
         var cont_size = '';
         $.each( $('.motiv_layer'), function(index, obj){
@@ -145,9 +224,12 @@ var mtvLp = {
             cont_size = index_obj.attr('cont_size') != undefined ? mtvLp[index_obj.attr('cont_size')] : mtvLp.normal;
             var marginTop = (index_obj.height()/2)-($('#header').height()/2);
             var cont_width = index_obj.attr('cont_type') != undefined ? 500 : (mtvLp.bw - mtvLp.lnbw) * cont_size;
-            lp_width = ( cont_width / 2 ) - (mtvLp.lnbw/2);
+            lp_width = ( cont_width / 2 ) - ( mtvLp.lnbw / 2 );
             
             if($('.motiv_layer_bg').length == 0) $('body').append('<div class="motiv_layer_bg" style="visibility:hidden" style="display:none"></div>');
+            
+            
+            
             index_obj.css({
                 'display': 'none',
                 'visibility': 'hidden',
@@ -184,7 +266,15 @@ var mtvLp = {
         });
     },
 
+    checkBg: () => {
+        if( !mtvLp.checkBgSta ){
+            mtvLp.checkBgSta  = true;
+            mtvLp.init();
+        }
+    },
+
     open: (id) => {
+        mtvLp.checkBg();
         mtvLp.prevActiveName = mtvLp.nowActiveName;
         if(mtvLp.prevActiveName != ''){
             $('#'+id).attr('prep_name', mtvLp.prevActiveName);
@@ -249,6 +339,7 @@ cateDynamic = {
     },
 }
 
+// lnb
 dadaLnbMenu = () => {
     // lnb가 닫혔을 때와 열렸을 때를 애니메이션 적용을 위해서 필요한 구문입니다.
     // 프로필박스 높이를 주기위한 변수
@@ -423,6 +514,10 @@ var selectUi = {
     },
 }
 
+// 페이지 이동
+goUrl = (url) => {
+    location.href = '/admin/html/'+url
+}
 
 /* 타이머 */
 startTimer = (time, obj) => {
@@ -471,18 +566,23 @@ toast = (string, location) => {
     }, 10);
 }
 
-listToast = (obj) => {
+listToast = (obj, text, ch_obj) => {
     /* 토스트메세지 바디를 생성합니다. */
     $(obj).addClass('close');
-    if($(obj).closest('.thumb').children('.dada_toast').length == 0) $(obj).closest('.thumb').append('<div class="dada_toast"><div class="loading_spinner"></div>담는 중 입니다.</div>');
+    if($(obj).closest('.thumb').children('.dada_toast').length == 0) $(obj).closest('.thumb').append('<div class="dada_toast"><div class="loading_spinner"></div><span>'+text+'</span></div>');
   
     setTimeout( function() {
         const toast = $('.dada_toast');
         toast.addClass('reveal');
         var toasts = setTimeout( function() {
-            $(obj).removeClass('close');
-            toast.removeClass('reveal');
-            clearTimeout(toasts);
+            toast.addClass('end_toast');
+            toast.children('span').text(ch_obj);
+            var toasts = setTimeout( function() {
+                toast.children('span').text(text);
+                $(obj).removeClass('close');
+                toast.removeClass('reveal end_toast');
+                clearTimeout(toasts);
+            }, 1500);
         }, 1500);
     }, 10);
 }
@@ -505,4 +605,10 @@ clip = (obj) => {
 textKeyup = () => {
     
 }
+
+/* 파일 업로드 */
+storeImg = (input, obj) => {
+    obj.closest('.add_file_box').find('.upload_file_list').append('<div class="file_item"><span class="file_name">'+input.files[0].name+'</span><span class="close_btn"></span></div>')
+}
+
 

@@ -12,6 +12,9 @@
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body> 
     <!-- wrap S -->
@@ -441,7 +444,7 @@
                                         </div>
                                         <div class="btn_box">
                                             <div class="btn_wrap">
-                                                <div class="btn btn_lt sizeM">Lead Time</div>
+                                                <div class="btn btn_lt sizeM" onClick="mtvLp.open('cont_lp1')">Lead Time</div>
                                                 <div class="btn btn_goList sizeM">목록보기</div>
                                             </div>
                                             
@@ -539,7 +542,6 @@
                                             </div>
                                             <div class="progress_box">
                                                 <div class="progress_item review">
-                                                    <div class="tit">asd</div>
                                                     <div class="item_list">
                                                         <div class="line">
                                                             <div class="name">최고</div>
@@ -569,7 +571,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="progress_item age">
-                                                    <div class="tit"></div>
+                                                    <div class="tit">연령대 별 구매자 비율</div>
                                                     <div class="item_list">
                                                         <div class="line">
                                                             <div class="name">최고</div>
@@ -795,7 +797,7 @@
                                                                         </div>
                                                                         <div class="review_opt"><div class="opt_size">사이즈 <span class="size_sta">M</span></div></div>
                                                                         <div class="review_txt"><div class="txt">화이트를 라지로 구매해서 블랙은 미듐으로 주문했는데 잘 맞네요.가볍고 편합니다.</div></div>
-                                                                        <div class="review_img">
+                                                                        <div class="review_img" onClick="fullSlider.open('slider_img1')">
                                                                             <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div>
                                                                         </div>
                                                                         <div class="review_more">
@@ -824,7 +826,7 @@
                                                                         </div>
                                                                         <div class="review_opt"><div class="opt_size">사이즈 <span class="size_sta">M</span></div></div>
                                                                         <div class="review_txt"><div class="txt">화이트를 라지로 구매해서 블랙은 미듐으로 주문했는데 잘 맞네요.가볍고 편합니다.</div></div>
-                                                                        <div class="review_img">
+                                                                        <div class="review_img" onClick="fullSlider.open('slider_img1')">
                                                                             <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div>
                                                                         </div>
                                                                         <div class="review_more">
@@ -834,8 +836,25 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            <div class="motiv_paging">
+                                                                <a class="first" href="#none"></a><a class="prev" href="#none"></a>
+                                                                <ul>
+                                                                    <li><a class="this" href="#none">1</a></li>
+                                                                    <li><a href="#none">2</a></li>
+                                                                    <li><a href="#none">3</a></li>
+                                                                    <li><a href="#none">4</a></li>
+                                                                    <li><a href="#none">5</a></li>
+                                                                    <li><a href="#none">6</a></li>
+                                                                    <li><a href="#none">7</a></li>
+                                                                    <li><a href="#none">8</a></li>
+                                                                    <li><a href="#none">9</a></li>
+                                                                    <li><a href="#none">10</a></li>
+                                                                </ul>
+                                                                <a class="next" href="#none"></a><a class="last" href="#none"></a>
+                                                            </div>
                                                         </div>
                                                     </div>
+
                                                     <div id="detail_qna" class="detail_qna">
                                                         <div class="cont_sect">
                                                             <div class="cont_tit">Q&A <span>02</span>건</div>
@@ -850,56 +869,89 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="list_bd">
+
+                                                                    
                                                                     <div class="list_item">
-                                                                        <div class="row_line">
-                                                                            <div class="reply_sta">답변완료</div>
-                                                                            <div class="subject">문의드려요.</div>
-                                                                            <div class="writer">구매자</div>
-                                                                            <div class="date">2023-01-01</div>
-                                                                            <div class="manage"><div class="btn_wrap"></div></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="list_item">
-                                                                        <div class="row_line answer">
-                                                                            <div class="reply_sta"></div>
-                                                                            <div class="subject">네! 답변드립니다.</div>
-                                                                            <div class="writer">판매자</div>
-                                                                            <div class="date">2023-01-01</div>
-                                                                            <div class="manage"><div class="btn_wrap"><div class="btn btn_sm">수정</div><div class="btn btn_sm">삭제</div></div></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="list_item">
-                                                                        <div class="row_line">
-                                                                            <div class="reply_sta">답변준비</div>
-                                                                            <div class="subject">문의드려요.</div>
-                                                                            <div class="writer">구매자</div>
-                                                                            <div class="date">2023-01-01</div>
-                                                                            <div class="manage"><div class="btn_wrap"></div></div>
-                                                                        </div>
-                                                                        <div class="answer_box">
-                                                                            <div class="question_item">문의 내용입니다.</div>
-                                                                            <div class="answer_item">
-                                                                                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                                                                        <div class="row_parent">
+                                                                            <div class="row_line">
+                                                                                <div class="reply_sta">답변완료</div>
+                                                                                <div class="subject">문의드려요.</div>
+                                                                                <div class="writer">구매자</div>
+                                                                                <div class="date">2023-01-01</div>
+                                                                                <div class="manage"><div class="btn_wrap"></div></div>
                                                                             </div>
-                                                                            <div class="btn_wrap"><div class="btn btn_md">저장</div><div class="btn btn_md">취소</div></div>
+                                                                            <div class="row_line detail_row">
+                                                                                <div class="subject">상세 문의 내용</div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="row_parent">
+                                                                            <div class="row_line answer">
+                                                                                <div class="reply_sta"></div>
+                                                                                <div class="subject">네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/></div>
+                                                                                <div class="writer">판매자</div>
+                                                                                <div class="date">2023-01-01</div>
+                                                                                <div class="manage"><div class="btn_wrap"><div class="btn btn_sm modify_btn">수정</div><div class="btn btn_sm">삭제</div></div></div>
+                                                                            </div>
+                                                                            <div class="answer_box">
+                                                                                <div class="answer_item">
+                                                                                    <textarea name="" id="" cols="30" rows="10">네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.</textarea>
+                                                                                </div>
+                                                                                <div class="btn_wrap"><div class="btn btn_md">저장</div><div class="btn btn_md">취소</div></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                
+                                                                    <div class="list_item">
+                                                                        <div class="row_parent">
+                                                                            <div class="row_line">
+                                                                                <div class="reply_sta">답변준비</div>
+                                                                                <div class="subject">문의드려요.</div>
+                                                                                <div class="writer">구매자</div>
+                                                                                <div class="date">2023-01-01</div>
+                                                                                <div class="manage"><div class="btn_wrap"></div></div>
+                                                                            </div>
+                                                                            <div class="row_line detail_row">
+                                                                                <div class="subject">상세 문의 내용</div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="list_item">
-                                                                        <div class="row_line">
-                                                                            <div class="reply_sta">답변준비</div>
-                                                                            <div class="subject">문의드려요.</div>
-                                                                            <div class="writer">구매자</div>
-                                                                            <div class="date">2023-01-01</div>
-                                                                            <div class="manage"><div class="btn_wrap"></div></div>
+                                                                        <div class="row_parent">
+                                                                            <div class="row_line">
+                                                                                <div class="reply_sta">답변준비</div>
+                                                                                <div class="subject">문의드려요.</div>
+                                                                                <div class="writer">구매자</div>
+                                                                                <div class="date">2023-01-01</div>
+                                                                                <div class="manage"><div class="btn_wrap"></div></div>
+                                                                            </div>
+                                                                            <div class="row_line detail_row">
+                                                                                <div class="subject">상세 문의 내용</div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="list_item">
-                                                                        <div class="row_line">
-                                                                            <div class="reply_sta">답변준비</div>
-                                                                            <div class="subject">문의드려요.</div>
-                                                                            <div class="writer">구매자</div>
-                                                                            <div class="date">2023-01-01</div>
-                                                                            <div class="manage"><div class="btn_wrap"></div></div>
+                                                                        <div class="row_parent">
+                                                                            <div class="row_line">
+                                                                                <div class="reply_sta">답변준비</div>
+                                                                                <div class="subject">문의드려요.</div>
+                                                                                <div class="writer">구매자</div>
+                                                                                <div class="date">2023-01-01</div>
+                                                                                <div class="manage"><div class="btn_wrap"></div></div>
+                                                                            </div>
+                                                                            <div class="row_line detail_row">
+                                                                                <div class="subject">상세 문의 내용</div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -907,6 +959,7 @@
 
                                                         </div>
                                                     </div>
+                                                    
                                                     <div id="detail_guide" class="detail_guide">
                                                         <div class="cont_sect">
                                                             <div class="cont_tit">반품/교환정보</div>
@@ -1016,30 +1069,107 @@
     </div>
     <!-- wrap E -->
 
-    <style>
-        .prd_dtl_box .detail_area{width:100%}
-        .fixed_top_0{position:fixed;top:0px;transition:.2s;transform:translateY(-300px);margin-top:0!important;z-index: 50;}
-        .fixed_top_0.lock_active{display:block;transform:translateY(74px);}
-        .dtl_area{overflow:hidden;min-height: 210px;padding: 20px;background-color: #fff;}
-        .dtl_area .img_area.img_area2{width:180px;min-width:180px;}
-        .prd_bottom_box{position:sticky;top:294px;z-index:10;min-height:200px;}
-        .fixed_active{position:fixed;}
-        .detail_area .dtl_cont{overflow:hidden}
-        .dtl_area.dtl_area2 .info_area{width:calc(100% - 180px);}
-        .dtl_area .info_area .util_box2{width:230px;border:var(--cont_border);display:flex;flex-direction:column;justify-content:center;}
-        .dtl_area .util_box2 .prd_data{padding:20px 15px;}
-        .dtl_area .util_box2 .prd_data .data_line{margin-top:15px;display:flex;justify-content:space-between;align-items:center;font-size:var(--fts12);}
-        .dtl_area .util_box2 .prd_data .data_line:first-child{margin-top:0;}
-        .dtl_area .util_box2 .prd_data .data_line .tit{color:var(--color14);}
-        .dtl_area .util_box2 .prd_data .data_line .cont{font-weight:var(--ftw700);}
-        .lock_active .dtl_opt_box{position: fixed;top: 294px;right: 60px;}
-        .detail_area .dtl_opt_box .btn_wrap .btn.btn_putList{width:100%;text-align:center;border-radius:0}
-    </style>
+    <div id="slider_img1" class="motiv_layer slider_img" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="fullSlider.close('slider_img1')"></div>
+        </div>
+        <div class="dada_cont">
+            
+            <div class="img_area">
+                <div class="swiper motiv_slider1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                        <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                    <div thumbsSlider="" class="swiper motiv_slider2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                            <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="cont_lp1" class="motiv_layer type1" cont_size="normal" style="display:none">
+        <div class="layer_head">
+            <div class="title">[ 자체관리코드 ] L/T</div>
+            <div class="btn_close" onClick="mtvLp.close('cont_lp1')"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect mgt_0">
+                    <div class="top_info_box">
+                        <div class="info_tit">[제품코드] 제품명</div>
+                        <div class="info_cont">2022.00.00 00:00:00 ~ 2022.00.00 00:00:00</div>
+                    </div>
+                </div>
+                <div class="sect">
+                    <div class="motiv_tbl_box name_k pd_0">
+                        <div class="tbl_item">
+                            <table class="motiv_normal_tbl">
+                                <caption>수수료 보기</caption>
+                                <colgroup>
+                                    <col style="width:20%;">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th><div>수량</div></th>
+                                        <td><div>금액 ( <span class="fn_co1">할인율 </span> )</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>수량</div></th>
+                                        <td><div>금액 ( <span class="fn_co1">할인율 </span> )</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>수량</div></th>
+                                        <td><div>금액 ( <span class="fn_co1">할인율 </span> )</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+
+        // fullSlider.open('slider_img1');
         selectUi.init();
         $('.favor').click(function(){
             $(this).toggleClass('selected');
-        })
+        });
+
+        $('.list_item .subject').click(function(){
+            if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).closest('.list_item').removeClass('open');
+            } else {
+                $(this).addClass('open');
+                $(this).closest('.list_item').addClass('open');
+            }
+        });
+
+        $('.modify_btn').click(function(){
+            if(!$(this).closest('.list_item').hasClass('open')){
+                $(this).closest('.list_item').addClass('open');
+            }
+            if($(this).hasClass('opens')){
+                $(this).removeClass('opens');
+                $(this).closest('.list_item').removeClass('modify');
+            } else {
+                $(this).addClass('opens');
+                $(this).closest('.list_item').addClass('modify');
+            }
+        });
         
         var detailTop = 0;
         const lockVal = 810.14; //head.height + content.inner.paddingtop + h1.height + contents_box.margintop
@@ -1071,15 +1201,12 @@
             });
 
             $('.btn_moreInfo .btn_more').click(function(){
-                
-
                 if($(this).hasClass('open')){
                     $(this).removeClass('open').closest('.productDetail').find('.productDetail_info').removeClass('open');
                 } else {
                     $(this).addClass('open').closest('.productDetail').find('.productDetail_info').addClass('open');
                 }
             });
-
 
             scrollSta('productDetail');
             scrollSta('detail_review');

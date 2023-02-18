@@ -159,8 +159,18 @@
                             </div>
 
                             <div class="join_inp_box">
-                                <div class="inp_tit">파일첨부</div>
-                                추가예정
+                                <div class="add_file_box">
+                                    <div class="add_file">
+                                        <label for="file">
+                                            <div class="bg"></div>
+                                            <div class="txt">Drop files here or click to upload.</div>
+                                        </label> 
+                                        <input type="file" id="file" onchange="storeImg(this, $(this));">
+                                    </div>
+                                    <div class="upload_file_list">
+                                        
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="btn_wrap jc_c"><div class="btn btn_join btn_lg">사업자 정보 저장 및 승인요청</div></div>
@@ -179,57 +189,8 @@
     </div>
     <!-- wrap E -->
     <script>
-        var selectUi = {
-            class : 'select_wrap',
-            seData : [],
-            init :() => {
-                $.each( $('.'+selectUi.class+''), (index, item) => {
-                    var seObjData = new Object();
-                    seObjData.optData = new Array();
-                    seObjData.seNum = index;
-                    seObjData.actNum = '';
-                    seObjData.actVal = '';
-                    seObjData.actSta = false;
-                    var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
-                    $.each( seTarget.children("option"), (seIndex, seItem) => {
-                        if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
-                            seObjData.actSta = true;
-                            seObjData.actNum = seIndex;
-                            seObjData.actVal = seItem.text;
-                        }
-                        seObjData.optData.push(seItem.text);
-                    });
-                    selectUi.seData.push(seObjData);
-                })
-                selectUi.customSelect();
-            },
-            customSelect: () => {
-                $.each( selectUi.seData, (index, item) => {
-                    var selectHtml = '';
-                    var selectTname = item.actVal ? item.actVal : item.optData[0];
-                    selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
-                    selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
-                    selectHtml+= '  <div class="opt_list">';
-                    $.each( item.optData, (seindex, seitem) => {
-                        selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
-                    });
-                    selectHtml+= '  </div>';
-                    selectHtml+= '</div>';
-                    $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
-                });
-            },
-            boxOpen : (obj) =>{
-                if(obj.hasClass('active')){
-                    obj.removeClass('active');
-                }else{
-                    obj.addClass('active');
-                }
-            },
-            optionClick : (obj) =>{
-                obj.parent().parent().children('.select_name').text(obj.text());
-                obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
-            },
-        }
+        
+
         selectUi.init();
     </script>
 </body>

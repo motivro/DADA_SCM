@@ -34,12 +34,20 @@
                         <div class="box_inner">
                             <h2>다다SCM 비사업자 회원가입</h2>
                             <div class="join_inp_box">
+                               
+                                <!-- 예시 -->
+                                <div class="inp_wrap">
+                                    <input type="text" placeholder="아이디를 입력해 주세요." disabled>
+                                    <p class="txtInfo error">input에 disabled를 추가해주시면 됨니다.</p>
+                                </div>
+                                <!-- 예시 -->
+
                                 <div class="inp_wrap">
                                     <input type="text" placeholder="아이디를 입력해 주세요.">
                                     <p class="txtInfo error">아이디를 입력해 주세요.</p>
                                 </div>
                                 <div class="inp_wrap">
-                                    <input type="password" placeholder="암호를 입력해주세요.">
+                                    <div class="inp_wrap password"><input type="password" name="" id="" placeholder="아이디를 입력해주세요."><i class="icon icon_eye"></i></div>
                                     <p class="txtInfo error">암호를 입력해 주세요.</p>
                                 </div>
                                 <div class="inp_wrap">
@@ -67,10 +75,33 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="certi_inp_box">
+                                <div class="inp_tit">계좌정보</div>
+                                <div class="input_box">
+                                    <div class="inp_wrap">
+                                        <div class="select_wrap">
+                                            <select id="de_title">
+                                                <option value="선택된 은행" selected>선택된 은행</option>
+                                                <option value="선택1">선택1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="inp_wrap">
+                                        <input type="text" placeholder="계좌번호을 입력해 주세요.">
+                                    </div>
+                                    <div class="inp_wrap">
+                                        <input type="text" placeholder="예금주을 입력해 주세요.">
+                                    </div>
+                                </div>
+                            </div>
+
+                            
                             <div class="agree_box">
                                 <div class="cus_inp_wrap checkbox_inp">
                                     <label for="all_chk" class="inp_box">
-                                        <span class="txt all">모두 동의합니다.</span>
+                                        <span class="txt all">[전체동의] 다다 회원가입 약관에 모두 동의합니다.</span>
                                         <input type="checkbox" id="all_chk" name="all_chk">
                                         <span class="inp_custom"></span>
                                     </label>
@@ -79,7 +110,7 @@
                                 <div class="agree_dtl_box">
                                     <div class="cus_inp_wrap checkbox_inp">
                                         <label for="join_1" class="inp_box">
-                                            <span class="txt"><span class="point">[필수]</span>판매 이용약관</span>
+                                            <span class="txt"><span class="point">[필수]</span>서비스 이용약관</span>
                                             <input type="checkbox" id="join_1" name="join_agree">
                                             <span class="inp_custom"></span>
                                         </label>
@@ -102,6 +133,14 @@
                                         <span class="arrow_right"></span>
                                     </div>
                                     <div class="cus_inp_wrap checkbox_inp">
+                                        <label for="join_3" class="inp_box">
+                                            <span class="txt"><span class="point">[필수]</span>개인정보 제3자 제공 동의</span>
+                                            <input type="checkbox" id="join_3" name="join_agree">
+                                            <span class="inp_custom"></span>
+                                        </label>
+                                        <span class="arrow_right"></span>
+                                    </div>
+                                    <div class="cus_inp_wrap checkbox_inp">
                                         <label for="join_4" class="inp_box">
                                             <span class="txt"><span class="point">[선택]</span>판매자 무료 교육 및 특별 프로모션 혜택 (광고) 수신 동의</span>
                                             <input type="checkbox" id="join_4" name="join_agree">
@@ -112,8 +151,9 @@
                                 </div>
                                 <div class="agree_noti">
                                     <p class="tit"><i class="icon icon_infor"></i>확인해 주세요.</p>
-                                    <p class="txt">• 수신거부시판매에도움이되는정보를받아보실수없습니다.</p>
-                                    <p class="txt">• 광고성 정보 수집 및 수신 동의는 기본정보>계정정보에서 변경(동의/ 철회) 할 수 있습니다.</p>
+                                    <p class="txt">• 본인 이메일을 정확히 입력하셔야 아이디/비밀번호를 찾을 수 있습니다.</p>
+                                    <p class="txt">• 수신거부시 판매에 도움이 되는 정보를 받아보실 수 없습니다.</p>
+                                    <p class="txt">• 광고성 정보 수집 및 수신 동의는 기본정보>계정정보에서 변경(동의/철회) 할 수 있습니다.</p>
                                 </div>
                                 <div class="btn_wrap"><div class="btn btn_join btn_lg">약관 동의하고 가입하기</div></div>
                             </div>
@@ -126,9 +166,59 @@
         </div>
         <!-- container E -->
 
+        <div class="btn_wrap">
+            <div class="btn btn_join btn_lg">약관 동의하고 가입하기</div>
+            <div class="btn btn_join btn_lg">약관 동의하고 가입하기</div>
+        </div>
+
     </div>
     <!-- wrap E -->
+
+    <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="alert_title">본인확인</div>
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
+        </div>
+        <div class="dada_cont">
+            본인확인 되었습니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.close('alert1')">확인</div>
+        </div>
+    </div>
+
+    <div id="alert2" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="alert_title">가입된 회원</div>
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert2')"></div>
+        </div>
+        <div class="dada_cont">
+            이미 가입된 회원이십니다.<br/>
+            아이디/비밀번호 찾기로 이동 하 시겠습니까?
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="goUrl('PCUSET001007.html')">확인</div>
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('alert2')">닫기</div>
+        </div>
+    </div>
+
+    <div id="alert3" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert3')"></div>
+        </div>
+        <div class="dada_cont">
+            이용약관에 동의하셔야 합니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.close('alert3')">닫기</div>
+        </div>
+    </div>
+
+
     <script>
+        selectUi.init();
+        // mtvLp.open('alert1');
+        // mtvLp.open('alert2');
         $(document).ready(function(){
             $('.find_wrap .findPw').click(function(){
                 if($(this).parent('.find_wrap').hasClass('on')){

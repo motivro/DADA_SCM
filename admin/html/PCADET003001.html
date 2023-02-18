@@ -557,12 +557,16 @@
                             <div class="top_box d_flex">
                                 <div class="chart_box">
                                     <div class="data_box">
-                                        <div class="item_titss"><span class="name">매출현황</span><div class="d_flex a_c gap10"><span class="icon icon_refresh" onclick="icon_refresh($(this))"></span><span class="icon icon_blank"></span></div></div>
-
+                                        <div class="item_titss">
+                                            <span class="name">매출현황</span>
+                                            <div class="d_flex a_c gap10">
+                                                <span class="icon icon_refresh" onclick="icon_refresh($(this))"></span>
+                                                <span class="icon icon_blank" onClick="openPop()"></span>
+                                            </div>
+                                        </div>
                                         <figure class="highcharts-figure">
                                             <div id="highcharts_container"></div>
                                         </figure>
-                                        
                                         <!-- <img src="../resources/images/common/chart_ex.svg" alt=""> -->
                                     </div>
                                 </div>
@@ -1058,6 +1062,10 @@
     <!-- wrap E -->
     <script>
 
+        openPop = () => {
+            var popup = window.open('./new_a_blank.html', '네이버팝업', 'width=1000px,height=550px,scrollbars=yes');
+        }
+        
         icon_refresh = (obj) => {
             obj.addClass('on');
             var refresh = setTimeout( function() {

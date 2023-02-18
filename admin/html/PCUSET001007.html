@@ -48,7 +48,7 @@
                                             <div class="flex_row">
                                                 <div class="inp_wrap"><input type="text" placeholder="이메일 주소"></div>
                                                 <div class="btn_wrap">
-                                                    <div class="btn btn_send" onclick="dadaAlert.open('test', '다다SCM에 등록하신 이메일로<br/>인증번호를 발급하였습니다.');">이메일 전송</div>
+                                                    <div class="btn btn_send" onclick="mtvLp.open('alert1') ">이메일 전송</div>
                                                 </div>
                                             </div>
                                             <p class="txtInfo error">정보를 정확히 입력해 주세요.</p>
@@ -81,21 +81,23 @@
 
     </div>
     <!-- wrap E -->
-    <div class="dada_alt_wrap" id="test">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn"></div>
-            </div>
-            <div class="dada_cont"></div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1" t_name="ok">확인</div>
-                <!-- <div class="dada_btn co_9" t_name="close">취소</div> -->
-            </div>
+    <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
         </div>
-        <div class="dada_bg"></div>
-    </div> 
+        <div class="dada_cont">
+            다다SCM에 등록하신 이메일로<br/> 인증번호를 발급하였습니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="step1()">확인</div>
+        </div>
+    </div>
+    
     <script>
+        mtvLp.init();
         $(document).ready(function(){
+
+            
 
             $('.find_wrap .findPw').click(function(){
                 if($(this).parent('.find_wrap').hasClass('on')){
@@ -110,7 +112,11 @@
             });
             
         });
-        // startTimer(180, 'timer2');
+
+        step1 = () => {
+            mtvLp.close('alert1');
+            startTimer(180, 'timer1');
+        }
     </script>
 </body>
 </html>

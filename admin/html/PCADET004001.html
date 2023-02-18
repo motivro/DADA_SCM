@@ -492,7 +492,7 @@
                                         <div class="info_item badge">
                                             <span class="new">NEW</span>
                                         </div>
-                                        <div class="info_item noti"><div class="btn_put" onclick="listToast($(this))">상품 담아 넣기</div></div>
+                                        <div class="info_item noti"><div class="btn_put" onclick="prd_add_ev($(this))">상품 담아 넣기</div></div>
                                         <div class="info_item basket">
                                             <a class="btn_basket" href="#none">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="12.105" height="15.285" viewBox="0 0 12.105 15.285">
@@ -1089,6 +1089,12 @@
             $(this).parent().children('li').removeClass('selected');
             $(this).addClass('selected').closest('.list').addClass('selected');
         });
+
+        prd_add_ev = (obj) => {
+            
+            listToast(obj, '담는 중 입니다.', '정상처리 되었습니다.');
+            
+        }
 
         selectUi.init();
 

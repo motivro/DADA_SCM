@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/content_hs.css">
+    <link rel="stylesheet" href="../resources/css/content_k.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
+    <script src="../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../resources/js/ui.js"></script>
+    <script src="../resources/js/table_list.js?1"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/7.1.2/highcharts.js"></script>
+    <script src="../resources/modules/series-label.js"></script>
+    <script src="../resources/modules/exporting.js"></script>
+    <script src="../resources/modules/export-data.js"></script>
+    <script src="../resources/modules/accessibility.js"></script>
+
+</head>
+
+<style>
+
+#window_open .txtInfo{}
+#window_open .statis_list{display: flex;justify-content: space-between;align-items: stretch;flex-wrap: wrap;background-color:#fff}
+#window_open .statis_item{width:100%;background: #fff;display: flex;flex-direction: column;}
+#window_open .statis_item .item_tit{padding:10px 20px;display: flex;justify-content: space-between;align-items: center;}
+#window_open .statis_item .tit_name{font-size: var(--fts16);font-weight: var(--ftw700);}
+#window_open .statis_item .tit_inp{display: flex;gap: 5px;}
+#window_open .statis_item .tit_inp .inp_wrap input[type="text"]{padding: 5px 10px;font-size: 14px;font-weight: 500;line-height: 18px;}
+#window_open .statis_item .tit_inp .inp_wrap input[type="text"]::placeholder {text-align:left}
+
+#window_open .statis_item .item_cont{width:100%;height:100%;padding: 20px;}
+#window_open .statis_item .item_cont .f_col{display: flex;flex-direction: column;}
+#window_open .statis_item .item_cont .data_list.row-2{display: flex;justify-content: space-between;position: relative;padding:20px 0 0;border-top: var(--box_border);}
+#window_open .statis_item .item_cont .data_list.row-2 .item_row{width: calc(50% - 30px);position: relative;}
+#window_open .statis_item .item_cont .data_list.row-2 .item_row:first-child:after{content: '';display: block;width: 1px;height: 100%;position: absolute;right: -30px;top: 50%;transform: translateY(-50%);background: var(--color12);}
+#window_open .statis_item .item_cont .data_list .item_row:first-child{border-left: 0;}
+#window_open .statis_item .item_cont .data_list .item_row .data_item{padding:5px 0;}
+#window_open .data_item{display: flex;justify-content: space-between;align-items: center;}
+#window_open .data_item.solo{padding: 0 0 20px;width: 300px;align-items: center;}
+
+#window_open .statis_item.n02 .item_cont{padding: 0;}
+#window_open .statis_item.n02 .item_cont .f_col{height: 100%;}
+#window_open .statis_item .item_cont .data_list.row-3{height: 50%;padding: 0 20px;}
+#window_open .statis_item .item_cont .data_list.row-3 .item_row{width:100%;height:100%;display: flex;justify-content: space-between;align-items: center;position: relative;}
+#window_open .statis_item .item_cont .data_list.row-3:first-child .item_row:after{content: '';display: block;width: calc(100% - 40px);height: 1px;background: var(--color12);position: absolute;left: 50%;bottom: 0;transform: translateX(-50%);}
+#window_open .statis_item .item_cont .data_list.row-3 .data_item{width: 33.33%;padding: 0 20px;border-left: var(--box_border);}
+#window_open .statis_item .item_cont .data_list.row-3 .data_item:first-child{border-left: 0;}
+
+#window_open .data_item .name{font-weight: var(--ftw500);}
+#window_open .data_item .name{display:flex;align-items:center;gap:5px;}
+#window_open .data_item .name .helper:hover .tooltip_box{display: block;}
+#window_open .data_item .name .tooltip_box{font-size: var(--fts12);display: none;padding:10px;position: absolute;z-index:10;max-width: 300px;background: #fff;box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);}
+#window_open .data_item .name .tooltip_box .info_txt + .info_txt{margin-top: 10px;}
+#window_open .data_item .name .tooltip_box .info_txt .tit_txt{font-size: var(--fts13);font-weight: var(--ftw500);margin-bottom: 3px;}
+#window_open .data_item .name .tooltip_box .info_txt .txt{font-size: var(--fts12);font-weight: var(--ftw400);word-break: keep-all;}
+
+#window_open .data_item .data .sta{font-size: var(--fts20);font-weight: var(--ftw500);margin-right: 3px;}
+#window_open .data_item .data .sta.red{color: var(--color1);}
+#window_open .data_item .data .sta.green{color: var(--color2);}
+#window_open .data_item .data .sta.gray{color: var(--color5);}
+#window_open .statis_item.n02 .item_cont .data_item{flex-direction: column;align-items: flex-start;gap:5px;}
+#window_open .statis_item.n02 .item_cont .data_item .data{width:100%;display: flex;justify-content: space-between;}
+#window_open .statis_item.n02 .item_cont .data_item .data .data_sta .sta{margin-right:0;font-size: var(--fts14);font-weight: var(--ftw700);}
+#window_open .statis_item.n02 .item_cont .data_item .data .data_per .sta{margin-right:0;font-size: var(--fts12);}
+#window_open .statis_item.n02 .item_cont .data_item .data .data_per .sta:before{display: inline-block;}
+#window_open .statis_item.n02 .item_cont .data_item .data .data_per .sta.up:before{content: '↑';color: var(--color1);}
+#window_open .statis_item.n02 .item_cont .data_item .data .data_per .sta.down:before{content: '↓';color: var(--color3);}
+
+#window_open .dash_data .data_box{border:none;border-top:var(--cont_border)}
+
+</style>
+<body id="window_open"> 
+    <div class="statis_item">
+        <div class="item_tit">
+            <div class="tit_name"></div>
+            <div class="tit_inp">
+                
+                <div class="inp_wrap">
+                    <div id="sandbox_container" class="input-daterange input-group mini range1">
+                        <input type="text" class="input-sm form-control" name="start" placeholder="경과일자 시작">
+                        <input type="text" class="input-sm form-control" name="end" placeholder="경과일자 종료">
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <div class="btn">조회적용</div>
+                    <div class="btn">당월매출</div> 
+                    <div class="ti2_su">당월 정산 기준</div>
+                    <div class="btn">1회</div>
+                    <div class="btn">2회</div>
+                    <div class="btn">3회</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- dash_data S -->
+        <div class="contents_box bg_none bd_0">
+            <div class="dash_data flex_cont bg_none">
+                
+                <div class="top_box ">
+                    <div class="chart_box">
+                        <div class="data_box">
+                            <div class="item_titss">
+                                <span class="name">매출현황</span>
+                            </div>
+                            <figure class="highcharts-figure">
+                                <div id="highcharts_container"></div>
+                            </figure>
+                            <!-- <img src="../resources/images/common/chart_ex.svg" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="pcacme006001_1" class="contents_box">
+            <div class="panel_head bdr_bot">
+                <div class="cont_group ">
+                    <div class="cont_left">
+                        <div class="panel_count">
+                            <div class="all_count">매출기간<span class="count_sta">2023-02-30</span></div>
+                        </div>
+                    </div>
+                    <div class="cont_right">
+                        <div class="data_item solo">
+                            <div class="name">총 매출금액</div>
+                            <div class="data"><span class="sta green">5,000,000</span>원</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel_body">
+                
+                <div class="tbl_wrap">
+                    <div class="motiv_tbl normal basic">
+                        <div class="tbl_inner">
+                            <div class="tbl_head">
+                                <div class="row_item d_flex">
+                                    <div class="hd_item">
+                                        <div>회원정보</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div>회사정보</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div>매출액</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tbl_body">
+                                <div class="row_item d_flex">
+                                    <div class="hd_item">
+                                        <div>회원이름(ID)</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div>회사명 또는 미승인 인경우 개인표시</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div><span class="sta">5,000,000</span>원</div>
+                                    </div>
+                                </div>
+                                <div class="row_item d_flex">
+                                    <div class="hd_item">
+                                        <div>회원이름(ID)</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div>회사명 또는 미승인 인경우 개인표시</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div><span class="sta">5,000,000</span>원</div>
+                                    </div>
+                                </div>
+                                <div class="row_item d_flex">
+                                    <div class="hd_item">
+                                        <div>회원이름(ID)</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div>회사명 또는 미승인 인경우 개인표시</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div><span class="sta">5,000,000</span>원</div>
+                                    </div>
+                                </div>
+                                <div class="row_item d_flex">
+                                    <div class="hd_item">
+                                        <div>회원이름(ID)</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div>회사명 또는 미승인 인경우 개인표시</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div><span class="sta">5,000,000</span>원</div>
+                                    </div>
+                                </div>
+                                <div class="row_item d_flex">
+                                    <div class="hd_item">
+                                        <div>회원이름(ID)</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div>회사명 또는 미승인 인경우 개인표시</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div><span class="sta">5,000,000</span>원</div>
+                                    </div>
+                                </div>
+                                <div class="row_item d_flex">
+                                    <div class="hd_item">
+                                        <div>회원이름(ID)</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div>회사명 또는 미승인 인경우 개인표시</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div><span class="sta">5,000,000</span>원</div>
+                                    </div>
+                                </div>
+                                <div class="row_item d_flex">
+                                    <div class="hd_item">
+                                        <div>회원이름(ID)</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div>회사명 또는 미승인 인경우 개인표시</div>
+                                    </div>
+                                    <div class="hd_item">
+                                        <div><span class="sta">5,000,000</span>원</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="motiv_paging">
+                        <a class="first" href="#none"></a>
+                        <a class="prev" href="#none"></a>
+                        <ul>
+                            <li><a class="this" href="#none">1</a></li>
+                            <li><a href="#none">2</a></li>
+                            <li><a href="#none">3</a></li>
+                            <li><a href="#none">4</a></li>
+                            <li><a href="#none">5</a></li>
+                            <li><a href="#none">6</a></li>
+                            <li><a href="#none">7</a></li>
+                            <li><a href="#none">8</a></li>
+                            <li><a href="#none">9</a></li>
+                            <li><a href="#none">10</a></li>
+                        </ul>
+                        <a class="next" href="#none"></a>
+                        <a class="last" href="#none"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(() => {
+            $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
+        });
+        icon_refresh = (obj) => {
+            obj.addClass('on');
+            var refresh = setTimeout( function() {
+                obj.removeClass('on');
+                clearTimeout(refresh);
+            }, 2000);
+        }
+        
+        Highcharts.chart('highcharts_container', {
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: ' ',
+                align: 'left'
+            },
+
+            xAxis: {
+                categories: ['22.01', '22.02', '22.03', '22.04', '22.05', '22.06', '22.07', '22.08', '22.09', '22.10', '22.11', '22.12'],
+                accessibility: {
+                description: ' '
+                }
+            },
+            yAxis: {
+                title: {
+                text: ' '
+                },
+                labels: {
+                formatter: function () {
+                    return this.value + '°';
+                }
+                }
+            },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            plotOptions: {
+                spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+                }
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+            series: [
+                {
+                    name: '총 매출금액',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [21908, 5548, 8105, 11248, 8989, 11816, 18274,17300, 13053, 11906, 10073]
+                }, {
+                    name: '일반판매',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [24916, 37941, 29742, 29851, 32490, 30282,38121, 36885, 33726, 34243, 31050]
+                }, {
+                    name: '다다딜판매',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [11744, 30000, 16005, 19771, 20185, 24377,32147, 30912, 29243, 29213, 25663]
+                }, {
+                    name: '리워드금액',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [null, null, null, null, null, null, null,null, 11164, 11218, 10077]
+                }, {
+                    name: '위탁판매',
+                    marker: {
+                        symbol: 'square'
+                    },
+                    data: [43934, 48656, 65165, 81827, 112143, 142383,171533, 165174, 155157, 161454, 154610]
+                }
+            ],
+
+            responsive: {
+            rules: [{
+                condition: {
+                maxWidth: 500
+                },
+                chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+                }
+            }]
+        }
+        });
+
+    </script>
+</body>
+</html>

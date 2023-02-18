@@ -37,10 +37,11 @@
                                 <div class="inp_flex">
                                     <div class="inp_wrap">
                                         <label for="newPw">비밀번호</label>
-                                        <input type="text" name="newPw" id="newPw" placeholder="변경할 비밀번호를 입력해 주세요.">
+                                        <div class="inp_wrap password"><input type="password" name="" id="" placeholder="비밀번호"><i class="icon icon_eye"></i></div>
                                         <p class="txtInfo error">암호를 입력해 주세요.</p>
                                         <p class="txtInfo error">8~16자 대 소문자, 숫자, 특수문자를 포함해 주세요.</p>
                                     </div>
+                                    
                                     <div class="inp_wrap">
                                         <label for="newPw">비밀번호 확인</label>
                                         <input type="text" name="newPw" id="newPw" placeholder="비밀번호 확인">
@@ -48,7 +49,7 @@
                                     </div>
                                 </div>
                                 <div class="btn_wrap bottom jc_c">
-                                    <div class="btn btn_newPwSave" onclick="dadaAlert.open('test', '정상적으로 비밀번호가 변경되었습니다.');">비밀번호 변경저장</div>
+                                    <div class="btn btn_newPwSave" onclick="mtvLp.open('alert1');">비밀번호 변경저장</div>
                                 </div>
                             </div>
                         </div>
@@ -63,28 +64,27 @@
     </div>
     <!-- wrap E -->
 
-    <div class="dada_alt_wrap" id="test">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn"></div>
-            </div>
-            <div class="dada_cont"></div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1" t_name="ok">확인</div>
-                <!-- <div class="dada_btn co_9" t_name="close">취소</div> -->
-            </div>
+    <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
         </div>
-        <div class="dada_bg"></div>
-    </div> 
-
+        <div class="dada_cont">
+            정상적으로 비밀번호가 변경되었습니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="step1()">확인</div>
+        </div>
+    </div>
+    
     <script>
+        mtvLp.init();
         $(document).ready(function(){
-            $('#test .dada_btn_wrap .dada_btn').click(function(){
-                if($(this).attr('t_name') == 'ok'){
-                    location.href = './PCUSET001001.html';
-                }
-            });
+            
         });
+        step1 = () => {
+            mtvLp.close('alert1');
+            goUrl('PCUSET001001.html')
+        }
     </script>
 
 </body>

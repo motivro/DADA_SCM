@@ -43,7 +43,7 @@
                                     <p class="txtInfo error">아이디를 입력해 주세요.</p>
                                 </div>
                                 <div class="inp_wrap">
-                                    <input type="password" placeholder="암호를 입력해주세요.">
+                                    <div class="inp_wrap password"><input type="password" name="" id="" placeholder="암호를 입력해주세요."><i class="icon icon_eye"></i></div>
                                     <p class="txtInfo error">암호를 입력해 주세요.</p>
                                 </div>
                             </div>
@@ -74,25 +74,112 @@
 
     </div>
     <!-- wrap E -->
+    <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
+        </div>
+        <div class="dada_cont">
+            로그인 정보가 잘못되었습니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.close('alert1')">확인</div>
+        </div>
+    </div>
 
-    <div class="dada_alt_wrap" id="test">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn"></div>
-            </div>
-            <div class="dada_cont"></div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1" t_name="ok">확인</div>
-                <!-- <div class="dada_btn co_9" t_name="close">취소</div> -->
+    <div id="alert2" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert2')"></div>
+        </div>
+        <div class="dada_cont">
+            <h2>휴면 계정 안내</h2>
+            <div class="lp_textL">
+                <div class="text_lines">
+                    안녕하세요!<br/>
+                    회원님은 <span class="font_lab1">다다픽(다다SCM) 1년 이상 로그인하지 않아</span> <br/>
+                    관련 법령에 따라 휴면 상태로 전환되었습니다.
+                </div>
+                <div class="s_bg_box">
+                    <p>마지막 접속일 : 2022-00-00</p>
+                    <p>휴면 전환일 : 2022-00-00</p>
+                </div>
+                <div class="text_lines">
+                    다다픽(다다SCM) 계정 서비스를 계속 이용하시려면<br/>
+                    <span class="font_lab1">[휴면 해제하기]</span> 버튼을 선택해주세요.
+                </div>
             </div>
         </div>
-        <div class="dada_bg"></div>
-    </div> 
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('alert2')">취소</div>
+            <div class="dada_btn co_1" onClick="step1()">휴면 해제하기</div>
+        </div>
+    </div>
+
+    <div id="alert3" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert3')"></div>
+        </div>
+        <div class="dada_cont">
+            <h2>휴면 해제 완료</h2>
+            <div class="text_lines">
+                회원님의 계정이 휴면 해제되었습니다.<br/>
+                <span class="font_lab1">다다픽(다다SCM) 계정의 모든 서비스를</span><br/>
+                    정상적으로 이용 할 수 있습니다.<br/>
+                <span class="font_lab1">[확인]</span> 버튼을 선택하시면 로그인 화면으로 이동합니다.
+            </div>
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.close('alert3')">확인</div>
+        </div>
+    </div>
+    
+    <div id="cont_lp1" class="motiv_layer type1" cont_size="normal" style="display:none">
+        <div class="layer_head">
+            <div class="title">서비스 중지안내</div>
+            <div class="btn_close"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect_tit">서비스 중지내용</div>
+                <div class="sect">
+                    <div class="txt_info_box type1">
+                        <div class="info_cont">
+                            <p class="txt_info">• <span>상품등록, 수정 중지</span></p>
+                            <p class="txt_info">• <span>다다딜 상품등록, 수정 중지</span></p>
+                            <p class="txt_info">• <span>상품소싱 및 다다플레이스 상품전송 중지</span></p>
+                            <p class="txt_info">• <span>고객센터 등록중지 등</span></p>
+                            <p class="txt_info">• <span>다다플레이스(다다몰) 회원소싱 판매상품 판매중지</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sect stop_reply">
+                    <div class="stop_sta_box adm_ver">
+                        <div class="tit">
+                            <div class="mem_info">admin</div>
+                            <div class="date_info">등록일자</div>
+                        </div>
+                        <div class="cont">서비스 중지 내용</div>
+                    </div>
+                    <div class="stop_sta_box mem_ver">
+                        <div class="row_line">
+                            <div class="line_item">
+                                <div class="inp_tit required">고객님의 의견을 보내주세요.</div>
+                                <div class="inp_item txtarea_box"><textarea placeholder="사유내용"></textarea></div>
+                            </div>
+                        </div>
+                        <div class="cont">회원이 요청한 내용</div>
+                    </div>
+                </div>
+                <div class="bot_btn_wrap"><div class="btn btn_blk" onClick="mtvLp.close('alert3')">보내기</div></div>
+            </div>
+        </div>
+    </div>
 
     <script>
         $(document).ready(function(){
-            // dadaAlert.open('test', '로그인 정보가 잘못되었습니다.');
-
+            // mtvLp.open('alert1');
+            // mtvLp.open('alert2');
+            // mtvLp.open('cont_lp1');
             $('.find_wrap .findPw').click(function(){
                 if($(this).parent('.find_wrap').hasClass('on')){
                     $(this).parent('.find_wrap').removeClass('on');
@@ -100,12 +187,13 @@
                     $(this).parent('.find_wrap').addClass('on');
                 }
             });
-
-            $('#test .dada_btn_wrap .dada_btn').click(function(){
-                return console.log($(this).attr('t_name'));
-            });
             
         });
+
+        step1 = () => {
+            mtvLp.open('alert3');
+            mtvLp.close('alert2');
+        }
     </script>
 </body>
 </html>

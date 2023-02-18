@@ -45,7 +45,7 @@
                                             <p class="txt_info">본인 확인을 위해 가입 시 등록한 휴대폰번호로 본인인증을 받아야 합니다. 입력한 정보는 회원의 동의없이 공개 또는 제3자에게 제공되지 않으며 개인정보보호정책에 따라 보호됩니다.아래 휴대폰인증 버튼을 선택해 주세요.</p>
                                         </div>
                                         <div class="btn_wrap jc_c">
-                                            <div class="btn btn_codeCerti" onclick="dadaAlert.open('test', '인증되었습니다.');">휴대폰 인증</div>
+                                            <div class="btn btn_codeCerti" onclick="mtvLp.open('alert1');">휴대폰 인증</div>
                                         </div>
                                         <div class="btn_wrap jc_c">
                                             <p class="txtInfo error">가입하신 휴대폰 번호가 없습니다.</p>
@@ -56,7 +56,7 @@
                                         <input type="text">
                                         <div class="right">
                                             <span class="code_confirm">확인</span>
-                                            <span class="timer">02:59</span>
+                                            <span id="timer1" class="timer">03:00</span>
                                         </div>
                                     </div>
                                 
@@ -77,18 +77,39 @@
     </div>
     <!-- wrap E -->
 
-    <div class="dada_alt_wrap" id="test">
-        <div class="dada_alt_body">
-            <div class="dada_close_box">
-                <div class="dada_close_btn"></div>
-            </div>
-            <div class="dada_cont"></div>
-            <div class="dada_btn_wrap">
-                <div class="dada_btn co_1" t_name="ok">확인</div>
-                <!-- <div class="dada_btn co_9" t_name="close">취소</div> -->
-            </div>
+    <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
         </div>
-        <div class="dada_bg"></div>
-    </div> 
+        <div class="dada_cont">
+            인증되었습니다
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="step1()">확인</div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+
+            $('.find_wrap .findPw').click(function(){
+                if($(this).parent('.find_wrap').hasClass('on')){
+                    $(this).parent('.find_wrap').removeClass('on');
+                }else{
+                    $(this).parent('.find_wrap').addClass('on');
+                }
+            });
+
+            $('#test .dada_btn_wrap .dada_btn').click(function(){
+                return console.log($(this).attr('t_name'));
+            });
+            
+        });
+        step1 = () => {
+            mtvLp.close('alert1');
+            startTimer(180, 'timer1');
+        }
+    </script>
+
 </body>
 </html>
