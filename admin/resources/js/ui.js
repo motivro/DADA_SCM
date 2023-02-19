@@ -343,6 +343,7 @@ var mtvLp = {
         $('div').removeClass('lp_active');
         $('#'+id).addClass('lp_active');
         var mtvLpOpen = setTimeout( function() {
+            $('body').addClass('body_noscroll');
             $('.motiv_layer_bg').css({'opacity': '1'});
             $('#'+id).show().css({
                 'visibility': 'visible',
@@ -354,9 +355,11 @@ var mtvLp = {
 
     close: (id) => {
         $('#'+id).css({'display': 'none','visibility': 'hidden'});
+        
         if(mtvLp.prevActiveName == ''){
             mtvLp.nowActiveName = '';
             $('.motiv_layer_bg').css({'opacity': '0'});
+            $('body').removeClass('body_noscroll');
             var mtvLpClose = setTimeout( function() {
                 $('.motiv_layer_bg').css({'visibility': 'hidden'});
                 clearTimeout(mtvLpClose);
@@ -668,16 +671,43 @@ storeImg = (input, obj) => {
     obj.closest('.add_file_box').find('.upload_file_list').append('<div class="file_item"><span class="file_name">'+input.files[0].name+'</span><span class="close_btn"></span></div>')
 }
 
+
 prdStoreImg = (input, obj) => {
+    var html = '';
+    
+
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) {
-            obj.closest('.srh_cont').find('.img_list_wrap').append('<div class="img_item"><img src="'+e.target.result+'" alt=""></div>');
+            html += '<div class="img_item">';
+            html += '   <img src="'+e.target.result+'" alt="">';
+            html += '       <div class="img_item_btn">';
+            html += '       <div class="img_zoom" onclick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>';
+            html += '       <div class="img_retouch"><label for="retouch1_1"></label> <input type="file" id="retouch1_1" onchange="retouchImg(this, $(this));"></div>';
+            html += '       <div class="img_remove" onclick="singleRemove($(this))"><img src="../resources/images/common/addimg_03.svg" alt=""></div>';
+            html += '   </div>';
+            html += '</div>';
+            
+            obj.closest('.srh_cont').find('.img_list_wrap').append(html);
         };
         reader.readAsDataURL(input.files[0]);
     } else {
         $('.img_list_wrap').append('<div class="img_item">실패</div>');
     }
+}
+
+retouchImg = (input, obj) => {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            obj.closest('.img_item').children('img').attr('src', e.target.result)
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+singleRemove = (obj) => {
+    obj.closest('.img_item').remove();
 }
 
 /* 태그 추가 */
@@ -739,6 +769,57 @@ var prd_tag = {
         $(document).on("click", ".tag_close", function (e) {
             var index = $(this).attr("idx");
             prd_tag.tag[index] = "";
+            $(this).parent().remove();
+        });
+    }
+}
+
+/* 태그 추가 */
+var prd_option = {
+    tag: {},
+
+    keyup: (type) => {
+        var counter = 0;
+        var prd_option_tag = new Object();
+        // 태그를 추가한다.
+        function addTag(value) {
+            prd_option_tag[counter] = value; // 태그를 Object 안에 추가 합니다.
+            counter++; // counter 증가 삭제를 위한 tag_close 의 고유 id 가 됩니다.
+        }
+
+        $("#"+type+"_option_input").on("keyup", function (e) {
+            var self = $(this);
+            // input 에 focus 되있을 때 엔터 및 스페이스바 입력시 구동됨니다.
+            if (e.key === "Enter" || e.keyCode == 32) {
+                var tagValue = self.val(); // 값 가져오기
+                // 값이 없으면 동작 안합니다.
+                if (tagValue !== "") {
+                    // 같은 태그가 있는지 검사합니다.
+                    // 있다면 해당값이 array 로 return 됨니다.
+                    var result = Object
+                        .values(prd_option_tag)
+                        .filter(function (word) {
+                            return word === tagValue;
+                        })
+
+                    // 태그 중복 검사
+                    if (result.length == 0) {
+                        $("#"+type+"_option").append("<span class='forbid_item'>" + tagValue + "<span class='btn_cancle' idx='" + counter +"'>X</span></span>");
+                        addTag(tagValue);
+                        self.val("");
+                    } else {
+                        self.val("");
+                        alert("태그값이 중복됩니다.");
+                        // mtvLp.open('alert1');
+                    }
+                }
+                e.preventDefault(); // SpaceBar 시 빈공간이 생기지 않도록 방지합니다.
+            }
+        });
+        // 삭제 버튼 삭제 버튼은 비동기적 생성이므로 document 최초 생성시가 아닌 검색을 통해 이벤트를 구현시킵니다.
+        $(document).on("click", ".btn_cancle", function (e) {
+            var index = $(this).attr("idx");
+            prd_option_tag[index] = "";
             $(this).parent().remove();
         });
     }

@@ -6,6 +6,7 @@
 .w80p{width:80px;}
 .w100p{width:100px;}
 
+.m2040 {margin:20px 0 40px 0}
 #content .contents_box .srh_box .srh_item .srh_cont .select_wrap{min-width:130px;background-color:#fff}
 #content .tbl_panel .panel_tbl{}
 
@@ -119,6 +120,7 @@
 .contents_box .btn_group{display: flex;justify-content: flex-end;align-items: center;}
 .contents_box .panel_body{padding: 20px;}
 .contents_box.pd_0 .panel_body{padding: 0;}
+.regi .contents_box.pd_0 .panel_body{padding: 20px;}
 
 
 .sub_infor{padding:10px 20px 0 20px;text-align:left;color:var(--color13)}

@@ -938,7 +938,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="btn mgt_15">옵션상품 추가하기</div>
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -957,11 +957,11 @@
                                     <div class="tit flex_tit">
                                         <div>상품옵션</div>
                                         <div class="radio_wrap motiv_radio">
-                                            <label for="prd_type_1_1" class="radio_btn">위탁판매 상품
+                                            <label for="prd_type_1_1" class="radio_btn">사용하지 않음(단일상품)
                                                 <input type="radio" id="prd_type_1_1" name="prd_type" checked="">
                                                 <span class="radio_custom"></span>
                                             </label>
-                                            <label for="prd_type_1_2" class="radio_btn">지정판매 상품
+                                            <label for="prd_type_1_2" class="radio_btn">옵션사용(SKU 상품)
                                                 <input type="radio" id="prd_type_1_2" name="prd_type">
                                                 <span class="radio_custom"></span>
                                             </label>
@@ -992,13 +992,13 @@
                                             </div>
         
                                             <div class="srh_item">
-                                                <div class="srh_item_inner">
-                                                    <div class="srh_cont normal">
+                                                <div class="srh_item_inner ">
+                                                    <div class="srh_cont  normal">
                                                         <div class="set_opt">
                                                             <div class="row_item">
                                                                 <div class="cus_inp_wrap checkbox_inp">
-                                                                    <label for="read_1_1" class="inp_box srh_tit">옵션 조정
-                                                                        <input type="checkbox" id="read_1_1" name="" checked>
+                                                                    <label for="read_11_1" class="inp_box srh_tit">옵션 조정
+                                                                        <input type="checkbox" id="read_11_1" name="" checked>
                                                                         <span class="inp_custom"></span>
                                                                     </label>
                                                                 </div>
@@ -1006,13 +1006,141 @@
                                                             </div>
                                                         </div>
                                                         
+                                                        <style>
+                                                            #content .motiv_tbl_box.regi_sect_tbl .motiv_normal_tbl tr th,
+                                                            #content .motiv_tbl_box.regi_sect_tbl .motiv_normal_tbl tr td{height: 53px;}
+
+                                                            .regi_sect .forbid_item{display:inline-block;margin-left:10px}
+                                                            .regi_sect .forbid_item .btn_cancle{display:inline-block;color:var(--color1);margin-left:3px;cursor:pointer}
+                                                            .regi_sect_tbl{margin-top:10px;}
+                                                            .motiv_tbl_box.regi_sect_tbl .motiv_normal_tbl tr td{position:relative}
+                                                            .infor_btn_wrap{width:80px;position:absolute;bottom:0;right:-100px;}
+                                                            /* background-image: url(../images/common/plus.svg); */
+
+                                                            .regi_sect_tbl .btn.close_regi,
+                                                            .regi_sect_tbl .btn.plus_regi{float:left;position:relative;width:34px;height:34px;border-radius:0;}
+                                                            .regi_sect_tbl .btn.plus_regi{margin-left:7px;}
+                                                            .regi_sect_tbl .btn.close_regi:before,
+                                                            .regi_sect_tbl .btn.plus_regi:before,
+                                                            .regi_sect_tbl .btn.plus_regi:after{content:'';display:block;clear:both;position:absolute;top:50%;left:50%;background-color:var(--color1);}
+                                                            .regi_sect_tbl .btn.plus_regi:before{width:12px;height:2px;margin-top:-1px;margin-left:-6px;}
+                                                            .regi_sect_tbl .btn.plus_regi:after{width:2px;height:12px;margin-top:-6px;margin-left:-1px;}
+                                                            .regi_sect_tbl .btn.close_regi:before{width:12px;height:2px;margin-top:-1px;margin-left:-6px;background-color:var(--color17);}
+
+                                                            .align_flex_end{align-items: flex-end!important;padding-bottom:7px;margin-left: 0!important;}
+                                                            .align_flex_end:after{display:none!important}
+                                                        </style>
                                                         <div class="sub_infor readtime_info">
                                                             <p>※ 세미콜론(;) 또는 Enter, Tab키를 통해 옵션값을 연속으로 입력하세요. 예시) 빨강, 노랑, 파랑</p>
                                                         </div>
+
+                                                        <div class="motiv_tbl_box name_k pd_0 regi_sect_tbl">
+                                                            <div class="tbl_item">
+                                                                <table class="motiv_normal_tbl ta_c">
+                                                                    <caption>카테고리 분류정보관리</caption>
+                                                                    <colgroup>
+                                                                        <col style="width:40px">
+                                                                        <col style="width:auto">
+                                                                        <col style="width:100px">
+                                                                        <col style="width:400px">
+                                                                    </colgroup>
+                                                                    
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="2"><div>옵션유형 선택</div></th>
+                                                                            <th><div>옵션유형 선택</div></th>
+                                                                            <th><div>옵션유형 선택</div></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><div>1</div></td>
+                                                                            <td class="ta_l td_select">
+                                                                                <div class="select_wrap">
+                                                                                    <select>
+                                                                                        <option value="선택" >선택</option>
+                                                                                        <option value="색상" selected>색상</option>
+                                                                                        <option value="사이즈">사이즈</option>
+                                                                                        <option value="직접입력">직접입력</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="ta_l">
+                                                                                <div><input type="text" id="color_option_input" size="20" placeholder="색상을 입력해 주세요." onkeyup="prd_option.keyup('color')"/></div>
+                                                                            </td>
+                                                                            <td class="ta_l">
+                                                                                <div>
+                                                                                    <div id="color_option" class="btn_wrap prd_tag"></div>
+                                                                                </div>
+                                                                                <!-- <div class="infor_btn_wrap">
+                                                                                    <div class="btn close_regi"></div>
+                                                                                </div> -->
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><div>2</div></td>
+                                                                            <td class="ta_l td_select">
+                                                                                <div class="select_wrap">
+                                                                                    <select>
+                                                                                        <option value="선택" >선택</option>
+                                                                                        <option value="색상">색상</option>
+                                                                                        <option value="사이즈" selected>사이즈</option>
+                                                                                        <option value="직접입력">직접입력</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="ta_l">
+                                                                                <div><input type="text" id="size_option_input" size="20" placeholder="사이즈를 입력해 주세요." onkeyup="prd_option.keyup('size')"/></div>
+                                                                            </td>
+                                                                            <td class="ta_l">
+                                                                                <div>
+                                                                                    <div id="size_option" class="btn_wrap prd_tag"></div>
+                                                                                </div>
+                                                                                <!-- <div class="infor_btn_wrap">
+                                                                                    <div class="btn close_regi"></div>
+                                                                                </div> -->
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><div>3</div></td>
+                                                                            <td class="ta_l td_select">
+                                                                                <div class="select_wrap">
+                                                                                    <select>
+                                                                                        <option value="선택" >선택</option>
+                                                                                        <option value="색상">색상</option>
+                                                                                        <option value="사이즈">사이즈</option>
+                                                                                        <option value="직접입력" selected>직접입력</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="ta_l">
+                                                                                <div>
+                                                                                    <div class="inp_wrap"><input type="text" name="" id="" placeholder="직접입력"></div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="ta_l">
+                                                                                <div>
+                                                                                    
+                                                                                </div>
+                                                                                <!-- <div class="infor_btn_wrap">
+                                                                                    <div class="btn close_regi"></div>
+                                                                                    <div class="btn plus_regi"></div>
+                                                                                </div> -->
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                 </div>
+                                                <div class="srh_item_inner align_flex_end">
+                                                    <div class="btn mgt_15">옵션상품 추가하기</div>
+                                                </div>
                                             </div>
-        
+                                            
                                         </div>
                                         <!-- tableList S -->
                                         <div id="pcusme001002_3" class="contents_box pd_0 bd_0 mg_0 bdt_1">
@@ -1105,7 +1233,7 @@
                                                                         <div class='hd_item' keyname='sell6'>
                                                                             <div>
                                                                                 <div class="flex_item">
-                                                                                    <div class="inp_wrap"><input type="text" placeholder="관리코드"></div>
+                                                                                    <div class="inp_wrap"><input type="text" placeholder="공급가"></div>
                                                                                     <div class="btn btn_sm btnStaAll">일괄</div>
                                                                                 </div>
                                                                             </div>
@@ -1113,7 +1241,7 @@
                                                                         <div class='hd_item' keyname='sell7'>
                                                                             <div>
                                                                                 <div class="flex_item">
-                                                                                    <div class="inp_wrap"><input type="text" placeholder="관리코드"></div>
+                                                                                    <div class="inp_wrap"><input type="text" placeholder="추가금액"></div>
                                                                                     <div class="btn btn_sm btnStaAll">일괄</div>
                                                                                 </div>
                                                                             </div>
@@ -1121,7 +1249,7 @@
                                                                         <div class='hd_item' keyname='sell8'>
                                                                             <div>
                                                                                 <div class="flex_item">
-                                                                                    <div class="inp_wrap"><input type="text" placeholder="관리코드"></div>
+                                                                                    <div class="inp_wrap"><input type="text" placeholder="최초재고"></div>
                                                                                     <div class="btn btn_sm btnStaAll">일괄</div>
                                                                                 </div>
                                                                             </div>
@@ -1130,7 +1258,12 @@
                                                                             <div>상품가 + 추가금액</div>
                                                                         </div>
                                                                         <div class='hd_item' keyname='sell10'>
-                                                                            <div></div>
+                                                                            <div>
+                                                                                <div class="flex_item">
+                                                                                    <div class="inp_wrap"><input type="text" placeholder="간략소개"></div>
+                                                                                    <div class="btn btn_sm btnStaAll">일괄</div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class='row_item d_flex'>
@@ -1259,6 +1392,10 @@
                                                 .img_item_btn > div img{}
                                                 .regi_sect .img_list_wrap .img_item .img_item_btn img{position:static;width: 21px;height: 21px;padding:2px}
                                                 .regi_sect .img_list_wrap .img_item .img_item_btn > div:first-child + div + div img{padding:4px}
+                                                .img_retouch{position: relative;}
+                                                .img_retouch input[type="file"] {position: absolute;width: 0;height: 0;padding: 0;overflow: hidden;border: 0;}
+                                                .img_retouch label{display:inline-block;position:static;width:21px;height:21px;padding:2px;background-image:url(../resources/images/common/addimg_02.svg);background-size:17px;background-repeat:no-repeat;background-position:center}
+                                                
                                             </style>
                                             <div class="srh_item_line">
                                                 <div class="srh_item">
@@ -1286,32 +1423,44 @@
                                                                 <img src="../resources/images/product/sample_thumb.jpg" alt="">
                                                                 <div class="img_item_btn">
                                                                     <div class="img_zoom" onClick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
-                                                                    <div class="img_retouch"><img src="../resources/images/common/addimg_02.svg" alt=""></div>
-                                                                    <div class="img_remove"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
+                                                                    <div class="img_retouch">
+                                                                        <label for="retouch1_1"></label> 
+                                                                        <input type="file" id="retouch1_1" onchange="retouchImg(this, $(this));">
+                                                                    </div>
+                                                                    <div class="img_remove" onClick="singleRemove($(this))"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
                                                                 </div>
                                                             </div>
                                                             <div class="img_item">
                                                                 <img src="../resources/images/product/sample_thumb.jpg" alt="">
                                                                 <div class="img_item_btn">
                                                                     <div class="img_zoom" onClick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
-                                                                    <div class="img_retouch"><img src="../resources/images/common/addimg_02.svg" alt=""></div>
-                                                                    <div class="img_remove"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
+                                                                    <div class="img_retouch">
+                                                                        <label for="retouch1_1"></label> 
+                                                                        <input type="file" id="retouch1_1" onchange="retouchImg(this, $(this));">
+                                                                    </div>
+                                                                    <div class="img_remove" onClick="singleRemove($(this))"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
                                                                 </div>
                                                             </div>
                                                             <div class="img_item">
                                                                 <img src="../resources/images/product/sample_thumb.jpg" alt="">
                                                                 <div class="img_item_btn">
                                                                     <div class="img_zoom" onClick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
-                                                                    <div class="img_retouch"><img src="../resources/images/common/addimg_02.svg" alt=""></div>
-                                                                    <div class="img_remove"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
+                                                                    <div class="img_retouch">
+                                                                        <label for="retouch1_1"></label> 
+                                                                        <input type="file" id="retouch1_1" onchange="retouchImg(this, $(this));">
+                                                                    </div>
+                                                                    <div class="img_remove" onClick="singleRemove($(this))"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
                                                                 </div>
                                                             </div>
                                                             <div class="img_item">
                                                                 <img src="../resources/images/product/sample_thumb.jpg" alt="">
                                                                 <div class="img_item_btn">
                                                                     <div class="img_zoom" onClick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
-                                                                    <div class="img_retouch"><img src="../resources/images/common/addimg_02.svg" alt=""></div>
-                                                                    <div class="img_remove"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
+                                                                    <div class="img_retouch">
+                                                                        <label for="retouch1_1"></label> 
+                                                                        <input type="file" id="retouch1_1" onchange="retouchImg(this, $(this));">
+                                                                    </div>
+                                                                    <div class="img_remove" onClick="singleRemove($(this))"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
