@@ -886,6 +886,10 @@ h2.type2 .read_more > a:hover:after{}
 .cate_select_box .srh_cont .inp_wrap .btn{white-space: nowrap;}
 .cate_select_box .srh_cont .btn_wrap{gap: 0;}
 
+/**/
+.regi_navi_box{position: sticky;display: flex;margin-top: 20px;flex-wrap: nowrap;flex-direction: row;align-items: center;background: #fff;border: var(--box_border);top: 94px;left: 0;z-index:9;}
+.prd_hs.active{position:fixed;top:146px;width:100%;height:1158px;overflow:hidden;}
+
 .cate_select_box .filter_wrap{margin-top:20px;border: 1px solid #dddddd;}
 .cate_select_box .filter_wrap .filter_inner{display: flex;flex-direction: row;flex-wrap: nowrap;width: 100%;}
 .cate_select_box .filter_wrap .list{overflow:auto;width:25%;height: 140px;}
@@ -961,8 +965,10 @@ h2.type2 .read_more > a:hover:after{}
 .regi_sect .srh_item.normal .srh_cont{display:block;float: left;margin-left: 10px;}
 .regi_sect .srh_item.normal .txtInfo{display:block;margin-top: 10px;font-weight: var(--ftw500);color: var(--color1);}
 
-.regi_sect .add_box{width: 140px;height:140px;overflow:hidden;background: #fff;border: 1px dotted var(--color5);position: relative;}
+.regi_sect .add_box{width: 140px;height:140px;overflow:hidden;background: #fff;border: 1px dotted var(--color5);position: relative;cursor:pointer;background-image:url(../images/common/plus.svg);background-size:45px;background-repeat:no-repeat;background-position:center}
 .regi_sect .add_box .btn_plus{width: 45px;height: 45px;box-sizing: border-box;background-repeat:no-repeat;background-position:center;background-size:cover;cursor: pointer;background-image: url('../images/common/plus.svg');position: absolute;left: 50%;top: 50%;z-index:5;transform: translate(-50%,-50%);cursor: pointer;}
+.regi_sect .add_box label{float:left;width:140px;height:140px;}
+.regi_sect .add_box input[type="file"]{position:absolute;width:0;height:0;padding:0;overflow:hidden;border:0;}
 
 .regi_sect .img_list_wrap{display: flex;gap: 15px;}
 .regi_sect .img_list_wrap .img_item{width:140px;height: 140px;position: relative;overflow: hidden;}
@@ -1202,6 +1208,9 @@ h2.type2 .read_more > a:hover:after{}
 .detail_area .dtl_tab .tab_item > a > span{color: var(--color14);}
 .detail_area .dtl_tab .tab_item.active > a > span{color: #fff;}
 .detail_area .dtl_cont{padding: 20px 15px;border:var(--box_border);border-top: 0;}
+
+.detail_qna{min-height:calc(100vh - 450px)}
+.detail_guide{min-height:calc(100vh - 450px)}
 
 /* 상품상세 */
 .detail_area .productDetail{padding:50px 0;}

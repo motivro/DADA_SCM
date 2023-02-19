@@ -164,7 +164,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #header .slogo > span{display:block;font-size: 26px;font-weight: 500;line-height: 37px;color: #fff;letter-spacing: -0.52px;}
 #header.login .slogo > span{display:block;font-size: 12px;font-weight: 500;line-height: 17px;color: #fff;letter-spacing: -0.24px;}
 
-#header .hd_notice{white-space: nowrap;position:relative;display:inline-block;margin-left:38px;padding: 0 12px 0 32px;background: rgba(255, 255, 255, .9);border-radius: 22px;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);}
+#header .hd_notice{cursor:pointer;white-space: nowrap;position:relative;display:inline-block;margin-left:38px;padding: 0 12px 0 32px;background: rgba(255, 255, 255, .9);border-radius: 22px;box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);}
 #header .hd_notice:before{content: '';width: 18px;height: 18px;background: var(--color1);position: absolute;left: 6px;top:50%;z-index:1;border-radius:100%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);-moz-transform: translateY(-50%);background-image: url(../images/common/icon_bell.svg);background-repeat: no-repeat;background-position: center;}
 #header .hd_notice > span{display: block;font-size: 12px;font-weight: 500;line-height: 23px;}
 
@@ -739,7 +739,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .cus_inp_wrap .inp_box{cursor: pointer;position: relative;padding-left: 25px;font-size: 12px;font-weight: 500;line-height: 20px;}
 .cus_inp_wrap .inp_box input[type="checkbox"],
 .cus_inp_wrap .inp_box input[type="radio"]{position: absolute;opacity: 0;height: 0;width: 0;}
-
+.cus_inp_wrap .inp_box.srh_tit{min-width: 120px;font-size: 14px;font-weight: 700;line-height: 20px;}
 /* input radio */
 .cus_inp_wrap.radio_inp .inp_box input[type="radio"]:checked ~ .inp_custom {border: 1px solid var(--color1);}
 .cus_inp_wrap.radio_inp .inp_box .inp_custom:after{content: "";position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 10px;height: 10px;border-radius: 50%;background: #cacdd0;}

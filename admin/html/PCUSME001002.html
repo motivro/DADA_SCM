@@ -19,6 +19,8 @@
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -995,7 +997,7 @@
                                                         <div class="set_opt">
                                                             <div class="row_item">
                                                                 <div class="cus_inp_wrap checkbox_inp">
-                                                                    <label for="read_1_1" class="inp_box">옵션 조정
+                                                                    <label for="read_1_1" class="inp_box srh_tit">옵션 조정
                                                                         <input type="checkbox" id="read_1_1" name="" checked>
                                                                         <span class="inp_custom"></span>
                                                                     </label>
@@ -1244,33 +1246,78 @@
                                 <div class="acc_tit"><div class="tit">상품이미지</div><div class="accBtn"><i class="icon icon_arrow"></i></div></div>
                                 <div class="acc_cont">
                                     <div class="contents_box regi bd_0">
-                                        <div class="srh_box">
+                                        <div class="srh_box addimg_cont">
         
-                                            <div class="srh_item normal">
-                                                <div class="srh_item_inner">
-                                                    <div class="srh_title">대표 이미지</div>
-                                                    <div class="srh_cont">
-                                                        <div class="add_box">
-                                                            <div class="btn_plus"></div>
+                                            <style>
+                                                .contents_box .srh_box.addimg_cont .srh_item .srh_item_inner{}
+                                                .contents_box .srh_box.addimg_cont .srh_item{width:100%}
+
+                                                .srh_item_line{}
+                                                .srh_item_line .txtInfo2{padding-left:150px;color:var(--color1);margin-top: -10px;padding-bottom: 15px;}
+                                                .img_item_btn{display:flex;position: absolute;bottom: 0;left: 0;z-index: 10;width: 100%;}
+                                                .img_item_btn > div{width:33.333%;text-align:center;background-color:rgba(0,0,0,.5);padding: 7px;cursor:pointer}
+                                                .img_item_btn > div img{}
+                                                .regi_sect .img_list_wrap .img_item .img_item_btn img{position:static;width: 21px;height: 21px;padding:2px}
+                                                .regi_sect .img_list_wrap .img_item .img_item_btn > div:first-child + div + div img{padding:4px}
+                                            </style>
+                                            <div class="srh_item_line">
+                                                <div class="srh_item">
+                                                    <div class="srh_item_inner">
+                                                        <div class="srh_title">대표 이미지</div>
+                                                        <div class="srh_cont">
+                                                            <div class="img_list_wrap"></div>
+                                                            <div class="add_box">
+                                                                <label for="file"></label> 
+                                                                <input type="file" id="file" onchange="prdStoreImg(this, $(this));">
+                                                            </div>
                                                         </div>
-                                                        <p class="txtInfo point">권장 크기 : 1000 x 1000 (윈도대상 750 x 1000)</p>
                                                     </div>
                                                 </div>
+                                                <p class="txtInfo2">권장 크기 : 1000 x 1000 (윈도대상 750 x 1000)</p>
                                             </div>
+                                            
         
                                             <div class="srh_item">
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">추가 이미지 <div class="count">(<span class="sta">1</span>/<span>9</span>)</div></div>
                                                     <div class="srh_cont">
                                                         <div class="img_list_wrap">
-                                                            <div class="img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
-                                                            <div class="img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
-                                                            <div class="img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
-                                                            <div class="img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
-                                                            <div class="img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
+                                                            <div class="img_item">
+                                                                <img src="../resources/images/product/sample_thumb.jpg" alt="">
+                                                                <div class="img_item_btn">
+                                                                    <div class="img_zoom" onClick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
+                                                                    <div class="img_retouch"><img src="../resources/images/common/addimg_02.svg" alt=""></div>
+                                                                    <div class="img_remove"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="img_item">
+                                                                <img src="../resources/images/product/sample_thumb.jpg" alt="">
+                                                                <div class="img_item_btn">
+                                                                    <div class="img_zoom" onClick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
+                                                                    <div class="img_retouch"><img src="../resources/images/common/addimg_02.svg" alt=""></div>
+                                                                    <div class="img_remove"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="img_item">
+                                                                <img src="../resources/images/product/sample_thumb.jpg" alt="">
+                                                                <div class="img_item_btn">
+                                                                    <div class="img_zoom" onClick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
+                                                                    <div class="img_retouch"><img src="../resources/images/common/addimg_02.svg" alt=""></div>
+                                                                    <div class="img_remove"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="img_item">
+                                                                <img src="../resources/images/product/sample_thumb.jpg" alt="">
+                                                                <div class="img_item_btn">
+                                                                    <div class="img_zoom" onClick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
+                                                                    <div class="img_retouch"><img src="../resources/images/common/addimg_02.svg" alt=""></div>
+                                                                    <div class="img_remove"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="add_box">
-                                                            <div class="btn_plus"></div>
+                                                            <label for="file2"></label> 
+                                                            <input type="file" id="file2" onchange="prdStoreImg(this, $(this));">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1281,7 +1328,8 @@
                                                     <div class="srh_title">동영상</div>
                                                     <div class="srh_cont">
                                                         <div class="add_box">
-                                                            <div class="btn_plus"></div>
+                                                            <label for="file"></label> 
+                                                            <input type="file" id="file">
                                                         </div>
                                                         <div class="ab_video">
                                                             <div class="inp_wrap"><input type="text" name="" id="" placeholder="동영상 타이틀"></div>
@@ -1400,7 +1448,7 @@
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">
                                                         <div class="cus_inp_wrap checkbox_inp">
-                                                            <label for="cusOrder_1_1" class="inp_box">주문제작 여부
+                                                            <label for="cusOrder_1_1" class="inp_box srh_tit">주문제작 여부
                                                                 <input type="checkbox" id="cusOrder_1_1" name="" checked>
                                                                 <span class="inp_custom"></span>
                                                             </label>
@@ -1503,7 +1551,7 @@
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">
                                                         <div class="cus_inp_wrap checkbox_inp">
-                                                            <label for="inst_cost_1_1" class="inp_box">별도 설치 시 비용 여부
+                                                            <label for="inst_cost_1_1" class="inp_box srh_tit">별도 설치 시 비용 여부
                                                                 <input type="checkbox" id="inst_cost_1_1" name="" checked>
                                                                 <span class="inp_custom"></span>
                                                             </label>
@@ -1703,7 +1751,19 @@
     <!-- wrap E -->
 
     <!-- 레이어 팝업 S-->
-    <h2>팝업 내용</h2>
+
+    <div id="singleImgSlider" class="motiv_layer slider_img" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="fullSlider.close('singleImgSlider')"></div>
+        </div>
+        <div class="dada_cont">
+            
+            <div class="img_area">
+                <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+            </div>
+        </div>
+    </div>
+
     <div class="motiv_layer type1">
         <div class="layer_head">
             <div class="title">기존 상품정보 가져오기</div>
@@ -2127,18 +2187,43 @@
                     </div>
                 </div>
                 <div class="sect">
-
+                    <div class="log_detail">
+                        <div class="txt_list_tit">상세내용</div>
+                        <div class="txt_list">
+                            
+                            <div class="row_item">
+                                <div class="tit">• 작업명 :</div>
+                                <div class="cont"><span>&lt;전송코드번호&gt;쇼핑몰-작업내용</span></div>
+                            </div>
+    
+                            <div class="row_item">
+                                <div class="tit">• 작업결과 :</div>
+                                <div class="cont">완료(<span>00건 중 성공 00, 실패 00</span>)</div>
+                                <div class="btn btn_sm">관리자문의</div>
+                            </div>
+    
+                            <div class="row_item">
+                                <div class="tit">• 판매자 :</div>
+                                <div class="cont">홍길동(ID) - SCM회원(공급, 판매 포함)</div>
+                            </div>
+    
+                            <div class="row_item">
+                                <div class="tit">• 전송일자 :</div>
+                                <div class="cont">[시작] 2023.01.01 00:00:00 ~ [종료] 2023.01.02.00:00:00</div>
+                            </div>
+    
+                            <div class="row_item">
+                                <div class="tit">• 상세내용 :</div>
+                                <div class="cont">코드문자, 판매 상품 수 초과하였습니다.</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- 레이어 body E -->
     </div>
     <!-- 레이어팝업 E -->
-
-    <style>
-        .regi_navi_box{position: sticky;display: flex;margin-top: 20px;flex-wrap: nowrap;flex-direction: row;align-items: center;background: #fff;border: var(--box_border);top: 94px;left: 0;z-index:9;}
-        .prd_hs.active{position:fixed;top:146px;width:100%;height:1158px;overflow:hidden;}
-    </style>
 
     <script>
 

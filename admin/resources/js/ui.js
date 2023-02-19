@@ -179,6 +179,7 @@ var fullSlider = {
             freeMode: true,
             watchSlidesProgress: true,
         });
+        
         var swiper2 = new Swiper('#'+id+' .motiv_slider1', {
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -188,6 +189,62 @@ var fullSlider = {
                 swiper: swiper,
             },
         });
+    },
+
+    close: (id) => {
+        $('#'+id).css({'display': 'none','visibility': 'hidden'});
+        $('.motiv_layer_bg').css({'opacity': '0'});
+        var fullSliderClose = setTimeout( function() {
+            $('.motiv_layer_bg').css({'visibility': 'hidden'});
+            clearTimeout(fullSliderClose);
+        }, 301);
+        $('#'+id).removeClass('lp_active');
+    },
+}
+
+// 슬라이드 팝업
+var singleImgSlider = {
+    bw: window.innerWidth,
+    bh: window.innerHeight,
+    normal: .5,
+    large: .7,
+    full: .9,
+    checkBgSta: false,
+
+    checkBg: (obj) => {
+        if( !fullSlider.checkBgSta ){
+            if($('.motiv_layer_bg').length == 0) $('body').append('<div class="motiv_layer_bg" style="visibility:hidden" style="display:none"></div>');
+        }
+    },
+
+    open: (obj) => {
+        console.log(10)
+        fullSlider.checkBg(obj);
+        var fullSlider_h = fullSlider.bh/2;
+        
+        $('#singleImgSlider').find('.swiper-slide img').attr('src', obj.closest('.img_item').children('img').attr('src'))
+
+        $('#singleImgSlider').attr({'mar_t': (fullSlider.bh/2), 'mar_l': (fullSlider.bh/2)});
+        $('#singleImgSlider').css({
+            'width': fullSlider_h,
+            'margin-top': -(fullSlider_h/2),
+            'margin-left': -(fullSlider_h/2)
+        });
+
+        $('.motiv_layer_bg').css({'display': 'block','visibility': 'visible'});
+
+        $('#singleImgSlider').show().css({'visibility': 'hidden'});
+        $('div').removeClass('lp_active');
+        $('#singleImgSlider').addClass('lp_active');
+        var fullSliderOpen = setTimeout( function() {
+            $('.motiv_layer_bg').css({'opacity': '1'});
+            $('#singleImgSlider').show().css({
+                'visibility': 'visible',
+                'opacity': '1',
+            });
+            clearTimeout(fullSliderOpen);
+        }, 100);
+        
     },
 
     close: (id) => {
@@ -611,4 +668,78 @@ storeImg = (input, obj) => {
     obj.closest('.add_file_box').find('.upload_file_list').append('<div class="file_item"><span class="file_name">'+input.files[0].name+'</span><span class="close_btn"></span></div>')
 }
 
+prdStoreImg = (input, obj) => {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            obj.closest('.srh_cont').find('.img_list_wrap').append('<div class="img_item"><img src="'+e.target.result+'" alt=""></div>');
+        };
+        reader.readAsDataURL(input.files[0]);
+    } else {
+        $('.img_list_wrap').append('<div class="img_item">실패</div>');
+    }
+}
 
+/* 태그 추가 */
+var prd_tag = {
+    tag: {},
+    
+    init: () => {
+        $('#prd_tag_input').show();
+        prd_tag.dynamicTag();
+    },
+
+    dynamicTag: () => {
+        var counter = 0;
+        // 태그를 추가한다.
+        function addTag(value) {
+            prd_tag.tag[counter] = value; // 태그를 Object 안에 추가 합니다.
+            counter++; // counter 증가 삭제를 위한 tag_close 의 고유 id 가 됩니다.
+        }
+
+        // 최종적으로 서버에 넘길때 tag 안에 있는 값을 array type 으로 만들어서 넘깁니다.
+        function marginTag() {
+            return Object
+                .values(prd_tag.tag)
+                .filter(function (word) {
+                    return word !== "";
+                });
+        }
+
+        $("#prd_tag_input").on("keyup", function (e) {
+            var self = $(this);
+            // input 에 focus 되있을 때 엔터 및 스페이스바 입력시 구동됨니다.
+            if (e.key === "Enter" || e.keyCode == 32) {
+                var tagValue = self.val(); // 값 가져오기
+                // 값이 없으면 동작 안합니다.
+                if (tagValue !== "") {
+                    // 같은 태그가 있는지 검사합니다.
+                    // 있다면 해당값이 array 로 return 됨니다.
+                    var result = Object
+                        .values(prd_tag.tag)
+                        .filter(function (word) {
+                            return word === tagValue;
+                        })
+
+                    // 태그 중복 검사
+                    if (result.length == 0) {
+                        $("#prd_tag").append("<div class='btn btn_sm'><span>" + tagValue + "</span><span class='tag_close' idx='" + counter +"'></span></div>");
+                        addTag(tagValue);
+                        self.val("");
+                    } else {
+                        self.val("");
+                        alert("태그값이 중복됩니다.");
+                        // mtvLp.open('alert1');
+                    }
+                }
+                e.preventDefault(); // SpaceBar 시 빈공간이 생기지 않도록 방지합니다.
+            }
+        });
+        // 삭제 버튼 삭제 버튼은 비동기적 생성이므로 document 최초 생성시가 아닌 검색을 통해 이벤트를 구현시킵니다.
+        $(document).on("click", ".tag_close", function (e) {
+            var index = $(this).attr("idx");
+            prd_tag.tag[index] = "";
+            $(this).parent().remove();
+        });
+    }
+}

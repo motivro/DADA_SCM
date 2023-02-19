@@ -118,6 +118,7 @@
 
 .contents_box .btn_group{display: flex;justify-content: flex-end;align-items: center;}
 .contents_box .panel_body{padding: 20px;}
+.contents_box.pd_0 .panel_body{padding: 0;}
 
 
 .sub_infor{padding:10px 20px 0 20px;text-align:left;color:var(--color13)}

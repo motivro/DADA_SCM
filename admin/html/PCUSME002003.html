@@ -959,7 +959,7 @@
     </div>
     <!-- wrap E -->
 
-    <h2>팝업 내용</h2>
+    <!-- <h2>팝업 내용</h2> -->
     <div id="cont_lp1" class="motiv_layer type2" cont_size="full">
         <div class="layer_head">
             <div class="btn_close"></div>
@@ -1287,6 +1287,69 @@
             </div>
         </div>
     </div>
+
+    <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="alert_title">다다딜 강제종료</div>
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="motiv_tbl_box name_k pd_0">
+                    <div class="tbl_title">
+                        <div class="tit"><strong>[<span class="prd_name">팬매상품</span>]</strong>강제종료 시 방송 중 이면 끝 난 후 종료되며 그렇지 않을 경우 바로 종료됩니다.</div>
+                    </div>
+                   
+                </div>
+                <div class="sect">
+                    <div class="radio_wrap motiv_radio">
+                        <label for="end_chk_1-2" class="radio_btn">공급사
+                            <input type="radio" id="end_chk_1-2" name="end_chk">
+                            <span class="radio_custom"></span>
+                        </label>
+                        <label for="end_chk_1-3" class="radio_btn">판매사 강제종료
+                            <input type="radio" id="end_chk_1-3" name="end_chk">
+                            <span class="radio_custom"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="sect">
+                    <div class="txtarea_box">
+                        <textarea>강제종료 사유</textarea>
+                    </div>
+                </div>
+                <div class="bot_btn_wrap"><div class="btn">강제종료</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="alert2" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="alert_title">확인메시지</div>
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert2')"></div>
+        </div>
+        <div class="dada_cont">
+            방송 강제종료 시 다다딜 판매기간이 남아있어도 강제종료 됩니다.<br/>
+            다다딜 판매종료 하시겠습니까?
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.close('alert2')">확인</div>
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('alert2')">닫기</div>
+        </div>
+    </div>
+
+    <div id="alert3" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert3')"></div>
+        </div>
+        <div class="dada_cont">
+            상품단위 , 공급사, 판매사 다다딜 판매 가<br/> 종료되었습니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.close('alert3')">확인</div>
+        </div>
+    </div>
+
 
     <script>
         $(document).ready(() => {
