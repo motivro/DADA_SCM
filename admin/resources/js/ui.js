@@ -706,6 +706,17 @@ retouchImg = (input, obj) => {
     }
 }
 
+option_img = (input, obj) => {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            obj.closest('.option_img_box').children('img').attr('src', e.target.result)
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+option_img
 singleRemove = (obj) => {
     obj.closest('.img_item').remove();
 }

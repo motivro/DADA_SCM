@@ -1481,7 +1481,7 @@ td.td_select .select_wrap .select_box.active .opt_list{top:119%}
 
 #content .acc_box .acc_cont .cate_select_box{padding:20px;background: #fff;border: 0;}
 #content .motiv_tbl.regi_opt_tbl .tbl_inner .hd_item .flex_item{padding: 5px;}
-#content .motiv_tbl.regi_opt_tbl .tbl_inner .hd_item .color_box{width: 40px;height: 40px;margin: 0 auto;line-height: 0;border: var(--cont_border);border-radius: 5px;}
+#content .motiv_tbl.regi_opt_tbl .tbl_inner .hd_item .color_box{width: 40px;height: 40px;margin: 0 auto;line-height: 0;border: var(--cont_border);border-radius: 5px;cursor:pointer}
 #content .motiv_tbl.regi_opt_tbl .tbl_inner .hd_item .inp_wrap{padding: 0;flex: 1;}
 #content .motiv_tbl.regi_opt_tbl .tbl_inner .hd_item .inp_wrap input[type="text"]{line-height: 28px;}
 
