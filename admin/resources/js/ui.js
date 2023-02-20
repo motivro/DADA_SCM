@@ -716,6 +716,10 @@ option_img = (input, obj) => {
     }
 }
 
+option_color = (input, obj) => {
+    obj.closest('.flex_item').find('.inp_wrap input').val(input.value);
+}
+
 option_img
 singleRemove = (obj) => {
     obj.closest('.img_item').remove();

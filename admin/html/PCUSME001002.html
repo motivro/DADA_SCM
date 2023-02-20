@@ -1288,7 +1288,9 @@
                                                                             <div>
                                                                                 <div class="flex_item a_c gap5">
                                                                                     <div class="inp_wrap"><input type="text" name="" id=""></div>
-                                                                                    <div class="color_box" style="background:#000;"></div>
+                                                                                    <div class="color_box">
+                                                                                        <input type="color" id="color" name="color" value="#ededed" onchange="option_color(this, $(this));">
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1344,30 +1346,13 @@
                                                                             <div>
                                                                                 <div class="flex_item a_c gap5">
                                                                                     <div class="inp_wrap"><input type="text" name="" id=""></div>
-                                                                                    <div class="color_box" style="background:#000;"></div>
+                                                                                    <div class="color_box">
+                                                                                        <input type="color" id="color" name="color" value="#ededed" onchange="option_color(this, $(this));">
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <style>
-                                                                            .contents_box .srh_box.addimg_cont .srh_item .srh_item_inner{}
-                                                                            .contents_box .srh_box.addimg_cont .srh_item{width:100%}
-                            
-                                                                            .srh_item_line{}
-                                                                            .srh_item_line .txtInfo2{padding-left:150px;color:var(--color1);margin-top: -10px;padding-bottom: 15px;}
-                                                                            .img_item_btn{display:flex;position: absolute;bottom: 0;left: 0;z-index: 10;width: 100%;}
-                                                                            .img_item_btn > div{width:33.333%;text-align:center;background-color:rgba(0,0,0,.5);padding: 7px;cursor:pointer}
-                                                                            .img_item_btn > div img{}
-                                                                            .regi_sect .img_list_wrap .img_item .img_item_btn img{position:static;width: 21px;height: 21px;padding:2px}
-                                                                            .regi_sect .img_list_wrap .img_item .img_item_btn > div:first-child + div + div img{padding:4px}
-                                                                            .img_retouch{position: relative;}
-                                                                            .img_retouch input[type="file"] {position: absolute;width: 0;height: 0;padding: 0;overflow: hidden;border: 0;}
-                                                                            .img_retouch label{display:inline-block;position:static;width:21px;height:21px;padding:2px;background-image:url(../resources/images/common/addimg_02.svg);background-size:17px;background-repeat:no-repeat;background-position:center}
-                                                                            
-                                                                            .option_img_box{position:relative;max-width:50px;max-height:50px;margin:0 auto;padding:5px 10px;line-height:0}
-                                                                            .option_img_s{position:absolute;top:0;left:0;width:100%;height:100%}
-                                                                            .option_img_s input[type=file]{position:absolute;width:0;height:0;padding:0;overflow:hidden;border:0}
-                                                                            .option_img_s label{display:inline-block;position:static;width:21px;height:21px;padding:2px;background-image:url(resources/images/common/addimg_02.svg);background-size:17px;background-repeat:no-repeat;background-position:center}
-                                                                        </style>
+                                                                  
                                                                         <div class='hd_item' keyname='sell4'>
                                                                             <div>
                                                                                 <div class="option_img_box">
