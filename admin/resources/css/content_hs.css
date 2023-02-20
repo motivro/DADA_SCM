@@ -520,7 +520,7 @@ td.td_select .select_wrap .select_box.active .opt_list{top:119%}
 
 .statis_box .statis_item .item_cont .data_item .name{font-weight: var(--ftw500);}
 .statis_box .statis_item .item_cont .data_item .name{display:flex;align-items:center;gap:5px;}
-.statis_box .statis_item .item_cont .data_item .name .helper{position: relative;}
+.statis_box .statis_item .item_cont .data_item .name .helper{position:relative;text-align:center;position:relative;background-color:rgba(0,0,0,.1);border-radius:8px;width:18px;height:18px;cursor:pointer}
 .statis_box .statis_item .item_cont .data_item .name .helper:hover .tooltip_box{display: block;}
 .statis_box .statis_item .item_cont .data_item .name .tooltip_box{font-size: var(--fts12);display: none;padding:10px;position: absolute;right:0;z-index:10;min-width: 300px;background: #fff;box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);}
 .statis_box .statis_item .item_cont .data_item .name .tooltip_box .info_txt + .info_txt{margin-top: 10px;}

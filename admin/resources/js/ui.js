@@ -852,3 +852,7 @@ lpPrdImg = (id) => {
         $('#'+id).find('.img_list').css('height', img_list_height);
     });
 }
+/* 새창 뛰우기 */
+openPop = () => {
+    var popup = window.open('./new_a_blank.html', '네이버팝업', 'width=1000px,height=550px,scrollbars=yes');
+}

@@ -19,11 +19,12 @@
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/7.1.2/highcharts.js"></script>
-    <script src="../resources/modules/series-label.js"></script>
-    <script src="../resources/modules/exporting.js"></script>
-    <script src="../resources/modules/export-data.js"></script>
-    <script src="../resources/modules/accessibility.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/7.1.2/highcharts.js"></script> -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 </head>
 
@@ -78,6 +79,40 @@
 
 #window_open .dash_data .data_box{border:none;border-top:var(--cont_border)}
 
+
+/* dashList */
+.dash_board .dash_list{display:flex;justify-content: space-between;align-items: stretch;flex-direction: row;flex-wrap: wrap;}
+#window_open .dash_item{background: #fff;border: var(--cont_border);border-left:none;border-right:none}
+#window_open .dash_item.row-2{width: calc(50% - 5px);}
+#window_open .dash_item.row-3{width: 100%;margin-top: 10px;}
+#window_open .item_tit{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;border-bottom: var(--cont_border);}
+#window_open .item_tit .name{font-size: var(--fts16);font-weight: var(--ftw700);}
+#window_open .item_tit .icon{width: 12px;height: 12px;background: url('../images/common/icon_refresh.svg')no-repeat center center;background-size: cover;cursor: pointer;}
+#window_open .item_cont{padding: 20px 0;}
+#window_open .item_cont{flex-direction: row;flex-wrap: nowrap;justify-content: center;align-items: stretch;}
+#window_open .item_cont .data_list{width: 50%;display: flex;flex-direction: column;justify-content: space-between;align-items: center;border-right: var(--cont_border);}
+#window_open .item_cont .data_list:last-child{border-right: 0;}
+#window_open .item_cont .data_list .data_item{width:100%;padding:5px 20px;display: flex;justify-content: space-between;align-items: center;}
+#window_open .item_cont .data_list .data_item .data_name{font-weight: var(--ftw500);}
+#window_open .item_cont .data_list .data_item .data_cont{font-size: var(--fts12);font-weight: var(--ftw500);line-height: 29px;color: var(--color13);}
+#window_open .item_cont .data_list .data_item .data_cont.flex_box{display: flex;align-items: center;gap:30px}
+#window_open .item_cont .data_list .data_item .data_cont.flex_box .sta_box{display: flex;align-items: center;gap: 3px;}
+#window_open .item_cont .data_list .data_item .data_cont .result{line-height: 29px;}
+#window_open .item_cont .data_list .data_item .data_cont .data_sta{display:inline-block;margin-right: 3px;font-size: var(--fts20);line-height: 29px;vertical-align: -2px;}
+#window_open .dash_item.n1 .item_cont .data_list.n1_1 .data_item .data_cont .data_sta{color: var(--color1);}
+#window_open .dash_item.n1 .item_cont .data_list.n1_2 .data_item .data_cont .data_sta{color: var(--color7);}
+#window_open .dash_item.n2 .item_cont .data_list.n2_1 .data_item .data_cont .data_sta{color: var(--color5);}
+#window_open .dash_item.n2 .item_cont .data_list.n2_2 .data_item .data_cont .data_sta{color: var(--color2);}
+#window_open .dash_item.n3 .item_cont .data_list .data_item .data_cont .data_sta{color: var(--color3);}
+#window_open .dash_item.n4 .item_cont .data_list .data_item .data_cont .data_sta{color: var(--color14);}
+#window_open .dash_item.row-3{display: flex;}
+#window_open .dash_item.row-3 .item_tit{padding:20px;border-bottom: 0;gap:15px;flex: 0 0 auto;}
+#window_open .dash_item.row-3 .item_cont{width: 100%;padding: 20px 0;flex-grow: 1;}
+#window_open .dash_item.row-3 .item_cont .data_list{width:100%;flex-direction: row;border-right: 0;}
+#window_open .dash_item.row-3 .item_cont .data_list .data_item{width: 50%;padding: 0 20px;line-height:25px;border-right: var(--cont_border);}
+#window_open .dash_item.row-3 .item_cont .data_list .data_item:last-child{border-right: 0;}
+
+
 </style>
 <body id="window_open"> 
     <div class="statis_item">
@@ -126,17 +161,17 @@
         </div>
 
         <div id="pcacme006001_1" class="contents_box">
-            <div class="panel_head bdr_bot">
-                <div class="cont_group ">
-                    <div class="cont_left">
-                        <div class="panel_count">
-                            <div class="all_count">매출기간<span class="count_sta">2023-02-30</span></div>
+
+            <div class="dash_item n4 row-3">
+                <div class="item_cont d_flex">
+                    <div class="data_list">
+                        <div class="data_item">
+                            <div class="data_name">매출기간</div>
+                            <div class="data_cont">2023-02-30</div>
                         </div>
-                    </div>
-                    <div class="cont_right">
-                        <div class="data_item solo">
-                            <div class="name">총 매출금액</div>
-                            <div class="data"><span class="sta green">5,000,000</span>원</div>
+                        <div class="data_item">
+                            <div class="data_name">총매출</div>
+                            <div class="data_cont"><span class="data_sta">5,000,000</span>원</div>
                         </div>
                     </div>
                 </div>
