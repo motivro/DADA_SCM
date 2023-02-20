@@ -21,6 +21,8 @@
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
 </head>
 
 <body>
@@ -453,7 +455,7 @@
                                                         </div>
                                                         <div class="btn">검색</div>
                                                     </div>
-                                                    <div class="btn_wrap"><div class="btn">카테고리 등록</div></div>
+                                                    <div class="btn_wrap"><div class="btn" onClick="mtvLp.open('lpbox_1')">카테고리 등록신청</div></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -510,20 +512,24 @@
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">브랜드</div>
                                                     <div class="srh_cont">
-                                                        <div class="inp_wrap">
+                                                        <div class="inp_wrap tooltip_place_box open">
                                                             <input type="text" name="" id="" placeholder="브랜드를 입력해 주세요.">
+                                                            <div class="tooltip_place">브랜드명 입력 시 해당 브랜드가 있으 면 표시, 없으면 표시하지 않음</div>
                                                         </div>
+
                                                     </div>
                                                 </div>
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">제조사</div>
                                                     <div class="srh_cont">
-                                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="제조사를 입력해 주세요.">
+                                                        <div class="inp_wrap tooltip_place_box"> <!-- open 추가하여 사용 -->
+                                                            <input type="text" name="" id="" placeholder="제조사를 입력해 주세요.">
+                                                            <div class="tooltip_place">제조명 입력 시 해당 제조사가 있으면 표시, 없으면 표시하지 않음</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                
+
                                             <div class="srh_item">
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title"><div class="required">성별분류</div></div>
@@ -985,8 +991,12 @@
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">색상</div>
                                                     <div class="srh_cont type_txt">
-                                                        <div class="inp_wrap"><input class="ta_l" type="text" name="" id="" placeholder="상품 컬러명을 입력해 주세요."></div>
-                                                        <div class="color_chip_box" style="background: #fff;"></div>
+                                                        <div class="color_flex_item flex_item">
+                                                            <div class="inp_wrap"><input type="text" name="" id=""></div>
+                                                            <div class="color_box">
+                                                                <input type="color" id="color" name="color" value="#ededed" onchange="option_color(this, $(this));">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1007,6 +1017,13 @@
                                                         </div>
                                                         
                                                         <style>
+
+                                                            .color_flex_item{display:flex;justify-content:center;align-items:center;gap:8px;padding: 5px;}
+                                                            .color_flex_item .color_box{width: 40px;height: 40px;margin: 0 auto;line-height: 0;border: var(--cont_border);border-radius: 5px;overflow:hidden;cursor:pointer}
+                                                            .color_flex_item .inp_wrap{padding: 0;flex: 1;}
+                                                            .color_flex_item .inp_wrap input[type="text"]{line-height: 28px;}
+
+
                                                             #content .motiv_tbl_box.regi_sect_tbl .motiv_normal_tbl tr th,
                                                             #content .motiv_tbl_box.regi_sect_tbl .motiv_normal_tbl tr td{height: 53px;}
 
@@ -1147,9 +1164,9 @@
                                             <div class="panel_body">
                                                 <div class="btn_group d_flex">
                                                     <div class="btn_wrap">
-                                                        <div class="btn btn_exit">강제종료</div>
-                                                        <div class="btn">강제 해지</div>
-                                                        <div class="btn btn_excelDown">엑셀다운로드</div>
+                                                        <div class="btn">옵션삭제</div>
+                                                        <div class="btn btn_exit">옵션추가</div>
+                                                        <div class="btn active">대표상품</div>
                                                     </div>
                                                 </div>
                                                 <div class="tbl_wrap">
@@ -1439,8 +1456,8 @@
                                                                 <div class="img_item_btn">
                                                                     <div class="img_zoom" onClick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
                                                                     <div class="img_retouch">
-                                                                        <label for="retouch1_1"></label> 
-                                                                        <input type="file" id="retouch1_1" onchange="retouchImg(this, $(this));">
+                                                                        <label for="retouch1_2"></label> 
+                                                                        <input type="file" id="retouch1_2" onchange="retouchImg(this, $(this));">
                                                                     </div>
                                                                     <div class="img_remove" onClick="singleRemove($(this))"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
                                                                 </div>
@@ -1450,8 +1467,8 @@
                                                                 <div class="img_item_btn">
                                                                     <div class="img_zoom" onClick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
                                                                     <div class="img_retouch">
-                                                                        <label for="retouch1_1"></label> 
-                                                                        <input type="file" id="retouch1_1" onchange="retouchImg(this, $(this));">
+                                                                        <label for="retouch1_3"></label> 
+                                                                        <input type="file" id="retouch1_3" onchange="retouchImg(this, $(this));">
                                                                     </div>
                                                                     <div class="img_remove" onClick="singleRemove($(this))"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
                                                                 </div>
@@ -1461,8 +1478,8 @@
                                                                 <div class="img_item_btn">
                                                                     <div class="img_zoom" onClick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
                                                                     <div class="img_retouch">
-                                                                        <label for="retouch1_1"></label> 
-                                                                        <input type="file" id="retouch1_1" onchange="retouchImg(this, $(this));">
+                                                                        <label for="retouch1_4"></label> 
+                                                                        <input type="file" id="retouch1_4" onchange="retouchImg(this, $(this));">
                                                                     </div>
                                                                     <div class="img_remove" onClick="singleRemove($(this))"><img src="../resources/images/common/addimg_03.svg" alt=""></div>
                                                                 </div>
@@ -1481,8 +1498,8 @@
                                                     <div class="srh_title">동영상</div>
                                                     <div class="srh_cont">
                                                         <div class="add_box">
-                                                            <label for="file"></label> 
-                                                            <input type="file" id="file">
+                                                            <label for="video_file"></label> 
+                                                            <input type="file" id="video_file">
                                                         </div>
                                                         <div class="ab_video">
                                                             <div class="inp_wrap"><input type="text" name="" id="" placeholder="동영상 타이틀"></div>
@@ -1512,9 +1529,36 @@
                                 <div class="acc_tit"><div class="tit">상세설명</div><div class="accBtn"><i class="icon icon_arrow"></i></div></div>
                                 <div class="acc_cont">
                                     <div class="prd_desc">
-                                        <div class="plus_area"></div>
+                                        <div class="plus_minus_box">
+                                            <div class="minus_area"></div>
+                                            <div class="plus_area"></div>
+                                        </div>
                                         <div class="txtarea_box"><textarea></textarea></div>
-                                        <div class="menu_area">
+                                        <div class="menu_area" onClick="mtvLp.open('cate_drag_list')">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                        </div>
+                                    </div>
+                                    <div class="prd_desc">
+                                        <div class="plus_minus_box">
+                                            <div class="minus_area"></div>
+                                            <div class="plus_area"></div>
+                                        </div>
+                                        <div class="txtarea_box"><textarea></textarea></div>
+                                        <div class="menu_area" onClick="mtvLp.open('cate_drag_list')">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                        </div>
+                                    </div>
+                                    <div class="prd_desc">
+                                        <div class="plus_minus_box">
+                                            <div class="minus_area"></div>
+                                            <div class="plus_area"></div>
+                                        </div>
+                                        <div class="txtarea_box"><textarea></textarea></div>
+                                        <div class="menu_area" onClick="mtvLp.open('cate_drag_list')">
                                             <span class="line"></span>
                                             <span class="line"></span>
                                             <span class="line"></span>
@@ -1531,9 +1575,16 @@
                                     <div class="contents_box regi bd_0">
                                         <div class="regi_type_select">
                                             <div class="btn_wrap">
-                                                <div class="btn">저장</div>
-                                                <div class="btn active">직접입력</div>
-                                                <div class="btn">템플릿적용</div>
+                                                <div class="cus_inp_wrap checkbox_inp">
+                                                    <label for="pickup_1_1" class="inp_box"> 저장
+                                                        <input type="checkbox" id="pickup_1_1" name="" checked>
+                                                        <span class="inp_custom"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox_btn_wrap">
+                                                    <div class="btn active">직접입력</div>
+                                                    <div class="btn">템플릿적용</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="srh_box">
@@ -1541,7 +1592,7 @@
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">배송방법</div>
                                                     <div class="srh_cont">
-                                                        <div class="regi_btn_wrap">
+                                                        <div class="regi_btn_wrap checkbox_btn_wrap">
                                                             <div class="btn active">직접배송</div>
                                                             <div class="btn">위탁배송</div>
                                                         </div>
@@ -1569,7 +1620,7 @@
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">배송속성</div>
                                                     <div class="srh_cont">
-                                                        <div class="regi_btn_wrap">
+                                                        <div class="regi_btn_wrap checkbox_btn_wrap">
                                                             <div class="btn active">일반배송</div>
                                                             <div class="btn">오늘출발</div>
                                                         </div>
@@ -1621,7 +1672,7 @@
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">묶음배송 여부</div>
                                                     <div class="srh_cont">
-                                                        <div class="regi_btn_wrap">
+                                                        <div class="regi_btn_wrap checkbox_btn_wrap">
                                                             <div class="btn active">불가</div>
                                                             <div class="btn">가능</div>
                                                         </div>
@@ -1781,9 +1832,16 @@
                                     <div class="contents_box regi bd_0">
                                         <div class="regi_type_select">
                                             <div class="btn_wrap">
-                                                <div class="btn">저장</div>
-                                                <div class="btn active">직접입력</div>
-                                                <div class="btn">템플릿적용</div>
+                                                <div class="cus_inp_wrap checkbox_inp">
+                                                    <label for="pickup_1_1" class="inp_box"> 저장
+                                                        <input type="checkbox" id="pickup_1_1" name="" checked>
+                                                        <span class="inp_custom"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox_btn_wrap">
+                                                    <div class="btn active">직접입력</div>
+                                                    <div class="btn">템플릿적용</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="srh_box txt_area">
@@ -2378,6 +2436,139 @@
     </div>
     <!-- 레이어팝업 E -->
 
+
+    <div id="lpbox_1" class="motiv_layer type1" cont_size="normal" style="display:none">
+        <div class="layer_head">
+            <div class="title">문의하기</div>
+            <div class="btn_close" onClick="mtvLp.close('lpbox_1')"></div>
+        </div>
+        <!-- 레이어 body S -->
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect_tit">담당자 정보</div>
+                <div class="sect">
+                    <div class="motiv_tbl_box name_k pd_0">
+                        <div class="tbl_item">
+                            <table class="motiv_normal_tbl question">
+                                <caption>담당자 정보</caption>
+                                <colgroup>
+                                    <col style="width:20%;">
+                                    <col style="width:auto;">
+                                    <col style="width:15%;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th><div>접수일</div></th>
+                                        <td><div>2021-00-00 00:00:00</div></td>
+                                        <th><div>처리일</div></th>
+                                        <td><div>2021-00-00</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>문의자</div></th>
+                                        <td><div>홍길동(ID)</div></td>
+                                        <th><div>상품명</div></th>
+                                        <td><div>상품명</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>문의유형/제목</div></th>
+                                        <td colspan="3"><div class="bold">카테고리 등록신청</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>내용</div></th>
+                                        <td colspan="3">
+                                            <div class="txt_list_tit">[작업 상세 내용문의]</div>
+                                            <div class="txt_list">
+                                                <div class="row_item">
+                                                    <div class="tit">• 문의 유형 :</div>
+                                                    <div class="cont">
+                                                        <div class="select_wrap">
+                                                            <select class="qa_cate">
+                                                                <option value="선택" selected>선택</option>
+                                                                <option value="상품소싱">상품소싱</option>
+                                                                <option value="상품관리">상품관리</option>
+                                                                <option value="다다딜">다다딜</option>
+                                                                <option value="상품전송">상품전송</option>
+                                                                <option value="주문관리">주문관리</option>
+                                                                <option value="지정판매">지정판매</option>
+                                                                <option value="판매상품 관리">판매상품 관리</option>
+                                                                <option value="강제종료상품">강제종료상품</option>
+                                                                <option value="기본관리">기본관리</option>
+                                                                <option value="기타">기타</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row_item">
+                                                    <div class="tit">• 회원구분 :</div>
+                                                    <div class="cont"><span>판매자 회원</span></div>
+                                                </div>
+
+                                                <div class="row_item">
+                                                    <div class="tit">• 문의 쇼핑몰 :</div>
+                                                    <div class="cont"><span>다다SCM</span></div>
+                                                </div>
+
+                                                <div class="row_item">
+                                                    <div class="tit">• 작업명 :</div>
+                                                    <div class="cont"><span>기타, 카테고리 등록신청</span></div>
+                                                </div>
+
+                                                <div class="row_item textarea_flex_start">
+                                                    <div class="tit">• 상세내용 :</div>
+                                                    <div class="cont">
+                                                        <div class="txtarea_box"><textarea></textarea></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>파일첨부</div></th>
+                                        <td colspan="3">
+                                            <div class="filebox mini_t">
+                                                <label for="file"><i class="icon icon_attach"></i>파일업로드</label> 
+                                                <input type="file" id="file">
+                                            </div>
+                                            <div><p class="txtInfo">※ 최대 5개, 개당 용량 20mb를 초과할 수 없습니다.</p></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bot_btn_wrap"><div class="btn" onClick="mtvLp.close('lpbox_1')">문의사항 저장</div></div>
+            </div>
+        </div>
+        <!-- 레이어 body E -->
+    </div>
+
+    <div id="cate_drag_list" class="motiv_layer type2" cont_size="normal" style="display:none">
+        <div class="layer_head">
+            <div class="title"></div>
+            <div class="btn_close" onClick="mtvLp.close('cate_drag_list')"></div>
+        </div>
+
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect">
+                    <div class="cate_drag_list full_line">
+                        <div class="drag_item">항목이름1</div>
+                        <div class="drag_item">항목이름2</div>
+                        <div class="drag_item">항목이름3</div>
+                    </div>
+                </div>
+
+                <div class="bot_btn_wrap">
+                    <div class="btn" onClick="mtvLp.close('cate_drag_list')">저장하기</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
 
         //175값 정리하기
@@ -2396,6 +2587,19 @@
         });
 
         $(document).ready(() => {
+
+            $('.checkbox_btn_wrap .btn').click(function(){
+                $(this).closest('.checkbox_btn_wrap').children('.btn').removeClass('active');
+                if($(this).hasClass('active')){
+                    $(this).removeClass('active');
+                } else {
+                    $(this).addClass('active');
+                }
+            });
+            
+            $( ".cate_drag_list" ).sortable();
+            $( ".cate_drag_list" ).disableSelection();
+
             window.scrollTo(0, 0);
             $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
             tFlex.init(pcusme001002_1);
@@ -2521,6 +2725,8 @@
                 }
             });
 
+            //전체 영역으로 이벤트가 잡혀 있습니다.
+            //전체 말고 단일 일 경우 accBtn클래스틑 대상으로 잡으면 됨니다.
             $('.acc_tit').click(function(){
                 resizeSta();
                 var mtvLnbOpen = setTimeout( function() {

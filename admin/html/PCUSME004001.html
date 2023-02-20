@@ -1750,7 +1750,8 @@
         </div>
     </div>
 
-    <div class="motiv_layer type1">
+    <!-- 제품 이지 관리 실행시 함수를 실행 해 주세요. lpPrdImg('lp_prd_img1')  -->
+    <div id="lp_prd_img1" class="motiv_layer lp_prd_img type1">
         <div class="layer_head">
             <div class="title">제품 이미지 관리</div>
             <div class="btn_close"></div>
@@ -1781,6 +1782,30 @@
                                     </div>
                                 </div>
                                 <div class="img_list">
+                                    <div class="img_item">
+                                        <div class="img_box">
+                                            <img src="../resources/images/product/sample_thumb.jpg" alt="">
+                                            <div class="plus_sta"><i class="icon_plus"></i></div>
+                                            <div class="img_zoom" onclick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
+                                        </div>
+                                        <div class="img_chk_sta"><i class="icon_chk"></i></div>
+                                    </div>
+                                    <div class="img_item">
+                                        <div class="img_box">
+                                            <img src="../resources/images/product/sample_thumb.jpg" alt="">
+                                            <div class="plus_sta"><i class="icon_plus"></i></div>
+                                            <div class="img_zoom" onclick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
+                                        </div>
+                                        <div class="img_chk_sta"><i class="icon_chk"></i></div>
+                                    </div>
+                                    <div class="img_item">
+                                        <div class="img_box">
+                                            <img src="../resources/images/product/sample_thumb.jpg" alt="">
+                                            <div class="plus_sta"><i class="icon_plus"></i></div>
+                                            <div class="img_zoom" onclick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>
+                                        </div>
+                                        <div class="img_chk_sta"><i class="icon_chk"></i></div>
+                                    </div>
                                     <div class="img_item">
                                         <div class="img_box">
                                             <img src="../resources/images/product/sample_thumb.jpg" alt="">
@@ -1999,6 +2024,8 @@
         }
     
         $(document).ready(() => {
+            lpPrdImg('lp_prd_img1');
+
             $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
             tFlex.init(pcacme004001_1);
             tFlex.init(pcacme004001_2);

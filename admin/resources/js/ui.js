@@ -682,6 +682,7 @@ prdStoreImg = (input, obj) => {
             html += '<div class="img_item">';
             html += '   <img src="'+e.target.result+'" alt="">';
             html += '       <div class="img_item_btn">';
+            //label for 과 input id의 숫자 증가 해야됨니다.
             html += '       <div class="img_zoom" onclick="singleImgSlider.open($(this))"><img src="../resources/images/common/addimg_01.svg" alt=""></div>';
             html += '       <div class="img_retouch"><label for="retouch1_1"></label> <input type="file" id="retouch1_1" onchange="retouchImg(this, $(this));"></div>';
             html += '       <div class="img_remove" onclick="singleRemove($(this))"><img src="../resources/images/common/addimg_03.svg" alt=""></div>';
@@ -838,4 +839,15 @@ var prd_option = {
             $(this).parent().remove();
         });
     }
+}
+
+
+/* */
+lpPrdImg = (id) => {
+    var img_list_height = $('#'+id).find('.img_box').height();
+    $('#'+id).find('.img_list').css('height', img_list_height);
+   $(window).on('resize', function(){
+        var img_list_height = $('#'+id).find('.img_box').height();
+        $('#'+id).find('.img_list').css('height', img_list_height);
+    });
 }
