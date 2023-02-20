@@ -39,7 +39,7 @@
 
         <!-- 로그인 후 s-->
         <header id="header" class="login">
-            <div class="hd_inner">
+            <div class="hd_inner" onClick="mtvLp.open('notice1')">
                 <h1>
                     <div class="ham_menu">
                         <span class="line"></span>
@@ -50,6 +50,9 @@
                     <div class="slogo"><span>최고관리자</span></div>
                     <div class="hd_notice">
                         <span>다다SCM 공지사항 알림</span>
+                    </div>
+                    <div class="hd_user">
+                        <span>휴먼회원</span>
                     </div>
                 </h1>
 
@@ -1862,7 +1865,37 @@
         mtvLp.close('cont_lp1')
     -->
 
-
+    <div id="notice1" class="motiv_layer type1" cont_type="alert" style="display:none">
+        <div class="layer_head">
+            <div class="title">[공지] <span>공지사항 제목</span></div>
+            <div class="btn_close" onClick="mtvLp.close('notice1')"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect">
+                    <div class="notice_cont">
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                        <p>공지사항 내용</p>
+                    </div>
+                </div>
+                <div class="bot_btn_wrap"><div class="btn" onClick="mtvLp.close('notice1')">목록보기</div></div>
+            </div>
+        </div>
+    </div>
+    
     <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
         <div class="dada_close_box">
             <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
