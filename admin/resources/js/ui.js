@@ -331,6 +331,7 @@ var mtvLp = {
     },
 
     open: (id) => {
+        console.log(id)
         mtvLp.checkBg();
         mtvLp.prevActiveName = mtvLp.nowActiveName;
         if(mtvLp.prevActiveName != ''){
