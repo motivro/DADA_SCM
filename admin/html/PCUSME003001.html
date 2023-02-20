@@ -792,6 +792,137 @@
 
     </div>
     <!-- wrap E -->
+    <h2>팝업내용</h2>
+
+    <div class="motiv_layer type1">
+        <div class="layer_head">
+            <div class="title">판매자 설정</div>
+            <div class="btn_close"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect mgt_0">
+                    <div id="pcusme003001_3" class="contents_box">
+                        <div class="panel_head pd_0">
+                            <div class="cont_group d_flex">
+                                <div class="cont_left">
+                                    <div class="panel_count">
+                                        <div class="all_count">판매자 지정</div>
+                                    </div>
+                                </div>
+                                <div class="cont_right">
+                                    <div class="btn">직접판매</div>
+                                    <div class="inp_wrap size_lg">
+                                        <input type="text" name="" id="" placeholder="닉네임, ID, 태그">
+                                    </div>
+                                    <div class="btn btn_search">검색</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel_body pd_0">
+                            <div class="tbl_wrap">
+                                <div class="motiv_tbl">
+                                    <div class="tbl_inner">
+                                        <div class="tbl_body">
+                                            <div class='look_body_box'>
+                                                <div class="row_item row_th d_flex">
+                                                    <div class="hd_item" keyname='sell1'>
+                                                        <div>판매자ID   </div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell2'>
+                                                        <div>판매자명</div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell3'>
+                                                        <div>판매자 닉네임</div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell4'>
+                                                        <div>판매자피드</div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell5'>
+                                                        <div>설정</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row_item d_flex">
+                                                    <div class="hd_item" keyname='sell1'>
+                                                        <div>아이디</div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell2'>
+                                                        <div>판매자명</div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell3'>
+                                                        <div>닉네임</div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell4'>
+                                                        <div><div class="btn btn_sm">피드보기</div></div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell5'>
+                                                        <div><div class="btn btn_sm">판매자적용</div></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row_item d_flex">
+                                                    <div class="hd_item" keyname='sell1'>
+                                                        <div>아이디</div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell2'>
+                                                        <div>판매자명</div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell3'>
+                                                        <div>닉네임</div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell4'>
+                                                        <div><div class="btn btn_sm">피드보기</div></div>
+                                                    </div>
+                                                    <div class="hd_item" keyname='sell5'>
+                                                        <div><div class="btn btn_sm">판매자적용</div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="sect">
+                    <div class="seller_list">
+                        <div class="seller_item">
+                            <div><span>닉네임</span><span>(ID)</span></div>
+                            <div class="delete_btn"></div>
+                        </div>
+                        <div class="seller_item">
+                            <div><span>닉네임</span><span>(ID)</span></div>
+                            <div class="delete_btn"></div>
+                        </div>
+                        <div class="seller_item">
+                            <div><span>닉네임</span><span>(ID)</span></div>
+                            <div class="delete_btn"></div>
+                        </div>
+                        <div class="seller_item">
+                            <div><span>닉네임</span><span>(ID)</span></div>
+                            <div class="delete_btn"></div>
+                        </div>
+                        <div class="seller_item">
+                            <div><span>닉네임</span><span>(ID)</span></div>
+                            <div class="delete_btn"></div>
+                        </div>
+                        <div class="seller_item">
+                            <div><span>닉네임</span><span>(ID)</span></div>
+                            <div class="delete_btn"></div>
+                        </div>
+                        <div class="seller_item">
+                            <div><span>닉네임</span><span>(ID)</span></div>
+                            <div class="delete_btn"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot_btn_wrap"><div class="btn">적용</div></div>
+            </div>
+        </div>
+    </div>
+
     <script>
         var pcusme003001_1 = {
             id:'pcusme003001_1',
@@ -818,11 +949,23 @@
             },
         }
 
+        var pcusme003001_3 = {
+            id:'pcusme003001_3',
+            tableSize: {
+                sell1: 100,
+                sell2: 150,
+                sell3: 100,
+                sell4: 100,
+                sell5: 100,
+            },
+        }
+
         $(document).ready(() => {
             $('#sandbox_container.input-daterange').datepicker({language: "ko"});
 
             tFlex.init(pcusme003001_1);
             tFlex.init(pcusme003001_2);
+            tFlex.init(pcusme003001_3);
         });
 
         selectUi.init();
