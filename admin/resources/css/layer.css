@@ -351,7 +351,7 @@
 .cate_set_box .line_item .checkbox_inp{justify-content: center;flex-direction: column;gap: 20px;}
 
 .cate_drag_list{margin-top:50px;display: flex;align-items: center;flex-wrap: wrap;}
-.cate_drag_list .drag_item{padding: 5px 20px;margin:0 5px 5px 0;border: var(--cont_border);font-size: var(--fts12);background: var(--color10);}
+.cate_drag_list .drag_item{padding: 5px 20px;margin:0 5px 5px 0;border: var(--cont_border);font-size: var(--fts12);background: var(--color10);cursor:pointer}
 
 .cate_drag_list.full_line .drag_item{width:80%;margin:10px auto;padding:10px}
 
