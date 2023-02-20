@@ -19,6 +19,7 @@
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -2696,6 +2697,10 @@
         $(document).ready(() => {
             mtvLp.init();//
             selectUi.init();
+
+            $( ".cate_drag_list" ).sortable();
+            $( ".cate_drag_list" ).disableSelection();
+
             $('#sandbox_container.input-daterange').datepicker({language: "ko"});
             tFlex.init(testData);//일반적인 스크롤되는 리스트
             tFlexLock.init(testData1);//일부 고정영역이 있고 스크롤 되는 리스트
