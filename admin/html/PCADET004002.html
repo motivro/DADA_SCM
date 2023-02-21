@@ -1287,6 +1287,8 @@
                 var translateY = (window.scrollY-30)-lockVal_scroll;
                 $('.prd_bottom_box').addClass('fixed_active');
                 $('.dtl_cont_scroll').css('transform', 'translateY(-'+translateY+'px)');
+                $('.prd_bottom_box').css('transform', 'translateX(-'+window.scrollX+'px)');
+                $('.fixed_top_0 .dtl_area2').css('transform', 'translateX(-'+window.scrollX+'px)');
                 $('.fixed_top_0').addClass('lock_active');
             } else {
                 $('.prd_bottom_box').removeClass('fixed_active');

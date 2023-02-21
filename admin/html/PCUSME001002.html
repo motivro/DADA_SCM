@@ -2581,9 +2581,6 @@
 
         $(window).on('resize', function(){
             resizeSta();
-            $('.back_cont').css('height', back_cont_height+500);
-            $('.prd_hs').css('height', $('.prd_hs_inner').height());
-            $('.prd_hs_inner').css('width',$('.contents_box').outerWidth());
         });
 
         $(document).ready(() => {
@@ -2652,7 +2649,23 @@
                 prd_sta[name] = height;
             })
 
-            resizeSta = () => {
+            resizeSta = (type) => {
+                if(type == 'ham_menu'){
+                    var resizeStas = setTimeout( function() {
+                        resizeEvent();
+                        clearTimeout(resizeStas);
+                    }, 500);
+                } else {
+                    resizeEvent();
+                }
+            }
+
+            resizeEvent = (type) => {
+                var ham_menu = setTimeout( function() {
+                    $('#lnb').removeAttr('style');
+                    clearTimeout(ham_menu);
+                }, 400);
+
                 $.each($('.prd_hs_inner > div'),function(index, obj){
                     var height = $('.prd_hs_inner > div').eq(index).height();
                     var name = $('.prd_hs_inner > div').eq(index).attr('id');
@@ -2675,7 +2688,11 @@
                     }
                 })
 
+                $('.back_cont').css('height', back_cont_height+100);
+                $('.prd_hs').css({'height': $('.prd_hs_inner').height(),'width':$('.contents_box').outerWidth() });
+                $('.prd_hs_inner').css('width',$('.contents_box').outerWidth());
             }
+
 
             scrollSta = (id) => {
                 var objVal = 70;
@@ -2709,15 +2726,15 @@
 
             scrollSta();
 
-            $('.back_cont').css('height', back_cont_height+500);
-            $('.prd_hs').css('height', $('.prd_hs_inner').height());
+            $('.back_cont').css('height', back_cont_height+100);
+            $('.prd_hs').css({'height': $('.prd_hs_inner').height(),'width':$('.contents_box').outerWidth() });
             $('.prd_hs_inner').css('width',$('.contents_box').outerWidth());
 
             $(window).scroll(function () {
-                    
                 if ($(this).scrollTop() > 175) {
-                    detailTop = window.scrollY - 175
+                    detailTop = window.scrollY - 175;
                     $('.prd_hs').addClass('active');
+                    $('.prd_hs').css('transform', 'translateX(-'+window.scrollX+'px)'); 
                     $('.prd_hs_inner').css('transform', 'translateY(-'+detailTop+'px)');
                 } else {
                     $('.prd_hs').removeClass('active');

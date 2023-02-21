@@ -467,6 +467,9 @@ dadaLnbMenuSta1 = (profileBoxHeight) => {
 
     //#lnb를 줄이고 늘리는 이벤트
     $('.ham_menu').click(function(){
+
+        if (typeof resizeSta != 'undefined') resizeSta('ham_menu');
+        
         if($('#lnb').hasClass('open')){
             $('#lnb,.ham_menu').removeClass('open');
             $('.nav_item.open').find('.submenu').css('height', submenuHeight);
@@ -481,7 +484,7 @@ dadaLnbMenuSta1 = (profileBoxHeight) => {
             $('.wrap #container').addClass('open');
 
             var ham_menu = setTimeout( function() {
-                $('#lnb').css('position', 'fixed');
+                // $('#lnb').css('position', 'fixed');
                 clearTimeout(ham_menu);
             }, 400);
         }

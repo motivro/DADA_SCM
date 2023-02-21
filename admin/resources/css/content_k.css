@@ -64,15 +64,15 @@
 .search_block .srh_cont{width:100%}
 .search_block .srh_cont .inp_wrap{max-width:100%!important;width:100%}
 
-#sandbox_container{width:500px;}
+#sandbox_container{max-width:500px;}
 #sandbox_container.mini{width:340px;}
 #sandbox_container.date{width:auto}
 #sandbox_container.date.size_m{width:250px}
 
 #sandbox_container.mini > input{max-width:160px;}
 #sandbox_container.mini > input:first-child{max-width:160px;}
-#sandbox_container > input{float:left;max-width:210px;margin-left:10px;border: var(--cont_border);padding:10px 40px 10px 10px;position: relative;}
-#sandbox_container > input:first-child{float:left;max-width:210px;margin-left:0}
+#sandbox_container > input{float:left;max-width:190px;margin-left:10px;border: var(--cont_border);padding:10px 40px 10px 10px;position: relative;}
+#sandbox_container > input:first-child{float:left;max-width:190px;margin-left:0}
 #sandbox_container > input:first-child + span + input{margin-left:0}
 #sandbox_container > span{float:left;height:40px;padding:0 10px;margin:0;line-height:40px;box-sizing:border-box}
 #sandbox_container > span.input-group-addon{float: left;height: 40px;line-height:auto;padding:0;}

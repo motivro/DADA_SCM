@@ -197,7 +197,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 /* header e */
 
 /* lnb s */
-#lnb{float:left;position: sticky;left: 0;top: 74px;bottom:0;z-index: 20;background: #40424a;width: 230px;transition: width .45s ease;}
+#lnb{float:left;position: sticky;top: 74px;bottom:0;z-index: 20;background: #40424a;width: 230px;transition: width .45s ease;} /* left: 0; 230221 김훈 삭제 */
 
 #lnb.closeLnb{width: 90px;}
 #lnb.closeLnb .lnb_menu .nav_list .nav_item > .nav_menu_wrap{opacity:1;left:0}
