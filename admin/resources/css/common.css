@@ -275,7 +275,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 #lnb .lnb_menu .nav_list .nav_item > .nav_menu_wrap{opacity:1;transition: .5s;width:127px;white-space: nowrap;left:0;position:relative;margin-top:10px;}
 #lnb.open .lnb_menu .nav_list .nav_item > .nav_menu_wrap{opacity: 0;position: relative;top: 0;left:-20px;}
 
-#lnb.open:hover{width: 230px;}
+#lnb.open:hover{width: 204px;}
 #lnb.open:hover .lnb_menu .nav_list .nav_item > .nav_menu_wrap{opacity:1;left:0}
 #lnb.open:hover .lnb_menu .nav_list .nav_item > .nav_menu_wrap .submenu{height:auto}
 
