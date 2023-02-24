@@ -12,6 +12,8 @@
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
     <script src="../resources/js/table_list.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body> 
     <!-- wrap S -->
@@ -382,51 +384,84 @@
                 <!-- inner S -->
                 <div class="inner">
                     <h1>DaDa MarketPlace(상세)</h1>
-
-                    <div class="contents_box bd_0">
+                    <div class="contents_box not_bg bd_0">
                         <div class="prd_dtl_item">
-                            <div class="prd_dtl_box">
+                            <div class="prd_dtl_box prd_first_box">
                                 <div class="dtl_area">
                                     <div class="img_area">
-                                        <div class="prd_img">
-                                            <div class="thumbnail"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div>
-                                        </div>
-                                        <div class="prd_img_more">
-                                            <div class="swiper dtl_img_more">
-                                                <ul class="swiper-wrapper">
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                    <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                                </ul>
+                                        <div class="thumbnail">
+                                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper thumb_img">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
                                             </div>
-                                            
-                                            <!-- Swiper JS -->
-                                            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-                                            
-                                            <!-- Initialize Swiper -->
-                                            <script>
-                                                var swiper = new Swiper(".dtl_img_more", {
-                                                    loop: true,
-                                                    slidesPerView: 6,
-                                                    spaceBetween: 5,
-                                                });
-                                            </script>
+                                            <div thumbsSlider="" class="swiper thumb_list">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="img_box"><img src="../resources/images/product/more_img_sample.png" /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <script>
+                                            var swiper = new Swiper(".thumb_list", {
+                                                loop: true,
+                                                spaceBetween: 10,
+                                                slidesPerView: 4,
+                                                freeMode: true,
+                                                watchSlidesProgress: true,
+                                            });
+                                            var swiper2 = new Swiper(".thumb_img", {
+                                                loop: true,
+                                                spaceBetween: 10,
+                                                navigation: {
+                                                    nextEl: ".swiper-button-next",
+                                                    prevEl: ".swiper-button-prev",
+                                                },
+                                                thumbs: {
+                                                    swiper: swiper,
+                                                },
+                                            });
+                                        </script>
                                         <div class="btn_box">
                                             <div class="btn_wrap">
-                                                <div class="btn btn_lt sizeM">Lead Time</div>
+                                                <div class="btn btn_lt sizeM" onClick="mtvLp.open('cont_lp1')">Lead Time</div>
                                                 <div class="btn btn_goList sizeM">목록보기</div>
                                             </div>
                                             
                                             <div class="btn_wrap">
-                                                <div class="btn btn_putList sizeL">상품 담아 넣기</div>
+                                                <div class="btn btn_putList sizeL active">상품 담아 넣기</div>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="info_area">
                                         <div class="info_box">
                                             <div class="prd_cate">대분류 > 중분류</div>
@@ -507,6 +542,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="util_box">
                                             <div class="prd_data">
                                                 <div class="data_line"><span class="tit">누적 담아간 수 : </span><span class="cont"><span>00</span>(횟수)</span></div>
@@ -515,7 +551,17 @@
                                             </div>
                                             <div class="progress_box">
                                                 <div class="progress_item review">
-                                                    <div class="tit"></div>
+                                                    <div class="tit d_flex a_c">
+                                                        <div class="review_box">
+                                                            <div class="star_sta"><span class=""></span></div>
+                                                            <div class="name">평가 <span>4.5</span></div>
+                                                            <div class="total_review">(<span class="review_count">213</span>)</div>
+                                                        </div>
+                                                        <div class="heart_box">
+                                                            <div class="heart"></div>
+                                                            <div class="count">20</div>
+                                                        </div>
+                                                    </div>
                                                     <div class="item_list">
                                                         <div class="line">
                                                             <div class="name">최고</div>
@@ -545,7 +591,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="progress_item age">
-                                                    <div class="tit"></div>
+                                                    <div class="tit">연령대 별 구매자 비율</div>
                                                     <div class="item_list">
                                                         <div class="line">
                                                             <div class="name">최고</div>
@@ -581,340 +627,474 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="prd_dtl_box">
-                                <div class="detail_area">
-                                    <div class="detail_box">
-                                        <div class="dtl_tab">
-                                            <ul class="tab_list">
-                                                <li class="tab_item active"><a href="#none">상세정보</a></li>
-                                                <li class="tab_item "><a href="#none">리뷰 <span>(<span class="count">00</span>)</span></a></li>
-                                                <li class="tab_item "><a href="#none">Q&A <span>(<span class="count">00</span>)</span></a></li>
-                                                <li class="tab_item "><a href="#none">반품/교환정보</a></li>
-                                            </ul>
+
+                            <div class="prd_dtl_box fixed_top_0">
+                                <div class="dtl_area dtl_area2">
+                                    <div class="img_area img_area2">
+                                        <div class="prd_img">
+                                            <div class="thumbnail"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div>
                                         </div>
-                                        <div class="dtl_cont">
-                                            <div class="productDetail">
-                                                <div class="productDetail_info">
-                                                    <p>CAMISOLE DRESS / BLACK</p>
-                                                    <p>배색 스티치가 돋보이는 캐미솔 원피스입니다.</p>
-                                                    <p>폴앤앨리스의 캐리오버 아이템인 캐미솔 드레스를 </p>
-                                                    <p>22FW버전으로 원단을 변경하여 제작하였습니다.</p>
-                                                    <p>A라인으로 떨어지는 볼륨으로 여성스럽습니다.</p>
-                                                    <p>얇은 허리끈으로 사이즈를 조절하여 묶을 수 있습니다.</p>
-                                                    <p>뒷지퍼 여밈으로 색상은 블랙입니다.</p>
-                                                    <p>COLOR : BLACK</p>
-                                                    <p>FABRIC : POLYESTER 97% SPAN3%</p>
-                                                    <p>WASHING : Dry cleaning only</p>
-                                                    <p>SIZE : FREE</p>
-                                                    <p>총기장 104cm /가슴단면 44cm /허리단면 42cm /밑단단면 95cm /스트랩 폭 : 2cm</p>
-                                                    <p>(측정방법에 따라 오차가 발생할 수 있습니다.)</p>
-                                                    <p>MODEL SIZE : Height 173cm Bust 78cmWaist 58cm Hips 89cm</p>
-                                                    <p>CAMISOLE DRESS / BLACK</p>
-                                                    <p>배색 스티치가 돋보이는 캐미솔 원피스입니다.</p>
-                                                    <p>폴앤앨리스의 캐리오버 아이템인 캐미솔 드레스를 </p>
-                                                    <p>22FW버전으로 원단을 변경하여 제작하였습니다.</p>
-                                                    <p>A라인으로 떨어지는 볼륨으로 여성스럽습니다.</p>
-                                                    <p>얇은 허리끈으로 사이즈를 조절하여 묶을 수 있습니다.</p>
-                                                    <p>뒷지퍼 여밈으로 색상은 블랙입니다.</p>
-                                                    <p>COLOR : BLACK</p>
-                                                    <p>FABRIC : POLYESTER 97% SPAN3%</p>
-                                                    <p>WASHING : Dry cleaning only</p>
-                                                    <p>SIZE : FREE</p>
-                                                    <p>총기장 104cm /가슴단면 44cm /허리단면 42cm /밑단단면 95cm /스트랩 폭 : 2cm</p>
-                                                    <p>(측정방법에 따라 오차가 발생할 수 있습니다.)</p>
-                                                    <p>MODEL SIZE : Height 173cm Bust 78cmWaist 58cm Hips 89cm</p>
-                                                </div>
-                                                <div class="btn_moreInfo"><div class="btn_more"><span class="txt">상세정보 보기</span><i class="icon"></i></div></div>
-                                                <div class="cont_sect tag_area">
-                                                    <div class="cont_tit">상품태그</div>
-                                                    <div class="cont">
-                                                        <div class="tag_list">
-                                                            <a href="#none" class="tag_item"><span>#등록된 태그</span></a>
-                                                            <a href="#none" class="tag_item"><span>#등록된 태그</span></a>
-                                                            <a href="#none" class="tag_item"><span>#등록된 태그</span></a>
-                                                        </div>
+                                       
+                                    </div>
+                                    <div class="info_area">
+                                        <div class="info_box">
+                                            <div class="prd_name">리본 Harem Joggers 남성 카고 바지 Streetwear 2022 힙합 캐주얼 포켓 트랙 바지 남성 하라주쿠 패션 바지</div>
+                                            <div class="price_data">
+                                                <div class="data_line">
+                                                    <div class="data_box f_col">
+                                                        <div class="tit"><span>판매 제안가</span></div>
+                                                        <div class="cont big"><span>140,000</span></div>
                                                     </div>
                                                 </div>
-                                                <div class="cont_sect">
-                                                    <div class="cont_tit">상품정보 제공고시</div>
-                                                    <div class="motiv_tbl_box name_k pd_0">
-                                                        <div class="tbl_item">
-                                                            <table class="motiv_normal_tbl ta_l">
-                                                                <caption>정산내역 조회</caption>
-                                                                <colgroup>
-                                                                    <col style="width:22%;">
-                                                                    <col style="width:auto">
-                                                                </colgroup>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <th><div>제품소재</div></th>
-                                                                        <td><div>면 100%</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>색상</div></th>
-                                                                        <td><div>블랙</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>치수</div></th>
-                                                                        <td><div>FREE</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>제조사</div></th>
-                                                                        <td><div>제조사명</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>제조국</div></th>
-                                                                        <td><div>국산</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>세탁방법 및 취급시 주의 사항</div></th>
-                                                                        <td><div>손세탁가능</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>제조연월</div></th>
-                                                                        <td><div>2022.12</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>품질보증기준</div></th>
-                                                                        <td><div>관련법 및 소비자 분쟁해결기준에 따름</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div> A/S책임자와 전화번호</div></th>
-                                                                        <td><div>00-000</div></td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                                <div class="data_line">
+                                                    <div class="data_box">
+                                                        <div class="tit"><span>판매자 최고가</span></div>
+                                                        <div class="cont"><span>150,000</span></div>
+                                                    </div>
+                                                    <div class="data_box">
+                                                        <div class="tit"><span>판매자 최고가</span></div>
+                                                        <div class="cont"><span>150,000</span></div>
+                                                    </div>
+                                                    <div class="data_box">
+                                                        <div class="tit"><span>판매자 최소가</span></div>
+                                                        <div class="cont"><span>150,000</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+
+                                        <div class="util_box2">
+                                            <div class="util_item">
+                                                <div class="tit">평가 (<span>423</span>)</div>
+                                                <div class="cont">
+                                                    <div class="review_box">
+                                                        <div class="review_rate">
+                                                            <div class="star">
+                                                                <span class="star_sta on"></span>
+                                                                <span class="star_sta on"></span>
+                                                                <span class="star_sta on"></span>
+                                                                <span class="star_sta on"></span>
+                                                                <span class="star_sta"></span>
+                                                            </div>
+                                                            <div class="count"><span class="rate">4</span>/<span class="total">5</span></div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="detail_review">
-                                                <div class="cont_sect">
-                                                    <div class="cont_tit">리뷰<span>02</span>건</div>
-                                                    <div class="review_list">
-                                                        <div class="review_item">
-                                                            <div class="mem_img"><div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div></div>
-                                                            <div class="review_cont">
-                                                                <div class="review_rate">
-                                                                    <div class="star">
-                                                                        <span class="star_sta on"></span>
-                                                                        <span class="star_sta on"></span>
-                                                                        <span class="star_sta"></span>
-                                                                        <span class="star_sta"></span>
-                                                                        <span class="star_sta"></span>
-                                                                    </div>
-                                                                    <div class="rate_count">2</div>
-                                                                </div>
-                                                                <div class="review_info">
-                                                                    <div class="mem_id">Zdjdb****</div>
-                                                                    <div class="date">23.01.01</div>
-                                                                    <div class="dcl">신고</div>
-                                                                </div>
-                                                                <div class="review_opt"><div class="opt_size">사이즈 <span class="size_sta">M</span></div></div>
-                                                                <div class="review_txt"><div class="txt">화이트를 라지로 구매해서 블랙은 미듐으로 주문했는데 잘 맞네요.가볍고 편합니다.</div></div>
-                                                                <div class="review_img">
-                                                                    <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div>
-                                                                </div>
-                                                                <div class="review_more">
-                                                                    <div class="txt_box">리뷰가 도움 되었나요?</div>
-                                                                    <div class="icon_box"><i class="icon icon_recom"></i><span class="sta">2</span></div>
+                                            <div class="util_item">
+                                                <div class="tit">좋아요</div>
+                                                <div class="cont">
+                                                    <div class="heart_box">
+                                                        <div class="heart"></div>
+                                                        <div class="count">20</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="prd_dtl_box prd_bottom_box">
+                                <div class="dtl_area dtl_area2">
+                                    <div class="detail_area">
+                                        <div class="detail_box">
+                                            <div class="dtl_tab">
+                                                <ul class="tab_list">
+                                                    <li class="tab_item productDetails active"><a href="#productDetail">상세정보</a></li>
+                                                    <li class="tab_item detail_reviews"><a href="#detail_review">리뷰 <span>(<span class="count">00</span>)</span></a></li>
+                                                    <li class="tab_item detail_qnas"><a href="#detail_qna">Q&A <span>(<span class="count">00</span>)</span></a></li>
+                                                    <li class="tab_item detail_guides"><a href="#detail_guide">반품/교환정보</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="dtl_cont">
+                                                <div class="dtl_cont_scroll">
+                                                    <div id="productDetail" class="productDetail">
+                                                        <div class="productDetail_info">
+                                                            <p>CAMISOLE DRESS / BLACK</p>
+                                                            <p>배색 스티치가 돋보이는 캐미솔 원피스입니다.</p>
+                                                            <p>폴앤앨리스의 캐리오버 아이템인 캐미솔 드레스를 </p>
+                                                            <p>22FW버전으로 원단을 변경하여 제작하였습니다.</p>
+                                                            <p>A라인으로 떨어지는 볼륨으로 여성스럽습니다.</p>
+                                                            <p>얇은 허리끈으로 사이즈를 조절하여 묶을 수 있습니다.</p>
+                                                            <p>뒷지퍼 여밈으로 색상은 블랙입니다.</p>
+                                                            <p>COLOR : BLACK</p>
+                                                            <p>FABRIC : POLYESTER 97% SPAN3%</p>
+                                                            <p>WASHING : Dry cleaning only</p>
+                                                            <p>SIZE : FREE</p>
+                                                            <p>총기장 104cm /가슴단면 44cm /허리단면 42cm /밑단단면 95cm /스트랩 폭 : 2cm</p>
+                                                            <p>(측정방법에 따라 오차가 발생할 수 있습니다.)</p>
+                                                            <p>MODEL SIZE : Height 173cm Bust 78cmWaist 58cm Hips 89cm</p>
+                                                            <p>CAMISOLE DRESS / BLACK</p>
+                                                            <p>배색 스티치가 돋보이는 캐미솔 원피스입니다.</p>
+                                                            <p>폴앤앨리스의 캐리오버 아이템인 캐미솔 드레스를 </p>
+                                                            <p>22FW버전으로 원단을 변경하여 제작하였습니다.</p>
+                                                            <p>A라인으로 떨어지는 볼륨으로 여성스럽습니다.</p>
+                                                            <p>얇은 허리끈으로 사이즈를 조절하여 묶을 수 있습니다.</p>
+                                                            <p>뒷지퍼 여밈으로 색상은 블랙입니다.</p>
+                                                            <p>COLOR : BLACK</p>
+                                                            <p>FABRIC : POLYESTER 97% SPAN3%</p>
+                                                            <p>WASHING : Dry cleaning only</p>
+                                                            <p>SIZE : FREE</p>
+                                                            <p>총기장 104cm /가슴단면 44cm /허리단면 42cm /밑단단면 95cm /스트랩 폭 : 2cm</p>
+                                                            <p>(측정방법에 따라 오차가 발생할 수 있습니다.)</p>
+                                                            <p>MODEL SIZE : Height 173cm Bust 78cmWaist 58cm Hips 89cm</p>
+                                                            <img src="../resources/images/product/dtl_img_sample.png" alt="">
+                                                            <img src="../resources/images/product/dtl_img_sample.png" alt="">
+                                                            <img src="../resources/images/product/dtl_img_sample.png" alt="">
+                                                        </div>
+                                                        <div class="btn_moreInfo"><div class="btn_more"><span class="txt">상세정보 보기</span><i class="icon"></i></div></div>
+                                                        <div class="cont_sect tag_area">
+                                                            <div class="cont_tit">상품태그</div>
+                                                            <div class="cont">
+                                                                <div class="tag_list">
+                                                                    <a href="#none" class="tag_item"><span>#등록된 태그</span></a>
+                                                                    <a href="#none" class="tag_item"><span>#등록된 태그</span></a>
+                                                                    <a href="#none" class="tag_item"><span>#등록된 태그</span></a>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="review_item">
-                                                            <div class="mem_img"><div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div></div>
-                                                            <div class="review_cont">
-                                                                <div class="review_rate">
-                                                                    <div class="star">
-                                                                        <span class="star_sta on"></span>
-                                                                        <span class="star_sta on"></span>
-                                                                        <span class="star_sta"></span>
-                                                                        <span class="star_sta"></span>
-                                                                        <span class="star_sta"></span>
-                                                                    </div>
-                                                                    <div class="rate_count">2</div>
-                                                                </div>
-                                                                <div class="review_info">
-                                                                    <div class="mem_id">Zdjdb****</div>
-                                                                    <div class="date">23.01.01</div>
-                                                                    <div class="dcl">신고</div>
-                                                                </div>
-                                                                <div class="review_opt"><div class="opt_size">사이즈 <span class="size_sta">M</span></div></div>
-                                                                <div class="review_txt"><div class="txt">화이트를 라지로 구매해서 블랙은 미듐으로 주문했는데 잘 맞네요.가볍고 편합니다.</div></div>
-                                                                <div class="review_img">
-                                                                    <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div>
-                                                                </div>
-                                                                <div class="review_more">
-                                                                    <div class="txt_box">리뷰가 도움 되었나요?</div>
-                                                                    <div class="icon_box"><i class="icon icon_recom"></i><span class="sta">2</span></div>
+                                                        <div class="cont_sect">
+                                                            <div class="cont_tit">상품정보 제공고시</div>
+                                                            <div class="motiv_tbl_box name_k pd_0">
+                                                                <div class="tbl_item">
+                                                                    <table class="motiv_normal_tbl ta_l">
+                                                                        <caption>정산내역 조회</caption>
+                                                                        <colgroup>
+                                                                            <col style="width:22%;">
+                                                                            <col style="width:auto">
+                                                                        </colgroup>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th><div>제품소재</div></th>
+                                                                                <td><div>면 100%</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>색상</div></th>
+                                                                                <td><div>블랙</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>치수</div></th>
+                                                                                <td><div>FREE</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>제조사</div></th>
+                                                                                <td><div>제조사명</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>제조국</div></th>
+                                                                                <td><div>국산</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>세탁방법 및 취급시 주의 사항</div></th>
+                                                                                <td><div>손세탁가능</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>제조연월</div></th>
+                                                                                <td><div>2022.12</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>품질보증기준</div></th>
+                                                                                <td><div>관련법 및 소비자 분쟁해결기준에 따름</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div> A/S책임자와 전화번호</div></th>
+                                                                                <td><div>00-000</div></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="detail_qna">
-                                                <div class="cont_sect">
-                                                    <div class="cont_tit">Q&A <span>02</span>건</div>
-                                                    <div class="qna_list">
-                                                        <div class="list_hd">
-                                                            <div class="row_line">
-                                                                <div class="reply_sta">답변여부</div>
-                                                                <div class="subject">제목</div>
-                                                                <div class="writer">작성자</div>
-                                                                <div class="date">작성일</div>
-                                                                <div class="manage">관리</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="list_bd">
-                                                            <div class="list_item">
-                                                                <div class="row_line">
-                                                                    <div class="reply_sta">답변완료</div>
-                                                                    <div class="subject">문의드려요.</div>
-                                                                    <div class="writer">구매자</div>
-                                                                    <div class="date">2023-01-01</div>
-                                                                    <div class="manage"><div class="btn_wrap"></div></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="list_item">
-                                                                <div class="row_line answer">
-                                                                    <div class="reply_sta"></div>
-                                                                    <div class="subject">네! 답변드립니다.</div>
-                                                                    <div class="writer">판매자</div>
-                                                                    <div class="date">2023-01-01</div>
-                                                                    <div class="manage"><div class="btn_wrap"><div class="btn btn_sm">수정</div><div class="btn btn_sm">삭제</div></div></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="list_item">
-                                                                <div class="row_line">
-                                                                    <div class="reply_sta">답변준비</div>
-                                                                    <div class="subject">문의드려요.</div>
-                                                                    <div class="writer">구매자</div>
-                                                                    <div class="date">2023-01-01</div>
-                                                                    <div class="manage"><div class="btn_wrap"></div></div>
-                                                                </div>
-                                                                <div class="answer_box">
-                                                                    <div class="question_item">문의 내용입니다.</div>
-                                                                    <div class="answer_item">
-                                                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                                    <div id="detail_review" class="detail_review">
+                                                        <div class="cont_sect">
+                                                            <div class="cont_tit">리뷰<span>02</span>건</div>
+                                                            <div class="review_list">
+                                                                <div class="review_item">
+                                                                    <div class="mem_img"><div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div></div>
+                                                                    <div class="review_cont">
+                                                                        <div class="review_rate">
+                                                                            <div class="star">
+                                                                                <span class="star_sta on"></span>
+                                                                                <span class="star_sta on"></span>
+                                                                                <span class="star_sta"></span>
+                                                                                <span class="star_sta"></span>
+                                                                                <span class="star_sta"></span>
+                                                                            </div>
+                                                                            <div class="rate_count">2</div>
+                                                                        </div>
+                                                                        <div class="review_info">
+                                                                            <div class="mem_id">Zdjdb****</div>
+                                                                            <div class="date">23.01.01</div>
+                                                                            <div class="dcl">신고</div>
+                                                                        </div>
+                                                                        <div class="review_opt"><div class="opt_size">사이즈 <span class="size_sta">M</span></div></div>
+                                                                        <div class="review_txt"><div class="txt">화이트를 라지로 구매해서 블랙은 미듐으로 주문했는데 잘 맞네요.가볍고 편합니다.</div></div>
+                                                                        <div class="review_img" onClick="fullSlider.open('slider_img1')">
+                                                                            <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div>
+                                                                        </div>
+                                                                        <div class="review_more">
+                                                                            <div class="txt_box">리뷰가 도움 되었나요?</div>
+                                                                            <div class="icon_box"><i class="icon icon_recom"></i><span class="sta">2</span></div>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="btn_wrap"><div class="btn btn_md">저장</div><div class="btn btn_md">취소</div></div>
+                                                                </div>
+                                                                <div class="review_item">
+                                                                    <div class="mem_img"><div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div></div>
+                                                                    <div class="review_cont">
+                                                                        <div class="review_rate">
+                                                                            <div class="star">
+                                                                                <span class="star_sta on"></span>
+                                                                                <span class="star_sta on"></span>
+                                                                                <span class="star_sta"></span>
+                                                                                <span class="star_sta"></span>
+                                                                                <span class="star_sta"></span>
+                                                                            </div>
+                                                                            <div class="rate_count">2</div>
+                                                                        </div>
+                                                                        <div class="review_info">
+                                                                            <div class="mem_id">Zdjdb****</div>
+                                                                            <div class="date">23.01.01</div>
+                                                                            <div class="dcl">신고</div>
+                                                                        </div>
+                                                                        <div class="review_opt"><div class="opt_size">사이즈 <span class="size_sta">M</span></div></div>
+                                                                        <div class="review_txt"><div class="txt">화이트를 라지로 구매해서 블랙은 미듐으로 주문했는데 잘 맞네요.가볍고 편합니다.</div></div>
+                                                                        <div class="review_img" onClick="fullSlider.open('slider_img1')">
+                                                                            <div class="img_box"><img src="../resources/images/product/dtl_img_sample.png" alt=""></div>
+                                                                        </div>
+                                                                        <div class="review_more">
+                                                                            <div class="txt_box">리뷰가 도움 되었나요?</div>
+                                                                            <div class="icon_box"><i class="icon icon_recom"></i><span class="sta">2</span></div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="list_item">
-                                                                <div class="row_line">
-                                                                    <div class="reply_sta">답변준비</div>
-                                                                    <div class="subject">문의드려요.</div>
-                                                                    <div class="writer">구매자</div>
-                                                                    <div class="date">2023-01-01</div>
-                                                                    <div class="manage"><div class="btn_wrap"></div></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="list_item">
-                                                                <div class="row_line">
-                                                                    <div class="reply_sta">답변준비</div>
-                                                                    <div class="subject">문의드려요.</div>
-                                                                    <div class="writer">구매자</div>
-                                                                    <div class="date">2023-01-01</div>
-                                                                    <div class="manage"><div class="btn_wrap"></div></div>
-                                                                </div>
+                                                            <div class="motiv_paging">
+                                                                <a class="first" href="#none"></a><a class="prev" href="#none"></a>
+                                                                <ul>
+                                                                    <li><a class="this" href="#none">1</a></li>
+                                                                    <li><a href="#none">2</a></li>
+                                                                    <li><a href="#none">3</a></li>
+                                                                    <li><a href="#none">4</a></li>
+                                                                    <li><a href="#none">5</a></li>
+                                                                    <li><a href="#none">6</a></li>
+                                                                    <li><a href="#none">7</a></li>
+                                                                    <li><a href="#none">8</a></li>
+                                                                    <li><a href="#none">9</a></li>
+                                                                    <li><a href="#none">10</a></li>
+                                                                </ul>
+                                                                <a class="next" href="#none"></a><a class="last" href="#none"></a>
                                                             </div>
                                                         </div>
                                                     </div>
 
-                                                </div>
-                                            </div>
-                                            <div class="detail_guide">
-                                                <div class="cont_sect">
-                                                    <div class="cont_tit">반품/교환정보</div>
-                                                    <div class="motiv_tbl_box name_k pd_0">
-                                                        <div class="tbl_item">
-                                                            <table class="motiv_normal_tbl ta_l">
-                                                                <caption>정산내역 조회</caption>
-                                                                <colgroup>
-                                                                    <col style="width:22%;">
-                                                                    <col style="width:auto">
-                                                                </colgroup>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <th><div>택배사</div></th>
-                                                                        <td><div>택배사명</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>반품배송비</div></th>
-                                                                        <td><div>설정된 배송비</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>교환배송비</div></th>
-                                                                        <td><div>설정된 교환배송비</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>반품/교환 주소지</div></th>
-                                                                        <td><div>주소지 정보</div></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>반품/교환 사유 정책</div></th>
-                                                                        <td>
-                                                                            <div>
-                                                                                <p>구매자 단순 변심을 상품 수령 후 7일 이내 (구매자 반품배송비 부담)
-                                                                                    표시/광고와 상이, 계약 내용과 다르게 이행된 경우 상품 수령 후 3개월 이내 혹은 표시/광고와 다른 사실을 안 날로부터 30일 이내 (공급사 반품 배송비 부담) 둘 중 하나 경과 시 반품 교환 불가</p>
+                                                    <div id="detail_qna" class="detail_qna">
+                                                        <div class="cont_sect">
+                                                            <div class="cont_tit">Q&A <span>02</span>건</div>
+                                                            <div class="qna_list">
+                                                                <div class="list_hd">
+                                                                    <div class="row_line">
+                                                                        <div class="reply_sta">답변여부</div>
+                                                                        <div class="subject">제목</div>
+                                                                        <div class="writer">작성자</div>
+                                                                        <div class="date">작성일</div>
+                                                                        <div class="manage">관리</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="list_bd">
+
+                                                                    
+                                                                    <div class="list_item">
+
+                                                                        <div class="row_parent">
+                                                                            <div class="row_line">
+                                                                                <div class="reply_sta">답변완료</div>
+                                                                                <div class="subject">문의드려요.</div>
+                                                                                <div class="writer">구매자</div>
+                                                                                <div class="date">2023-01-01</div>
+                                                                                <div class="manage"><div class="btn_wrap"></div></div>
                                                                             </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th><div>반품/교환 불가능 사유</div></th>
-                                                                        <td>
-                                                                            <div>
-                                                                                <p>1. 반품요청기간이 지난 경우</p>
-                                                                                <p>2. 구매자의책임있는사유로상품등이멸실또는훼손된경우(단,상품의 내용을 확인하기 위하여 포장 등을 훼손한 경우는 제외)</p>
-                                                                                <p>3. 구매자의 책임있는 사유로 포장이 훼손되어 상품 가치가 현저히 상실된 경우(예: 식품, 화장품, 향수류, 음반 등)</p>
-                                                                                <p>4. 구매자의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우(라벨이 떨어진 의류 또는 태그가 떨어진 명품관 상품인 경우)</p>
-                                                                                <p>5. 시간의 경과에 의하여 재판매가 곤란한 정도로 상품 등의 가치가 현저히 감소한 경우</p>
-                                                                                <p>6. 고객의 요청사항에 맞춰 제작에 들어가는 맞춤제작상품의 경우(판매자에 회복불가 가능한 손해가 예상되고, 그러한 예정으로 청약철회권 해사가 불가하다는 사실을 서면 동의 받은 경우)</p>
-                                                                                <p>7. 복제가 가능한 상품 등의 포장을 훼손한 경우(CD, DVS, GAME, 도서의 경우 포장 개봉 시)</p>
+                                                                            <div class="row_line detail_row">
+                                                                                <div class="subject">상세 문의 내용</div>
                                                                             </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                                                        </div>
+
+                                                                        <div class="row_parent">
+                                                                            <div class="row_line answer">
+                                                                                <div class="reply_sta"></div>
+                                                                                <div class="subject">네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/>네! 답변드립니다.<br/></div>
+                                                                                <div class="writer">판매자</div>
+                                                                                <div class="date">2023-01-01</div>
+                                                                                <div class="manage"><div class="btn_wrap"><div class="btn btn_sm modify_btn">수정</div><div class="btn btn_sm">삭제</div></div></div>
+                                                                            </div>
+                                                                            <div class="answer_box">
+                                                                                <div class="answer_item">
+                                                                                    <textarea name="" id="" cols="30" rows="10">네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.
+                                                                                        네! 답변드립니다.</textarea>
+                                                                                </div>
+                                                                                <div class="btn_wrap"><div class="btn btn_md">저장</div><div class="btn btn_md">취소</div></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                
+                                                                    <div class="list_item">
+                                                                        <div class="row_parent">
+                                                                            <div class="row_line">
+                                                                                <div class="reply_sta">답변준비</div>
+                                                                                <div class="subject">문의드려요.</div>
+                                                                                <div class="writer">구매자</div>
+                                                                                <div class="date">2023-01-01</div>
+                                                                                <div class="manage"><div class="btn_wrap"></div></div>
+                                                                            </div>
+                                                                            <div class="row_line detail_row">
+                                                                                <div class="subject">상세 문의 내용</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="list_item">
+                                                                        <div class="row_parent">
+                                                                            <div class="row_line">
+                                                                                <div class="reply_sta">답변준비</div>
+                                                                                <div class="subject">문의드려요.</div>
+                                                                                <div class="writer">구매자</div>
+                                                                                <div class="date">2023-01-01</div>
+                                                                                <div class="manage"><div class="btn_wrap"></div></div>
+                                                                            </div>
+                                                                            <div class="row_line detail_row">
+                                                                                <div class="subject">상세 문의 내용</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="list_item">
+                                                                        <div class="row_parent">
+                                                                            <div class="row_line">
+                                                                                <div class="reply_sta">답변준비</div>
+                                                                                <div class="subject">문의드려요.</div>
+                                                                                <div class="writer">구매자</div>
+                                                                                <div class="date">2023-01-01</div>
+                                                                                <div class="manage"><div class="btn_wrap"></div></div>
+                                                                            </div>
+                                                                            <div class="row_line detail_row">
+                                                                                <div class="subject">상세 문의 내용</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div id="detail_guide" class="detail_guide">
+                                                        <div class="cont_sect">
+                                                            <div class="cont_tit">반품/교환정보</div>
+                                                            <div class="motiv_tbl_box name_k pd_0">
+                                                                <div class="tbl_item">
+                                                                    <table class="motiv_normal_tbl ta_l">
+                                                                        <caption>정산내역 조회</caption>
+                                                                        <colgroup>
+                                                                            <col style="width:22%;">
+                                                                            <col style="width:auto">
+                                                                        </colgroup>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th><div>택배사</div></th>
+                                                                                <td><div>택배사명</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>반품배송비</div></th>
+                                                                                <td><div>설정된 배송비</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>교환배송비</div></th>
+                                                                                <td><div>설정된 교환배송비</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>반품/교환 주소지</div></th>
+                                                                                <td><div>주소지 정보</div></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>반품/교환 사유 정책</div></th>
+                                                                                <td>
+                                                                                    <div>
+                                                                                        <p>구매자 단순 변심을 상품 수령 후 7일 이내 (구매자 반품배송비 부담)
+                                                                                            표시/광고와 상이, 계약 내용과 다르게 이행된 경우 상품 수령 후 3개월 이내 혹은 표시/광고와 다른 사실을 안 날로부터 30일 이내 (공급사 반품 배송비 부담) 둘 중 하나 경과 시 반품 교환 불가</p>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th><div>반품/교환 불가능 사유</div></th>
+                                                                                <td>
+                                                                                    <div>
+                                                                                        <p>1. 반품요청기간이 지난 경우</p>
+                                                                                        <p>2. 구매자의책임있는사유로상품등이멸실또는훼손된경우(단,상품의 내용을 확인하기 위하여 포장 등을 훼손한 경우는 제외)</p>
+                                                                                        <p>3. 구매자의 책임있는 사유로 포장이 훼손되어 상품 가치가 현저히 상실된 경우(예: 식품, 화장품, 향수류, 음반 등)</p>
+                                                                                        <p>4. 구매자의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우(라벨이 떨어진 의류 또는 태그가 떨어진 명품관 상품인 경우)</p>
+                                                                                        <p>5. 시간의 경과에 의하여 재판매가 곤란한 정도로 상품 등의 가치가 현저히 감소한 경우</p>
+                                                                                        <p>6. 고객의 요청사항에 맞춰 제작에 들어가는 맞춤제작상품의 경우(판매자에 회복불가 가능한 손해가 예상되고, 그러한 예정으로 청약철회권 해사가 불가하다는 사실을 서면 동의 받은 경우)</p>
+                                                                                        <p>7. 복제가 가능한 상품 등의 포장을 훼손한 경우(CD, DVS, GAME, 도서의 경우 포장 개봉 시)</p>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="dtl_opt_box">
-                                        <div class="box_tit"><span>상품옵션 선택</span></div>
-                                        <div class="box_cont">
-                                            <div class="info_box">
-                                                <div class="prd_opt">
-                                                    <div class="opt_size">
-                                                        <div class="tit">상품규격</div>
-                                                        <div class="cont">
-                                                            <span>S</span>
-                                                            <span>M</span>
-                                                            <span>L</span>
-                                                            <span>XL</span>
-                                                            <span>90~95</span>
-                                                            <span>95~100</span>
-                                                            <span>100~105</span>
+                                        <div class="dtl_opt_box">
+                                            <div class="box_tit"><span>상품옵션 선택</span></div>
+                                            <div class="box_cont">
+                                                <div class="info_box">
+                                                    <div class="prd_opt">
+                                                        <div class="opt_size">
+                                                            <div class="tit">상품규격</div>
+                                                            <div class="cont">
+                                                                <span>S</span>
+                                                                <span>M</span>
+                                                                <span>L</span>
+                                                                <span>XL</span>
+                                                                <span>90~95</span>
+                                                                <span>95~100</span>
+                                                                <span>100~105</span>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="opt_color">
-                                                        <div class="tit">상품색상</div>
-                                                        <div class="cont">
-                                                            <span class="txt_type">BLACK</span>
+                                                        <div class="opt_color">
+                                                            <div class="tit">상품색상</div>
+                                                            <div class="cont">
+                                                                <span class="txt_type">BLACK</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                
+                                            </div>
+                                            <div class="btn_wrap">
+                                                <div class="btn btn_putList sizeL active">상품 담아 넣기</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="bottom_sta" style="width:100%;height:200px;"></div>
                         </div>
                     </div>
 
@@ -927,63 +1107,186 @@
 
     </div>
     <!-- wrap E -->
-    <script>
-        var selectUi = {
-            class : 'select_wrap',
-            seData : [],
-            init :() => {
-                $.each( $('.'+selectUi.class+''), (index, item) => {
-                    var seObjData = new Object();
-                    seObjData.optData = new Array();
-                    seObjData.seNum = index;
-                    seObjData.actNum = '';
-                    seObjData.actVal = '';
-                    seObjData.actSta = false;
-                    var seTarget = $('.'+selectUi.class+'').eq(index).children('select');
-                    $.each( seTarget.children("option"), (seIndex, seItem) => {
-                        if(seTarget.children("option").eq(seIndex).attr('selected') != undefined){
-                            seObjData.actSta = true;
-                            seObjData.actNum = seIndex;
-                            seObjData.actVal = seItem.text;
-                        }
-                        seObjData.optData.push(seItem.text);
-                    });
-                    selectUi.seData.push(seObjData);
-                })
-                selectUi.customSelect();
-            },
-            customSelect: () => {
-                $.each( selectUi.seData, (index, item) => {
-                    var selectHtml = '';
-                    var selectTname = item.actVal ? item.actVal : item.optData[0];
-                    selectHtml+= '<div class="select_box" onclick="selectUi.boxOpen($(this))">';
-                    selectHtml+= '  <div class="select_name">'+selectTname+'</div>';
-                    selectHtml+= '  <div class="opt_list">';
-                    $.each( item.optData, (seindex, seitem) => {
-                        selectHtml+= '<div class="opt_item" optnum="'+seindex+'" onclick="selectUi.optionClick($(this))">'+seitem+'</div>';
-                    });
-                    selectHtml+= '  </div>';
-                    selectHtml+= '</div>';
-                    $('.'+selectUi.class+'').eq(item.seNum).append(selectHtml);
-                });
-            },
-            boxOpen : (obj) =>{
-                if(obj.hasClass('active')){
-                    obj.removeClass('active');
-                }else{
-                    obj.addClass('active');
-                }
-            },
-            optionClick : (obj) =>{
-                obj.parent().parent().children('.select_name').text(obj.text());
-                obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
-            },
-        }
-        selectUi.init();
 
+    <div id="slider_img1" class="motiv_layer slider_img" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="fullSlider.close('slider_img1')"></div>
+        </div>
+        <div class="dada_cont">
+            
+            <div class="img_area">
+                <div class="swiper motiv_slider1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                        <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div thumbsSlider="" class="swiper motiv_slider2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                        <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cont_lp1" class="motiv_layer type1" cont_size="normal" style="display:none">
+        <div class="layer_head">
+            <div class="title">[ 자체관리코드 ] L/T</div>
+            <div class="btn_close" onClick="mtvLp.close('cont_lp1')"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect mgt_0">
+                    <div class="top_info_box">
+                        <div class="info_tit">[제품코드] 제품명</div>
+                        <div class="info_cont">2022.00.00 00:00:00 ~ 2022.00.00 00:00:00</div>
+                    </div>
+                </div>
+                <div class="sect">
+                    <div class="motiv_tbl_box name_k pd_0">
+                        <div class="tbl_item">
+                            <table class="motiv_normal_tbl">
+                                <caption>수수료 보기</caption>
+                                <colgroup>
+                                    <col style="width:20%;">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th><div>수량</div></th>
+                                        <td><div>금액 ( <span class="fn_co1">할인율 </span> )</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>수량</div></th>
+                                        <td><div>금액 ( <span class="fn_co1">할인율 </span> )</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>수량</div></th>
+                                        <td><div>금액 ( <span class="fn_co1">할인율 </span> )</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        selectUi.init();
         $('.favor').click(function(){
             $(this).toggleClass('selected');
+        });
+
+        $('.list_item .subject').click(function(){
+            if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).closest('.list_item').removeClass('open');
+
+                $('.bottom_sta').css('height', $('.prd_bottom_box > .dtl_area').outerHeight()+20);
+                console.log($('.prd_bottom_box > .dtl_area').outerHeight())
+            } else {
+                $(this).addClass('open');
+                $(this).closest('.list_item').addClass('open');
+                $('.bottom_sta').css('height', $('.prd_bottom_box > .dtl_area').outerHeight()+20);
+
+            }
+        });
+
+        $('.modify_btn').click(function(){
+            if(!$(this).closest('.list_item').hasClass('open')){
+                $(this).closest('.list_item').addClass('open');
+            }
+            if($(this).hasClass('opens')){
+                $(this).removeClass('opens');
+                $(this).closest('.list_item').removeClass('modify');
+            } else {
+                $(this).addClass('opens');
+                $(this).closest('.list_item').addClass('modify');
+            }
+        });
+        
+        var detailTop = 0;
+        $('#header').height() +  Number($('.inner').css('padding-top').replace('px', '')) + $('.inner > h1').height() + Number($('.prd_bottom_box').css('margin-top').replace('px', ''))
+        const lockVal = 810.14;
+        const lockVal_scroll = lockVal - 314;
+        var cont_top_sta = $('.prd_first_box').height() - ($('.wrap #content .inner > h1').height() + 55);
+
+        $(document).ready(function(){
+            $('.dtl_area2').css('width', $('.contents_box').width());
+            $('.bottom_sta').css('height', $('.prd_bottom_box').height()+20);
+            
+            $('#productDetail').attr('cont_h', 30);
+            $('#detail_review').attr('cont_h', $('#productDetail').outerHeight());
+            $('#detail_qna').attr('cont_h', ($('#detail_review').height() + $('#productDetail').outerHeight()));
+            $('#detail_guide').attr('cont_h', ($('#detail_review').height()+$('#productDetail').outerHeight()+$('#detail_qna').height()));
+            var cont1_h =  $('#header').height() + $('.fixed_top_0').height() + 30;
+            var cont2_h = window.innerHeight - cont1_h;
+
+            $('.prd_bottom_box').css('height', cont2_h);
+            $('.detail_area .dtl_opt_box').css('height', cont2_h - 50);
+
+            $('.tab_list .tab_item a').click(function(){
+                var move_s = $($(this).attr('href')).attr('cont_h') ;
+                console.log($(this).attr('href'), move_s)
+                var move_sc = cont_top_sta + Number(move_s) - 29;
+                var mtvLnbOpen = setTimeout( function() {
+                    window.scrollTo(0, move_sc);
+                    console.log(move_sc)
+                    clearTimeout(mtvLnbOpen);
+                }, 100);
+            });
+
+            $('.btn_moreInfo .btn_more').click(function(){
+                if($(this).hasClass('open')){
+                    $(this).removeClass('open').closest('.productDetail').find('.productDetail_info').removeClass('open');
+                } else {
+                    $(this).addClass('open').closest('.productDetail').find('.productDetail_info').addClass('open');
+                }
+            });
+
+            scrollSta('productDetail');
+            scrollSta('detail_review');
+            scrollSta('detail_qna');
+            scrollSta('detail_guide');
         })
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > cont_top_sta) {
+                var translateY = (window.scrollY-30)-lockVal_scroll;
+                $('.prd_bottom_box').addClass('fixed_active');
+                $('.dtl_cont_scroll').css('transform', 'translateY(-'+translateY+'px)');
+                $('.prd_bottom_box').css('transform', 'translateX(-'+window.scrollX+'px)');
+                $('.fixed_top_0 .dtl_area2').css('transform', 'translateX(-'+window.scrollX+'px)');
+                $('.fixed_top_0').addClass('lock_active');
+            } else {
+                $('.prd_bottom_box').removeClass('fixed_active');
+                $('.dtl_cont_scroll').css('transform', 'translateY(-0px)');
+                $('.fixed_top_0').removeClass('lock_active');
+            }
+        });
+
+        $(window).on('resize', function(){
+            $('.dtl_area2').css('width', $('.contents_box').width())
+        });
+
+        scrollSta = (id) => {
+            var move_s = $('#'+id).attr('cont_h') ;
+            var move_sc = cont_top_sta + Number(move_s) - 30;
+            // if(id == 'detail_guide') move_sc = move_sc - 400
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > move_sc) {
+                    $('.tab_list .tab_item').removeClass('active');
+                    $('.'+id+'s').addClass('active');
+                }
+            });
+        }
 
     </script>
 </body>

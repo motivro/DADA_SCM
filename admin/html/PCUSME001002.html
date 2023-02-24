@@ -398,12 +398,12 @@
                     <div class="contents_box">
                         <div class="top_btn_box">
                             <div class="btn_wrap">
-                                <div class="btn">기존 상품정보 가져오기</div>
+                                <div class="btn" onclick="mtvLp.open('loadPrd')">기존 상품정보 가져오기</div>
                                 <div class="btn">엑셀 상품등록</div>
-                                <div class="btn">이미지/동영상 업로드</div>
+                                <div class="btn" onclick="mtvLp.open('upLoadImg')">이미지/동영상 업로드</div>
                             </div>
                             <div class="btn_wrap">
-                                <div class="btn">로그보기</div>
+                                <div class="btn" onclick="mtvLp.open('loadLog')">로그보기</div>
                                 <div class="btn">상품저장</div>
                             </div>
                         </div>
@@ -1975,10 +1975,10 @@
         </div>
     </div>
 
-    <div class="motiv_layer type1">
+    <div id="loadPrd" class="motiv_layer type1">
         <div class="layer_head">
             <div class="title">기존 상품정보 가져오기</div>
-            <div class="btn_close"></div>
+            <div class="btn_close" onclick="mtvLp.close('loadPrd')"></div>
         </div>
         <!-- 레이어 body S -->
         <div class="layer_body">
@@ -2149,7 +2149,7 @@
         <!-- 레이어 body E -->
     </div>
 
-    <div class="motiv_layer type1" style="margin-top:20px;">
+    <div class="motiv_layer type1">
         <div class="layer_head">
             <div class="title">엑셀등록관리</div>
             <div class="btn_close"></div>
@@ -2193,10 +2193,10 @@
         </div>
     </div>
 
-    <div class="motiv_layer type1" style="margin-top:20px;">
+    <div id="upLoadImg" class="motiv_layer type1">
         <div class="layer_head">
             <div class="title">이미지/동영상 업로드</div>
-            <div class="btn_close"></div>
+            <div class="btn_close" onclick="mtvLp.close('upLoadImg')"></div>
         </div>
         <div class="layer_body">
             <div class="contents_box">
@@ -2221,10 +2221,10 @@
         </div>
     </div>
 
-    <div class="motiv_layer type1">
+    <div id="loadLog" class="motiv_layer type1">
         <div class="layer_head">
             <div class="title">로그보기</div>
-            <div class="btn_close"></div>
+            <div class="btn_close" onclick="mtvLp.close('loadLog')"></div>
         </div>
         <!-- 레이어 body S -->
         <div class="layer_body">
