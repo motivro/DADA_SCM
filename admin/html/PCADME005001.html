@@ -496,6 +496,7 @@
                             <div class="btn_group d_flex">
                                 <div class="btn_wrap">
                                     <div class="btn btn_exit">강제종료</div>
+                                    <div class="btn">강제종료 해지</div>
                                 </div>
                             </div>
                             <div class="tbl_wrap">
@@ -673,6 +674,36 @@
     </div>
     <!-- wrap E -->
     <h2>팝업 내용</h2>
+
+    <div id="alert1" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert1')"></div>
+        </div>
+        <div class="dada_cont">
+            “판매자 ID/이니셜 다다딜 상품” 상품 판매 강제종료 요청이<br/>
+             정상처리 되었습니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1">확인</div>
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('alert1')">취소</div>
+        </div>
+    </div>
+
+    <div id="alert2" class="motiv_layer" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onClick="mtvLp.close('alert2')"></div>
+        </div>
+        <div class="dada_cont">
+            판매자ID/이니셜 님이 판매중인 “상품명(코 드번호)”을 <br/>
+            상품단위로 강제 중지합니다.<br/>
+            만약, 방송 중이면 방송 끝나고 바로 중지처 리 됩니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1">확인</div>
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('alert2')">취소</div>
+        </div>
+    </div>
+
     <div class="motiv_layer type1">
         <div class="layer_head">
             <div class="title">강제종료 정보</div>

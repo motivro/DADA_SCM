@@ -644,7 +644,7 @@
                                             </tr>
                                             <tr>
                                                 <th><div>비밀번호</div></td>
-                                                <td><div class="inp_wrap password"><input type="password" name="" id="" placeholder="비밀번호"><i class="icon icon_eye"></i></div></td>
+                                                <td><div class="inp_wrap password"><input type="password" name="" id="" placeholder="암호를 입력해주세요."><i class="icon icon_eye"></i></div></td>
                                             </tr>
                                             <tr>
                                                 <th><div>역할</div></td>
@@ -769,18 +769,7 @@
 
     <script>
         $(document).ready(() => {
-            // tFlex.init('pcacme001001_1', tableData2);
-            $('.inp_wrap.password > i').on('click', function () {
-                var inpPassword = $('.inp_wrap.password > input[type="password"]')
-                $(inpPassword).toggleClass('active');
-                if ($(inpPassword).hasClass('active')) {
-                    $(this).attr('class', "icon icon_eye_slash")
-                    .prev('input').attr('type', "text");
-                } else {
-                    $(this).attr('class', "icon icon_eye")
-                    .prev('input').attr('type', 'password');
-                }
-            });
+           
         });
 
         selectUi.init();

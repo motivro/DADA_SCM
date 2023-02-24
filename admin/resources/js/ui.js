@@ -8,6 +8,7 @@ $(document).ready(function(){
     
     //패스워드 보기
     $('.inp_wrap.password > i').on('click', function () {
+        console.log(123)
         if ($(this).hasClass('active')) {
             $(this).removeClass('active').parent().children('input').attr('type', "password");
         } else {
