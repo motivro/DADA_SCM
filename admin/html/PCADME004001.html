@@ -1015,7 +1015,46 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sect" style="border: var(--box_border);padding:20px;font-weight:700;color:var(--color1);">상품상세정보 아코디언 영역(확인필요)</div>
+                        <div class="sect">
+                            <div id="productDetail" class="productDetail" cont_h="30">
+                                <div class="productDetail_info">
+                                    <p>CAMISOLE DRESS / BLACK</p>
+                                    <p>배색 스티치가 돋보이는 캐미솔 원피스입니다.</p>
+                                    <p>폴앤앨리스의 캐리오버 아이템인 캐미솔 드레스를 </p>
+                                    <p>22FW버전으로 원단을 변경하여 제작하였습니다.</p>
+                                    <p>A라인으로 떨어지는 볼륨으로 여성스럽습니다.</p>
+                                    <p>얇은 허리끈으로 사이즈를 조절하여 묶을 수 있습니다.</p>
+                                    <p>뒷지퍼 여밈으로 색상은 블랙입니다.</p>
+                                    <p>COLOR : BLACK</p>
+                                    <p>FABRIC : POLYESTER 97% SPAN3%</p>
+                                    <p>WASHING : Dry cleaning only</p>
+                                    <p>SIZE : FREE</p>
+                                    <p>총기장 104cm /가슴단면 44cm /허리단면 42cm /밑단단면 95cm /스트랩 폭 : 2cm</p>
+                                    <p>(측정방법에 따라 오차가 발생할 수 있습니다.)</p>
+                                    <p>MODEL SIZE : Height 173cm Bust 78cmWaist 58cm Hips 89cm</p>
+                                    <p>CAMISOLE DRESS / BLACK</p>
+                                    <p>배색 스티치가 돋보이는 캐미솔 원피스입니다.</p>
+                                    <p>폴앤앨리스의 캐리오버 아이템인 캐미솔 드레스를 </p>
+                                    <p>22FW버전으로 원단을 변경하여 제작하였습니다.</p>
+                                    <p>A라인으로 떨어지는 볼륨으로 여성스럽습니다.</p>
+                                    <p>얇은 허리끈으로 사이즈를 조절하여 묶을 수 있습니다.</p>
+                                    <p>뒷지퍼 여밈으로 색상은 블랙입니다.</p>
+                                    <p>COLOR : BLACK</p>
+                                    <p>FABRIC : POLYESTER 97% SPAN3%</p>
+                                    <p>WASHING : Dry cleaning only</p>
+                                    <p>SIZE : FREE</p>
+                                    <p>총기장 104cm /가슴단면 44cm /허리단면 42cm /밑단단면 95cm /스트랩 폭 : 2cm</p>
+                                    <p>(측정방법에 따라 오차가 발생할 수 있습니다.)</p>
+                                    <p>MODEL SIZE : Height 173cm Bust 78cmWaist 58cm Hips 89cm</p>
+                                    <img src="../resources/images/product/dtl_img_sample.png" alt="">
+                                    <img src="../resources/images/product/dtl_img_sample.png" alt="">
+                                    <img src="../resources/images/product/dtl_img_sample.png" alt="">
+                                </div>
+                                <div class="btn_moreInfo"><div class="btn_more"><span class="txt">상세정보 보기</span><i class="icon"></i></div></div>
+                                
+                                
+                            </div>
+                        </div>
                         <div class="sect">
                             <div class="flex_wrap prd_dtl_img">
                                 <div class="left">
@@ -1564,6 +1603,14 @@
         $(document).ready(() => {
             $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
             tFlex.init(pcacme004001_1);
+            
+            $('.btn_moreInfo .btn_more').click(function(){
+                if($(this).hasClass('open')){
+                    $(this).removeClass('open').closest('.productDetail').find('.productDetail_info').removeClass('open');
+                } else {
+                    $(this).addClass('open').closest('.productDetail').find('.productDetail_info').addClass('open');
+                }
+            });
             
             tab_area.init(); //탭 이벤트
         });
