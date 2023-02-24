@@ -1254,6 +1254,22 @@ td.td_select .select_wrap .select_box.active .opt_list{top:119%}
 .detail_area .tag_area .tag_list .tag_item > span{font-size: var(--fts12);font-weight: var(--ftw500);color: var(--color19);transition: color .3s ease;}
 .detail_area .tag_area .tag_list .tag_item:hover > span{color: #fff;}
 
+/* 상품상세 - 레이어 */
+.motiv_layer .productDetail{padding:50px 0;}
+.motiv_layer .productDetail .productDetail_info{text-align: center;max-height: 600px;overflow: hidden;} 
+.motiv_layer .productDetail .productDetail_info.open{max-height:none}
+.motiv_layer .productDetail .btn_moreInfo{padding:15px 0;display: flex;justify-content: center;background: var(--color16);border: var(--box_border);position: relative;}
+.motiv_layer .productDetail .btn_moreInfo .btn_more{cursor:pointer;display: flex;align-items: center;gap: 5px;font-size: var(--fts14);font-weight: var(--ftw500);color: var(--color14);}
+.motiv_layer .productDetail .btn_moreInfo .btn_more:before{content: "";position: absolute;left: 0;right: 0;bottom: calc(100% + 1px);display: block;width: 100%;height: 150px;background: -webkit-gradient(linear,left top,left bottom,from(0),color-stop(30%,#fff),color-stop(70%,hsla(0,0%,100%,.7)),to(hsla(0,0%,100%,0)));background: linear-gradient(0,#fff 30%,hsla(0,0%,100%,.7) 70%,hsla(0,0%,100%,0));}
+.motiv_layer .productDetail .btn_moreInfo .btn_more .icon{width:16px;height:16px;background: url('../images/common/icon_more_arrow_down.svg')no-repeat center center;background-size:5px;transform: rotate(90deg);}
+.motiv_layer .productDetail .btn_moreInfo .btn_more.open:before{display:none}
+.motiv_layer .productDetail .tag_area{margin-top: 50px;padding-top: 25px;border-top: var(--box_border);}
+.motiv_layer .tag_area .tag_list{display: flex;flex-direction: row;flex-wrap: wrap;align-items: center;gap: 10px;}
+.motiv_layer .tag_area .tag_list .tag_item{margin: 0 0 10px 0;padding:5px 10px;border: var(--box_border);border-radius: 15px;background: #fff;transition: background .3s ease, border-color .3s ease;}
+.motiv_layer .tag_area .tag_list .tag_item:hover{background: var(--color1);border-color: var(--color1);}
+.motiv_layer .tag_area .tag_list .tag_item > span{font-size: var(--fts12);font-weight: var(--ftw500);color: var(--color19);transition: color .3s ease;}
+.motiv_layer .tag_area .tag_list .tag_item:hover > span{color: #fff;}
+
 /* 상품리뷰 */
 .detail_review{margin-bottom:50px;}
 .detail_area .detail_review .cont_tit{margin-bottom: 0;}

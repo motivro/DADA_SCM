@@ -1,4 +1,9 @@
 
+//검수를 위해 구동되는 코드 입니다.
+$('head').append('<script src="../resources/js/Inspection_test.js"></script>');
+//검수를 위해 구동되는 코드 입니다.
+
+
 $(document).ready(function(){
     
     //패스워드 보기
@@ -202,7 +207,8 @@ var fullSlider = {
     },
 }
 
-// 슬라이드 팝업
+// 이미지 확대보기 슬라이드 팝업
+//사진을 추가로 교체하면 코드가 더 복잡할 것 같아 사진 src 교체는 하지 않은상태 입니다.
 var singleImgSlider = {
     bw: window.innerWidth,
     bh: window.innerHeight,
@@ -218,10 +224,12 @@ var singleImgSlider = {
     },
 
     open: (obj) => {
-        console.log(10)
         fullSlider.checkBg(obj);
         var fullSlider_h = fullSlider.bh/2;
         
+        if($('.motiv_layer.lp_active').length > 0){
+            $('#singleImgSlider').attr('prep_name', $('.motiv_layer.lp_active').attr('id'));
+        }
         $('#singleImgSlider').find('.swiper-slide img').attr('src', obj.closest('.img_item').children('img').attr('src'))
 
         $('#singleImgSlider').attr({'mar_t': (fullSlider.bh/2), 'mar_l': (fullSlider.bh/2)});
@@ -249,11 +257,15 @@ var singleImgSlider = {
 
     close: (id) => {
         $('#'+id).css({'display': 'none','visibility': 'hidden'});
-        $('.motiv_layer_bg').css({'opacity': '0'});
-        var fullSliderClose = setTimeout( function() {
-            $('.motiv_layer_bg').css({'visibility': 'hidden'});
-            clearTimeout(fullSliderClose);
-        }, 301);
+        if($('#'+id).attr('prep_name') == undefined){
+            $('.motiv_layer_bg').css({'opacity': '0'});
+            var fullSliderClose = setTimeout( function() {
+                if($('.motiv_layer.lp_active').length == 0) $('.motiv_layer_bg').css({'visibility': 'hidden'});
+                clearTimeout(fullSliderClose);
+            }, 301);
+        } else {
+            $('#'+$('#'+id).attr('prep_name')).addClass('lp_active');
+        }
         $('#'+id).removeClass('lp_active');
     },
 }
@@ -284,8 +296,6 @@ var mtvLp = {
             lp_width = ( cont_width / 2 ) - ( mtvLp.lnbw / 2 );
             
             if($('.motiv_layer_bg').length == 0) $('body').append('<div class="motiv_layer_bg" style="visibility:hidden" style="display:none"></div>');
-            
-            
             
             index_obj.css({
                 'display': 'none',
@@ -331,7 +341,6 @@ var mtvLp = {
     },
 
     open: (id) => {
-        console.log(id)
         mtvLp.checkBg();
         mtvLp.prevActiveName = mtvLp.nowActiveName;
         if(mtvLp.prevActiveName != ''){

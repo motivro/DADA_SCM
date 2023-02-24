@@ -1309,19 +1309,19 @@
                             <div class="flex_wrap prd_dtl_img">
                                 <div class="left">
                                     <div class="cont_tit">대표이미지</div>
-                                    <div class="cont_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div>
+                                    <div class="cont_img" onclick="singleImgSlider.open($(this))"><img src="../resources/images/product/more_img_sample.png" alt=""></div>
                                 </div>
                                 <div class="right">
                                     <div class="cont_tit">추가이미지</div>
                                     <div class="swiper sub_img_box">
                                         <ul class="swiper-wrapper">
-                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
-                                            <li class="swiper-slide"><div class="prd_img"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img" onclick="singleImgSlider.open($(this))"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img" onclick="singleImgSlider.open($(this))"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img" onclick="singleImgSlider.open($(this))"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img" onclick="singleImgSlider.open($(this))"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img" onclick="singleImgSlider.open($(this))"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img" onclick="singleImgSlider.open($(this))"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
+                                            <li class="swiper-slide"><div class="prd_img" onclick="singleImgSlider.open($(this))"><img src="../resources/images/product/more_img_sample.png" alt=""></div></li>
                                         </ul>
                                     </div>
                                     <!-- Swiper JS -->
@@ -1590,6 +1590,265 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="motiv_layer type1">
+        <div class="layer_head">
+            <div class="title">다다딜 상품판매보고서</div>
+            <div class="btn_close"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="data_flex_box">
+                    <div class="data_left">
+                        <div class="sect_tit">다다딜 판매상품 검색</div>
+                        <div class="sect">
+                            <div class="data_box">
+                                <div class="top_area d_flex a_c gap10">
+                                    <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
+                                    <div class="btn btn_search">검색</div>
+                                </div>
+                                <div class="bot_area">
+                                    <div class="data_list">
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item dataNone"><div>검색된 상품이 없습니다.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data_right">
+                        <div class="sect_tit d_flex a_c jc_sb">
+                            <div class="tit">[상품코드] 상품명1</div>
+                            <div class="desc d_flex a_c gap10">
+                                <div class="inp_wrap">
+                                    <div id="sandbox_container" class="input-group date">
+                                        <input type="text" class="form-control" placeholder=""><span class="input-group-addon"></span>
+                                    </div>
+                                </div>
+                                <div class="btn btn_search">검색</div>
+                            </div>
+                        </div>
+                        <div class="sect">
+                            <div class="statis_box">
+                                <div class="statis_list">
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container1"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container2"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container3"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container4"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="motiv_layer type1">
+        <div class="layer_head">
+            <div class="title">다다딜 상품판매보고서 통계</div>
+            <div class="btn_close"></div>
+        </div>
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="data_flex_box">
+                    <div class="data_left">
+                        <div class="sect_tit">다다딜 판매상품 검색</div>
+                        <div class="sect">
+                            <div class="data_box">
+                                <div class="top_area d_flex a_c gap10">
+                                    <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
+                                    <div class="btn btn_search">검색</div>
+                                </div>
+                                <div class="bot_area">
+                                    <div class="data_list">
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
+                                        <div class="data_item dataNone"><div>검색된 상품이 없습니다.</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data_right">
+                        <div class="sect_tit d_flex a_c jc_sb">
+                            <div class="tit">[상품코드] 상품명1</div>
+                            <div class="desc d_flex a_c gap10">
+                                <div class="inp_wrap">
+                                    <div id="sandbox_container" class="input-group date">
+                                        <input type="text" class="form-control" placeholder=""><span class="input-group-addon"></span>
+                                    </div>
+                                </div>
+                                <div class="btn btn_search">검색</div>
+                            </div>
+                        </div>
+                        <div class="sect">
+                            <div class="statis_box">
+                                <div class="statis_list">
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container5"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="statis_item">
+                                        <div class="item_tit">월별 매출</div>
+                                        <div class="item_cont">
+                                            <figure class="highcharts-figure">
+                                                <div id="highcharts_container6"></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sect">
+                            <!-- tableList S -->
+                            <div id="pcacme002004_2" class="contents_box bd_none pd_0 bd_0">
+                                <div class="panel_body">
+                                    <div class="tbl_wrap">
+                                        <div class='motiv_tbl'>
+                                            <div class='tbl_inner'>
+                                                <div class='tbl_body'>
+                                                    <div class='look_body_box'>
+                                                        <div class='row_item row_th d_flex'>
+                                                            <div class='hd_item' keyname='sell1'>
+                                                                <div>판매날짜</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell2'>
+                                                                <div>옵션코드</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell3'>
+                                                                <div>상품옵션</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell4'>
+                                                                <div>판매가</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell5'>
+                                                                <div>판매수량</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell6'>
+                                                                <div>매출금액</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class='row_item d_flex'>
+                                                            <div class='hd_item' keyname='sell1'>
+                                                                <div>2023-01-01 00:00:00</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell2'>
+                                                                <div>옵션코드</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell3'>
+                                                                <div>옵션상품</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell4'>
+                                                                <div>판매가</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell5'>
+                                                                <div>00</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell6'>
+                                                                <div>판매가*수량</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class='row_item d_flex'>
+                                                            <div class='hd_item' keyname='sell1'>
+                                                                <div>2023-01-01 00:00:00</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell2'>
+                                                                <div>옵션코드</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell3'>
+                                                                <div>옵션상품</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell4'>
+                                                                <div>판매가</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell5'>
+                                                                <div>00</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell6'>
+                                                                <div>판매가*수량</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- tableList E -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- 함수로 호출됨니다. ㅈ singleImgSlider.open($(this)) -->
+    <div id="singleImgSlider" class="motiv_layer slider_img" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onclick="singleImgSlider.close('singleImgSlider')"></div>
+        </div>
+        <div class="dada_cont">
+            <div class="img_area">
+                <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png"></div>
             </div>
         </div>
     </div>

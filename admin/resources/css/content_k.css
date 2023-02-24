@@ -95,7 +95,7 @@
 .store_inner{display:flex;align-items:center;gap:14px;color:var(--color14);}
 .store_cont{display:flex;align-items:center;gap:14px;color:var(--color14);}
 .store_img_wrap{display:flex;gap:15px;}
-.store_img_item{width:140px;height:140px;position:relative;overflow:hidden;}
+.store_img_item{width:140px;height:140px;position:relative;overflow:hidden;cursor:pointer}
 .store_img_item img{object-fit: cover;object-position: center;height: 100%;}
 .store_add_btnbox{width:140px;height:140px;overflow:hidden;background:#fff;border:2px dashed var(--color5);position:relative;}
 .store_btn_plus{width:45px;height:45px;box-sizing:border-box;background-repeat:no-repeat;background-position:center;background-size:cover;cursor:pointer;background-image:url(../images/common/store_btn_plus.svg);position:absolute;left:50%;top:50%;z-index:5;transform:translate(-50%,-50%);cursor:pointer;}

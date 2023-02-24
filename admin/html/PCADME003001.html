@@ -726,7 +726,7 @@
                                                 <div class='look_body_list'>
                                                     <div class='row_item d_flex'>
                                                         <div class='hd_item' keyname='sell1'>
-                                                            <div><div class="img_box"><img src="../resources/images/product/more_img_sample.png" alt=""></div></div>
+                                                            <div><div class="img_box" onclick="singleImgSlider.open($(this))"><img src="../resources/images/product/more_img_sample.png" alt=""></div></div>
                                                         </div>
                                                         <div class='hd_item' keyname='sell2'>
                                                             <div>자체코드</div>
@@ -752,7 +752,7 @@
                                                     </div>
                                                     <div class='row_item d_flex'>
                                                         <div class='hd_item' keyname='sell1'>
-                                                            <div><div class="img_box"><img src="../resources/images/product/more_img_sample.png" alt=""></div></div>
+                                                            <div><div class="img_box" onclick="singleImgSlider.open($(this))"><img src="../resources/images/product/more_img_sample.png" alt=""></div></div>
                                                         </div>
                                                         <div class='hd_item' keyname='sell2'>
                                                             <div>자체코드</div>
@@ -813,6 +813,19 @@
 
     </div>
     <!-- wrap E -->
+    <h2>팝업 내용</h2>
+    <!-- 함수로 호출됨니다.  singleImgSlider.open($(this)) -->
+    <div id="singleImgSlider" class="motiv_layer slider_img" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onclick="singleImgSlider.close('singleImgSlider')"></div>
+        </div>
+        <div class="dada_cont">
+            <div class="img_area">
+                <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png"></div>
+            </div>
+        </div>
+    </div>
+    
     <script>
         $(document).ready(() => {
             $('#sandbox_container.input-daterange').datepicker({

@@ -488,7 +488,7 @@
                                                     <div class="store_inner">
                                                         <div class="store_cont">
                                                             <div class="store_img_wrap">
-                                                                <div class="store_img_item"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
+                                                                <div class="store_img_item" onclick="singleImgSlider.open($(this))"><img src="../resources/images/product/sample_thumb.jpg" alt=""></div>
                                                             </div>
                                                             <div class="store_img_add">
                                                                 <label for="file"></label> 
@@ -529,6 +529,17 @@
     </div>
     <!-- wrap E -->
 
+    <!-- 함수로 호출됨니다. singleImgSlider.open($(this)) -->
+    <div id="singleImgSlider" class="motiv_layer slider_img" cont_type="alert" style="display:none">
+        <div class="dada_close_box">
+            <div class="dada_close_btn mu_close_btn" onclick="singleImgSlider.close('singleImgSlider')"></div>
+        </div>
+        <div class="dada_cont">
+            <div class="img_area">
+                <div class="swiper-slide"><img src="../resources/images/product/dtl_img_sample.png"></div>
+            </div>
+        </div>
+    </div>
 
 <script>
 
@@ -701,7 +712,7 @@
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
-                    $('.store_img_wrap').append('<div class="store_img_item"><img src="'+e.target.result+'" alt=""></div>');
+                    $('.store_img_wrap').append('<div class="store_img_item" onclick="singleImgSlider.open($(this))"><img src="'+e.target.result+'" alt=""></div>');
                 };
                 reader.readAsDataURL(input.files[0]);
             } else {

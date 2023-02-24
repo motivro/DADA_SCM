@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="../resources/plugin/bootstrap_datepicker/css/bootstrap-datepicker3.standalone.min.css">
     <script src="../resources/js/jquery-3.6.1.min.js"></script>
     <script src="../resources/js/ui.js"></script>
-    <script src="../resources/js/table_list.js?1"></script>
+    <script src="../resources/js/table_list.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script> -->
 </head>
 
 <body>
@@ -53,7 +53,7 @@
                         <span>다다SCM 공지사항 알림</span>
                     </div>
                     <div class="hd_user">
-                        <span>휴먼회원</span>
+                        <span>서비스 중지</span>
                     </div>
                 </h1>
 
@@ -2472,7 +2472,7 @@
                 <div class="sect">
                     <div class="flex_wrap prd_dtl">
                         <div class="left">
-                            <div class="sect_tit d_flex">위탁판매 상품</div>
+                            <div class="sect_tit d_flex">가격정보</div>
                             <div class="sect">
                                 <div class="motiv_tbl_box name_k pd_0">
                                     <div class="tbl_item">
@@ -2696,7 +2696,44 @@
                     </div>
                 </div>
                 <div class="sect_tit">상세정보</div>
-                <div class="sect">상세정보 영역(어떤 컨텐츠 넣을지 확인)</div>
+                <div class="sect">
+                    <div id="productDetail" class="productDetail" cont_h="30">
+                        <div class="productDetail_info">
+                            <p>CAMISOLE DRESS / BLACK</p>
+                            <p>배색 스티치가 돋보이는 캐미솔 원피스입니다.</p>
+                            <p>폴앤앨리스의 캐리오버 아이템인 캐미솔 드레스를 </p>
+                            <p>22FW버전으로 원단을 변경하여 제작하였습니다.</p>
+                            <p>A라인으로 떨어지는 볼륨으로 여성스럽습니다.</p>
+                            <p>얇은 허리끈으로 사이즈를 조절하여 묶을 수 있습니다.</p>
+                            <p>뒷지퍼 여밈으로 색상은 블랙입니다.</p>
+                            <p>COLOR : BLACK</p>
+                            <p>FABRIC : POLYESTER 97% SPAN3%</p>
+                            <p>WASHING : Dry cleaning only</p>
+                            <p>SIZE : FREE</p>
+                            <p>총기장 104cm /가슴단면 44cm /허리단면 42cm /밑단단면 95cm /스트랩 폭 : 2cm</p>
+                            <p>(측정방법에 따라 오차가 발생할 수 있습니다.)</p>
+                            <p>MODEL SIZE : Height 173cm Bust 78cmWaist 58cm Hips 89cm</p>
+                            <p>CAMISOLE DRESS / BLACK</p>
+                            <p>배색 스티치가 돋보이는 캐미솔 원피스입니다.</p>
+                            <p>폴앤앨리스의 캐리오버 아이템인 캐미솔 드레스를 </p>
+                            <p>22FW버전으로 원단을 변경하여 제작하였습니다.</p>
+                            <p>A라인으로 떨어지는 볼륨으로 여성스럽습니다.</p>
+                            <p>얇은 허리끈으로 사이즈를 조절하여 묶을 수 있습니다.</p>
+                            <p>뒷지퍼 여밈으로 색상은 블랙입니다.</p>
+                            <p>COLOR : BLACK</p>
+                            <p>FABRIC : POLYESTER 97% SPAN3%</p>
+                            <p>WASHING : Dry cleaning only</p>
+                            <p>SIZE : FREE</p>
+                            <p>총기장 104cm /가슴단면 44cm /허리단면 42cm /밑단단면 95cm /스트랩 폭 : 2cm</p>
+                            <p>(측정방법에 따라 오차가 발생할 수 있습니다.)</p>
+                            <p>MODEL SIZE : Height 173cm Bust 78cmWaist 58cm Hips 89cm</p>
+                            <img src="../resources/images/product/dtl_img_sample.png" alt="">
+                            <img src="../resources/images/product/dtl_img_sample.png" alt="">
+                            <img src="../resources/images/product/dtl_img_sample.png" alt="">
+                        </div>
+                        <div class="btn_moreInfo"><div class="btn_more"><span class="txt">상세정보 보기</span><i class="icon"></i></div></div>
+                    </div>
+                </div>
                 <div class="sect">
                     <div class="acc_box">
                         <div class="acc_tit"><div class="tit">A/S 정보 및 특이사항</div><div class="accBtn"><i class="icon icon_arrow"></i></div></div>
@@ -2854,10 +2891,19 @@
 
             selectUi.init();
 
-            $( ".cate_drag_list" ).sortable();
-            $( ".cate_drag_list" ).disableSelection();
+            $('.btn_moreInfo .btn_more').click(function(){
+                if($(this).hasClass('open')){
+                    $(this).removeClass('open').closest('.productDetail').find('.productDetail_info').removeClass('open');
+                } else {
+                    $(this).addClass('open').closest('.productDetail').find('.productDetail_info').addClass('open');
+                }
+            });
+            
+            // $( ".cate_drag_list" ).sortable();
+            // $( ".cate_drag_list" ).disableSelection();
 
             $('#sandbox_container.input-daterange').datepicker({language: "ko"});
+
             tFlex.init(testData);//일반적인 스크롤되는 리스트
             tFlexLock.init(testData1);//일부 고정영역이 있고 스크롤 되는 리스트
             tFlex.init(pcacme001001_3);//일반적인 스크롤되는 리스트
