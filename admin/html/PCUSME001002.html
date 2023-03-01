@@ -21,7 +21,7 @@
     <script src="../resources/plugin/bootstrap_datepicker/js/bootstrap-datepicker.ko.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script> -->
 
 </head>
 
@@ -607,6 +607,16 @@
                                                         <div class="inp_wrap"><input type="text" name="" id="" placeholder="자체코드"></div>
                                                     </div>
                                                 </div>
+                                                <div class="srh_item_inner">
+                                                    <div class="srh_title">제조일자</div>
+                                                    <div class="srh_cont">
+                                                        <div class="inp_wrap">
+                                                            <div id="sandbox_container" class="input-group date">
+                                                                <input type="text" class="form-control" placeholder=""><span class="input-group-addon"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             
                                             <div class="srh_item">
@@ -640,25 +650,24 @@
                         <div id="prd_add_3" class="regi_sect">
                             <div class="acc_box open">
                                 <div class="acc_tit"><div class="tit">상품 인증관리</div><div class="accBtn"><i class="icon icon_arrow"></i></div></div>
-                                <div class="acc_cont">
+                                <div class="acc_cont over_vis">
                                     <div class="contents_box regi bd_0">
                                         <div class="normal_cont">
                                             <div class="row_item">
                                                 <div class="select_wrap">
                                                     <select>
                                                         <option value="없음" selected>없음</option>
-                                                        <option value="남성">남성</option>
-                                                        <option value="여성">여성</option>
+                                                        <option value="있음">있음</option>
                                                     </select>
                                                 </div>
                                                 <div class="inp_wrap">
-                                                    <input type="text" name="" id="" placeholder="검색할 분류를 입력해 주세요.">
+                                                    <input type="text" name="" id="" placeholder="인증기관">
                                                 </div>
                                                 <div class="inp_wrap">
-                                                    <input type="text" name="" id="" placeholder="검색할 분류를 입력해 주세요.">
+                                                    <input type="text" name="" id="" placeholder="인증번호">
                                                 </div>
                                                 <div class="inp_wrap">
-                                                    <input type="text" name="" id="" placeholder="검색할 분류를 입력해 주세요.">
+                                                    <input type="text" name="" id="" placeholder="인증일">
                                                 </div>
                                                 <div class="btn_wrap">
                                                     <div class="btn">삭제</div>
@@ -668,18 +677,17 @@
                                                 <div class="select_wrap">
                                                     <select>
                                                         <option value="없음" selected>없음</option>
-                                                        <option value="남성">남성</option>
-                                                        <option value="여성">여성</option>
+                                                        <option value="있음">있음</option>
                                                     </select>
                                                 </div>
                                                 <div class="inp_wrap">
-                                                    <input type="text" name="" id="" placeholder="검색할 분류를 입력해 주세요.">
+                                                    <input type="text" name="" id="" placeholder="인증기관">
                                                 </div>
                                                 <div class="inp_wrap">
-                                                    <input type="text" name="" id="" placeholder="검색할 분류를 입력해 주세요.">
+                                                    <input type="text" name="" id="" placeholder="인증번호">
                                                 </div>
                                                 <div class="inp_wrap">
-                                                    <input type="text" name="" id="" placeholder="검색할 분류를 입력해 주세요.">
+                                                    <input type="text" name="" id="" placeholder="인증일">
                                                 </div>
                                                 <div class="btn_wrap">
                                                     <div class="btn">삭제</div>
@@ -818,9 +826,6 @@
                                                         <div class="unit">원</div>
                                                     </div>
                                                 </div>
-                                            </div>
-        
-                                            <div class="srh_item">
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">공급가</div>
                                                     <div class="srh_cont type_txt">
@@ -828,9 +833,6 @@
                                                         <div class="unit">원</div>
                                                     </div>
                                                 </div>
-                                            </div>
-        
-                                            <div class="srh_item">
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">원가</div>
                                                     <div class="srh_cont type_txt">
@@ -844,17 +846,14 @@
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title">수수료율</div>
                                                     <div class="srh_cont type_txt">
-                                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="0.00"></div>
+                                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="0.00" disabled></div>
                                                         <div class="unit">%</div>
                                                     </div>
                                                 </div>
-                                            </div>
-        
-                                            <div class="srh_item">
                                                 <div class="srh_item_inner">
                                                     <div class="srh_title"><div class="name">수수료액</div><p class="txtInfo">(공급가 * 수수료)</p></div>
                                                     <div class="srh_cont type_txt">
-                                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="0"></div>
+                                                        <div class="inp_wrap"><input type="text" name="" id="" placeholder="0" disabled></div>
                                                         <div class="unit">원</div>
                                                     </div>
                                                 </div>
@@ -928,19 +927,19 @@
                                                                 </div>
                                                                 <div class="t_body">
                                                                     <div class="item_row">
-                                                                        <div><span class="sta">100</span>개</div>
-                                                                        <div><span class="sta">3</span>일</div>
-                                                                        <div><span class="sta">20,000</span>원</div>
+                                                                        <div><div class="inp_wrap"><input type="text" name="" id=""></div><span>개</span></div>
+                                                                        <div><div class="inp_wrap"><input type="text" name="" id=""></div><span>원</span></div>
+                                                                        <div><div class="inp_wrap"><input type="text" name="" id=""></div><span>원</span></div>
                                                                     </div>
                                                                     <div class="item_row">
-                                                                        <div><span class="sta">100</span>개</div>
-                                                                        <div><span class="sta">3</span>일</div>
-                                                                        <div><span class="sta">20,000</span>원</div>
+                                                                        <div><div class="inp_wrap"><input type="text" name="" id=""></div><span>개</span></div>
+                                                                        <div><div class="inp_wrap"><input type="text" name="" id=""></div><span>원</span></div>
+                                                                        <div><div class="inp_wrap"><input type="text" name="" id=""></div><span>원</span></div>
                                                                     </div>
                                                                     <div class="item_row">
-                                                                        <div><span class="sta">100</span>개</div>
-                                                                        <div><span class="sta">3</span>일</div>
-                                                                        <div><span class="sta">20,0000000</span>원</div>
+                                                                        <div><div class="inp_wrap"><input type="text" name="" id=""></div><span>개</span></div>
+                                                                        <div><div class="inp_wrap"><input type="text" name="" id=""></div><span>원</span></div>
+                                                                        <div><div class="inp_wrap"><input type="text" name="" id=""></div><span>원</span></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1989,7 +1988,7 @@
                             <div class="srh_item_inner">
                                 <div class="srh_title">검색어</div>
                                 <div class="srh_cont">
-                                    <div class="inp_wrap size_lg">
+                                    <div class="inp_wrap">
                                         <input type="text" name="" id="" placeholder="상품명, 상품태그">
                                     </div>
                                 </div>
@@ -1997,7 +1996,7 @@
                             <div class="srh_item_inner">
                                 <div class="srh_title">공급사</div>
                                 <div class="srh_cont">
-                                    <div class="inp_wrap size_lg">
+                                    <div class="inp_wrap">
                                         <input type="text" name="" id="" placeholder="등록사 ID">
                                     </div>
                                 </div>
@@ -2007,7 +2006,7 @@
                             <div class="srh_item_inner">
                                 <div class="srh_title">상품코드</div>
                                 <div class="srh_cont">
-                                    <div class="inp_wrap size_lg">
+                                    <div class="inp_wrap">
                                         <input type="text" name="" id="" placeholder="상품코드">
                                     </div>
                                 </div>
@@ -2015,7 +2014,7 @@
                             <div class="srh_item_inner">
                                 <div class="srh_title">관리 코드</div>
                                 <div class="srh_cont">
-                                    <div class="inp_wrap size_lg">
+                                    <div class="inp_wrap">
                                         <input type="text" name="" id="" placeholder="관리 코드">
                                     </div>
                                 </div>
@@ -2047,7 +2046,7 @@
                     </div>
                 </div>
                 <div class="sect mgt30">
-                    <div id="pcusme001002_1" class="contents_box pd_0">
+                    <div id="pcusme001002_1" class="contents_box pd_0 scroll_auto">
                         <div class="panel_body pd_0">
                             <div class="tbl_wrap pd_0">
                                 <div class='motiv_tbl'>
@@ -2528,8 +2527,8 @@
                                         <th><div>파일첨부</div></th>
                                         <td colspan="3">
                                             <div class="filebox mini_t">
-                                                <label for="file"><i class="icon icon_attach"></i>파일업로드</label> 
-                                                <input type="file" id="file">
+                                                <label for="file3"><i class="icon icon_attach"></i>파일업로드</label> 
+                                                <input type="file" id="file3">
                                             </div>
                                             <div><p class="txtInfo">※ 최대 5개, 개당 용량 20mb를 초과할 수 없습니다.</p></div>
                                         </td>
@@ -2594,23 +2593,24 @@
                 }
             });
             
-            $( ".cate_drag_list" ).sortable();
-            $( ".cate_drag_list" ).disableSelection();
+            // $( ".cate_drag_list" ).sortable();
+            // $( ".cate_drag_list" ).disableSelection();
 
             window.scrollTo(0, 0);
             $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
+            $('#sandbox_container.input-group.date').datepicker({language : "ko"});
             tFlex.init(pcusme001002_1);
             tFlex.init(pcusme001002_2);
             tFlex.init(pcusme001002_3);
 
             // readTimeSta S
             var minRow = 2;
-            var maxRow = 9;
+            var maxRow = 7;
             var readHtml = '';
             readHtml += '<div class="item_row">';
-            readHtml += '<div><span class="sta">100</span>개</div>';
-            readHtml += '<div><span class="sta">3</span>일</div>';
-            readHtml += '<div><span class="sta">20,0000000</span>원</div>';
+            readHtml += '<div><div class="inp_wrap"><input type="text" name="" id=""></div><span>개</span></div>';
+            readHtml += '<div><div class="inp_wrap"><input type="text" name="" id=""></div><span>원</span></div>';
+            readHtml += '<div><div class="inp_wrap"><input type="text" name="" id=""></div><span>원</span></div>';
             readHtml += '</div>';
 
             $('.readTimeSta .btn_plus').click(function(){

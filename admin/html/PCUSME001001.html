@@ -2085,7 +2085,7 @@
                         <div class="acc_tit"><div class="tit">상품정보고시 상품</div><div class="accBtn"><i class="icon icon_arrow"></i></div></div>
                         <div class="acc_cont">
                             <div class="productDetail">
-                                <div class="productDetail_info open">
+                                <div class="productDetail_info">
                                     <p>CAMISOLE DRESS / BLACK</p>
                                     <p>배색 스티치가 돋보이는 캐미솔 원피스입니다.</p>
                                     <p>폴앤앨리스의 캐리오버 아이템인 캐미솔 드레스를 </p>
@@ -2118,6 +2118,7 @@
                                     <img src="../resources/images/product/dtl_img_sample.png" alt="">
                                     <img src="../resources/images/product/dtl_img_sample.png" alt="">
                                 </div>
+                                <div class="btn_moreInfo"><div class="btn_more"><span class="txt">상세정보 보기</span><i class="icon"></i></div></div>
                             </div>
                         </div>
                     </div>
@@ -2333,6 +2334,14 @@
                         $(this).closest('.acc_box').addClass('open');
                     }
                 });
+            });
+
+            $('.btn_moreInfo .btn_more').click(function(){
+                if($(this).hasClass('open')){
+                    $(this).removeClass('open').closest('.productDetail').find('.productDetail_info').removeClass('open');
+                } else {
+                    $(this).addClass('open').closest('.productDetail').find('.productDetail_info').addClass('open');
+                }
             });
 
             $('.prd_more').click(function(){

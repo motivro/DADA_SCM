@@ -424,17 +424,14 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="srh_item_inner">
-                                    <div class="srh_title">판매현황</div>
+                                    <div class="srh_title">목표결과</div>
                                     <div class="srh_cont">
                                         <div class="select_wrap">
                                             <select>
                                                 <option value="전체" selected>전체</option>
-                                                <option value="대분류1">판매중</option>
-                                                <option value="대분류1">준비중</option>
-                                                <option value="대분류1">종료</option>
-                                                <option value="대분류1">강제종료</option>
+                                                <option value="달성">달성</option>
+                                                <option value="미달성">미달성</option>
                                             </select>
                                         </div>
                                     </div>
@@ -483,21 +480,6 @@
                                 <div class="srh_item row-2">
                                     <div class="srh_item_inner">
                                         <div class="srh_title">리워드율(%)</div>
-                                        <div class="srh_cont">
-                                            <div class="inp_wrap">
-                                                <input type="text" name="" id="" placeholder="0">
-                                            </div>
-
-                                            <div class="select_wrap">
-                                                <select>
-                                                    <option value="이상" selected>이상</option>
-                                                    <option value="이하">이하</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="srh_item_inner">
-                                        <div class="srh_title">목표수량</div>
                                         <div class="srh_cont">
                                             <div class="inp_wrap">
                                                 <input type="text" name="" id="" placeholder="0">
@@ -587,7 +569,7 @@
                                     <tbody>
                                         <tr>
                                             <th><div>당월 누적매출</div></th>
-                                            <td><div><span class="sta">100,000</span>원</div></td>
+                                            <td><div><span class="sta">100,000</span>원 / 전월대비 <span>+,-</span><span class="sta">00%</span></div></td>
                                             <th><div>당일 매출현황</div></th>
                                             <td><div><span class="sta">100,000</span>원</div></td>
                                         </tr>
@@ -609,7 +591,7 @@
                                     <tbody>
                                         <tr>
                                             <th><div>매출현황</div></th>
-                                            <td><div><span class="sta">100,000</span>원</div></td>
+                                            <td><div><span class="sta">100,000</span>원 / 이전정산매출 대비 <span>+,-</span><span class="sta">00%</span></div></td>
                                             <th><div>상품판매 수 / 구매자수</div></th>
                                             <td><div><span class="sta">100,000</span>원</div></td>
                                         </tr>
@@ -1645,60 +1627,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <div class="motiv_layer type1">
-        <div class="layer_head">
-            <div class="title">다다딜 상품판매보고서 통계</div>
-            <div class="btn_close"></div>
-        </div>
-        <div class="layer_body">
-            <div class="contents_box">
-                <div class="data_flex_box">
-                    <div class="data_left">
-                        <div class="sect_tit">다다딜 판매상품 검색</div>
-                        <div class="sect">
-                            <div class="data_box">
-                                <div class="top_area d_flex a_c gap10">
-                                    <div class="inp_wrap"><input type="text" name="" id="" placeholder="상품코드, 상품명, 태그"></div>
-                                    <div class="btn btn_search">검색</div>
-                                </div>
-                                <div class="bot_area">
-                                    <div class="data_list">
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item d_flex a_c gap5"><div class="prd_code">[<span>상품코드</span>]</div><div class="prd_name">상품명</div></div>
-                                        <div class="data_item dataNone"><div>검색된 상품이 없습니다.</div></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="data_right">
-                        <div class="sect_tit d_flex a_c jc_sb">
-                            <div class="tit">[상품코드] 상품명1</div>
-                            <div class="desc d_flex a_c gap10">
-                                <div class="inp_wrap">
-                                    <div id="sandbox_container" class="input-group date">
-                                        <input type="text" class="form-control" placeholder=""><span class="input-group-addon"></span>
-                                    </div>
-                                </div>
-                                <div class="btn btn_search">검색</div>
-                            </div>
-                        </div>
+
                         <div class="sect">
                             <div class="statis_box">
                                 <div class="statis_list">

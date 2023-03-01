@@ -21,6 +21,7 @@
 .mgt_0{margin-top:0 !important;}
 .mgt_15{margin-top: 15px;}
 .bg_none{background: none !important;}
+.over_vis{overflow: visible !important;}
 
 .sub_infor.type2{padding: 10px 20px;}
 .icon{display: inline-block;cursor:pointer}
@@ -268,6 +269,7 @@ h2.type2 .read_more > a:hover:after{}
 .contents_box .info_dash_box .info_list .info_box .info_item .cont .view_data_list .view_data_item .data_sta{font-size: 12px;position: relative;}
 .contents_box .info_dash_box .info_list .info_box .info_item .cont .view_data_list .view_data_item .data_sta .sta{font-size: 20px;font-weight:500;line-height: 30px;}
 /* .contents_box .info_dash_box .info_list .info_box .info_item .cont .view_data_list .view_data_item .data_sta .percent_sta{position: absolute;right: 0;top: 0;} */
+.sta.red{color: var(--color1);}
 
 
 .inp_wrap input[type="text"]{border: var(--cont_border);}
@@ -609,6 +611,7 @@ td.td_select .select_wrap .select_box.active .opt_list{top:119%}
 #content .tab_area .tab_cont.active{display: block;}
 
 #content .tab_area .tab_box.type_list{margin:0;display: flex;gap:0;align-items: center;background: #fff;border: var(--box_border);border-bottom: 0;margin-top: 40px;}
+#content .tab_area .tab_box.type_list.bor_b{border-bottom: var(--box_border);}
 #content .tab_area .tab_box.type_list .tab_item{color: var(--color14);background: #fff;border-color: unset;display:block;height: auto;line-height: 20px;padding:15px 0;font-size: var(--fts13);font-weight: var(--ftw500);border:0;box-sizing: border-box;cursor: pointer;white-space: nowrap;border-radius:0;position: relative;}
 #content .tab_area .tab_box.type_list .tab_item > span{display:block;padding: 0 50px;}
 #content .tab_area .tab_box.type_list .tab_item + .tab_item > span{border-left: var(--box_border);}
@@ -618,7 +621,7 @@ td.td_select .select_wrap .select_box.active .opt_list{top:119%}
 
 /* normal table */
 .motiv_tbl_box .motiv_normal_tbl.statis tr td{padding: 10px 10px 15px;}
-.motiv_tbl_box .motiv_normal_tbl tr td > div .row_item{display: flex;align-items: center;width: 100%;}
+.motiv_tbl_box .motiv_normal_tbl tr td > div .row_item{display: flex;align-items: center;justify-content:space-between;width: 100%;}
 /* .motiv_tbl_box .motiv_normal_tbl tr td > div .row_item{} 판매상품관리 -> 쇼핑몰연계 관리자에게 문의 팝업 테이블 내용 틀어짐 justify-content: space-between; */
 .motiv_tbl_box .motiv_normal_tbl tr th.prd_dada{background: var(--color1);color:#fff;}
 .motiv_tbl_box .motiv_normal_tbl tr th.prd_normal{background: var(--color17);color:#fff;}
@@ -974,12 +977,14 @@ td.td_select .select_wrap .select_box.active .opt_list{top:119%}
 .regi_sect .set_rt .rt_tbl > div{border: var(--box_border);}
 .regi_sect .set_rt .rt_tbl > div:first-child{border-right: 0;}
 .regi_sect .set_rt .rt_tbl .t_head .item_col{display:flex;flex-direction:column;}
-.regi_sect .set_rt .rt_tbl .t_head .item_col > div{width:100px;padding: 6px 0;text-align:center;border-top:var(--box_border)}
+.regi_sect .set_rt .rt_tbl .t_head .item_col > div{display:flex;align-items:center;justify-content:center;width:100px;min-height:50px;padding: 6px 0;text-align:center;border-top:var(--box_border);}
 .regi_sect .set_rt .rt_tbl .t_head .item_col > div:first-child{border-top: 0;}
-.regi_sect .set_rt .rt_tbl .t_body{display: flex;flex-direction: row;}
+.regi_sect .set_rt .rt_tbl .t_body{display: flex;flex-direction: row;max-width:1170px;overflow-x: auto;}
 .regi_sect .set_rt .rt_tbl .t_body .item_row{display:flex;flex-direction:column;text-align: center;border-left: var(--box_border);}
 .regi_sect .set_rt .rt_tbl .t_body .item_row:first-child{border-left: 0;}
-.regi_sect .set_rt .rt_tbl .t_body .item_row > div{width:100px;padding: 6px 0;background:#fff;border-top: var(--box_border);}
+.regi_sect .set_rt .rt_tbl .t_body .item_row > div{display:flex;align-items:center;gap:5px;width:130px;padding: 10px;background:#fff;border-top: var(--box_border);}
+.regi_sect .set_rt .rt_tbl .t_body .item_row > div .inp_wrap{min-width: auto;}
+.regi_sect .set_rt .rt_tbl .t_body .item_row > div .inp_wrap input{min-height:20px;line-height: 18px;}
 .regi_sect .set_rt .rt_tbl .t_body .item_row > div:first-child{border-top: 0;}
 
 .regi_sect .set_opt .row_item{display: flex;align-items: center;gap:10px}

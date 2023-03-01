@@ -1289,13 +1289,13 @@
                             <div class="right">
                                 <div class="sect mg_0">
                                     <div class="inp_row row-1-2 type2">
-                                        <div class="inp_wrap"><div class="inp_tit">상품코드</div><input type="text"></div>
-                                        <div class="inp_wrap"><div class="inp_tit">상품명</div><input type="text"></div>
+                                        <div class="inp_wrap"><div class="inp_tit">상품코드</div><input type="text" disabled></div>
+                                        <div class="inp_wrap"><div class="inp_tit">상품명</div><input type="text" disabled></div>
                                     </div>
                                     <div class="inp_row row-3">
-                                        <div class="inp_wrap"><div class="inp_tit">공급가액(원)</div><input type="text"></div>
-                                        <div class="inp_wrap"><div class="inp_tit">쇼핑몰 판매가(원)</div><input type="text"></div>
-                                        <div class="inp_wrap"><div class="inp_tit">할인율(%)</div><input type="text"></div>
+                                        <div class="inp_wrap"><div class="inp_tit">공급가액(원)</div><input type="text"disabled></div>
+                                        <div class="inp_wrap"><div class="inp_tit">쇼핑몰 판매가(원)</div><input type="text"disabled></div>
+                                        <div class="inp_wrap"><div class="inp_tit">할인율(%)</div><input type="text"disabled></div>
                                     </div>
                                 </div>
                             </div>
@@ -1630,10 +1630,17 @@
                     <div id="box2" class="tab_cont">
                         <div class="flex_wrap prd_calc">
                             <div class="left">
-                                <div class="inp_row row-3">
-                                    <div class="inp_wrap"><div class="inp_tit">상품코드</div><input type="text"></div>
+                                <div class="inp_row row-2">
+                                    <div class="inp_wrap">
+                                        <div class="inp_tit">판매방식</div>
+                                        <div class="select_wrap">
+                                            <select>
+                                                <option value="위탁판매""" selected>위탁판매</option>
+                                                <option value="위탁판매">위탁판매</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="inp_wrap"><div class="inp_tit">상품명</div><input type="text"></div>
-                                    <div class="inp_wrap"><div class="inp_tit">공급사</div><input type="text"></div>
                                 </div>
                             </div>
                             <div class="right">
