@@ -598,11 +598,7 @@ h2 + .motiv_layer{position:static!important;opacity:1!important;visibility:visib
 .motiv_layer#addr_code_upload .contents_box{text-align: center;}
 .motiv_layer .upload_file_box{display: flex;gap: 0;align-items: center;flex-wrap: nowrap;justify-content: center;}
 .motiv_layer .upload_file_box .file_name{min-width: 210px;}
-.motiv_layer .upload_file_box .upload_name{
-    display:block;min-width:100%;height:30px;border-top-right-radius: 0;
-    border-bottom-right-radius: 0;padding: 5px 10px;font-size: 14px;font-weight: 500;line-height: 18px;
-    background-color: #fff;-webkit-appearance: none;-moz-appearance: none;appearance: none;
-}
+.motiv_layer .upload_file_box .upload_name{display:block;min-width:100%;height:30px;border-top-right-radius: 0;border-bottom-right-radius: 0;padding: 5px 10px;font-size: 14px;font-weight: 500;line-height: 18px;background-color: #fff;-webkit-appearance: none;-moz-appearance: none;appearance: none;}
 
 .upload_file_box input.inp_hidden {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip:rect(0,0,0,0);border: 0;}
 .upload_file_box label {display:block;height:30px;background-color: var(--color1);color:#fff;padding: 4px 10px 6px;font-size: 14px;font-weight: 500;line-height: 18px;cursor: pointer;border: 1px solid var(--color1);border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
