@@ -535,7 +535,7 @@
                                             <div class="btn">발주/발송처리</div>
                                             <div class="btn">발송지연처리</div>
                                             <div class="btn">배송지수정</div>
-                                            <div class="btn">판매취소 처리</div>
+                                            <div class="btn" onclick="mtvLp.open('sell_delete_alert1')">판매취소 처리</div>
                                             <div class="btn">반품/교환처리</div>
                                             <div class="btn">판매취소 처리</div>
                                         </div>
@@ -679,7 +679,7 @@
                                                                 <div>상품코드</div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell7'>
-                                                                <div>주문상태</div>
+                                                                <div><div class="flex_item"><div>주문상태</div><div class="btn btn_sm btn_gray">상세보기</div></div></div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell8'>
                                                                 <div>구매자명</div>
@@ -738,7 +738,7 @@
                                                                 <div>상품코드</div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell7'>
-                                                                <div>주문상태</div>
+                                                                <div><div class="flex_item"><div>주문상태</div><div class="btn btn_sm btn_gray">상세보기</div></div></div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell8'>
                                                                 <div>구매자명</div>
@@ -986,7 +986,7 @@
                                                                 <div>상품코드</div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell7'>
-                                                                <div>주문상태</div>
+                                                                <div><div class="flex_item"><div>주문상태</div><div class="btn btn_sm btn_gray">상세보기</div></div></div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell8'>
                                                                 <div>구매자명</div>
@@ -1045,7 +1045,7 @@
                                                                 <div>상품코드</div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell7'>
-                                                                <div>주문상태</div>
+                                                                <div><div class="flex_item"><div>주문상태</div><div class="btn btn_sm btn_gray">상세보기</div></div></div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell8'>
                                                                 <div>구매자명</div>
@@ -1130,7 +1130,7 @@
     </div>
     <!-- wrap E -->
 
-    <h2>팝업 내용</h2>
+    <!-- <h2>팝업 내용</h2> -->
     <div class="motiv_layer type2">
         <div class="layer_head">
             <div class="title"></div>
@@ -1707,6 +1707,97 @@
         </div>
     </div>
 
+    <div id="sell_delete_alert1" class="motiv_layer" cont_type="alert">
+        <div class="dada_cont">
+            <p>선택하신 <span>00</span>개 주문 건 중 취소 처리가능한 주문 건은 00건 입니다. 00개 주문 건에 대해 취소처리를 진행 하시겠습니까?</p>
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.open('sell_delete')">확인</div>
+        </div>
+    </div>
+
+    <div id="sell_delete" class="motiv_layer type1" cont_size="normal">
+        <div class="layer_head">
+            <div class="title">선택 건 판매취소</div>
+            <div class="btn_close" onClick="mtvLp.close('sell_delete')"></div>
+        </div>
+        <div class="top_info_box dash">
+            <p>구매자 귀책사유에 의한 취소 처리시 추가배송비가 청구되지 않습니다.</p>
+            <p>상품품절 취소처리 시 취소 대상 상품도 품절 처리 됩니다.</p>
+            <p class="imp">단, 옵션 별 재고수량 관리 상품(SKU 단위)은 취소되는 주문의 옵션만 품절 처리 됩니다.</p>
+        </div>
+
+        <!-- 레이어 body S -->
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect mgt_0">
+                    <div class="motiv_tbl_box name_k pd_0">
+                        <div class="tbl_item">
+                            <table class="motiv_normal_tbl ta_l">
+                                <caption>송장수정</caption>
+                                <colgroup>
+                                    <col style="width:15%;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th><div>판매불가 사유</div></th>
+                                        <td>
+                                            <div>
+                                                <div class="select_wrap">
+                                                    <select>
+                                                        <option value="상품품절" selected>상품품절</option>
+                                                        <option value="배송지연">배송지연</option>
+                                                        <option value="서비스 불만족">서비스 불만족</option>
+                                                        <option value="상품정보 상이">상품정보 상이</option>
+                                                        <option value="배송오류">배송오류</option>
+                                                        <option value="구매의사 취소">구매의사 취소</option>
+                                                        <option value="색상 및 사이즈 변경">색상 및 사이즈 변경</option>
+                                                        <option value="다른 상품 잘못 주문">다른 상품 잘못 주문</option>
+                                                        <option value="단순 변심">단순 변심</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><div>구매자에게 전할 내용</div></th>
+                                        <td>
+                                            <div>
+                                                <div class="inp_item txtarea_box"><textarea placeholder="사유내용"></textarea></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bot_btn_wrap"><div class="btn btn_blk" onClick="mtvLp.open('sell_delete_alert2')">선택 건 판매취소</div><div class="btn" onClick="mtvLp.close('sell_delete')">닫기</div></div>
+            </div>
+        </div>
+        <!-- 레이어 body E -->
+    </div>
+
+    <div id="sell_delete_alert2" class="motiv_layer" cont_type="alert">
+        <div class="dada_cont">
+            <p>총 <span>00</span>건 중 <span>00</span>개의 주문건에 대해 취소처리를 진행 하시겠습니까? 공급사 귀책사유로 취소처리시 구매자에게 추가배송비가 청구되지 않습니다.</p>
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.open('sell_delete_alert3')">확인</div>
+        </div>
+    </div>
+
+    <div id="sell_delete_alert3" class="motiv_layer" cont_type="alert">
+        <div class="dada_cont">
+            <p>총 <span>00</span>건 중 <span>00</span>건의 취소 처리가 완료되었습니다.</p>
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.close('sell_delete_alert3')">확인</div>
+        </div>
+    </div>
 
 
     <script>
@@ -1725,7 +1816,7 @@
                     sell4: 100,
                     sell5: 100,
                     sell6: 100,
-                    sell7: 100,
+                    sell7: 150,
                     sell8: 80,
                     sell9: 100,
                     sell10: 150,
@@ -1753,7 +1844,7 @@
                     sell4: 100,
                     sell5: 100,
                     sell6: 100,
-                    sell7: 100,
+                    sell7: 150,
                     sell8: 80,
                     sell9: 100,
                     sell10: 150,

@@ -727,7 +727,7 @@
                                                                 <div>택배사</div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell11'>
-                                                                <div>송장번호</div>
+                                                                <div><div class="flex_item"><span>송장번호</span><div class="btn btn_sm" onclick="mtvLp.open('addr_code_edit')">송장 수정</div></div></div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell12'>
                                                                 <div>발송일</div>
@@ -1293,7 +1293,7 @@
     <!-- wrap E -->
 
 
-    <h2>팝업 내용</h2>
+    <!-- <h2>팝업 내용</h2> -->
     <div class="motiv_layer type2">
         <div class="layer_head">
             <div class="layer_head">
@@ -1701,6 +1701,96 @@
             </div>
         </div>
     </div>
+    <div id="addr_code_edit" class="motiv_layer type1" cont_size="normal">
+        <div class="layer_head">
+            <div class="title">송장수정드</div>
+            <div class="btn_close" onClick="mtvLp.close('addr_codaddr_code_edite_upload')"></div>
+        </div>
+        <!-- 레이어 body S -->
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect mgt_0">
+                    <div class="motiv_tbl_box name_k pd_0">
+                        <div class="tbl_item">
+                            <table class="motiv_normal_tbl ta_c">
+                                <caption>송장수정</caption>
+                                <colgroup>
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                    <col style="width:30%;">
+                                    <col style="width:20%;">
+                                    <col style="width:15%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th><div>주문번호</div></th>
+                                        <th><div>상품주문번호</div></th>
+                                        <th><div>상품명</div></th>
+                                        <th><div>배송방법</div></th>
+                                        <th><div>택배사</div></th>
+                                        <th><div>송장번호</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div>주문번호</div></td>
+                                        <td><div>상품주문번호</div></td>
+                                        <td><div>상품명</div></td>
+                                        <td>
+                                            <div>
+                                                <div class="select_wrap">
+                                                    <select>
+                                                        <option value="택배" selected>택배</option>
+                                                        <option value="등기">등기</option>
+                                                        <option value="소포">소포</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <div class="select_wrap">
+                                                    <select>
+                                                        <option value="택배선택" selected>택배선택</option>
+                                                        <option value="택배선택">택배선택</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div><div class="inp_wrap"><input type="text"></div></div>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bot_btn_wrap"><div class="btn btn_blk" onClick="mtvLp.open('code_up_alert1')">송장 수정</div><div class="btn" onClick="mtvLp.close('addr_code_edit')">취소</div></div>
+            </div>
+        </div>
+        <!-- 레이어 body E -->
+    </div>
+    <div id="code_up_alert1" class="motiv_layer" cont_type="alert">
+        <div class="dada_cont">
+            <span>00</span> 개 주문건에 대한 송장수정을 진행 하시겠습니까?
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.open('code_up_alert2')">확인</div>
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('code_up_alert1')">닫기</div>
+        </div>
+    </div>
+    <div id="code_up_alert2" class="motiv_layer" cont_type="alert">
+        <div class="dada_cont">
+            <span>00</span> 건의 송장수정이 완료되었습니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_1" onClick="mtvLp.close('code_up_alert2')">확인</div>
+        </div>
+    </div>
     
     <script>
         $(document).ready(() => {
@@ -1719,7 +1809,7 @@
                     sell8: 100,
                     sell9: 100,
                     sell10: 100,
-                    sell11: 150,
+                    sell11: 180,
                     sell12: 100,
                     sell13: 100,
                     sell14: 100,
@@ -1756,7 +1846,7 @@
                     sell8: 100,
                     sell9: 100,
                     sell10: 100,
-                    sell11: 150,
+                    sell11: 180,
                     sell12: 100,
                     sell13: 100,
                     sell14: 100,

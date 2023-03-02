@@ -548,7 +548,7 @@
                                                 <div class="btn">주문수집</div>
                                                 <div class="btn">주문처리</div>
                                                 <div class="btn">주문로그</div>
-                                                <div class="btn btn_excelUp">엑셀 송장업로드</div>
+                                                <div class="btn btn_excelUp" onclick="mtvLp.open('addr_code_upload')">엑셀 송장업로드</div>
                                                 <div class="btn btn_excelDown">양식 다운로드</div>
                                             </div>
                                         </div>
@@ -1131,7 +1131,7 @@
     </div>
     <!-- wrap E -->
 
-    <h2>팝업 내용</h2>
+    <!-- <h2>팝업 내용</h2> -->
     <div class="motiv_layer type2">
         <div class="layer_head">
             <div class="title"></div>
@@ -1337,6 +1337,47 @@
         </div>
     </div>
 
+    <div id="addr_code_upload" class="motiv_layer type1" cont_size="normal" style="display: none;">
+        <div class="layer_head">
+            <div class="title">송장번호 업로드</div>
+            <div class="btn_close" onClick="mtvLp.close('addr_code_upload')"></div>
+        </div>
+        <!-- 레이어 body S -->
+        <div class="layer_body">
+            <div class="contents_box">
+                <div class="sect_tit">※ 엑셀파일을 업로드 해주세요.</div>
+                <div class="sect">
+                    <div class="upload_file_box">
+                        <div class="inp_wrap file_name"><input class="upload_name" value="" disabled="disabled"></div>
+                        <div class="inp_wrap">
+                            <label for="ex_filename">찾아보기</label>
+                            <input type="file" id="ex_filename" class="inp_hidden">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bot_btn_wrap"><div class="btn btn_blk" onClick="mtvLp.open('code_up_alert')">송장 일괄처리</div><div class="btn" onClick="mtvLp.close('addr_code_upload')">취소</div></div>
+            </div>
+        </div>
+        <!-- 레이어 body E -->
+    </div>
+    <div id="code_up_alert" class="motiv_layer" cont_type="alert" style="display: none;">
+        <div class="alert_head">
+            <div class="title">송장번호 업로드 결과</div>
+        </div>
+        <div class="dada_cont">
+            <div class="upload_result_box">
+                <div class="total">송장등록 총 <span>3</span>건</div>
+                <div class="sucess">성공 <span>3</span>건</div>
+                <div class="fail">실패 <span>0</span>건</div>
+            </div>
+            송장번호 일괄등록을 완료하였습니다.
+        </div>
+        <div class="dada_btn_wrap">
+            <div class="dada_btn co_9 mu_close_btn" onClick="mtvLp.close('code_up_alert')">닫기</div>
+        </div>
+    </div>
+
     <script>
         $(document).ready(() => {
             $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
@@ -1427,6 +1468,18 @@
             tFlexLock.init(pcacme006003_2);
             tab_area.init(); //탭 이벤트
             dtlTbl.init();
+            // 엑셀 송장 업로드 ui
+            var fileUpTarget = $('.upload_file_box .inp_hidden');
+            fileUpTarget.on('change', function(){  // 값이 변경되면
+                if(window.FileReader){  // modern browser
+                    var fileName = $(this)[0].files[0].name;
+                } 
+                else { 
+                    var fileName = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
+                }
+                // 추출한 파일명 삽입
+                $(this).closest('.upload_file_box').find('.upload_name').val(fileName);
+            });
         });
         selectUi.init();
 
