@@ -1171,33 +1171,28 @@
                         <div class="info_cont">2022.00.00 00:00:00 ~ 2022.00.00 00:00:00</div>
                     </div>
                 </div>
+                <!-- 리드타임 노출 형태 수정 230303 -->
                 <div class="sect">
-                    <div class="motiv_tbl_box name_k pd_0">
-                        <div class="tbl_item">
-                            <table class="motiv_normal_tbl">
-                                <caption>수수료 보기</caption>
-                                <colgroup>
-                                    <col style="width:20%;">
-                                    <col style="width:auto">
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th><div>수량</div></th>
-                                        <td><div>금액 ( <span class="fn_co1">할인율 </span> )</div></td>
-                                    </tr>
-                                    <tr>
-                                        <th><div>수량</div></th>
-                                        <td><div>금액 ( <span class="fn_co1">할인율 </span> )</div></td>
-                                    </tr>
-                                    <tr>
-                                        <th><div>수량</div></th>
-                                        <td><div>금액 ( <span class="fn_co1">할인율 </span> )</div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="set_rt">
+                        <div class="rt_tbl">
+                            <div class="t_body">
+                                <div class="item_row">
+                                    <div>수량</div>
+                                    <div>금액 ( <span class="fn_co1">할인율 </span> )</div>
+                                </div>
+                                <div class="item_row">
+                                    <div>수량</div>
+                                    <div>금액 ( <span class="fn_co1">할인율 </span> )</div>
+                                </div>
+                                <div class="item_row">
+                                    <div>수량</div>
+                                    <div>금액 ( <span class="fn_co1">할인율 </span> )</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- // 리드타임 노출 형태 수정 230303 -->
             </div>
         </div>
     </div>
@@ -1268,14 +1263,17 @@
                 }, 100);
             });
 
+            // 상세정보 펼치기&접기 쿼리 수정 230303
             $('.btn_moreInfo .btn_more').click(function(){
                 if($(this).hasClass('open')){
                     $(this).removeClass('open').closest('.productDetail').find('.productDetail_info').removeClass('open');
+                    $(this).find('.txt').html('상세정보 보기');
                 } else {
                     $(this).addClass('open').closest('.productDetail').find('.productDetail_info').addClass('open');
+                    $(this).find('.txt').html('상세정보 접기');
                 }
             });
-
+            // 상세정보 펼치기&접기 쿼리 수정 230303 //
             scrollSta('productDetail');
             scrollSta('detail_review');
             scrollSta('detail_qna');

@@ -1604,13 +1604,17 @@
             $('#sandbox_container.input-daterange.range1').datepicker({language : "ko"});
             tFlex.init(pcacme004001_1);
             
+            // 상세정보 펼치기&접기 쿼리 수정 230303
             $('.btn_moreInfo .btn_more').click(function(){
                 if($(this).hasClass('open')){
                     $(this).removeClass('open').closest('.productDetail').find('.productDetail_info').removeClass('open');
+                    $(this).find('.txt').html('상세정보 보기');
                 } else {
                     $(this).addClass('open').closest('.productDetail').find('.productDetail_info').addClass('open');
+                    $(this).find('.txt').html('상세정보 접기');
                 }
             });
+            // 상세정보 펼치기&접기 쿼리 수정 230303 //
 
             tab_area.init(); //탭 이벤트
         });
