@@ -209,6 +209,7 @@ i.down{transform:rotate(45deg);-webkit-transform:rotate(45deg);margin-top:-5px;}
 
 .motiv_tbl .tbl_inner .hd_item .inp_wrap{padding:5px 0 0 5px}
 .motiv_tbl .tbl_inner .hd_item .inp_wrap input[type="text"]{line-height: 30px;min-height: 30px;}
+.motiv_tbl .tbl_inner .hd_item .inp_wrap.size_sm input[type="text"]{line-height: 18px;height:20px;min-height: 20px;font-size:var(--fts12)}
 
 /* h 시리즈 */
 .wrap #content h2{font-size:var(--fts20);margin-top:25px;}
