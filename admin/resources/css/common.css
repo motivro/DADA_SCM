@@ -579,6 +579,7 @@ textarea{width:100%;border:solid 1px var(--color12);padding:10px;}
 .motiv_tbl .tbl_body .hd_item > div.tbl_col .tbl_row:first-child{border-bottom:solid 1px #e3e3e3;}
 
 .motiv_tbl .tbl_inner .hd_item .flex_item{display: flex;justify-content:center;align-items: center;gap:8px;}
+.motiv_tbl .tbl_inner .hd_item .flex_item.noinput span{display:none}
 .motiv_tbl .tbl_body .hd_item .flex_item.fd_col{flex-direction: column;}
 .motiv_tbl .tbl_inner .hd_item .flex_item .inp_wrap{padding: 0;}
 .motiv_tbl .tbl_inner .hd_item .inp_wrap input[type="text"]{line-height: 18px;height: 20px;}

@@ -537,6 +537,7 @@
                                 <div class="panel_body">
                                     <div class="btn_group d_flex">
                                         <div class="btn_wrap">
+                                            <div class="btn" onclick="mtvLp.open('addr_code_edit')">송장번호 수정</div>
                                             <div class="btn">반품신청 처리</div>
                                             <div class="btn">교환신청 처리</div>
                                             <div class="btn btn_excelUp">엑셀 송장업로드</div>
@@ -727,7 +728,7 @@
                                                                 <div>택배사</div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell11'>
-                                                                <div><div class="flex_item"><span>송장번호</span><div class="btn btn_sm" onclick="mtvLp.open('addr_code_edit')">송장 수정</div></div></div>
+                                                                <div><div class="flex_item noinput"><div class="inp_wrap size_sm"><input type="text" placeholder="1234567891234" disabled></div><div class="btn btn_sm" onclick="invoice_click($(this))">수정</div></div></div>
                                                             </div>
                                                             <div class='hd_item' keyname='sell12'>
                                                                 <div>발송일</div>
@@ -1878,6 +1879,18 @@
             tab_area.init(); //탭 이벤트
             dtlTbl.init();
         });
+
+        invoice_click = (obj) => {
+            if( obj.closest('.flex_item').hasClass('noinput') ){
+                obj.closest('.flex_item').removeClass('noinput');
+                obj.closest('.flex_item').children('.inp_wrap').children('input').prop('disabled', false);
+                obj.html('완료');
+            } else {
+                obj.closest('.flex_item').addClass('noinput');
+                obj.closest('.flex_item').children('.inp_wrap').children('input').prop('disabled', true);
+                obj.html('수정');
+            }
+        }
 
         selectUi.init();
 
