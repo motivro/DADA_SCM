@@ -969,6 +969,7 @@
                                 <div class="panel_body">
                                     <div class="btn_group d_flex">
                                         <div class="btn_wrap">
+                                            <div class="btn" onclick="mtvLp.open('addr_code_edit')">송장번호 수정</div>
                                             <div class="btn">주문수집</div>
                                             <div class="btn">주문로그</div>
                                         </div>
@@ -1002,6 +1003,33 @@
                                                             </div>
                                                             <div class='hd_item' keyname='sell5'>
                                                                 <div>주문번호</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class='row_item d_flex'>
+                                                            <div class='hd_item' keyname='checkedbox'>
+                                                                <div>
+                                                                    <div class='cus_inp_wrap checkbox_inp'>
+                                                                        <label for='tbl_head_0' class='inp_box'>
+                                                                            <input type='checkbox' id='tbl_head_0' name='ckb_all'>
+                                                                            <span class='inp_custom'></span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell1'>
+                                                                <div>2023-01-01</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell2'>
+                                                                <div>2023-01-01</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell3'>
+                                                                <div>결제/입금완료</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell4'>
+                                                                <div>다다몰</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell5'>
+                                                                <div>O32OABCD894</div>
                                                             </div>
                                                         </div>
                                                         <div class='row_item d_flex'>
@@ -1141,9 +1169,105 @@
                                                             <div class='hd_item' keyname='sell10'>
                                                                 <div>택배사</div>
                                                             </div>
+                                                            <!-- 230306 내용수정 송장번호 등록 인풋&버튼 추가 -->
                                                             <div class='hd_item' keyname='sell11'>
-                                                                <div>송장번호</div>
+                                                                <div><div class="flex_item noinput"><div class="inp_wrap size_sm"><input type="text" placeholder="1234567891234" disabled></div><div class="btn btn_sm" onclick="invoice_click($(this))">수정</div></div></div>
                                                             </div>
+                                                            <!-- 230306 내용수정 송장번호 등록 인풋&버튼 추가 -->
+                                                            <div class='hd_item' keyname='sell12'>
+                                                                <div>발송기한</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell13'>
+                                                                <div>발주일</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell14'>
+                                                                <div>발송일</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell15'>
+                                                                <div>송장출력일</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell16'>
+                                                                <div>수취인명</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell17'>
+                                                                <div>수취인전화번호</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell18'>
+                                                                <div>공급사정보</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell19'>
+                                                                <div>배송지</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell20'>
+                                                                <div>출고지</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell21'>
+                                                                <div>상품주문번호</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell22'>
+                                                                <div>상품상태</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell23'>
+                                                                <div>상품분류</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell24'>
+                                                                <div>상품코드</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell25'>
+                                                                <div>상품명</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell26'>
+                                                                <div>옵션정보</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell27'>
+                                                                <div>카테고리</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell28'>
+                                                                <div>수량</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell29'>
+                                                                <div>판매금액</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell30'>
+                                                                <div>할인금액</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell31'>
+                                                                <div>배송비</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell32'>
+                                                                <div>결제금액</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell33'>
+                                                                <div>수수료</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell34'>
+                                                                <div>정산예정금액</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell35'>
+                                                                <div>판매사정보</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class='row_item d_flex'>
+                                                            <div class='hd_item' keyname='sell6'>
+                                                                <div>구매자명</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell7'>
+                                                                <div>구매자 전화번호</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell8'>
+                                                                <div>주문상태</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell9'>
+                                                                <div>배송분류</div>
+                                                            </div>
+                                                            <div class='hd_item' keyname='sell10'>
+                                                                <div>택배사</div>
+                                                            </div>
+                                                            <!-- 230306 내용수정 송장번호 등록 인풋&버튼 추가 -->
+                                                            <div class='hd_item' keyname='sell11'>
+                                                                <div><div class="flex_item"><div class="inp_wrap size_sm"><input type="text" placeholder="송장번호 등록"></div><div class="btn btn_sm">등록</div></div></div>
+                                                            </div>
+                                                            <!-- 230306 내용수정 송장번호 등록 인풋&버튼 추가 -->
                                                             <div class='hd_item' keyname='sell12'>
                                                                 <div>발송기한</div>
                                                             </div>
